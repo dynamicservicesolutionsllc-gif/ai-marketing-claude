@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kitchenfindsfavorites.netlify.app/sitemap.xml
