@@ -1,0 +1,8 @@
+# Netlify deploys only the landing page in site/ — the rest of this repo is the marketing suite.
+# The generated site/public/ is committed, so no build step runs on Netlify.
+[build]
+  base = "site"
+  publish = "public"
+  command = ""
+  # Skip deploys when nothing under site/ changed.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
