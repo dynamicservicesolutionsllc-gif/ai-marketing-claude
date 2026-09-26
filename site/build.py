@@ -18,6 +18,7 @@ OUT = ROOT / "public"
 TOP_PICKS = 6  # newest N products shown in "This Week's Top Picks"
 EXCLUDED_ASINS = {"B07TVDFVV9"}  # Associates-excluded; never list
 DISCLOSURE = "As an Amazon Associate, I earn from qualifying purchases."
+PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 
 
 def load():
@@ -46,6 +47,17 @@ def load():
             date.fromisoformat(p.get("added", ""))
         except ValueError:
             errors.append(f"{where}: 'added' must be YYYY-MM-DD")
+        pin = p.get("pin")
+        if pin is not None:
+            for field in ("title", "description", "board"):
+                if not str(pin.get(field, "")).strip():
+                    errors.append(f"{where}: pin missing '{field}'")
+            if not str(pin.get("description", "")).startswith(PIN_DISCLOSURE):
+                errors.append(f"{where}: pin description must start with '{PIN_DISCLOSURE}'")
+            if len(pin.get("title", "")) > 100:
+                errors.append(f"{where}: pin title over Pinterest's 100-character limit")
+            if len(pin.get("description", "")) > 500:
+                errors.append(f"{where}: pin description over Pinterest's 500-character limit")
         # Amazon policy: no static prices or star ratings copied from Amazon.
         for banned in ("price", "rating", "ratings", "stars"):
             if banned in p:
@@ -184,6 +196,10 @@ def main():
     url = data["site"]["url"]
     (OUT / "index.html").write_text(render(data), encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
+    # Machine-readable feed: the Pinterest routine reads this as its queue.
+    feed = [dict(p, page_url=f"{url}/#{p['asin']}", amazon_url=amazon_url(p["asin"], data["site"]["associate_tag"]))
+            for p in sorted(data["products"], key=lambda p: p["added"])]
+    (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = max(p["added"] for p in data["products"])
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
