@@ -9,291 +9,581 @@
   "categories": {
     "organization": "Kitchen Organization Must-Haves",
     "gadgets": "Small Kitchen Gadgets We Love",
-    "appliances": "Small Kitchen Appliances Worth the Counter Space"
+    "appliances": "Small Kitchen Appliances Worth the Counter Space",
+    "drinkware": "Drinkware & Tumblers We Love"
   },
   "products": [
     {
       "asin": "B07SRV3SN8",
       "name": "Pipishell Bamboo Expandable Silverware Drawer Organizer",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/81FjOVbngLL._AC_SL1500_.jpg",
       "blurb": "Expands from 13\" to almost 20\" wide, so it actually fits your drawer instead of the other way around. Seven compartments keep forks, spoons, and knives from turning into a junk pile.",
-      "added": "2026-09-22"
+      "added": "2026-09-22",
+      "graphic": {
+        "label": "Pipishell Bamboo Drawer Organizer",
+        "headline": "A Silverware Drawer That Fits Your Drawer",
+        "points": [
+          "Expands from 13\" to nearly 20\"",
+          "Seven compartments",
+          "Natural bamboo"
+        ]
+      }
     },
     {
       "asin": "B08KXKVT4K",
       "name": "Vtopmart 25-Piece Clear Drawer Organizer Set",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/81yj+PUYVxL._AC_SL1500_.jpg",
       "blurb": "Four sizes of clear bins that snap into any drawer layout — junk drawer, utensil drawer, whatever needs taming. Everything stays visible so you stop digging.",
-      "added": "2026-09-22"
+      "added": "2026-09-22",
+      "graphic": {
+        "label": "Vtopmart 25-Piece Drawer Set",
+        "headline": "Tame Every Junk Drawer",
+        "points": [
+          "Four bin sizes, 25 pieces",
+          "Clear, so nothing hides",
+          "Mix and match any layout"
+        ]
+      }
     },
     {
       "asin": "B0C3H9MJQV",
       "name": "HuggieGems Magnetic Spice Rack, 4-Pack",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/71kyA2AybiL._AC_SL1500_.jpg",
       "blurb": "Sticks straight to the fridge — no drilling, no mounting hardware. Heavy-duty steel shelves free up real cabinet space for spices, oils, and small jars.",
-      "added": "2026-09-22"
+      "added": "2026-09-22",
+      "graphic": {
+        "label": "HuggieGems Magnetic Spice Rack",
+        "headline": "Spice Storage on the Side of Your Fridge",
+        "points": [
+          "No drilling or hardware",
+          "Heavy-duty steel shelves",
+          "Frees up cabinet space"
+        ]
+      }
     },
     {
       "asin": "B0C3QZ7SNF",
       "name": "Cisily Sponge Holder with Brush Holder for Kitchen Sink",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/81shIEM-H2L._AC_SL1500_.jpg",
       "blurb": "Corrals the sponge, dish soap, and scrub brushes in one stainless steel caddy that takes up under 10 inches of counter. A swiveling drain spout sends drips straight into the sink instead of leaving a puddle behind the faucet.",
       "added": "2026-10-05",
       "pin": {
         "title": "Kitchen Sink Organizer: Sponge Holder with Brush Caddy for Small Kitchens",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. This compact stainless steel sink caddy keeps the sponge, dish soap, and scrub brushes in one tidy spot. The swivel spout drains water into the sink, so the counter stays dry. A simple fix for a cluttered sink area in a small kitchen. #kitchenorganization #sinkorganizer #smallkitchenideas #kitchenstorage",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "Cisily Sink Caddy",
+        "headline": "Sponge, Soap & Brush in One Spot",
+        "points": [
+          "Rustproof stainless steel",
+          "Swivel spout drains to sink",
+          "Under 10\" of counter"
+        ]
       }
     },
     {
       "asin": "B0B4K1XH8Y",
       "name": "Kitsure Compact Dish Drying Rack with Drainboard",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/7103oavAa3L._AC_SL1500_.jpg",
       "blurb": "A 12 by 15.5 inch footprint fits beside the sink in a tight kitchen, yet it is built to hold about ten plates plus bowls and glasses. The drainboard catches drips, and the two-compartment utensil holder lifts off for cleaning.",
       "added": "2026-10-05",
       "pin": {
         "title": "Compact Dish Drying Rack with Drainboard for Small Kitchen Counters",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Short on counter space? This compact dish rack fits beside the sink and still handles a full load of plates, bowls, and glasses. The drainboard catches drips and the utensil holder comes off for easy cleaning. #dishrack #kitchenorganization #smallkitchen #apartmentkitchen",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "Kitsure Compact Dish Rack",
+        "headline": "A Dish Rack Sized for Small Kitchens",
+        "points": [
+          "12\" x 15.5\" footprint",
+          "Drainboard catches drips",
+          "Removable utensil holder"
+        ]
       }
     },
     {
       "asin": "B0113UZJE2",
       "name": "Etekcity Digital Food Kitchen Scale, 11 lb",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/91YrLTBnMcL._AC_SL1500_.jpg",
       "blurb": "Weighs ingredients in grams or ounces up to 11 pounds, with a tare button that zeroes out the bowl so you measure only what you add. The slim stainless steel platform wipes clean and stores flat when you are done.",
       "added": "2026-10-05",
       "pin": {
         "title": "Digital Kitchen Scale for Baking and Meal Prep: Grams and Ounces",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A digital kitchen scale takes the guesswork out of baking and meal prep. This one switches between grams and ounces and has a tare button for weighing straight into the bowl. Slim enough to tuck into a drawer between uses. #kitchenscale #bakingtools #mealprep #kitchengadgets",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Etekcity Kitchen Scale",
+        "headline": "Measure by Weight, Bake With Confidence",
+        "points": [
+          "Grams or ounces to 11 lb",
+          "Tare zeroes out the bowl",
+          "Slim, wipe-clean platform"
+        ]
       }
     },
     {
       "asin": "B00S93EQUK",
       "name": "Alpha Grillers Instant Read Meat Thermometer",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/81bpKKv68-L._AC_SL1500_.jpg",
       "blurb": "Takes the guesswork out of chicken, roasts, and the holiday turkey with a temperature reading in a couple of seconds. The backlit display is easy to read at the oven or the grill, and the waterproof body rinses clean under the tap.",
       "added": "2026-10-05",
       "pin": {
         "title": "Instant Read Meat Thermometer for Roasts, Chicken and Holiday Turkey",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. No more cutting into chicken to check if it is done. This instant read thermometer gives a temperature in a couple of seconds, with a backlit display for the oven or the grill. A small tool that earns its drawer space before holiday cooking season. #meatthermometer #kitchengadgets #holidaycooking #thanksgivingprep",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Alpha Grillers Thermometer",
+        "headline": "Perfect Doneness in Seconds",
+        "points": [
+          "Instant-read probe",
+          "Backlit display",
+          "Waterproof, rinses clean"
+        ]
       }
     },
     {
       "asin": "B09BKTSJFJ",
       "name": "Tigwin Apple Peeler, Corer and Slicer with Suction Base",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/613MFX7TuJL._AC_SL1500_.jpg",
       "blurb": "Peels, cores, and slices an apple with a few turns of the crank, which makes short work of a bag of apples for pie or applesauce. The suction base holds it steady on the counter, and it handles potatoes as well.",
       "added": "2026-10-05",
       "pin": {
         "title": "Apple Peeler Corer Slicer for Fall Baking, Apple Pie and Applesauce",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Apple season made easier. This hand-crank peeler peels, cores, and slices in one pass, so a full bag of apples is ready for pie or applesauce in minutes. The suction base keeps it steady on the counter. #applepeeler #fallbaking #applepie #kitchengadgets #appleseason",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Tigwin Apple Peeler & Corer",
+        "headline": "Peel, Core & Slice in a Few Turns",
+        "points": [
+          "Made for pie and applesauce",
+          "Suction base holds steady",
+          "Handles potatoes too"
+        ]
       }
     },
     {
       "asin": "B07FNRXFTD",
       "name": "YouCopia StoraLid Food Container Lid Organizer",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/71uNtNjfS3L._AC_SL1500_.jpg",
       "blurb": "Stands food storage lids upright in five adjustable slots, so opening the cabinet stops setting off an avalanche. The dividers slide to fit whatever sizes you actually own, and the tray pulls out like a drawer when you are hunting for a match.",
       "added": "2026-10-06",
       "pin": {
         "title": "Food Container Lid Organizer That Finally Tames the Leftovers Cabinet",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. If opening the container cabinet means catching a falling stack of lids, this tray stands them upright in slots you size yourself. Pull it out like a drawer and the matching lid is right there, which saves real minutes when you are packing up leftovers. A small fix that makes the whole cabinet usable again. #kitchenorganization #pantryorganization #tupperwarestorage #smallkitchenideas #kitchenstorage",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "YouCopia StoraLid",
+        "headline": "End the Lid Avalanche",
+        "points": [
+          "Stands lids upright",
+          "Five adjustable dividers",
+          "Pulls out like a drawer"
+        ]
       }
     },
     {
       "asin": "B082314NFL",
       "name": "Zulay Kitchen Handheld Milk Frother",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/7139RRbfmnL._AC_SL1500_.jpg",
       "blurb": "Whips hot or cold milk into cafe-style foam in about twenty seconds, which turns plain drip coffee into a latte without giving up counter space to a machine. It also breaks up matcha clumps and stirs protein powder smooth, and the whisk rinses clean in a cup of water.",
       "added": "2026-10-06",
       "pin": {
         "title": "Handheld Milk Frother for Lattes, Matcha and Pumpkin Spice at Home",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Cozy drink season without an espresso machine: this battery-powered wand froths hot or cold milk into thick foam in about twenty seconds. It also whisks matcha smooth and blends protein powder without lumps, then cleans up by spinning it in a cup of water. Small enough to live in a drawer. #milkfrother #pumpkinspicelatte #coffeebarideas #matchalatte #kitchengadgets",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Zulay Milk Frother",
+        "headline": "Cafe-Style Foam at Home",
+        "points": [
+          "Foams milk in seconds",
+          "Mixes matcha and protein",
+          "No machine needed"
+        ]
       }
     },
     {
       "asin": "B075X1KPLZ",
       "name": "MuellerLiving Ultra-Stick Immersion Hand Blender",
       "category": "appliances",
-      "image": "https://m.media-amazon.com/images/I/51QsacybR5L._AC_SL1500_.jpg",
       "blurb": "Purees soup directly in the pot, so there is no ladling hot liquid into a blender in batches and no second jar to wash. The shaft detaches for the dishwasher, and the included whisk and frother attachments cover whipped cream and hot cocoa.",
       "added": "2026-10-06",
       "pin": {
         "title": "Immersion Blender for Creamy Soups Blended Right in the Pot",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Soup season gets easier when you can blend butternut squash or potato soup right in the pot instead of moving hot liquid to a blender in batches. The shaft pops off for the dishwasher, and the whisk and frother attachments handle whipped cream and hot cocoa. One tool, one pot to wash. #immersionblender #soupseason #fallrecipes #kitchenessentials #smallkitchen",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "MuellerLiving Hand Blender",
+        "headline": "Blend Soup Right in the Pot",
+        "points": [
+          "No batch-blending hot soup",
+          "Detachable shaft",
+          "Whisk and frother included"
+        ]
       }
     },
     {
       "asin": "B010TCP3SC",
       "name": "Dash Mini Waffle Maker, 4-Inch",
       "category": "appliances",
-      "image": "https://m.media-amazon.com/images/I/6172rXS7RSL._AC_SL1500_.jpg",
       "blurb": "Heats in a couple of minutes and makes one four-inch waffle at a time, which suits a weekday breakfast better than hauling out a full-size iron. It stores standing up in a narrow cabinet gap and also crisps hash browns, chaffles, and biscuit-dough sandwiches.",
       "added": "2026-10-06",
       "pin": {
         "title": "Mini Waffle Maker for Easy Weekday Breakfasts in a Small Kitchen",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Preheats in a couple of minutes and makes one four-inch waffle at a time, so a weekday breakfast does not mean hauling out a full-size iron. It also crisps hash browns, chaffles, and biscuit-dough sandwiches, and it stores standing up in a narrow cabinet gap. #miniwafflemaker #breakfastideas #smallkitchengadgets #easybreakfast #cozymornings",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Dash Mini Waffle Maker",
+        "headline": "Weekday Waffles in Minutes",
+        "points": [
+          "Heats up fast",
+          "Stores in a narrow gap",
+          "Hash browns and chaffles too"
+        ]
       }
     },
     {
       "asin": "B004P2LEE0",
       "name": "Crock-Pot 2-Quart Manual Slow Cooker",
       "category": "appliances",
-      "image": "https://m.media-amazon.com/images/I/7169qtZQY8L._AC_SL1500_.jpg",
       "blurb": "Sized for dinner for two or a batch of dip, so you are not running a six-quart cooker half empty. The stoneware crock lifts out for the dishwasher, and the Warm setting holds queso or meatballs steady through a long afternoon.",
       "added": "2026-10-06",
       "pin": {
         "title": "2-Quart Mini Slow Cooker for Small-Batch Dinners and Warm Party Dips",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A two-quart cooker is the right size for dinner for two or a batch of queso, instead of running a six-quart pot half empty. The stoneware insert lifts out for the dishwasher, and the Warm setting holds dips steady through a long game day. #slowcooker #crockpotrecipes #gamedayfood #fallrecipes #smallkitchen",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Crock-Pot 2-Quart Slow Cooker",
+        "headline": "Slow Cooking Sized for Two",
+        "points": [
+          "Right size for small batches",
+          "Dishwasher-safe crock",
+          "Warm setting for dips"
+        ]
       }
     },
     {
       "asin": "B07531HM8Q",
       "name": "Rubbermaid Brilliance 12-Cup Airtight Pantry Container",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/61uQh8TBVtL._AC_SL1500_.jpg",
       "blurb": "Latches shut with an airtight seal, so sugar, rice, and cereal stay fresh instead of going stale in a rolled-up bag. The clear walls show what is running low at a glance, and the straight-sided shape stacks to use the full height of a cabinet shelf.",
       "added": "2026-10-07",
       "pin": {
         "title": "Airtight Pantry Container for Sugar, Rice and Baking Staples",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Baking season is easier when the sugar is not hiding in a half-rolled bag at the back of the shelf. This clear container latches airtight, shows how much is left at a glance, and stacks neatly so a small pantry holds more. It is also freezer safe and goes in the top rack of the dishwasher. #pantryorganization #bakingseason #foodstorage #kitchenorganization #smallkitchenideas",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "Rubbermaid Brilliance Container",
+        "headline": "Keep Pantry Staples Fresh",
+        "points": [
+          "Airtight latching lid",
+          "Clear walls show levels",
+          "Stacks to use full height"
+        ]
       }
     },
     {
       "asin": "B0CFQFMC4F",
       "name": "REALINN L-Shaped 2-Tier Pull-Out Under Sink Organizer, 2-Pack",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/7190ZkFw6KL._AC_SL1500_.jpg",
       "blurb": "The narrow top basket mounts on either side to clear the drain pipe and garbage disposal, so the awkward cabinet under the sink finally holds two levels of supplies. The bottom basket slides out, which ends the kneeling and blind reaching for whatever rolled to the back.",
       "added": "2026-10-07",
       "pin": {
         "title": "Under Sink Organizer with Pull-Out Drawer That Fits Around Pipes",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. The cabinet under the sink is usually a pile of bottles around a drain pipe. This L-shaped organizer has a narrow top basket that mounts left or right to clear the plumbing, plus a bottom basket that slides out so nothing gets lost at the back. It comes as a set of two and works under a bathroom vanity as well. #undersinkorganization #kitchenorganization #cabinetorganization #smallkitchenideas #homeorganization",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "REALINN Under Sink Organizer",
+        "headline": "Finally Use the Space Under Your Sink",
+        "points": [
+          "Fits around drain pipes",
+          "Two tiers, pull-out base",
+          "Two-pack"
+        ]
       }
     },
     {
       "asin": "B08N9Q24M9",
       "name": "Mueller Pro Vegetable Chopper and Mandoline Slicer, 10-in-1",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/81+tBoD7McL._AC_SL1500_.jpg",
       "blurb": "Dices an onion or pepper with one press and drops the pieces straight into the attached container, which takes most of the knife work out of soup and chili prep. Eight swappable blades also slice, julienne, and grate, and the whole thing comes apart for the dishwasher.",
       "added": "2026-10-07",
       "pin": {
         "title": "Vegetable Chopper That Makes Soup and Chili Prep Fast",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Soup and chili season means a lot of diced onions, peppers, and celery. This chopper dices with one press and catches everything in its own container, so there is less knife work and no pile sliding off the cutting board. Swap blades to slice, julienne, or grate, then take it apart for the dishwasher. #vegetablechopper #mealprep #soupseason #kitchengadgets #easydinner",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Mueller Pro Veggie Chopper",
+        "headline": "Dice an Onion in One Press",
+        "points": [
+          "Pieces drop into container",
+          "Eight swappable blades",
+          "Slice, julienne, grate"
+        ]
       }
     },
     {
       "asin": "B0CGRGRXPY",
       "name": "SURETIVIAN Twist Chicken Shredder with Clear Lid",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/71d6vBNDknL._AC_SL1500_.jpg",
       "blurb": "A few twists of the lid shreds cooked chicken evenly, replacing the slow two-fork routine. The clear lid lets you see how fine the shred is, the non-slip base keeps it planted on the counter, and it also handles cooked pork and beef.",
       "added": "2026-10-07",
       "pin": {
         "title": "Chicken Shredder Tool for Slow Cooker Dinners and Meal Prep",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Shredding chicken with two forks is the slowest part of taco night. Drop cooked chicken into this shredder, twist the lid a few times, and it comes out evenly shredded for tacos, enchiladas, soup, or buffalo chicken dip. The clear lid shows your progress and the non-slip base keeps it steady. #chickenshredder #slowcookerrecipes #mealprep #kitchengadgets #easydinnerideas",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "SURETIVIAN Chicken Shredder",
+        "headline": "Shred Chicken With a Twist",
+        "points": [
+          "Replaces the two-fork routine",
+          "Clear lid shows the shred",
+          "Non-slip base"
+        ]
       }
     },
     {
       "asin": "B08PP48979",
       "name": "Cosori Glass Electric Kettle, 1.7L",
       "category": "appliances",
-      "image": "https://m.media-amazon.com/images/I/81bgn8np84L._AC_SL1500_.jpg",
       "blurb": "Boils water for tea, pour-over coffee, or oatmeal faster than a stovetop kettle, then shuts itself off so it can be left unattended. The wide opening makes the glass interior easy to wipe clean, and the water never touches plastic.",
       "added": "2026-10-07",
       "pin": {
         "title": "Glass Electric Kettle for Tea, Pour-Over Coffee and Cozy Fall Drinks",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Tea and cocoa season calls for hot water without waiting on the stove. This glass kettle heats quickly, shuts off automatically once the water boils, and glows blue while it works. The wide mouth makes it easy to clean, and no plastic touches the water inside. #electrickettle #teatime #cozykitchen #coffeebarideas #smallkitchenappliances",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Cosori Glass Electric Kettle",
+        "headline": "Faster Than the Stovetop",
+        "points": [
+          "1.7 L capacity",
+          "Automatic shut-off",
+          "Wide, easy-clean opening"
+        ]
       }
     },
     {
       "asin": "B0CSPKSCP2",
       "name": "Winisok Waterproof Silicone Under Sink Mat, 34\" x 22\"",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/71NUnqiBWbL._AC_SL1500_.jpg",
       "blurb": "A slow drip under the sink can ruin a cabinet floor before anyone notices; this flexible silicone mat has a raised edge that holds leaks and spilled cleaners in place so they wipe up instead of soaking in. Measure the cabinet floor before ordering, since the silicone may need to be trimmed to fit around pipes.",
       "added": "2026-10-08",
       "pin": {
         "title": "Waterproof Under Sink Mat to Protect Kitchen Cabinets from Leaks and Spills",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. The cabinet under the sink is where slow leaks and dripping bottles do their damage. This silicone mat has a raised lip that holds spills in place until you wipe them up, and it lifts out for a quick rinse. Measure your cabinet first, then trim it to fit around pipes if needed. #undersinkorganization #kitchenorganization #kitchenhacks #homeorganization #cabinetorganization",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "Winisok Under Sink Mat",
+        "headline": "Protect the Cabinet Under Your Sink",
+        "points": [
+          "Waterproof silicone",
+          "Raised edge holds leaks",
+          "34\" x 22\""
+        ]
       }
     },
     {
       "asin": "B07W7MG36T",
       "name": "Gorilla Grip PowerGrip Drawer and Shelf Liner, 12\" x 10'",
       "category": "organization",
-      "image": "https://m.media-amazon.com/images/I/71whnTXeQzL._AC_SL1500_.jpg",
       "blurb": "Keeps utensil trays, glasses, and spice jars from sliding around every time a drawer opens or closes, and cushions shelves against scratches. It's non-adhesive, so it trims to size with scissors and lifts out for cleaning without leaving sticky residue behind.",
       "added": "2026-10-08",
       "pin": {
         "title": "Non-Adhesive Drawer and Shelf Liner for Kitchen Cabinets, Easy Cut-to-Fit",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Lining drawers and shelves is a quick kitchen refresh before the holiday cooking rush. This grippy liner keeps organizers and glassware from sliding, trims to any size with scissors, and lifts out to wipe clean because there's no adhesive. A good fit for renters too. #shelfliner #drawerorganization #kitchenorganization #kitchencabinets #renterfriendly",
         "board": "Kitchen Organization Must-Haves"
+      },
+      "graphic": {
+        "label": "Gorilla Grip Shelf Liner",
+        "headline": "Stop Sliding Drawers & Scratched Shelves",
+        "points": [
+          "Non-adhesive grip",
+          "Trims with scissors",
+          "Lifts out to clean"
+        ]
       }
     },
     {
       "asin": "B07YP2VH4B",
       "name": "KitchenAid Classic Multifunction Can Opener with Bottle Opener",
       "category": "gadgets",
-      "image": "https://m.media-amazon.com/images/I/51yO+bt+mqL._AC_SL1500_.jpg",
       "blurb": "A sharp stainless steel cutting wheel and an oversized turning knob get through cans of pumpkin, broth, and beans without the slipping and re-clamping of a worn-out opener. The cushioned handles are easier on tired hands, and the built-in bottle opener means one less tool in the drawer.",
       "added": "2026-10-08",
       "pin": {
         "title": "Easy-Turn Manual Can Opener for Soup Season, Chili Night and Pumpkin Baking",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Soup, chili, and pumpkin baking season means opening a lot of cans. This manual opener has a sharp stainless steel wheel, a big easy-turn knob, and soft handles that are kind to tired hands. The built-in bottle opener saves drawer space too. #canopener #kitchengadgets #kitchenessentials #soupseason #fallbaking",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "KitchenAid Can Opener",
+        "headline": "Open Cans Without the Struggle",
+        "points": [
+          "Sharp stainless wheel",
+          "Oversized turning knob",
+          "Built-in bottle opener"
+        ]
       }
     },
     {
       "asin": "B009VUHLHA",
       "name": "KitchenAid 5-Speed Ultra Power Hand Mixer",
       "category": "appliances",
-      "image": "https://m.media-amazon.com/images/I/51Vc2y5YkoL._AC_SL1500_.jpg",
       "blurb": "Handles cookie dough, mashed potatoes, and whipped cream without hauling out a stand mixer, then tucks into a drawer when the baking is done. The cord locks to either side so it stays out of the bowl, and the dishwasher-safe beaters release with one button.",
       "added": "2026-10-08",
       "pin": {
         "title": "KitchenAid 5-Speed Hand Mixer for Fall Baking, Cookies and Holiday Desserts",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Fall baking without a bulky stand mixer. Five speeds cover everything from stirring in chocolate chips to whipping cream, the cord locks to either side so it stays out of the bowl, and the dishwasher-safe beaters release with one button. It stores in a drawer when you're done. #handmixer #fallbaking #bakingessentials #holidaybaking #smallkitchenappliances",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "KitchenAid 5-Speed Hand Mixer",
+        "headline": "Baking Power That Fits a Drawer",
+        "points": [
+          "Five speeds",
+          "Cord locks either side",
+          "Dishwasher-safe beaters"
+        ]
       }
     },
     {
       "asin": "B0000645YM",
       "name": "Cuisinart Mini-Prep Plus 3-Cup Food Processor",
       "category": "appliances",
-      "image": "https://m.media-amazon.com/images/I/71putV+mpYL._AC_SL1500_.jpg",
       "blurb": "Chops onions, garlic, herbs, and nuts in a few pulses, which takes the tedious knife work out of soups, stuffing, and sauces. The reversible blade switches between chopping and grinding, and the bowl and lid are dishwasher safe, so it earns its small spot in the cabinet.",
       "added": "2026-10-08",
       "pin": {
         "title": "Mini Food Processor for Small Kitchens: Chop Onions, Herbs and Nuts Fast",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A mini food processor is the shortcut for onions, garlic, herbs, nuts, and hard cheese. This 3-cup Cuisinart chops or grinds with a reversible blade, and the bowl and lid are dishwasher safe. It's small enough to store in a cabinet, which makes it a good fit for apartment kitchens and holiday prep. #foodprocessor #mealprep #smallkitchen #kitchengadgets #thanksgivingprep",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "graphic": {
+        "label": "Cuisinart Mini-Prep Plus",
+        "headline": "Chop Prep Work Down to Seconds",
+        "points": [
+          "3-cup bowl",
+          "Chops and grinds",
+          "Dishwasher-safe parts"
+        ]
+      }
+    },
+    {
+      "asin": "B0CJZW65R3",
+      "name": "STANLEY Quencher H2.0 FlowState Tumbler, 40 oz",
+      "category": "drinkware",
+      "graphic": {
+        "label": "Stanley Quencher H2.0",
+        "headline": "40 oz Tumbler That Fits Your Cup Holder",
+        "points": [
+          "Handle + 3-position lid",
+          "Double-wall insulation",
+          "Dishwasher safe"
+        ]
+      },
+      "blurb": "Holds 40 ounces with a handle and a three-position lid, and the narrow base still drops into a car cup holder. Double-wall vacuum insulation keeps ice around for hours, and it goes in the dishwasher.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Stanley Quencher H2.0 40 oz Tumbler – Handle, Straw & Cup Holder Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 40 oz insulated tumbler with a handle, a 3-position lid, and a base that fits your car cup holder. Double-wall vacuum insulation keeps drinks cold for hours, and it's dishwasher safe. #stanleycup #tumbler #hydration",
+        "board": "Drinkware & Tumblers We Love"
+      }
+    },
+    {
+      "asin": "B0BZYCJK89",
+      "name": "Owala FreeSip Insulated Water Bottle, 24 oz",
+      "category": "drinkware",
+      "graphic": {
+        "label": "Owala FreeSip",
+        "headline": "Sip or Swig — One Bottle Does Both",
+        "points": [
+          "Built-in straw + wide spout",
+          "Locking push-button lid",
+          "Cold up to 24 hours"
+        ]
+      },
+      "blurb": "The FreeSip spout lets you sip upright through the built-in straw or tip it back and swig. A locking push-button lid keeps the spout clean, and double-wall insulation keeps water cold up to 24 hours.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Owala FreeSip 24 oz Water Bottle – Sip Through the Straw or Swig",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. One spout works two ways: sip through the built-in straw or tilt back and swig. A locking push-button lid keeps it clean, and it stays cold up to 24 hours. #owala #waterbottle #hydration",
+        "board": "Drinkware & Tumblers We Love"
+      }
+    },
+    {
+      "asin": "B0CQVWT2NH",
+      "name": "HydroJug Traveler Insulated Bottle, 40 oz",
+      "category": "drinkware",
+      "graphic": {
+        "label": "HydroJug Traveler",
+        "headline": "40 oz of Ice-Cold Water, All Day",
+        "points": [
+          "Triple-wall insulated",
+          "Leak-resistant flip straw",
+          "Cup-holder friendly"
+        ]
+      },
+      "blurb": "Triple-wall insulation and a leak-resistant flip-straw lid make it a full day of water in one fill. The non-slip base fits a cup holder, and the straw detaches so everything goes in the dishwasher.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "HydroJug Traveler 40 oz – Triple-Insulated Bottle with Handle",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A triple-wall insulated 40 oz bottle with a flip straw and leak-resistant lid. It's dishwasher safe and fits your cup holder, so one fill covers most of the day. #hydrojug #waterbottle #stayhydrated",
+        "board": "Drinkware & Tumblers We Love"
+      }
+    },
+    {
+      "asin": "B08J8GZXKZ",
+      "name": "KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack",
+      "category": "gadgets",
+      "graphic": {
+        "label": "KitchenAid Silicone Mitts",
+        "headline": "Grab Hot Pans Without the Flinch",
+        "points": [
+          "Heat resistant to 500°F",
+          "Waterproof, non-slip grip",
+          "Set of two"
+        ]
+      },
+      "blurb": "Silicone shells rated to 500°F shield hands from hot sheet pans and casserole dishes, and they shrug off steam and spills that soak through cloth mitts. The ribbed grip holds slippery pans, and each mitt is 7 by 13 inches.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "KitchenAid Silicone Oven Mitts – Heat Resistant to 500°F, Set of 2",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Waterproof ribbed silicone protects your hands from hot pans up to 500°F and grips slippery dishes. A set of two, sized 7\" x 13\". #kitchenessentials #bakingtools #kitchengadgets",
+        "board": "Small Kitchen Gadgets We Love"
+      }
+    },
+    {
+      "asin": "B0DF472VMZ",
+      "name": "Owala SmoothSip Slider Coffee Tumbler, 12 oz",
+      "category": "drinkware",
+      "graphic": {
+        "label": "Owala SmoothSip",
+        "headline": "Your Coffee, Hot or Iced, No Spills",
+        "points": [
+          "Leak-proof slide-top lid",
+          "Hot 6 hrs / cold 24 hrs",
+          "12 oz, one-hand size"
+        ]
+      },
+      "blurb": "A slide-top lid seals completely, so coffee rides in a bag or car without splashing. Double-wall insulation keeps it hot about six hours or iced up to 24, in a 12-ounce size that fits one hand.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Owala SmoothSip Coffee Tumbler – Leak-Proof Lid, Hot or Iced",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A slide-top lid stops splashes and seals completely. Keeps coffee hot for 6 hours or iced for 24, in a 12 oz size that fits one hand. #owala #coffeetumbler #icedcoffee",
+        "board": "Drinkware & Tumblers We Love"
       }
     }
   ]
