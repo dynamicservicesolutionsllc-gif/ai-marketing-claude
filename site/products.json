@@ -585,6 +585,111 @@
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A slide-top lid stops splashes and seals completely. Keeps coffee hot for 6 hours or iced for 24, in a 12 oz size that fits one hand. #owala #coffeetumbler #icedcoffee",
         "board": "Drinkware & Tumblers We Love"
       }
+    },
+    {
+      "asin": "B0725GYNG6",
+      "name": "Amazon Basics Silicone Baking Mat, Half-Sheet, 2-Pack",
+      "category": "gadgets",
+      "graphic": {
+        "label": "Amazon Basics Baking Mats",
+        "headline": "Skip the Parchment This Baking Season",
+        "points": [
+          "2 half-sheet mats",
+          "Non-stick, reusable",
+          "Dishwasher safe"
+        ]
+      },
+      "blurb": "Cookies, roasted vegetables and sticky candied nuts release cleanly without buying roll after roll of parchment or foil. Two half-sheet mats fit standard pans, then rinse off or go in the dishwasher.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Reusable Silicone Baking Mats for Holiday Cookies – Non-Stick Half-Sheet Set",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. These non-stick silicone mats replace parchment for holiday cookie baking and sheet-pan dinners. Two half-sheet mats fit standard pans and clean up in the dishwasher. #holidaybaking #christmascookies #bakinghacks #kitchenessentials",
+        "board": "Small Kitchen Gadgets We Love"
+      }
+    },
+    {
+      "asin": "B00004OCKR",
+      "name": "OXO Good Grips Salad Spinner, 6.22 Qt",
+      "category": "gadgets",
+      "graphic": {
+        "label": "OXO Salad Spinner",
+        "headline": "Crisp, Dry Greens in Seconds",
+        "points": [
+          "One-hand press pump",
+          "Brake button + non-slip base",
+          "Basket doubles as colander"
+        ]
+      },
+      "blurb": "Wet lettuce waters down dressing and wilts fast; a few pumps spin greens and herbs dry so salads stay crisp. The basket also works as a colander and the bowl as a serving bowl, so it earns its cabinet space.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "OXO Salad Spinner – Dry Lettuce and Herbs Fast for Better Salads and Meal Prep",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A one-hand press pump spins lettuce, herbs and berries dry in seconds, so dressing actually sticks. The basket doubles as a colander and the bowl as a serving bowl. #mealprep #saladrecipes #kitchengadgets #healthyeating",
+        "board": "Small Kitchen Gadgets We Love"
+      }
+    },
+    {
+      "asin": "B08NY9RYDG",
+      "name": "EVERIE Expandable Pot Lid and Bakeware Organizer Rack",
+      "category": "organization",
+      "graphic": {
+        "label": "EVERIE Pot Lid Organizer",
+        "headline": "End the Cabinet Avalanche",
+        "points": [
+          "Expands 12.6\" to 21.5\"",
+          "Adjustable steel dividers",
+          "Lids, sheets & boards"
+        ]
+      },
+      "blurb": "Stacked lids, sheet pans and cutting boards turn into a clattering pile every time you need the one on the bottom. This expandable rack stands them upright in adjustable slots so each one slides out on its own.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Expandable Pot Lid Organizer for Cabinets – Store Lids, Sheet Pans and Boards Upright",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Stand pot lids, sheet pans and cutting boards upright so you can grab one without unstacking the rest. The rack expands from 12.6 to 21.5 inches and the steel dividers adjust to fit. #kitchenorganization #cabinetorganization #smallkitchen #organizedhome",
+        "board": "Kitchen Organization Must-Haves"
+      }
+    },
+    {
+      "asin": "B0B9P17YHK",
+      "name": "Evoloop Rapid Egg Cooker, 6-Egg Capacity",
+      "category": "appliances",
+      "graphic": {
+        "label": "Evoloop Egg Cooker",
+        "headline": "Breakfast and Meal-Prep Eggs on Autopilot",
+        "points": [
+          "Cooks up to 6 eggs",
+          "Soft, medium or hard",
+          "Auto shut-off"
+        ]
+      },
+      "blurb": "Boiling a pot of water and watching the timer is a hassle on busy mornings. This compact cooker steams up to six eggs soft, medium or hard (or poaches them) and shuts itself off when they are done.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Rapid Egg Cooker for Easy Hard-Boiled Eggs – 6-Egg Meal Prep Breakfast Helper",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Steam up to six eggs soft, medium or hard-boiled without watching a pot, plus a tray for poached eggs. It shuts off automatically when they are done, so meal-prep eggs practically make themselves. #mealprep #hardboiledeggs #breakfastideas #kitchenappliances",
+        "board": "Small Kitchen Appliances Worth the Counter Space"
+      }
+    },
+    {
+      "asin": "B0CYQQXRNN",
+      "name": "Contigo West Loop Autoseal Travel Mug, 16 oz",
+      "category": "drinkware",
+      "graphic": {
+        "label": "Contigo West Loop Mug",
+        "headline": "Hot Coffee for the Whole Commute",
+        "points": [
+          "Autoseal leak-proof lid",
+          "Hot 11 hrs / cold 24 hrs",
+          "Dishwasher-safe lid"
+        ]
+      },
+      "blurb": "The lid seals automatically between sips, so a mug tossed in a bag or tipped over in the car does not leak. Vacuum insulation keeps coffee hot through a long morning, and the lid comes apart for the dishwasher.",
+      "added": "2026-10-12",
+      "pin": {
+        "title": "Contigo West Loop Leak-Proof Travel Mug – Keeps Fall Coffee Hot for Hours",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. The Autoseal lid locks between sips, so this travel mug won't spill in a bag or cup holder. It keeps coffee hot up to 11 hours on chilly fall mornings, and the easy-clean lid is dishwasher safe. #travelmug #coffeelover #fallmornings #commuteessentials",
+        "board": "Drinkware & Tumblers We Love"
+      }
     }
   ]
 }
