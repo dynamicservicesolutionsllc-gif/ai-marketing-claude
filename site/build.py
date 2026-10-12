@@ -204,6 +204,8 @@ def main():
     graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
     url = data["site"]["url"]
     (OUT / "index.html").write_text(render(data), encoding="utf-8")
+    # Let the posting routines load the graphics cross-origin (canvas -> file upload on Pinterest/Facebook).
+    (OUT / "_headers").write_text("/img/*\n  Access-Control-Allow-Origin: *\n", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
     # Machine-readable feed: the Pinterest routine reads this as its queue.
     feed = [dict(p, page_url=f"{url}/#{p['asin']}", pin_image=f"{url}/img/{p['asin']}.png",
