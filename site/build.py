@@ -4,7 +4,9 @@
 Usage: python3 build.py          # validate products.json and write public/
        python3 build.py --check  # validate only, exit non-zero on problems
 
-Standard library only, so it runs anywhere (routines, Netlify, locally).
+Product images are original graphics rendered by graphics.py (needs Pillow) into
+public/img/ — never Amazon-hosted photos, which the Associates policies only
+license through Amazon's own tools/API.
 """
 import html
 import json
@@ -28,7 +30,7 @@ def load():
     cats = data["categories"]
     for i, p in enumerate(data["products"]):
         where = f"products[{i}] ({p.get('asin', '?')})"
-        for field in ("asin", "name", "category", "image", "blurb", "added"):
+        for field in ("asin", "name", "category", "blurb", "added"):
             if not str(p.get(field, "")).strip():
                 errors.append(f"{where}: missing '{field}'")
         asin = p.get("asin", "")
@@ -41,8 +43,13 @@ def load():
         seen.add(asin)
         if p.get("category") not in cats:
             errors.append(f"{where}: unknown category '{p.get('category')}' (add it to 'categories')")
-        if not str(p.get("image", "")).startswith("https://"):
-            errors.append(f"{where}: image must be an https URL")
+        if "image" in p:
+            errors.append(f"{where}: remove 'image' — use an original 'graphic' block, not Amazon-hosted photos")
+        g = p.get("graphic") or {}
+        if not str(g.get("label", "")).strip() or not str(g.get("headline", "")).strip():
+            errors.append(f"{where}: graphic needs 'label' and 'headline'")
+        if not isinstance(g.get("points"), list) or len(g.get("points", [])) != 3:
+            errors.append(f"{where}: graphic needs exactly 3 'points'")
         try:
             date.fromisoformat(p.get("added", ""))
         except ValueError:
@@ -73,7 +80,7 @@ def card(p, tag):
     e = html.escape
     return f"""      <article class="card" id="{e(p['asin'])}">
         <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
-          <img src="{e(p['image'])}" alt="{e(p['name'])}" loading="lazy" width="600" height="600">
+          <img src="img/{e(p['asin'])}-sq.png" alt="{e(p['name'])}" loading="lazy" width="800" height="800">
         </a>
         <div class="body">
           <h3>{e(p['name'])}</h3>
@@ -96,7 +103,7 @@ def render(data):
             sections.append(f'    <section id="{e(key)}">\n      <h2>{e(label)}</h2>\n      <div class="grid">\n{cards}\n      </div>\n    </section>')
     nav = " ".join(f'<a href="#{e(k)}">{e(v)}</a>' for k, v in data["categories"].items()
                    if any(p["category"] == k and p["asin"] not in top_asins for p in products))
-    og_image = e(top[0]["image"]) if top else ""
+    og_image = e(f"{site['url']}/img/{top[0]['asin']}.png") if top else ""
     top_cards = "\n".join(card(p, tag) for p in top)
     return f"""<!doctype html>
 <html lang="en">
@@ -129,8 +136,8 @@ def render(data):
   .grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }}
   .card {{ background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:16px; }}
   .card:target {{ outline:3px solid var(--acc); }}
-  .img {{ background:#fff; display:block; aspect-ratio:1; }}
-  .img img {{ width:100%; height:100%; object-fit:contain; padding:16px; }}
+  .img {{ background:#fbf8f3; display:block; aspect-ratio:1; }}
+  .img img {{ width:100%; height:100%; object-fit:cover; display:block; }}
   .body {{ padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }}
   h3 {{ font-size:18px; line-height:1.3; }}
   .body p {{ color:var(--mut); font-size:15px; flex:1; }}
@@ -193,11 +200,14 @@ def main():
         print(f"OK: {len(data['products'])} products")
         return
     OUT.mkdir(exist_ok=True)
+    import graphics  # needs Pillow; only required for a full build
+    graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
     url = data["site"]["url"]
     (OUT / "index.html").write_text(render(data), encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
     # Machine-readable feed: the Pinterest routine reads this as its queue.
-    feed = [dict(p, page_url=f"{url}/#{p['asin']}", amazon_url=amazon_url(p["asin"], data["site"]["associate_tag"]))
+    feed = [dict(p, page_url=f"{url}/#{p['asin']}", pin_image=f"{url}/img/{p['asin']}.png",
+                 amazon_url=amazon_url(p["asin"], data["site"]["associate_tag"]))
             for p in sorted(data["products"], key=lambda p: p["added"])]
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = max(p["added"] for p in data["products"])
