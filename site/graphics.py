@@ -7,7 +7,9 @@ graphics instead of Amazon-hosted photos.
 
 For each product with a `graphic` block ({label, headline, points[3]}) this writes:
   public/img/<ASIN>.png     1000x1500 pin graphic (Pinterest 2:3)
-  public/img/<ASIN>-sq.png   800x800 square card for the landing page
+  public/img/<ASIN>-sq.png   800x800 square card for the site (plus a lighter -sq.webp)
+and once for the site:
+  public/img/og.png         1200x630 social share card
 
 Requires Pillow (`pip install pillow`). Fonts are bundled in fonts/.
 """
@@ -106,6 +108,20 @@ def square_graphic(g, accent):
     return im
 
 
+def og_graphic(site_name, tagline):
+    W, H = 1200, 630
+    im = Image.new("RGB", (W, H), CREAM)
+    d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, W, 24], fill=ORANGE)
+    f, lines = _fit(d, site_name, "DejaVuSerif-Bold.ttf", 88, W - 160, 1)
+    d.text((W / 2, 230), lines[0], font=f, fill=INK, anchor="mm")
+    f, lines = _fit(d, tagline, "DejaVuSans.ttf", 38, W - 220, 3)
+    d.multiline_text((W / 2, 400), "\n".join(lines), font=f, fill=MUTED, anchor="mm", align="center", spacing=12)
+    for i, c in enumerate(ACCENTS.values()):
+        d.rectangle([W / 2 - 160 + i * 80, 560, W / 2 - 90 + i * 80, 572], fill=c)
+    return im
+
+
 def render_all(data, out_dir, force=False):
     out = Path(out_dir) / "img"
     out.mkdir(parents=True, exist_ok=True)
@@ -118,6 +134,14 @@ def render_all(data, out_dir, force=False):
             if force or not path.exists():
                 fn().save(path, optimize=True)
                 made += 1
+        webp = out / f"{asin}-sq.webp"
+        if force or not webp.exists():
+            Image.open(out / f"{asin}-sq.png").save(webp, quality=85, method=6)
+            made += 1
+    og = out / "og.png"
+    if force or not og.exists():
+        og_graphic(data["site"]["name"], data["site"]["tagline"]).save(og, optimize=True)
+        made += 1
     return made
 
 

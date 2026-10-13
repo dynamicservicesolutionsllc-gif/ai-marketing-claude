@@ -2,9 +2,10 @@
   "site": {
     "name": "Kitchen Finds & Favorites",
     "url": "https://kitchenfindsfavorites.netlify.app",
-    "tagline": "Hand-picked organization gear for small, busy kitchens — tested against real reviews, not hype.",
+    "tagline": "Hand-picked organization gear, gadgets, small appliances, and drinkware for small, busy kitchens — researched against real reviews, not hype.",
     "associate_tag": "kitchenfi0fde-20",
-    "pinterest": "https://www.pinterest.com/kitchenfindsfavorites/"
+    "pinterest": "https://www.pinterest.com/kitchenfindsfavorites/",
+    "facebook": "https://www.facebook.com/61594030243560"
   },
   "categories": {
     "organization": "Kitchen Organization Must-Haves",
