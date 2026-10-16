@@ -16,7 +16,8 @@ Live at https://kitchenfindsfavorites.netlify.app. Netlify deploys `site/public/
 Each product gets its own page at `/picks/<slug>/` (slug from the product name), and pins/posts link there.
 The landing page also keeps a `#<ASIN>` anchor per card, so older pins that link to anchors still work.
 The newest 6 products appear under "This Week's Top Picks"; older ones move into their category section.
-`build.py` also writes `/privacy/`, `/favicon.svg`, the sitemap (every page), and JSON-LD structured data.
+`build.py` also writes `/privacy/`, `/thanks/` (signup success page), `/404.html`, `/favicon.svg`, the sitemap (every indexable page), and JSON-LD structured data.
+The site accent is `#ad512b` (light) / `#e07a4f` (dark) so buttons and links meet WCAG AA contrast; the graphics keep their original `#c8643b` orange.
 
 ## Compliance rules the build enforces
 

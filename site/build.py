@@ -136,25 +136,30 @@ def ld(obj):
 
 
 CSS = """
-  :root { --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#c8643b; --acc-ink:#fff; --bd:#ece4d8; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-ink:#1c1a18; --bd:#3a3530; } }
+  :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; }
   .wrap { max-width:1080px; margin:0 auto; padding:0 16px; }
   .disclosure { position:sticky; top:0; z-index:10; background:var(--ink); color:var(--bg); text-align:center; font-size:13px; padding:6px 16px; }
   .disclosure a { color:inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .disclosure a:focus-visible { outline-color:var(--bg); }
+  .skip { position:absolute; left:-9999px; top:0; z-index:20; background:var(--card); color:var(--ink); padding:8px 16px; border-radius:0 0 8px 0; }
+  .skip:focus { left:0; }
   header { padding:48px 0 24px; text-align:center; }
   h1 { font-size:clamp(28px,5vw,44px); line-height:1.15; }
   h1 .sub { display:block; font-size:clamp(16px,2.4vw,20px); font-weight:600; color:var(--acc); margin-top:8px; }
   header p { color:var(--mut); max-width:560px; margin:12px auto 0; }
   nav { margin-top:16px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; font-size:14px; }
   nav a, .crumbs a, .brand { color:var(--acc); }
+  nav a { display:inline-block; padding:6px 2px; }
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
-  .img { background:#fbf8f3; display:block; aspect-ratio:1; }
+  .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
   .img picture { display:block; width:100%; height:100%; }
   .img img { width:100%; height:100%; object-fit:cover; display:block; }
   .body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
@@ -163,6 +168,7 @@ CSS = """
   h3 a:hover { text-decoration:underline; }
   .body p { color:var(--mut); font-size:15px; flex:1; }
   .btn { display:inline-block; background:var(--acc); color:var(--acc-ink); text-decoration:none; font-weight:600; padding:10px 16px; border-radius:8px; text-align:center; }
+  .btn:hover { background:var(--acc-hover); }
   .paid { display:block; text-align:center; color:var(--mut); font-size:12px; margin-top:-4px; }
   .top { padding:20px 0 0; font-size:14px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
   .brand { font-weight:700; text-decoration:none; }
@@ -181,6 +187,7 @@ CSS = """
   .prose p, .prose li { margin-bottom:10px; }
   .prose ul { padding-left:20px; }
   .prose a { color:var(--acc); }
+  .prose a.btn { color:var(--acc-ink); text-decoration:none; }
   .signup { background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:28px 20px; text-align:center; margin:24px 0; }
   .signup p { color:var(--mut); }
   .signup form { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-top:14px; }
@@ -194,7 +201,7 @@ CSS = """
 """
 
 
-def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra=""):
+def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="", noindex=False):
     url = f"{site['url']}/{path}"
     return f"""<!doctype html>
 <html lang="en">
@@ -205,7 +212,9 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="")
 <meta name="description" content="{e(description)}">
 <link rel="canonical" href="{e(url)}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<meta property="og:type" content="website">
+<meta name="theme-color" content="#fbf8f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1a18" media="(prefers-color-scheme: dark)">
+{'<meta name="robots" content="noindex">' + chr(10) if noindex else ""}<meta property="og:type" content="website">
 <meta property="og:site_name" content="{e(site['name'])}">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(description)}">
@@ -218,6 +227,7 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="")
 {extra}<style>{CSS}</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="disclosure">{DISCLOSURE} <a href="/privacy/">Learn more</a></div>
 <div class="wrap">
 """
@@ -227,10 +237,10 @@ def signup():
     return """    <section class="signup" id="updates">
       <h2>Get the next 5 kitchen finds before anyone else</h2>
       <p>One short email whenever we add new picks. No spam, unsubscribe anytime.</p>
-      <form name="updates" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form name="updates" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="updates">
         <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
-        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address">
         <button class="btn" type="submit">Get Updates</button>
       </form>
       <small>We only use your email to send new kitchen picks, and never sell or share it. See our <a href="/privacy/">privacy policy</a>.</small>
@@ -280,7 +290,7 @@ def render_home(data, products):
     <p>{e(site['tagline'])}</p>
     <nav>{nav}</nav>
   </header>
-  <main>
+  <main id="main">
     <section id="top-picks">
       <h2>This Week's Top Picks</h2>
       <div class="grid">
@@ -318,7 +328,7 @@ def render_pick(data, p, products):
     <a class="brand" href="{base}">{e(site['name'])}</a>
     <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(p['category'])}">{e(label)}</a></span>
   </div>
-  <main>
+  <main id="main">
     <article class="pick" id="{e(p['asin'])}">
       <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
         {picture(p, base, eager=True)}
@@ -340,7 +350,7 @@ def render_privacy(data):
     site = data["site"]
     return head(site, f"Privacy Policy | {site['name']}", f"How {site['name']} handles cookies, affiliate links, and email sign-ups.",
                 "privacy/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H) + f"""  <div class="top"><a class="brand" href="../">{e(site['name'])}</a></div>
-  <main class="prose">
+  <main id="main" class="prose">
     <h1>Privacy Policy</h1>
     <p>Last updated {PRIVACY_UPDATED}.</p>
     <h2>Affiliate links and cookies</h2>
@@ -357,6 +367,19 @@ def render_privacy(data):
     <p>Questions or deletion requests: message us on <a href="{e(site['facebook'])}">Facebook</a> or <a href="{e(site['pinterest'])}">Pinterest</a>, or reply to any email we send you.</p>
     <h2>Changes</h2>
     <p>If this policy changes, we will update the date above.</p>
+  </main>
+""" + foot(site)
+
+
+def render_simple(data, path, title, heading, body):
+    """Small noindex utility page (form success, 404) with a way back into the picks."""
+    site = data["site"]
+    return head(site, f"{title} | {site['name']}", site["tagline"], path, f"{site['url']}/img/og.png",
+                site["name"], OG_W, OG_H, noindex=True) + f"""  <div class="top"><a class="brand" href="/">{e(site['name'])}</a></div>
+  <main id="main" class="prose">
+    <h1>{e(heading)}</h1>
+    <p>{body}</p>
+    <p><a class="btn" href="/#top-picks">See this week's top picks</a></p>
   </main>
 """ + foot(site)
 
@@ -387,6 +410,15 @@ def main():
         (d / "index.html").write_text(render_pick(data, p, products), encoding="utf-8")
     (OUT / "privacy").mkdir(exist_ok=True)
     (OUT / "privacy" / "index.html").write_text(render_privacy(data), encoding="utf-8")
+    (OUT / "thanks").mkdir(exist_ok=True)
+    (OUT / "thanks" / "index.html").write_text(render_simple(
+        data, "thanks/", "Thanks for signing up", "You're on the list",
+        "Thanks for signing up. We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link."),
+        encoding="utf-8")
+    (OUT / "404.html").write_text(render_simple(
+        data, "404.html", "Page not found", "That page isn't here",
+        "The pick you're looking for may have moved or been removed. Everything we currently recommend is on the home page."),
+        encoding="utf-8")
     (OUT / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     # Let the posting routines load the graphics cross-origin (canvas -> file upload on Pinterest/Facebook).
     (OUT / "_headers").write_text("/img/*\n  Access-Control-Allow-Origin: *\n", encoding="utf-8")
