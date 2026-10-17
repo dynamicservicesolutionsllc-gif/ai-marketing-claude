@@ -42,4 +42,7 @@ jobs:
       - name: Tell Hostinger to pull the new build
         # Hostinger's Git auto-deployment webhook (hPanel > Advanced > GIT > Auto Deployment).
         # Calling it only makes Hostinger pull the hostinger-deploy branch, so it is safe to keep here.
-        run: curl -fsS -X POST https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
+        run: |
+          curl -fsS -X POST -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
+            -d '{"ref":"refs/heads/hostinger-deploy","repository":{"clone_url":"https://github.com/${{ github.repository }}.git"}}' \
+            https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
