@@ -28,8 +28,9 @@ DISCLOSURE = "As an Amazon Associate, we earn from qualifying purchases."
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
-PRIVACY_UPDATED = "2026-10-12"  # bump when the privacy text changes
+PRIVACY_UPDATED = "2026-10-17"  # bump when the privacy text changes
 e = html.escape
+TESTING_CLAIM = re.compile(r"\b(tested|testing|we tried|i tried|i use|we use|hands-on)\b", re.I)
 
 
 def slug(name):
@@ -65,6 +66,10 @@ def load():
         slugs.add(s)
         if p.get("category") not in cats:
             errors.append(f"{where}: unknown category '{p.get('category')}' (add it to 'categories')")
+        if p.get("subcategory") not in data.get("subcategories", {}):
+            errors.append(f"{where}: unknown subcategory '{p.get('subcategory')}' (add it to 'subcategories')")
+        if not str(p.get("award", "")).strip():
+            errors.append(f"{where}: missing 'award' (short label for the guide's quick-picks table, e.g. 'Best budget')")
         if "image" in p:
             errors.append(f"{where}: remove 'image' — use an original 'graphic' block, not Amazon-hosted photos")
         g = p.get("graphic") or {}
@@ -93,8 +98,31 @@ def load():
                 errors.append(f"{where}: remove '{banned}' — static Amazon prices/ratings violate the Associates agreement")
         # FTC: don't imply hands-on testing we haven't done.
         text = " ".join([p.get("blurb", ""), *(p.get("pin") or {}).values()])
-        if re.search(r"\b(tested|we tried|i tried|i use|we use)\b", text, re.I):
+        if TESTING_CLAIM.search(text + " " + p.get("award", "")):
             errors.append(f"{where}: copy implies hands-on testing/personal use — describe the product, not our use of it")
+    used = {p.get("subcategory") for p in data["products"]}
+    for key, s in data.get("subcategories", {}).items():
+        where = f"subcategories['{key}']"
+        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", key):
+            errors.append(f"{where}: key must be a lowercase-hyphenated URL slug")
+        if s.get("category") not in cats:
+            errors.append(f"{where}: unknown category '{s.get('category')}'")
+        for field in ("title", "keyword", "description", "intro"):
+            if not str(s.get(field, "")).strip():
+                errors.append(f"{where}: missing '{field}'")
+        if len(s.get("title", "")) > 60:
+            errors.append(f"{where}: title over 60 characters (search results truncate it)")
+        if len(s.get("description", "")) > 160:
+            errors.append(f"{where}: description over 160 characters")
+        if len(s.get("criteria", [])) < 2 or len(s.get("guide", [])) < 2:
+            errors.append(f"{where}: needs at least 2 'criteria' and 2 'guide' entries")
+        copy = json.dumps(s, ensure_ascii=False)
+        if TESTING_CLAIM.search(copy):
+            errors.append(f"{where}: copy implies hands-on testing/personal use")
+        if re.search(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b", copy, re.I):
+            errors.append(f"{where}: no prices, star ratings, or price claims in guide copy")
+        if key not in used:
+            errors.append(f"{where}: no products assigned — add products or remove the subcategory")
     return data, errors
 
 
@@ -196,6 +224,34 @@ CSS = """
   .signup small { display:block; margin-top:10px; color:var(--mut); }
   .signup small a { color:var(--acc); }
   .hidden { position:absolute; left:-9999px; }
+  .guide { padding:32px 0 8px; text-align:left; max-width:760px; }
+  .guide p { margin-left:0; margin-right:0; max-width:none; }
+  .guide .updated { color:var(--mut); font-size:14px; margin-top:8px; }
+  .callout { background:var(--card); border:1px solid var(--bd); border-left:4px solid var(--acc); border-radius:8px; padding:12px 14px; margin:16px 0; font-size:14px; color:var(--ink); }
+  .guide .intro { color:var(--ink); font-size:17px; margin:0; }
+  .quick { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; }
+  .quick th, .quick td { padding:10px 12px; border-bottom:1px solid var(--bd); text-align:left; vertical-align:middle; }
+  .quick th { font-size:13px; color:var(--mut); }
+  .quick td:first-child { font-weight:600; }
+  .quick a { color:var(--acc); }
+  .quick a.btn { color:var(--acc-ink); white-space:nowrap; }
+  .btn.sm { padding:6px 10px; font-size:14px; }
+  @media (max-width:640px) { .quick thead { display:none; } .quick tr { display:block; border-bottom:1px solid var(--bd); padding:8px 0; } .quick td { display:block; border:0; padding:4px 12px; } }
+  .roundup { border-top:1px solid var(--bd); }
+  .roundup h2 { font-size:clamp(22px,3vw,28px); margin:0; }
+  .roundup h2 a { color:inherit; text-decoration:none; }
+  .award { color:var(--acc); font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:.04em; }
+  .more { color:var(--acc); font-size:14px; }
+  .prose.wide { max-width:760px; padding:24px 0; }
+  .prose h3 { font-size:17px; margin:16px 0 4px; }
+  .links { list-style:none; display:flex; flex-wrap:wrap; gap:10px 20px; }
+  .links a { color:var(--acc); }
+  .guides { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; }
+  .gcard { background:var(--card); border:1px solid var(--bd); border-radius:12px; padding:16px; text-decoration:none; color:var(--ink); display:flex; flex-direction:column; gap:6px; }
+  .gcard:hover { border-color:var(--acc); }
+  .gcard strong { font-size:16px; line-height:1.3; }
+  .gcard span { color:var(--mut); font-size:14px; }
+  .gcard em { color:var(--acc); font-style:normal; font-size:14px; font-weight:600; }
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 """
@@ -237,9 +293,8 @@ def signup():
     return """    <section class="signup" id="updates">
       <h2>Get the next 5 kitchen finds before anyone else</h2>
       <p>One short email whenever we add new picks. No spam, unsubscribe anytime.</p>
-      <form name="updates" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="updates">
-        <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+      <form name="updates" method="POST" action="/subscribe.php">
+        <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address">
         <button class="btn" type="submit">Get Updates</button>
       </form>
@@ -280,9 +335,20 @@ def render_home(data, products):
         if items:
             cards = "\n".join(card(p, tag) for p in items)
             sections.append(f'    <section id="{e(key)}">\n      <h2>{e(label)}</h2>\n      <div class="grid">\n{cards}\n      </div>\n    </section>')
-    nav = " ".join(f'<a href="#{e(k)}">{e(v)}</a>' for k, v in data["categories"].items()
-                   if any(p["category"] == k and p["asin"] not in top_asins for p in products))
+    nav = '<a href="#guides">Buying Guides</a> ' + " ".join(
+        f'<a href="#{e(k)}">{e(v)}</a>' for k, v in data["categories"].items()
+        if any(p["category"] == k and p["asin"] not in top_asins for p in products))
     top_cards = "\n".join(card(p, tag, eager=i < EAGER) for i, p in enumerate(top))
+    tiles = "\n".join(
+        f'        <a class="gcard" href="{guide_path(k)}"><strong>{e(s["title"])}</strong>'
+        f'<span>{e(s["description"])}</span><em>{len(guide_products(products, k))} picks · Read the guide →</em></a>'
+        for k, s in data["subcategories"].items())
+    guides = f"""    <section id="guides">
+      <h2>Buying Guides</h2>
+      <div class="guides">
+{tiles}
+      </div>
+    </section>"""
     title = f"Small Kitchen Organization & Gadget Picks | {site['name']}"
     return head(site, title, site["tagline"], "", f"{site['url']}/img/og.png",
                 f"{site['name']} — {site['tagline']}", OG_W, OG_H, site_ld(site, products) + "\n") + f"""  <header>
@@ -297,6 +363,7 @@ def render_home(data, products):
 {top_cards}
       </div>
     </section>
+{guides}
 {chr(10).join(sections)}
 {signup()}  </main>
 """ + foot(site)
@@ -310,25 +377,29 @@ def describe(text, limit=155):
 
 def render_pick(data, p, products):
     site, tag = data["site"], data["site"]["associate_tag"]
-    label = data["categories"][p["category"]]
+    sub = data["subcategories"][p["subcategory"]]
     base = "../../"
-    more = [q for q in products if q["category"] == p["category"] and q["asin"] != p["asin"]][:3]
+    same = [q for q in products if q["subcategory"] == p["subcategory"] and q["asin"] != p["asin"]]
+    near = [q for q in products if q["category"] == p["category"] and q["subcategory"] != p["subcategory"]]
+    more = (same + near)[:3]
     more_html = ""
     if more:
         cards = "\n".join(card(q, tag, base) for q in more)
-        more_html = f'    <section>\n      <h2>More {e(label)}</h2>\n      <div class="grid">\n{cards}\n      </div>\n    </section>\n'
+        more_html = (f'    <section>\n      <h2>More picks like this</h2>\n      <div class="grid">\n{cards}\n      </div>\n'
+                     f'      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(p["subcategory"])}">See the full guide: {e(sub["title"])} →</a></p>\n    </section>\n')
     crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
-        {"@type": "ListItem", "position": 2, "name": label, "item": f"{site['url']}/#{p['category']}"},
+        {"@type": "ListItem", "position": 2, "name": sub["title"], "item": f"{site['url']}/{guide_path(p['subcategory'])}"},
         {"@type": "ListItem", "position": 3, "name": p["name"], "item": f"{site['url']}/{page_path(p)}"}]})
     points = "".join(f"<li>{e(pt)}</li>" for pt in p["graphic"]["points"])
     title = f"{p['name']} | {site['name']}"
     return head(site, title, describe(p["blurb"]), page_path(p), f"{site['url']}/img/{p['asin']}.png",
                 p["graphic"]["headline"], 1000, 1500, crumbs + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
-    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(p['category'])}">{e(label)}</a></span>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{guide_path(p['subcategory'])}">{e(sub['title'])}</a></span>
   </div>
   <main id="main">
+    <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="{e(p['asin'])}">
       <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
         {picture(p, base, eager=True)}
@@ -346,6 +417,109 @@ def render_pick(data, p, products):
 """ + foot(site)
 
 
+def guide_path(key):
+    return f"guides/{key}/"
+
+
+def guide_products(products, key):
+    """A guide's picks, in products.json order (curated order, not newest-first)."""
+    return [p for p in products if p["subcategory"] == key]
+
+
+def render_guide(data, key, items):
+    site, tag = data["site"], data["site"]["associate_tag"]
+    s = data["subcategories"][key]
+    cat_label = data["categories"][s["category"]]
+    base = "../../"
+    updated = max(p["added"] for p in items)
+    year = updated[:4]
+    month = date.fromisoformat(updated).strftime("%B %Y")
+    rows = "\n".join(
+        f'        <tr><td data-label="Best for">{e(p["award"])}</td>'
+        f'<td data-label="Pick"><a href="#{e(p["asin"])}">{e(p["name"])}</a></td>'
+        f'<td><a class="btn sm" href="{e(amazon_url(p["asin"], tag))}" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></td></tr>'
+        for p in items)
+    sections = []
+    for i, p in enumerate(items):
+        points = "".join(f"<li>{e(pt)}</li>" for pt in p["graphic"]["points"])
+        sections.append(f"""    <article class="pick roundup" id="{e(p['asin'])}">
+      <a class="img" href="{base}{page_path(p)}">
+        {picture(p, base, eager=i < 1)}
+      </a>
+      <div class="info">
+        <p class="award">{i + 1}. {e(p['award'])}</p>
+        <h2><a href="{base}{page_path(p)}">{e(p['name'])}</a></h2>
+        <p class="lede">{e(p['blurb'])}</p>
+        <ul>{points}</ul>
+        <div class="buy">
+          {buy(p, tag)}
+          <a class="more" href="{base}{page_path(p)}">Full details on this pick →</a>
+        </div>
+      </div>
+    </article>""")
+    criteria = "".join(f"<li>{e(c)}</li>" for c in s["criteria"])
+    guide = "".join(f"<h3>{e(h)}</h3><p>{e(t)}</p>" for h, t in s["guide"])
+    faq = s.get("faq", [])
+    faq_html = ""
+    if faq:
+        faq_html = "    <section class=\"prose wide\">\n      <h2>Frequently asked questions</h2>\n" + "".join(
+            f"      <h3>{e(q)}</h3>\n      <p>{e(a)}</p>\n" for q, a in faq) + "    </section>\n"
+    others = [(k, v) for k, v in data["subcategories"].items() if k != key and v["category"] == s["category"]]
+    related = ""
+    if others:
+        related = "    <section>\n      <h2>Related buying guides</h2>\n      <ul class=\"links\">" + "".join(
+            f'<li><a href="{base}{guide_path(k)}">{e(v["title"])}</a></li>' for k, v in others) + "</ul>\n    </section>\n"
+    url = f"{site['url']}/{guide_path(key)}"
+    graph = [
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
+            {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/#{s['category']}"},
+            {"@type": "ListItem", "position": 3, "name": s["title"], "item": url}]},
+        {"@type": "Article", "headline": s["title"], "description": s["description"], "dateModified": updated,
+         "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/{items[0]['asin']}.png"},
+        {"@type": "ItemList", "name": s["title"], "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": f"{site['url']}/{page_path(p)}"}
+            for i, p in enumerate(items)]}]
+    if faq:
+        graph.append({"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+    title = f"{s['title']} ({year}) | {site['name']}"
+    return head(site, title, s["description"], guide_path(key), f"{site['url']}/img/{items[0]['asin']}.png",
+                s["title"], 1000, 1500, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
+    <a class="brand" href="{base}">{e(site['name'])}</a>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(s['category'])}">{e(cat_label)}</a></span>
+  </div>
+  <main id="main">
+    <header class="guide">
+      <h1>{e(s['title'])} ({year})</h1>
+      <p class="updated">Updated {month} · {len(items)} picks</p>
+      <p class="callout"><strong>Affiliate disclosure:</strong> {e(site['name'])} is reader-supported. Buttons marked "Check price on Amazon" are affiliate links. {DISCLOSURE} It costs you nothing extra, and picks are chosen from product research, not commission rates.</p>
+      <p class="intro">{e(s['intro'])}</p>
+    </header>
+    <section>
+      <h2>Quick picks</h2>
+      <table class="quick">
+        <thead><tr><th>Best for</th><th>Pick</th><th><span class="hidden">Link</span></th></tr></thead>
+        <tbody>
+{rows}
+        </tbody>
+      </table>
+    </section>
+    <section class="prose wide">
+      <h2>How we chose</h2>
+      <p>Each pick was selected by comparing manufacturer specifications and recurring themes in owner feedback against these criteria:</p>
+      <ul>{criteria}</ul>
+      <p>Product details change — confirm sizes and current price on the Amazon listing before buying.</p>
+    </section>
+{chr(10).join(sections)}
+    <section class="prose wide">
+      <h2>Buying guide: what to look for</h2>
+      {guide}
+    </section>
+{faq_html}{related}{signup()}  </main>
+""" + foot(site)
+
+
 def render_privacy(data):
     site = data["site"]
     return head(site, f"Privacy Policy | {site['name']}", f"How {site['name']} handles cookies, affiliate links, and email sign-ups.",
@@ -358,13 +532,13 @@ def render_privacy(data):
     <p>When you click a product link on this site you go to Amazon.com. Third parties, including Amazon, may place and read cookies on your browser, or use web beacons, to collect information such as which link you clicked and whether a purchase followed, so that we can be credited for the referral. That information is handled under <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" rel="nofollow noopener">Amazon's Privacy Notice</a>. We never see your Amazon account, payment details, or what you personally bought.</p>
     <p>This site itself sets no tracking or advertising cookies and runs no analytics scripts.</p>
     <h2>Email sign-up</h2>
-    <p>If you join our email list, we collect only the email address you enter. The form is processed by our host, Netlify (see <a href="https://www.netlify.com/privacy/" rel="nofollow noopener">Netlify's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
+    <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
     <h2>Hosting and server logs</h2>
     <p>Our host may log standard request data (such as IP address, browser type, and pages requested) to keep the site running and secure.</p>
     <h2>Children</h2>
     <p>This site is not directed to children under 13, and we do not knowingly collect their information.</p>
     <h2>Contact</h2>
-    <p>Questions or deletion requests: message us on <a href="{e(site['facebook'])}">Facebook</a> or <a href="{e(site['pinterest'])}">Pinterest</a>, or reply to any email we send you.</p>
+    <p>Questions or deletion requests: email <a href="mailto:{e(site['email'])}">{e(site['email'])}</a>, message us on <a href="{e(site['facebook'])}">Facebook</a> or <a href="{e(site['pinterest'])}">Pinterest</a>, or reply to any email we send you.</p>
     <h2>Changes</h2>
     <p>If this policy changes, we will update the date above.</p>
   </main>
@@ -388,6 +562,57 @@ FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect w
 """
 
 
+# Hostinger serves the site with Apache/LiteSpeed, so .htaccess replaces Netlify's _headers.
+HTACCESS = """# Generated by build.py — edit there.
+Options -Indexes
+ErrorDocument 404 /404.html
+RewriteEngine On
+# Never serve the deploy checkout's git data or the build sources.
+RewriteRule (^|/)\\.git(/|$) - [R=404,L]
+# Force HTTPS and the bare domain.
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\\. [NC]
+RewriteRule ^ https://kitchenfindsfavorites.com%{REQUEST_URI} [R=301,L]
+<IfModule mod_headers.c>
+  # Posting routines load the graphics cross-origin (canvas -> file upload).
+  <FilesMatch "\\.(png|webp)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+"""
+
+# Email sign-up handler. Addresses go to a CSV one level ABOVE the web root
+# (outside public_html), so they can never be downloaded from the site.
+SUBSCRIBE_PHP = r"""<?php
+// Generated by build.py — edit there.
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: /#updates', true, 303); exit; }
+if (!empty($_POST['bot-field'])) { header('Location: /thanks/', true, 303); exit; }  // honeypot
+$email = trim((string)($_POST['email'] ?? ''));
+if (strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  header('Location: /#updates', true, 303); exit;
+}
+$file = dirname(__DIR__) . '/kff-subscribers.csv';
+$fh = @fopen($file, 'a');
+if ($fh) {
+  if (flock($fh, LOCK_EX)) {
+    fputcsv($fh, [gmdate('c'), strtolower($email)]);
+    flock($fh, LOCK_UN);
+  }
+  fclose($fh);
+}
+header('Location: /thanks/', true, 303);
+"""
+
+
 def main():
     data, errors = load()
     if errors:
@@ -408,6 +633,16 @@ def main():
         d = OUT / page_path(p)
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_pick(data, p, products), encoding="utf-8")
+    shutil.rmtree(OUT / "guides", ignore_errors=True)
+    guide_urls = []
+    for key in data["subcategories"]:
+        items = guide_products(data["products"], key)
+        d = OUT / guide_path(key)
+        d.mkdir(parents=True)
+        (d / "index.html").write_text(render_guide(data, key, items), encoding="utf-8")
+        guide_urls.append((f"{url}/{guide_path(key)}", max(p["added"] for p in items)))
+    (OUT / ".htaccess").write_text(HTACCESS, encoding="utf-8")
+    (OUT / "subscribe.php").write_text(SUBSCRIBE_PHP, encoding="utf-8")
     (OUT / "privacy").mkdir(exist_ok=True)
     (OUT / "privacy" / "index.html").write_text(render_privacy(data), encoding="utf-8")
     (OUT / "thanks").mkdir(exist_ok=True)
@@ -429,7 +664,7 @@ def main():
             for p in sorted(data["products"], key=lambda p: p["added"])]
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
-    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
+    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + guide_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

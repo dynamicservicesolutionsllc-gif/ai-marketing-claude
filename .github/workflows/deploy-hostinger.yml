@@ -1,0 +1,41 @@
+# Publishes the built site (site/public/) to the `hostinger-deploy` branch.
+# Hostinger's GitHub auto-deployment pulls that branch into public_html for kitchenfindsfavorites.com.
+# The branch keeps a normal history (no force-push) so Hostinger's pull is always a fast-forward.
+name: Deploy site to Hostinger
+on:
+  push:
+    branches: [main]
+    paths: ["site/public/**", ".github/workflows/deploy-hostinger.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: src
+      - name: Push site/public to hostinger-deploy
+        env:
+          REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        run: |
+          set -euo pipefail
+          SRC_SHA="$(git -C src rev-parse --short HEAD)"
+          if git ls-remote --exit-code --heads "$REPO" hostinger-deploy >/dev/null; then
+            git clone -q --depth 1 --branch hostinger-deploy "$REPO" deploy
+          else
+            git init -q -b hostinger-deploy deploy
+            git -C deploy remote add origin "$REPO"
+          fi
+          rsync -a --delete --exclude .git src/site/public/ deploy/
+          cd deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "No site changes"; exit 0; fi
+          git commit -q -m "Deploy site from main@${SRC_SHA}"
+          git push origin hostinger-deploy

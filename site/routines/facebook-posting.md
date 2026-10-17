@@ -1,6 +1,6 @@
 You are continuing Frank's Amazon Associates + Facebook affiliate marketing automation for his Facebook Page "Kitchen Finds & Favorites" (https://www.facebook.com/61594030243560). This is a recurring posting run — Mon/Wed/Fri/Sun evenings, ~8:30pm ET.
 
-STRATEGY (confirmed by Frank 2026-10-12): posts link to the landing page https://kitchenfindsfavorites.netlify.app so Frank owns the audience — NOT directly to Amazon. The landing page links out to Amazon with tag kitchenfi0fde-20. This run only posts products that are already live on the site.
+STRATEGY (confirmed by Frank 2026-10-12): posts link to the landing page https://kitchenfindsfavorites.com so Frank owns the audience — NOT directly to Amazon. The landing page links out to Amazon with tag kitchenfi0fde-20. This run only posts products that are already live on the site.
 
 COMPLIANCE (Amazon Associates policies — see project doc `claude/compliance-checklist.md`):
 - Never attach Amazon product photos. Attach only the site's original graphic for the product (the feed's `pin_image`).
@@ -10,9 +10,9 @@ COMPLIANCE (Amazon Associates policies — see project doc `claude/compliance-ch
 This session is attached to the "amzon associate" Claude project. First read `claude/facebook-page-setup.md` (composer technique, publish verification via the Content Library, Posted Log) and `claude/compliance-checklist.md`. Where the playbook says to link to Amazon or extract Amazon images, THIS prompt supersedes it.
 
 Per run:
-1. In the linked computer's browser, open https://kitchenfindsfavorites.netlify.app/products.json. Pick ONE product whose ASIN is not in the Facebook Posted Log, oldest "added" first; prefer one already pinned on Pinterest (its eligibility is confirmed).
+1. In the linked computer's browser, open https://kitchenfindsfavorites.com/products.json. Pick ONE product whose ASIN is not in the Facebook Posted Log, oldest "added" first; prefer one already pinned on Pinterest (its eligibility is confirmed).
 2. Confirm Associates eligibility via a SiteStripe screenshot on its Amazon page (real category + commission rate). If excluded, skip it and pick the next one.
-3. Open the Page's real post composer ("What's on your mind?" — NOT the "Share a thought..." note bubble). Write: the disclosure sentence, 2–3 genuine sentences about the product, the product's page_url on its own line, then 2–3 hashtags. The only link in the post is page_url (https://kitchenfindsfavorites.netlify.app/...) — never an amazon.com or amzn.to link. Attach pin_image via an in-page <img crossOrigin> → canvas → Blob/File → file-input `change` (the technique in the playbook). Publish publicly.
+3. Open the Page's real post composer ("What's on your mind?" — NOT the "Share a thought..." note bubble). Write: the disclosure sentence, 2–3 genuine sentences about the product, the product's page_url on its own line, then 2–3 hashtags. The only link in the post is page_url (https://kitchenfindsfavorites.com/...) — never an amazon.com or amzn.to link. Attach pin_image via an in-page <img crossOrigin> → canvas → Blob/File → file-input `change` (the technique in the playbook). Publish publicly.
 4. Verify it published in https://www.facebook.com/professional_dashboard/content/content_library/ before logging. A "Speak With People Directly" promo dialog after posting is normal — dismiss with "Not now."
 5. Append a row to the Posted Log in `claude/facebook-page-setup.md` (date, product, ASIN, link = page_url) and a short Run notes entry.
 
