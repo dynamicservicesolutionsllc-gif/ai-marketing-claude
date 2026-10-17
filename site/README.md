@@ -1,8 +1,9 @@
 # Kitchen Finds & Favorites landing page
 
 Live at https://kitchenfindsfavorites.com, hosted on Hostinger. On every push to `main` that touches `site/public/`, the
-`Deploy site to Hostinger` GitHub Action copies `site/public/` to the `hostinger-deploy` branch, and Hostinger's GitHub
-auto-deployment pulls that branch into `public_html`. The old https://kitchenfindsfavorites.netlify.app 301-redirects every
+`Deploy site to Hostinger` GitHub Action copies `site/public/` to the `hostinger-deploy` branch, then calls Hostinger's
+Git auto-deployment webhook, which pulls that branch into `public_html`. The original blank WordPress install was moved
+(not deleted) to `~/domains/kitchenfindsfavorites.com/wordpress-backup-2026-10-17/`. The old https://kitchenfindsfavorites.netlify.app 301-redirects every
 path to the same path on the new domain (see `/netlify.toml`), so existing pins keep working.
 
 ## Adding a product

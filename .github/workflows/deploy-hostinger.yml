@@ -39,3 +39,7 @@ jobs:
           if git diff --cached --quiet; then echo "No site changes"; exit 0; fi
           git commit -q -m "Deploy site from main@${SRC_SHA}"
           git push origin hostinger-deploy
+      - name: Tell Hostinger to pull the new build
+        # Hostinger's Git auto-deployment webhook (hPanel > Advanced > GIT > Auto Deployment).
+        # Calling it only makes Hostinger pull the hostinger-deploy branch, so it is safe to keep here.
+        run: curl -fsS -X POST https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
