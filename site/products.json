@@ -1,11 +1,12 @@
 {
   "site": {
     "name": "Kitchen Finds & Favorites",
-    "url": "https://kitchenfindsfavorites.netlify.app",
+    "url": "https://kitchenfindsfavorites.com",
     "tagline": "Hand-picked organization gear, gadgets, small appliances, and drinkware for small, busy kitchens — researched against real reviews, not hype.",
     "associate_tag": "kitchenfi0fde-20",
     "pinterest": "https://www.pinterest.com/kitchenfindsfavorites/",
-    "facebook": "https://www.facebook.com/61594030243560"
+    "facebook": "https://www.facebook.com/61594030243560",
+    "email": "help@kitchenfindsfavorites.com"
   },
   "categories": {
     "organization": "Kitchen Organization Must-Haves",
@@ -13,6 +14,88 @@
     "appliances": "Small Kitchen Appliances Worth the Counter Space",
     "drinkware": "Drinkware & Tumblers We Love"
   },
+  "category_pages": {
+    "organization": {
+      "slug": "kitchen-organization",
+      "nav": "Organization",
+      "title": "Small Kitchen Organization Ideas & Storage Picks",
+      "intro": "Drawer organizers, pantry containers, under-sink storage, and cabinet risers that help a small kitchen hold more without feeling cluttered. Each pick solves one specific storage problem, so start with the spot that bothers you most."
+    },
+    "gadgets": {
+      "slug": "kitchen-gadgets",
+      "nav": "Gadgets",
+      "title": "Useful Small Kitchen Gadgets That Earn Their Drawer Space",
+      "intro": "Hand tools and small gadgets that make everyday prep faster: choppers, thermometers, scales, frothers, and more. We favor tools that do a common job well over single-use novelties."
+    },
+    "appliances": {
+      "slug": "small-kitchen-appliances",
+      "nav": "Appliances",
+      "title": "Small Kitchen Appliances Worth the Counter Space",
+      "intro": "Compact appliances for kitchens where counter space is limited: kettles, hand mixers, mini food processors, slow cookers, and air fryers sized for everyday cooking."
+    },
+    "drinkware": {
+      "slug": "drinkware",
+      "nav": "Drinkware",
+      "title": "Insulated Tumblers & Water Bottles",
+      "intro": "Insulated tumblers, water bottles, and coffee cups for the commute, the gym, or the desk. Check each listing for current sizes, colors, and lid styles."
+    }
+  },
+  "guides": [
+    {
+      "slug": "holiday-kitchen-gifts",
+      "nav": "Holiday Kitchen Gifts",
+      "title": "Holiday Kitchen Gift Guide 2026",
+      "description": "Holiday gift ideas for home cooks: compact appliances, baking tools, and kitchen upgrades that fit small kitchens.",
+      "intro": "Practical gifts for the home cook on your list, from compact appliances to everyday baking and prep tools. Every pick fits a small kitchen, and each one links to its current Amazon listing so you can check options and delivery dates before the holidays.",
+      "updated": "2026-10-17",
+      "cover": "B009VUHLHA",
+      "asins": [
+        "B08PP48979",
+        "B009VUHLHA",
+        "B010TCP3SC",
+        "B0000645YM",
+        "B0C33CHG99",
+        "B004P2LEE0",
+        "B0113UZJE2",
+        "B08HSNGR8P",
+        "B00004OCKR",
+        "B0CJZW65R3"
+      ]
+    },
+    {
+      "slug": "gifts-for-coffee-and-tea-lovers",
+      "nav": "Coffee & Tea Gifts",
+      "title": "Gifts for Coffee & Tea Lovers",
+      "description": "Gift ideas for coffee and tea drinkers: electric kettles, milk frothers, and insulated tumblers.",
+      "intro": "For the friend who starts every day with a mug in hand. These picks cover the kettle, the foam, and the cup that keeps it hot or iced on the go.",
+      "updated": "2026-10-17",
+      "cover": "B0DPXRJ2VY",
+      "asins": [
+        "B08PP48979",
+        "B0DPXRJ2VY",
+        "B082314NFL",
+        "B0DF472VMZ",
+        "B0CJZW65R3"
+      ]
+    },
+    {
+      "slug": "kitchen-stocking-stuffers",
+      "nav": "Kitchen Stocking Stuffers",
+      "title": "Kitchen Stocking Stuffers for Home Cooks",
+      "description": "Small kitchen gifts that fit in a stocking: thermometers, frothers, can openers, oven mitts, and clever storage.",
+      "intro": "Small, useful kitchen tools that fit in a stocking and get used long after the holidays.",
+      "updated": "2026-10-17",
+      "cover": "B00S93EQUK",
+      "asins": [
+        "B00S93EQUK",
+        "B082314NFL",
+        "B07YP2VH4B",
+        "B0C3H9MJQV",
+        "B08J8GZXKZ",
+        "B0CGRGRXPY"
+      ]
+    }
+  ],
   "products": [
     {
       "asin": "B07SRV3SN8",

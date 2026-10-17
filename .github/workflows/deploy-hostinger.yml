@@ -1,0 +1,80 @@
+# Publishes site/public/ to Hostinger (kitchenfindsfavorites.com) whenever it changes on main.
+#
+# One-time setup (GitHub repo > Settings > Secrets and variables > Actions):
+#   Secrets:   HOSTINGER_FTP_SERVER    e.g. ftp.kitchenfindsfavorites.com (hPanel > Files > FTP Accounts)
+#              HOSTINGER_FTP_USERNAME  e.g. u123456789 or u123456789.kitchenfindsfavorites.com
+#              HOSTINGER_FTP_PASSWORD
+#   Variables (optional):
+#              HOSTINGER_SERVER_DIR    folder the site goes in, relative to the FTP login folder.
+#                                      Default "public_html/". Use "domains/kitchenfindsfavorites.com/public_html/"
+#                                      if your FTP login opens in the account's home folder.
+#              HOSTINGER_FTP_PROTOCOL  "ftps" (default, encrypted) or "ftp" if FTPS is refused.
+#
+# Only changed files are uploaded. Files the deploy did not create (e.g. the private kff-data folder
+# holding email sign-ups, which lives outside public_html anyway) are never deleted.
+name: Deploy site to Hostinger
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/public/**"
+      - ".github/workflows/deploy-hostinger.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check deploy settings
+        env:
+          SERVER: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          USERNAME: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+        run: |
+          missing=""
+          [ -n "$SERVER" ] || missing="$missing HOSTINGER_FTP_SERVER"
+          [ -n "$USERNAME" ] || missing="$missing HOSTINGER_FTP_USERNAME"
+          [ -n "$PASSWORD" ] || missing="$missing HOSTINGER_FTP_PASSWORD"
+          if [ -n "$missing" ]; then
+            echo "::error::Add these repository secrets before deploying:$missing"
+            exit 1
+          fi
+
+      - uses: actions/checkout@v4
+
+      - name: Sanity-check the build output
+        run: |
+          test -f site/public/index.html
+          test -f site/public/.htaccess
+          test -f site/public/products.json
+          if grep -rl "netlify.app" site/public --include=*.html --include=*.json --include=*.xml --include=*.txt; then
+            echo "::error::site/public still references netlify.app — run python3 site/build.py and commit the result"
+            exit 1
+          fi
+
+      - name: Upload to Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          protocol: ${{ vars.HOSTINGER_FTP_PROTOCOL || 'ftps' }}
+          port: 21
+          local-dir: ./site/public/
+          server-dir: ${{ vars.HOSTINGER_SERVER_DIR || 'public_html/' }}
+          timeout: 120000
+
+      - name: Smoke-test the live site
+        run: |
+          sleep 10
+          for path in / /products.json /kitchen-organization/ /gift-guides/ /newsletter/; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" -L "https://kitchenfindsfavorites.com$path")
+            echo "$path -> $code"
+            [ "$code" = "200" ] || { echo "::warning::$path returned $code (DNS/SSL may still be propagating)"; }
+          done

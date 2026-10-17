@@ -1,3 +1,5 @@
+# LEGACY: the site now lives on Hostinger (https://kitchenfindsfavorites.com, see .github/workflows/deploy-hostinger.yml).
+# Once the new domain is verified, this Netlify site will be switched to 301-redirect every URL there.
 # Netlify deploys only the landing page in site/ — the rest of this repo is the marketing suite.
 # The generated site/public/ is committed, so no build step runs on Netlify.
 [build]
