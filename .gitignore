@@ -42,3 +42,6 @@ node_modules/
 
 # Netlify CLI local state
 .netlify/
+
+# Amazon Creators API data: regenerated on every deploy, never committed
+site/amazon_images.json

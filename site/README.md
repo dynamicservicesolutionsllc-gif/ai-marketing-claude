@@ -20,7 +20,7 @@ path to the same path on the new domain (see `/netlify.toml`), so existing pins 
 Each product gets its own page at `/picks/<slug>/` (slug from the product name), and pins/posts link there.
 Each entry in `subcategories` becomes a buying-guide landing page at `/guides/<key>/`: disclosure callout, quick-picks table
 (the products' `award` labels), "how we chose" criteria, a section per product, buying guide, FAQ (with FAQPage schema), and
-related guides. `build.py` rejects a subcategory with no products, a title over 60 characters, or guide copy with prices,
+related guides. Each guide has a header photo at `assets/guides/<key>.jpg` (a free-license Unsplash stock photo that shows no branded products; credited on the page) — `build.py` renders WebP/JPEG sizes into `public/img/guides/`. `build.py` rejects a subcategory with no products, a title over 60 characters, or guide copy with prices,
 star ratings, or testing claims.
 The landing page also keeps a `#<ASIN>` anchor per card, so older pins that link to anchors still work.
 The newest 6 products appear under "This Week's Top Picks"; older ones move into their category section.
@@ -50,3 +50,17 @@ pins any ASIN not yet in its Posted Pins Log. To pull a product (e.g. it turns o
 routine creates a Google Doc titled `KFF site removal request - <ASIN>`; the daily site routine removes the product and trashes the doc.
 
 Routine prompts are versioned in `routines/`.
+
+## Official Amazon product photos (switches on automatically)
+
+Until the Associates account qualifies for Amazon's Creators API (10+ qualifying sales in the past 30 days), product
+cards use the original graphics from `graphics.py`. Once it qualifies:
+
+1. In Associates Central, register for the Creators API and generate credentials (client ID + client secret).
+2. In GitHub: repo Settings → Secrets and variables → Actions → add `AMAZON_CREATORS_CLIENT_ID` and
+   `AMAZON_CREATORS_CLIENT_SECRET`.
+3. Run the "Deploy site to Hostinger" workflow (Actions tab → Run workflow), or wait for the next push / daily run.
+
+Each run then calls `fetch_amazon_images.py` and rebuilds, so cards and product pages show Amazon-hosted photos
+(hotlinked from `m.media-amazon.com`, never copied). `amazon_images.json` is never committed, and the daily scheduled
+run refreshes it so the data stays current per Amazon's API terms. Pinterest/Facebook graphics are unaffected.

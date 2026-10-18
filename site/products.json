@@ -49,7 +49,12 @@
           "Are bamboo or plastic drawer organizers better?",
           "Bamboo looks warmer and is sturdy; clear plastic shows contents at a glance and wipes clean easily. Both work; pick based on the look you want and how often you wash it."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Wooden drawer insert holding forks, spoons and knives in neat rows",
+        "credit": "Unsplash",
+        "source_id": "photo-1678097337340-ec9c74ebf147"
+      }
     },
     "under-sink-storage": {
       "category": "organization",
@@ -85,7 +90,12 @@
           "Do under-sink mats need to be trimmed?",
           "Often, yes. Measure the cabinet floor and check whether the mat needs cutting around pipes."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Dark kitchen cabinets with the under-sink cupboard open",
+        "credit": "Unsplash",
+        "source_id": "photo-1666608153597-05b25a35f82c"
+      }
     },
     "dish-drying-racks": {
       "category": "organization",
@@ -121,7 +131,12 @@
           "Is a roll-up rack strong enough for pots?",
           "Check the stated weight capacity; steel-core racks generally handle cookware."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "White plates drying upright in a dish rack by a sunny window",
+        "credit": "Unsplash",
+        "source_id": "photo-1780930425732-6fe2d9de072f"
+      }
     },
     "pantry-storage": {
       "category": "organization",
@@ -157,7 +172,12 @@
           "How do I organize a deep pantry shelf?",
           "Use pull-out bins or a lazy Susan so items at the back are reachable without unloading the front."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Row of clear glass jars filled with grains and pantry staples",
+        "credit": "Unsplash",
+        "source_id": "photo-1645567454567-901dc409551b"
+      }
     },
     "spice-racks": {
       "category": "organization",
@@ -193,7 +213,12 @@
           "How many spice jars fit on a 3-tier rack?",
           "It depends on jar size; compare the rack's width and depth with the jars you own."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Glass spice jars lined up on wooden shelves",
+        "credit": "Unsplash",
+        "source_id": "photo-1757802261964-a8e03ed98981"
+      }
     },
     "cookware-organizers": {
       "category": "organization",
@@ -229,7 +254,12 @@
           "Can bakeware racks hold cast iron?",
           "Check the rack's construction and slot size; steel racks handle heavier pans better than light wire."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Pots and pans hanging from a rail on a brick kitchen wall",
+        "credit": "Unsplash",
+        "source_id": "photo-1557212060-dd397c79fa5a"
+      }
     },
     "food-prep-tools": {
       "category": "gadgets",
@@ -265,7 +295,12 @@
           "What is the easiest way to shred chicken?",
           "A twist-lid chicken shredder handles cooked chicken faster than two forks."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Chef's knife beside diced bell peppers and onion on a cutting board",
+        "credit": "Unsplash",
+        "source_id": "photo-1598295309854-cfa5819004d8"
+      }
     },
     "cooking-tools": {
       "category": "gadgets",
@@ -301,7 +336,12 @@
           "What temperature should chicken reach?",
           "USDA lists 165°F as the safe minimum internal temperature for poultry."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Measuring cups, whisk and eggs laid out for baking",
+        "credit": "Unsplash",
+        "source_id": "photo-1759965670306-f055ff093752"
+      }
     },
     "coffee-and-tea": {
       "category": "gadgets",
@@ -337,7 +377,12 @@
           "Is an electric kettle faster than the stove?",
           "Electric kettles generally boil small amounts of water faster than a stovetop kettle and shut off automatically."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Latte with heart foam art on a wooden tray",
+        "credit": "Unsplash",
+        "source_id": "photo-1547269175-2bcf3ef6009e"
+      }
     },
     "blenders-and-mixers": {
       "category": "appliances",
@@ -373,7 +418,12 @@
           "Do I need a hand mixer or a stand mixer?",
           "A hand mixer covers most home baking; a stand mixer suits frequent bread or large batches."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Bowl of smooth blended tomato soup topped with seeds",
+        "credit": "Unsplash",
+        "source_id": "photo-1547592166-23ac45744acd"
+      }
     },
     "countertop-cooking": {
       "category": "appliances",
@@ -409,7 +459,12 @@
           "Is a 2-quart slow cooker big enough?",
           "For one or two servings, dips and sides, yes."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Bright white kitchen with clear countertops",
+        "credit": "Unsplash",
+        "source_id": "photo-1646592491605-db9d032514b9"
+      }
     },
     "insulated-drinkware": {
       "category": "drinkware",
@@ -445,7 +500,12 @@
           "Do 40 oz tumblers fit in cup holders?",
           "Several are designed with a narrow base; check the base diameter in the listing."
         ]
-      ]
+      ],
+      "hero": {
+        "alt": "Black insulated water bottle beside a drinking glass",
+        "credit": "Unsplash",
+        "source_id": "photo-1624469786827-13be4e09a992"
+      }
     }
   },
   "products": [
