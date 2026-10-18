@@ -129,6 +129,18 @@ def load():
             errors.append(f"{where}: missing header photo assets/guides/{key}.jpg (licensed stock photo, no branded products)")
         if key not in used:
             errors.append(f"{where}: no products assigned — add products or remove the subcategory")
+        if "reviewed" in s:
+            try:
+                date.fromisoformat(s["reviewed"])
+            except ValueError:
+                errors.append(f"{where}: 'reviewed' must be YYYY-MM-DD")
+        own = {p.get("asin") for p in data["products"] if p.get("subcategory") == key}
+        for t in s.get("types", []):
+            for field in ("name", "best_for", "advantage", "tradeoff", "choose", "skip"):
+                if not t.get(field):
+                    errors.append(f"{where}: type '{t.get('name', '?')}' missing '{field}'")
+            if t.get("pick") and t["pick"] not in own:
+                errors.append(f"{where}: type '{t.get('name', '?')}' pick {t['pick']} is not a product in this guide")
     return data, errors
 
 
@@ -229,7 +241,7 @@ CSS = """
   .prose h1 { font-size:32px; margin-bottom:8px; }
   .prose h2 { font-size:20px; margin:24px 0 8px; }
   .prose p, .prose li { margin-bottom:10px; }
-  .prose ul { padding-left:20px; }
+  .prose ul, .prose ol { padding-left:20px; }
   .prose a { color:var(--acc); }
   .prose a.btn { color:var(--acc-ink); text-decoration:none; }
   .signup { background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:28px 20px; text-align:center; margin:24px 0; }
@@ -481,7 +493,7 @@ def render_guide(data, key, items):
     s = data["subcategories"][key]
     cat_label = data["categories"][s["category"]]
     base = "../../"
-    updated = max(p["added"] for p in items)
+    updated = max([p["added"] for p in items] + ([s["reviewed"]] if s.get("reviewed") else []))
     year = updated[:4]
     month = date.fromisoformat(updated).strftime("%B %Y")
     rows = "\n".join(
@@ -507,6 +519,41 @@ def render_guide(data, key, items):
         </div>
       </div>
     </article>""")
+    quick_answer = f'\n      <p class="callout"><strong>Quick answer:</strong> {e(s["quick_answer"])}</p>' if s.get("quick_answer") else ""
+    measure = ""
+    if s.get("measure"):
+        measure = ("    <section class=\"prose wide\">\n      <h2>Before you buy, measure these</h2>\n      <ol>"
+                   + "".join(f"<li><strong>{e(h)}:</strong> {e(t)}</li>" for h, t in s["measure"])
+                   + "</ol>\n" + (f"      <p>{e(s['measure_note'])}</p>\n" if s.get("measure_note") else "") + "    </section>\n")
+    types = ""
+    if s.get("types"):
+        by_asin = {p["asin"]: p for p in items}
+
+        def type_pick(t):
+            p = by_asin.get(t.get("pick"))
+            return f'<a href="#{e(p["asin"])}">{e(p["name"])}</a>' if p else "No pick listed yet"
+        type_rows = "\n".join(
+            f'        <tr><td data-label="Type">{e(t["name"])}</td><td data-label="Best for">{e(t["best_for"])}</td>'
+            f'<td data-label="Main advantage">{e(t["advantage"])}</td><td data-label="Main tradeoff">{e(t["tradeoff"])}</td>'
+            f'<td data-label="Our pick">{type_pick(t)}</td></tr>' for t in s["types"])
+        details = "".join(
+            f'      <h3>{e(t["name"])}</h3>\n' + (f'      <p>{e(t["summary"])}</p>\n' if t.get("summary") else "")
+            + '      <p><strong>Choose this type if:</strong></p>\n      <ul>' + "".join(f"<li>{e(x)}</li>" for x in t["choose"]) + "</ul>\n"
+            + '      <p><strong>Skip it if:</strong></p>\n      <ul>' + "".join(f"<li>{e(x)}</li>" for x in t["skip"]) + "</ul>\n"
+            for t in s["types"])
+        types = f"""    <section>
+      <h2>{e(s.get('types_heading', 'Which type fits your space?'))}</h2>
+      <table class="quick">
+        <thead><tr><th>Type</th><th>Best for</th><th>Main advantage</th><th>Main tradeoff</th><th>Our pick</th></tr></thead>
+        <tbody>
+{type_rows}
+        </tbody>
+      </table>
+    </section>
+    <section class="prose wide">
+      <h2>Who should choose, or skip, each type</h2>
+{details}    </section>
+"""
     criteria = "".join(f"<li>{e(c)}</li>" for c in s["criteria"])
     guide = "".join(f"<h3>{e(h)}</h3><p>{e(t)}</p>" for h, t in s["guide"])
     faq = s.get("faq", [])
@@ -545,7 +592,7 @@ def render_guide(data, key, items):
       <h1>{e(s['title'])} ({year})</h1>
       <p class="updated">Updated {month} · {len(items)} picks</p>
       <p class="callout"><strong>Affiliate disclosure:</strong> {e(site['name'])} is reader-supported. Buttons marked "Check price on Amazon" are affiliate links. {DISCLOSURE} It costs you nothing extra, and picks are chosen from product research, not commission rates.</p>
-      <p class="intro">{e(s['intro'])}</p>
+      <p class="intro">{e(s['intro'])}</p>{quick_answer}
     </header>
     <section>
       <h2>Quick picks</h2>
@@ -556,7 +603,7 @@ def render_guide(data, key, items):
         </tbody>
       </table>
     </section>
-    <section class="prose wide">
+{measure}{types}    <section class="prose wide">
       <h2>How we chose</h2>
       <p>Each pick was selected by comparing manufacturer specifications and recurring themes in owner feedback against these criteria:</p>
       <ul>{criteria}</ul>
