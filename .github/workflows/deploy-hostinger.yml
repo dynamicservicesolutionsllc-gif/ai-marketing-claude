@@ -1,11 +1,17 @@
-# Publishes the built site (site/public/) to the `hostinger-deploy` branch.
-# Hostinger's GitHub auto-deployment pulls that branch into public_html for kitchenfindsfavorites.com.
+# Publishes the built site (site/public/) to the `hostinger-deploy` branch, then tells Hostinger to pull it.
 # The branch keeps a normal history (no force-push) so Hostinger's pull is always a fast-forward.
+#
+# Amazon product photos: once the repo has the AMAZON_CREATORS_CLIENT_ID / AMAZON_CREATORS_CLIENT_SECRET
+# secrets (Creators API access needs 10+ qualifying sales in 30 days), every run fetches fresh official
+# Amazon photos and rebuilds the site with them. The daily schedule keeps that data fresh, as Amazon's
+# API terms require. Without the secrets, the committed site/public/ is published unchanged.
 name: Deploy site to Hostinger
 on:
   push:
     branches: [main]
-    paths: ["site/public/**", ".github/workflows/deploy-hostinger.yml"]
+    paths: ["site/**", ".github/workflows/deploy-hostinger.yml"]
+  schedule:
+    - cron: "17 9 * * *"  # daily, ~5:17 AM ET
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,10 +21,21 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+      AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
     steps:
       - uses: actions/checkout@v4
         with:
           path: src
+      - name: Rebuild with official Amazon photos (only when API keys are set)
+        if: env.AMAZON_CREATORS_CLIENT_ID != '' && env.AMAZON_CREATORS_CLIENT_SECRET != ''
+        working-directory: src/site
+        run: |
+          set -euo pipefail
+          pip install --quiet pillow
+          python3 fetch_amazon_images.py
+          python3 build.py
       - name: Push site/public to hostinger-deploy
         env:
           REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git

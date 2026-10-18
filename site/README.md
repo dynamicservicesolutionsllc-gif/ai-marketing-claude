@@ -50,3 +50,17 @@ pins any ASIN not yet in its Posted Pins Log. To pull a product (e.g. it turns o
 routine creates a Google Doc titled `KFF site removal request - <ASIN>`; the daily site routine removes the product and trashes the doc.
 
 Routine prompts are versioned in `routines/`.
+
+## Official Amazon product photos (switches on automatically)
+
+Until the Associates account qualifies for Amazon's Creators API (10+ qualifying sales in the past 30 days), product
+cards use the original graphics from `graphics.py`. Once it qualifies:
+
+1. In Associates Central, register for the Creators API and generate credentials (client ID + client secret).
+2. In GitHub: repo Settings → Secrets and variables → Actions → add `AMAZON_CREATORS_CLIENT_ID` and
+   `AMAZON_CREATORS_CLIENT_SECRET`.
+3. Run the "Deploy site to Hostinger" workflow (Actions tab → Run workflow), or wait for the next push / daily run.
+
+Each run then calls `fetch_amazon_images.py` and rebuilds, so cards and product pages show Amazon-hosted photos
+(hotlinked from `m.media-amazon.com`, never copied). `amazon_images.json` is never committed, and the daily scheduled
+run refreshes it so the data stays current per Amazon's API terms. Pinterest/Facebook graphics are unaffected.

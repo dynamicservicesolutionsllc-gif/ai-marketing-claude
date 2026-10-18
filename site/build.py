@@ -139,9 +139,18 @@ def page_path(p):
     return f"picks/{slug(p['name'])}/"
 
 
+# Official Amazon photos from the Creators API (written by fetch_amazon_images.py, only when API keys are set).
+# Hotlinked from Amazon's servers as the API license requires; never committed, refreshed on every deploy.
+AMAZON_IMAGES = {}
+
+
 def picture(p, base, eager=False):
-    """Card image: WebP with a PNG fallback."""
+    """Card image: the official Amazon photo when the API supplied one, else our WebP/PNG graphic card."""
     load = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+    a = AMAZON_IMAGES.get(p["asin"])
+    if a:
+        return (f'<img class="amz" src="{e(a["url"])}" alt="{e(p["name"])}" {load} '
+                f'width="{a.get("width") or 500}" height="{a.get("height") or 500}" referrerpolicy="no-referrer-when-downgrade">')
     return (f'<picture><source srcset="{base}img/{e(p["asin"])}-sq.webp" type="image/webp">'
             f'<img src="{base}img/{e(p["asin"])}-sq.png" alt="{e(p["name"])}" {load} width="800" height="800"></picture>')
 
@@ -195,6 +204,7 @@ CSS = """
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
   .img picture { display:block; width:100%; height:100%; }
   .img img { width:100%; height:100%; object-fit:cover; display:block; }
+  .img img.amz { object-fit:contain; background:#fff; padding:8%; }
   .body { padding:16px; display:flex; flex-direction:column; gap:10px; flex:1; }
   h3 { font-size:18px; line-height:1.3; }
   h3 a { color:inherit; text-decoration:none; }
@@ -660,6 +670,12 @@ def main():
         print(f"OK: {len(data['products'])} products")
         return
     OUT.mkdir(exist_ok=True)
+    global AMAZON_IMAGES
+    amz = ROOT / "amazon_images.json"
+    if amz.exists():
+        AMAZON_IMAGES = {k: v for k, v in json.loads(amz.read_text(encoding="utf-8")).items()
+                         if str(v.get("url", "")).startswith("https://m.media-amazon.com/")}
+        print(f"Using official Amazon photos for {len(AMAZON_IMAGES)} products")
     import graphics  # needs Pillow; only required for a full build
     graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
     render_hero_images(data)
