@@ -3,7 +3,7 @@ Options -Indexes
 ErrorDocument 404 /404.html
 RewriteEngine On
 # Never serve the deploy checkout's git data or the build sources.
-RewriteRule (^|/)\.git(/|$) - [R=404,L]
+RewriteRule (^|/)\.(git|data)(/|$) - [R=404,L]
 # Force HTTPS and the bare domain.
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]

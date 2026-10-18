@@ -21,6 +21,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQ2TM4X7Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8KQ2TM4X7Z');</script>
+<script>(function(){var T={},ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
+try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
+if(!ch){var r=document.referrer;ch=/pinterest\./.test(r)?'pinterest':/(facebook|instagram)\.|fb\.me/.test(r)?'facebook':/google\./.test(r)?'google':/bing\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/dp/"]');if(!a)return;
+var m=a.href.match(/\/dp\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
+if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
+if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
+try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <style>
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
@@ -106,6 +114,7 @@
   .roundup { border-top:1px solid var(--bd); }
   .roundup h2 { font-size:clamp(22px,3vw,28px); margin:0; }
   .roundup h2 a { color:inherit; text-decoration:none; }
+  .roundup .sub { color:var(--mut); font-size:15px; }
   .award { color:var(--acc); font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:.04em; }
   .more { color:var(--acc); font-size:14px; }
   .prose.wide { max-width:760px; padding:24px 0; }
@@ -129,13 +138,14 @@
   <div class="top"><a class="brand" href="../">Kitchen Finds &amp; Favorites</a></div>
   <main id="main" class="prose">
     <h1>Privacy Policy</h1>
-    <p>Last updated 2026-10-17.</p>
+    <p>Last updated 2026-10-18.</p>
     <h2>Affiliate links and cookies</h2>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.</p>
     <p>When you click a product link on this site you go to Amazon.com. Third parties, including Amazon, may place and read cookies on your browser, or use web beacons, to collect information such as which link you clicked and whether a purchase followed, so that we can be credited for the referral. That information is handled under <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" rel="nofollow noopener">Amazon's Privacy Notice</a>. We never see your Amazon account, payment details, or what you personally bought.</p>
     <p>This site itself sets no advertising cookies.</p>
     <h2>Analytics</h2>
     <p>We use Google Analytics to understand how visitors use this site, such as which pages are viewed, how visitors arrive (for example from Pinterest or a search engine), and what device and browser are used. Google Analytics sets cookies and collects information such as your approximate location, browser, and pages visited; we see only aggregate reports and never your name or contact details. This information is handled under <a href="https://policies.google.com/privacy" rel="nofollow noopener">Google's Privacy Policy</a> (see also <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener">how Google uses data from sites that use its services</a>). You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+    <p>When you click a link to Amazon, the site also records which page and product the click came from, where the visit originated (for example Pinterest or a search engine) and the time, so we can tell which pages are useful. This click log stores no IP address, cookies, name or contact details.</p>
     <h2>Email sign-up</h2>
     <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
     <h2>Hosting and server logs</h2>

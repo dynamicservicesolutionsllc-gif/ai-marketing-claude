@@ -66,3 +66,32 @@ cards use the original graphics from `graphics.py`. Once it qualifies:
 Each run then calls `fetch_amazon_images.py` and rebuilds, so cards and product pages show Amazon-hosted photos
 (hotlinked from `m.media-amazon.com`, never copied). `amazon_images.json` is never committed, and the daily scheduled
 run refreshes it so the data stays current per Amazon's API terms. Pinterest/Facebook graphics are unaffected.
+
+## Holiday gift guides
+
+`gift_guides` in `products.json` → pages at `/gifts/<key>/` (listed first on the homepage). Each guide hand-picks existing
+products by ASIN with its own `award` and `why` (gift note). Same rules as buying guides: no prices, star ratings, price
+claims ("under $25") or testing claims — `build.py` rejects them. Header photos live in `assets/guides/<key>.jpg`.
+
+## Pinterest queue (`/pins.json`)
+
+`pins.py` (run by `build.py`) gives every page several distinct pins, because Pinterest rewards fresh pins even to the
+same page: 4 photo designs per buying/gift guide (photo-top, dark, colour + checklist, big-number) and, per product, the
+original pin plus a dark and a colour design (the colour one links to the product's section in its guide). Images go to
+`public/img/pins/<id>.jpg`; links carry `utm_source=pinterest&utm_campaign=<pin id>`. Queue order: each page's lead pin
+first (gift guides, then guides, then products), then the remaining variants. The evening Pinterest routine publishes the
+first 5 unposted ids per day (never two for the same page in one run). `--force-graphics` re-renders pin images.
+
+## Click tracking
+
+Every Amazon link click sends a GA4 `amazon_click` event (asin, placement, channel, link_page) and a beacon to
+`/click.php`, which appends `time, page, ASIN, channel, placement, pin/campaign` to `public_html/.data/clicks.csv`
+(blocked from the web by `.htaccess`; no IP, cookies or personal data). Channel comes from `utm_source` (kept for the
+visit) or the referrer. If `site.channel_tags` has a tracking ID for a channel (e.g. `"pinterest": "kitchenfi-pin-20"`),
+links clicked during that visit use it, so Associates reports split sales by channel. Create the IDs in Associates
+Central → Manage Your Tracking IDs first; leave a channel empty to keep the main tag.
+
+## Email printable
+
+`printables.py` generates `assets/printables/small-kitchen-measuring-checklist.pdf` (no Amazon links — not allowed in
+downloadable files). The sign-up box offers it and `/thanks/` links to it.

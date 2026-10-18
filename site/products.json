@@ -6,7 +6,16 @@
     "associate_tag": "kitchenfi0fde-20",
     "pinterest": "https://www.pinterest.com/kitchenfindsfavorites/",
     "facebook": "https://www.facebook.com/61594030243560",
-    "email": "help@kitchenfindsfavorites.com"
+    "email": "help@kitchenfindsfavorites.com",
+    "lead_magnet": {
+      "title": "Small-Kitchen Measuring Checklist",
+      "file": "printables/small-kitchen-measuring-checklist.pdf"
+    },
+    "channel_tags": {
+      "pinterest": "",
+      "facebook": ""
+    },
+    "gift_board": "Kitchen Gift Ideas for Home Cooks"
   },
   "categories": {
     "organization": "Kitchen Organization Must-Haves",
@@ -157,7 +166,10 @@
             "Your drawer has an unusual shape"
           ]
         }
-      ]
+      ],
+      "noun": "Drawer Organizer",
+      "hashtags": "#kitchenorganization #drawerorganizer #smallkitchen #organizedhome",
+      "board": "Kitchen Organization Must-Haves"
     },
     "under-sink-storage": {
       "category": "organization",
@@ -192,13 +204,125 @@
         [
           "Do under-sink mats need to be trimmed?",
           "Often, yes. Measure the cabinet floor and check whether the mat needs cutting around pipes."
+        ],
+        [
+          "Can I put a pull-out organizer under a sink with a garbage disposal?",
+          "Often, yes, if there is enough clearance on one side. Measure from the disposal to the side wall and compare it with the organizer's current listed width."
+        ],
+        [
+          "Will a silicone mat fit around my pipes?",
+          "Mats are usually trimmed to fit. Measure the cabinet floor and plan where the pipes come through before cutting."
+        ],
+        [
+          "How do I stop bottles from tipping over under the sink?",
+          "Group them in a basket or pull-out tier so they stand together, and keep the tallest bottles at the back where the shelf height is greatest."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Dark kitchen cabinets with the under-sink cupboard open",
         "credit": "Unsplash",
         "source_id": "photo-1666608153597-05b25a35f82c"
-      }
+      },
+      "noun": "Under-Sink Organizer",
+      "hashtags": "#undersinkorganization #kitchenorganization #smallkitchen #cabinetorganization",
+      "board": "Kitchen Organization Must-Haves",
+      "quick_answer": "Measure around the drain pipe before anything else. A pull-out organizer that sits beside the plumbing gives you two usable levels, a raised-edge mat protects the cabinet floor from slow leaks, and a sink caddy clears the sponge and soap off the counter edge.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Cabinet interior width",
+          "Wall to wall inside the cabinet, not the door width."
+        ],
+        [
+          "Space on each side of the drain",
+          "From each side wall to the nearest pipe: this decides which pull-out fits."
+        ],
+        [
+          "Clearance below the trap",
+          "The height from the cabinet floor to the lowest point of the drain pipe."
+        ],
+        [
+          "Door opening and hinges",
+          "Hinges and the center stile can block a basket from sliding out."
+        ],
+        [
+          "Disposal and water lines",
+          "A garbage disposal or filter takes space that a drawing of the cabinet won't show."
+        ]
+      ],
+      "measure_note": "Most under-sink frustration comes from buying for the cabinet's outer size. The usable space is whatever is left around the plumbing.",
+      "types_heading": "Which under-sink fix do you need?",
+      "types": [
+        {
+          "name": "Pull-out tiered organizer",
+          "best_for": "Cabinets with room beside the pipes",
+          "advantage": "Two levels you can slide out, no kneeling",
+          "tradeoff": "Needs measured clearance around plumbing",
+          "summary": "Turns the awkward floor of the cabinet into two shelves. Our pick uses a narrow top basket that mounts on either side to clear the drain pipe and disposal.",
+          "choose": [
+            "You keep cleaning supplies under the sink",
+            "There is clear space on at least one side of the pipes",
+            "You are tired of reaching to the back"
+          ],
+          "skip": [
+            "The plumbing fills most of the cabinet",
+            "You only store a few bottles",
+            "You haven't measured below the trap"
+          ],
+          "pick": "B0CFQFMC4F"
+        },
+        {
+          "name": "Waterproof cabinet mat",
+          "best_for": "Protecting the cabinet floor",
+          "advantage": "Raised edge holds drips and spills",
+          "tradeoff": "May need trimming around pipes",
+          "summary": "A slow drip can soak particleboard before anyone notices. A silicone mat with a raised edge holds the water so it wipes up instead.",
+          "choose": [
+            "Your cabinet floor is particleboard or already stained",
+            "You store liquid cleaners under the sink",
+            "You rent and want to protect the cabinet"
+          ],
+          "skip": [
+            "You can't trim it to fit around the pipes",
+            "The cabinet floor is already damaged and needs repair first"
+          ],
+          "pick": "B0CSPKSCP2"
+        },
+        {
+          "name": "Sink caddy",
+          "best_for": "Clearing the sink edge",
+          "advantage": "One spot for sponge, soap and brush",
+          "tradeoff": "Takes a little counter space",
+          "summary": "Not strictly under-sink storage, but it solves the same clutter: sponges and brushes that sit in a puddle behind the faucet.",
+          "choose": [
+            "Your sponge and soap sit loose on the counter",
+            "Water pools behind the faucet"
+          ],
+          "skip": [
+            "You have no counter space beside the sink at all"
+          ],
+          "pick": "B0C3QZ7SNF"
+        }
+      ],
+      "situations": [
+        [
+          "Under-sink organizer for a cabinet with a garbage disposal",
+          "Measure the gap between the disposal and each side wall. An L-shaped or narrow pull-out that sits to one side usually works where a full-width shelf won't."
+        ],
+        [
+          "Under-sink storage for a rental",
+          "Choose free-standing pieces that need no screws: a pull-out that sits on the cabinet floor, plus a removable mat underneath. Both leave with you."
+        ],
+        [
+          "Organizing a narrow sink base cabinet",
+          "Use the depth instead of the width: one slim pull-out on the open side, tall bottles at the back, and the mat underneath to catch drips."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "dish-drying-racks": {
       "category": "organization",
@@ -233,13 +357,119 @@
         [
           "Is a roll-up rack strong enough for pots?",
           "Check the stated weight capacity; steel-core racks generally handle cookware."
+        ],
+        [
+          "Do roll-up dish racks sag with heavy pots?",
+          "They're designed to span the sink and carry weight, but each has a stated limit. Check the current listing, and avoid resting very heavy cast iron on the middle of the span."
+        ],
+        [
+          "How do I keep a dish rack from getting moldy?",
+          "Empty the drainboard daily, let the rack dry fully, and wash it with hot soapy water every week or two."
+        ],
+        [
+          "Where should a dish rack go in a small kitchen?",
+          "As close to the sink as possible so water drains back toward it, and away from outlets and the stovetop."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "White plates drying upright in a dish rack by a sunny window",
         "credit": "Unsplash",
         "source_id": "photo-1780930425732-6fe2d9de072f"
-      }
+      },
+      "noun": "Dish Drying Rack",
+      "hashtags": "#dishrack #smallkitchen #kitchenorganization #apartmentliving",
+      "board": "Kitchen Organization Must-Haves",
+      "quick_answer": "If you have a strip of counter beside the sink, a compact rack with a drainboard holds the most dishes upright. If you have no counter to spare, a roll-up rack that spans the sink uses zero counter space, as long as your sink's shorter side fits its length.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Counter space beside the sink",
+          "Width and depth of the spot where the rack will sit."
+        ],
+        [
+          "Sink opening",
+          "For an over-the-sink rack, the shorter side of the sink opening."
+        ],
+        [
+          "Faucet and backsplash",
+          "How far the faucet and wall are from where the rack would go."
+        ],
+        [
+          "Your usual load",
+          "How many plates, glasses and pots you wash at once."
+        ]
+      ],
+      "measure_note": "A rack that's sized for a full family's load wastes space if you cook for one or two. Size it to the dishes you actually wash in one go.",
+      "types_heading": "Which dish rack fits your kitchen?",
+      "types": [
+        {
+          "name": "Compact countertop rack with drainboard",
+          "best_for": "A small strip of counter by the sink",
+          "advantage": "Holds plates upright and channels water",
+          "tradeoff": "Takes counter space",
+          "summary": "The classic option, sized down. Our pick has a 12 by 15.5 inch footprint and a drainboard that catches drips.",
+          "choose": [
+            "You have a little counter beside the sink",
+            "You wash plates, bowls and glasses together",
+            "You want somewhere to leave dishes overnight"
+          ],
+          "skip": [
+            "Your counter is already full",
+            "You only wash a few items at a time"
+          ],
+          "pick": "B0B4K1XH8Y"
+        },
+        {
+          "name": "Roll-up over-the-sink rack",
+          "best_for": "Kitchens with no counter to spare",
+          "advantage": "Uses no counter space; rolls up to store",
+          "tradeoff": "Must match your sink's size",
+          "summary": "Spans the sink so dishes and produce drip straight into the basin. Our pick fits sinks whose shorter side is 17 inches or less and supports up to 100 lbs.",
+          "choose": [
+            "You have no counter space next to the sink",
+            "You also want a spot to rinse produce or rest hot pots",
+            "You like to put everything away after drying"
+          ],
+          "skip": [
+            "You need the sink free while dishes dry",
+            "Your sink is wider than the rack's length"
+          ],
+          "pick": "B0836VYDRB"
+        },
+        {
+          "name": "Over-the-sink frame rack",
+          "best_for": "Larger sinks with open wall space",
+          "advantage": "Tall shelving over the sink",
+          "tradeoff": "Bulky and permanent-looking",
+          "summary": "Freestanding frames with several tiers over the sink. We don't list one yet; check the frame's height against your faucet and any cabinets above.",
+          "choose": [
+            "You want several shelves of drying space",
+            "You have clear wall space above the sink"
+          ],
+          "skip": [
+            "You have upper cabinets or a window right over the sink"
+          ]
+        }
+      ],
+      "situations": [
+        [
+          "Dish rack for a tiny kitchen with no counter space",
+          "Go over the sink, not beside it. A roll-up rack spans the basin and rolls up into a drawer when you're done."
+        ],
+        [
+          "Dish drying rack for a single-basin sink",
+          "A roll-up rack covers part of the basin while dishes dry, so you can still use the uncovered part, or roll it back when you need the full sink."
+        ],
+        [
+          "Dish rack for one or two people",
+          "A compact countertop rack is usually plenty. Look for a removable utensil holder and a drainboard so water doesn't pool on the counter."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "pantry-storage": {
       "category": "organization",
@@ -274,13 +504,152 @@
         [
           "How do I organize a deep pantry shelf?",
           "Use pull-out bins or a lazy Susan so items at the back are reachable without unloading the front."
+        ],
+        [
+          "Do I need to decant everything into containers?",
+          "No. Start with what goes stale or attracts pests: flour, sugar, rice, cereal, crackers. Leave sealed cans and jars as they are."
+        ],
+        [
+          "Are clear pantry containers worth it?",
+          "Being able to see what is running low is the main benefit, and it stops duplicate purchases."
+        ],
+        [
+          "How do I label pantry containers?",
+          "Use the included labels or a removable marker, and note the expiry date on the back for things you rotate slowly."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Row of clear glass jars filled with grains and pantry staples",
         "credit": "Unsplash",
         "source_id": "photo-1645567454567-901dc409551b"
-      }
+      },
+      "noun": "Pantry Organizer",
+      "hashtags": "#pantryorganization #pantrygoals #kitchenorganization #organizedpantry",
+      "board": "Kitchen Organization Must-Haves",
+      "quick_answer": "Seal what goes stale in airtight containers, then make the shelf work harder: pull-out bins for loose snacks and produce, a tiered rack for cans, and a turntable for deep corners. Measure shelf depth and height first so everything stacks to the top without blocking the door.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Shelf depth",
+          "Front edge to the back wall: deep shelves need bins or turntables to stay usable."
+        ],
+        [
+          "Shelf height clearance",
+          "The gap between shelves, so stacked containers and can racks fit."
+        ],
+        [
+          "Shelf width",
+          "How many bins or containers fit side by side."
+        ],
+        [
+          "Door and trim",
+          "Door swing and any lip at the front of the shelf."
+        ],
+        [
+          "What you buy in bulk",
+          "The size of the flour, sugar and cereal packages you need to decant."
+        ]
+      ],
+      "measure_note": "Containers that hold a full bag of flour in one go save you from keeping a half-empty bag next to the canister.",
+      "types_heading": "Which pantry storage do you need?",
+      "types": [
+        {
+          "name": "Airtight container set",
+          "best_for": "Decanting dry goods",
+          "advantage": "Matching, stackable sizes with labels",
+          "tradeoff": "Takes time to decant everything",
+          "summary": "Turns half-open boxes and bags into a uniform, stackable pantry. Our pick is 24 containers in four sizes with side-locking lids.",
+          "choose": [
+            "You buy flour, rice, pasta and cereal regularly",
+            "You want everything to stack neatly",
+            "Pests or stale snacks have been a problem"
+          ],
+          "skip": [
+            "You rarely keep dry goods",
+            "You don't want to wash and refill containers"
+          ],
+          "pick": "B08ZK5WDWN"
+        },
+        {
+          "name": "Single large canister",
+          "best_for": "One or two staples",
+          "advantage": "Big capacity with an airtight latch",
+          "tradeoff": "One container won't organize a whole shelf",
+          "summary": "When you only need to seal one or two things, like sugar or cereal, a single 12-cup canister is simpler than a full set.",
+          "choose": [
+            "You want to start small",
+            "You keep one or two bulk staples"
+          ],
+          "skip": [
+            "You want the whole pantry to match"
+          ],
+          "pick": "B07531HM8Q"
+        },
+        {
+          "name": "Pull-out bins",
+          "best_for": "Deep shelves and loose items",
+          "advantage": "Slide a whole category out like a drawer",
+          "tradeoff": "Uses some height",
+          "summary": "Groups snacks, produce and packets so the back of the shelf is reachable. Our pick measures 11 by 8 by 6 inches per bin.",
+          "choose": [
+            "Your shelves are deep",
+            "Snacks and packets get lost at the back"
+          ],
+          "skip": [
+            "Your shelves are shallow and everything is already visible"
+          ],
+          "pick": "B08BQBNXSQ"
+        },
+        {
+          "name": "Tiered can rack",
+          "best_for": "Canned goods",
+          "advantage": "Labels face out; nothing tips over",
+          "tradeoff": "Fixed size",
+          "summary": "Holds up to 36 cans on three tiers so you can see what you have before you buy more.",
+          "choose": [
+            "You keep a lot of canned soups, beans and tomatoes"
+          ],
+          "skip": [
+            "You buy cans rarely",
+            "Your shelf is shorter than the rack's 11-inch height"
+          ],
+          "pick": "B08CGHSY9G"
+        },
+        {
+          "name": "Turntable (lazy Susan)",
+          "best_for": "Corners and deep cabinets",
+          "advantage": "Spin the back to the front",
+          "tradeoff": "Round shape leaves corner gaps",
+          "summary": "Brings oils, sauces and jars at the back of a deep cabinet or corner to the front with a spin. Our pick is a 3-pack in three sizes.",
+          "choose": [
+            "You have a corner cabinet or very deep shelf",
+            "You store bottles and jars"
+          ],
+          "skip": [
+            "You need to fill every square inch of a rectangular shelf"
+          ],
+          "pick": "B0CNCWY7N6"
+        }
+      ],
+      "situations": [
+        [
+          "Pantry organization for a small apartment with no pantry",
+          "Use one cabinet as the pantry: airtight containers that stack to the shelf height, a can rack, and a turntable for oils. Clear containers make a cabinet feel bigger than it is."
+        ],
+        [
+          "How to organize a deep pantry shelf",
+          "Put pull-out bins or a turntable in the back half so you never have to unload the front to reach something."
+        ],
+        [
+          "Best way to store flour and sugar",
+          "Airtight containers that hold a full bag in one pour, labeled and placed at eye level so you can see when you're low."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "spice-racks": {
       "category": "organization",
@@ -315,13 +684,117 @@
         [
           "How many spice jars fit on a 3-tier rack?",
           "It depends on jar size; compare the rack's width and depth with the jars you own."
+        ],
+        [
+          "Will a magnetic spice rack work on a stainless steel fridge?",
+          "Only if the panel is magnetic. Test with a fridge magnet before buying; many stainless doors are, but not all."
+        ],
+        [
+          "Where should spices be stored?",
+          "Away from the stove's heat and direct sun. Close by is convenient, but right above the burners shortens shelf life."
+        ],
+        [
+          "How do I organize spices so I can find them?",
+          "Alphabetize, or group by cuisine, and keep the ones you use weekly on the front tier."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Glass spice jars lined up on wooden shelves",
         "credit": "Unsplash",
         "source_id": "photo-1757802261964-a8e03ed98981"
-      }
+      },
+      "noun": "Spice Rack",
+      "hashtags": "#spicerack #spiceorganization #smallkitchen #kitchenorganization",
+      "board": "Kitchen Organization Must-Haves",
+      "quick_answer": "If you have a cabinet, a tiered riser lifts the back rows into view. If you have no cabinet space at all, a magnetic shelf on the side of the fridge adds storage with no drilling. Check that your fridge side is magnetic, since some stainless steel isn't.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Cabinet interior width and depth",
+          "So a tiered rack fits with the door closed."
+        ],
+        [
+          "Shelf height",
+          "Jar height plus the top tier's height must clear the shelf above."
+        ],
+        [
+          "Your jar sizes",
+          "Diameter and height of your most common jars."
+        ],
+        [
+          "Fridge side",
+          "Clear space beside the fridge, and whether a magnet sticks to it."
+        ]
+      ],
+      "measure_note": "Count your jars before buying. A rack that holds fewer jars than you own just moves the clutter.",
+      "types_heading": "Which spice storage fits your kitchen?",
+      "types": [
+        {
+          "name": "Tiered cabinet riser",
+          "best_for": "Spices kept in a cabinet",
+          "advantage": "Every label visible, no assembly",
+          "tradeoff": "Uses cabinet space",
+          "summary": "Three staggered tiers lift the back row into view. Our pick is 15 inches wide by 9 inches deep with non-skid lining.",
+          "choose": [
+            "You keep spices in a standard cabinet",
+            "Jars at the back get forgotten"
+          ],
+          "skip": [
+            "Your cabinet is narrower than the riser",
+            "Your jars are taller than the shelf allows on the top tier"
+          ],
+          "pick": "B0036OQU56"
+        },
+        {
+          "name": "Magnetic fridge shelf",
+          "best_for": "No spare cabinet space",
+          "advantage": "Adds new storage, no drilling",
+          "tradeoff": "Needs a magnetic surface",
+          "summary": "Moves spices, oils and small jars out of the cabinet entirely. Our pick is a 4-pack of heavy-duty steel shelves.",
+          "choose": [
+            "Your cabinets are full",
+            "You rent and can't drill",
+            "The side of your fridge is free and magnetic"
+          ],
+          "skip": [
+            "Your fridge sits flush in a cabinet surround",
+            "Your fridge panel isn't magnetic"
+          ],
+          "pick": "B0C3H9MJQV"
+        },
+        {
+          "name": "Drawer spice insert",
+          "best_for": "Kitchens with a spare drawer",
+          "advantage": "Jars lie flat with labels up",
+          "tradeoff": "Needs a whole drawer",
+          "summary": "Inserts tilt jars so labels face up in a drawer. We don't list one yet; measure drawer depth against your jar height.",
+          "choose": [
+            "You have a shallow drawer near the stove"
+          ],
+          "skip": [
+            "Your drawers are already full"
+          ]
+        }
+      ],
+      "situations": [
+        [
+          "Best spice rack for a small apartment",
+          "Start with what space you have: a tiered riser if there's a cabinet near the stove, a magnetic shelf on the fridge if there isn't."
+        ],
+        [
+          "Spice storage with no cabinet space",
+          "Go vertical on the fridge side with magnetic shelves, or use a narrow shelf on the wall if you can mount one."
+        ],
+        [
+          "No-drill spice rack for a rental",
+          "Magnetic shelves and free-standing cabinet risers both install without tools and leave no marks."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "cookware-organizers": {
       "category": "organization",
@@ -356,13 +829,130 @@
         [
           "Can bakeware racks hold cast iron?",
           "Check the rack's construction and slot size; steel racks handle heavier pans better than light wire."
+        ],
+        [
+          "Can a lid organizer hold heavy cast iron?",
+          "Check the rack's construction and the listing's guidance. Steel racks with wider slots handle heavier pans better than light wire."
+        ],
+        [
+          "Should pans be stored vertically or stacked?",
+          "Vertically, when possible. It's faster to grab one and it protects nonstick surfaces from scratches."
+        ],
+        [
+          "How do I keep food container lids matched?",
+          "Store lids upright in size order in a lid organizer, and nest the containers next to it."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Pots and pans hanging from a rail on a brick kitchen wall",
         "credit": "Unsplash",
         "source_id": "photo-1557212060-dd397c79fa5a"
-      }
+      },
+      "noun": "Pot and Lid Organizer",
+      "hashtags": "#cabinetorganization #potsandpans #kitchenorganization #smallkitchen",
+      "board": "Kitchen Organization Must-Haves",
+      "quick_answer": "Store lids, sheet pans and cutting boards on edge instead of stacked. An adjustable divider rack handles a mix of lids and pans, a lid tray keeps container lids matched, and a slim wire rack files flat bakeware. Check cabinet depth and your thickest pan before buying.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Cabinet interior width and depth",
+          "Our widest pick adjusts from 12.6 to 21.5 inches and needs a cabinet at least 9.7 inches deep."
+        ],
+        [
+          "Cabinet height",
+          "Large lids and sheet pans standing on edge need height."
+        ],
+        [
+          "Thickest pan or board",
+          "Slot width decides what fits: thin slots suit sheet pans, not skillets."
+        ],
+        [
+          "Face-frame lip",
+          "The lip at the cabinet opening can stop a rack from sliding all the way in."
+        ]
+      ],
+      "measure_note": "Measure the opening, not just the inside. Many cabinets are narrower at the front than inside.",
+      "types_heading": "Which cookware organizer do you need?",
+      "types": [
+        {
+          "name": "Adjustable divider rack",
+          "best_for": "A mix of lids, pans and boards",
+          "advantage": "Movable dividers, expands to fit",
+          "tradeoff": "Takes a full cabinet section",
+          "summary": "Ten movable steel dividers stand lids, sheet pans and cutting boards on edge. The base expands from 12.6 to 21.5 inches with no tools.",
+          "choose": [
+            "Your lids and pans are mixed together",
+            "You want to pull one item out without unstacking"
+          ],
+          "skip": [
+            "Your cabinet is shallower than 9.7 inches"
+          ],
+          "pick": "B08NY9RYDG"
+        },
+        {
+          "name": "Container lid organizer",
+          "best_for": "Food storage lids",
+          "advantage": "Lids stand upright and pull out like a drawer",
+          "tradeoff": "Only for lids",
+          "summary": "Five adjustable slots keep food container lids upright and matched, so opening the cabinet doesn't start an avalanche.",
+          "choose": [
+            "Container lids are your biggest mess"
+          ],
+          "skip": [
+            "You only need to store pots and pans"
+          ],
+          "pick": "B07FNRXFTD"
+        },
+        {
+          "name": "Wire file rack",
+          "best_for": "Sheet pans, trays and boards",
+          "advantage": "Five upright slots for flat items",
+          "tradeoff": "Slots are narrow",
+          "summary": "Files cutting boards, trays, cooling racks and baking sheets. Each slot is about 1.2 inches wide, so it suits flat items rather than thick pans.",
+          "choose": [
+            "You bake often and own several sheet pans",
+            "Cutting boards are stacked flat"
+          ],
+          "skip": [
+            "You mainly need to store skillets"
+          ],
+          "pick": "B0C1GNRZ6T"
+        },
+        {
+          "name": "Compact pan rack",
+          "best_for": "Small cabinets",
+          "advantage": "Three sturdy slots for pans or boards",
+          "tradeoff": "Holds fewer items",
+          "summary": "A small steel rack, 10 inches wide by 8.75 inches deep, that holds pans and boards upright so they don't nest.",
+          "choose": [
+            "You have a small cabinet",
+            "You only own a few pans"
+          ],
+          "skip": [
+            "You need to organize a large collection"
+          ],
+          "pick": "B00COCBH36"
+        }
+      ],
+      "situations": [
+        [
+          "How to store pot lids in a small kitchen",
+          "Stand them on edge in an adjustable rack or a lid organizer inside the cabinet, or on the inside of the cabinet door if there is room."
+        ],
+        [
+          "Organizing sheet pans and cutting boards",
+          "File them vertically in a wire rack so you can slide out the one you need without lifting the others."
+        ],
+        [
+          "Pan storage for deep lower cabinets",
+          "An adjustable divider rack in the front half keeps everyday pans reachable; rarely used pieces can go behind."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "food-prep-tools": {
       "category": "gadgets",
@@ -397,13 +987,116 @@
         [
           "What is the easiest way to shred chicken?",
           "A twist-lid chicken shredder handles cooked chicken faster than two forks."
+        ],
+        [
+          "Are vegetable choppers safe to use?",
+          "Use the pusher or lid, not your fingers, on the blade grid, and clean blades with a brush rather than by hand."
+        ],
+        [
+          "Can a vegetable chopper replace a food processor?",
+          "For dicing small batches, often yes. For dough, purees or large batches, a food processor is still faster."
+        ],
+        [
+          "How do I clean a press chopper?",
+          "Rinse right after use, push trapped pieces out with the included cleaning tool, then wash the parts on the top rack if the listing allows it."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Chef's knife beside diced bell peppers and onion on a cutting board",
         "credit": "Unsplash",
         "source_id": "photo-1598295309854-cfa5819004d8"
-      }
+      },
+      "noun": "Food Prep Gadget",
+      "hashtags": "#kitchengadgets #mealprep #cookingtips #kitchentools",
+      "board": "Small Kitchen Gadgets We Love",
+      "quick_answer": "Pick the gadget that removes your slowest prep step: a press chopper for dicing onions and peppers, a twist shredder for cooked chicken, a salad spinner for greens, an apple peeler for baking season. Favor tools with dishwasher-safe parts, since easy cleanup is what keeps a gadget in use.",
+      "measure_heading": "Before you buy, check these",
+      "measure": [
+        [
+          "Your slowest prep task",
+          "The one job that makes weeknight cooking drag."
+        ],
+        [
+          "Storage space",
+          "Choppers with catch containers take real cabinet room."
+        ],
+        [
+          "Dishwasher fit",
+          "Whether the parts fit your dishwasher's top rack."
+        ],
+        [
+          "How often you'll use it",
+          "A single-task gadget earns its space only if you do that task often."
+        ]
+      ],
+      "measure_note": "The best prep gadget is the one you'll actually clean and put away. If it's a chore to wash, it ends up in the back of a cabinet.",
+      "types_heading": "Which prep gadget fits how you cook?",
+      "types": [
+        {
+          "name": "Multi-blade chopper",
+          "best_for": "Dicing, slicing and julienning",
+          "advantage": "Pieces drop straight into a container",
+          "tradeoff": "More parts to store",
+          "summary": "Dices an onion or pepper with one press. Our pick has eight swappable blades for slicing, julienne and grating.",
+          "choose": [
+            "You cook soups, chili or salsa often",
+            "You want uniform pieces"
+          ],
+          "skip": [
+            "You rarely chop vegetables",
+            "You have little cabinet space"
+          ],
+          "pick": "B08N9Q24M9"
+        },
+        {
+          "name": "Compact dicer",
+          "best_for": "Everyday dicing",
+          "advantage": "Simple design with a 5-cup catch container",
+          "tradeoff": "Fewer cutting styles",
+          "summary": "A simpler press chopper with a non-skid base and parts that go on the dishwasher's top rack.",
+          "choose": [
+            "You mainly dice and want fewer pieces",
+            "You want a non-skid base"
+          ],
+          "skip": [
+            "You need slicing and grating too"
+          ],
+          "pick": "B0764HS4SL"
+        },
+        {
+          "name": "Single-job helper",
+          "best_for": "One repeated task",
+          "advantage": "Does one job very fast",
+          "tradeoff": "Only does one job",
+          "summary": "Tools like a chicken shredder, apple peeler or salad spinner take one slow job off your hands.",
+          "choose": [
+            "You shred chicken, peel apples or wash greens every week"
+          ],
+          "skip": [
+            "You do that task only occasionally"
+          ],
+          "pick": "B0CGRGRXPY"
+        }
+      ],
+      "situations": [
+        [
+          "Best vegetable chopper for meal prep",
+          "A multi-blade chopper with a catch container lets you dice a week's onions and peppers straight into a container."
+        ],
+        [
+          "Kitchen gadgets that make weeknight dinners faster",
+          "A chopper for aromatics, a shredder for rotisserie chicken and a salad spinner cover the slowest parts of most weeknight meals."
+        ],
+        [
+          "Easier-to-use tools for tired hands",
+          "Look for oversized knobs, cushioned handles and suction or non-skid bases, like the can opener and apple peeler in this guide."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "cooking-tools": {
       "category": "gadgets",
@@ -438,13 +1131,118 @@
         [
           "What temperature should chicken reach?",
           "USDA lists 165°F as the safe minimum internal temperature for poultry."
+        ],
+        [
+          "What internal temperature should pork and beef reach?",
+          "USDA lists 145°F for whole cuts of beef, pork, veal and lamb, with a 3-minute rest, and 160°F for ground meats."
+        ],
+        [
+          "Do I need to calibrate an instant-read thermometer?",
+          "It's worth checking occasionally in ice water, which should read 32°F. Follow the manufacturer's instructions if it can be adjusted."
+        ],
+        [
+          "Are silicone oven mitts better than cloth?",
+          "They resist steam and liquid much better. Cloth is more flexible, so some cooks keep both."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Measuring cups, whisk and eggs laid out for baking",
         "credit": "Unsplash",
         "source_id": "photo-1759965670306-f055ff093752"
-      }
+      },
+      "noun": "Kitchen Scale or Thermometer",
+      "hashtags": "#kitchentools #bakingtips #cookingtips #homecook",
+      "board": "Small Kitchen Gadgets We Love",
+      "quick_answer": "A digital scale makes baking consistent, an instant-read thermometer removes the guesswork about doneness, and silicone oven mitts protect against steam and spills that soak through cloth. Start with whichever problem costs you the most ruined meals.",
+      "measure_heading": "Before you buy, check these",
+      "measure": [
+        [
+          "What you cook most",
+          "Baking points to a scale; roasts and poultry point to a thermometer."
+        ],
+        [
+          "Units you use",
+          "Recipes in grams need a scale that switches units."
+        ],
+        [
+          "Storage",
+          "A slim scale can live in a drawer; mitts need a hook or drawer."
+        ],
+        [
+          "Heat exposure",
+          "Grill and oven work call for mitts rated for high heat."
+        ]
+      ],
+      "measure_note": "Start with the tool that fixes the mistake you make most often: underdone chicken, dense bread or a burned hand.",
+      "types_heading": "Which tool solves your problem?",
+      "types": [
+        {
+          "name": "Digital kitchen scale",
+          "best_for": "Baking and portioning",
+          "advantage": "Consistent results; tare zeroes the bowl",
+          "tradeoff": "Needs batteries",
+          "summary": "Weighs in grams or ounces up to 11 pounds, and the tare button lets you measure only what you add.",
+          "choose": [
+            "You bake bread, cookies or cakes",
+            "You follow recipes written in grams",
+            "You portion meals"
+          ],
+          "skip": [
+            "You only cook by eye and taste"
+          ],
+          "pick": "B0113UZJE2"
+        },
+        {
+          "name": "Instant-read thermometer",
+          "best_for": "Roasts, poultry and grilling",
+          "advantage": "Reading in a couple of seconds",
+          "tradeoff": "Needs batteries",
+          "summary": "Takes the guesswork out of chicken, roasts and the holiday turkey. Our pick has a backlit display and a waterproof body.",
+          "choose": [
+            "You cook chicken, pork or roasts",
+            "You grill",
+            "You've ever cut meat open to check it"
+          ],
+          "skip": [
+            "You mostly cook vegetarian dishes"
+          ],
+          "pick": "B00S93EQUK"
+        },
+        {
+          "name": "Silicone oven mitts",
+          "best_for": "Hot pans and casseroles",
+          "advantage": "Heat resistant to 500°F and waterproof",
+          "tradeoff": "Less flexible than cloth",
+          "summary": "Silicone shells shrug off steam and spills that soak through cloth mitts, and the ribbed grip holds slippery pans.",
+          "choose": [
+            "Your cloth mitts are thin or worn",
+            "You handle steaming pots and casseroles"
+          ],
+          "skip": [
+            "You need fine finger control for small items"
+          ],
+          "pick": "B08J8GZXKZ"
+        }
+      ],
+      "situations": [
+        [
+          "Kitchen scale for baking bread",
+          "Use a scale that reads in grams with a tare button; weighing flour gives far more consistent dough than cups."
+        ],
+        [
+          "Meat thermometer for a holiday turkey",
+          "Check the thickest part of the thigh and breast without touching bone. USDA lists 165°F as the safe minimum for poultry."
+        ],
+        [
+          "Oven mitts for heavy pans",
+          "Silicone mitts with a ribbed grip help with slippery, heavy casseroles; always use two hands for cast iron."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "coffee-and-tea": {
       "category": "gadgets",
@@ -479,13 +1277,115 @@
         [
           "Is an electric kettle faster than the stove?",
           "Electric kettles generally boil small amounts of water faster than a stovetop kettle and shut off automatically."
+        ],
+        [
+          "How do I descale an electric kettle?",
+          "Boil a mix of water and white vinegar or a descaling product, let it sit, then rinse and boil fresh water once before use."
+        ],
+        [
+          "Can a handheld frother make cold foam?",
+          "Yes, handheld wands foam cold milk too; skim and barista milks hold cold foam best."
+        ],
+        [
+          "How do I clean a milk frother wand?",
+          "Run it in a cup of warm soapy water for a few seconds, then in clean water, and wipe the shaft dry."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Latte with heart foam art on a wooden tray",
         "credit": "Unsplash",
         "source_id": "photo-1547269175-2bcf3ef6009e"
-      }
+      },
+      "noun": "Milk Frother or Kettle",
+      "hashtags": "#coffeeathome #lattelover #milkfrother #coffeebar",
+      "board": "Small Kitchen Gadgets We Love",
+      "quick_answer": "A handheld frother turns plain coffee into a latte without a machine, and an electric kettle boils water for tea, oatmeal or French press faster than the stove, then shuts itself off. Both take almost no counter space.",
+      "measure_heading": "Before you buy, check these",
+      "measure": [
+        [
+          "Counter or drawer space",
+          "A frother fits in a drawer or on a small stand; a kettle needs a spot near an outlet."
+        ],
+        [
+          "Batteries",
+          "Our frother picks run on batteries; keep spares if you froth daily."
+        ],
+        [
+          "How much water you boil",
+          "A 1.7 L kettle handles several mugs; a smaller one heats faster for one."
+        ],
+        [
+          "Your milk",
+          "Oat and barista-style milks usually foam better than thin almond milk."
+        ]
+      ],
+      "measure_note": "For pour-over coffee where pour control matters, many people prefer a gooseneck spout. A standard jug kettle like our pick is quicker for tea, oatmeal and French press.",
+      "types_heading": "Which coffee and tea tool do you need?",
+      "types": [
+        {
+          "name": "Handheld frother",
+          "best_for": "Lattes, matcha and protein shakes",
+          "advantage": "Foams milk in about 20 seconds",
+          "tradeoff": "Battery-powered",
+          "summary": "Whips hot or cold milk into foam, breaks up matcha clumps, and rinses clean in a cup of water.",
+          "choose": [
+            "You drink lattes or matcha at home",
+            "You don't want an espresso machine"
+          ],
+          "skip": [
+            "You need steamed milk for many drinks at once"
+          ],
+          "pick": "B082314NFL"
+        },
+        {
+          "name": "Frother with stand",
+          "best_for": "Daily lattes",
+          "advantage": "Parks on its own stand on the counter",
+          "tradeoff": "Takes a little counter space",
+          "summary": "A triple-whisk wand that runs on four included AA batteries and stands on its own metal stand.",
+          "choose": [
+            "You froth every day and want it within reach"
+          ],
+          "skip": [
+            "You'd rather keep it in a drawer"
+          ],
+          "pick": "B0DPXRJ2VY"
+        },
+        {
+          "name": "Glass electric kettle",
+          "best_for": "Tea, oatmeal and French press",
+          "advantage": "Fast boil with automatic shut-off",
+          "tradeoff": "Needs an outlet and counter spot",
+          "summary": "Boils water faster than a stovetop kettle and shuts itself off. Our pick is 1.7 L with a wide opening for cleaning.",
+          "choose": [
+            "You drink tea or make French press",
+            "You want to boil water unattended"
+          ],
+          "skip": [
+            "You need precise pour control for pour-over"
+          ],
+          "pick": "B08PP48979"
+        }
+      ],
+      "situations": [
+        [
+          "Milk frother for oat milk lattes",
+          "Barista-style oat milk foams best. Heat it first for a warm latte, and froth in a tall mug to avoid splashing."
+        ],
+        [
+          "Best way to make a latte without an espresso machine",
+          "Brew strong coffee or a moka pot shot, heat milk, and froth it with a handheld wand for 20 seconds before pouring."
+        ],
+        [
+          "Electric kettle for tea",
+          "A glass kettle lets you watch the water and keeps it away from plastic; look for automatic shut-off and a wide opening for descaling."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "blenders-and-mixers": {
       "category": "appliances",
@@ -520,13 +1420,130 @@
         [
           "Do I need a hand mixer or a stand mixer?",
           "A hand mixer covers most home baking; a stand mixer suits frequent bread or large batches."
+        ],
+        [
+          "Can an immersion blender crush ice?",
+          "Most aren't designed for it. For ice and frozen smoothies, a countertop blender is the better tool."
+        ],
+        [
+          "Is it safe to use an immersion blender in a hot pot?",
+          "Yes, that's what it's for. Keep the blade fully submerged before switching on, and take the pot off the heat."
+        ],
+        [
+          "Can a hand mixer knead bread dough?",
+          "Light doughs, sometimes, with dough hooks. For regular bread baking, a stand mixer or hand kneading works better."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Bowl of smooth blended tomato soup topped with seeds",
         "credit": "Unsplash",
         "source_id": "photo-1547592166-23ac45744acd"
-      }
+      },
+      "noun": "Immersion Blender or Hand Mixer",
+      "hashtags": "#kitchentools #souprecipes #bakingtools #smallkitchen",
+      "board": "Small Kitchen Gadgets We Love",
+      "quick_answer": "An immersion blender purees soup in the pot and, with a kit, also whisks and chops; a hand mixer covers cookie dough and whipped cream; a 3-cup mini processor handles garlic, herbs and nuts. All three store in a drawer instead of taking over the counter.",
+      "measure_heading": "Before you buy, check these",
+      "measure": [
+        [
+          "What you make most",
+          "Soups point to an immersion blender, baking to a hand mixer, sauces and aromatics to a mini processor."
+        ],
+        [
+          "Pot depth",
+          "The blender shaft should reach the bottom of your soup pot without the motor touching the liquid."
+        ],
+        [
+          "Drawer or cabinet space",
+          "Attachment kits need a box or drawer to stay together."
+        ],
+        [
+          "Dishwasher-safe parts",
+          "Detachable, dishwasher-safe pieces make cleanup quick."
+        ]
+      ],
+      "measure_note": "If you'd use only one, start with an immersion blender kit. With a whisk and chopper included it covers the most jobs per drawer inch.",
+      "types_heading": "Which tool fits what you make?",
+      "types": [
+        {
+          "name": "Immersion blender kit",
+          "best_for": "Soups plus extra jobs",
+          "advantage": "Whisk, frother, beaker and chopper included",
+          "tradeoff": "More pieces to store",
+          "summary": "An 800-watt, 12-speed stick blender plus a whisk, frother, 20 oz beaker and 16 oz chopper.",
+          "choose": [
+            "You make soups and sauces",
+            "You want one tool for several jobs"
+          ],
+          "skip": [
+            "You have very little drawer space"
+          ],
+          "pick": "B08HSNGR8P"
+        },
+        {
+          "name": "Basic immersion blender",
+          "best_for": "Soups and smoothies",
+          "advantage": "Simple and compact",
+          "tradeoff": "Fewer attachments",
+          "summary": "Purees soup right in the pot, with a detachable shaft for the dishwasher plus whisk and frother attachments.",
+          "choose": [
+            "You want the simplest soup tool"
+          ],
+          "skip": [
+            "You also need a chopper attachment"
+          ],
+          "pick": "B075X1KPLZ"
+        },
+        {
+          "name": "Hand mixer",
+          "best_for": "Occasional baking",
+          "advantage": "Handles dough and whipped cream",
+          "tradeoff": "Not for heavy bread dough",
+          "summary": "Five speeds, a cord that locks to either side, and dishwasher-safe beaters that release with one button.",
+          "choose": [
+            "You bake cookies and cakes",
+            "You don't have room for a stand mixer"
+          ],
+          "skip": [
+            "You knead bread dough often"
+          ],
+          "pick": "B009VUHLHA"
+        },
+        {
+          "name": "Mini food processor",
+          "best_for": "Garlic, herbs, nuts",
+          "advantage": "Chops in a few pulses",
+          "tradeoff": "3-cup bowl limits batch size",
+          "summary": "A 3-cup processor with a reversible blade for chopping or grinding, and dishwasher-safe bowl and lid.",
+          "choose": [
+            "You chop onions and garlic often",
+            "You make pesto or dressings"
+          ],
+          "skip": [
+            "You cook in large batches"
+          ],
+          "pick": "B0000645YM"
+        }
+      ],
+      "situations": [
+        [
+          "Best blender for soup in a small kitchen",
+          "An immersion blender purees soup in the pot, so there's no hot liquid to ladle into a jar and no second container to wash."
+        ],
+        [
+          "Hand mixer vs stand mixer for occasional baking",
+          "For cookies, cakes and whipped cream a few times a month, a hand mixer does the job and fits in a drawer."
+        ],
+        [
+          "Mini food processor for garlic and herbs",
+          "A 3-cup bowl is the right size for a few cloves, a bunch of herbs or a cup of nuts, and it's quicker to wash than a full processor."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "countertop-cooking": {
       "category": "appliances",
@@ -561,13 +1578,117 @@
         [
           "Is a 2-quart slow cooker big enough?",
           "For one or two servings, dips and sides, yes."
+        ],
+        [
+          "Can I put an air fryer under kitchen cabinets?",
+          "Follow the manual's clearance guidance; most need several inches of open space around the vents. Pull it forward while it runs if space is tight."
+        ],
+        [
+          "Which small appliance should I buy first?",
+          "The one that replaces something you do most: an air fryer if you use the oven for small batches, a slow cooker if you like hands-off dinners."
+        ],
+        [
+          "Do small appliances use less electricity than an oven?",
+          "For small portions they generally heat a smaller space, so they're often more efficient. Exact use varies by model."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Bright white kitchen with clear countertops",
         "credit": "Unsplash",
         "source_id": "photo-1646592491605-db9d032514b9"
-      }
+      },
+      "noun": "Small Kitchen Appliance",
+      "hashtags": "#smallappliances #airfryer #smallkitchen #kitchenessentials",
+      "board": "Small Kitchen Gadgets We Love",
+      "quick_answer": "Choose appliances you'll use every week and size them to your household: a 6-quart air fryer for family batches in a compact footprint, a 2-quart slow cooker for one or two people, and a 4-inch waffle maker for quick breakfasts. Check counter depth and outlet location first.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Counter depth and width",
+          "The spot where the appliance will live, including space at the back for vents."
+        ],
+        [
+          "Clearance above",
+          "Air fryers need open space above and around the vents; check the manual."
+        ],
+        [
+          "Outlet location",
+          "Distance to the nearest outlet, without extension cords."
+        ],
+        [
+          "Storage spot",
+          "Where it goes when not in use, if it won't stay out."
+        ]
+      ],
+      "measure_note": "A small kitchen can hold only a few appliances. Keep out what you use weekly; store the rest.",
+      "types_heading": "Which appliance earns its space?",
+      "types": [
+        {
+          "name": "Air fryer",
+          "best_for": "Crisping and roasting for a family",
+          "advantage": "Fast results without heating the oven",
+          "tradeoff": "Takes counter space",
+          "summary": "A 6-quart square basket fits a family-size batch while keeping the footprint compact, with a 90°F to 450°F range.",
+          "choose": [
+            "You cook for a family",
+            "You want crispy food without deep frying",
+            "You'd rather not heat the full oven"
+          ],
+          "skip": [
+            "You cook for one and rarely crisp anything"
+          ],
+          "pick": "B0C33CHG99"
+        },
+        {
+          "name": "Small slow cooker",
+          "best_for": "One or two people, dips and sides",
+          "advantage": "Right-sized for small batches",
+          "tradeoff": "Small capacity",
+          "summary": "Sized for dinner for two or a batch of dip, with a dishwasher-safe crock and a Warm setting.",
+          "choose": [
+            "You cook for one or two",
+            "You host and want to keep dips warm"
+          ],
+          "skip": [
+            "You batch-cook for a family"
+          ],
+          "pick": "B004P2LEE0"
+        },
+        {
+          "name": "Mini waffle maker",
+          "best_for": "Quick breakfasts",
+          "advantage": "Heats fast and stores in a narrow gap",
+          "tradeoff": "One small waffle at a time",
+          "summary": "Makes one 4-inch waffle at a time and also crisps hash browns and chaffles.",
+          "choose": [
+            "You want quick weekday breakfasts",
+            "You have little storage"
+          ],
+          "skip": [
+            "You feed a crowd at breakfast"
+          ],
+          "pick": "B010TCP3SC"
+        }
+      ],
+      "situations": [
+        [
+          "Air fryer for a small apartment",
+          "Look at footprint, not just capacity: a square basket fits more food in less counter space than a round one of the same size."
+        ],
+        [
+          "Slow cooker for one or two people",
+          "A 2-quart cooker is right-sized; running a 6-quart cooker half empty can overcook small portions."
+        ],
+        [
+          "Small appliances for a dorm or studio",
+          "Check your building's or school's appliance rules first, then pick compact, multi-use appliances that store in a cabinet."
+        ]
+      ],
+      "reviewed": "2026-10-18"
     },
     "insulated-drinkware": {
       "category": "drinkware",
@@ -602,13 +1723,409 @@
         [
           "Do 40 oz tumblers fit in cup holders?",
           "Several are designed with a narrow base; check the base diameter in the listing."
+        ],
+        [
+          "Can I put hot drinks in a straw tumbler?",
+          "It's not recommended: hot liquid through a straw can burn. Use a coffee tumbler with a sip lid for hot drinks."
+        ],
+        [
+          "How do I clean an insulated tumbler?",
+          "Wash the body and lid after use, take the lid gasket out regularly, and check the listing for which parts are dishwasher safe."
+        ],
+        [
+          "Why does my tumbler sweat?",
+          "It shouldn't if the vacuum seal is intact. Condensation on the outside of an insulated tumbler usually means the seal is damaged."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
         ]
       ],
       "hero": {
         "alt": "Black insulated water bottle beside a drinking glass",
         "credit": "Unsplash",
         "source_id": "photo-1624469786827-13be4e09a992"
-      }
+      },
+      "noun": "Insulated Tumbler or Bottle",
+      "hashtags": "#waterbottle #tumbler #hydration #stanleycup",
+      "board": "Drinkware & Tumblers We Love",
+      "quick_answer": "Choose by how you drink: a big tumbler with a handle and straw for all-day water at a desk or in the car, a large flip-straw bottle for a full day in one fill, a locking-lid bottle for a work bag, or a slide-lid tumbler for hot coffee on the commute.",
+      "measure_heading": "Before you buy, check these",
+      "measure": [
+        [
+          "Cup holder",
+          "Base diameter matters for car cup holders."
+        ],
+        [
+          "Bag pocket",
+          "Bottle height and width if it rides in a backpack pocket."
+        ],
+        [
+          "How much you drink",
+          "40 oz means fewer refills; 12 to 24 oz is easier to carry."
+        ],
+        [
+          "Hot or cold",
+          "Coffee needs a lid that seals and sips comfortably hot."
+        ]
+      ],
+      "measure_note": "Straw lids are easy to sip but are usually leak-resistant, not leak-proof. If it rides in a bag, choose a locking or slide-seal lid.",
+      "types_heading": "Which bottle or tumbler fits your day?",
+      "types": [
+        {
+          "name": "40 oz tumbler with handle",
+          "best_for": "All-day water at a desk or in the car",
+          "advantage": "Big capacity; narrow base fits cup holders",
+          "tradeoff": "Straw lid isn't leak-proof",
+          "summary": "Holds 40 ounces with a handle and three-position lid, and the narrow base still drops into a car cup holder.",
+          "choose": [
+            "You want fewer refills",
+            "It mostly sits upright"
+          ],
+          "skip": [
+            "It will ride sideways in a bag"
+          ],
+          "pick": "B0CJZW65R3"
+        },
+        {
+          "name": "40 oz flip-straw bottle",
+          "best_for": "A full day in one fill",
+          "advantage": "Triple-wall insulation; leak-resistant flip straw",
+          "tradeoff": "Large to carry",
+          "summary": "Triple-wall insulation and a flip-straw lid, with a non-slip base that fits a cup holder.",
+          "choose": [
+            "You drink a lot of water",
+            "You want a straw and a closing lid"
+          ],
+          "skip": [
+            "You want something small and light"
+          ],
+          "pick": "B0CQVWT2NH"
+        },
+        {
+          "name": "Locking-lid bottle",
+          "best_for": "Bags and commutes",
+          "advantage": "Locking push-button lid keeps the spout clean",
+          "tradeoff": "Smaller capacity",
+          "summary": "Sip upright through the built-in straw or tip it back, with a locking lid and double-wall insulation.",
+          "choose": [
+            "It goes in a work bag or backpack",
+            "You like both straw and spout drinking"
+          ],
+          "skip": [
+            "You want 40 ounces at a time"
+          ],
+          "pick": "B0BZYCJK89"
+        },
+        {
+          "name": "Slide-lid coffee tumbler",
+          "best_for": "Hot coffee on the go",
+          "advantage": "Seals completely; fits one hand",
+          "tradeoff": "12 oz size",
+          "summary": "A slide-top lid seals for bags and cars, with double-wall insulation in a 12-ounce size.",
+          "choose": [
+            "You commute with coffee",
+            "You want a lid that seals"
+          ],
+          "skip": [
+            "You want a large water bottle"
+          ],
+          "pick": "B0DF472VMZ"
+        }
+      ],
+      "situations": [
+        [
+          "Water bottle that fits a car cup holder",
+          "Look for a tapered or narrow base; check the base diameter in the listing against your cup holder."
+        ],
+        [
+          "Leak-proof water bottle for a work bag",
+          "Pick a locking or sealed lid rather than an open straw lid, and keep it upright for the first few trips until you trust it."
+        ],
+        [
+          "Tumbler for hot coffee on the commute",
+          "A small tumbler with a slide-seal lid keeps coffee hot and won't splash in a bag or car."
+        ]
+      ],
+      "reviewed": "2026-10-18"
+    }
+  },
+  "gift_guides": {
+    "gifts-for-home-cooks": {
+      "title": "Gifts for Practical Home Cooks",
+      "keyword": "gifts for home cooks",
+      "description": "Useful kitchen gifts for people who cook every day: a meat thermometer, a baking scale, an air fryer and more tools they'll reach for all year.",
+      "intro": "The best gift for someone who cooks a lot is a tool that removes a daily annoyance: guessing when meat is done, measuring flour by the cup, or chopping onions by hand. These picks are practical upgrades, the kind of thing a home cook uses every week rather than stores in a closet.",
+      "quick_answer": "For most home cooks, an instant-read thermometer or a digital kitchen scale is the safest bet: useful, compact and easy to wrap. For a bigger gift, an air fryer or an immersion blender kit adds a new way to cook.",
+      "criteria": [
+        "Used weekly, not once a year",
+        "Solves a common kitchen frustration",
+        "Easy to store in a small kitchen",
+        "Easy to clean"
+      ],
+      "guide": [
+        [
+          "Think about what they cook most",
+          "Roasts and grilling point to a thermometer, baking to a scale, soups to an immersion blender, weeknight dinners to a chopper or air fryer."
+        ],
+        [
+          "Check what they already own",
+          "Duplicates are the most common gift miss. A quick look in their kitchen, or a question to a family member, avoids it."
+        ],
+        [
+          "Mind the counter space",
+          "In a small kitchen, a drawer-sized tool is often a better gift than another countertop appliance."
+        ],
+        [
+          "Include a gift receipt",
+          "Kitchens are personal. A gift receipt makes it easy to swap a color or size."
+        ]
+      ],
+      "faq": [
+        [
+          "What do you buy someone who loves to cook and has everything?",
+          "Upgrades of everyday tools tend to land well: a reliable thermometer, a precise scale, heat-resistant silicone mitts. They replace something worn rather than adding clutter."
+        ],
+        [
+          "Are kitchen appliances good gifts?",
+          "Yes, if you know they have room. Ask about counter space before giving a larger appliance like an air fryer."
+        ],
+        [
+          "What is a good kitchen gift for a beginner cook?",
+          "A meat thermometer and a kitchen scale take the guesswork out of following recipes, which builds confidence fast."
+        ],
+        [
+          "How were these gift picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "Two people exchanging a wrapped gift in a home kitchen",
+        "credit": "Unsplash",
+        "source_id": "photo-1758522490043-f5f8f5ffcf67"
+      },
+      "hashtags": "#giftsforcooks #kitchengifts #holidaygiftguide #giftideas",
+      "picks": [
+        {
+          "asin": "B00S93EQUK",
+          "award": "Best for roasts and grilling",
+          "why": "Ends the 'is it done yet?' guesswork for the holiday turkey, steaks and chicken, and it's compact enough to tuck into a stocking."
+        },
+        {
+          "asin": "B0113UZJE2",
+          "award": "Best for bakers",
+          "why": "Weighing flour instead of scooping it makes bread and cookies come out the same every time, which any serious baker appreciates."
+        },
+        {
+          "asin": "B0C33CHG99",
+          "award": "Best bigger gift",
+          "why": "A family-size air fryer that keeps a compact footprint, for the cook who would use it most nights of the week."
+        },
+        {
+          "asin": "B08HSNGR8P",
+          "award": "Best for soup season",
+          "why": "Purees soup right in the pot and comes with a whisk, frother and chopper, so one gift covers several jobs."
+        },
+        {
+          "asin": "B0000645YM",
+          "award": "Best for weeknight cooks",
+          "why": "Chops onions, garlic and herbs in a few pulses, taking the slowest knife work out of everyday dinners."
+        },
+        {
+          "asin": "B08J8GZXKZ",
+          "award": "Best practical upgrade",
+          "why": "Silicone mitts rated to 500°F replace thin or scorched cloth mitts and shrug off steam and spills."
+        },
+        {
+          "asin": "B00004OCKR",
+          "award": "Best for salad lovers",
+          "why": "A one-handed salad spinner that dries greens fast and doubles as a serving bowl."
+        }
+      ]
+    },
+    "first-apartment-kitchen-gifts": {
+      "title": "First-Apartment Kitchen Gifts",
+      "keyword": "first apartment kitchen gifts",
+      "description": "Practical kitchen gifts for a first apartment: a compact dish rack, a reliable can opener, a small slow cooker, storage containers and other basics.",
+      "intro": "A first apartment kitchen usually starts with almost nothing and very little space. The most useful gifts are the unglamorous basics that get used every day and are sized for a small counter: somewhere to dry dishes, a can opener that works, containers for leftovers and a way to cook a real meal for one or two.",
+      "quick_answer": "Start with the basics a first kitchen is almost always missing: a compact dish rack, a good can opener and a set of food storage containers. A small slow cooker or an electric kettle makes a great bigger gift.",
+      "criteria": [
+        "Fills a gap most first kitchens have",
+        "Sized for a small counter and cabinets",
+        "Useful for one or two people",
+        "No installation or drilling (rental-friendly)"
+      ],
+      "guide": [
+        [
+          "Cover the everyday basics first",
+          "Drying dishes, opening cans, storing leftovers. These come up in the first week, and they're easy to overlook when moving."
+        ],
+        [
+          "Size for one or two people",
+          "Big-family appliances waste space in a studio. A 2-quart slow cooker suits a first apartment better than a 6-quart one."
+        ],
+        [
+          "Keep it rental-friendly",
+          "Choose items that need no drilling or permanent installation, so nothing risks the security deposit."
+        ],
+        [
+          "Bundle small items",
+          "A can opener, a shelf liner and a sponge caddy together make a thoughtful 'kitchen starter kit'."
+        ]
+      ],
+      "faq": [
+        [
+          "What does a first apartment kitchen need?",
+          "A dish rack, can opener, food storage containers, basic cookware and utensils, and a simple way to cook a meal, like a slow cooker or kettle."
+        ],
+        [
+          "What is a good housewarming gift for a small apartment?",
+          "Something useful that doesn't take much space: a compact dish rack, an electric kettle or a drawer organizer."
+        ],
+        [
+          "Are slow cookers good for one person?",
+          "A small 2-quart slow cooker is a good fit; it cooks a few servings without leaving the pot half empty."
+        ],
+        [
+          "How were these gift picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "Small bright apartment kitchen with wooden counters and pink tiles",
+        "credit": "Unsplash",
+        "source_id": "photo-1721522000055-795cf74e9856"
+      },
+      "hashtags": "#firstapartment #housewarminggift #apartmentkitchen #kitchengifts",
+      "picks": [
+        {
+          "asin": "B0B4K1XH8Y",
+          "award": "Best everyday basic",
+          "why": "A compact dish rack with a drainboard, sized to fit beside a small sink. Most first kitchens don't have one on day one."
+        },
+        {
+          "asin": "B07YP2VH4B",
+          "award": "Best stocking-size basic",
+          "why": "A sharp, easy-turning can opener with a built-in bottle opener: small, easy to wrap, and used constantly."
+        },
+        {
+          "asin": "B004P2LEE0",
+          "award": "Best for cooking for one or two",
+          "why": "A 2-quart slow cooker sized for dinner for two, with a dishwasher-safe crock for easy cleanup."
+        },
+        {
+          "asin": "B08PP48979",
+          "award": "Best for tea and coffee drinkers",
+          "why": "A glass electric kettle that boils water fast and shuts itself off, for tea, oatmeal and instant meals."
+        },
+        {
+          "asin": "B08ZK5WDWN",
+          "award": "Best for leftovers and pantry",
+          "why": "Twenty-four airtight containers in four sizes, with labels, to organize a first pantry from the start."
+        },
+        {
+          "asin": "B07SRV3SN8",
+          "award": "Best for the utensil drawer",
+          "why": "An expandable bamboo tray that adjusts to the drawer instead of the other way around."
+        },
+        {
+          "asin": "B0C3QZ7SNF",
+          "award": "Best small upgrade",
+          "why": "A stainless steel sink caddy that keeps the sponge and soap off the counter in under 10 inches of space."
+        }
+      ]
+    },
+    "stocking-stuffers-for-cooks": {
+      "title": "Stocking Stuffers for People Who Love to Cook",
+      "keyword": "stocking stuffers for cooks",
+      "description": "Compact kitchen stocking stuffers for home cooks: an instant-read thermometer, a milk frother, a can opener, a chicken shredder and other small, useful tools.",
+      "intro": "The best stocking stuffers for cooks are small tools that get used every week: something that speeds up a chore, ends a guessing game, or makes a morning coffee better. Every pick here is compact enough to tuck into a stocking or a small gift bag.",
+      "quick_answer": "An instant-read thermometer and a handheld milk frother are the easiest wins: compact, useful daily, and loved by almost every cook. A good can opener is the practical pick that never goes unused.",
+      "criteria": [
+        "Compact enough for a stocking or gift bag",
+        "Used often, not once",
+        "Useful to almost any home cook",
+        "Easy to clean and store"
+      ],
+      "guide": [
+        [
+          "Small doesn't mean gimmicky",
+          "Skip novelty gadgets and choose small tools with a clear job: taking temperatures, frothing milk, opening cans."
+        ],
+        [
+          "Match the person's routine",
+          "Coffee drinkers get the frother or tumbler, grillers the thermometer, meal-preppers the chicken shredder."
+        ],
+        [
+          "Pair small items",
+          "A thermometer and silicone mitts, or a frother and a coffee tumbler, make a themed set."
+        ],
+        [
+          "Check the size before wrapping",
+          "Product sizes vary; confirm dimensions on the listing if it needs to fit a particular stocking."
+        ]
+      ],
+      "faq": [
+        [
+          "What are good stocking stuffers for someone who likes to cook?",
+          "Small, useful tools: an instant-read thermometer, a milk frother, a can opener, silicone mitts or a magnetic spice rack."
+        ],
+        [
+          "What kitchen gadgets do cooks actually use?",
+          "Tools that save time on a frequent task, like checking doneness, frothing milk or shredding chicken, get used far more than single-purpose novelties."
+        ],
+        [
+          "Are kitchen gadgets good stocking stuffers for men?",
+          "Yes, especially grilling and coffee tools, like an instant-read thermometer or a handheld frother."
+        ],
+        [
+          "How were these gift picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "A Christmas stocking hanging by a decorated tree with wrapped presents",
+        "credit": "Unsplash",
+        "source_id": "photo-1639972584779-8c95dc6757bb"
+      },
+      "hashtags": "#stockingstuffers #giftsforcooks #christmasgifts #kitchengadgets",
+      "picks": [
+        {
+          "asin": "B00S93EQUK",
+          "award": "Best for grillers",
+          "why": "Reads temperature in a couple of seconds with a backlit display, so it's handy at the grill or the oven."
+        },
+        {
+          "asin": "B082314NFL",
+          "award": "Best for coffee lovers",
+          "why": "Turns plain coffee into a latte in about twenty seconds, and also mixes matcha and protein powder."
+        },
+        {
+          "asin": "B07YP2VH4B",
+          "award": "Best practical pick",
+          "why": "A sharp cutting wheel and an oversized knob replace a worn-out opener that slips and re-clamps."
+        },
+        {
+          "asin": "B0CGRGRXPY",
+          "award": "Best for meal preppers",
+          "why": "A few twists shred cooked chicken evenly, replacing the slow two-fork routine."
+        },
+        {
+          "asin": "B0DF472VMZ",
+          "award": "Best for the commute",
+          "why": "A 12-ounce coffee tumbler with a slide-top lid that seals for the bag or car."
+        },
+        {
+          "asin": "B0C3H9MJQV",
+          "award": "Best for small kitchens",
+          "why": "Magnetic spice shelves that stick to the fridge with no drilling, freeing up cabinet space."
+        },
+        {
+          "asin": "B08J8GZXKZ",
+          "award": "Best for bakers",
+          "why": "Silicone oven mitts rated to 500°F with a ribbed, non-slip grip."
+        }
+      ]
     }
   },
   "products": [
@@ -628,7 +2145,12 @@
         ]
       },
       "subcategory": "drawer-organizers",
-      "award": "Best for utensils"
+      "award": "Best for utensils",
+      "pin": {
+        "title": "Expandable Bamboo Silverware Drawer Organizer – Fits Drawers 13\" to 20\"",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. An expandable bamboo tray that adjusts to your drawer, with seven compartments for forks, spoons and knives. #drawerorganizer #kitchenorganization #smallkitchen",
+        "board": "Kitchen Organization Must-Haves"
+      }
     },
     {
       "asin": "B08KXKVT4K",
@@ -646,7 +2168,12 @@
         ]
       },
       "subcategory": "drawer-organizers",
-      "award": "Best for junk drawers"
+      "award": "Best for junk drawers",
+      "pin": {
+        "title": "Clear Drawer Organizer Set – 25 Bins in 4 Sizes for Any Kitchen Drawer",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Twenty-five clear bins in four sizes snap into any drawer layout, so everything stays visible. #drawerorganizer #junkdrawer #kitchenorganization",
+        "board": "Kitchen Organization Must-Haves"
+      }
     },
     {
       "asin": "B0C3H9MJQV",
@@ -664,7 +2191,12 @@
         ]
       },
       "subcategory": "spice-racks",
-      "award": "Best no-drill rack"
+      "award": "Best no-drill rack",
+      "pin": {
+        "title": "Magnetic Fridge Spice Rack – No-Drill Kitchen Storage, 4-Pack",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Steel spice shelves that stick to the fridge, freeing cabinet space with no drilling or hardware. #spicerack #smallkitchen #kitchenorganization",
+        "board": "Small Kitchen Gadgets We Love"
+      }
     },
     {
       "asin": "B0C3QZ7SNF",

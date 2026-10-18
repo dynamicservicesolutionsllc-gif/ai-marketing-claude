@@ -28,9 +28,10 @@ DISCLOSURE = "As an Amazon Associate, we earn from qualifying purchases."
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
-PRIVACY_UPDATED = "2026-10-17"  # bump when the privacy text changes
+PRIVACY_UPDATED = "2026-10-18"  # bump when the privacy text changes
 GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
 e = html.escape
+PRICE_CLAIM = re.compile(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b|\bunder \$", re.I)
 TESTING_CLAIM = re.compile(r"\b(tested|testing|we tried|i tried|i use|we use|hands-on)\b", re.I)
 
 
@@ -120,7 +121,7 @@ def load():
         copy = json.dumps(s, ensure_ascii=False)
         if TESTING_CLAIM.search(copy):
             errors.append(f"{where}: copy implies hands-on testing/personal use")
-        if re.search(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b", copy, re.I):
+        if PRICE_CLAIM.search(copy):
             errors.append(f"{where}: no prices, star ratings, or price claims in guide copy")
         hero = s.get("hero") or {}
         if not str(hero.get("alt", "")).strip() or not str(hero.get("credit", "")).strip():
@@ -141,6 +142,41 @@ def load():
                     errors.append(f"{where}: type '{t.get('name', '?')}' missing '{field}'")
             if t.get("pick") and t["pick"] not in own:
                 errors.append(f"{where}: type '{t.get('name', '?')}' pick {t['pick']} is not a product in this guide")
+    by_asin = {p.get("asin") for p in data["products"]}
+    for key, g in data.get("gift_guides", {}).items():
+        where = f"gift_guides['{key}']"
+        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", key):
+            errors.append(f"{where}: key must be a lowercase-hyphenated URL slug")
+        if key in data.get("subcategories", {}):
+            errors.append(f"{where}: key clashes with a subcategory")
+        for field in ("title", "keyword", "description", "intro"):
+            if not str(g.get(field, "")).strip():
+                errors.append(f"{where}: missing '{field}'")
+        if len(g.get("title", "")) > 60:
+            errors.append(f"{where}: title over 60 characters")
+        if len(g.get("description", "")) > 160:
+            errors.append(f"{where}: description over 160 characters")
+        hero = g.get("hero") or {}
+        if not hero.get("alt") or not hero.get("credit"):
+            errors.append(f"{where}: needs hero {{alt, credit}}")
+        if not (ROOT / "assets" / "guides" / f"{key}.jpg").exists():
+            errors.append(f"{where}: missing header photo assets/guides/{key}.jpg")
+        picks = g.get("picks") or []
+        if len(picks) < 3:
+            errors.append(f"{where}: needs at least 3 picks")
+        for i, pk in enumerate(picks):
+            if pk.get("asin") not in by_asin:
+                errors.append(f"{where}.picks[{i}]: ASIN {pk.get('asin')} is not in products")
+            if not str(pk.get("award", "")).strip() or not str(pk.get("why", "")).strip():
+                errors.append(f"{where}.picks[{i}]: needs 'award' and 'why'")
+        copy = json.dumps(g, ensure_ascii=False)
+        if TESTING_CLAIM.search(copy):
+            errors.append(f"{where}: copy implies hands-on testing/personal use")
+        if PRICE_CLAIM.search(copy):
+            errors.append(f"{where}: no prices, star ratings, or price claims in gift guide copy")
+    for ch, t in (data["site"].get("channel_tags") or {}).items():
+        if t and not re.fullmatch(r"[a-z0-9-]+-2[0-9]", t):
+            errors.append(f"site.channel_tags['{ch}']: '{t}' doesn't look like an Associates tracking ID")
     return data, errors
 
 
@@ -174,7 +210,7 @@ def buy(p, tag):
 
 
 def card(p, tag, base="", eager=False):
-    return f"""      <article class="card" id="{e(p['asin'])}">
+    return f"""      <article class="card" id="{e(p['asin'])}" data-pl="card">
         <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
           {picture(p, base, eager)}
         </a>
@@ -275,6 +311,7 @@ CSS = """
   .roundup { border-top:1px solid var(--bd); }
   .roundup h2 { font-size:clamp(22px,3vw,28px); margin:0; }
   .roundup h2 a { color:inherit; text-decoration:none; }
+  .roundup .sub { color:var(--mut); font-size:15px; }
   .award { color:var(--acc); font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:.04em; }
   .more { color:var(--acc); font-size:14px; }
   .prose.wide { max-width:760px; padding:24px 0; }
@@ -290,6 +327,22 @@ CSS = """
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 """
+
+
+def track_js(site):
+    """Records every Amazon link click: GA4 'amazon_click' event plus a beacon to /click.php (page, ASIN,
+    channel, placement; no IP or cookies). If site.channel_tags has a tracking ID for the visitor's channel
+    (from utm_source or the referrer), the link's tag is swapped to it at click time."""
+    tags = {k: v for k, v in (site.get("channel_tags") or {}).items() if v}
+    js = """(function(){var T=%s,ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
+try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
+if(!ch){var r=document.referrer;ch=/pinterest\\./.test(r)?'pinterest':/(facebook|instagram)\\.|fb\\.me/.test(r)?'facebook':/google\\./.test(r)?'google':/bing\\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/dp/"]');if(!a)return;
+var m=a.href.match(/\\/dp\\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
+if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
+if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
+try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();""" % json.dumps(tags)
+    return "<script>" + js + "</script>\n"
 
 
 def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="", noindex=False):
@@ -317,7 +370,7 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="",
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_ID}');</script>
-{extra}<style>{CSS}</style>
+{track_js(site)}{extra}<style>{CSS}</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -328,12 +381,12 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="",
 
 def signup():
     return """    <section class="signup" id="updates">
-      <h2>Get the next 5 kitchen finds before anyone else</h2>
-      <p>One short email whenever we add new picks. No spam, unsubscribe anytime.</p>
+      <h2>Free printable: the Small-Kitchen Measuring Checklist</h2>
+      <p>Measure once, buy the right size. Get the one-page checklist of every measurement our guides are built around, plus one short email when we add new picks. No spam, unsubscribe anytime.</p>
       <form name="updates" method="POST" action="/subscribe.php">
         <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address">
-        <button class="btn" type="submit">Get Updates</button>
+        <button class="btn" type="submit">Send me the checklist</button>
       </form>
       <small>We only use your email to send new kitchen picks, and never sell or share it. See our <a href="/privacy/">privacy policy</a>.</small>
     </section>
@@ -372,7 +425,7 @@ def render_home(data, products):
         if items:
             cards = "\n".join(card(p, tag) for p in items)
             sections.append(f'    <section id="{e(key)}">\n      <h2>{e(label)}</h2>\n      <div class="grid">\n{cards}\n      </div>\n    </section>')
-    nav = '<a href="#guides">Buying Guides</a> ' + " ".join(
+    nav = ('<a href="#gifts">Gift Guides</a> ' if data.get("gift_guides") else "") + '<a href="#guides">Buying Guides</a> ' + " ".join(
         f'<a href="#{e(k)}">{e(v)}</a>' for k, v in data["categories"].items()
         if any(p["category"] == k and p["asin"] not in top_asins for p in products))
     top_cards = "\n".join(card(p, tag, eager=i < EAGER) for i, p in enumerate(top))
@@ -386,6 +439,19 @@ def render_home(data, products):
 {tiles}
       </div>
     </section>"""
+    gifts = ""
+    if data.get("gift_guides"):
+        gtiles = "\n".join(
+            f'        <a class="gcard" href="{gift_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False)}</span><strong>{e(g["title"])}</strong>'
+            f'<span>{e(g["description"])}</span><em>{len(g["picks"])} picks · See the gift guide →</em></a>'
+            for k, g in data["gift_guides"].items())
+        gifts = f"""    <section id="gifts">
+      <h2>Holiday Gift Guides</h2>
+      <div class="guides">
+{gtiles}
+      </div>
+    </section>
+"""
     title = f"Small Kitchen Organization & Gadget Picks | {site['name']}"
     return head(site, title, site["tagline"], "", f"{site['url']}/img/og.png",
                 f"{site['name']} — {site['tagline']}", OG_W, OG_H, site_ld(site, products) + "\n") + f"""  <header>
@@ -394,7 +460,7 @@ def render_home(data, products):
     <nav>{nav}</nav>
   </header>
   <main id="main">
-    <section id="top-picks">
+{gifts}    <section id="top-picks">
       <h2>This Week's Top Picks</h2>
       <div class="grid">
 {top_cards}
@@ -437,7 +503,7 @@ def render_pick(data, p, products):
   </div>
   <main id="main">
     <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
-    <article class="pick" id="{e(p['asin'])}">
+    <article class="pick" id="{e(p['asin'])}" data-pl="pick">
       <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
         {picture(p, base, eager=True)}
       </a>
@@ -469,7 +535,7 @@ def render_hero_images(data):
     from PIL import Image
     src_dir, out = ROOT / "assets" / "guides", OUT / "img" / "guides"
     out.mkdir(parents=True, exist_ok=True)
-    for key in data["subcategories"]:
+    for key in list(data["subcategories"]) + list(data.get("gift_guides", {})):
         src = src_dir / f"{key}.jpg"
         im = Image.open(src).convert("RGB")
         for suffix, width in (("", 1600), ("-800", 800)):
@@ -483,6 +549,16 @@ def guide_path(key):
     return f"guides/{key}/"
 
 
+def gift_path(key):
+    return f"gifts/{key}/"
+
+
+def gift_products(data, key):
+    """A gift guide's picks in listed order, each carrying the guide's own award and gift note."""
+    by_asin = {p["asin"]: p for p in data["products"]}
+    return [dict(by_asin[pk["asin"]], award=pk["award"], why=pk["why"]) for pk in data["gift_guides"][key]["picks"]]
+
+
 def guide_products(products, key):
     """A guide's picks, in products.json order (curated order, not newest-first)."""
     return [p for p in products if p["subcategory"] == key]
@@ -490,8 +566,11 @@ def guide_products(products, key):
 
 def render_guide(data, key, items):
     site, tag = data["site"], data["site"]["associate_tag"]
-    s = data["subcategories"][key]
-    cat_label = data["categories"][s["category"]]
+    gift = key in data.get("gift_guides", {})
+    s = data["gift_guides"][key] if gift else data["subcategories"][key]
+    cat_label = "Holiday Gift Guides" if gift else data["categories"][s["category"]]
+    cat_anchor = "gifts" if gift else s["category"]
+    path = gift_path(key) if gift else guide_path(key)
     base = "../../"
     updated = max([p["added"] for p in items] + ([s["reviewed"]] if s.get("reviewed") else []))
     year = updated[:4]
@@ -504,14 +583,16 @@ def render_guide(data, key, items):
     sections = []
     for i, p in enumerate(items):
         points = "".join(f"<li>{e(pt)}</li>" for pt in p["graphic"]["points"])
-        sections.append(f"""    <article class="pick roundup" id="{e(p['asin'])}">
+        lede = (f'<p class="lede">{e(p["why"])}</p>\n        <p class="sub">{e(p["blurb"])}</p>' if p.get("why")
+                else f'<p class="lede">{e(p["blurb"])}</p>')
+        sections.append(f"""    <article class="pick roundup" id="{e(p['asin'])}" data-pl="{'gift' if gift else 'roundup'}">
       <a class="img" href="{base}{page_path(p)}">
         {picture(p, base, eager=i < 1)}
       </a>
       <div class="info">
         <p class="award">{i + 1}. {e(p['award'])}</p>
         <h2><a href="{base}{page_path(p)}">{e(p['name'])}</a></h2>
-        <p class="lede">{e(p['blurb'])}</p>
+        {lede}
         <ul>{points}</ul>
         <div class="buy">
           {buy(p, tag)}
@@ -522,7 +603,7 @@ def render_guide(data, key, items):
     quick_answer = f'\n      <p class="callout"><strong>Quick answer:</strong> {e(s["quick_answer"])}</p>' if s.get("quick_answer") else ""
     measure = ""
     if s.get("measure"):
-        measure = ("    <section class=\"prose wide\">\n      <h2>Before you buy, measure these</h2>\n      <ol>"
+        measure = (f"    <section class=\"prose wide\">\n      <h2>{e(s.get('measure_heading', 'Before you buy, measure these'))}</h2>\n      <ol>"
                    + "".join(f"<li><strong>{e(h)}:</strong> {e(t)}</li>" for h, t in s["measure"])
                    + "</ol>\n" + (f"      <p>{e(s['measure_note'])}</p>\n" if s.get("measure_note") else "") + "    </section>\n")
     types = ""
@@ -554,6 +635,10 @@ def render_guide(data, key, items):
       <h2>Who should choose, or skip, each type</h2>
 {details}    </section>
 """
+    situations = ""
+    if s.get("situations"):
+        situations = ("    <section class=\"prose wide\">\n      <h2>Picks for specific situations</h2>\n"
+                      + "".join(f"      <h3>{e(h)}</h3>\n      <p>{e(t)}</p>\n" for h, t in s["situations"]) + "    </section>\n")
     criteria = "".join(f"<li>{e(c)}</li>" for c in s["criteria"])
     guide = "".join(f"<h3>{e(h)}</h3><p>{e(t)}</p>" for h, t in s["guide"])
     faq = s.get("faq", [])
@@ -561,16 +646,21 @@ def render_guide(data, key, items):
     if faq:
         faq_html = "    <section class=\"prose wide\">\n      <h2>Frequently asked questions</h2>\n" + "".join(
             f"      <h3>{e(q)}</h3>\n      <p>{e(a)}</p>\n" for q, a in faq) + "    </section>\n"
-    others = [(k, v) for k, v in data["subcategories"].items() if k != key and v["category"] == s["category"]]
+    if gift:
+        others = [(gift_path(k), v["title"]) for k, v in data["gift_guides"].items() if k != key]
+        rel_heading = "More holiday gift guides"
+    else:
+        others = [(guide_path(k), v["title"]) for k, v in data["subcategories"].items() if k != key and v["category"] == s["category"]]
+        rel_heading = "Related buying guides"
     related = ""
     if others:
-        related = "    <section>\n      <h2>Related buying guides</h2>\n      <ul class=\"links\">" + "".join(
-            f'<li><a href="{base}{guide_path(k)}">{e(v["title"])}</a></li>' for k, v in others) + "</ul>\n    </section>\n"
-    url = f"{site['url']}/{guide_path(key)}"
+        related = f"    <section>\n      <h2>{rel_heading}</h2>\n      <ul class=\"links\">" + "".join(
+            f'<li><a href="{base}{u}">{e(t)}</a></li>' for u, t in others) + "</ul>\n    </section>\n"
+    url = f"{site['url']}/{path}"
     graph = [
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
-            {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/#{s['category']}"},
+            {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/#{cat_anchor}"},
             {"@type": "ListItem", "position": 3, "name": s["title"], "item": url}]},
         {"@type": "Article", "headline": s["title"], "description": s["description"], "dateModified": updated,
          "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/guides/{key}.jpg"},
@@ -581,10 +671,10 @@ def render_guide(data, key, items):
         graph.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     title = f"{s['title']} ({year}) | {site['name']}"
-    return head(site, title, s["description"], guide_path(key), f"{site['url']}/img/guides/{key}.jpg",
+    return head(site, title, s["description"], path, f"{site['url']}/img/guides/{key}.jpg",
                 s["hero"]["alt"], 1600, 640, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
-    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(s['category'])}">{e(cat_label)}</a></span>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(cat_anchor)}">{e(cat_label)}</a></span>
   </div>
   <main id="main">
     <figure class="hero">{hero_picture(key, base, s['hero']['alt'], eager=True)}<figcaption>Photo: {e(s['hero']['credit'])}</figcaption></figure>
@@ -595,15 +685,15 @@ def render_guide(data, key, items):
       <p class="intro">{e(s['intro'])}</p>{quick_answer}
     </header>
     <section>
-      <h2>Quick picks</h2>
-      <table class="quick">
+      <h2>{"The gift list" if gift else "Quick picks"}</h2>
+      <table class="quick" data-pl="quick">
         <thead><tr><th>Best for</th><th>Pick</th><th><span class="hidden">Link</span></th></tr></thead>
         <tbody>
 {rows}
         </tbody>
       </table>
     </section>
-{measure}{types}    <section class="prose wide">
+{measure}{types}{situations}    <section class="prose wide">
       <h2>How we chose</h2>
       <p>Each pick was selected by comparing manufacturer specifications and recurring themes in owner feedback against these criteria:</p>
       <ul>{criteria}</ul>
@@ -611,7 +701,7 @@ def render_guide(data, key, items):
     </section>
 {chr(10).join(sections)}
     <section class="prose wide">
-      <h2>Buying guide: what to look for</h2>
+      <h2>{"How to choose the right gift" if gift else "Buying guide: what to look for"}</h2>
       {guide}
     </section>
 {faq_html}{related}{signup()}  </main>
@@ -631,6 +721,7 @@ def render_privacy(data):
     <p>This site itself sets no advertising cookies.</p>
     <h2>Analytics</h2>
     <p>We use Google Analytics to understand how visitors use this site, such as which pages are viewed, how visitors arrive (for example from Pinterest or a search engine), and what device and browser are used. Google Analytics sets cookies and collects information such as your approximate location, browser, and pages visited; we see only aggregate reports and never your name or contact details. This information is handled under <a href="https://policies.google.com/privacy" rel="nofollow noopener">Google's Privacy Policy</a> (see also <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener">how Google uses data from sites that use its services</a>). You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+    <p>When you click a link to Amazon, the site also records which page and product the click came from, where the visit originated (for example Pinterest or a search engine) and the time, so we can tell which pages are useful. This click log stores no IP address, cookies, name or contact details.</p>
     <h2>Email sign-up</h2>
     <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
     <h2>Hosting and server logs</h2>
@@ -668,7 +759,7 @@ Options -Indexes
 ErrorDocument 404 /404.html
 RewriteEngine On
 # Never serve the deploy checkout's git data or the build sources.
-RewriteRule (^|/)\\.git(/|$) - [R=404,L]
+RewriteRule (^|/)\\.(git|data)(/|$) - [R=404,L]
 # Force HTTPS and the bare domain.
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\\. [NC]
@@ -713,6 +804,30 @@ header('Location: /thanks/', true, 303);
 """
 
 
+# Amazon click logger (see track_js). Writes to .data/clicks.csv, which .htaccess blocks from the web.
+CLICK_PHP = r"""<?php
+// Generated by build.py — edit there. Logs Amazon link clicks: no IP address, cookies or personal data.
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(204); exit; }
+$p = substr((string)($_POST['p'] ?? ''), 0, 200);
+$a = (string)($_POST['a'] ?? '');
+$c = strtolower(substr((string)($_POST['c'] ?? ''), 0, 20));
+$l = substr((string)($_POST['l'] ?? ''), 0, 20);
+$k = substr((string)($_POST['k'] ?? ''), 0, 60);
+if (!preg_match('~^/[A-Za-z0-9/_.-]*$~', $p) || !preg_match('/^B0[0-9A-Z]{8}$/', $a)) { http_response_code(204); exit; }
+if (!preg_match('/^[a-z0-9_-]{1,20}$/', $c)) $c = 'other';
+if (!preg_match('/^[a-z-]{1,20}$/', $l)) $l = 'other';
+if (!preg_match('/^[A-Za-z0-9_-]{0,60}$/', $k)) $k = '';
+$dir = __DIR__ . '/.data';
+if (!is_dir($dir)) @mkdir($dir, 0750);
+$fh = @fopen($dir . '/clicks.csv', 'a');
+if ($fh) {
+  if (flock($fh, LOCK_EX)) { fputcsv($fh, [gmdate('c'), $p, $a, $c, $l, $k]); flock($fh, LOCK_UN); }
+  fclose($fh);
+}
+http_response_code(204);
+"""
+
+
 def main():
     data, errors = load()
     if errors:
@@ -748,14 +863,34 @@ def main():
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_guide(data, key, items), encoding="utf-8")
         guide_urls.append((f"{url}/{guide_path(key)}", max(p["added"] for p in items)))
+    shutil.rmtree(OUT / "gifts", ignore_errors=True)
+    gift_urls = []
+    for key in data.get("gift_guides", {}):
+        items = gift_products(data, key)
+        d = OUT / gift_path(key)
+        d.mkdir(parents=True)
+        (d / "index.html").write_text(render_guide(data, key, items), encoding="utf-8")
+        gift_urls.append((f"{url}/{gift_path(key)}", max(p["added"] for p in items)))
     (OUT / ".htaccess").write_text(HTACCESS, encoding="utf-8")
+    (OUT / "click.php").write_text(CLICK_PHP, encoding="utf-8")
+    (OUT / ".data").mkdir(exist_ok=True)
+    (OUT / ".data" / ".htaccess").write_text("Require all denied\n", encoding="utf-8")
+    lm = data["site"].get("lead_magnet")
+    if lm:
+        src = ROOT / "assets" / lm["file"]
+        dst = OUT / lm["file"]
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dst)
+    import pins  # Pinterest queue: several pins per page (see pins.py)
+    pin_list = pins.build(data, OUT, url, force="--force-graphics" in sys.argv)
+    (OUT / "pins.json").write_text(json.dumps(pin_list, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     (OUT / "subscribe.php").write_text(SUBSCRIBE_PHP, encoding="utf-8")
     (OUT / "privacy").mkdir(exist_ok=True)
     (OUT / "privacy" / "index.html").write_text(render_privacy(data), encoding="utf-8")
     (OUT / "thanks").mkdir(exist_ok=True)
     (OUT / "thanks" / "index.html").write_text(render_simple(
         data, "thanks/", "Thanks for signing up", "You're on the list",
-        "Thanks for signing up. We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link."),
+        "Thanks for signing up. Your free printable is ready: <a class=\"btn\" href=\"/printables/small-kitchen-measuring-checklist.pdf\">Download the Small-Kitchen Measuring Checklist (PDF)</a></p><p>We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link."),
         encoding="utf-8")
     (OUT / "404.html").write_text(render_simple(
         data, "404.html", "Page not found", "That page isn't here",
@@ -771,7 +906,7 @@ def main():
             for p in sorted(data["products"], key=lambda p: p["added"])]
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
-    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + guide_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
+    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + gift_urls + guide_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
