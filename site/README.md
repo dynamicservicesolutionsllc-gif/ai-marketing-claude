@@ -79,8 +79,9 @@ claims ("under $25") or testing claims — `build.py` rejects them. Header photo
 same page: 4 photo designs per buying/gift guide (photo-top, dark, colour + checklist, big-number) and, per product, the
 original pin plus a dark and a colour design (the colour one links to the product's section in its guide). Images go to
 `public/img/pins/<id>.jpg`; links carry `utm_source=pinterest&utm_campaign=<pin id>`. Queue order: each page's lead pin
-first (gift guides, then guides, then products), then the remaining variants. The evening Pinterest routine publishes the
-first 5 unposted ids per day (never two for the same page in one run). `--force-graphics` re-renders pin images.
+first (gift guides, then guides, then products), then the remaining variants. The Pinterest routine (twice daily) publishes the
+first unposted ids, ramping from 5/day to 12/day by Nov 9 (see routines/pinterest-pinning.md for the schedule and
+back-off rule; never the same page twice in a day). Guide pins go to keyword boards set per subcategory (`board`). `--force-graphics` re-renders pin images.
 
 ## Click tracking
 
