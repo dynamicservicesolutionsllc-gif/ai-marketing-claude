@@ -121,6 +121,11 @@ def load():
             errors.append(f"{where}: copy implies hands-on testing/personal use")
         if re.search(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b", copy, re.I):
             errors.append(f"{where}: no prices, star ratings, or price claims in guide copy")
+        hero = s.get("hero") or {}
+        if not str(hero.get("alt", "")).strip() or not str(hero.get("credit", "")).strip():
+            errors.append(f"{where}: needs hero {{alt, credit}} for its header photo")
+        if not (ROOT / "assets" / "guides" / f"{key}.jpg").exists():
+            errors.append(f"{where}: missing header photo assets/guides/{key}.jpg (licensed stock photo, no branded products)")
         if key not in used:
             errors.append(f"{where}: no products assigned — add products or remove the subcategory")
     return data, errors
@@ -224,6 +229,13 @@ CSS = """
   .signup small { display:block; margin-top:10px; color:var(--mut); }
   .signup small a { color:var(--acc); }
   .hidden { position:absolute; left:-9999px; }
+  .hero { margin:20px 0 0; border-radius:14px; overflow:hidden; position:relative; background:var(--bd); aspect-ratio:5/2; }
+  .hero img { width:100%; height:100%; object-fit:cover; display:block; }
+  .hero figcaption { position:absolute; right:8px; bottom:6px; font-size:11px; color:#fff; background:rgba(0,0,0,.45); padding:2px 6px; border-radius:4px; }
+  .gcard { padding:0 0 16px !important; overflow:hidden; }
+  .gcard > strong, .gcard > span:not(.thumb), .gcard > em { padding:0 16px; }
+  .gcard .thumb { display:block; aspect-ratio:5/2; background:var(--bd); margin-bottom:6px; }
+  .gcard .thumb img { width:100%; height:100%; object-fit:cover; display:block; }
   .guide { padding:32px 0 8px; text-align:left; max-width:760px; }
   .guide p { margin-left:0; margin-right:0; max-width:none; }
   .guide .updated { color:var(--mut); font-size:14px; margin-top:8px; }
@@ -340,7 +352,7 @@ def render_home(data, products):
         if any(p["category"] == k and p["asin"] not in top_asins for p in products))
     top_cards = "\n".join(card(p, tag, eager=i < EAGER) for i, p in enumerate(top))
     tiles = "\n".join(
-        f'        <a class="gcard" href="{guide_path(k)}"><strong>{e(s["title"])}</strong>'
+        f'        <a class="gcard" href="{guide_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
         f'<span>{e(s["description"])}</span><em>{len(guide_products(products, k))} picks · Read the guide →</em></a>'
         for k, s in data["subcategories"].items())
     guides = f"""    <section id="guides">
@@ -417,6 +429,31 @@ def render_pick(data, p, products):
 """ + foot(site)
 
 
+def hero_picture(key, base, alt, eager=False, wide=True):
+    """Guide header photo (licensed stock image, no branded products): WebP + JPEG fallback."""
+    load = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+    if wide:
+        return (f'<picture><source type="image/webp" srcset="{base}img/guides/{key}-800.webp 800w, {base}img/guides/{key}.webp 1600w" sizes="(max-width: 800px) 100vw, 1048px">'
+                f'<img src="{base}img/guides/{key}.jpg" alt="{e(alt)}" {load} width="1600" height="640"></picture>')
+    return (f'<picture><source type="image/webp" srcset="{base}img/guides/{key}-800.webp">'
+            f'<img src="{base}img/guides/{key}-800.jpg" alt="" {load} width="800" height="320"></picture>')
+
+
+def render_hero_images(data):
+    """Copy each guide's header photo from assets/guides/<key>.jpg into public/img/guides (JPEG + WebP, 1600 and 800 wide)."""
+    from PIL import Image
+    src_dir, out = ROOT / "assets" / "guides", OUT / "img" / "guides"
+    out.mkdir(parents=True, exist_ok=True)
+    for key in data["subcategories"]:
+        src = src_dir / f"{key}.jpg"
+        im = Image.open(src).convert("RGB")
+        for suffix, width in (("", 1600), ("-800", 800)):
+            size = (width, round(im.height * width / im.width))
+            r = im.resize(size, Image.LANCZOS) if im.width != width else im
+            r.save(out / f"{key}{suffix}.jpg", "JPEG", quality=80, optimize=True, progressive=True)
+            r.save(out / f"{key}{suffix}.webp", "WEBP", quality=78, method=6)
+
+
 def guide_path(key):
     return f"guides/{key}/"
 
@@ -476,7 +513,7 @@ def render_guide(data, key, items):
             {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/#{s['category']}"},
             {"@type": "ListItem", "position": 3, "name": s["title"], "item": url}]},
         {"@type": "Article", "headline": s["title"], "description": s["description"], "dateModified": updated,
-         "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/{items[0]['asin']}.png"},
+         "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/guides/{key}.jpg"},
         {"@type": "ItemList", "name": s["title"], "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": f"{site['url']}/{page_path(p)}"}
             for i, p in enumerate(items)]}]
@@ -484,12 +521,13 @@ def render_guide(data, key, items):
         graph.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
     title = f"{s['title']} ({year}) | {site['name']}"
-    return head(site, title, s["description"], guide_path(key), f"{site['url']}/img/{items[0]['asin']}.png",
-                s["title"], 1000, 1500, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
+    return head(site, title, s["description"], guide_path(key), f"{site['url']}/img/guides/{key}.jpg",
+                s["hero"]["alt"], 1600, 640, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
     <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(s['category'])}">{e(cat_label)}</a></span>
   </div>
   <main id="main">
+    <figure class="hero">{hero_picture(key, base, s['hero']['alt'], eager=True)}<figcaption>Photo: {e(s['hero']['credit'])}</figcaption></figure>
     <header class="guide">
       <h1>{e(s['title'])} ({year})</h1>
       <p class="updated">Updated {month} · {len(items)} picks</p>
@@ -624,6 +662,7 @@ def main():
     OUT.mkdir(exist_ok=True)
     import graphics  # needs Pillow; only required for a full build
     graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
+    render_hero_images(data)
     url, tag = data["site"]["url"], data["site"]["associate_tag"]
     products = sorted(data["products"], key=lambda p: p["added"], reverse=True)
     (OUT / "index.html").write_text(render_home(data, products), encoding="utf-8")
