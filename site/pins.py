@@ -222,7 +222,7 @@ def build(data, out, url, force=False):
         page = f"{url}/{gift_path(key)}"
         photo = assets / f"{key}.jpg"
         tags = gg.get("hashtags", "#giftideas #kitchengifts")
-        board = data["site"].get("gift_board", "Kitchen Gift Ideas for Home Cooks")
+        board = data["site"].get("gift_board", "Holiday Gift Ideas for Cooks")
         n = len(items)
         add(f"gift-{key}-a", "gift", key, page, None, f"{gg['title']}: {n} Useful Ideas ({year})",
             description(first_sentences(gg["intro"]), tags), board, 0,
@@ -275,6 +275,8 @@ def build(data, out, url, force=False):
         if pin:
             add(asin, "product", asin, page, f"{url}/img/{asin}.png", pin["title"], pin["description"], board, 0)
         award = title_case(p.get("award", "Our pick"))
+        # New designs go to the product's keyword board (e.g. "Pantry Organization Ideas"); the original pin keeps its board.
+        board = data["subcategories"][p["subcategory"]].get("board", board)
         add(f"{asin}-b", "product", asin, page, None, f"{award}: {p['name']}", description(p["blurb"], tags), board, 2,
             lambda g=g, a=accent, aw=award, lb=g["label"]: product_pin(g, a, "b", aw, lb))
         sub = data["subcategories"][p["subcategory"]]
