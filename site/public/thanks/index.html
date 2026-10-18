@@ -22,6 +22,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQ2TM4X7Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8KQ2TM4X7Z');</script>
+<script>(function(){var T={"pinterest": "kffpinterest-20", "facebook": "kfffacebook-20"},ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
+try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
+if(!ch){var r=document.referrer;ch=/pinterest\./.test(r)?'pinterest':/(facebook|instagram)\.|fb\.me/.test(r)?'facebook':/google\./.test(r)?'google':/bing\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/dp/"]');if(!a)return;
+var m=a.href.match(/\/dp\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
+if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
+if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
+try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <style>
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
@@ -107,6 +115,7 @@
   .roundup { border-top:1px solid var(--bd); }
   .roundup h2 { font-size:clamp(22px,3vw,28px); margin:0; }
   .roundup h2 a { color:inherit; text-decoration:none; }
+  .roundup .sub { color:var(--mut); font-size:15px; }
   .award { color:var(--acc); font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:.04em; }
   .more { color:var(--acc); font-size:14px; }
   .prose.wide { max-width:760px; padding:24px 0; }
@@ -130,7 +139,7 @@
   <div class="top"><a class="brand" href="/">Kitchen Finds &amp; Favorites</a></div>
   <main id="main" class="prose">
     <h1>You&#x27;re on the list</h1>
-    <p>Thanks for signing up. We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link.</p>
+    <p>Thanks for signing up. Your free printable is ready: <a class="btn" href="/printables/small-kitchen-measuring-checklist.pdf">Download the Small-Kitchen Measuring Checklist (PDF)</a></p><p>We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link.</p>
     <p><a class="btn" href="/#top-picks">See this week's top picks</a></p>
   </main>
   <footer>

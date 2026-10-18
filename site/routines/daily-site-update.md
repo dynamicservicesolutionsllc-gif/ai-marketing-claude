@@ -13,4 +13,6 @@ Steps:
    [Optional — only if Frank chooses fully hands-off publishing: replace this step with "Frank has authorized this routine to push site/ changes directly to main: `git push origin HEAD:main`; if refused, fall back to a PR."]
 7. Never modify anything outside site/, netlify.toml and .github/workflows/deploy-hostinger.yml. Never touch Amazon Associates tax or payment settings.
 
+8. Don't remove or rename products used by the holiday gift guides (`gift_guides[*].picks` in products.json) — build.py will reject a gift guide that points at a missing ASIN. `python3 site/build.py` also regenerates the Pinterest queue (public/pins.json and img/pins/); commit those files with the rest of site/public/.
+
 Finish with a short summary: products added (name + ASIN), anything removed, and the PR link. Only notify Frank if something needs his action.

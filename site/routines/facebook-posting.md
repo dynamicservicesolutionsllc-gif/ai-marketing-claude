@@ -12,9 +12,9 @@ This session is attached to the "amzon associate" Claude project. First read `cl
 Per run:
 1. In the linked computer's browser, open https://kitchenfindsfavorites.com/products.json. Pick ONE product whose ASIN is not in the Facebook Posted Log, oldest "added" first; prefer one already pinned on Pinterest (its eligibility is confirmed).
 2. Confirm Associates eligibility via a SiteStripe screenshot on its Amazon page (real category + commission rate). If excluded, skip it and pick the next one.
-3. Open the Page's real post composer ("What's on your mind?" — NOT the "Share a thought..." note bubble). Write: the disclosure sentence, 2–3 genuine sentences about the product, the product's page_url on its own line, then 2–3 hashtags. The only link in the post is page_url (https://kitchenfindsfavorites.com/...) — never an amazon.com or amzn.to link. Attach pin_image via an in-page <img crossOrigin> → canvas → Blob/File → file-input `change` (the technique in the playbook). Publish publicly.
+3. Open the Page's real post composer ("What's on your mind?" — NOT the "Share a thought..." note bubble). Write: the disclosure sentence, 2–3 genuine sentences about the product, the product's page_url followed by ?utm_source=facebook&utm_medium=social&utm_campaign=<ASIN> on its own line (so clicks are attributed to Facebook), then 2–3 hashtags. The only link in the post is that kitchenfindsfavorites.com link — never an amazon.com or amzn.to link. Attach pin_image via an in-page <img crossOrigin> → canvas → Blob/File → file-input `change` (the technique in the playbook). Publish publicly.
 4. Verify it published in https://www.facebook.com/professional_dashboard/content/content_library/ before logging. A "Speak With People Directly" promo dialog after posting is normal — dismiss with "Not now."
-5. Append a row to the Posted Log in `claude/facebook-page-setup.md` (date, product, ASIN, link = page_url) and a short Run notes entry.
+5. Append a row to the Posted Log in `claude/facebook-page-setup.md` (date, product, ASIN, link = the UTM-tagged page_url) and a short Run notes entry.
 
 If the computer/browser isn't reachable or posting fails repeatedly, do NOT force a bad post: log it under "Run notes" and stop. Do not touch Amazon Associates tax or payment settings. Do not delete any post.
 
