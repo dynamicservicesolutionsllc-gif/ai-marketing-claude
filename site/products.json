@@ -1,17 +1,452 @@
 {
   "site": {
     "name": "Kitchen Finds & Favorites",
-    "url": "https://kitchenfindsfavorites.netlify.app",
+    "url": "https://kitchenfindsfavorites.com",
     "tagline": "Hand-picked organization gear, gadgets, small appliances, and drinkware for small, busy kitchens — researched against real reviews, not hype.",
     "associate_tag": "kitchenfi0fde-20",
     "pinterest": "https://www.pinterest.com/kitchenfindsfavorites/",
-    "facebook": "https://www.facebook.com/61594030243560"
+    "facebook": "https://www.facebook.com/61594030243560",
+    "email": "help@kitchenfindsfavorites.com"
   },
   "categories": {
     "organization": "Kitchen Organization Must-Haves",
     "gadgets": "Small Kitchen Gadgets We Love",
     "appliances": "Small Kitchen Appliances Worth the Counter Space",
     "drinkware": "Drinkware & Tumblers We Love"
+  },
+  "subcategories": {
+    "drawer-organizers": {
+      "category": "organization",
+      "title": "Best Kitchen Drawer Organizers for Small Kitchens",
+      "keyword": "best kitchen drawer organizers",
+      "description": "Expandable silverware trays, clear bins and non-slip liners that turn a jumbled kitchen drawer into one you can open without digging.",
+      "intro": "A utensil drawer turns into a junk pile fast when nothing has a fixed spot. The fix is a tray or a set of bins sized to the drawer you actually have, plus a liner so it all stays put. These picks were chosen for fit, flexibility and how easy they are to clean.",
+      "criteria": [
+        "Adjustable or modular sizing so it fits real drawer dimensions",
+        "Easy-to-clean materials",
+        "Keeps contents visible and in place"
+      ],
+      "guide": [
+        [
+          "Measure first",
+          "Measure the inside width, depth and height of the drawer, not the drawer front. Leave a little clearance so it still closes smoothly."
+        ],
+        [
+          "Expandable vs. modular",
+          "Expandable trays suit a single utensil drawer. Modular bins work better for junk drawers with mixed odds and ends."
+        ],
+        [
+          "Add a liner",
+          "A non-adhesive liner under the organizer stops it from sliding every time the drawer opens."
+        ]
+      ],
+      "faq": [
+        [
+          "What is the best way to organize a kitchen drawer?",
+          "Empty it, group items by use, then fit a tray or bins to those groups. Keep daily tools in the front of the most accessible drawer."
+        ],
+        [
+          "Are bamboo or plastic drawer organizers better?",
+          "Bamboo looks warmer and is sturdy; clear plastic shows contents at a glance and wipes clean easily. Both work; pick based on the look you want and how often you wash it."
+        ]
+      ]
+    },
+    "under-sink-storage": {
+      "category": "organization",
+      "title": "Best Under-Sink Organizers and Sink Caddies",
+      "keyword": "best under sink organizer",
+      "description": "Pull-out under-sink shelves, waterproof cabinet mats and a compact sink caddy that tame the most awkward storage spot in the kitchen.",
+      "intro": "The cabinet under the sink is the hardest space in the kitchen to use: pipes in the middle, a disposal in the way, and leaks that can ruin the floor. These picks work around the plumbing, protect the cabinet base and clear clutter off the sink edge.",
+      "criteria": [
+        "Fits around drain pipes and disposals",
+        "Water and leak resistance",
+        "Small footprint"
+      ],
+      "guide": [
+        [
+          "Map the pipes",
+          "Measure the open space on each side of the drain and the height below the trap before ordering a shelf."
+        ],
+        [
+          "Protect the base",
+          "A raised-edge mat catches slow drips and spilled cleaners before they soak into particleboard."
+        ],
+        [
+          "Keep the sink edge clear",
+          "A single caddy for sponge, soap and brush is easier to wipe around than loose items."
+        ]
+      ],
+      "faq": [
+        [
+          "How do I organize under the kitchen sink with pipes?",
+          "Use an L-shaped or two-piece pull-out organizer that sits beside the pipes, and keep tall bottles to the sides."
+        ],
+        [
+          "Do under-sink mats need to be trimmed?",
+          "Often, yes. Measure the cabinet floor and check whether the mat needs cutting around pipes."
+        ]
+      ]
+    },
+    "dish-drying-racks": {
+      "category": "organization",
+      "title": "Best Dish Drying Racks for Small Kitchens",
+      "keyword": "best dish drying rack for small kitchen",
+      "description": "Compact countertop dish racks and over-the-sink roll-up racks that dry a full load without taking over a small counter.",
+      "intro": "In a small kitchen the dish rack can take up the only open counter you have. A compact rack with a drainboard, or a roll-up rack that spans the sink, keeps a full load drying without giving up prep space.",
+      "criteria": [
+        "Footprint on the counter",
+        "Drainage that keeps water off the counter",
+        "Storage when not in use"
+      ],
+      "guide": [
+        [
+          "Countertop or over the sink",
+          "Countertop racks hold more upright plates; roll-up racks free the counter but need a sink that matches their width."
+        ],
+        [
+          "Check the drainage",
+          "A drainboard or a rack over the basin keeps puddles off the counter."
+        ],
+        [
+          "Measure the sink",
+          "For over-the-sink racks, measure the shorter side of the sink opening."
+        ]
+      ],
+      "faq": [
+        [
+          "What dish rack takes up the least counter space?",
+          "An over-the-sink roll-up rack uses no counter space at all, as long as it fits your sink."
+        ],
+        [
+          "Is a roll-up rack strong enough for pots?",
+          "Check the stated weight capacity; steel-core racks generally handle cookware."
+        ]
+      ]
+    },
+    "pantry-storage": {
+      "category": "organization",
+      "title": "Best Pantry Storage Containers and Organizers",
+      "keyword": "best pantry storage containers",
+      "description": "Airtight containers, clear bins, can racks and lazy Susans that keep dry goods fresh and make every shelf easy to see and reach.",
+      "intro": "A pantry stops working when half-open bags go stale and the back of the shelf becomes a mystery. Airtight containers keep staples fresh, and bins, risers and turntables bring everything into view. These picks cover both.",
+      "criteria": [
+        "Airtight seal for dry goods",
+        "Clear walls to see levels",
+        "Use of full shelf height and depth"
+      ],
+      "guide": [
+        [
+          "Seal what goes stale",
+          "Use latching or gasket lids for flour, sugar, rice and cereal."
+        ],
+        [
+          "Use the depth",
+          "Bins with handles and turntables bring items at the back of deep shelves to the front."
+        ],
+        [
+          "Stack to the shelf height",
+          "Measure shelf clearance so stacked containers or tiered can racks fit."
+        ]
+      ],
+      "faq": [
+        [
+          "Are airtight containers worth it for a pantry?",
+          "For dry goods that go stale or attract pests, yes. Clear airtight containers also show when you're running low."
+        ],
+        [
+          "How do I organize a deep pantry shelf?",
+          "Use pull-out bins or a lazy Susan so items at the back are reachable without unloading the front."
+        ]
+      ]
+    },
+    "spice-racks": {
+      "category": "organization",
+      "title": "Best Spice Racks for Small Kitchens",
+      "keyword": "best spice rack for small kitchen",
+      "description": "Tiered cabinet spice racks and no-drill magnetic shelves that free up cabinet space and keep every jar label in view.",
+      "intro": "Spices tend to end up in a crowded row where only the front jars are visible. A tiered riser fixes that inside a cabinet, and a magnetic shelf moves jars out of the cabinet entirely. Both suit small kitchens without any drilling.",
+      "criteria": [
+        "No drilling or installation",
+        "Labels visible at a glance",
+        "Fits standard cabinets or fridge sides"
+      ],
+      "guide": [
+        [
+          "Inside or outside the cabinet",
+          "Tiered risers organize an existing cabinet; magnetic racks add new storage on the fridge."
+        ],
+        [
+          "Measure the cabinet",
+          "Check width and depth before ordering a tiered rack."
+        ],
+        [
+          "Mind the heat",
+          "Keep spices away from the stove and direct sun so they last longer."
+        ]
+      ],
+      "faq": [
+        [
+          "Do magnetic spice racks damage the fridge?",
+          "Most use rubber-backed magnets; check the listing and keep the surface clean before attaching."
+        ],
+        [
+          "How many spice jars fit on a 3-tier rack?",
+          "It depends on jar size; compare the rack's width and depth with the jars you own."
+        ]
+      ]
+    },
+    "cookware-organizers": {
+      "category": "organization",
+      "title": "Best Pot, Lid and Bakeware Organizers",
+      "keyword": "best pot lid organizer",
+      "description": "Adjustable lid organizers and upright racks for pans, sheet pans and cutting boards, so you can pull one out without the stack collapsing.",
+      "intro": "Stacked pans and loose lids are the noisiest cabinet in the kitchen. Standing lids, sheet pans and cutting boards on edge lets you grab one without unloading the rest. These racks do that with no tools.",
+      "criteria": [
+        "Adjustable dividers or slots",
+        "Sturdy steel or wire construction",
+        "Fits standard cabinet depth"
+      ],
+      "guide": [
+        [
+          "Upright beats stacked",
+          "Vertical slots let you remove one item without lifting the others."
+        ],
+        [
+          "Check slot width",
+          "Narrow slots suit sheet pans and boards; thicker pans need wider spacing."
+        ],
+        [
+          "Measure cabinet depth",
+          "Confirm the rack's depth fits behind the cabinet door."
+        ]
+      ],
+      "faq": [
+        [
+          "How do I store pot lids in a small kitchen?",
+          "An adjustable upright lid organizer in a cabinet or drawer keeps lids on edge and easy to match."
+        ],
+        [
+          "Can bakeware racks hold cast iron?",
+          "Check the rack's construction and slot size; steel racks handle heavier pans better than light wire."
+        ]
+      ]
+    },
+    "food-prep-tools": {
+      "category": "gadgets",
+      "title": "Best Food Prep Gadgets That Save Time",
+      "keyword": "best food prep gadgets",
+      "description": "Vegetable choppers, a chicken shredder, an apple peeler, a salad spinner and a can opener that cut down the slowest parts of weeknight prep.",
+      "intro": "Most weeknight cooking time goes into chopping, shredding, peeling and drying. These gadgets each take one of those slow jobs and make it faster, without needing a full food processor.",
+      "criteria": [
+        "Time saved on a specific prep task",
+        "Dishwasher-safe or easy-clean parts",
+        "Stable on the counter"
+      ],
+      "guide": [
+        [
+          "Pick by your bottleneck",
+          "If dicing onions slows you down, start with a chopper; if shredding chicken does, a shredder."
+        ],
+        [
+          "Check the cleaning",
+          "Removable, dishwasher-safe parts make a gadget far more likely to get used."
+        ],
+        [
+          "Storage size",
+          "Choppers with catch containers take more cabinet room than hand tools."
+        ]
+      ],
+      "faq": [
+        [
+          "Are vegetable choppers worth it?",
+          "For frequent dicing of onions, peppers and similar vegetables, they save time and keep pieces uniform."
+        ],
+        [
+          "What is the easiest way to shred chicken?",
+          "A twist-lid chicken shredder handles cooked chicken faster than two forks."
+        ]
+      ]
+    },
+    "cooking-tools": {
+      "category": "gadgets",
+      "title": "Best Kitchen Scales, Meat Thermometers and Oven Mitts",
+      "keyword": "best kitchen scale and meat thermometer",
+      "description": "A digital food scale, an instant-read meat thermometer and heat-resistant silicone oven mitts — the basics for accurate, safer cooking.",
+      "intro": "Accurate weights, reliable temperatures and safe handling of hot pans make every recipe more predictable. These three basics cover measuring, doneness and protection.",
+      "criteria": [
+        "Accuracy and readability",
+        "Easy cleaning",
+        "Heat protection and grip"
+      ],
+      "guide": [
+        [
+          "Weigh, don't scoop",
+          "A scale with a tare button gives consistent baking results."
+        ],
+        [
+          "Check doneness by temperature",
+          "An instant-read thermometer removes guesswork on poultry and roasts; follow USDA safe minimum temperatures."
+        ],
+        [
+          "Silicone vs. cloth mitts",
+          "Silicone resists steam and spills that soak through cloth."
+        ]
+      ],
+      "faq": [
+        [
+          "Do I need a kitchen scale?",
+          "For baking and portioning, a scale is more consistent than measuring cups."
+        ],
+        [
+          "What temperature should chicken reach?",
+          "USDA lists 165°F as the safe minimum internal temperature for poultry."
+        ]
+      ]
+    },
+    "coffee-and-tea": {
+      "category": "gadgets",
+      "title": "Best Milk Frothers and Electric Kettles for Coffee and Tea",
+      "keyword": "best handheld milk frother",
+      "description": "Handheld milk frothers and a glass electric kettle for cafe-style lattes, matcha and tea at home without a bulky machine.",
+      "intro": "You don't need an espresso machine for a good latte or a dedicated tea station for hot water on demand. A handheld frother and an electric kettle cover most cafe-style drinks in very little counter space.",
+      "criteria": [
+        "Speed",
+        "Counter footprint",
+        "Easy cleaning"
+      ],
+      "guide": [
+        [
+          "Handheld frother",
+          "Battery wands foam hot or cold milk and also mix matcha and protein powder."
+        ],
+        [
+          "Electric kettle",
+          "Look for automatic shut-off and a wide opening for cleaning."
+        ],
+        [
+          "Non-dairy milk",
+          "Oat and barista-style milks usually foam better than thin almond milk."
+        ]
+      ],
+      "faq": [
+        [
+          "Can a handheld frother froth cold milk?",
+          "Yes, handheld wands work with hot or cold milk, including many non-dairy milks."
+        ],
+        [
+          "Is an electric kettle faster than the stove?",
+          "Electric kettles generally boil small amounts of water faster than a stovetop kettle and shut off automatically."
+        ]
+      ]
+    },
+    "blenders-and-mixers": {
+      "category": "appliances",
+      "title": "Best Immersion Blenders, Hand Mixers & Mini Choppers",
+      "keyword": "best immersion blender",
+      "description": "Immersion blenders, a hand mixer and a 3-cup food processor that handle soups, baking and chopping without a bulky stand appliance.",
+      "intro": "Full-size blenders and stand mixers take serious counter space. For soups, cookie dough and small chopping jobs, compact handheld tools cover most of the work and store in a drawer.",
+      "criteria": [
+        "Versatility and attachments",
+        "Dishwasher-safe parts",
+        "Storage size"
+      ],
+      "guide": [
+        [
+          "Immersion blender",
+          "Blends soup right in the pot; attachment kits add whisking and chopping."
+        ],
+        [
+          "Hand mixer",
+          "Covers cookie dough, mashed potatoes and whipped cream without a stand mixer."
+        ],
+        [
+          "Mini food processor",
+          "A 3-cup bowl suits garlic, herbs, nuts and onions."
+        ]
+      ],
+      "faq": [
+        [
+          "Is an immersion blender as good as a countertop blender?",
+          "For soups and sauces it is more convenient; for crushed ice and thick smoothies a countertop blender is stronger."
+        ],
+        [
+          "Do I need a hand mixer or a stand mixer?",
+          "A hand mixer covers most home baking; a stand mixer suits frequent bread or large batches."
+        ]
+      ]
+    },
+    "countertop-cooking": {
+      "category": "appliances",
+      "title": "Best Small Kitchen Appliances for Small Spaces",
+      "keyword": "best small kitchen appliances",
+      "description": "A compact air fryer, a 2-quart slow cooker and a mini waffle maker — small countertop appliances that earn their space.",
+      "intro": "A small kitchen can only hold a few appliances, so each one has to get regular use. These picks are sized for everyday meals for one to a family, and each stores without taking over the counter.",
+      "criteria": [
+        "Footprint vs. capacity",
+        "Everyday usefulness",
+        "Easy cleanup"
+      ],
+      "guide": [
+        [
+          "Size to your household",
+          "A 2-quart slow cooker suits one or two people; a 6-quart air fryer suits a family batch."
+        ],
+        [
+          "Check the coating",
+          "Look at basket and crock materials and whether they're dishwasher safe."
+        ],
+        [
+          "Plan storage",
+          "Appliances that store upright or in a cabinet keep the counter clear."
+        ]
+      ],
+      "faq": [
+        [
+          "What size air fryer do I need?",
+          "Roughly 2–4 quarts for one or two people, and 5–6 quarts for a family. Check the manufacturer's serving guidance."
+        ],
+        [
+          "Is a 2-quart slow cooker big enough?",
+          "For one or two servings, dips and sides, yes."
+        ]
+      ]
+    },
+    "insulated-drinkware": {
+      "category": "drinkware",
+      "title": "Best Insulated Tumblers and Water Bottles",
+      "keyword": "best insulated tumbler",
+      "description": "Insulated tumblers and water bottles from Stanley, Owala and HydroJug, compared on size, lid style and cup-holder fit.",
+      "intro": "The right insulated bottle depends on how you drink: a big tumbler with a straw for all-day water, a leak-proof bottle for a bag, or a small coffee tumbler for the commute. These picks cover each style.",
+      "criteria": [
+        "Lid style and leak resistance",
+        "Capacity and cup-holder fit",
+        "Dishwasher safety"
+      ],
+      "guide": [
+        [
+          "Straw vs. spout",
+          "Straw lids are easy to sip from; locking spouts are better for bags."
+        ],
+        [
+          "Capacity",
+          "40 oz holds a day's water in fewer refills; 12–24 oz is easier to carry."
+        ],
+        [
+          "Cleaning",
+          "Check whether the body and lid are dishwasher safe."
+        ]
+      ],
+      "faq": [
+        [
+          "Are insulated tumblers leak-proof?",
+          "Many straw tumblers are leak-resistant, not leak-proof. Choose a locking or slide-seal lid if it rides in a bag."
+        ],
+        [
+          "Do 40 oz tumblers fit in cup holders?",
+          "Several are designed with a narrow base; check the base diameter in the listing."
+        ]
+      ]
+    }
   },
   "products": [
     {
@@ -28,7 +463,9 @@
           "Seven compartments",
           "Natural bamboo"
         ]
-      }
+      },
+      "subcategory": "drawer-organizers",
+      "award": "Best for utensils"
     },
     {
       "asin": "B08KXKVT4K",
@@ -44,7 +481,9 @@
           "Clear, so nothing hides",
           "Mix and match any layout"
         ]
-      }
+      },
+      "subcategory": "drawer-organizers",
+      "award": "Best for junk drawers"
     },
     {
       "asin": "B0C3H9MJQV",
@@ -60,7 +499,9 @@
           "Heavy-duty steel shelves",
           "Frees up cabinet space"
         ]
-      }
+      },
+      "subcategory": "spice-racks",
+      "award": "Best no-drill rack"
     },
     {
       "asin": "B0C3QZ7SNF",
@@ -81,7 +522,9 @@
           "Swivel spout drains to sink",
           "Under 10\" of counter"
         ]
-      }
+      },
+      "subcategory": "under-sink-storage",
+      "award": "Best sink caddy"
     },
     {
       "asin": "B0B4K1XH8Y",
@@ -102,7 +545,9 @@
           "Drainboard catches drips",
           "Removable utensil holder"
         ]
-      }
+      },
+      "subcategory": "dish-drying-racks",
+      "award": "Best countertop rack"
     },
     {
       "asin": "B0113UZJE2",
@@ -123,7 +568,9 @@
           "Tare zeroes out the bowl",
           "Slim, wipe-clean platform"
         ]
-      }
+      },
+      "subcategory": "cooking-tools",
+      "award": "Best kitchen scale"
     },
     {
       "asin": "B00S93EQUK",
@@ -144,7 +591,9 @@
           "Backlit display",
           "Waterproof, rinses clean"
         ]
-      }
+      },
+      "subcategory": "cooking-tools",
+      "award": "Best meat thermometer"
     },
     {
       "asin": "B09BKTSJFJ",
@@ -165,7 +614,9 @@
           "Suction base holds steady",
           "Handles potatoes too"
         ]
-      }
+      },
+      "subcategory": "food-prep-tools",
+      "award": "Best for apples"
     },
     {
       "asin": "B07FNRXFTD",
@@ -186,7 +637,9 @@
           "Five adjustable dividers",
           "Pulls out like a drawer"
         ]
-      }
+      },
+      "subcategory": "cookware-organizers",
+      "award": "Best for container lids"
     },
     {
       "asin": "B082314NFL",
@@ -207,7 +660,9 @@
           "Mixes matcha and protein",
           "No machine needed"
         ]
-      }
+      },
+      "subcategory": "coffee-and-tea",
+      "award": "Best compact frother"
     },
     {
       "asin": "B075X1KPLZ",
@@ -228,7 +683,9 @@
           "Detachable shaft",
           "Whisk and frother included"
         ]
-      }
+      },
+      "subcategory": "blenders-and-mixers",
+      "award": "Best basic immersion blender"
     },
     {
       "asin": "B010TCP3SC",
@@ -249,7 +706,9 @@
           "Stores in a narrow gap",
           "Hash browns and chaffles too"
         ]
-      }
+      },
+      "subcategory": "countertop-cooking",
+      "award": "Best breakfast appliance"
     },
     {
       "asin": "B004P2LEE0",
@@ -270,7 +729,9 @@
           "Dishwasher-safe crock",
           "Warm setting for dips"
         ]
-      }
+      },
+      "subcategory": "countertop-cooking",
+      "award": "Best small slow cooker"
     },
     {
       "asin": "B07531HM8Q",
@@ -291,7 +752,9 @@
           "Clear walls show levels",
           "Stacks to use full height"
         ]
-      }
+      },
+      "subcategory": "pantry-storage",
+      "award": "Best single container"
     },
     {
       "asin": "B0CFQFMC4F",
@@ -312,7 +775,9 @@
           "Two tiers, pull-out base",
           "Two-pack"
         ]
-      }
+      },
+      "subcategory": "under-sink-storage",
+      "award": "Best pull-out organizer"
     },
     {
       "asin": "B08N9Q24M9",
@@ -333,7 +798,9 @@
           "Eight swappable blades",
           "Slice, julienne, grate"
         ]
-      }
+      },
+      "subcategory": "food-prep-tools",
+      "award": "Best multi-blade chopper"
     },
     {
       "asin": "B0CGRGRXPY",
@@ -354,7 +821,9 @@
           "Clear lid shows the shred",
           "Non-slip base"
         ]
-      }
+      },
+      "subcategory": "food-prep-tools",
+      "award": "Best chicken shredder"
     },
     {
       "asin": "B08PP48979",
@@ -375,7 +844,9 @@
           "Automatic shut-off",
           "Wide, easy-clean opening"
         ]
-      }
+      },
+      "subcategory": "coffee-and-tea",
+      "award": "Best electric kettle"
     },
     {
       "asin": "B0CSPKSCP2",
@@ -396,7 +867,9 @@
           "Raised edge holds leaks",
           "34\" x 22\""
         ]
-      }
+      },
+      "subcategory": "under-sink-storage",
+      "award": "Best leak protection"
     },
     {
       "asin": "B07W7MG36T",
@@ -417,7 +890,9 @@
           "Trims with scissors",
           "Lifts out to clean"
         ]
-      }
+      },
+      "subcategory": "drawer-organizers",
+      "award": "Best non-slip liner"
     },
     {
       "asin": "B07YP2VH4B",
@@ -438,7 +913,9 @@
           "Oversized turning knob",
           "Built-in bottle opener"
         ]
-      }
+      },
+      "subcategory": "food-prep-tools",
+      "award": "Best can opener"
     },
     {
       "asin": "B009VUHLHA",
@@ -459,7 +936,9 @@
           "Cord locks either side",
           "Dishwasher-safe beaters"
         ]
-      }
+      },
+      "subcategory": "blenders-and-mixers",
+      "award": "Best hand mixer"
     },
     {
       "asin": "B0000645YM",
@@ -480,7 +959,9 @@
           "Chops and grinds",
           "Dishwasher-safe parts"
         ]
-      }
+      },
+      "subcategory": "blenders-and-mixers",
+      "award": "Best mini food processor"
     },
     {
       "asin": "B0CJZW65R3",
@@ -501,7 +982,9 @@
         "title": "Stanley Quencher H2.0 40 oz Tumbler – Handle, Straw & Cup Holder Fit",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 40 oz insulated tumbler with a handle, a 3-position lid, and a base that fits your car cup holder. Double-wall vacuum insulation keeps drinks cold for hours, and it's dishwasher safe. #stanleycup #tumbler #hydration",
         "board": "Drinkware & Tumblers We Love"
-      }
+      },
+      "subcategory": "insulated-drinkware",
+      "award": "Best big tumbler"
     },
     {
       "asin": "B0BZYCJK89",
@@ -522,7 +1005,9 @@
         "title": "Owala FreeSip 24 oz Water Bottle – Sip Through the Straw or Swig",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. One spout works two ways: sip through the built-in straw or tilt back and swig. A locking push-button lid keeps it clean, and it stays cold up to 24 hours. #owala #waterbottle #hydration",
         "board": "Drinkware & Tumblers We Love"
-      }
+      },
+      "subcategory": "insulated-drinkware",
+      "award": "Best everyday bottle"
     },
     {
       "asin": "B0CQVWT2NH",
@@ -543,7 +1028,9 @@
         "title": "HydroJug Traveler 40 oz – Triple-Insulated Bottle with Handle",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A triple-wall insulated 40 oz bottle with a flip straw and leak-resistant lid. It's dishwasher safe and fits your cup holder, so one fill covers most of the day. #hydrojug #waterbottle #stayhydrated",
         "board": "Drinkware & Tumblers We Love"
-      }
+      },
+      "subcategory": "insulated-drinkware",
+      "award": "Best all-day bottle"
     },
     {
       "asin": "B08J8GZXKZ",
@@ -564,7 +1051,9 @@
         "title": "KitchenAid Silicone Oven Mitts – Heat Resistant to 500°F, Set of 2",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. Waterproof ribbed silicone protects your hands from hot pans up to 500°F and grips slippery dishes. A set of two, sized 7\" x 13\". #kitchenessentials #bakingtools #kitchengadgets",
         "board": "Small Kitchen Gadgets We Love"
-      }
+      },
+      "subcategory": "cooking-tools",
+      "award": "Best oven mitts"
     },
     {
       "asin": "B0DF472VMZ",
@@ -585,7 +1074,9 @@
         "title": "Owala SmoothSip Coffee Tumbler – Leak-Proof Lid, Hot or Iced",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A slide-top lid stops splashes and seals completely. Keeps coffee hot for 6 hours or iced for 24, in a 12 oz size that fits one hand. #owala #coffeetumbler #icedcoffee",
         "board": "Drinkware & Tumblers We Love"
-      }
+      },
+      "subcategory": "insulated-drinkware",
+      "award": "Best coffee tumbler"
     },
     {
       "asin": "B0C33CHG99",
@@ -606,7 +1097,9 @@
           "90°F to 450°F, 5 fan speeds",
           "PFAS-free ceramic basket"
         ]
-      }
+      },
+      "subcategory": "countertop-cooking",
+      "award": "Best air fryer"
     },
     {
       "asin": "B08ZK5WDWN",
@@ -627,7 +1120,9 @@
           "4 sizes, stackable",
           "24 reusable labels"
         ]
-      }
+      },
+      "subcategory": "pantry-storage",
+      "award": "Best container set"
     },
     {
       "asin": "B0CNCWY7N6",
@@ -648,7 +1143,9 @@
           "Spins a full 360°",
           "Raised edges hold items"
         ]
-      }
+      },
+      "subcategory": "pantry-storage",
+      "award": "Best for deep corners"
     },
     {
       "asin": "B0764HS4SL",
@@ -669,7 +1166,9 @@
           "420 stainless steel blades",
           "Top-rack dishwasher safe"
         ]
-      }
+      },
+      "subcategory": "food-prep-tools",
+      "award": "Best chopper and spiralizer"
     },
     {
       "asin": "B0DPXRJ2VY",
@@ -690,7 +1189,9 @@
           "4 AA batteries included",
           "Metal stand included"
         ]
-      }
+      },
+      "subcategory": "coffee-and-tea",
+      "award": "Best frother with stand"
     },
     {
       "asin": "B0836VYDRB",
@@ -711,7 +1212,9 @@
           "Holds up to 100 lbs",
           "Rolls up for storage"
         ]
-      }
+      },
+      "subcategory": "dish-drying-racks",
+      "award": "Best over-the-sink rack"
     },
     {
       "asin": "B08NY9RYDG",
@@ -732,7 +1235,9 @@
           "10 movable steel dividers",
           "No tools to assemble"
         ]
-      }
+      },
+      "subcategory": "cookware-organizers",
+      "award": "Best lid and pan organizer"
     },
     {
       "asin": "B08HSNGR8P",
@@ -753,7 +1258,9 @@
           "Whisk, frother & chopper",
           "Dishwasher-safe parts"
         ]
-      }
+      },
+      "subcategory": "blenders-and-mixers",
+      "award": "Best immersion blender kit"
     },
     {
       "asin": "B00COCBH36",
@@ -774,7 +1281,9 @@
           "Steel with rubber feet",
           "10\" wide x 5.5\" tall"
         ]
-      }
+      },
+      "subcategory": "cookware-organizers",
+      "award": "Best compact pan rack"
     },
     {
       "asin": "B08BQBNXSQ",
@@ -795,7 +1304,9 @@
           "Built-in grip handles",
           "BPA-free clear plastic"
         ]
-      }
+      },
+      "subcategory": "pantry-storage",
+      "award": "Best pull-out bins"
     },
     {
       "asin": "B00004OCKR",
@@ -816,7 +1327,9 @@
           "One-touch pump and brake",
           "Dishwasher-safe parts"
         ]
-      }
+      },
+      "subcategory": "food-prep-tools",
+      "award": "Best salad spinner"
     },
     {
       "asin": "B0036OQU56",
@@ -837,7 +1350,9 @@
           "Non-skid shelf lining",
           "15\" W x 9\" D"
         ]
-      }
+      },
+      "subcategory": "spice-racks",
+      "award": "Best in-cabinet rack"
     },
     {
       "asin": "B08CGHSY9G",
@@ -858,7 +1373,9 @@
           "Chrome-finished steel",
           "14.5\" x 11.5\" x 11\""
         ]
-      }
+      },
+      "subcategory": "pantry-storage",
+      "award": "Best can organizer"
     },
     {
       "asin": "B0C1GNRZ6T",
@@ -879,7 +1396,9 @@
           "Black-coated metal wire",
           "No installation needed"
         ]
-      }
+      },
+      "subcategory": "cookware-organizers",
+      "award": "Best for sheet pans and boards"
     }
   ]
 }

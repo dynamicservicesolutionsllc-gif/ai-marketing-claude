@@ -12,3 +12,11 @@
   for = "/img/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
+
+# The site moved to Hostinger (2026-10-17). Send every old URL, including pin destinations,
+# to the same path on the new domain.
+[[redirects]]
+  from = "/*"
+  to = "https://kitchenfindsfavorites.com/:splat"
+  status = 301
+  force = true
