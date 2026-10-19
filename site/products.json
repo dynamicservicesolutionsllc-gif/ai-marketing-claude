@@ -328,7 +328,7 @@
       "category": "organization",
       "title": "Best Dish Drying Racks for Small Kitchens",
       "keyword": "best dish drying rack for small kitchen",
-      "description": "Compact countertop dish racks and over-the-sink roll-up racks that dry a full load without taking over a small counter.",
+      "description": "Compact countertop dish racks, over-the-sink roll-up racks and a silicone drying mat that dry dishes without taking over a small counter.",
       "intro": "In a small kitchen the dish rack can take up the only open counter you have. A compact rack with a drainboard, or a roll-up rack that spans the sink, keeps a full load drying without giving up prep space.",
       "criteria": [
         "Footprint on the counter",
@@ -441,6 +441,21 @@
           "pick": "B0836VYDRB"
         },
         {
+          "name": "Silicone drying mat",
+          "best_for": "Small loads or under a rack",
+          "advantage": "Rolls up or rinses clean",
+          "tradeoff": "Dishes lie flat, so fewer fit",
+          "summary": "A ribbed mat lifts dishes off pooled water and its raised edges keep drips off the counter. Our pick is 18 by 16 inches and also fits under a dish rack.",
+          "choose": [
+            "You wash a few dishes at a time",
+            "Your current rack leaves puddles on the counter"
+          ],
+          "skip": [
+            "You air-dry a full family load every night"
+          ],
+          "pick": "B092DRDSJD"
+        },
+        {
           "name": "Over-the-sink frame rack",
           "best_for": "Larger sinks with open wall space",
           "advantage": "Tall shelving over the sink",
@@ -469,7 +484,7 @@
           "A compact countertop rack is usually plenty. Look for a removable utensil holder and a drainboard so water doesn't pool on the counter."
         ]
       ],
-      "reviewed": "2026-10-18"
+      "reviewed": "2026-10-19"
     },
     "pantry-storage": {
       "category": "organization",
@@ -655,12 +670,12 @@
       "category": "organization",
       "title": "Best Spice Racks for Small Kitchens",
       "keyword": "best spice rack for small kitchen",
-      "description": "Tiered cabinet spice racks and no-drill magnetic shelves that free up cabinet space and keep every jar label in view.",
-      "intro": "Spices tend to end up in a crowded row where only the front jars are visible. A tiered riser fixes that inside a cabinet, and a magnetic shelf moves jars out of the cabinet entirely. Both suit small kitchens without any drilling.",
+      "description": "Tiered cabinet spice racks, a slide-out pull-out rack and no-drill magnetic shelves that free up cabinet space and keep every label in view.",
+      "intro": "Spices tend to end up in a crowded row where only the front jars are visible. A tiered riser fixes that inside a cabinet, a pull-out rack turns a narrow cabinet into a slide-out drawer, and a magnetic shelf moves jars out of the cabinet entirely. The riser and magnetic shelves need no drilling; the pull-out rack mounts with screws.",
       "criteria": [
-        "No drilling or installation",
+        "Little or no installation",
         "Labels visible at a glance",
-        "Fits standard cabinets or fridge sides"
+        "Fits standard or narrow cabinets, or fridge sides"
       ],
       "guide": [
         [
@@ -715,7 +730,7 @@
       "measure": [
         [
           "Cabinet interior width and depth",
-          "So a tiered rack fits with the door closed."
+          "So a tiered rack fits with the door closed, or a pull-out rack clears the opening and hinges."
         ],
         [
           "Shelf height",
@@ -767,6 +782,23 @@
           "pick": "B0C3H9MJQV"
         },
         {
+          "name": "Pull-out cabinet rack",
+          "best_for": "Narrow or deep cabinets",
+          "advantage": "Back jars slide forward",
+          "tradeoff": "Mounts with screws",
+          "summary": "Two chrome tiers on full-extension glides turn a narrow cabinet into a slide-out spice drawer. Our pick is 4-3/8 inches wide and holds spices in their original containers.",
+          "choose": [
+            "You have a narrow cabinet beside the stove",
+            "Jars get lost at the back of a deep cabinet",
+            "You own your cabinets and can drill"
+          ],
+          "skip": [
+            "You rent and can't add screw holes",
+            "The cabinet opening is narrower than the rack"
+          ],
+          "pick": "B07NDZWMXF"
+        },
+        {
           "name": "Drawer spice insert",
           "best_for": "Kitchens with a spare drawer",
           "advantage": "Jars lie flat with labels up",
@@ -794,7 +826,7 @@
           "Magnetic shelves and free-standing cabinet risers both install without tools and leave no marks."
         ]
       ],
-      "reviewed": "2026-10-18"
+      "reviewed": "2026-10-19"
     },
     "cookware-organizers": {
       "category": "organization",
@@ -1102,8 +1134,8 @@
       "category": "gadgets",
       "title": "Best Kitchen Scales, Meat Thermometers and Oven Mitts",
       "keyword": "best kitchen scale and meat thermometer",
-      "description": "A digital food scale, an instant-read meat thermometer and heat-resistant silicone oven mitts — the basics for accurate, safer cooking.",
-      "intro": "Accurate weights, reliable temperatures and safe handling of hot pans make every recipe more predictable. These three basics cover measuring, doneness and protection.",
+      "description": "A digital food scale, an instant-read meat thermometer, silicone oven mitts and glass measuring cups — the basics for accurate, safer cooking.",
+      "intro": "Accurate weights, reliable temperatures and safe handling of hot pans make every recipe more predictable. These basics cover measuring dry and liquid ingredients, doneness and protection.",
       "criteria": [
         "Accuracy and readability",
         "Easy cleaning",
@@ -1226,6 +1258,21 @@
             "You need fine finger control for small items"
           ],
           "pick": "B08J8GZXKZ"
+        },
+        {
+          "name": "Glass liquid measuring cups",
+          "best_for": "Milk, water, oil and batter",
+          "advantage": "Microwave-safe, pours cleanly",
+          "tradeoff": "Glass is heavier than plastic",
+          "summary": "Clear cups with bold ounce and milliliter markings measure liquids at eye level and go into the microwave to melt butter. Our pick is a 1, 2 and 4-cup set.",
+          "choose": [
+            "You bake often",
+            "You melt butter or warm milk for recipes"
+          ],
+          "skip": [
+            "You weigh every ingredient on a scale"
+          ],
+          "pick": "B00M2J7PCI"
         }
       ],
       "situations": [
@@ -1242,14 +1289,14 @@
           "Silicone mitts with a ribbed grip help with slippery, heavy casseroles; always use two hands for cast iron."
         ]
       ],
-      "reviewed": "2026-10-18"
+      "reviewed": "2026-10-19"
     },
     "coffee-and-tea": {
       "category": "gadgets",
       "title": "Best Milk Frothers and Electric Kettles for Coffee and Tea",
       "keyword": "best handheld milk frother",
-      "description": "Handheld milk frothers and a glass electric kettle for cafe-style lattes, matcha and tea at home without a bulky machine.",
-      "intro": "You don't need an espresso machine for a good latte or a dedicated tea station for hot water on demand. A handheld frother and an electric kettle cover most cafe-style drinks in very little counter space.",
+      "description": "Handheld milk frothers, a glass electric kettle and a French press for cafe-style lattes, coffee and tea at home without a bulky machine.",
+      "intro": "You don't need an espresso machine for a good latte or a dedicated tea station for hot water on demand. A handheld frother, an electric kettle and a French press cover most cafe-style drinks in very little counter space.",
       "criteria": [
         "Speed",
         "Counter footprint",
@@ -1369,6 +1416,21 @@
             "You need precise pour control for pour-over"
           ],
           "pick": "B08PP48979"
+        },
+        {
+          "name": "Glass French press",
+          "best_for": "Full-bodied coffee for one to four",
+          "advantage": "No machine or paper filters",
+          "tradeoff": "Takes a few minutes to steep",
+          "summary": "Hot water, coarse grounds and a few minutes of steeping make a full pot. Our pick holds 34 ounces in a borosilicate glass carafe.",
+          "choose": [
+            "You want richer coffee than a drip machine",
+            "You'd rather not store a coffee maker"
+          ],
+          "skip": [
+            "You need coffee in under a minute"
+          ],
+          "pick": "B000KEM4TQ"
         }
       ],
       "situations": [
@@ -1385,7 +1447,7 @@
           "A glass kettle lets you watch the water and keeps it away from plastic; look for automatic shut-off and a wide opening for descaling."
         ]
       ],
-      "reviewed": "2026-10-18"
+      "reviewed": "2026-10-19"
     },
     "blenders-and-mixers": {
       "category": "appliances",
@@ -1694,7 +1756,7 @@
       "category": "drinkware",
       "title": "Best Insulated Tumblers and Water Bottles",
       "keyword": "best insulated tumbler",
-      "description": "Insulated tumblers and water bottles from Stanley, Owala and HydroJug, compared on size, lid style and cup-holder fit.",
+      "description": "Insulated tumblers, water bottles and travel mugs from Stanley, Owala, HydroJug and Thermos, compared on size, lid style and cup-holder fit.",
       "intro": "The right insulated bottle depends on how you drink: a big tumbler with a straw for all-day water, a leak-proof bottle for a bag, or a small coffee tumbler for the commute. These picks cover each style.",
       "criteria": [
         "Lid style and leak resistance",
@@ -1831,6 +1893,21 @@
             "You want a large water bottle"
           ],
           "pick": "B0DF472VMZ"
+        },
+        {
+          "name": "Travel mug with handle",
+          "best_for": "Hot coffee on a long commute",
+          "advantage": "Leak-proof lid and a handle",
+          "tradeoff": "No straw for cold drinks",
+          "summary": "Keeps drinks hot for up to 7 hours or cold for up to 18, with a leak-proof DrinkLock lid and a built-in tea hook. Our pick is a 16-ounce stainless steel mug.",
+          "choose": [
+            "You carry coffee from the house to the car to your desk",
+            "You brew loose-leaf or bagged tea"
+          ],
+          "skip": [
+            "You mostly drink ice water through a straw"
+          ],
+          "pick": "B08JWMVB43"
         }
       ],
       "situations": [
@@ -1847,7 +1924,7 @@
           "A small tumbler with a slide-seal lid keeps coffee hot and won't splash in a bag or car."
         ]
       ],
-      "reviewed": "2026-10-18"
+      "reviewed": "2026-10-19"
     }
   },
   "gift_guides": {
@@ -3094,6 +3171,121 @@
       },
       "subcategory": "cookware-organizers",
       "award": "Best for sheet pans and boards"
+    },
+    {
+      "asin": "B000KEM4TQ",
+      "name": "Bodum Brazil French Press Coffee Maker, 34 oz",
+      "category": "gadgets",
+      "subcategory": "coffee-and-tea",
+      "award": "Best French press",
+      "graphic": {
+        "label": "Bodum Brazil French Press",
+        "headline": "Rich Coffee Without a Machine",
+        "points": [
+          "34 oz / 8-cup capacity",
+          "Borosilicate glass carafe",
+          "Permanent filter, no paper"
+        ]
+      },
+      "blurb": "Brews up to 34 ounces of full-bodied coffee with just hot water and a few minutes of steeping, so there's no drip machine or paper filters to store. The heat-resistant borosilicate glass carafe sits in a slim frame that tucks into a cupboard between pots.",
+      "pin": {
+        "title": "French Press Coffee Maker for Small Kitchens – Bodum Brazil 34 oz Glass Press",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Make a full pot of rich, full-bodied coffee with only hot water and a few minutes of steeping — no drip machine, no paper filters. The 34 oz borosilicate glass carafe is slim enough to store in a cupboard. A cozy fall coffee bar staple. #frenchpress #coffeebar #coffeelover #fallcoffee #smallkitchen",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "added": "2026-10-19"
+    },
+    {
+      "asin": "B092DRDSJD",
+      "name": "Gorilla Grip Silicone Dish Drying Mat, 18 x 16 Inch",
+      "category": "organization",
+      "subcategory": "dish-drying-racks",
+      "award": "Best drying mat",
+      "graphic": {
+        "label": "Gorilla Grip Drying Mat",
+        "headline": "Dry Dishes Without a Rack",
+        "points": [
+          "18 x 16 in silicone mat",
+          "Ribbed, raised-edge design",
+          "BPA-free, fits under racks"
+        ]
+      },
+      "blurb": "Ribs lift dishes and glasses off pooled water so air reaches them, and the raised edges keep drips from running across the counter. Use it on its own for a small load or under an existing dish rack, then roll it up or rinse it clean.",
+      "pin": {
+        "title": "Silicone Dish Drying Mat for Kitchen Counter – Gorilla Grip 18x16 Ribbed Mat",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A ribbed silicone mat that lifts dishes off pooled water so they dry faster, with raised edges that keep drips off the counter. Use it alone for small loads or under your dish rack — great for small kitchens with no room for a full rack. #dishdryingmat #smallkitchen #kitchenorganization #kitchenhacks",
+        "board": "Kitchen Organization Must-Haves"
+      },
+      "added": "2026-10-19"
+    },
+    {
+      "asin": "B07NDZWMXF",
+      "name": "LYNK PROFESSIONAL Pull Out Spice Rack, 4-3/8 Inch Wide",
+      "category": "organization",
+      "subcategory": "spice-racks",
+      "award": "Best pull-out rack",
+      "graphic": {
+        "label": "LYNK Pull Out Spice Rack",
+        "headline": "Every Spice Slides Into View",
+        "points": [
+          "2 chrome tiers",
+          "4-3/8 in narrow width",
+          "Full-extension glides"
+        ]
+      },
+      "blurb": "Turns a narrow cabinet into a two-tier slide-out spice drawer, so jars at the back come forward instead of getting lost. It screws into the cabinet floor on full-extension glides and holds spices in their original containers, with no special jars needed.",
+      "pin": {
+        "title": "Pull Out Spice Rack for Narrow Cabinets – LYNK 2-Tier Slide Out Spice Organizer",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Turn a narrow cabinet into a slide-out spice drawer. Two chrome tiers glide fully forward, so the jars at the back are as easy to grab as the ones in front — and your spices stay in their original containers. Mounts with screws. #spiceorganization #spicerack #pantryorganization #kitchenorganization",
+        "board": "Kitchen Organization Must-Haves"
+      },
+      "added": "2026-10-19"
+    },
+    {
+      "asin": "B00M2J7PCI",
+      "name": "Pyrex Essentials 3-Piece Glass Measuring Cup Set",
+      "category": "gadgets",
+      "subcategory": "cooking-tools",
+      "award": "Best liquid measuring cups",
+      "graphic": {
+        "label": "Pyrex Measuring Cup Set",
+        "headline": "Measure, Melt and Pour in One",
+        "points": [
+          "1, 2 & 4-cup glass set",
+          "Ounce and ml markings",
+          "Microwave & dishwasher safe"
+        ]
+      },
+      "blurb": "Three glass cups in 1, 2 and 4-cup sizes cover everything from a splash of milk to a full batch of batter, with bold ounce and milliliter markings. They go into the microwave to warm butter or milk and pour cleanly through a curved spout, which suits holiday baking.",
+      "pin": {
+        "title": "Glass Measuring Cups for Baking – Pyrex 3-Piece Set (1, 2 & 4 Cup)",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. The classic glass measuring cup set in 1, 2 and 4-cup sizes, with bold ounce and milliliter markings and a curved spout for clean pouring. Microwave-safe for melting butter or warming milk — a holiday baking essential. #bakingessentials #holidaybaking #kitchenessentials #pyrex",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "added": "2026-10-19"
+    },
+    {
+      "asin": "B08JWMVB43",
+      "name": "THERMOS Stainless King Travel Mug with Handle, 16 oz",
+      "category": "drinkware",
+      "subcategory": "insulated-drinkware",
+      "award": "Best travel mug with handle",
+      "graphic": {
+        "label": "Thermos Stainless King Mug",
+        "headline": "Hot Coffee for the Whole Commute",
+        "points": [
+          "16 oz, 18/8 stainless",
+          "Hot 7 hrs, cold 18 hrs",
+          "Leak-proof lid, handle"
+        ]
+      },
+      "blurb": "Keeps coffee or tea hot for up to 7 hours and iced drinks cold for up to 18, so a morning refill lasts through a long commute. The DrinkLock lid is leak-proof when closed, the handle makes it easy to carry, and it fits most standard cup holders.",
+      "pin": {
+        "title": "Insulated Travel Coffee Mug with Handle – THERMOS Stainless King 16 oz",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Keep coffee hot for up to 7 hours or iced drinks cold for up to 18. The leak-proof DrinkLock lid, sturdy handle and built-in tea hook make this 16 oz stainless steel mug a cozy fall commute companion, and it fits most cup holders. #travelmug #coffeemug #falldrinks #coffeelover",
+        "board": "Drinkware & Tumblers We Love"
+      },
+      "added": "2026-10-19"
     }
   ]
 }
