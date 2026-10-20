@@ -45,3 +45,4 @@ node_modules/
 
 # Amazon Creators API data: regenerated on every deploy, never committed
 site/amazon_images.json
+site/videos/
