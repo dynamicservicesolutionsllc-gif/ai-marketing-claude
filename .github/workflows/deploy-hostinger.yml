@@ -1,4 +1,5 @@
-# Publishes the built site (site/public/) to the `hostinger-deploy` branch, then tells Hostinger to pull it.
+# Publishes the built site (site/public/) to the `hostinger-deploy` branch. The repo's GitHub webhook
+# (Settings > Webhooks > webhooks.hostinger.com) then tells Hostinger to pull it.
 # The branch keeps a normal history (no force-push) so Hostinger's pull is always a fast-forward.
 #
 # Amazon product photos: once the repo has the AMAZON_CREATORS_CLIENT_ID / AMAZON_CREATORS_CLIENT_SECRET
@@ -56,10 +57,3 @@ jobs:
           if git diff --cached --quiet; then echo "No site changes"; exit 0; fi
           git commit -q -m "Deploy site from main@${SRC_SHA}"
           git push origin hostinger-deploy
-      - name: Tell Hostinger to pull the new build
-        # Hostinger's Git auto-deployment webhook (hPanel > Advanced > GIT > Auto Deployment).
-        # Calling it only makes Hostinger pull the hostinger-deploy branch, so it is safe to keep here.
-        run: |
-          curl -fsS -X POST -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
-            -d '{"ref":"refs/heads/hostinger-deploy","repository":{"clone_url":"https://github.com/${{ github.repository }}.git"}}' \
-            https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
