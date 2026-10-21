@@ -964,8 +964,12 @@ if ($fh) {
 }
 $subject = '=?UTF-8?B?' . base64_encode('Website message from ' . $name) . '?=';
 $body = "Name: $name\nEmail: $email\n\n$message\n\n-- Sent from the contact form on kitchenfindsfavorites.com\n";
-$headers = "From: Kitchen Finds & Favorites <$to>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
-$sent = @mail($to, $subject, $body, $headers, '-f' . $to);
+// Send as the hosting server's own address: Hostinger's PHP mail() goes out from the shared server
+// (unsigned), so a From of @kitchenfindsfavorites.com fails DMARC and lands in Junk.
+$host = gethostname();
+$from = (is_string($host) && strpos($host, '.') !== false) ? 'noreply@' . $host : $to;
+$headers = "From: Kitchen Finds & Favorites website <$from>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
+$sent = @mail($to, $subject, $body, $headers);
 header('Location: ' . ($sent ? '/contact/sent/' : '/contact/?error=1#form'), true, 303);
 """
 
