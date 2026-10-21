@@ -127,6 +127,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .gcard strong { font-size:16px; line-height:1.3; }
   .gcard span { color:var(--mut); font-size:14px; }
   .gcard em { color:var(--acc); font-style:normal; font-size:14px; font-weight:600; }
+  .contact { display:flex; flex-direction:column; gap:14px; margin:20px 0; }
+  .contact label { display:flex; flex-direction:column; gap:4px; font-weight:600; font-size:14px; }
+  .contact input, .contact textarea { padding:10px 12px; border:1px solid var(--bd); border-radius:8px; font:inherit; font-weight:400; background:var(--card); color:var(--ink); }
+  .contact textarea:focus-visible, .contact input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .contact button { border:0; cursor:pointer; font:inherit; align-self:flex-start; }
+  .err { color:#b3261e; font-weight:600; }
+  @media (prefers-color-scheme: dark) { .err { color:#f2b8b5; } }
+  .fnav { display:flex; flex-wrap:wrap; gap:6px 16px; margin-bottom:12px; font-size:14px; }
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 </style>
@@ -138,7 +146,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <div class="top"><a class="brand" href="../">Kitchen Finds &amp; Favorites</a></div>
   <main id="main" class="prose">
     <h1>Privacy Policy</h1>
-    <p>Last updated 2026-10-18.</p>
+    <p>Last updated 2026-10-20.</p>
     <h2>Affiliate links and cookies</h2>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.</p>
     <p>When you click a product link on this site you go to Amazon.com. Third parties, including Amazon, may place and read cookies on your browser, or use web beacons, to collect information such as which link you clicked and whether a purchase followed, so that we can be credited for the referral. That information is handled under <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" rel="nofollow noopener">Amazon's Privacy Notice</a>. We never see your Amazon account, payment details, or what you personally bought.</p>
@@ -148,6 +156,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <p>When you click a link to Amazon, the site also records which page and product the click came from, where the visit originated (for example Pinterest or a search engine) and the time, so we can tell which pages are useful. This click log stores no IP address, cookies, name or contact details.</p>
     <h2>Email sign-up</h2>
     <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
+    <h2>Contact form</h2>
+    <p>If you use our contact form, we receive the name, email address and message you enter, by email and as a backup copy stored on our web host. We use them only to reply to you and delete them on request.</p>
     <h2>Hosting and server logs</h2>
     <p>Our host may log standard request data (such as IP address, browser type, and pages requested) to keep the site running and secure.</p>
     <h2>Children</h2>
@@ -158,6 +168,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <p>If this policy changes, we will update the date above.</p>
   </main>
   <footer>
+    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases. Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="https://www.pinterest.com/kitchenfindsfavorites/">Pinterest</a> and <a href="https://www.facebook.com/61594030243560">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
