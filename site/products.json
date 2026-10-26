@@ -1134,7 +1134,7 @@
       "category": "gadgets",
       "title": "Best Kitchen Scales, Meat Thermometers and Oven Mitts",
       "keyword": "best kitchen scale and meat thermometer",
-      "description": "A digital food scale, an instant-read meat thermometer, silicone oven mitts and glass measuring cups — the basics for accurate, safer cooking.",
+      "description": "A digital food scale, an instant-read thermometer, silicone oven mitts, glass measuring cups and baking mats: the basics for accurate, safer cooking.",
       "intro": "Accurate weights, reliable temperatures and safe handling of hot pans make every recipe more predictable. These basics cover measuring dry and liquid ingredients, doneness and protection.",
       "criteria": [
         "Accuracy and readability",
@@ -1273,6 +1273,21 @@
             "You weigh every ingredient on a scale"
           ],
           "pick": "B00M2J7PCI"
+        },
+        {
+          "name": "Silicone baking mats",
+          "best_for": "Cookies and sheet-pan dinners",
+          "advantage": "Reusable non-stick surface instead of parchment",
+          "tradeoff": "Hand-wash or dishwasher; not for cutting on",
+          "summary": "Two half-sheet mats fit standard baking sheets, so cookies and roasted vegetables release without parchment or foil.",
+          "choose": [
+            "You bake cookies often",
+            "You go through rolls of parchment or foil"
+          ],
+          "skip": [
+            "You rarely use sheet pans"
+          ],
+          "pick": "B0725GYNG6"
         }
       ],
       "situations": [
@@ -1289,7 +1304,7 @@
           "Silicone mitts with a ribbed grip help with slippery, heavy casseroles; always use two hands for cast iron."
         ]
       ],
-      "reviewed": "2026-10-19"
+      "reviewed": "2026-10-26"
     },
     "coffee-and-tea": {
       "category": "gadgets",
@@ -1611,7 +1626,7 @@
       "category": "appliances",
       "title": "Best Small Kitchen Appliances for Small Spaces",
       "keyword": "best small kitchen appliances",
-      "description": "A compact air fryer, a 2-quart slow cooker and a mini waffle maker — small countertop appliances that earn their space.",
+      "description": "A compact air fryer, a 2-quart slow cooker, a mini waffle maker and a 6-egg cooker: small countertop appliances that earn their space.",
       "intro": "A small kitchen can only hold a few appliances, so each one has to get regular use. These picks are sized for everyday meals for one to a family, and each stores without taking over the counter.",
       "criteria": [
         "Footprint vs. capacity",
@@ -1734,6 +1749,21 @@
             "You feed a crowd at breakfast"
           ],
           "pick": "B010TCP3SC"
+        },
+        {
+          "name": "Electric egg cooker",
+          "best_for": "Breakfasts and meal-prep eggs",
+          "advantage": "No pot to watch; shuts off on its own",
+          "tradeoff": "Single-purpose",
+          "summary": "Steams up to six eggs soft, medium or hard-boiled, poaches with the included tray, and turns itself off when done.",
+          "choose": [
+            "You prep hard-boiled eggs for the week",
+            "You want breakfast without watching the stove"
+          ],
+          "skip": [
+            "You rarely cook eggs"
+          ],
+          "pick": "B0B9P17YHK"
         }
       ],
       "situations": [
@@ -1750,7 +1780,7 @@
           "Check your building's or school's appliance rules first, then pick compact, multi-use appliances that store in a cabinet."
         ]
       ],
-      "reviewed": "2026-10-18"
+      "reviewed": "2026-10-26"
     },
     "insulated-drinkware": {
       "category": "drinkware",
@@ -1908,6 +1938,21 @@
             "You mostly drink ice water through a straw"
           ],
           "pick": "B08JWMVB43"
+        },
+        {
+          "name": "Autoseal travel mug",
+          "best_for": "Coffee in a bag or car",
+          "advantage": "Lid seals between sips",
+          "tradeoff": "Body is hand-wash only",
+          "summary": "The Autoseal lid locks between sips so the mug won't leak if it tips, and the lid is top-rack dishwasher safe.",
+          "choose": [
+            "It rides in a bag or backpack",
+            "You've spilled coffee in the car"
+          ],
+          "skip": [
+            "You want a straw or a big capacity"
+          ],
+          "pick": "B0CYQQXRNN"
         }
       ],
       "situations": [
@@ -1924,7 +1969,7 @@
           "A small tumbler with a slide-seal lid keeps coffee hot and won't splash in a bag or car."
         ]
       ],
-      "reviewed": "2026-10-19"
+      "reviewed": "2026-10-26"
     }
   },
   "gift_guides": {
@@ -3286,6 +3331,75 @@
         "board": "Drinkware & Tumblers We Love"
       },
       "added": "2026-10-19"
+    },
+    {
+      "asin": "B0725GYNG6",
+      "name": "Amazon Basics Silicone Baking Mat, Half-Sheet, 2-Pack",
+      "category": "gadgets",
+      "subcategory": "cooking-tools",
+      "award": "Best baking mats",
+      "graphic": {
+        "label": "Amazon Basics Baking Mats",
+        "headline": "Skip the Parchment This Baking Season",
+        "points": [
+          "2 half-sheet mats",
+          "Non-stick, reusable",
+          "Dishwasher safe"
+        ]
+      },
+      "blurb": "Cookies, roasted vegetables and sticky candied nuts release cleanly without buying roll after roll of parchment or foil. Two half-sheet mats fit standard pans, then rinse off or go in the dishwasher.",
+      "added": "2026-10-26",
+      "pin": {
+        "title": "Reusable Silicone Baking Mats for Holiday Cookies – Non-Stick Half-Sheet Set",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. These non-stick silicone mats replace parchment for holiday cookie baking and sheet-pan dinners. Two half-sheet mats fit standard pans and clean up in the dishwasher. #holidaybaking #christmascookies #bakinghacks #kitchenessentials",
+        "board": "Small Kitchen Gadgets We Love"
+      }
+    },
+    {
+      "asin": "B0B9P17YHK",
+      "name": "Evoloop Rapid Egg Cooker, 6-Egg Capacity",
+      "category": "appliances",
+      "subcategory": "countertop-cooking",
+      "award": "Best egg cooker",
+      "graphic": {
+        "label": "Evoloop Egg Cooker",
+        "headline": "Breakfast and Meal-Prep Eggs on Autopilot",
+        "points": [
+          "Cooks up to 6 eggs",
+          "Soft, medium or hard",
+          "Auto shut-off"
+        ]
+      },
+      "blurb": "Boiling a pot of water and watching the timer is a hassle on busy mornings. This compact cooker steams up to six eggs soft, medium or hard (or poaches them) and shuts itself off when they are done.",
+      "added": "2026-10-26",
+      "pin": {
+        "title": "Rapid Egg Cooker for Easy Hard-Boiled Eggs – 6-Egg Meal Prep Breakfast Helper",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Steam up to six eggs soft, medium or hard-boiled without watching a pot, plus a tray for poached eggs. It shuts off automatically when they are done, so meal-prep eggs practically make themselves. #mealprep #hardboiledeggs #breakfastideas #kitchenappliances",
+        "board": "Small Kitchen Gadgets We Love"
+      }
+    },
+    {
+      "asin": "B0CYQQXRNN",
+      "name": "Contigo West Loop Autoseal Travel Mug, 16 oz",
+      "category": "drinkware",
+      "subcategory": "insulated-drinkware",
+      "award": "Best leak-proof travel mug",
+      "graphic": {
+        "label": "Contigo West Loop Mug",
+        "headline": "Hot Coffee for the Whole Commute",
+        "points": [
+          "Autoseal leak-proof lid",
+          "Hot 11 hrs / cold 24 hrs",
+          "Dishwasher-safe lid"
+        ]
+      },
+      "blurb": "The Autoseal lid seals automatically between sips, so a mug tossed in a bag or tipped over in the car does not leak. Vacuum insulation keeps coffee hot through a long morning, and the lid is top-rack dishwasher safe.",
+      "added": "2026-10-26",
+      "pin": {
+        "title": "Contigo West Loop Leak-Proof Travel Mug – Keeps Fall Coffee Hot for Hours",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. The Autoseal lid locks between sips, so this travel mug won't spill in a bag or cup holder. It keeps coffee hot up to 11 hours on chilly fall mornings, and the easy-clean lid is dishwasher safe. #travelmug #coffeelover #fallmornings #commuteessentials",
+        "board": "Drinkware & Tumblers We Love"
+      }
     }
   ]
 }
