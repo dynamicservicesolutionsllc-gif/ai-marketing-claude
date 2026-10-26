@@ -28,7 +28,7 @@ DISCLOSURE = "As an Amazon Associate, we earn from qualifying purchases."
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
-PRIVACY_UPDATED = "2026-10-18"  # bump when the privacy text changes
+PRIVACY_UPDATED = "2026-10-20"  # bump when the privacy text changes
 GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
 e = html.escape
 PRICE_CLAIM = re.compile(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b|\bunder \$", re.I)
@@ -324,6 +324,14 @@ CSS = """
   .gcard strong { font-size:16px; line-height:1.3; }
   .gcard span { color:var(--mut); font-size:14px; }
   .gcard em { color:var(--acc); font-style:normal; font-size:14px; font-weight:600; }
+  .contact { display:flex; flex-direction:column; gap:14px; margin:20px 0; }
+  .contact label { display:flex; flex-direction:column; gap:4px; font-weight:600; font-size:14px; }
+  .contact input, .contact textarea { padding:10px 12px; border:1px solid var(--bd); border-radius:8px; font:inherit; font-weight:400; background:var(--card); color:var(--ink); }
+  .contact textarea:focus-visible, .contact input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .contact button { border:0; cursor:pointer; font:inherit; align-self:flex-start; }
+  .err { color:#b3261e; font-weight:600; }
+  @media (prefers-color-scheme: dark) { .err { color:#f2b8b5; } }
+  .fnav { display:flex; flex-wrap:wrap; gap:6px 16px; margin-bottom:12px; font-size:14px; }
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 """
@@ -394,7 +402,9 @@ def signup():
 
 
 def foot(site):
+    links = "".join(f'<a href="/{h["path"]}">{e(h["nav"])}</a>' for h in HUBS.values())
     return f"""  <footer>
+    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>{e(site['name'])} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. {DISCLOSURE} Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="{e(site['pinterest'])}">Pinterest</a> and <a href="{e(site['facebook'])}">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
@@ -426,8 +436,7 @@ def render_home(data, products):
             cards = "\n".join(card(p, tag) for p in items)
             sections.append(f'    <section id="{e(key)}">\n      <h2>{e(label)}</h2>\n      <div class="grid">\n{cards}\n      </div>\n    </section>')
     nav = ('<a href="#gifts">Gift Guides</a> ' if data.get("gift_guides") else "") + '<a href="#guides">Buying Guides</a> ' + " ".join(
-        f'<a href="#{e(k)}">{e(v)}</a>' for k, v in data["categories"].items()
-        if any(p["category"] == k and p["asin"] not in top_asins for p in products))
+        f'<a href="/{h["path"]}">{e(h["nav"])}</a>' for h in HUBS.values())
     top_cards = "\n".join(card(p, tag, eager=i < EAGER) for i, p in enumerate(top))
     tiles = "\n".join(
         f'        <a class="gcard" href="{guide_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
@@ -568,8 +577,8 @@ def render_guide(data, key, items):
     site, tag = data["site"], data["site"]["associate_tag"]
     gift = key in data.get("gift_guides", {})
     s = data["gift_guides"][key] if gift else data["subcategories"][key]
-    cat_label = "Holiday Gift Guides" if gift else data["categories"][s["category"]]
-    cat_anchor = "gifts" if gift else s["category"]
+    cat_label = "Holiday Gift Guides" if gift else HUBS[s["category"]]["nav"]
+    cat_href = "#gifts" if gift else HUBS[s["category"]]["path"]
     path = gift_path(key) if gift else guide_path(key)
     base = "../../"
     updated = max([p["added"] for p in items] + ([s["reviewed"]] if s.get("reviewed") else []))
@@ -660,7 +669,7 @@ def render_guide(data, key, items):
     graph = [
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
-            {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/#{cat_anchor}"},
+            {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/{cat_href}"},
             {"@type": "ListItem", "position": 3, "name": s["title"], "item": url}]},
         {"@type": "Article", "headline": s["title"], "description": s["description"], "dateModified": updated,
          "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/guides/{key}.jpg"},
@@ -674,7 +683,7 @@ def render_guide(data, key, items):
     return head(site, title, s["description"], path, f"{site['url']}/img/guides/{key}.jpg",
                 s["hero"]["alt"], 1600, 640, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
-    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}#{e(cat_anchor)}">{e(cat_label)}</a></span>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{cat_href}">{e(cat_label)}</a></span>
   </div>
   <main id="main">
     <figure class="hero">{hero_picture(key, base, s['hero']['alt'], eager=True)}<figcaption>Photo: {e(s['hero']['credit'])}</figcaption></figure>
@@ -724,6 +733,8 @@ def render_privacy(data):
     <p>When you click a link to Amazon, the site also records which page and product the click came from, where the visit originated (for example Pinterest or a search engine) and the time, so we can tell which pages are useful. This click log stores no IP address, cookies, name or contact details.</p>
     <h2>Email sign-up</h2>
     <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
+    <h2>Contact form</h2>
+    <p>If you use our contact form, we receive the name, email address and message you enter, by email and as a backup copy stored on our web host. We use them only to reply to you and delete them on request.</p>
     <h2>Hosting and server logs</h2>
     <p>Our host may log standard request data (such as IP address, browser type, and pages requested) to keep the site running and secure.</p>
     <h2>Children</h2>
@@ -745,6 +756,134 @@ def render_simple(data, path, title, heading, body):
     <h1>{e(heading)}</h1>
     <p>{body}</p>
     <p><a class="btn" href="/#top-picks">See this week's top picks</a></p>
+  </main>
+""" + foot(site)
+
+
+# Category hub pages: one per top-level category, linking its buying guides and every pick in it.
+HUBS = {
+    "organization": {"path": "kitchen-organization/", "nav": "Kitchen Organization",
+                     "title": "Kitchen Organization Ideas for Small Kitchens",
+                     "intro": "Drawer, cabinet, pantry, sink and pot-and-lid storage for kitchens that are short on space. Start with the guide for the spot you're fixing: each one says what to measure first and which kind of organizer suits which situation."},
+    "gadgets": {"path": "kitchen-gadgets/", "nav": "Kitchen Gadgets",
+                "title": "Small Kitchen Gadgets Worth the Drawer Space",
+                "intro": "Prep tools, scales, thermometers, frothers and kettles that make everyday cooking faster without taking over your drawers. Each guide explains what the gadget is good for and what to check before you buy."},
+    "appliances": {"path": "small-kitchen-appliances/", "nav": "Small Kitchen Appliances",
+                   "title": "Small Kitchen Appliances for Limited Counter Space",
+                   "intro": "Immersion blenders, hand mixers, air fryers, slow cookers and other compact appliances for kitchens without much counter. The guides cover footprint, storage and cleanup, so you can tell what will actually fit."},
+    "drinkware": {"path": "drinkware/", "nav": "Drinkware",
+                  "title": "Insulated Tumblers and Water Bottles",
+                  "intro": "Insulated tumblers and bottles for coffee on the go, all-day water and the car cup holder. The guide covers lids, sizes, cup-holder fit and cleaning."},
+}
+
+
+def page_top(site, crumb=""):
+    return f"""  <div class="top"><a class="brand" href="/">{e(site['name'])}</a>{crumb}</div>
+"""
+
+
+def render_hub(data, key, products):
+    site, tag, h = data["site"], data["site"]["associate_tag"], HUBS[key]
+    items = [p for p in products if p["category"] == key]
+    subs = [(k, s) for k, s in data["subcategories"].items() if s["category"] == key]
+    tiles = "\n".join(
+        f'        <a class="gcard" href="/{guide_path(k)}"><span class="thumb">{hero_picture(k, "/", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
+        f'<span>{e(s["description"])}</span><em>{len(guide_products(products, k))} picks · Read the guide →</em></a>'
+        for k, s in subs)
+    cards = "\n".join(card(p, tag, "/", eager=i < EAGER) for i, p in enumerate(items))
+    url = f"{site['url']}/{h['path']}"
+    graph = [{"@type": "CollectionPage", "name": h["title"], "url": url, "description": h["intro"],
+              "isPartOf": {"@id": f"{site['url']}/#site"},
+              "mainEntity": {"@type": "ItemList", "itemListElement": [
+                  {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": f"{site['url']}/{page_path(p)}"}
+                  for i, p in enumerate(items)]}},
+             {"@type": "BreadcrumbList", "itemListElement": [
+                 {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['url']}/"},
+                 {"@type": "ListItem", "position": 2, "name": h["nav"], "item": url}]}]
+    return head(site, f"{h['title']} | {site['name']}", describe(h["intro"]), h["path"], f"{site['url']}/img/og.png",
+                site["name"], OG_W, OG_H, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + page_top(
+        site, f'<span class="crumbs"><a href="/">Home</a> › {e(h["nav"])}</span>') + f"""  <main id="main">
+    <section class="guide">
+      <h1>{e(h['title'])}</h1>
+      <p class="intro">{e(h['intro'])}</p>
+    </section>
+    <section>
+      <h2>Buying guides</h2>
+      <div class="guides">
+{tiles}
+      </div>
+    </section>
+    <section>
+      <h2>Every {e(h['nav'].lower())} pick</h2>
+      <div class="grid">
+{cards}
+      </div>
+    </section>
+{signup()}  </main>
+""" + foot(site)
+
+
+def render_about(data):
+    site = data["site"]
+    hubs = ", ".join(h["nav"].lower() for h in HUBS.values())
+    return head(site, f"About | {site['name']}", f"What {site['name']} covers, how products are chosen, and how the site is funded.",
+                "about/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H) + page_top(site) + f"""  <main id="main" class="prose">
+    <h1>About {e(site['name'])}</h1>
+    <p>{e(site['name'])} is an independent site about making small, busy kitchens work better: {e(hubs)}. Every buying guide starts from a real problem, such as a cluttered drawer, a cramped sink cabinet or a counter with no room left, and points you to the kinds of products that solve it.</p>
+    <h2>How we choose products</h2>
+    <ul>
+      <li>We look for products that fix a specific, everyday kitchen problem and suit kitchens with limited space.</li>
+      <li>Before adding a product we compare its listing, its dimensions and specifications, and the recurring themes in customer reviews.</li>
+      <li>We don't test products hands-on, and we say so. Our write-ups are based on published details and what buyers report.</li>
+      <li>We don't post prices or star ratings, because they change constantly. Every product links to its current Amazon listing so you can check the latest details.</li>
+      <li>Our guides tell you what to measure before you buy, because the most common problem with kitchen organizers is the wrong size.</li>
+    </ul>
+    <h2>How the site is funded</h2>
+    <p>{e(site['name'])} is a participant in the Amazon Services LLC Associates Program. {DISCLOSURE} It doesn't change what you pay, and it keeps the site free and free of display ads.</p>
+    <h2>Get in touch</h2>
+    <p>Questions, corrections or product suggestions are welcome. Email <a href="mailto:{e(site['email'])}">{e(site['email'])}</a> or use the <a href="/contact/">contact form</a>.</p>
+    <p><a class="btn" href="/#top-picks">See this week's top picks</a></p>
+  </main>
+""" + foot(site)
+
+
+def render_contact(data):
+    site = data["site"]
+    return head(site, f"Contact | {site['name']}", f"Contact {site['name']} with questions, corrections or product suggestions.",
+                "contact/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H) + page_top(site) + f"""  <main id="main" class="prose">
+    <h1>Contact us</h1>
+    <p>Questions, corrections, or a product you think belongs here? Send a message and we'll reply by email, usually within two business days. You can also email <a href="mailto:{e(site['email'])}">{e(site['email'])}</a> directly.</p>
+    <p>Questions about an order, shipping or a return go to Amazon: purchases are made there, and we can't see or change orders.</p>
+    <form class="contact" id="form" method="POST" action="/contact.php">
+      <p class="hidden"><label>Leave this empty: <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <label>Name <input name="name" required maxlength="100" autocomplete="name"></label>
+      <label>Email <input type="email" name="email" required maxlength="254" autocomplete="email"></label>
+      <label>Message <textarea name="message" required minlength="10" maxlength="5000" rows="7"></textarea></label>
+      <p class="err" id="err" hidden>Your message wasn't sent. Check that every field is filled in, or email us directly.</p>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+    <script>if(new URLSearchParams(location.search).has("error"))document.getElementById("err").hidden=false;</script>
+    <p><small>We use your details only to reply to you. See our <a href="/privacy/">privacy policy</a>.</small></p>
+  </main>
+""" + foot(site)
+
+
+def render_newsletter(data, products):
+    site, tag = data["site"], data["site"]["associate_tag"]
+    latest = "\n".join(card(p, tag, "/") for p in products[:3])
+    desc = "Get the free Small-Kitchen Measuring Checklist and one short email when we add new kitchen organization, gadget and appliance picks."
+    return head(site, f"Free Small-Kitchen Measuring Checklist | {site['name']}", desc, "newsletter/", f"{site['url']}/img/og.png",
+                site["name"], OG_W, OG_H) + page_top(site) + f"""  <main id="main">
+    <section class="guide">
+      <h1>Measure once, buy the right size</h1>
+      <p class="intro">The most common reason a drawer organizer, dish rack or under-sink shelf goes back is that it doesn't fit. Our free one-page checklist lists every measurement our buying guides are built around: drawers, cabinets, the space around the drain pipe, the counter beside the sink and more.</p>
+    </section>
+{signup()}    <section>
+      <h2>The latest picks</h2>
+      <div class="grid">
+{latest}
+      </div>
+    </section>
   </main>
 """ + foot(site)
 
@@ -801,6 +940,37 @@ if ($fh) {
   fclose($fh);
 }
 header('Location: /thanks/', true, 303);
+"""
+
+
+CONTACT_PHP = r"""<?php
+// Generated by build.py — edit there. Emails contact-form messages to the site mailbox and keeps a
+// backup copy next to public_html (not web-reachable).
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: /contact/', true, 303); exit; }
+if (trim((string)($_POST['website'] ?? '')) !== '') { header('Location: /contact/sent/', true, 303); exit; }  // honeypot
+$to = 'help@kitchenfindsfavorites.com';
+$name = substr(trim((string)preg_replace('/[\r\n\t]+/', ' ', (string)($_POST['name'] ?? ''))), 0, 100);  // no header injection
+$email = strtolower(trim((string)($_POST['email'] ?? '')));
+$message = trim(str_replace("\r\n", "\n", (string)($_POST['message'] ?? '')));
+if ($name === '' || strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)
+    || strlen($message) < 10 || strlen($message) > 5000) {
+  header('Location: /contact/?error=1#form', true, 303); exit;
+}
+$safe = function ($v) { return preg_match('/^[=+\-@\t\r]/', $v) ? "'" . $v : $v; };  // no spreadsheet formulas
+$fh = @fopen(dirname(__DIR__) . '/kff-contact.csv', 'a');
+if ($fh) {
+  if (flock($fh, LOCK_EX)) { fputcsv($fh, [gmdate('c'), $safe($name), $safe($email), $safe($message)]); flock($fh, LOCK_UN); }
+  fclose($fh);
+}
+$subject = '=?UTF-8?B?' . base64_encode('Website message from ' . $name) . '?=';
+$body = "Name: $name\nEmail: $email\n\n$message\n\n-- Sent from the contact form on kitchenfindsfavorites.com\n";
+// Send as the hosting server's own address: Hostinger's PHP mail() goes out from the shared server
+// (unsigned), so a From of @kitchenfindsfavorites.com fails DMARC and lands in Junk.
+$host = gethostname();
+$from = (is_string($host) && strpos($host, '.') !== false) ? 'noreply@' . $host : $to;
+$headers = "From: Kitchen Finds & Favorites website <$from>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
+$sent = @mail($to, $subject, $body, $headers);
+header('Location: ' . ($sent ? '/contact/sent/' : '/contact/?error=1#form'), true, 303);
 """
 
 
@@ -885,6 +1055,23 @@ def main():
     pin_list = pins.build(data, OUT, url, force="--force-graphics" in sys.argv)
     (OUT / "pins.json").write_text(json.dumps(pin_list, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     (OUT / "subscribe.php").write_text(SUBSCRIBE_PHP, encoding="utf-8")
+    (OUT / "contact.php").write_text(CONTACT_PHP, encoding="utf-8")
+    extra_urls = []
+    for key, h in HUBS.items():
+        d = OUT / h["path"]
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(render_hub(data, key, products), encoding="utf-8")
+        extra_urls.append((f"{url}/{h['path']}", max(p["added"] for p in products if p["category"] == key)))
+    for path, html in (("about/", render_about(data)), ("contact/", render_contact(data)),
+                       ("newsletter/", render_newsletter(data, products))):
+        (OUT / path).mkdir(exist_ok=True)
+        (OUT / path / "index.html").write_text(html, encoding="utf-8")
+        extra_urls.append((f"{url}/{path}", None))
+    (OUT / "contact" / "sent").mkdir(exist_ok=True)
+    (OUT / "contact" / "sent" / "index.html").write_text(render_simple(
+        data, "contact/sent/", "Message sent", "Thanks, your message is on its way",
+        "We usually reply within two business days. Questions about an order go to Amazon, since purchases are made there."),
+        encoding="utf-8")
     (OUT / "privacy").mkdir(exist_ok=True)
     (OUT / "privacy" / "index.html").write_text(render_privacy(data), encoding="utf-8")
     (OUT / "thanks").mkdir(exist_ok=True)
@@ -906,7 +1093,7 @@ def main():
             for p in sorted(data["products"], key=lambda p: p["added"])]
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
-    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + gift_urls + guide_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
+    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
