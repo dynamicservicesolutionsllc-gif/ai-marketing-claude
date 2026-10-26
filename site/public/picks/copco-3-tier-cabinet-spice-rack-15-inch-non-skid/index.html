@@ -120,6 +120,11 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .more { color:var(--acc); font-size:14px; }
   .prose.wide { max-width:760px; padding:24px 0; }
   .prose h3 { font-size:17px; margin:16px 0 4px; }
+  .vs-wrap { overflow-x:auto; margin:12px 0 8px; }
+  .vs { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--bd); font-size:15px; }
+  .vs th, .vs td { padding:10px 12px; border-bottom:1px solid var(--bd); text-align:left; vertical-align:top; }
+  .vs thead th { font-size:14px; }
+  .vs tbody th { color:var(--mut); font-weight:600; width:22%; }
   .links { list-style:none; display:flex; flex-wrap:wrap; gap:10px 20px; }
   .links a { color:var(--acc); }
   .guides { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; }
@@ -164,6 +169,13 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
         </div>
       </div>
     </article>
+    <section class="prose wide">
+      <h2>Who it's for</h2>
+      <p>For anyone whose back-row spices disappear behind the front row. Three staggered tiers lift every jar into view.</p>
+      <h2>Before you buy</h2>
+      <p>At 15 inches wide and 9 inches deep, measure your cabinet before ordering. It needs no assembly, and the non-skid lining keeps jars in place.</p>
+      <p><small>Product details can change, so check the current listing on Amazon.</small></p>
+    </section>
     <section>
       <h2>More picks like this</h2>
       <div class="grid">

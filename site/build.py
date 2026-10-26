@@ -68,6 +68,13 @@ def load():
         slugs.add(s)
         if p.get("category") not in cats:
             errors.append(f"{where}: unknown category '{p.get('category')}' (add it to 'categories')")
+        if bool(str(p.get("suits", "")).strip()) != bool(str(p.get("check", "")).strip()):
+            errors.append(f"{where}: 'suits' and 'check' (the Who it's for / Before you buy text) must be filled in together")
+        details = f"{p.get('suits', '')} {p.get('check', '')}"
+        if TESTING_CLAIM.search(details):
+            errors.append(f"{where}: suits/check copy implies hands-on testing/personal use")
+        if PRICE_CLAIM.search(details):
+            errors.append(f"{where}: no prices, star ratings, or price claims in suits/check copy")
         if p.get("subcategory") not in data.get("subcategories", {}):
             errors.append(f"{where}: unknown subcategory '{p.get('subcategory')}' (add it to 'subcategories')")
         if not str(p.get("award", "")).strip():
@@ -174,6 +181,43 @@ def load():
             errors.append(f"{where}: copy implies hands-on testing/personal use")
         if PRICE_CLAIM.search(copy):
             errors.append(f"{where}: no prices, star ratings, or price claims in gift guide copy")
+    for key, c in data.get("comparisons", {}).items():
+        where = f"comparisons['{key}']"
+        if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", key):
+            errors.append(f"{where}: key must be a lowercase-hyphenated URL slug")
+        for field in ("title", "description", "h1", "crumb", "intro", "added"):
+            if not str(c.get(field, "")).strip():
+                errors.append(f"{where}: missing '{field}'")
+        if len(c.get("title", "")) > 60:
+            errors.append(f"{where}: title over 60 characters")
+        if len(c.get("description", "")) > 155:
+            errors.append(f"{where}: description over 155 characters (search results truncate it)")
+        asins = c.get("products") or []
+        if not 2 <= len(asins) <= 3:
+            errors.append(f"{where}: compare 2 or 3 products")
+        for a in asins:
+            if a not in by_asin:
+                errors.append(f"{where}: ASIN {a} is not in products")
+        subs = {p["subcategory"] for p in data["products"] if p["asin"] in asins}
+        if len(subs) != 1:
+            errors.append(f"{where}: all compared products must be in the same buying guide")
+        if len(c.get("col_names") or []) != len(asins):
+            errors.append(f"{where}: needs one 'col_names' entry per product")
+        if len(c.get("short") or []) < 2 or any(len(x) != 2 for x in c.get("short") or []):
+            errors.append(f"{where}: 'short' needs at least 2 [lead, rest] pairs")
+        if not c.get("rows") or any(len(r) != len(asins) + 1 for r in c["rows"]):
+            errors.append(f"{where}: every row needs a label plus one cell per product")
+        if len(c.get("decide") or []) < 2 or any(len(x) != 2 for x in c.get("decide") or []):
+            errors.append(f"{where}: 'decide' needs at least 2 [heading, text] pairs")
+        try:
+            date.fromisoformat(c.get("added", ""))
+        except ValueError:
+            errors.append(f"{where}: 'added' must be YYYY-MM-DD")
+        copy = json.dumps(c, ensure_ascii=False)
+        if TESTING_CLAIM.search(copy):
+            errors.append(f"{where}: copy implies hands-on testing/personal use")
+        if PRICE_CLAIM.search(copy):
+            errors.append(f"{where}: no prices, star ratings, or price claims in comparison copy")
     for ch, t in (data["site"].get("channel_tags") or {}).items():
         if t and not re.fullmatch(r"[a-z0-9-]+-2[0-9]", t):
             errors.append(f"site.channel_tags['{ch}']: '{t}' doesn't look like an Associates tracking ID")
@@ -316,6 +360,11 @@ CSS = """
   .more { color:var(--acc); font-size:14px; }
   .prose.wide { max-width:760px; padding:24px 0; }
   .prose h3 { font-size:17px; margin:16px 0 4px; }
+  .vs-wrap { overflow-x:auto; margin:12px 0 8px; }
+  .vs { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--bd); font-size:15px; }
+  .vs th, .vs td { padding:10px 12px; border-bottom:1px solid var(--bd); text-align:left; vertical-align:top; }
+  .vs thead th { font-size:14px; }
+  .vs tbody th { color:var(--mut); font-weight:600; width:22%; }
   .links { list-style:none; display:flex; flex-wrap:wrap; gap:10px 20px; }
   .links a { color:var(--acc); }
   .guides { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:14px; }
@@ -461,7 +510,7 @@ def render_home(data, products):
       </div>
     </section>
 """
-    title = f"{site['name']}: Small Kitchen Organization"
+    title = seo_title("Small Kitchen Organization Ideas, Gadgets & Gear", site)
     return head(site, title, site["tagline"], "", f"{site['url']}/img/og.png",
                 f"{site['name']} — {site['tagline']}", OG_W, OG_H, site_ld(site, products) + "\n") + f"""  <header>
     <h1>{e(site['name'])}<span class="sub">Organization, gadgets &amp; small appliances for small kitchens</span></h1>
@@ -509,10 +558,19 @@ def render_pick(data, p, products):
     near = [q for q in products if q["category"] == p["category"] and q["subcategory"] != p["subcategory"]]
     more = (same + near)[:3]
     more_html = ""
+    cmp_links = "".join(
+        f'      <p style="margin-top:8px"><a class="more" href="{base}{comparison_path(k)}">Compare: {e(c["h1"])} →</a></p>\n'
+        for k, c in data.get("comparisons", {}).items() if p["asin"] in c["products"])
+    details_html = ""
+    if p.get("suits"):
+        details_html = (f'    <section class="prose wide">\n      <h2>Who it\'s for</h2>\n      <p>{e(p["suits"])}</p>\n'
+                        f'      <h2>Before you buy</h2>\n      <p>{e(p["check"])}</p>\n'
+                        f'      <p><small>Product details can change, so check the current listing on Amazon.</small></p>\n    </section>\n')
     if more:
         cards = "\n".join(card(q, tag, base) for q in more)
         more_html = (f'    <section>\n      <h2>More picks like this</h2>\n      <div class="grid">\n{cards}\n      </div>\n'
-                     f'      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(p["subcategory"])}">See the full guide: {e(sub["title"])} →</a></p>\n    </section>\n')
+                     f'      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(p["subcategory"])}">See the full guide: {e(sub["title"])} →</a></p>\n'
+                     f'{cmp_links}    </section>\n')
     crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
         {"@type": "ListItem", "position": 2, "name": sub["title"], "item": f"{site['url']}/{guide_path(p['subcategory'])}"},
@@ -539,7 +597,7 @@ def render_pick(data, p, products):
         </div>
       </div>
     </article>
-{more_html}{signup()}  </main>
+{details_html}{more_html}{signup()}  </main>
 """ + foot(site)
 
 
@@ -566,6 +624,71 @@ def render_hero_images(data):
             r = im.resize(size, Image.LANCZOS) if im.width != width else im
             r.save(out / f"{key}{suffix}.jpg", "JPEG", quality=80, optimize=True, progressive=True)
             r.save(out / f"{key}{suffix}.webp", "WEBP", quality=78, method=6)
+
+
+def comparison_path(key):
+    return f"comparisons/{key}/"
+
+
+def comparison_guide_key(data, c):
+    by_asin = {p["asin"]: p for p in data["products"]}
+    return by_asin[c["products"][0]]["subcategory"]
+
+
+def render_comparison(data, key):
+    site, tag = data["site"], data["site"]["associate_tag"]
+    c = data["comparisons"][key]
+    by_asin = {p["asin"]: p for p in data["products"]}
+    items = [by_asin[a] for a in c["products"]]
+    gkey = items[0]["subcategory"]
+    sub = data["subcategories"][gkey]
+    base = "../../"
+    crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
+        {"@type": "ListItem", "position": 2, "name": sub["title"], "item": f"{site['url']}/{guide_path(gkey)}"},
+        {"@type": "ListItem", "position": 3, "name": c["title"], "item": f"{site['url']}/{comparison_path(key)}"}]})
+    short = "\n".join(f"      <li><strong>{e(lead)}</strong> {e(rest)}</li>" for lead, rest in c["short"])
+    thead = "".join(f'<th scope="col">{e(n)}</th>' for n in c["col_names"])
+    rows = "\n".join('        <tr><th scope="row">' + e(r[0]) + "</th>" + "".join(f"<td>{e(x)}</td>" for x in r[1:]) + "</tr>"
+                     for r in c["rows"])
+    decide = "".join(f"      <h3>{e(h)}</h3>\n      <p>{e(t)}</p>\n" for h, t in c["decide"])
+    cards = "\n".join(card(q, tag, base) for q in items)
+    first = items[0]
+    return head(site, c["title"], c["description"], comparison_path(key), f"{site['url']}/img/{first['asin']}.png",
+                first["graphic"]["headline"], 1000, 1500, crumbs + "\n") + f"""  <div class="top">
+    <a class="brand" href="{base}">{e(site['name'])}</a>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{guide_path(gkey)}">{e(sub['title'])}</a> › {e(c['crumb'])}</span>
+  </div>
+  <main id="main">
+    <p class="callout">{DISCLOSURE} The "Check price on Amazon" buttons below are affiliate links.</p>
+    <section class="prose wide">
+      <h1>{e(c['h1'])}</h1>
+      <p>{e(c['intro'])}</p>
+      <h2>The short answer</h2>
+      <ul>
+{short}
+      </ul>
+      <h2>Side-by-side</h2>
+      <div class="vs-wrap">
+        <table class="vs">
+          <thead><tr><th scope="col"></th>{thead}</tr></thead>
+          <tbody>
+{rows}
+          </tbody>
+        </table>
+      </div>
+      <p><small>Product details can change. Check the current listing on Amazon before you buy.</small></p>
+      <h2>How to decide</h2>
+{decide}    </section>
+    <section>
+      <h2>Our picks</h2>
+      <div class="grid">
+{cards}
+      </div>
+      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(gkey)}">See the full guide: {e(sub['title'])} →</a></p>
+    </section>
+{signup()}  </main>
+""" + foot(site)
 
 
 def guide_path(key):
@@ -624,6 +747,11 @@ def render_guide(data, key, items):
       </div>
     </article>""")
     quick_answer = f'\n      <p class="callout"><strong>Quick answer:</strong> {e(s["quick_answer"])}</p>' if s.get("quick_answer") else ""
+    cmp_callout = ""
+    cmps = [(k, c) for k, c in data.get("comparisons", {}).items() if not gift and comparison_guide_key(data, c) == key]
+    if cmps:
+        cmp_callout = ('\n      <p class="callout"><strong>Head-to-head:</strong> '
+                       + " · ".join(f'<a href="{base}{comparison_path(k)}">{e(c["h1"])}</a>' for k, c in cmps) + "</p>")
     measure = ""
     if s.get("measure"):
         measure = (f"    <section class=\"prose wide\">\n      <h2>{e(s.get('measure_heading', 'Before you buy, measure these'))}</h2>\n      <ol>"
@@ -705,7 +833,7 @@ def render_guide(data, key, items):
       <h1>{e(s['title'])} ({year})</h1>
       <p class="updated">Updated {month} · {len(items)} picks</p>
       <p class="callout"><strong>Affiliate disclosure:</strong> {e(site['name'])} is reader-supported. Buttons marked "Check price on Amazon" are affiliate links. {DISCLOSURE} It costs you nothing extra, and picks are chosen from product research, not commission rates.</p>
-      <p class="intro">{e(s['intro'])}</p>{quick_answer}
+      <p class="intro">{e(s['intro'])}</p>{quick_answer}{cmp_callout}
     </header>
     <section>
       <h2>{"The gift list" if gift else "Quick picks"}</h2>
@@ -1047,6 +1175,13 @@ def main():
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_guide(data, key, items), encoding="utf-8")
         guide_urls.append((f"{url}/{guide_path(key)}", max(p["added"] for p in items)))
+    shutil.rmtree(OUT / "comparisons", ignore_errors=True)
+    comparison_urls = []
+    for key, c in data.get("comparisons", {}).items():
+        d = OUT / comparison_path(key)
+        d.mkdir(parents=True)
+        (d / "index.html").write_text(render_comparison(data, key), encoding="utf-8")
+        comparison_urls.append((f"{url}/{comparison_path(key)}", c["added"]))
     shutil.rmtree(OUT / "gifts", ignore_errors=True)
     gift_urls = []
     for key in data.get("gift_guides", {}):
@@ -1107,7 +1242,7 @@ def main():
             for p in sorted(data["products"], key=lambda p: p["added"])]
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
-    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
+    urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + comparison_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
