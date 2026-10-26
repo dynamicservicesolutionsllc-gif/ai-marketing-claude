@@ -114,8 +114,8 @@ def load():
                 errors.append(f"{where}: missing '{field}'")
         if len(s.get("title", "")) > 60:
             errors.append(f"{where}: title over 60 characters (search results truncate it)")
-        if len(s.get("description", "")) > 160:
-            errors.append(f"{where}: description over 160 characters")
+        if len(s.get("description", "")) > 155:
+            errors.append(f"{where}: description over 155 characters (search results truncate it)")
         if len(s.get("criteria", [])) < 2 or len(s.get("guide", [])) < 2:
             errors.append(f"{where}: needs at least 2 'criteria' and 2 'guide' entries")
         copy = json.dumps(s, ensure_ascii=False)
@@ -154,8 +154,8 @@ def load():
                 errors.append(f"{where}: missing '{field}'")
         if len(g.get("title", "")) > 60:
             errors.append(f"{where}: title over 60 characters")
-        if len(g.get("description", "")) > 160:
-            errors.append(f"{where}: description over 160 characters")
+        if len(g.get("description", "")) > 155:
+            errors.append(f"{where}: description over 155 characters (search results truncate it)")
         hero = g.get("hero") or {}
         if not hero.get("alt") or not hero.get("credit"):
             errors.append(f"{where}: needs hero {{alt, credit}}")
@@ -461,7 +461,7 @@ def render_home(data, products):
       </div>
     </section>
 """
-    title = f"Small Kitchen Organization & Gadget Picks | {site['name']}"
+    title = f"{site['name']}: Small Kitchen Organization"
     return head(site, title, site["tagline"], "", f"{site['url']}/img/og.png",
                 f"{site['name']} — {site['tagline']}", OG_W, OG_H, site_ld(site, products) + "\n") + f"""  <header>
     <h1>{e(site['name'])}<span class="sub">Organization, gadgets &amp; small appliances for small kitchens</span></h1>
@@ -479,6 +479,20 @@ def render_home(data, products):
 {chr(10).join(sections)}
 {signup()}  </main>
 """ + foot(site)
+
+
+def seo_title(text, site, limit=60):
+    """<title> under `limit` chars: add the site name only when it fits, else trim at a word boundary."""
+    branded = f"{text} | {site['name']}"
+    if len(branded) <= limit:
+        return branded
+    if len(text) <= limit:
+        return text
+    cut = text[:limit + 1].rsplit(" ", 1)[0].rstrip(",;:—-&")
+    for joiner in (" with ", ", "):  # prefer ending at a phrase boundary over a dangling word
+        if joiner in cut and len(cut.rsplit(joiner, 1)[0]) >= 30:
+            return cut.rsplit(joiner, 1)[0]
+    return cut
 
 
 def describe(text, limit=155):
@@ -504,7 +518,7 @@ def render_pick(data, p, products):
         {"@type": "ListItem", "position": 2, "name": sub["title"], "item": f"{site['url']}/{guide_path(p['subcategory'])}"},
         {"@type": "ListItem", "position": 3, "name": p["name"], "item": f"{site['url']}/{page_path(p)}"}]})
     points = "".join(f"<li>{e(pt)}</li>" for pt in p["graphic"]["points"])
-    title = f"{p['name']} | {site['name']}"
+    title = seo_title(p["name"], site)
     return head(site, title, describe(p["blurb"]), page_path(p), f"{site['url']}/img/{p['asin']}.png",
                 p["graphic"]["headline"], 1000, 1500, crumbs + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
@@ -679,7 +693,7 @@ def render_guide(data, key, items):
     if faq:
         graph.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
-    title = f"{s['title']} ({year}) | {site['name']}"
+    title = seo_title(f"{s['title']} ({year})", site)
     return head(site, title, s["description"], path, f"{site['url']}/img/guides/{key}.jpg",
                 s["hero"]["alt"], 1600, 640, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
@@ -800,7 +814,7 @@ def render_hub(data, key, products):
              {"@type": "BreadcrumbList", "itemListElement": [
                  {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['url']}/"},
                  {"@type": "ListItem", "position": 2, "name": h["nav"], "item": url}]}]
-    return head(site, f"{h['title']} | {site['name']}", describe(h["intro"]), h["path"], f"{site['url']}/img/og.png",
+    return head(site, seo_title(h["title"], site), describe(h["intro"]), h["path"], f"{site['url']}/img/og.png",
                 site["name"], OG_W, OG_H, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + page_top(
         site, f'<span class="crumbs"><a href="/">Home</a> › {e(h["nav"])}</span>') + f"""  <main id="main">
     <section class="guide">
@@ -872,7 +886,7 @@ def render_newsletter(data, products):
     site, tag = data["site"], data["site"]["associate_tag"]
     latest = "\n".join(card(p, tag, "/") for p in products[:3])
     desc = "Get the free Small-Kitchen Measuring Checklist and one short email when we add new kitchen organization, gadget and appliance picks."
-    return head(site, f"Free Small-Kitchen Measuring Checklist | {site['name']}", desc, "newsletter/", f"{site['url']}/img/og.png",
+    return head(site, seo_title("Free Small-Kitchen Measuring Checklist", site), desc, "newsletter/", f"{site['url']}/img/og.png",
                 site["name"], OG_W, OG_H) + page_top(site) + f"""  <main id="main">
     <section class="guide">
       <h1>Measure once, buy the right size</h1>
