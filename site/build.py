@@ -266,8 +266,39 @@ def card(p, tag, base="", eager=False):
       </article>"""
 
 
+# Schema.org keys that carry prices or ratings; Associates rules keep them out of structured data too.
+LD_BANNED = {"offers", "price", "priceCurrency", "aggregateRating", "review", "reviewRating", "ratingValue", "reviewCount"}
+
+
+def ld_check(obj):
+    if isinstance(obj, dict):
+        bad = LD_BANNED & obj.keys()
+        if bad or obj.get("@type") in ("Product", "Review", "AggregateRating", "Offer"):
+            sys.exit(f"JSON-LD must not include price/rating markup: {sorted(bad) or obj['@type']}")
+        for v in obj.values():
+            ld_check(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            ld_check(v)
+
+
 def ld(obj):
+    ld_check(obj)
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def breadcrumbs(site, trail):
+    """BreadcrumbList node from (name, path) pairs after the homepage; matches the visible crumbs."""
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": name, "item": f"{site['url']}/{path}"}
+        for i, (name, path) in enumerate([(site["name"], "")] + trail)]}
+
+
+def page_node(site, kind, path, name, description):
+    """WebPage-type node (AboutPage, ContactPage, ...) tied to the site and publisher."""
+    return {"@type": kind, "@id": f"{site['url']}/{path}#page", "url": f"{site['url']}/{path}", "name": name,
+            "description": description, "isPartOf": {"@id": f"{site['url']}/#site"},
+            "publisher": {"@id": f"{site['url']}/#org"}}
 
 
 CSS = """
@@ -571,16 +602,15 @@ def render_pick(data, p, products):
         more_html = (f'    <section>\n      <h2>More picks like this</h2>\n      <div class="grid">\n{cards}\n      </div>\n'
                      f'      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(p["subcategory"])}">See the full guide: {e(sub["title"])} →</a></p>\n'
                      f'{cmp_links}    </section>\n')
-    crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
-        {"@type": "ListItem", "position": 2, "name": sub["title"], "item": f"{site['url']}/{guide_path(p['subcategory'])}"},
-        {"@type": "ListItem", "position": 3, "name": p["name"], "item": f"{site['url']}/{page_path(p)}"}]})
+    hub = HUBS[sub["category"]]
+    crumbs = ld({"@context": "https://schema.org", **breadcrumbs(site, [
+        (hub["nav"], hub["path"]), (sub["title"], guide_path(p["subcategory"])), (p["name"], page_path(p))])})
     points = "".join(f"<li>{e(pt)}</li>" for pt in p["graphic"]["points"])
     title = seo_title(p["name"], site)
     return head(site, title, describe(p["blurb"]), page_path(p), f"{site['url']}/img/{p['asin']}.png",
                 p["graphic"]["headline"], 1000, 1500, crumbs + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
-    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{guide_path(p['subcategory'])}">{e(sub['title'])}</a></span>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{hub['path']}">{e(hub['nav'])}</a> › <a href="{base}{guide_path(p['subcategory'])}">{e(sub['title'])}</a></span>
   </div>
   <main id="main">
     <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
@@ -643,10 +673,15 @@ def render_comparison(data, key):
     gkey = items[0]["subcategory"]
     sub = data["subcategories"][gkey]
     base = "../../"
-    crumbs = ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
-        {"@type": "ListItem", "position": 2, "name": sub["title"], "item": f"{site['url']}/{guide_path(gkey)}"},
-        {"@type": "ListItem", "position": 3, "name": c["title"], "item": f"{site['url']}/{comparison_path(key)}"}]})
+    hub = HUBS[sub["category"]]
+    url = f"{site['url']}/{comparison_path(key)}"
+    crumbs = ld({"@context": "https://schema.org", "@graph": [
+        breadcrumbs(site, [(hub["nav"], hub["path"]), (sub["title"], guide_path(gkey)), (c["crumb"], comparison_path(key))]),
+        {"@type": "Article", "headline": c["h1"], "description": c["description"], "dateModified": c["added"],
+         "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/{items[0]['asin']}.png"},
+        {"@type": "ItemList", "name": c["h1"], "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": f"{site['url']}/{page_path(p)}"}
+            for i, p in enumerate(items)]}]})
     short = "\n".join(f"      <li><strong>{e(lead)}</strong> {e(rest)}</li>" for lead, rest in c["short"])
     thead = "".join(f'<th scope="col">{e(n)}</th>' for n in c["col_names"])
     rows = "\n".join('        <tr><th scope="row">' + e(r[0]) + "</th>" + "".join(f"<td>{e(x)}</td>" for x in r[1:]) + "</tr>"
@@ -657,7 +692,7 @@ def render_comparison(data, key):
     return head(site, c["title"], c["description"], comparison_path(key), f"{site['url']}/img/{first['asin']}.png",
                 first["graphic"]["headline"], 1000, 1500, crumbs + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
-    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{guide_path(gkey)}">{e(sub['title'])}</a> › {e(c['crumb'])}</span>
+    <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{hub['path']}">{e(hub['nav'])}</a> › <a href="{base}{guide_path(gkey)}">{e(sub['title'])}</a> › {e(c['crumb'])}</span>
   </div>
   <main id="main">
     <p class="callout">{DISCLOSURE} The "Check price on Amazon" buttons below are affiliate links.</p>
@@ -939,9 +974,7 @@ def render_hub(data, key, products):
               "mainEntity": {"@type": "ItemList", "itemListElement": [
                   {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": f"{site['url']}/{page_path(p)}"}
                   for i, p in enumerate(items)]}},
-             {"@type": "BreadcrumbList", "itemListElement": [
-                 {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{site['url']}/"},
-                 {"@type": "ListItem", "position": 2, "name": h["nav"], "item": url}]}]
+             breadcrumbs(site, [(h["nav"], h["path"])])]
     return head(site, seo_title(h["title"], site), describe(h["intro"]), h["path"], f"{site['url']}/img/og.png",
                 site["name"], OG_W, OG_H, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + page_top(
         site, f'<span class="crumbs"><a href="/">Home</a> › {e(h["nav"])}</span>') + f"""  <main id="main">
@@ -968,8 +1001,10 @@ def render_hub(data, key, products):
 def render_about(data):
     site = data["site"]
     hubs = ", ".join(h["nav"].lower() for h in HUBS.values())
-    return head(site, f"About | {site['name']}", f"What {site['name']} covers, how products are chosen, and how the site is funded.",
-                "about/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H) + page_top(site) + f"""  <main id="main" class="prose">
+    desc = f"What {site['name']} covers, how products are chosen, and how the site is funded."
+    graph = [page_node(site, "AboutPage", "about/", f"About {site['name']}", desc)]
+    return head(site, f"About | {site['name']}", desc, "about/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H,
+                ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + page_top(site) + f"""  <main id="main" class="prose">
     <h1>About {e(site['name'])}</h1>
     <p>{e(site['name'])} is an independent site about making small, busy kitchens work better: {e(hubs)}. Every buying guide starts from a real problem, such as a cluttered drawer, a cramped sink cabinet or a counter with no room left, and points you to the kinds of products that solve it.</p>
     <h2>How we choose products</h2>
@@ -991,8 +1026,10 @@ def render_about(data):
 
 def render_contact(data):
     site = data["site"]
-    return head(site, f"Contact | {site['name']}", f"Contact {site['name']} with questions, corrections or product suggestions.",
-                "contact/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H) + page_top(site) + f"""  <main id="main" class="prose">
+    desc = f"Contact {site['name']} with questions, corrections or product suggestions."
+    graph = [page_node(site, "ContactPage", "contact/", f"Contact {site['name']}", desc)]
+    return head(site, f"Contact | {site['name']}", desc, "contact/", f"{site['url']}/img/og.png", site["name"], OG_W, OG_H,
+                ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + page_top(site) + f"""  <main id="main" class="prose">
     <h1>Contact us</h1>
     <p>Questions, corrections, or a product you think belongs here? Send a message and we'll reply by email, usually within two business days. You can also email <a href="mailto:{e(site['email'])}">{e(site['email'])}</a> directly.</p>
     <p>Questions about an order, shipping or a return go to Amazon: purchases are made there, and we can't see or change orders.</p>
