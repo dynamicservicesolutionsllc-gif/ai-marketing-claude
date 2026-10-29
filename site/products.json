@@ -1973,6 +1973,98 @@
     }
   },
   "gift_guides": {
+    "gifts-for-bakers": {
+      "title": "Practical Gifts for Bakers",
+      "keyword": "gifts for bakers",
+      "description": "Useful gifts for people who bake: a silicone pastry mat, a baking sheet set, a kitchen scale, a hand mixer and more tools for cookie season.",
+      "intro": "Holiday baking season is when a baker's tools get the most use, and when worn-out ones show it: warped sheet pans, a counter covered in flour, measuring by the scoop. These picks upgrade the everyday tools a home baker reaches for every batch, and most fit in a drawer.",
+      "quick_answer": "For most bakers, a digital kitchen scale or a large silicone pastry mat is the safest pick: useful every batch and easy to wrap. For a bigger gift, a set of three baking sheets or a hand mixer covers cookie season.",
+      "criteria": [
+        "Used every batch, not once a year",
+        "Replaces a tool that wears out",
+        "Stores flat or in a drawer",
+        "Easy to clean"
+      ],
+      "guide": [
+        [
+          "Think about what they bake most",
+          "Cookies point to baking sheets and silicone mats, pie and bread to a pastry mat, cakes and recipes by weight to a scale."
+        ],
+        [
+          "Check what they already own",
+          "Many bakers already have a mixer or measuring cups. A quick look in their kitchen, or a question to a family member, avoids a duplicate."
+        ],
+        [
+          "Measure the oven for pans",
+          "The largest sheet in a set needs to fit their oven rack. Check the pan sizes on the listing against their oven."
+        ],
+        [
+          "Include a gift receipt",
+          "Kitchens are personal. A gift receipt makes it easy to swap a size or color."
+        ]
+      ],
+      "faq": [
+        [
+          "What is a good gift for someone who loves to bake?",
+          "Upgrades of everyday tools tend to land well: a digital scale for consistent results, a large pastry mat for rolling dough, or fresh nonstick baking sheets to replace warped ones."
+        ],
+        [
+          "What do you get a baker who has everything?",
+          "Look for tools that wear out or get used up: baking sheets, silicone baking mats and oven mitts are easy to replace with better versions."
+        ],
+        [
+          "Is a kitchen scale a good gift for a beginner baker?",
+          "Yes. Weighing flour instead of scooping it makes recipes come out the same every time, which builds confidence quickly."
+        ],
+        [
+          "How were these gift picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "Baking tools, an egg and a measuring cup laid out on a white counter",
+        "credit": "Unsplash",
+        "source_id": "photo-1759965670306-f055ff093752"
+      },
+      "hashtags": "#giftsforbakers #holidaybaking #christmascookies #bakinggifts",
+      "picks": [
+        {
+          "asin": "B01ACUA8HC",
+          "award": "Best for pie and cookie dough",
+          "why": "A 28 by 20 inch silicone mat with printed measurements and a non-slip back, so rolling out pie crust and sugar cookies is neater and easier to size."
+        },
+        {
+          "asin": "B0113UZJE2",
+          "award": "Best for precise bakers",
+          "why": "Weighs ingredients in grams or ounces up to 11 pounds, and the tare button zeroes out the bowl, so recipes come out the same every time."
+        },
+        {
+          "asin": "B0026RHI3M",
+          "award": "Best for cookie season",
+          "why": "Three nonstick carbon steel sheets in 13 by 9, 15 by 10 and 17 by 11 inch sizes, a welcome replacement for warped old pans."
+        },
+        {
+          "asin": "B009VUHLHA",
+          "award": "Best bigger gift",
+          "why": "A 5-speed hand mixer for cookie dough and whipped cream that stores in a drawer instead of taking over the counter like a stand mixer."
+        },
+        {
+          "asin": "B0725GYNG6",
+          "award": "Best for less parchment",
+          "why": "Two reusable half-sheet silicone mats that let cookies release cleanly and go in the dishwasher afterward."
+        },
+        {
+          "asin": "B00M2J7PCI",
+          "award": "Best for measuring liquids",
+          "why": "Glass cups in 1, 2 and 4-cup sizes with ounce and milliliter markings, safe in the microwave for warming butter or milk."
+        },
+        {
+          "asin": "B08J8GZXKZ",
+          "award": "Best practical upgrade",
+          "why": "Silicone mitts rated to 500°F that grip hot sheet pans and shrug off steam better than thin cloth mitts."
+        }
+      ]
+    },
     "gifts-for-home-cooks": {
       "title": "Gifts for Practical Home Cooks",
       "keyword": "gifts for home cooks",
