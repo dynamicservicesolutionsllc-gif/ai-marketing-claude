@@ -21,6 +21,8 @@ Tools: PowerShell for git/python (Windows; PowerShell 5.1, so commit with `git c
 
 7. PUBLISH: `git add site`, commit "Add N kitchen picks (YYYY-MM-DD)" with a body listing name + ASIN, ending with the line "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>". Then `git pull --rebase origin main` and `git push origin HEAD:main`. If the rebase conflicts in site/public/, resolve by taking main's version, rerun build.py, amend, and push. If push is rejected for any other reason (e.g. branch protection), push a branch and open a PR with `gh pr create`, then merge it with `gh pr merge --squash`.
 
+7b. NEW PINTEREST BOARDS: if you added a subcategory with a new board name, create that board on Pinterest now in Chrome (you're logged in as kitchenfindsfavorites): https://www.pinterest.com/kitchenfindsfavorites/ -> Create -> Board, exact name, public, with a one-sentence keyword description in the style 'Holiday baking essentials for small kitchens: ...'. Skip it if a board with that name already exists. The Pinterest pinning routine only creates boards from a fixed list, so this step is what makes new boards appear.
+
 8. CONFIRM: wait for the "Deploy site to Hostinger" GitHub Action (`gh run list --limit 1`) to finish, then fetch https://kitchenfindsfavorites.com/products.json?nocache=<random> and confirm the new ASINs are present and one new /picks/ page returns 200.
 
 Finish with a short report: products added (name, ASIN, subcategory), any new subcategory/board, anything removed or dropped and why, and the live product count. Only flag Frank if something needs his action.
