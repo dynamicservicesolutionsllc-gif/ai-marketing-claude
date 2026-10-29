@@ -1973,6 +1973,103 @@
     }
   },
   "gift_guides": {
+    "black-friday-kitchen-gifts": {
+      "title": "Black Friday Kitchen Gift List",
+      "keyword": "black friday kitchen gifts",
+      "description": "A Black Friday shopping list of practical kitchen gifts: an air fryer, a personal blender, a 7-quart slow cooker, a hand mixer and insulated tumblers.",
+      "intro": "Black Friday and Cyber Monday are when many people knock out the bigger gifts on their list. Going in with a short list keeps you from buying something that ends up in a closet. These are practical kitchen gifts that get used every week, from countertop appliances to everyday tumblers, all picked with small and busy kitchens in mind.",
+      "quick_answer": "For the cook who has counter space, the air fryer or the 7-quart slow cooker is the biggest everyday upgrade. For a smaller gift that suits almost anyone, an insulated tumbler or a personal blender is easy to get right.",
+      "criteria": [
+        "Used every week, not once a year",
+        "Fits a small or busy kitchen",
+        "Easy to clean",
+        "Easy to give without knowing their exact setup"
+      ],
+      "guide": [
+        [
+          "Make your list before the sales start",
+          "Decide who you're shopping for and what they would actually use, so a big sale doesn't push you toward something that doesn't fit their kitchen."
+        ],
+        [
+          "Check the current listing on Amazon",
+          "Prices and availability change often during Black Friday week, so check the listing itself before you buy rather than relying on an old screenshot or post."
+        ],
+        [
+          "Mind the counter space",
+          "Ask, or take a look, before giving a countertop appliance. In a small kitchen a tumbler or a drawer-sized tool can be the better gift."
+        ],
+        [
+          "Order early for holiday delivery",
+          "Popular items can sell out or ship slower as December gets closer. Include a gift receipt so a color or size is easy to swap."
+        ]
+      ],
+      "faq": [
+        [
+          "What kitchen gifts are worth buying on Black Friday?",
+          "Bigger items people use every week, like an air fryer, a slow cooker or a blender, are worth putting on your list, along with everyday items like insulated tumblers."
+        ],
+        [
+          "Is an air fryer a good gift?",
+          "Yes, for someone with a spot on the counter for it. The 6-quart model here has a square basket that fits a family-size batch in a compact footprint."
+        ],
+        [
+          "What is a good kitchen gift for someone with a small kitchen?",
+          "Choose compact or multi-use items: a personal blender, a 3-cup food processor or a hand mixer stores in a cabinet or drawer instead of taking over the counter."
+        ],
+        [
+          "How were these gift picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "A Christmas stocking hanging by a decorated tree with wrapped presents",
+        "credit": "Unsplash",
+        "source_id": "photo-1639972584779-8c95dc6757bb"
+      },
+      "hashtags": "#blackfriday #cybermonday #kitchengifts #holidaygiftguide",
+      "picks": [
+        {
+          "asin": "B0C33CHG99",
+          "award": "Best big gift for everyday cooks",
+          "why": "A 6-quart air fryer with a square basket for family-size batches, temperatures from 90°F to 450°F, and a compact footprint on the counter."
+        },
+        {
+          "asin": "B003OAJGJO",
+          "award": "Best for hosts and big batches",
+          "why": "A 7-quart slow cooker with high, low and warm settings for holiday sides, chili and roasts, with dishwasher-safe stoneware."
+        },
+        {
+          "asin": "B01FHOWYA2",
+          "award": "Best for smoothie fans",
+          "why": "A compact 700-watt personal blender that blends right in a 16 oz cup, with two cups and two spout lids for on-the-go drinks."
+        },
+        {
+          "asin": "B009VUHLHA",
+          "award": "Best for holiday bakers",
+          "why": "A 5-speed KitchenAid hand mixer for cookie dough, mashed potatoes and whipped cream that stores in a drawer."
+        },
+        {
+          "asin": "B0000645YM",
+          "award": "Best for weeknight cooks",
+          "why": "A 3-cup food processor that chops onions, garlic, herbs and nuts in a few pulses, with dishwasher-safe parts."
+        },
+        {
+          "asin": "B08PP48979",
+          "award": "Best for tea and coffee drinkers",
+          "why": "A 1.7 L glass electric kettle with automatic shut-off and a wide opening that's easy to clean."
+        },
+        {
+          "asin": "B073WJMKHN",
+          "award": "Best for commuters",
+          "why": "A 20 oz YETI Rambler with double-wall vacuum insulation and a magnetic MagSlider lid, sized for standard car cup holders."
+        },
+        {
+          "asin": "B0CJZW65R3",
+          "award": "Best for all-day water",
+          "why": "A 40 oz Stanley Quencher with a handle, a three-position lid and double-wall insulation, and a base that fits a car cup holder."
+        }
+      ]
+    },
     "gifts-for-bakers": {
       "title": "Practical Gifts for Bakers",
       "keyword": "gifts for bakers",
