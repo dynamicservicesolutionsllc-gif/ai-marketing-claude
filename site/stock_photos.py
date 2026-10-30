@@ -24,6 +24,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -70,6 +71,7 @@ PRODUCT_TYPES = [
     ("apple peeler", "apples", "apple"),
     ("chopper", "chopped vegetables", "vegetables"),
     ("shredder", "shredded chicken", "chicken"),
+    ("knife organizer", "knife block", "knife"),
     ("knife", "kitchen knives", "knife"),
     ("silverware", "cutlery drawer", "cutlery"),
     ("drawer", "kitchen drawer", "drawer"),
@@ -131,7 +133,56 @@ def pick(name, seed, key):
     if not hits:
         return None
     h = hits[int(hashlib.md5(seed.encode()).hexdigest(), 16) % min(len(hits), 8)]
-    return kind, h
+    return kind, [{"url": h.get("largeImageURL") or h["webformatURL"], "id": h["id"], "page_url": h.get("pageURL", ""),
+                   "user": h.get("user", ""), "site": "Pixabay"}]
+
+
+# Fallback where no Pixabay key is available (e.g. the "Fetch product photos" GitHub workflow): Wikimedia
+# Commons, searchable without a key. Only public-domain / CC0 photos are used, so commercial use needs no
+# permission or attribution (the product page credits them anyway).
+FREE_BAD = ("illustration", "vector", "drawing", "clipart", "clip art", "cartoon", "logo", "icon", "painting",
+            "sketch", "diagram", "poster", "patent", "advert", "engraving", "map of", "nude", "ai generated", "ai-generated")
+FREE_LICENSES = ("public domain", "cc0", "pd")
+_free_cache = {}
+
+
+def _commons_search(query):
+    import time
+    time.sleep(1.0)  # be polite to the Wikimedia API
+    q = urllib.parse.urlencode({
+        "action": "query", "format": "json", "generator": "search", "gsrnamespace": 6, "gsrlimit": 50,
+        "gsrsearch": f"{query} filetype:bitmap", "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata",
+        "iiurlwidth": 1200})
+    pages = (json.load(_get("https://commons.wikimedia.org/w/api.php?" + q)).get("query") or {}).get("pages") or {}
+    out = []
+    for pg in sorted(pages.values(), key=lambda x: x.get("index", 0)):
+        ii = (pg.get("imageinfo") or [{}])[0]
+        md = ii.get("extmetadata") or {}
+        val = lambda k: re.sub(r"<[^>]+>", " ", str((md.get(k) or {}).get("value", "")))
+        out.append({"title": pg.get("title", ""), "text": " ".join([pg.get("title", ""), val("ImageDescription"),
+                    val("ObjectName"), val("Categories")]).lower(), "license": val("LicenseShortName").strip(),
+                    "mime": ii.get("mime", ""), "width": ii.get("width") or 0, "url": ii.get("thumburl") or ii.get("url"),
+                    "page_url": ii.get("descriptionurl", ""), "user": re.sub(r"\s+", " ", val("Artist")).strip()[:80]})
+    return out
+
+
+def pick_free(name, seed):
+    pt = product_type(name)
+    if not pt:
+        return None
+    kind, query, tag = pt
+    if query not in _free_cache:
+        _free_cache[query] = _commons_search(query)
+    need = tag.split("+")
+    hits = [r for r in _free_cache[query] if all(w in r["text"] for w in need)
+            and not any(b in r["text"] for b in FREE_BAD) and r["mime"] == "image/jpeg" and r["width"] >= 800
+            and any(r["license"].lower().startswith(l) for l in FREE_LICENSES)]
+    if not hits:
+        return None
+    start = int(hashlib.md5(seed.encode()).hexdigest(), 16) % min(len(hits), 8)
+    ordered = hits[start:] + hits[:start]  # this product's pick first, the rest as download fallbacks
+    return kind, [{"url": r["url"], "id": r["title"], "page_url": r["page_url"], "user": r["user"],
+                   "site": "Wikimedia Commons", "license": r["license"]} for r in ordered[:5]]
 
 
 # Where the video scripts keep the key on Frank's PC (stock.py reads .pixabay-key next to itself).
@@ -164,6 +215,8 @@ def main(argv=None):
     ap.add_argument("--asin", action="append", default=[], help="re-fetch these ASINs even if they have a photo")
     ap.add_argument("--key-file")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--free", "--openverse", dest="free", action="store_true",
+                    help="with no Pixabay key, use public-domain photos from Wikimedia Commons")
     a = ap.parse_args(argv)
     data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
     credits = json.loads(CREDITS.read_text(encoding="utf-8")) if CREDITS.exists() else {}
@@ -178,7 +231,7 @@ def main(argv=None):
         print("Every product already has a photo.")
         return 0
     key = read_key(a.key_file)
-    if not key:
+    if not key and not a.free:
         print("No Pixabay key (set PIXABAY_API_KEY, pass --key-file, or create site/.pixabay-key); "
               "products keep their text-only graphics.", file=sys.stderr)
         return 0
@@ -189,24 +242,33 @@ def main(argv=None):
     for p in todo:
         time.sleep(0.7)  # Pixabay allows 100 requests/minute
         try:
-            res = pick(p["name"], p["asin"], key)
+            res = pick(p["name"], p["asin"], key) if key else pick_free(p["name"], p["asin"])
             fails = 0
         except Exception as err:  # network/API trouble: the product keeps its graphic
-            print(f"{p['asin']}: Pixabay request failed ({err})", file=sys.stderr)
+            print(f"{p['asin']}: photo search failed ({err})", file=sys.stderr)
             res, fails = None, fails + 1
             if fails >= 3:  # bad key or Pixabay down: stop instead of retrying every product
-                print("Pixabay unavailable; stopping. Products without a photo keep their graphics.", file=sys.stderr)
+                print("Photo search unavailable; stopping. Products without a photo keep their graphics.", file=sys.stderr)
                 break
         if not res:
             missing.append(p)
             continue
-        kind, h = res
-        with _get(h.get("largeImageURL") or h["webformatURL"]) as r:
-            im = Image.open(io.BytesIO(r.read())).convert("RGB")
+        kind, cands = res
+        im = c = None
+        for c in cands:  # first candidate that downloads and opens as an image
+            try:
+                with _get(c["url"]) as r:
+                    im = Image.open(io.BytesIO(r.read())).convert("RGB")
+                break
+            except Exception as err:
+                print(f"{p['asin']}: download failed ({err}), trying the next photo", file=sys.stderr)
+        if im is None:
+            missing.append(p)
+            continue
         if im.width > 1200:
             im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
         im.save(OUT_DIR / f"{p['asin']}.jpg", "JPEG", quality=85, optimize=True, progressive=True)
-        credits[p["asin"]] = {"id": h["id"], "page_url": h.get("pageURL", ""), "user": h.get("user", ""), "kind": kind}
+        credits[p["asin"]] = {k: v for k, v in c.items() if k != "url"} | {"kind": kind}
         got += 1
     CREDITS.write_text(json.dumps(dict(sorted(credits.items())), indent=2) + "\n", encoding="utf-8")
     print(f"Downloaded {got} photo(s).")

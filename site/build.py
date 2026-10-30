@@ -255,8 +255,9 @@ def photo_note(p):
     c = PHOTO_CREDITS.get(p["asin"])
     if not c or AMAZON_IMAGES.get(p["asin"]):
         return ""
+    site = c.get("site", "Pixabay") + (f' ({c["license"]})' if c.get("license") else "")
     who = f'{e(c["user"])} / ' if c.get("user") else ""
-    src = f'<a href="{e(c["page_url"])}" rel="nofollow noopener">{who}Pixabay</a>' if c.get("page_url") else "Pixabay"
+    src = f'<a href="{e(c["page_url"])}" rel="nofollow noopener">{who}{e(site)}</a>' if c.get("page_url") else e(site)
     return (f'<p class="photo-note">Photo shows a similar {e(c["kind"])}, not this exact product. '
             f'See the real product photos on Amazon. Photo: {src}</p>')
 
