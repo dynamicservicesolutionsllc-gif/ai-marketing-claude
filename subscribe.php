@@ -6,13 +6,15 @@ $email = trim((string)($_POST['email'] ?? ''));
 if (strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   header('Location: /#updates', true, 303); exit;
 }
+// Which sign-up form it came from; each freebie has its own thank-you page.
+$src = ((string)($_POST['src'] ?? '')) === 'thanksgiving' ? 'thanksgiving' : 'site';
 $file = dirname(__DIR__) . '/kff-subscribers.csv';
 $fh = @fopen($file, 'a');
 if ($fh) {
   if (flock($fh, LOCK_EX)) {
-    fputcsv($fh, [gmdate('c'), strtolower($email)]);
+    fputcsv($fh, [gmdate('c'), strtolower($email), $src]);
     flock($fh, LOCK_UN);
   }
   fclose($fh);
 }
-header('Location: /thanks/', true, 303);
+header('Location: ' . ($src === 'thanksgiving' ? '/thanks/thanksgiving/' : '/thanks/'), true, 303);
