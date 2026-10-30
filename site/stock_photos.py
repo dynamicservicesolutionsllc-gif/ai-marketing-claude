@@ -9,8 +9,9 @@ Usage:  python site/stock_photos.py                 # fetch photos for products 
         python site/stock_photos.py --asin B0XXXXXXXX   # re-fetch one product
         python site/stock_photos.py --check         # list products with no photo (no network, no key)
 
-API key (never committed): PIXABAY_API_KEY env var, else --key-file PATH, else site/.pixabay-key
-(gitignored; copy the .pixabay-key that sits next to stock.py in the video folder).
+API key (never committed): PIXABAY_API_KEY env var, else --key-file PATH, else site/.pixabay-key (gitignored),
+else the video folder's own key at ~/Documents/claud create/videos/.pixabay-key. build.py calls fetch_missing()
+on every build, so on Frank's PC new products get their photo automatically; elsewhere (no key) it does nothing.
 
 Writes assets/products/<ASIN>.jpg (max 1200 px wide) and assets/products/photos.json
 ({ASIN: {id, page_url, user, kind}}). Commit both: Pixabay asks API users to download images rather
@@ -133,21 +134,37 @@ def pick(name, seed, key):
     return kind, h
 
 
-def read_key(key_file):
+# Where the video scripts keep the key on Frank's PC (stock.py reads .pixabay-key next to itself).
+VIDEO_KEY = Path.home() / "Documents" / "claud create" / "videos" / ".pixabay-key"
+
+
+def read_key(key_file=None):
     if os.environ.get("PIXABAY_API_KEY"):
         return os.environ["PIXABAY_API_KEY"].strip()
-    for path in (key_file, ROOT / ".pixabay-key"):
+    for path in (key_file, ROOT / ".pixabay-key", VIDEO_KEY):
         if path and Path(path).exists():
             return Path(path).read_text(encoding="utf-8").strip()
     return None
 
 
-def main():
+def fetch_missing(quiet=False):
+    """Called by build.py: fetch photos for products without one, if a key is on this machine.
+    Never raises, so a missing key or a Pixabay outage never blocks a build."""
+    data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
+    if all((OUT_DIR / f"{p['asin']}.jpg").exists() for p in data["products"]) or not read_key():
+        return
+    try:
+        main([])
+    except Exception as err:
+        print(f"stock_photos: skipped ({err})", file=sys.stderr)
+
+
+def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--asin", action="append", default=[], help="re-fetch these ASINs even if they have a photo")
     ap.add_argument("--key-file")
     ap.add_argument("--check", action="store_true")
-    a = ap.parse_args()
+    a = ap.parse_args(argv)
     data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
     credits = json.loads(CREDITS.read_text(encoding="utf-8")) if CREDITS.exists() else {}
     todo = [p for p in data["products"]
@@ -167,13 +184,19 @@ def main():
         return 0
     from PIL import Image
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    got, missing = 0, []
+    got, missing, fails = 0, [], 0
+    import time
     for p in todo:
+        time.sleep(0.7)  # Pixabay allows 100 requests/minute
         try:
             res = pick(p["name"], p["asin"], key)
-        except Exception as err:  # network/API trouble: keep going, the product keeps its graphic
+            fails = 0
+        except Exception as err:  # network/API trouble: the product keeps its graphic
             print(f"{p['asin']}: Pixabay request failed ({err})", file=sys.stderr)
-            res = None
+            res, fails = None, fails + 1
+            if fails >= 3:  # bad key or Pixabay down: stop instead of retrying every product
+                print("Pixabay unavailable; stopping. Products without a photo keep their graphics.", file=sys.stderr)
+                break
         if not res:
             missing.append(p)
             continue

@@ -57,12 +57,21 @@ jobs:
           git commit -q -m "Deploy site from main@${SRC_SHA}"
           git push origin hostinger-deploy
       - name: Tell Hostinger to pull the new build
-        # Hostinger's Git auto-deployment webhook (hPanel > Advanced > GIT > Auto Deployment).
-        # Calling it only makes Hostinger pull the hostinger-deploy branch, so it is safe to keep here.
+        # Hostinger's Git auto-deployment webhook (hPanel > Advanced > GIT > Auto Deployment). Its URL is a
+        # secret: set it as the HOSTINGER_DEPLOY_WEBHOOK repository secret (Settings > Secrets and variables >
+        # Actions). LEGACY_HOOK is the old URL that was committed here; it only stays as a fallback until the
+        # secret exists. After regenerating the webhook in hPanel, delete the fallback line.
+        env:
+          HOOK: ${{ secrets.HOSTINGER_DEPLOY_WEBHOOK }}
+          LEGACY_HOOK: https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
         run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning::HOSTINGER_DEPLOY_WEBHOOK secret is not set; using the old committed webhook URL."
+            HOOK="$LEGACY_HOOK"
+          fi
           curl -fsS -X POST -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
             -d '{"ref":"refs/heads/hostinger-deploy","repository":{"clone_url":"https://github.com/${{ github.repository }}.git"}}' \
-            https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
+            "$HOOK"
       - name: Tell search engines about the pages (IndexNow)
         # Bing, Yandex and other IndexNow engines recrawl the submitted URLs within hours instead of weeks.
         # The key file /<INDEXNOW_KEY>.txt is written by build.py. A failure here never blocks the deploy.
