@@ -1011,6 +1011,39 @@ def render_contact(data):
 """ + foot(site)
 
 
+def render_thanksgiving_timeline(data):
+    site = data["site"]
+    desc = "Free printable Thanksgiving hosting timeline: a checklist countdown from three weeks out to dinner time, with turkey thawing and food-safety reminders."
+    return head(site, seo_title("Free Thanksgiving Hosting Timeline (Printable)", site), desc, "thanksgiving-timeline/",
+                f"{site['url']}/img/pins/gift-thanksgiving-kitchen-checklist-c.jpg", site["name"], 1000, 1500) + page_top(site) + f"""  <main id="main">
+    <section class="guide">
+      <h1>Free printable: Thanksgiving Hosting Timeline</h1>
+      <p class="intro">Hosting Thanksgiving is mostly a timing problem. This one-page printable counts down from three weeks out to dinner time: when to order the turkey, when to start thawing it, what to make ahead, and the food-safety basics for the day itself.</p>
+      <ul>
+        <li>3-week, 2-week and 1-week to-do lists</li>
+        <li>Turkey thawing times, so you know which day to start</li>
+        <li>A Thanksgiving Day countdown and leftover tips</li>
+      </ul>
+    </section>
+    <section class="signup" id="updates">
+      <h2>Get the free timeline</h2>
+      <p>Enter your email and the printable PDF opens right away. You'll also get one short email when we add new kitchen picks and holiday lists. No spam, unsubscribe anytime.</p>
+      <form name="updates" method="POST" action="/subscribe.php">
+        <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <input type="hidden" name="src" value="thanksgiving">
+        <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address">
+        <button class="btn" type="submit">Send me the timeline</button>
+      </form>
+      <small>We only use your email to send new kitchen picks, and never sell or share it. See our <a href="/privacy/">privacy policy</a>.</small>
+    </section>
+    <section>
+      <h2>Getting the kitchen ready?</h2>
+      <p>See the <a href="/{gift_path('thanksgiving-kitchen-checklist')}">Thanksgiving Kitchen Checklist for Hosts</a>: the thermometer, fat separator and slow cookers that make the day easier.</p>
+    </section>
+  </main>
+""" + foot(site)
+
+
 def render_newsletter(data, products):
     site, tag = data["site"], data["site"]["associate_tag"]
     latest = "\n".join(card(p, tag, "/") for p in products[:3])
@@ -1073,16 +1106,18 @@ $email = trim((string)($_POST['email'] ?? ''));
 if (strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   header('Location: /#updates', true, 303); exit;
 }
+// Which sign-up form it came from; each freebie has its own thank-you page.
+$src = ((string)($_POST['src'] ?? '')) === 'thanksgiving' ? 'thanksgiving' : 'site';
 $file = dirname(__DIR__) . '/kff-subscribers.csv';
 $fh = @fopen($file, 'a');
 if ($fh) {
   if (flock($fh, LOCK_EX)) {
-    fputcsv($fh, [gmdate('c'), strtolower($email)]);
+    fputcsv($fh, [gmdate('c'), strtolower($email), $src]);
     flock($fh, LOCK_UN);
   }
   fclose($fh);
 }
-header('Location: /thanks/', true, 303);
+header('Location: ' . ($src === 'thanksgiving' ? '/thanks/thanksgiving/' : '/thanks/'), true, 303);
 """
 
 
@@ -1201,6 +1236,8 @@ def main():
         dst = OUT / lm["file"]
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src, dst)
+    shutil.copyfile(ROOT / "assets" / "printables" / "thanksgiving-hosting-timeline.pdf",
+                    OUT / "printables" / "thanksgiving-hosting-timeline.pdf")
     import pins  # Pinterest queue: several pins per page (see pins.py)
     pin_list = pins.build(data, OUT, url, force="--force-graphics" in sys.argv)
     (OUT / "pins.json").write_text(json.dumps(pin_list, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -1229,6 +1266,16 @@ def main():
         data, "thanks/", "Thanks for signing up", "You're on the list",
         "Thanks for signing up. Your free printable is ready: <a class=\"btn\" href=\"/printables/small-kitchen-measuring-checklist.pdf\">Download the Small-Kitchen Measuring Checklist (PDF)</a></p><p>We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link."),
         encoding="utf-8")
+    (OUT / "thanks" / "thanksgiving").mkdir(exist_ok=True)
+    (OUT / "thanks" / "thanksgiving" / "index.html").write_text(render_simple(
+        data, "thanks/thanksgiving/", "Your Thanksgiving timeline", "Your Thanksgiving timeline is ready",
+        "Thanks for signing up. <a class=\"btn\" href=\"/printables/thanksgiving-hosting-timeline.pdf\">Download the Thanksgiving Hosting Timeline (PDF)</a></p>"
+        f"<p>Getting the kitchen ready? See the <a href=\"/{gift_path('thanksgiving-kitchen-checklist')}\">Thanksgiving Kitchen Checklist for Hosts</a>.</p>"
+        f"<p>For more holiday kitchen ideas, follow us on <a href=\"{e(data['site']['facebook'])}\" rel=\"noopener\">Facebook</a>. We'll send one short email whenever we add new picks, and every email has an unsubscribe link."),
+        encoding="utf-8")
+    (OUT / "thanksgiving-timeline").mkdir(exist_ok=True)
+    (OUT / "thanksgiving-timeline" / "index.html").write_text(render_thanksgiving_timeline(data), encoding="utf-8")
+    extra_urls.append((f"{url}/thanksgiving-timeline/", None))
     (OUT / "404.html").write_text(render_simple(
         data, "404.html", "Page not found", "That page isn't here",
         "The pick you're looking for may have moved or been removed. Everything we currently recommend is on the home page."),
