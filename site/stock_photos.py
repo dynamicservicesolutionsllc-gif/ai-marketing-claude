@@ -24,6 +24,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import sys
 import urllib.parse
 import urllib.request
@@ -136,39 +137,52 @@ def pick(name, seed, key):
                    "user": h.get("user", ""), "site": "Pixabay"}]
 
 
-# Fallback source where no Pixabay key is available (e.g. the "Fetch product photos" GitHub workflow):
-# Openverse, a keyless search of openly licensed images. Only public-domain (CC0 / Public Domain Mark)
-# photos are used, so no attribution is legally required (the page credits them anyway).
-OPENVERSE_BAD = ("illustration", "vector", "drawing", "clipart", "clip art", "cartoon", "logo", "icon", "painting",
-                 "sketch", "diagram", "poster", "ai generated", "ai-generated", "advert", "nude")
-_ov_cache = {}
+# Fallback where no Pixabay key is available (e.g. the "Fetch product photos" GitHub workflow): Wikimedia
+# Commons, searchable without a key. Only public-domain / CC0 photos are used, so commercial use needs no
+# permission or attribution (the product page credits them anyway).
+FREE_BAD = ("illustration", "vector", "drawing", "clipart", "clip art", "cartoon", "logo", "icon", "painting",
+            "sketch", "diagram", "poster", "patent", "advert", "engraving", "map of", "nude", "ai generated", "ai-generated")
+FREE_LICENSES = ("public domain", "cc0", "pd")
+_free_cache = {}
 
 
-def pick_openverse(name, seed):
+def _commons_search(query):
+    import time
+    time.sleep(1.0)  # be polite to the Wikimedia API
+    q = urllib.parse.urlencode({
+        "action": "query", "format": "json", "generator": "search", "gsrnamespace": 6, "gsrlimit": 50,
+        "gsrsearch": f"{query} filetype:bitmap", "prop": "imageinfo", "iiprop": "url|size|mime|extmetadata",
+        "iiurlwidth": 1200})
+    pages = (json.load(_get("https://commons.wikimedia.org/w/api.php?" + q)).get("query") or {}).get("pages") or {}
+    out = []
+    for pg in sorted(pages.values(), key=lambda x: x.get("index", 0)):
+        ii = (pg.get("imageinfo") or [{}])[0]
+        md = ii.get("extmetadata") or {}
+        val = lambda k: re.sub(r"<[^>]+>", " ", str((md.get(k) or {}).get("value", "")))
+        out.append({"title": pg.get("title", ""), "text": " ".join([pg.get("title", ""), val("ImageDescription"),
+                    val("ObjectName"), val("Categories")]).lower(), "license": val("LicenseShortName").strip(),
+                    "mime": ii.get("mime", ""), "width": ii.get("width") or 0, "url": ii.get("thumburl") or ii.get("url"),
+                    "page_url": ii.get("descriptionurl", ""), "user": re.sub(r"\s+", " ", val("Artist")).strip()[:80]})
+    return out
+
+
+def pick_free(name, seed):
     pt = product_type(name)
     if not pt:
         return None
     kind, query, tag = pt
-    if query not in _ov_cache:
-        import time
-        time.sleep(1.5)  # anonymous Openverse API: keep well under its rate limit
-        q = urllib.parse.urlencode({"q": query, "license": "cc0,pdm", "mature": "false", "page_size": 40,
-                                    "size": "large,medium"})
-        _ov_cache[query] = json.load(_get("https://api.openverse.org/v1/images/?" + q)).get("results", [])
+    if query not in _free_cache:
+        _free_cache[query] = _commons_search(query)
     need = tag.split("+")
-
-    def text(r):
-        return (r.get("title") or "").lower() + " " + " ".join(t.get("name", "") for t in r.get("tags") or []).lower()
-    hits = [r for r in _ov_cache[query] if all(w in text(r) for w in need)
-            and not any(b in text(r) for b in OPENVERSE_BAD) and (r.get("width") or 0) >= 700]
+    hits = [r for r in _free_cache[query] if all(w in r["text"] for w in need)
+            and not any(b in r["text"] for b in FREE_BAD) and r["mime"] == "image/jpeg" and r["width"] >= 800
+            and any(r["license"].lower().startswith(l) for l in FREE_LICENSES)]
     if not hits:
         return None
     start = int(hashlib.md5(seed.encode()).hexdigest(), 16) % min(len(hits), 8)
     ordered = hits[start:] + hits[:start]  # this product's pick first, the rest as download fallbacks
-    lic = {"cc0": "CC0", "pdm": "public domain"}
-    return kind, [{"url": r["url"], "id": r["id"], "page_url": r.get("foreign_landing_url", ""),
-                   "user": r.get("creator") or "", "site": (r.get("source") or "Openverse").replace("_", " ").title(),
-                   "license": lic.get(r.get("license"), r.get("license"))} for r in ordered[:5]]
+    return kind, [{"url": r["url"], "id": r["title"], "page_url": r["page_url"], "user": r["user"],
+                   "site": "Wikimedia Commons", "license": r["license"]} for r in ordered[:5]]
 
 
 # Where the video scripts keep the key on Frank's PC (stock.py reads .pixabay-key next to itself).
@@ -201,7 +215,8 @@ def main(argv=None):
     ap.add_argument("--asin", action="append", default=[], help="re-fetch these ASINs even if they have a photo")
     ap.add_argument("--key-file")
     ap.add_argument("--check", action="store_true")
-    ap.add_argument("--openverse", action="store_true", help="with no Pixabay key, use Openverse public-domain photos")
+    ap.add_argument("--free", "--openverse", dest="free", action="store_true",
+                    help="with no Pixabay key, use public-domain photos from Wikimedia Commons")
     a = ap.parse_args(argv)
     data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
     credits = json.loads(CREDITS.read_text(encoding="utf-8")) if CREDITS.exists() else {}
@@ -216,7 +231,7 @@ def main(argv=None):
         print("Every product already has a photo.")
         return 0
     key = read_key(a.key_file)
-    if not key and not a.openverse:
+    if not key and not a.free:
         print("No Pixabay key (set PIXABAY_API_KEY, pass --key-file, or create site/.pixabay-key); "
               "products keep their text-only graphics.", file=sys.stderr)
         return 0
@@ -227,7 +242,7 @@ def main(argv=None):
     for p in todo:
         time.sleep(0.7)  # Pixabay allows 100 requests/minute
         try:
-            res = pick(p["name"], p["asin"], key) if key else pick_openverse(p["name"], p["asin"])
+            res = pick(p["name"], p["asin"], key) if key else pick_free(p["name"], p["asin"])
             fails = 0
         except Exception as err:  # network/API trouble: the product keeps its graphic
             print(f"{p['asin']}: photo search failed ({err})", file=sys.stderr)
