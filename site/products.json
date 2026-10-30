@@ -1045,6 +1045,7 @@
       "noun": "Food Prep Gadget",
       "hashtags": "#kitchengadgets #mealprep #cookingtips #kitchentools",
       "board": "Small Kitchen Gadgets We Love",
+      "related": ["blenders-and-mixers", "countertop-cooking"],
       "quick_answer": "Pick the gadget that removes your slowest prep step: a press chopper for dicing onions and peppers, a twist shredder for cooked chicken, a salad spinner for greens, an apple peeler for baking season. Favor tools with dishwasher-safe parts, since easy cleanup is what keeps a gadget in use.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1189,6 +1190,7 @@
       "noun": "Kitchen Scale or Thermometer",
       "hashtags": "#kitchentools #bakingtips #cookingtips #homecook",
       "board": "Small Kitchen Gadgets We Love",
+      "related": ["countertop-cooking", "food-prep-tools"],
       "quick_answer": "A digital scale makes baking consistent, an instant-read thermometer removes the guesswork about doneness, and silicone oven mitts protect against steam and spills that soak through cloth. Start with whichever problem costs you the most ruined meals.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1365,6 +1367,7 @@
       "noun": "Milk Frother or Kettle",
       "hashtags": "#coffeeathome #lattelover #milkfrother #coffeebar",
       "board": "Coffee Bar Ideas",
+      "related": ["insulated-drinkware", "blenders-and-mixers"],
       "quick_answer": "A handheld frother turns plain coffee into a latte without a machine, and an electric kettle boils water for tea, oatmeal or French press faster than the stove, then shuts itself off. Both take almost no counter space.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1523,6 +1526,7 @@
       "noun": "Immersion Blender or Hand Mixer",
       "hashtags": "#kitchentools #souprecipes #bakingtools #smallkitchen",
       "board": "Small Kitchen Gadgets We Love",
+      "related": ["food-prep-tools", "coffee-and-tea"],
       "quick_answer": "An immersion blender purees soup in the pot and, with a kit, also whisks and chops; a hand mixer covers cookie dough and whipped cream; a 3-cup mini processor handles garlic, herbs and nuts. All three store in a drawer instead of taking over the counter.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1681,6 +1685,7 @@
       "noun": "Small Kitchen Appliance",
       "hashtags": "#smallappliances #airfryer #smallkitchen #kitchenessentials",
       "board": "Small Kitchen Gadgets We Love",
+      "related": ["cooking-tools", "food-prep-tools"],
       "quick_answer": "Choose appliances you'll use every week and size them to your household: a 6-quart air fryer for family batches in a compact footprint, a 2-quart slow cooker for one or two people, and a 4-inch waffle maker for quick breakfasts. Check counter depth and outlet location first.",
       "measure_heading": "Before you buy, measure these",
       "measure": [
@@ -1841,6 +1846,7 @@
       "noun": "Insulated Tumbler or Bottle",
       "hashtags": "#waterbottle #tumbler #hydration #stanleycup",
       "board": "Drinkware & Tumblers We Love",
+      "related": ["coffee-and-tea"],
       "quick_answer": "Choose by how you drink: a big tumbler with a handle and straw for all-day water at a desk or in the car, a large flip-straw bottle for a full day in one fill, a locking-lid bottle for a work bag, or a slide-lid tumbler for hot coffee on the commute.",
       "measure_heading": "Before you buy, check these",
       "measure": [

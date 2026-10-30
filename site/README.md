@@ -29,7 +29,7 @@ Each product gets its own page at `/picks/<slug>/` (slug from the product name),
 Each entry in `subcategories` becomes a buying-guide landing page at `/guides/<key>/`: disclosure callout, quick-picks table
 (the products' `award` labels), "how we chose" criteria, a section per product, buying guide, FAQ (with FAQPage schema), and
 related guides. Optional guide fields add long-form sections: `quick_answer` (callout under the intro), `measure` + `measure_note`
-(a "measure these" checklist), `types` (a type comparison table plus "choose / skip it if" lists; each type's optional `pick` is an
+(a "measure these" checklist), `related` (other subcategory keys to list under "Related buying guides" after the same-category ones), `types` (a type comparison table plus "choose / skip it if" lists; each type's optional `pick` is an
 ASIN from the same guide) and `reviewed` (YYYY-MM-DD last-reviewed date, shown as "Updated" when newer than the products). Each guide has a header photo at `assets/guides/<key>.jpg` (a free-license Unsplash stock photo that shows no branded products; credited on the page) — `build.py` renders WebP/JPEG sizes into `public/img/guides/`. `build.py` rejects a subcategory with no products, a title over 60 characters, or guide copy with prices,
 star ratings, or testing claims.
 The landing page also keeps a `#<ASIN>` anchor per card, so older pins that link to anchors still work.
@@ -79,7 +79,7 @@ run refreshes it so the data stays current per Amazon's API terms. Pinterest/Fac
 
 `gift_guides` in `products.json` → pages at `/gifts/<key>/` (listed first on the homepage). Each guide hand-picks existing
 products by ASIN with its own `award` and `why` (gift note). Same rules as buying guides: no prices, star ratings, price
-claims ("under $25") or testing claims — `build.py` rejects them. Header photos live in `assets/guides/<key>.jpg`.
+claims ("under $25") or testing claims — `build.py` rejects them. Header photos live in `assets/guides/<key>.jpg`. Each gift guide links to the buying guides its picks come from, and each buying guide links to the gift guides that feature its picks.
 
 ## Pinterest queue (`/pins.json`)
 
