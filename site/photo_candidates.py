@@ -116,7 +116,8 @@ def choose(key):
     chosen = json.loads(CHOSEN.read_text(encoding="utf-8"))
     credits = json.loads(sp.CREDITS.read_text(encoding="utf-8")) if sp.CREDITS.exists() else {}
     for asin, c in chosen.items():
-        if (sp.OUT_DIR / f"{asin}.jpg").exists() and credits.get(asin, {}).get("id") == c["id"]:
+        if (sp.OUT_DIR / f"{asin}.jpg").exists() and credits.get(asin, {}).get("id") == c["id"] \
+                and credits[asin].get("note") == c.get("note"):
             continue
         time.sleep(0.7)
         hits = json.load(sp._get("https://pixabay.com/api/?" + urllib.parse.urlencode({"key": key, "id": c["id"]}))).get("hits", [])
@@ -136,7 +137,9 @@ def choose(key):
             im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
         im.save(sp.OUT_DIR / f"{asin}.jpg", "JPEG", quality=85, optimize=True, progressive=True)
         credits[asin] = {"id": h["id"], "page_url": h.get("pageURL", ""), "user": h.get("user", ""), "site": "Pixabay",
-                         "kind": c["kind"]}
+                         "kind": c.get("kind", "")}
+        if c.get("note"):  # no similar-item photo exists: the caption says what the photo shows instead
+            credits[asin]["note"] = c["note"]
         print(f"{asin}: saved Pixabay photo {h['id']} ({c['kind']})")
     sp.CREDITS.write_text(json.dumps(dict(sorted(credits.items())), indent=2) + "\n", encoding="utf-8")
 

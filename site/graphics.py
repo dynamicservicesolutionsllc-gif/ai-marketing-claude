@@ -72,6 +72,7 @@ def _check(draw, cx, cy, r):
 
 PHOTO_DIR = ROOT / "assets" / "products"
 BADGE = "SIMILAR ITEM SHOWN"
+BADGE_RELATED = "PRODUCT NOT PICTURED"  # photos with a credits "note": a related scene, not a similar item
 
 
 def product_photo(asin):
@@ -94,13 +95,19 @@ def cover(path, w, h):
     return im.crop((left, top, left + w, top + h))
 
 
-def badge(im, x, y, size=26):
-    """Dark 'Similar item shown' tag in the photo's corner."""
+def badge_text(photo):
+    """'Similar item shown', or 'Product not pictured' when the photo is only a related scene."""
+    c = photo_credits().get(Path(photo).stem, {}) if photo else {}
+    return BADGE_RELATED if c.get("note") else BADGE
+
+
+def badge(im, x, y, size=26, text=BADGE):
+    """Dark tag in the photo's corner saying the photo is not the exact product."""
     d = ImageDraw.Draw(im, "RGBA")
     f = _font("DejaVuSans-Bold.ttf", size)
-    w = d.textlength(BADGE, font=f)
+    w = d.textlength(text, font=f)
     d.rounded_rectangle([x, y, x + w + size * 1.4, y + size * 1.9], size, fill=(20, 18, 16, 200))
-    d.text((x + size * .7, y + size * .95), BADGE, font=f, fill="white", anchor="lm")
+    d.text((x + size * .7, y + size * .95), text, font=f, fill="white", anchor="lm")
 
 
 def pin_graphic(g, accent, site_name, photo=None):
@@ -134,7 +141,7 @@ def _pin_with_photo(g, accent, site_name, photo):
     W, H = 1000, 1500
     im = Image.new("RGB", (W, H), CREAM)
     im.paste(cover(photo, W, 700), (0, 110))
-    badge(im, 30, 700)
+    badge(im, 30, 700, text=badge_text(photo))
     d = ImageDraw.Draw(im)
     d.rectangle([0, 0, W, 110], fill=ORANGE)
     d.text((W / 2, 55), site_name.upper(), font=_font("DejaVuSans-Bold.ttf", 38), fill="white", anchor="mm")
@@ -161,7 +168,7 @@ def square_graphic(g, accent, photo=None):
     if photo:  # photo on top, label + headline underneath (the page lists the points in text)
         im = Image.new("RGB", (S, S), CREAM)
         im.paste(cover(photo, S, 520), (0, 0))
-        badge(im, 20, 462, size=20)
+        badge(im, 20, 462, size=20, text=badge_text(photo))
         d = ImageDraw.Draw(im)
         d.rectangle([0, 520, S, 532], fill=accent)
         f, lines = _fit(d, g["label"].upper(), "DejaVuSans-Bold.ttf", 30, S - 100, 1)
