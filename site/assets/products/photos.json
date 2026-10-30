@@ -7,22 +7,6 @@
     "license": "Public domain",
     "kind": "thermometer"
   },
-  "B0113UZJE2": {
-    "id": "File:Weighing scale in De Goudse Waag 2024-12-01.jpg",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Weighing_scale_in_De_Goudse_Waag_2024-12-01.jpg",
-    "user": "Andy Li",
-    "site": "Wikimedia Commons",
-    "license": "CC0",
-    "kind": "kitchen scale"
-  },
-  "B07FNRXFTD": {
-    "id": "File:Qing Dynasty Porcelain Pot with Lid.jpg",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Qing_Dynasty_Porcelain_Pot_with_Lid.jpg",
-    "user": "Gary Todd",
-    "site": "Wikimedia Commons",
-    "license": "CC0",
-    "kind": "lid organizer"
-  },
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer_(Unsplash).jpg",
@@ -47,22 +31,6 @@
     "license": "CC0",
     "kind": "drawer organizer"
   },
-  "B09BKTSJFJ": {
-    "id": "File:Apple fruit in illorin.jpg",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Apple_fruit_in_illorin.jpg",
-    "user": "Eunice Ameh",
-    "site": "Wikimedia Commons",
-    "license": "CC0",
-    "kind": "apple peeler"
-  },
-  "B0B4K1XH8Y": {
-    "id": "File:Sklednik (velik) pri Fabjanu (\u010cerne), Tomaj 1969.jpg",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Sklednik_(velik)_pri_Fabjanu_(%C4%8Cerne),_Tomaj_1969.jpg",
-    "user": "Sre\u010do Kolar",
-    "site": "Wikimedia Commons",
-    "license": "Public domain",
-    "kind": "dish drying rack"
-  },
   "B0C3H9MJQV": {
     "id": "File:Spice rack with letter labels.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Spice_rack_with_letter_labels.jpg",
@@ -70,13 +38,5 @@
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "spice rack"
-  },
-  "B0C3QZ7SNF": {
-    "id": "File:Sponge fishing LCCN2003666909 restored.jpg",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Sponge_fishing_LCCN2003666909_restored.jpg",
-    "user": "Unknown--from Library of Congress",
-    "site": "Wikimedia Commons",
-    "license": "Public domain",
-    "kind": "sponge"
   }
 }
