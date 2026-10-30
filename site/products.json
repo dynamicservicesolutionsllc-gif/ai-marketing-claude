@@ -2070,6 +2070,108 @@
         }
       ]
     },
+    "thanksgiving-kitchen-checklist": {
+      "title": "Thanksgiving Kitchen Checklist for Hosts",
+      "keyword": "thanksgiving kitchen essentials",
+      "description": "Kitchen tools to have before Thanksgiving: a meat thermometer, a fat separator for gravy, slow cookers for sides and containers for leftovers.",
+      "intro": "Hosting Thanksgiving is mostly a timing problem: the turkey, the gravy and four sides all want the oven and stovetop at once. A few tools take the guesswork and juggling out of the day, and they're worth ordering now, weeks before the holiday, while there's still time to try them out.",
+      "quick_answer": "If you get only one thing, make it an instant-read meat thermometer: it's the surest way to know the turkey is done. Add a fat separator for smoother gravy and a slow cooker to free up the oven for sides.",
+      "criteria": [
+        "Solves a real Thanksgiving-day problem",
+        "Useful the rest of the year too",
+        "Easy to store in a small kitchen",
+        "Easy to clean after a big meal"
+      ],
+      "guide": [
+        [
+          "Plan your oven and stovetop time",
+          "Write down what needs the oven and when. Anything that can move to a slow cooker, like mashed potatoes, stuffing or cider, frees up space for the turkey."
+        ],
+        [
+          "Check the turkey with a thermometer",
+          "Pop-up timers and cooking charts are rough guides. A probe thermometer in the thickest part of the thigh tells you when it's actually done."
+        ],
+        [
+          "Make the gravy while the turkey rests",
+          "Pour the pan drippings through a fat separator, let the fat rise for a minute, then pour the juices from the bottom for gravy."
+        ],
+        [
+          "Order early",
+          "Delivery gets slower and popular items sell out as the holiday gets closer. Ordering a few weeks ahead gives you time for a practice run."
+        ]
+      ],
+      "faq": [
+        [
+          "What kitchen tools do I need to host Thanksgiving?",
+          "A meat thermometer, a roasting pan, a fat separator for gravy, oven mitts that handle a heavy pan, and containers for leftovers cover most of the day. A slow cooker helps when the oven is full."
+        ],
+        [
+          "How do I keep side dishes warm on Thanksgiving?",
+          "A slow cooker on its warm setting holds mashed potatoes, stuffing or gravy at serving temperature without taking up a burner or the oven."
+        ],
+        [
+          "How do I know when the turkey is done?",
+          "Use an instant-read thermometer in the thickest part of the thigh, without touching bone, and follow USDA guidance for poultry temperatures."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "Bright white kitchen with clear countertops",
+        "credit": "Unsplash",
+        "source_id": "photo-1646592491605-db9d032514b9"
+      },
+      "hashtags": "#thanksgiving #thanksgivingdinner #thanksgivinghosting #holidaycooking",
+      "picks": [
+        {
+          "asin": "B00S93EQUK",
+          "award": "Must-have for the turkey",
+          "why": "An instant-read probe with a backlit display that tells you when the turkey, ham or roast is actually done, and it's waterproof so it rinses clean."
+        },
+        {
+          "asin": "B07V1ZSYVF",
+          "award": "Best for smoother gravy",
+          "why": "A 4-cup fat separator with a built-in strainer: pour in the drippings, let the fat rise, and pour the juices out from the bottom."
+        },
+        {
+          "asin": "B003OAJGJO",
+          "award": "Best for big-batch sides",
+          "why": "A 7-quart slow cooker with high, low and warm settings, so mashed potatoes or stuffing stay hot while the oven handles the turkey."
+        },
+        {
+          "asin": "B004P2LEE0",
+          "award": "Best for dips and gravy",
+          "why": "A 2-quart slow cooker with a warm setting that keeps gravy, dips or cranberry sauce warm on the buffet."
+        },
+        {
+          "asin": "B08J8GZXKZ",
+          "award": "Best for heavy roasting pans",
+          "why": "Silicone mitts rated to 500°F with a ribbed, non-slip grip for lifting a hot roasting pan out of the oven."
+        },
+        {
+          "asin": "B0000645YM",
+          "award": "Best for prep day",
+          "why": "A 3-cup food processor that chops onions, celery and herbs for stuffing in a few pulses."
+        },
+        {
+          "asin": "B00M2J7PCI",
+          "award": "Best for measuring and mixing",
+          "why": "Glass measuring cups in 1, 2 and 4-cup sizes for broth, gravy and pie fillings, safe in the microwave."
+        },
+        {
+          "asin": "B07YP2VH4B",
+          "award": "Best for canned sides",
+          "why": "A sturdy can opener with an oversized turning knob for cranberry sauce, pumpkin and broth cans."
+        },
+        {
+          "asin": "B079M8FPTW",
+          "award": "Best for leftovers",
+          "why": "Five matching 3.2-cup containers with latching leak-proof lids, so leftovers stack neatly and go home with guests."
+        }
+      ]
+    },
     "gifts-for-bakers": {
       "title": "Practical Gifts for Bakers",
       "keyword": "gifts for bakers",

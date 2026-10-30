@@ -49,6 +49,31 @@ GIFT_HOOKS = {
          "A handheld milk frother and a slide-lid coffee tumbler for coffee lovers, and an instant-read thermometer for the grill."),
         ("LITTLE GIFTS, BIG HELP", "Kitchen Gadgets Cooks Actually Use", "Kitchen Gadget Stocking Stuffers Cooks Actually Use",
          "Skip novelty gadgets. These small tools save time on everyday jobs like shredding chicken, frothing milk and checking doneness.")],
+    "black-friday-kitchen-gifts": [
+        ("BLACK FRIDAY SHOPPING LIST", "Kitchen Gifts Worth Putting on Your List", "Black Friday Shopping List: Practical Kitchen Gifts They'll Use Every Week",
+         "Go into Black Friday with a short list: an air fryer, a 7-quart slow cooker, a personal blender and insulated tumblers people use every week."),
+        ("CYBER MONDAY GIFT IDEAS", "Bigger Kitchen Gifts for Everyday Cooks", "Cyber Monday Kitchen Gift Ideas: Air Fryer, Slow Cooker, Blender and More",
+         "Bigger gifts that earn their counter space: a compact 6-quart air fryer, a family-size slow cooker and a KitchenAid hand mixer."),
+        ("GIFTS FOR EVERYONE ON YOUR LIST", "From Coffee Drinkers to Holiday Hosts", "Kitchen Gifts for Everyone on Your List: Coffee Drinkers, Bakers and Hosts",
+         "A glass kettle for tea and coffee drinkers, a hand mixer for bakers and a big slow cooker for the family holiday host.")],
+    "thanksgiving-kitchen-checklist": [
+        ("THANKSGIVING PREP", "Tools to Have Before Thanksgiving Day", "Thanksgiving Prep: Kitchen Tools to Have Before the Big Day",
+         "A meat thermometer for the turkey, a fat separator for gravy and a slow cooker to free up the oven for sides."),
+        ("FIRST TIME HOSTING?", "The Thanksgiving Host's Kitchen Checklist", "First Time Hosting Thanksgiving? The Kitchen Tools That Make It Easier",
+         "Hosting is mostly a timing problem. These tools take the guesswork out of the turkey and keep the sides warm until dinner."),
+        ("SMOOTHER GRAVY, JUICIER TURKEY", "Thanksgiving Turkey and Gravy Tools", "Thanksgiving Turkey and Gravy Tools: Thermometer, Fat Separator and More",
+         "Know when the turkey is done with an instant-read thermometer, then pour the drippings through a fat separator for smoother gravy.")],
+    "gifts-for-bakers": [
+        ("COOKIE SEASON", "Baking Tools for Cookie Season", "Holiday Baking Tools for Cookie Season: Practical Gifts for Bakers",
+         "Fresh baking sheets, silicone baking mats and a big pastry mat for rolling out sugar cookies and pie crust."),
+        ("GIFTS FOR BAKERS", "Practical Upgrades Every Baker Uses", "Practical Gifts for Bakers: Upgrades They'll Use Every Batch",
+         "A digital scale for consistent results, a hand mixer that stores in a drawer and glass measuring cups for every recipe."),
+        ("PIE AND COOKIE HELPERS", "Roll, Measure and Bake With Less Mess", "Pie and Cookie Baking Helpers: Pastry Mat, Scale and Baking Sheets",
+         "A 28 by 20 inch pastry mat with printed measurements makes rolling pie crust and cookies neater and easier to size.")],
+}
+# Pin wording for gift guides that aren't gift lists (e.g. a hosting checklist). Default is the gift wording.
+GUIDE_PIN_LABELS = {
+    "thanksgiving-kitchen-checklist": ("HOSTING CHECKLIST", "See the checklist →", "Kitchen Tools"),
 }
 CATEGORY_TAGS = {
     "organization": "#kitchenorganization #smallkitchen #organizedhome",
@@ -224,14 +249,15 @@ def build(data, out, url, force=False):
         tags = gg.get("hashtags", "#giftideas #kitchengifts")
         board = data["site"].get("gift_board", "Holiday Gift Ideas for Cooks")
         n = len(items)
-        add(f"gift-{key}-a", "gift", key, page, None, f"{gg['title']}: {n} Useful Ideas ({year})",
+        label, cta, noun = GUIDE_PIN_LABELS.get(key, ("HOLIDAY GIFT GUIDE", "See the gift ideas →", "Useful Ideas"))
+        add(f"gift-{key}-a", "gift", key, page, None, f"{gg['title']}: {n} {noun} ({year})",
             description(first_sentences(gg["intro"]), tags), board, 0,
-            lambda: guide_pin(photo, "a", "HOLIDAY GIFT GUIDE", gg["title"], GIFT_ACCENT, cta="See the gift ideas →"))
+            lambda label=label, cta=cta: guide_pin(photo, "a", label, gg["title"], GIFT_ACCENT, cta=cta))
         for i, (style, (kicker, headline, title, body)) in enumerate(zip("bcd", GIFT_HOOKS.get(key, []))):
             add(f"gift-{key}-{style}", "gift", key, page, None, title, description(body, tags), board, i + 1,
-                (lambda st=style, k=kicker, h=headline: guide_pin(photo, st, k, h, GIFT_ACCENT,
-                                                                    checks=[x["award"] for x in items], number=n,
-                                                                    cta="See the gift ideas →")))
+                (lambda st=style, k=kicker, h=headline, cta=cta: guide_pin(photo, st, k, h, GIFT_ACCENT,
+                                                                             checks=[x["award"] for x in items], number=n,
+                                                                             cta=cta)))
 
     # Buying guides
     for key, s in data["subcategories"].items():
