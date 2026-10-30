@@ -9,7 +9,9 @@ page, sitemap, robots, and the products.json feed the posting routines read.
 
 Product images are original graphics rendered by graphics.py (needs Pillow) into
 public/img/ — never Amazon-hosted photos, which the Associates policies only
-license through Amazon's own tools/API.
+license through Amazon's own tools/API. When stock_photos.py has saved a Pixabay
+photo of the same kind of item (assets/products/), the graphics include it,
+badged "Similar item shown", and the product page captions and credits it.
 """
 import html
 import json
@@ -236,6 +238,23 @@ def page_path(p):
 # Official Amazon photos from the Creators API (written by fetch_amazon_images.py, only when API keys are set).
 # Hotlinked from Amazon's servers as the API license requires; never committed, refreshed on every deploy.
 AMAZON_IMAGES = {}
+# Pixabay photos of a similar item, from assets/products/photos.json (see stock_photos.py).
+PHOTO_CREDITS = {}
+
+
+def photo_alt(p):
+    kind = (PHOTO_CREDITS.get(p["asin"]) or {}).get("kind")
+    return f"{p['name']} (photo shows a similar {kind}, not this exact product)" if kind else p["name"]
+
+
+def photo_note(p):
+    c = PHOTO_CREDITS.get(p["asin"])
+    if not c or AMAZON_IMAGES.get(p["asin"]):
+        return ""
+    who = f'{e(c["user"])} / ' if c.get("user") else ""
+    src = f'<a href="{e(c["page_url"])}" rel="nofollow noopener">{who}Pixabay</a>' if c.get("page_url") else "Pixabay"
+    return (f'<p class="photo-note">Photo shows a similar {e(c["kind"])}, not this exact product. '
+            f'See the real product photos on Amazon. Photo: {src}</p>')
 
 
 def picture(p, base, eager=False):
@@ -246,7 +265,7 @@ def picture(p, base, eager=False):
         return (f'<img class="amz" src="{e(a["url"])}" alt="{e(p["name"])}" {load} '
                 f'width="{a.get("width") or 500}" height="{a.get("height") or 500}" referrerpolicy="no-referrer-when-downgrade">')
     return (f'<picture><source srcset="{base}img/{e(p["asin"])}-sq.webp" type="image/webp">'
-            f'<img src="{base}img/{e(p["asin"])}-sq.png" alt="{e(p["name"])}" {load} width="800" height="800"></picture>')
+            f'<img src="{base}img/{e(p["asin"])}-sq.png" alt="{e(photo_alt(p))}" {load} width="800" height="800"></picture>')
 
 
 def buy(p, tag):
@@ -312,6 +331,8 @@ CSS = """
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -586,9 +607,12 @@ def render_pick(data, p, products):
   <main id="main">
     <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="{e(p['asin'])}" data-pl="pick">
+      <div class="media">
       <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
         {picture(p, base, eager=True)}
       </a>
+      {photo_note(p)}
+      </div>
       <div class="info">
         <h1>{e(p['name'])}</h1>
         <p class="lede">{e(p['blurb'])}</p>
@@ -1192,6 +1216,10 @@ def main():
                          if str(v.get("url", "")).startswith("https://m.media-amazon.com/")}
         print(f"Using official Amazon photos for {len(AMAZON_IMAGES)} products")
     import graphics  # needs Pillow; only required for a full build
+    global PHOTO_CREDITS
+    PHOTO_CREDITS = {k: v for k, v in graphics.photo_credits().items() if graphics.product_photo(k)}
+    if PHOTO_CREDITS:
+        print(f"Using similar-item stock photos for {len(PHOTO_CREDITS)} products")
     graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
     render_hero_images(data)
     url, tag = data["site"]["url"], data["site"]["associate_tag"]

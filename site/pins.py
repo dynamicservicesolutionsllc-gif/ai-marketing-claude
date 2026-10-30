@@ -7,7 +7,8 @@ photo-based pin designs with different headlines, and every product gets its ori
 attributed to Pinterest and to the individual pin (see track_js in build.py).
 
 Images: public/img/pins/<pin id>.jpg (1000x1500, Pinterest 2:3). Guide photos are the licensed Unsplash header
-photos in assets/guides/; product pins use only original graphics, never Amazon photos.
+photos in assets/guides/; product pins use original graphics (with a Pixabay photo of a similar item, badged "Similar
+item shown", when stock_photos.py has saved one), never Amazon photos.
 
 Queue order: `wave` 0 first (each page's lead pin, gift guides before buying guides before products), then waves 1–3.
 The Pinterest routine pins the first entries whose `id` is not in its Posted Pins Log.
@@ -18,7 +19,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
-from graphics import ACCENTS, CREAM, INK, MUTED, ORANGE, _check, _fit, _font
+from graphics import ACCENTS, CREAM, INK, MUTED, ORANGE, _check, _fit, _font, badge, cover, product_photo
 
 ROOT = Path(__file__).resolve().parent
 W, H = 1000, 1500
@@ -199,11 +200,31 @@ def guide_pin(photo, style, kicker, headline, accent, checks=(), number=None, ct
     return im
 
 
-def product_pin(g, accent, style, headline, kicker):
-    """Two new looks for a product (original pin stays as variant a): b) dark, c) colour."""
+def product_pin(g, accent, style, headline, kicker, photo=None):
+    """Two new looks for a product (original pin stays as variant a): b) dark, c) colour.
+    With a similar-item photo (stock_photos.py) the photo sits between the headline and the points."""
     bg, fg, sub = (INK, CREAM, (224, 122, 79)) if style == "b" else (accent, (255, 255, 255), (255, 255, 255))
     im = Image.new("RGB", (W, H), bg)
     d = ImageDraw.Draw(im)
+    if photo:
+        f, lines = _fit(d, kicker.upper(), "DejaVuSans-Bold.ttf", 38, W - 160, 1)
+        d.text((W / 2, 110), lines[0], font=f, fill=sub, anchor="mm")
+        f, lines = _fit(d, headline, "DejaVuSerif-Bold.ttf", 80, W - 120, 2, min_size=44)
+        d.multiline_text((W / 2, 280), "\n".join(lines), font=f, fill=fg, anchor="mm", align="center", spacing=14)
+        ph, mask = _rounded(cover(photo, 880, 500), 30)
+        im.paste(ph, (60, 440), mask)
+        badge(im, 84, 870)
+        d = ImageDraw.Draw(im)
+        y = 975
+        for pt in g["points"][:3]:
+            f, lines = _fit(d, pt, "DejaVuSans.ttf", 42, W - 260, 1)
+            _check(d, 120, y + 26, 20)
+            d.text((165, y + 26), lines[0], font=f, fill=fg, anchor="lm")
+            y += 78
+        _cta(d, 1240, "See why we picked it →", fill=ORANGE if style == "b" else CREAM, ink="white" if style == "b" else INK)
+        d.text((W / 2, 1420), "#ad · As an Amazon Associate I earn from qualifying purchases",
+               font=_font("DejaVuSans.ttf", 24), fill=(179, 169, 157) if style == "b" else (255, 255, 255), anchor="mm")
+        return im
     f, lines = _fit(d, kicker.upper(), "DejaVuSans-Bold.ttf", 40, W - 160, 2)
     d.multiline_text((W / 2, 170), "\n".join(lines), font=f, fill=sub, anchor="mm", align="center", spacing=6)
     f, lines = _fit(d, headline, "DejaVuSerif-Bold.ttf", 96, W - 120, 3)
@@ -232,9 +253,10 @@ def build(data, out, url, force=False):
     year = max(p["added"] for p in data["products"])[:4]
     pins = []
 
-    def add(pid, kind, page_key, page_url, image_url, title, desc, board, wave, render=None, fragment=""):
+    def add(pid, kind, page_key, page_url, image_url, title, desc, board, wave, render=None, fragment="", photo=None):
         path = img_dir / f"{pid}.jpg"
-        if render and (force or not path.exists()):
+        newer = photo and path.exists() and photo.stat().st_mtime > path.stat().st_mtime
+        if render and (force or newer or not path.exists()):
             render().save(path, "JPEG", quality=86, optimize=True, progressive=True)
         link = f"{page_url}?utm_source=pinterest&utm_medium=social&utm_campaign={pid}{fragment}"
         pins.append({"id": pid, "kind": kind, "page": page_key, "page_url": page_url, "link": link,
@@ -303,13 +325,15 @@ def build(data, out, url, force=False):
         award = title_case(p.get("award", "Our pick"))
         # New designs go to the product's keyword board (e.g. "Pantry Organization Ideas"); the original pin keeps its board.
         board = data["subcategories"][p["subcategory"]].get("board", board)
+        photo = product_photo(asin)
         add(f"{asin}-b", "product", asin, page, None, f"{award}: {p['name']}", description(p["blurb"], tags), board, 2,
-            lambda g=g, a=accent, aw=award, lb=g["label"]: product_pin(g, a, "b", aw, lb))
+            lambda g=g, a=accent, aw=award, lb=g["label"], ph=photo: product_pin(g, a, "b", aw, lb, ph), photo=photo)
         sub = data["subcategories"][p["subcategory"]]
         guide_page = f"{url}/{guide_path(p['subcategory'])}"
         add(f"{asin}-c", "product", asin, guide_page, None, f"{g['headline']}: {g['label']} in Our {sub['title'].replace('Best ', '')} Guide",
             description(f"{p['blurb']} See how it compares in our full guide.", tags), board, 3,
-            lambda g=g, a=accent, lb=g["label"]: product_pin(g, a, "c", "Why It Made Our List", lb), fragment=f"#{asin}")
+            lambda g=g, a=accent, lb=g["label"], ph=photo: product_pin(g, a, "c", "Why It Made Our List", lb, ph),
+            fragment=f"#{asin}", photo=photo)
 
     kind_order = {"gift": 0, "guide": 1, "product": 2}
     pins.sort(key=lambda x: (x["wave"], kind_order[x["kind"]]))

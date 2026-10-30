@@ -46,3 +46,7 @@ node_modules/
 # Amazon Creators API data: regenerated on every deploy, never committed
 site/amazon_images.json
 site/videos/
+
+# Pixabay API key for site/stock_photos.py (never commit)
+site/.pixabay-key
+.pixabay-key
