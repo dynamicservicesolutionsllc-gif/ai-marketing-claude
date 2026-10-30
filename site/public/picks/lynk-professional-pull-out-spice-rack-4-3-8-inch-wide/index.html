@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B07NDZWMXF" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B07NDZWMXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B07NDZWMXF-sq.webp" type="image/webp"><img src="../../img/B07NDZWMXF-sq.png" alt="LYNK PROFESSIONAL Pull Out Spice Rack, 4-3/8 Inch Wide" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>LYNK PROFESSIONAL Pull Out Spice Rack, 4-3/8 Inch Wide</h1>
         <p class="lede">Turns a narrow cabinet into a two-tier slide-out spice drawer, so jars at the back come forward instead of getting lost. It screws into the cabinet floor on full-extension glides and holds spices in their original containers, with no special jars needed.</p>

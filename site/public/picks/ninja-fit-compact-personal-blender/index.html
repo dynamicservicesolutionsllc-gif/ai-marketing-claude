@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B01FHOWYA2" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B01FHOWYA2-sq.webp" type="image/webp"><img src="../../img/B01FHOWYA2-sq.png" alt="Ninja Fit Compact Personal Blender" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>Ninja Fit Compact Personal Blender</h1>
         <p class="lede">A full-size blender is a lot to haul out and wash for one smoothie. This compact 700-watt blender blends right in a 16 oz cup, then you add the spout lid and take it with you.</p>
