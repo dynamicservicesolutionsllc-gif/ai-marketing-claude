@@ -141,7 +141,9 @@ def pick(name, seed, key):
 # Commons, searchable without a key. Only public-domain / CC0 photos are used, so commercial use needs no
 # permission or attribution (the product page credits them anyway).
 FREE_BAD = ("illustration", "vector", "drawing", "clipart", "clip art", "cartoon", "logo", "icon", "painting",
-            "sketch", "diagram", "poster", "patent", "advert", "engraving", "map of", "nude", "ai generated", "ai-generated")
+            "sketch", "diagram", "poster", "patent", "advert", "engraving", "map of", "nude", "ai generated", "ai-generated",
+            "museum", "antique", "dynasty", "lithograph", "historical", "century", "archive", "vintage", "fishing",
+            "black and white", "black-and-white", "monochrome", "ethnographic", "exhibit")
 FREE_LICENSES = ("public domain", "cc0", "pd")
 _free_cache = {}
 
@@ -171,10 +173,16 @@ def pick_free(name, seed):
     if not pt:
         return None
     kind, query, tag = pt
-    if query not in _free_cache:
-        _free_cache[query] = _commons_search(query)
+    found = {}
+    for q in dict.fromkeys([query, kind if kind.split()[-1] in query else f"{kind} kitchen"]):  # two searches per type
+        if q not in _free_cache:
+            _free_cache[q] = _commons_search(q)
+        for r in _free_cache[q]:
+            found.setdefault(r["title"], r)
     need = tag.split("+")
-    hits = [r for r in _free_cache[query] if all(w in r["text"] for w in need)
+    # Photos taken in a kitchen first; then the rest in search order.
+    pool = sorted(found.values(), key=lambda r: "kitchen" not in r["text"])
+    hits = [r for r in pool if all(w in r["text"] for w in need)
             and not any(b in r["text"] for b in FREE_BAD) and r["mime"] == "image/jpeg" and r["width"] >= 800
             and any(r["license"].lower().startswith(l) for l in FREE_LICENSES)]
     if not hits:
