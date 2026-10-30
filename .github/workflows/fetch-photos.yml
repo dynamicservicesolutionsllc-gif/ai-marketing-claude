@@ -6,9 +6,6 @@
 name: Fetch product photos
 on:
   workflow_dispatch:
-  push:
-    branches: [claude/eager-mccarthy-3jvjpz]
-    paths: [".github/workflows/fetch-photos.yml", "site/stock_photos.py"]
 permissions:
   contents: write
   pull-requests: write
