@@ -30,6 +30,7 @@ PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
 PRIVACY_UPDATED = "2026-10-20"  # bump when the privacy text changes
 GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
+INDEXNOW_KEY = "122e26ae769c42ab31f69e67f167a338"  # served at /<key>.txt; the deploy workflow pings IndexNow (Bing etc.)
 e = html.escape
 PRICE_CLAIM = re.compile(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b|\bunder \$", re.I)
 TESTING_CLAIM = re.compile(r"\b(tested|testing|we tried|i tried|i use|we use|hands-on)\b", re.I)
@@ -1236,6 +1237,7 @@ def main():
     # Let the posting routines load the graphics cross-origin (canvas -> file upload on Pinterest/Facebook).
     (OUT / "_headers").write_text("/img/*\n  Access-Control-Allow-Origin: *\n", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
+    (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
     # Machine-readable feed: the posting routines read this as their queue.
     feed = [dict(p, page_url=f"{url}/{page_path(p)}", pin_image=f"{url}/img/{p['asin']}.png",
                  amazon_url=amazon_url(p["asin"], tag))
