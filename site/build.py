@@ -1235,8 +1235,10 @@ function kff_smtp_send($cfg, $to, $replyTo, $subject, $body) {
   fclose($fp);
   return $ok;
 }
-$cfgFile = dirname(__DIR__) . '/kff-smtp.php';
-$cfg = is_file($cfgFile) ? @include $cfgFile : null;
+$cfg = null;  // next to public_html, or (if the host doesn't allow writing there) in the web-blocked .data folder
+foreach ([dirname(__DIR__) . '/kff-smtp.php', __DIR__ . '/.data/kff-smtp.php'] as $cfgFile) {
+  if (is_file($cfgFile)) { $cfg = @include $cfgFile; break; }
+}
 $sent = false;
 if (is_array($cfg) && !empty($cfg['user']) && !empty($cfg['pass']) && strpos($cfg['pass'], 'PASTE') === false) {
   $sent = kff_smtp_send($cfg, $to, $email, $subject, $body);
@@ -1261,8 +1263,10 @@ SETUP_MAIL_PHP = r"""<?php
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
 $user = 'help@kitchenfindsfavorites.com';
-$cfgFile = dirname(__DIR__) . '/kff-smtp.php';
-$lockFile = dirname(__DIR__) . '/.kff-mail-setup-attempts.json';
+// Preferred home is next to public_html; some hosts don't let PHP write there, so fall back to
+// public_html/.data/, which its own .htaccess blocks from the web (the click logger writes there too).
+$cfgFiles = [dirname(__DIR__) . '/kff-smtp.php', __DIR__ . '/.data/kff-smtp.php'];
+$lockFile = __DIR__ . '/.data/.kff-mail-setup-attempts.json';
 function page($title, $html) {
   echo '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
      . '<meta name="robots" content="noindex, nofollow"><title>' . htmlspecialchars($title) . '</title>'
@@ -1272,10 +1276,11 @@ function page($title, $html) {
      . '<h1>' . htmlspecialchars($title) . '</h1>' . $html . '</body></html>';
   exit;
 }
-$cfg = is_file($cfgFile) ? @include $cfgFile : null;
+$cfg = null;
+foreach ($cfgFiles as $f) { if (is_file($f)) { $cfg = @include $f; break; } }
 if (is_array($cfg) && !empty($cfg['pass']) && strpos($cfg['pass'], 'PASTE') === false) {
   page('Contact form email is set up', '<p class="ok">Done. Contact-form messages are sent through ' . $user . ' and land in its Inbox.</p>'
-     . '<p>To change the password later, delete <code>kff-smtp.php</code> (next to public_html) in Hostinger\'s File Manager and open this page again.</p>');
+     . '<p>To change the password later, delete <code>kff-smtp.php</code> (next to public_html, or in public_html/.data) in Hostinger\'s File Manager and open this page again.</p>');
 }
 $att = is_file($lockFile) ? (json_decode((string)@file_get_contents($lockFile), true) ?: []) : [];
 $att += ['total' => 0, 'recent' => []];
@@ -1299,13 +1304,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$blocked) {
   $ok = $pass !== '' && strlen($pass) < 200 ? smtp_login($user, $pass) : false;
   if ($ok === true) {
     $php = "<?php\n// Written by setup-mail.php. Keep this file outside public_html.\nreturn " . var_export(['user' => $user, 'pass' => $pass], true) . ";\n";
-    if (@file_put_contents($cfgFile, $php, LOCK_EX) !== false) {
-      @chmod($cfgFile, 0600);
-      @unlink($lockFile);
-      page('Contact form email is set up', '<p class="ok">Password accepted and saved. Contact-form messages now go to the ' . $user . ' Inbox.</p>'
-         . '<p>Try it: send a message from <a href="/contact/">the contact page</a>.</p>');
+    @mkdir(__DIR__ . '/.data', 0755, true);
+    $why = [];
+    foreach ($cfgFiles as $f) {
+      if (@file_put_contents($f, $php, LOCK_EX) !== false) {
+        @chmod($f, 0600);
+        @unlink($lockFile);
+        page('Contact form email is set up', '<p class="ok">Password accepted and saved. Contact-form messages now go to the ' . $user . ' Inbox.</p>'
+           . '<p>Try it: send a message from <a href="/contact/">the contact page</a>.</p>');
+      }
+      $e = error_get_last();
+      $why[] = basename(dirname($f)) . ': ' . ($e ? $e['message'] : 'not writable');
     }
-    $msg = '<p class="err">The password works, but the server would not let this page save the file. Ask Claude for the manual steps.</p>';
+    $msg = '<p class="err">The password works, but the server would not let this page save the file. Send Claude this detail: <code>'
+         . htmlspecialchars(implode(' | ', $why)) . '</code></p>';
   } elseif ($ok === null) {
     $msg = '<p class="err">Could not reach Hostinger\'s mail server. Please try again in a few minutes.</p>';
   } else {
