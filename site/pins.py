@@ -19,7 +19,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
-from graphics import ACCENTS, CREAM, INK, MUTED, ORANGE, _check, _fit, _font, badge, cover, product_photo
+from graphics import ACCENTS, CREAM, INK, MUTED, ORANGE, _check, _fit, _font, badge, badge_text, cover, product_photo
 
 ROOT = Path(__file__).resolve().parent
 W, H = 1000, 1500
@@ -213,7 +213,7 @@ def product_pin(g, accent, style, headline, kicker, photo=None):
         d.multiline_text((W / 2, 280), "\n".join(lines), font=f, fill=fg, anchor="mm", align="center", spacing=14)
         ph, mask = _rounded(cover(photo, 880, 500), 30)
         im.paste(ph, (60, 440), mask)
-        badge(im, 84, 870)
+        badge(im, 84, 870, text=badge_text(photo))
         d = ImageDraw.Draw(im)
         y = 975
         for pt in g["points"][:3]:

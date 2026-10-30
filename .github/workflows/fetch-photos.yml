@@ -6,6 +6,12 @@
 name: Fetch product photos
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "fetch = automatic picks; candidates = shortlist photos for review (pushed to the photo-candidates branch); choose = download the photos listed in assets/products/chosen.json"
+        type: choice
+        options: [fetch, candidates, choose]
+        default: fetch
 permissions:
   contents: write
   pull-requests: write
@@ -23,9 +29,11 @@ jobs:
         run: |
           set -euo pipefail
           pip install --quiet pillow
-          python3 stock_photos.py --free
-          python3 stock_photos.py --check
-          python3 build.py
+          case "${{ inputs.mode || 'fetch' }}" in
+            candidates) python3 photo_candidates.py candidates ;;
+            choose) python3 photo_candidates.py choose; python3 stock_photos.py --check; python3 build.py ;;
+            *) python3 stock_photos.py --free; python3 stock_photos.py --check; python3 build.py ;;
+          esac
       - name: Commit
         env:
           GH_TOKEN: ${{ github.token }}
@@ -33,6 +41,13 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ "${{ inputs.mode }}" = "candidates" ]; then
+            git checkout -q -B photo-candidates
+            git add -f site/photo-candidates
+            git commit -q -m "Photo candidates for review"
+            git push -f origin photo-candidates
+            exit 0
+          fi
           git add site
           if [ ! -s site/assets/products/photos.json ] || [ "$(cat site/assets/products/photos.json)" = "{}" ]; then git reset -q -- site/assets/products/photos.json 2>/dev/null || true; fi
           if git diff --cached --quiet; then echo "No new photos"; exit 0; fi

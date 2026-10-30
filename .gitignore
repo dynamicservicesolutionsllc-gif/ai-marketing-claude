@@ -50,3 +50,4 @@ site/videos/
 # Pixabay API key for site/stock_photos.py (never commit)
 site/.pixabay-key
 .pixabay-key
+site/photo-candidates/

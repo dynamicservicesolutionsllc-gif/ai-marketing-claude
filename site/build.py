@@ -243,8 +243,10 @@ PHOTO_CREDITS = {}
 
 
 def photo_alt(p):
-    kind = (PHOTO_CREDITS.get(p["asin"]) or {}).get("kind")
-    return f"{p['name']} (photo shows a similar {kind}, not this exact product)" if kind else p["name"]
+    c = PHOTO_CREDITS.get(p["asin"]) or {}
+    if c.get("note"):
+        return f"{p['name']} (product not pictured; photo shows {c['note']})"
+    return f"{p['name']} (photo shows a similar {c['kind']}, not this exact product)" if c.get("kind") else p["name"]
 
 
 def photo_note(p):
@@ -254,8 +256,9 @@ def photo_note(p):
     site = c.get("site", "Pixabay") + (f' ({c["license"]})' if c.get("license") else "")
     who = f'{e(c["user"])} / ' if c.get("user") else ""
     src = f'<a href="{e(c["page_url"])}" rel="nofollow noopener">{who}{e(site)}</a>' if c.get("page_url") else e(site)
-    return (f'<p class="photo-note">Photo shows a similar {e(c["kind"])}, not this exact product. '
-            f'See the real product photos on Amazon. Photo: {src}</p>')
+    what = (f'Product not pictured: the photo shows {e(c["note"])}.' if c.get("note")
+            else f'Photo shows a similar {e(c["kind"])}, not this exact product.')
+    return f'<p class="photo-note">{what} See the real product photos on Amazon. Photo: {src}</p>'
 
 
 def picture(p, base, eager=False):
