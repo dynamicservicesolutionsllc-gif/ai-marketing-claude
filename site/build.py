@@ -18,6 +18,7 @@ import json
 import re
 import shutil
 import sys
+from collections import Counter
 from datetime import date
 from pathlib import Path
 
@@ -128,6 +129,9 @@ def load():
             errors.append(f"{where}: description over 155 characters (search results truncate it)")
         if len(s.get("criteria", [])) < 2 or len(s.get("guide", [])) < 2:
             errors.append(f"{where}: needs at least 2 'criteria' and 2 'guide' entries")
+        for r in s.get("related", []):
+            if r == key or r not in data["subcategories"]:
+                errors.append(f"{where}: 'related' entry '{r}' must be another subcategory key")
         copy = json.dumps(s, ensure_ascii=False)
         if TESTING_CLAIM.search(copy):
             errors.append(f"{where}: copy implies hands-on testing/personal use")
@@ -857,16 +861,31 @@ def render_guide(data, key, items):
     if faq:
         faq_html = "    <section class=\"prose wide\">\n      <h2>Frequently asked questions</h2>\n" + "".join(
             f"      <h3>{e(q)}</h3>\n      <p>{e(a)}</p>\n" for q, a in faq) + "    </section>\n"
+    subs = data["subcategories"]
+    sub_of = {p["asin"]: p["subcategory"] for p in data["products"]}
     if gift:
         others = [(gift_path(k), v["title"]) for k, v in data["gift_guides"].items() if k != key]
         rel_heading = "More holiday gift guides"
+        # Buying guides behind this gift list, most picks first.
+        counts = Counter(sub_of[p["asin"]] for p in items)
+        cross = [(guide_path(k), subs[k]["title"]) for k, _ in counts.most_common()]
+        cross_heading = "Compare more options in our buying guides"
     else:
-        others = [(guide_path(k), v["title"]) for k, v in data["subcategories"].items() if k != key and v["category"] == s["category"]]
+        same = [k for k, v in subs.items() if k != key and v["category"] == s["category"]]
+        others = [(guide_path(k), subs[k]["title"]) for k in same + [r for r in s.get("related", []) if r not in same]]
         rel_heading = "Related buying guides"
+        # Gift guides that include picks from this guide, most picks first.
+        counts = Counter({k: sum(sub_of[pk["asin"]] == key for pk in g["picks"]) for k, g in data.get("gift_guides", {}).items()})
+        cross = [(gift_path(k), data["gift_guides"][k]["title"]) for k, n in counts.most_common() if n]
+        cross_heading = "Gift guides featuring these picks"
     related = ""
-    if others:
-        related = f"    <section>\n      <h2>{rel_heading}</h2>\n      <ul class=\"links\">" + "".join(
-            f'<li><a href="{base}{u}">{e(t)}</a></li>' for u, t in others) + "</ul>\n    </section>\n"
+    for heading, links in ((cross_heading, cross), (rel_heading, others)):
+        if links:
+            related += f"    <section>\n      <h2>{heading}</h2>\n      <ul class=\"links\">" + "".join(
+                f'<li><a href="{base}{u}">{e(t)}</a></li>' for u, t in links) + "</ul>\n    </section>\n"
+    if key == "thanksgiving-kitchen-checklist":
+        quick_answer += (f'\n      <p class="callout"><strong>Free printable:</strong> '
+                         f'<a href="{base}thanksgiving-timeline/">Thanksgiving hosting timeline</a>, a countdown from three weeks out to dinner time.</p>')
     url = f"{site['url']}/{path}"
     graph = [
         {"@type": "BreadcrumbList", "itemListElement": [
