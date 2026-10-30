@@ -108,6 +108,40 @@ NOUNS = {
 }
 
 
+# Extra Pixabay searches (query, required tag) per type, for items the main search rarely shows well.
+EXTRA_QUERIES = {
+    "sponge": [("kitchen sink sponge", "sponge"), ("dish sponge", "sponge")],
+    "apple peeler": [("apple peeling", "peel"), ("peeled apple", "apple")],
+    "slow cooker": [("crock pot", "crock"), ("slow cooker stew", "slow")],
+    "under sink": [("under sink storage", "sink"), ("cleaning supplies cabinet", "cabinet")],
+    "chopper": [("vegetable chopper", "chopper"), ("mandoline slicer", "slicer"), ("vegetable spiralizer", "spiral")],
+    "shredder": [("pulled chicken", "chicken")],
+    "kettle": [("glass kettle", "kettle"), ("kettle boiling water", "kettle")],
+    "food processor": [("food processor kitchen", "processor"), ("food chopper", "chopper")],
+    "tumbler": [("stainless steel tumbler", "tumbler"), ("insulated tumbler", "tumbler"), ("tumbler straw", "tumbler")],
+    "water bottle": [("stainless steel water bottle", "bottle"), ("reusable water bottle", "bottle")],
+    "bottle": [("insulated bottle", "bottle"), ("reusable water bottle", "bottle")],
+    "lazy susan": [("lazy susan", "susan"), ("turntable organizer", "turntable")],
+    "baking sheet": [("baking tray", "tray"), ("sheet pan", "pan")],
+    "baking mat": [("silicone baking mat", "mat"), ("baking cookies tray", "baking")],
+    "travel mug": [("travel mug", "mug"), ("thermos mug", "thermos")],
+    "fat separator": [("gravy boat", "gravy"), ("pouring gravy", "gravy")],
+    "food storage": [("meal prep containers", "meal"), ("plastic food container", "container")],
+    "knife organizer": [("knife block", "knife"), ("kitchen knives drawer", "knife")],
+    "splatter": [("microwave cooking", "microwave")],
+    "lid": [("pot lid", "lid"), ("cookware lids", "lid")],
+}
+
+
+def type_key(name):
+    """The PRODUCT_TYPES words that matched this name (key for EXTRA_QUERIES), or None."""
+    n = name.lower()
+    for words, _q, _t in PRODUCT_TYPES:
+        if re.search(r"\b" + re.escape(words) + r"(?:s|es)?\b", n):
+            return words
+    return None
+
+
 def product_type(name):
     """(kind, search, required tag) for a product name, or None. `kind` is the caption noun."""
     n = name.lower()
@@ -121,19 +155,30 @@ def _get(url):
     return urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60)
 
 
+_px_cache = {}
+
+
 def pick(name, seed, key):
     """The Pixabay hit stock.py's photo_for(name, seed) would choose, or None."""
     pt = product_type(name)
     if not pt:
         return None
     kind, query, tag = pt
-    q = urllib.parse.urlencode({"key": key, "q": query, "image_type": "photo", "per_page": 40,
-                                "safesearch": "true", "min_width": 1000})
-    hits = json.load(_get("https://pixabay.com/api/?" + q)).get("hits", [])
-    need = tag.split("+")
     rejected = set(REJECTED.get(seed, []))  # photos already reviewed and turned down for this product
-    hits = [h for h in hits if all(w in h.get("tags", "").lower() for w in need) and h["id"] not in rejected
-            and not any(t in h.get("tags", "").lower() for t in SKIP_TAGS)]
+    hits, seen = [], set()
+    for qry, tg in [(query, tag)] + EXTRA_QUERIES.get(type_key(name), []):
+        if qry not in _px_cache:
+            import time
+            time.sleep(0.7)  # Pixabay allows 100 requests/minute
+            q = urllib.parse.urlencode({"key": key, "q": qry, "image_type": "photo", "per_page": 40,
+                                        "safesearch": "true", "min_width": 1000})
+            _px_cache[qry] = json.load(_get("https://pixabay.com/api/?" + q)).get("hits", [])
+        need = tg.split("+")
+        for h in _px_cache[qry]:
+            if (h["id"] not in seen and h["id"] not in rejected and all(w in h.get("tags", "").lower() for w in need)
+                    and not any(t in h.get("tags", "").lower() for t in SKIP_TAGS)):
+                seen.add(h["id"])
+                hits.append(h)
     if not hits:
         return None
     h = hits[int(hashlib.md5(seed.encode()).hexdigest(), 16) % min(len(hits), 8)]
