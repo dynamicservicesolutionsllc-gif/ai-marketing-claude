@@ -33,18 +33,26 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / "assets" / "products"
 CREDITS = OUT_DIR / "photos.json"
+# Photo ids reviewed and rejected per ASIN (wrong item, cutout noise, ...); pickers skip them next time.
+REJECTED = json.loads((OUT_DIR / "rejected.json").read_text(encoding="utf-8")) if (OUT_DIR / "rejected.json").exists() else {}
 UA = {"User-Agent": "KitchenFindsSite/1.0 (kitchenfindsfavorites.com)"}
 SKIP_TAGS = ("ai generated", "ai created", "ai-generated", "logo")
 
 # Same table as stock.py: (words to find in the product name, Pixabay photo search, tag(s) a photo must have;
 # "a+b" means both). First match wins, so specific types come before general ones.
 PRODUCT_TYPES = [
+    # Drinkware first, so "MagSlider Lid" or "Slider" tumblers aren't read as lid organizers.
+    ("tumbler", "tumbler cup", "cup"),
+    ("water bottle", "water bottle", "bottle"),
+    ("bottle", "water bottle", "bottle"),
+    ("travel mug", "coffee travel mug", "mug"),
+    ("mug", "coffee mug", "mug"),
     ("salad spinner", "salad spinner", "spinner"),
     ("thermometer", "meat thermometer", "thermometer"),
     ("scale", "kitchen scale", "scale"),
     ("shears", "kitchen scissors", "scissors"),
     ("pizza", "pizza cutter", "pizza"),
-    ("slow cooker", "slow cooker", "cooker"),
+    ("slow cooker", "slow cooker", "slow+cooker"),
     ("immersion", "immersion blender", "blender"),
     ("blender", "blender smoothie", "blender"),
     ("hand mixer", "hand mixer", "mixer"),
@@ -85,11 +93,6 @@ PRODUCT_TYPES = [
     ("food storage", "food storage containers", "container"),
     ("container", "food storage containers", "container"),
     ("bins", "pantry storage", "pantry"),
-    ("tumbler", "tumbler cup", "cup"),
-    ("water bottle", "water bottle", "bottle"),
-    ("bottle", "water bottle", "bottle"),
-    ("travel mug", "coffee travel mug", "mug"),
-    ("mug", "coffee mug", "mug"),
 ]
 
 
@@ -109,7 +112,7 @@ def product_type(name):
     """(kind, search, required tag) for a product name, or None. `kind` is the caption noun."""
     n = name.lower()
     for words, query, tag in PRODUCT_TYPES:
-        if words in n:
+        if re.search(r"\b" + re.escape(words) + r"(?:s|es)?\b", n):  # whole words: "lid" must not match "Slider"
             return NOUNS.get(words, words), query, tag
     return None
 
@@ -128,7 +131,8 @@ def pick(name, seed, key):
                                 "safesearch": "true", "min_width": 1000})
     hits = json.load(_get("https://pixabay.com/api/?" + q)).get("hits", [])
     need = tag.split("+")
-    hits = [h for h in hits if all(w in h.get("tags", "").lower() for w in need)
+    rejected = set(REJECTED.get(seed, []))  # photos already reviewed and turned down for this product
+    hits = [h for h in hits if all(w in h.get("tags", "").lower() for w in need) and h["id"] not in rejected
             and not any(t in h.get("tags", "").lower() for t in SKIP_TAGS)]
     if not hits:
         return None
@@ -182,7 +186,7 @@ def pick_free(name, seed):
     need = tag.split("+")
     # Photos taken in a kitchen first; then the rest in search order.
     pool = sorted(found.values(), key=lambda r: "kitchen" not in r["text"])
-    hits = [r for r in pool if all(w in r["text"] for w in need)
+    hits = [r for r in pool if all(w in r["text"] for w in need) and r["title"] not in REJECTED.get(seed, [])
             and not any(b in r["text"] for b in FREE_BAD) and r["mime"] == "image/jpeg" and r["width"] >= 800
             and any(r["license"].lower().startswith(l) for l in FREE_LICENSES)]
     if not hits:
@@ -266,7 +270,13 @@ def main(argv=None):
         for c in cands:  # first candidate that downloads and opens as an image
             try:
                 with _get(c["url"]) as r:
-                    im = Image.open(io.BytesIO(r.read())).convert("RGB")
+                    im = Image.open(io.BytesIO(r.read()))
+                if im.mode in ("RGBA", "LA", "P"):  # cutouts: put them on white, or the transparent area turns to noise
+                    im = im.convert("RGBA")
+                    bg = Image.new("RGB", im.size, "white")
+                    bg.paste(im, mask=im.getchannel("A"))
+                    im = bg
+                im = im.convert("RGB")
                 break
             except Exception as err:
                 print(f"{p['asin']}: download failed ({err}), trying the next photo", file=sys.stderr)
