@@ -1,4 +1,12 @@
 {
+  "B00004OCKR": {
+    "id": "File:Essoreuse \u00e0 salade.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Essoreuse_%C3%A0_salade.jpg",
+    "user": "Medja\u00ef",
+    "site": "Wikimedia Commons",
+    "license": "Public domain",
+    "kind": "salad spinner"
+  },
   "B00S93EQUK": {
     "id": "File:11.09.11 Turkey top questions blog - Flickr - USDAgov.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:11.09.11_Turkey_top_questions_blog_-_Flickr_-_USDAgov.jpg",
@@ -6,6 +14,30 @@
     "site": "Wikimedia Commons",
     "license": "Public domain",
     "kind": "thermometer"
+  },
+  "B010TCP3SC": {
+    "id": "File:Li\u00e8ge waffle iron in Brussels-Central railway station.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Li%C3%A8ge_waffle_iron_in_Brussels-Central_railway_station.jpg",
+    "user": "Romaine",
+    "site": "Wikimedia Commons",
+    "license": "CC0",
+    "kind": "waffle maker"
+  },
+  "B0113UZJE2": {
+    "id": "File:Kitchen scale 20101110.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_scale_20101110.jpg",
+    "user": "Batholith ( talk )",
+    "site": "Wikimedia Commons",
+    "license": "Public domain",
+    "kind": "kitchen scale"
+  },
+  "B075X1KPLZ": {
+    "id": "File:Girafe (cuisine).JPG",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Girafe_(cuisine).JPG",
+    "user": "V\u00e9ronique PAGNIER",
+    "site": "Wikimedia Commons",
+    "license": "Public domain",
+    "kind": "immersion blender"
   },
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
@@ -23,6 +55,14 @@
     "license": "CC0",
     "kind": "milk frother"
   },
+  "B08HSNGR8P": {
+    "id": "File:Immersion blender used to puree applesauce.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Immersion_blender_used_to_puree_applesauce.jpg",
+    "user": "Nutrition, Food Safety &amp; Health",
+    "site": "Wikimedia Commons",
+    "license": "CC0",
+    "kind": "immersion blender"
+  },
   "B08KXKVT4K": {
     "id": "File:Kitchen drawer.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer.jpg",
@@ -38,5 +78,13 @@
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "spice rack"
+  },
+  "B0DPXRJ2VY": {
+    "id": "File:Milk frother wand battery powered.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Milk_frother_wand_battery_powered.jpg",
+    "user": "Ll1324",
+    "site": "Wikimedia Commons",
+    "license": "CC0",
+    "kind": "milk frother"
   }
 }
