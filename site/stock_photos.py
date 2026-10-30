@@ -70,6 +70,7 @@ PRODUCT_TYPES = [
     ("apple peeler", "apples", "apple"),
     ("chopper", "chopped vegetables", "vegetables"),
     ("shredder", "shredded chicken", "chicken"),
+    ("knife organizer", "knife block", "knife"),
     ("knife", "kitchen knives", "knife"),
     ("silverware", "cutlery drawer", "cutlery"),
     ("drawer", "kitchen drawer", "drawer"),
@@ -131,7 +132,43 @@ def pick(name, seed, key):
     if not hits:
         return None
     h = hits[int(hashlib.md5(seed.encode()).hexdigest(), 16) % min(len(hits), 8)]
-    return kind, h
+    return kind, [{"url": h.get("largeImageURL") or h["webformatURL"], "id": h["id"], "page_url": h.get("pageURL", ""),
+                   "user": h.get("user", ""), "site": "Pixabay"}]
+
+
+# Fallback source where no Pixabay key is available (e.g. the "Fetch product photos" GitHub workflow):
+# Openverse, a keyless search of openly licensed images. Only public-domain (CC0 / Public Domain Mark)
+# photos are used, so no attribution is legally required (the page credits them anyway).
+OPENVERSE_BAD = ("illustration", "vector", "drawing", "clipart", "clip art", "cartoon", "logo", "icon", "painting",
+                 "sketch", "diagram", "poster", "ai generated", "ai-generated", "advert", "nude")
+_ov_cache = {}
+
+
+def pick_openverse(name, seed):
+    pt = product_type(name)
+    if not pt:
+        return None
+    kind, query, tag = pt
+    if query not in _ov_cache:
+        import time
+        time.sleep(1.5)  # anonymous Openverse API: keep well under its rate limit
+        q = urllib.parse.urlencode({"q": query, "license": "cc0,pdm", "mature": "false", "page_size": 40,
+                                    "size": "large,medium"})
+        _ov_cache[query] = json.load(_get("https://api.openverse.org/v1/images/?" + q)).get("results", [])
+    need = tag.split("+")
+
+    def text(r):
+        return (r.get("title") or "").lower() + " " + " ".join(t.get("name", "") for t in r.get("tags") or []).lower()
+    hits = [r for r in _ov_cache[query] if all(w in text(r) for w in need)
+            and not any(b in text(r) for b in OPENVERSE_BAD) and (r.get("width") or 0) >= 700]
+    if not hits:
+        return None
+    start = int(hashlib.md5(seed.encode()).hexdigest(), 16) % min(len(hits), 8)
+    ordered = hits[start:] + hits[:start]  # this product's pick first, the rest as download fallbacks
+    lic = {"cc0": "CC0", "pdm": "public domain"}
+    return kind, [{"url": r["url"], "id": r["id"], "page_url": r.get("foreign_landing_url", ""),
+                   "user": r.get("creator") or "", "site": (r.get("source") or "Openverse").replace("_", " ").title(),
+                   "license": lic.get(r.get("license"), r.get("license"))} for r in ordered[:5]]
 
 
 # Where the video scripts keep the key on Frank's PC (stock.py reads .pixabay-key next to itself).
@@ -164,6 +201,7 @@ def main(argv=None):
     ap.add_argument("--asin", action="append", default=[], help="re-fetch these ASINs even if they have a photo")
     ap.add_argument("--key-file")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--openverse", action="store_true", help="with no Pixabay key, use Openverse public-domain photos")
     a = ap.parse_args(argv)
     data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
     credits = json.loads(CREDITS.read_text(encoding="utf-8")) if CREDITS.exists() else {}
@@ -178,7 +216,7 @@ def main(argv=None):
         print("Every product already has a photo.")
         return 0
     key = read_key(a.key_file)
-    if not key:
+    if not key and not a.openverse:
         print("No Pixabay key (set PIXABAY_API_KEY, pass --key-file, or create site/.pixabay-key); "
               "products keep their text-only graphics.", file=sys.stderr)
         return 0
@@ -189,24 +227,33 @@ def main(argv=None):
     for p in todo:
         time.sleep(0.7)  # Pixabay allows 100 requests/minute
         try:
-            res = pick(p["name"], p["asin"], key)
+            res = pick(p["name"], p["asin"], key) if key else pick_openverse(p["name"], p["asin"])
             fails = 0
         except Exception as err:  # network/API trouble: the product keeps its graphic
-            print(f"{p['asin']}: Pixabay request failed ({err})", file=sys.stderr)
+            print(f"{p['asin']}: photo search failed ({err})", file=sys.stderr)
             res, fails = None, fails + 1
             if fails >= 3:  # bad key or Pixabay down: stop instead of retrying every product
-                print("Pixabay unavailable; stopping. Products without a photo keep their graphics.", file=sys.stderr)
+                print("Photo search unavailable; stopping. Products without a photo keep their graphics.", file=sys.stderr)
                 break
         if not res:
             missing.append(p)
             continue
-        kind, h = res
-        with _get(h.get("largeImageURL") or h["webformatURL"]) as r:
-            im = Image.open(io.BytesIO(r.read())).convert("RGB")
+        kind, cands = res
+        im = c = None
+        for c in cands:  # first candidate that downloads and opens as an image
+            try:
+                with _get(c["url"]) as r:
+                    im = Image.open(io.BytesIO(r.read())).convert("RGB")
+                break
+            except Exception as err:
+                print(f"{p['asin']}: download failed ({err}), trying the next photo", file=sys.stderr)
+        if im is None:
+            missing.append(p)
+            continue
         if im.width > 1200:
             im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
         im.save(OUT_DIR / f"{p['asin']}.jpg", "JPEG", quality=85, optimize=True, progressive=True)
-        credits[p["asin"]] = {"id": h["id"], "page_url": h.get("pageURL", ""), "user": h.get("user", ""), "kind": kind}
+        credits[p["asin"]] = {k: v for k, v in c.items() if k != "url"} | {"kind": kind}
         got += 1
     CREDITS.write_text(json.dumps(dict(sorted(credits.items())), indent=2) + "\n", encoding="utf-8")
     print(f"Downloaded {got} photo(s).")
