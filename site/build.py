@@ -231,6 +231,12 @@ def amazon_url(asin, tag):
     return f"https://www.amazon.com/dp/{asin}?tag={tag}"
 
 
+def deals_banner(tag):
+    """Link to Amazon's Today's Deals page; Associates earns on anything bought within 24 hours of the click."""
+    return (f'    <p class="callout deals" data-pl="deals"><strong>Holiday shopping?</strong> Amazon adds new kitchen and home deals every day. '
+            f'<a class="btn" href="https://www.amazon.com/deals?tag={e(tag)}" rel="sponsored nofollow noopener" target="_blank">See today&#39;s Amazon deals &rarr;</a></p>' + chr(10))
+
+
 def page_path(p):
     return f"picks/{slug(p['name'])}/"
 
@@ -399,6 +405,7 @@ CSS = """
   .guide { padding:32px 0 8px; text-align:left; max-width:760px; }
   .guide p { margin-left:0; margin-right:0; max-width:none; }
   .guide .updated { color:var(--mut); font-size:14px; margin-top:8px; }
+  .callout.deals .btn { margin-left:8px; }
   .callout { background:var(--card); border:1px solid var(--bd); border-left:4px solid var(--acc); border-radius:8px; padding:12px 14px; margin:16px 0; font-size:14px; color:var(--ink); }
   .guide .intro { color:var(--ink); font-size:17px; margin:0; }
   .quick { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; }
@@ -451,7 +458,7 @@ def track_js(site):
     js = """(function(){var T=%s,ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
 try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
 if(!ch){var r=document.referrer;ch=/pinterest\\./.test(r)?'pinterest':/(facebook|instagram)\\.|fb\\.me/.test(r)?'facebook':/google\\./.test(r)?'google':/bing\\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
-document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/dp/"]');if(!a)return;
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/"]');if(!a)return;
 var m=a.href.match(/\\/dp\\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
@@ -575,7 +582,7 @@ def render_home(data, products):
     <nav>{nav}</nav>
   </header>
   <main id="main">
-{gifts}    <section id="top-picks">
+{deals_banner(tag)}{gifts}    <section id="top-picks">
       <h2>This Week's Top Picks</h2>
       <div class="grid">
 {top_cards}
@@ -899,7 +906,7 @@ def render_guide(data, key, items):
       <p class="callout"><strong>Affiliate disclosure:</strong> {e(site['name'])} is reader-supported. Buttons marked "Check price on Amazon" are affiliate links. {DISCLOSURE} It costs you nothing extra, and picks are chosen from product research, not commission rates.</p>
       <p class="intro">{e(s['intro'])}</p>{quick_answer}{cmp_callout}
     </header>
-    <section>
+{deals_banner(tag) if gift else ""}    <section>
       <h2>{"The gift list" if gift else "Quick picks"}</h2>
       <table class="quick" data-pl="quick">
         <thead><tr><th>Best for</th><th>Pick</th><th><span class="hidden">Link</span></th></tr></thead>

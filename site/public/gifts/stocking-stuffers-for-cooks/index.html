@@ -24,7 +24,7 @@
 <script>(function(){var T={"pinterest": "kffpinterest-20", "facebook": "kfffacebook-20"},ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
 try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
 if(!ch){var r=document.referrer;ch=/pinterest\./.test(r)?'pinterest':/(facebook|instagram)\.|fb\.me/.test(r)?'facebook':/google\./.test(r)?'google':/bing\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
-document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/dp/"]');if(!a)return;
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/"]');if(!a)return;
 var m=a.href.match(/\/dp\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
@@ -104,6 +104,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .guide { padding:32px 0 8px; text-align:left; max-width:760px; }
   .guide p { margin-left:0; margin-right:0; max-width:none; }
   .guide .updated { color:var(--mut); font-size:14px; margin-top:8px; }
+  .callout.deals .btn { margin-left:8px; }
   .callout { background:var(--card); border:1px solid var(--bd); border-left:4px solid var(--acc); border-radius:8px; padding:12px 14px; margin:16px 0; font-size:14px; color:var(--ink); }
   .guide .intro { color:var(--ink); font-size:17px; margin:0; }
   .quick { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; }
@@ -164,6 +165,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p class="intro">The best stocking stuffers for cooks are small tools that get used every week: something that speeds up a chore, ends a guessing game, or makes a morning coffee better. Every pick here is compact enough to tuck into a stocking or a small gift bag.</p>
       <p class="callout"><strong>Quick answer:</strong> An instant-read thermometer and a handheld milk frother are the easiest wins: compact, useful daily, and loved by almost every cook. A good can opener is the practical pick that never goes unused.</p>
     </header>
+    <p class="callout deals" data-pl="deals"><strong>Holiday shopping?</strong> Amazon adds new kitchen and home deals every day. <a class="btn" href="https://www.amazon.com/deals?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">See today&#39;s Amazon deals &rarr;</a></p>
     <section>
       <h2>The gift list</h2>
       <table class="quick" data-pl="quick">
