@@ -51,8 +51,10 @@ function kff_smtp_send($cfg, $to, $replyTo, $subject, $body) {
   fclose($fp);
   return $ok;
 }
-$cfgFile = dirname(__DIR__) . '/kff-smtp.php';
-$cfg = is_file($cfgFile) ? @include $cfgFile : null;
+$cfg = null;  // next to public_html, or (if the host doesn't allow writing there) in the web-blocked .data folder
+foreach ([dirname(__DIR__) . '/kff-smtp.php', __DIR__ . '/.data/kff-smtp.php'] as $cfgFile) {
+  if (is_file($cfgFile)) { $cfg = @include $cfgFile; break; }
+}
 $sent = false;
 if (is_array($cfg) && !empty($cfg['user']) && !empty($cfg['pass']) && strpos($cfg['pass'], 'PASTE') === false) {
   $sent = kff_smtp_send($cfg, $to, $email, $subject, $body);
