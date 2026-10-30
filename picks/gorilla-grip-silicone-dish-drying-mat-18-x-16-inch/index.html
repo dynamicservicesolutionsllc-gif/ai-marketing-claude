@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B092DRDSJD" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B092DRDSJD?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B092DRDSJD-sq.webp" type="image/webp"><img src="../../img/B092DRDSJD-sq.png" alt="Gorilla Grip Silicone Dish Drying Mat, 18 x 16 Inch" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>Gorilla Grip Silicone Dish Drying Mat, 18 x 16 Inch</h1>
         <p class="lede">Ribs lift dishes and glasses off pooled water so air reaches them, and the raised edges keep drips from running across the counter. Use it on its own for a small load or under an existing dish rack, then roll it up or rinse it clean.</p>

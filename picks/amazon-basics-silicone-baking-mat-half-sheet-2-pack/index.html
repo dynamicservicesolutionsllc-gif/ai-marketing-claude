@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B0725GYNG6" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B0725GYNG6?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B0725GYNG6-sq.webp" type="image/webp"><img src="../../img/B0725GYNG6-sq.png" alt="Amazon Basics Silicone Baking Mat, Half-Sheet, 2-Pack" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>Amazon Basics Silicone Baking Mat, Half-Sheet, 2-Pack</h1>
         <p class="lede">Cookies, roasted vegetables and sticky candied nuts release cleanly without buying roll after roll of parchment or foil. Two half-sheet mats fit standard pans, then rinse off or go in the dishwasher.</p>

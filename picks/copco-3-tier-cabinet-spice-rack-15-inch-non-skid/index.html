@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B0036OQU56" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B0036OQU56?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B0036OQU56-sq.webp" type="image/webp"><img src="../../img/B0036OQU56-sq.png" alt="Copco 3-Tier Cabinet Spice Rack, 15-Inch Non-Skid" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>Copco 3-Tier Cabinet Spice Rack, 15-Inch Non-Skid</h1>
         <p class="lede">Three staggered tiers lift the back row of spice jars and cans into view, so nothing hides behind the front row. Non-skid lining keeps jars in place, and at 15&quot; wide by 9&quot; deep it fits most standard cabinets with no assembly.</p>
