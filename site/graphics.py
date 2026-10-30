@@ -11,8 +11,12 @@ For each product with a `graphic` block ({label, headline, points[3]}) this writ
 and once for the site:
   public/img/og.png         1200x630 social share card
 
+When stock_photos.py has saved a Pixabay photo of the same kind of item (assets/products/<ASIN>.jpg), the pin
+and square graphics show it, badged "Similar item shown" so it is never mistaken for the exact product.
+
 Requires Pillow (`pip install pillow`). Fonts are bundled in fonts/.
 """
+import json
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -66,8 +70,43 @@ def _check(draw, cx, cy, r):
     draw.line([(cx - r * .45, cy), (cx - r * .1, cy + r * .4), (cx + r * .5, cy - r * .35)], fill="white", width=max(3, r // 5))
 
 
-def pin_graphic(g, accent, site_name):
+PHOTO_DIR = ROOT / "assets" / "products"
+BADGE = "SIMILAR ITEM SHOWN"
+
+
+def product_photo(asin):
+    """Path to the product's stock photo of a similar item (from stock_photos.py), or None."""
+    path = PHOTO_DIR / f"{asin}.jpg"
+    return path if path.exists() else None
+
+
+def photo_credits():
+    f = PHOTO_DIR / "photos.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+
+
+def cover(path, w, h):
+    """The photo centre-cropped to fill w x h."""
+    im = Image.open(path).convert("RGB")
+    scale = max(w / im.width, h / im.height)
+    im = im.resize((max(w, round(im.width * scale)), max(h, round(im.height * scale))), Image.LANCZOS)
+    left, top = (im.width - w) // 2, (im.height - h) // 2
+    return im.crop((left, top, left + w, top + h))
+
+
+def badge(im, x, y, size=26):
+    """Dark 'Similar item shown' tag in the photo's corner."""
+    d = ImageDraw.Draw(im, "RGBA")
+    f = _font("DejaVuSans-Bold.ttf", size)
+    w = d.textlength(BADGE, font=f)
+    d.rounded_rectangle([x, y, x + w + size * 1.4, y + size * 1.9], size, fill=(20, 18, 16, 200))
+    d.text((x + size * .7, y + size * .95), BADGE, font=f, fill="white", anchor="lm")
+
+
+def pin_graphic(g, accent, site_name, photo=None):
     W, H = 1000, 1500
+    if photo:
+        return _pin_with_photo(g, accent, site_name, photo)
     im = Image.new("RGB", (W, H), CREAM)
     d = ImageDraw.Draw(im)
     d.rectangle([0, 0, W, 110], fill=ORANGE)
@@ -90,8 +129,46 @@ def pin_graphic(g, accent, site_name):
     return im
 
 
-def square_graphic(g, accent):
+def _pin_with_photo(g, accent, site_name, photo):
+    """Pin with the similar-item photo on top: label, headline, 3 points and the call to action below it."""
+    W, H = 1000, 1500
+    im = Image.new("RGB", (W, H), CREAM)
+    im.paste(cover(photo, W, 700), (0, 110))
+    badge(im, 30, 700)
+    d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, W, 110], fill=ORANGE)
+    d.text((W / 2, 55), site_name.upper(), font=_font("DejaVuSans-Bold.ttf", 38), fill="white", anchor="mm")
+    d.rounded_rectangle([60, 770, W - 60, 860], 24, fill=accent)
+    f, lines = _fit(d, g["label"].upper(), "DejaVuSans-Bold.ttf", 40, W - 180, 1)
+    d.text((W / 2, 815), lines[0], font=f, fill="white", anchor="mm")
+    f, lines = _fit(d, g["headline"], "DejaVuSerif-Bold.ttf", 70, W - 120, 2, min_size=40)
+    d.multiline_text((W / 2, 965), "\n".join(lines), font=f, fill=INK, anchor="mm", align="center", spacing=12)
+    y = 1060
+    for pt in g["points"][:3]:
+        f, lines = _fit(d, pt, "DejaVuSans.ttf", 38, W - 260, 1)
+        _check(d, 128, y + 20, 18)
+        d.text((170, y + 20), lines[0], font=f, fill=INK, anchor="lm")
+        y += 66
+    d.rounded_rectangle([200, 1275, W - 200, 1375], 50, fill=ORANGE)
+    d.text((W / 2, 1325), "See the full pick →", font=_font("DejaVuSans-Bold.ttf", 44), fill="white", anchor="mm")
+    d.text((W / 2, 1440), "#ad · As an Amazon Associate I earn from qualifying purchases",
+           font=_font("DejaVuSans.ttf", 24), fill=MUTED, anchor="mm")
+    return im
+
+
+def square_graphic(g, accent, photo=None):
     S = 800
+    if photo:  # photo on top, label + headline underneath (the page lists the points in text)
+        im = Image.new("RGB", (S, S), CREAM)
+        im.paste(cover(photo, S, 520), (0, 0))
+        badge(im, 20, 462, size=20)
+        d = ImageDraw.Draw(im)
+        d.rectangle([0, 520, S, 532], fill=accent)
+        f, lines = _fit(d, g["label"].upper(), "DejaVuSans-Bold.ttf", 30, S - 100, 1)
+        d.text((S / 2, 580), lines[0], font=f, fill=accent, anchor="mm")
+        f, lines = _fit(d, g["headline"], "DejaVuSerif-Bold.ttf", 56, S - 90, 2, min_size=30)
+        d.multiline_text((S / 2, 690), "\n".join(lines), font=f, fill=INK, anchor="mm", align="center", spacing=10)
+        return im
     im = Image.new("RGB", (S, S), CREAM)
     d = ImageDraw.Draw(im)
     d.rectangle([0, 0, S, 18], fill=accent)
@@ -129,13 +206,17 @@ def render_all(data, out_dir, force=False):
     for p in data["products"]:
         g, asin = p["graphic"], p["asin"]
         accent = ACCENTS.get(p["category"], ORANGE)
-        for path, fn in ((out / f"{asin}.png", lambda: pin_graphic(g, accent, data["site"]["name"])),
-                         (out / f"{asin}-sq.png", lambda: square_graphic(g, accent))):
-            if force or not path.exists():
+        photo = product_photo(asin)
+        redo = False
+        for path, fn in ((out / f"{asin}.png", lambda: pin_graphic(g, accent, data["site"]["name"], photo)),
+                         (out / f"{asin}-sq.png", lambda: square_graphic(g, accent, photo))):
+            # Re-render when a photo arrives after the graphic was made.
+            if force or not path.exists() or (photo and photo.stat().st_mtime > path.stat().st_mtime):
                 fn().save(path, optimize=True)
                 made += 1
+                redo = True
         webp = out / f"{asin}-sq.webp"
-        if force or not webp.exists():
+        if force or redo or not webp.exists():
             Image.open(out / f"{asin}-sq.png").save(webp, quality=85, method=6)
             made += 1
     og = out / "og.png"

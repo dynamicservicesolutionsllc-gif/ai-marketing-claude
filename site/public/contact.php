@@ -19,10 +19,49 @@ if ($fh) {
 }
 $subject = '=?UTF-8?B?' . base64_encode('Website message from ' . $name) . '?=';
 $body = "Name: $name\nEmail: $email\n\n$message\n\n-- Sent from the contact form on kitchenfindsfavorites.com\n";
-// Send as the hosting server's own address: Hostinger's PHP mail() goes out from the shared server
-// (unsigned), so a From of @kitchenfindsfavorites.com fails DMARC and lands in Junk.
-$host = gethostname();
-$from = (is_string($host) && strpos($host, '.') !== false) ? 'noreply@' . $host : $to;
-$headers = "From: Kitchen Finds & Favorites website <$from>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
-$sent = @mail($to, $subject, $body, $headers);
+
+// Preferred: sign in to the mailbox over SMTP so Hostinger signs the message (DKIM) and it reaches the
+// Inbox. The password lives in kff-smtp.php next to public_html (never in the repo or the web root):
+//   <?php return ['user' => 'help@kitchenfindsfavorites.com', 'pass' => '...'];
+function kff_smtp_send($cfg, $to, $replyTo, $subject, $body) {
+  $fp = @stream_socket_client('ssl://smtp.hostinger.com:465', $errno, $errstr, 15);
+  if (!$fp) return false;
+  stream_set_timeout($fp, 15);
+  $read = function () use ($fp) { $out = ''; while (($line = fgets($fp, 515)) !== false) { $out .= $line; if (strlen($line) < 4 || $line[3] === ' ') break; } return $out; };
+  $cmd = function ($c, $ok) use ($fp, $read) { fwrite($fp, $c . "\r\n"); return strpos($read(), (string)$ok) === 0; };
+  $user = $cfg['user'];
+  $ok = strpos($read(), '220') === 0
+     && $cmd('EHLO kitchenfindsfavorites.com', 250)
+     && $cmd('AUTH LOGIN', 334)
+     && $cmd(base64_encode($user), 334)
+     && $cmd(base64_encode($cfg['pass']), 235)
+     && $cmd("MAIL FROM:<$user>", 250)
+     && $cmd("RCPT TO:<$to>", 250)
+     && $cmd('DATA', 354);
+  if ($ok) {
+    $msg = "Date: " . date('r') . "\r\n"
+         . "From: Kitchen Finds & Favorites website <$user>\r\n"
+         . "To: <$to>\r\nReply-To: <$replyTo>\r\nSubject: $subject\r\n"
+         . "Message-ID: <" . bin2hex(random_bytes(12)) . "@kitchenfindsfavorites.com>\r\n"
+         . "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n"
+         . chunk_split(base64_encode($body)) . ".";
+    $ok = $cmd($msg, 250);
+  }
+  @fwrite($fp, "QUIT\r\n");
+  fclose($fp);
+  return $ok;
+}
+$cfgFile = dirname(__DIR__) . '/kff-smtp.php';
+$cfg = is_file($cfgFile) ? @include $cfgFile : null;
+$sent = false;
+if (is_array($cfg) && !empty($cfg['user']) && !empty($cfg['pass']) && strpos($cfg['pass'], 'PASTE') === false) {
+  $sent = kff_smtp_send($cfg, $to, $email, $subject, $body);
+}
+if (!$sent) {
+  // Fallback: the server's own mail() (arrives, but Hostinger files it as Junk).
+  $host = gethostname();
+  $from = (is_string($host) && strpos($host, '.') !== false) ? 'noreply@' . $host : $to;
+  $headers = "From: Kitchen Finds & Favorites website <$from>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
+  $sent = @mail($to, $subject, $body, $headers);
+}
 header('Location: ' . ($sent ? '/contact/sent/' : '/contact/?error=1#form'), true, 303);

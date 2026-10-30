@@ -63,3 +63,22 @@ jobs:
           curl -fsS -X POST -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
             -d '{"ref":"refs/heads/hostinger-deploy","repository":{"clone_url":"https://github.com/${{ github.repository }}.git"}}' \
             https://webhooks.hostinger.com/deploy/ebbd9dab3b992ae00646deb3cb90f821
+      - name: Tell search engines about the pages (IndexNow)
+        # Bing, Yandex and other IndexNow engines recrawl the submitted URLs within hours instead of weeks.
+        # The key file /<INDEXNOW_KEY>.txt is written by build.py. A failure here never blocks the deploy.
+        if: github.event_name != 'schedule'
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          sleep 90  # give Hostinger time to pull the new build so the key file and new pages are live
+          python3 - <<'EOF'
+          import json, re, urllib.request
+          site = "src/site"
+          key = re.search(r'INDEXNOW_KEY = "([0-9a-f]+)"', open(f"{site}/build.py").read()).group(1)
+          urls = re.findall(r"<loc>([^<]+)</loc>", open(f"{site}/public/sitemap.xml").read())
+          body = json.dumps({"host": "kitchenfindsfavorites.com", "key": key,
+                             "keyLocation": f"https://kitchenfindsfavorites.com/{key}.txt", "urlList": urls[:10000]}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
+                                       headers={"Content-Type": "application/json; charset=utf-8"})
+          print("IndexNow:", urllib.request.urlopen(req, timeout=30).status, "for", len(urls), "URLs")
+          EOF

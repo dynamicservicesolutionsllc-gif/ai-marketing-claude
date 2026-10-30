@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B075X1KPLZ" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B075X1KPLZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B075X1KPLZ-sq.webp" type="image/webp"><img src="../../img/B075X1KPLZ-sq.png" alt="MuellerLiving Ultra-Stick Immersion Hand Blender" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>MuellerLiving Ultra-Stick Immersion Hand Blender</h1>
         <p class="lede">Purees soup directly in the pot, so there is no ladling hot liquid into a blender in batches and no second jar to wash. The shaft detaches for the dishwasher, and the included whisk and frother attachments cover whipped cream and hot cocoa.</p>
@@ -179,6 +184,17 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <section>
       <h2>More picks like this</h2>
       <div class="grid">
+      <article class="card" id="B01FHOWYA2" data-pl="card">
+        <a class="img" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01FHOWYA2-sq.webp" type="image/webp"><img src="../../img/B01FHOWYA2-sq.png" alt="Ninja Fit Compact Personal Blender" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/ninja-fit-compact-personal-blender/">Ninja Fit Compact Personal Blender</a></h3>
+          <p>A full-size blender is a lot to haul out and wash for one smoothie. This compact 700-watt blender blends right in a 16 oz cup, then you add the spout lid and take it with you.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
       <article class="card" id="B08HSNGR8P" data-pl="card">
         <a class="img" href="https://www.amazon.com/dp/B08HSNGR8P?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B08HSNGR8P-sq.webp" type="image/webp"><img src="../../img/B08HSNGR8P-sq.png" alt="Mueller Multistick 5-in-1 Immersion Blender" loading="lazy" width="800" height="800"></picture>
@@ -198,17 +214,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/kitchenaid-5-speed-ultra-power-hand-mixer/">KitchenAid 5-Speed Ultra Power Hand Mixer</a></h3>
           <p>Handles cookie dough, mashed potatoes, and whipped cream without hauling out a stand mixer, then tucks into a drawer when the baking is done. The cord locks to either side so it stays out of the bowl, and the dishwasher-safe beaters release with one button.</p>
           <a class="btn" href="https://www.amazon.com/dp/B009VUHLHA?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B0000645YM" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0000645YM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0000645YM-sq.webp" type="image/webp"><img src="../../img/B0000645YM-sq.png" alt="Cuisinart Mini-Prep Plus 3-Cup Food Processor" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/cuisinart-mini-prep-plus-3-cup-food-processor/">Cuisinart Mini-Prep Plus 3-Cup Food Processor</a></h3>
-          <p>Chops onions, garlic, herbs, and nuts in a few pulses, which takes the tedious knife work out of soups, stuffing, and sauces. The reversible blade switches between chopping and grinding, and the bowl and lid are dishwasher safe, so it earns its small spot in the cabinet.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0000645YM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

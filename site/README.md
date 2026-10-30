@@ -13,6 +13,13 @@ path to the same path on the new domain (see `/netlify.toml`), so existing pins 
    Do **not** add price or star ratings — static Amazon prices/ratings violate the Associates agreement.
    Do **not** use Amazon-hosted product photos: Amazon only licenses them through its own tools/API. `graphics.py`
    renders an original square card (`public/img/<ASIN>-sq.png`) and a 1000x1500 pin graphic (`public/img/<ASIN>.png`).
+   **Similar-item photos:** `python site/stock_photos.py` downloads a free Pixabay photo of the same *kind* of item for each
+   product that doesn't have one (the same photo the TikTok/YouTube videos use: same product-type table and per-ASIN pick as
+   `stock.py` in the video folder) into `assets/products/<ASIN>.jpg`, with credits in `assets/products/photos.json`. Commit both.
+   The card, pin graphics and two extra product pins then show that photo, badged "Similar item shown", and the product page
+   captions it ("Photo shows a similar …, not this exact product") with a Pixabay credit. The API key is never committed:
+   `PIXABAY_API_KEY`, `--key-file PATH`, or `site/.pixabay-key` (gitignored). `--check` lists products still without a photo;
+   a product whose name matches no type in `PRODUCT_TYPES` keeps its text-only graphic (add a type to fix it).
 2. `pip install pillow` (once), then `python3 build.py` — validates the data, renders new graphics, and regenerates `public/`.
    `--force-graphics` re-renders every graphic after a design change.
 3. Commit `products.json` and `public/` together and get it onto `main` (the GitHub Action deploys it to Hostinger).

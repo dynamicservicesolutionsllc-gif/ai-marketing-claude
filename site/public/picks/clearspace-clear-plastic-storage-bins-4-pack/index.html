@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B08BQBNXSQ" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B08BQBNXSQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B08BQBNXSQ-sq.webp" type="image/webp"><img src="../../img/B08BQBNXSQ-sq.png" alt="ClearSpace Clear Plastic Storage Bins, 4-Pack" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>ClearSpace Clear Plastic Storage Bins, 4-Pack</h1>
         <p class="lede">Four clear 11&quot; x 8&quot; x 6&quot; bins with built-in handles group snacks, produce, and pantry staples so a shelf can be pulled out like a drawer. The shatter-resistant, BPA-free plastic washes with mild soap and water.</p>
@@ -179,6 +184,17 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <section>
       <h2>More picks like this</h2>
       <div class="grid">
+      <article class="card" id="B079M8FPTW" data-pl="card">
+        <a class="img" href="https://www.amazon.com/dp/B079M8FPTW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B079M8FPTW-sq.webp" type="image/webp"><img src="../../img/B079M8FPTW-sq.png" alt="Rubbermaid Brilliance Tritan Food Storage Containers, Set of 5 (3.2 Cup)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/rubbermaid-brilliance-tritan-food-storage-containers-set-of/">Rubbermaid Brilliance Tritan Food Storage Containers, Set of 5 (3.2 Cup)</a></h3>
+          <p>Mismatched containers with lost lids make meal prep and leftovers messier than they need to be. This set gives you five matching 3.2-cup clear Tritan containers with latching leak-proof lids and built-in vents for reheating.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B079M8FPTW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
       <article class="card" id="B08ZK5WDWN" data-pl="card">
         <a class="img" href="https://www.amazon.com/dp/B08ZK5WDWN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B08ZK5WDWN-sq.webp" type="image/webp"><img src="../../img/B08ZK5WDWN-sq.png" alt="Vtopmart 24-Piece Airtight Food Storage Container Set" loading="lazy" width="800" height="800"></picture>
@@ -198,17 +214,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/lamu-3-pack-lazy-susan-turntable-organizers/">LAMU 3-Pack Lazy Susan Turntable Organizers</a></h3>
           <p>Three turntables in 9.25&quot;, 10.6&quot;, and 12&quot; sizes bring the back of a deep cabinet, fridge shelf, or pantry corner around to the front with a spin. Raised clear edges keep jars and bottles from sliding off as it turns.</p>
           <a class="btn" href="https://www.amazon.com/dp/B0CNCWY7N6?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B08CGHSY9G" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B08CGHSY9G?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B08CGHSY9G-sq.webp" type="image/webp"><img src="../../img/B08CGHSY9G-sq.png" alt="Kitchen Details 3-Tier Can Organizer, Chrome" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/kitchen-details-3-tier-can-organizer-chrome/">Kitchen Details 3-Tier Can Organizer, Chrome</a></h3>
-          <p>Three tiers hold up to 36 cans with labels facing out and an open front for easy grabbing, so soup and beans stop tipping over in the pantry. The chrome-finished steel rack measures 14.5&quot; x 11.5&quot; x 11&quot; and works on a shelf or countertop.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B08CGHSY9G?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

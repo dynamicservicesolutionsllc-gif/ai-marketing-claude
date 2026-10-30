@@ -71,6 +71,8 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -156,9 +158,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   <main id="main">
     <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="B004P2LEE0" data-pl="pick">
+      <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B004P2LEE0?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
         <picture><source srcset="../../img/B004P2LEE0-sq.webp" type="image/webp"><img src="../../img/B004P2LEE0-sq.png" alt="Crock-Pot 2-Quart Manual Slow Cooker" loading="eager" fetchpriority="high" width="800" height="800"></picture>
       </a>
+      
+      </div>
       <div class="info">
         <h1>Crock-Pot 2-Quart Manual Slow Cooker</h1>
         <p class="lede">Sized for dinner for two or a batch of dip, so you are not running a six-quart cooker half empty. The stoneware crock lifts out for the dishwasher, and the Warm setting holds queso or meatballs steady through a long afternoon.</p>
@@ -179,6 +184,17 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <section>
       <h2>More picks like this</h2>
       <div class="grid">
+      <article class="card" id="B003OAJGJO" data-pl="card">
+        <a class="img" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B003OAJGJO-sq.webp" type="image/webp"><img src="../../img/B003OAJGJO-sq.png" alt="Crock-Pot 7-Quart Manual Slow Cooker" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/crock-pot-7-quart-manual-slow-cooker/">Crock-Pot 7-Quart Manual Slow Cooker</a></h3>
+          <p>Feeding a crowd or cooking for the week means a pot big enough for a whole roast or a double batch of chili. This 7-quart slow cooker has high, low and warm settings, and the removable stoneware can go in the oven up to 400°F or straight into the dishwasher.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
       <article class="card" id="B0B9P17YHK" data-pl="card">
         <a class="img" href="https://www.amazon.com/dp/B0B9P17YHK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0B9P17YHK-sq.webp" type="image/webp"><img src="../../img/B0B9P17YHK-sq.png" alt="Evoloop Rapid Egg Cooker, 6-Egg Capacity" loading="lazy" width="800" height="800"></picture>
@@ -198,17 +214,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
           <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
           <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B010TCP3SC" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B010TCP3SC-sq.webp" type="image/webp"><img src="../../img/B010TCP3SC-sq.png" alt="Dash Mini Waffle Maker, 4-Inch" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/dash-mini-waffle-maker-4-inch/">Dash Mini Waffle Maker, 4-Inch</a></h3>
-          <p>Heats in a couple of minutes and makes one four-inch waffle at a time, which suits a weekday breakfast better than hauling out a full-size iron. It stores standing up in a narrow cabinet gap and also crisps hash browns, chaffles, and biscuit-dough sandwiches.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

@@ -9,7 +9,9 @@ page, sitemap, robots, and the products.json feed the posting routines read.
 
 Product images are original graphics rendered by graphics.py (needs Pillow) into
 public/img/ — never Amazon-hosted photos, which the Associates policies only
-license through Amazon's own tools/API.
+license through Amazon's own tools/API. When stock_photos.py has saved a Pixabay
+photo of the same kind of item (assets/products/), the graphics include it,
+badged "Similar item shown", and the product page captions and credits it.
 """
 import html
 import json
@@ -30,6 +32,7 @@ PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
 PRIVACY_UPDATED = "2026-10-20"  # bump when the privacy text changes
 GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
+INDEXNOW_KEY = "122e26ae769c42ab31f69e67f167a338"  # served at /<key>.txt; the deploy workflow pings IndexNow (Bing etc.)
 e = html.escape
 PRICE_CLAIM = re.compile(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b|\bunder \$", re.I)
 TESTING_CLAIM = re.compile(r"\b(tested|testing|we tried|i tried|i use|we use|hands-on)\b", re.I)
@@ -235,6 +238,23 @@ def page_path(p):
 # Official Amazon photos from the Creators API (written by fetch_amazon_images.py, only when API keys are set).
 # Hotlinked from Amazon's servers as the API license requires; never committed, refreshed on every deploy.
 AMAZON_IMAGES = {}
+# Pixabay photos of a similar item, from assets/products/photos.json (see stock_photos.py).
+PHOTO_CREDITS = {}
+
+
+def photo_alt(p):
+    kind = (PHOTO_CREDITS.get(p["asin"]) or {}).get("kind")
+    return f"{p['name']} (photo shows a similar {kind}, not this exact product)" if kind else p["name"]
+
+
+def photo_note(p):
+    c = PHOTO_CREDITS.get(p["asin"])
+    if not c or AMAZON_IMAGES.get(p["asin"]):
+        return ""
+    who = f'{e(c["user"])} / ' if c.get("user") else ""
+    src = f'<a href="{e(c["page_url"])}" rel="nofollow noopener">{who}Pixabay</a>' if c.get("page_url") else "Pixabay"
+    return (f'<p class="photo-note">Photo shows a similar {e(c["kind"])}, not this exact product. '
+            f'See the real product photos on Amazon. Photo: {src}</p>')
 
 
 def picture(p, base, eager=False):
@@ -245,7 +265,7 @@ def picture(p, base, eager=False):
         return (f'<img class="amz" src="{e(a["url"])}" alt="{e(p["name"])}" {load} '
                 f'width="{a.get("width") or 500}" height="{a.get("height") or 500}" referrerpolicy="no-referrer-when-downgrade">')
     return (f'<picture><source srcset="{base}img/{e(p["asin"])}-sq.webp" type="image/webp">'
-            f'<img src="{base}img/{e(p["asin"])}-sq.png" alt="{e(p["name"])}" {load} width="800" height="800"></picture>')
+            f'<img src="{base}img/{e(p["asin"])}-sq.png" alt="{e(photo_alt(p))}" {load} width="800" height="800"></picture>')
 
 
 def buy(p, tag):
@@ -342,6 +362,8 @@ CSS = """
   .pick { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:start; padding:24px 0; }
   @media (max-width:720px) { .pick { grid-template-columns:1fr; gap:20px; } }
   .pick .img { border-radius:14px; overflow:hidden; border:1px solid var(--bd); }
+  .photo-note { font-size:13px; color:var(--mut); margin-top:8px; }
+  .photo-note a { color:inherit; }
   .pick .info { display:flex; flex-direction:column; gap:14px; }
   .pick h1 { font-size:clamp(26px,4vw,36px); }
   .pick .lede { color:var(--mut); font-size:17px; }
@@ -615,9 +637,12 @@ def render_pick(data, p, products):
   <main id="main">
     <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="{e(p['asin'])}" data-pl="pick">
+      <div class="media">
       <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
         {picture(p, base, eager=True)}
       </a>
+      {photo_note(p)}
+      </div>
       <div class="info">
         <h1>{e(p['name'])}</h1>
         <p class="lede">{e(p['blurb'])}</p>
@@ -1047,6 +1072,39 @@ def render_contact(data):
 """ + foot(site)
 
 
+def render_thanksgiving_timeline(data):
+    site = data["site"]
+    desc = "Free printable Thanksgiving hosting timeline: a checklist countdown from three weeks out to dinner time, with turkey thawing and food-safety reminders."
+    return head(site, seo_title("Free Thanksgiving Hosting Timeline (Printable)", site), desc, "thanksgiving-timeline/",
+                f"{site['url']}/img/pins/gift-thanksgiving-kitchen-checklist-c.jpg", site["name"], 1000, 1500) + page_top(site) + f"""  <main id="main">
+    <section class="guide">
+      <h1>Free printable: Thanksgiving Hosting Timeline</h1>
+      <p class="intro">Hosting Thanksgiving is mostly a timing problem. This one-page printable counts down from three weeks out to dinner time: when to order the turkey, when to start thawing it, what to make ahead, and the food-safety basics for the day itself.</p>
+      <ul>
+        <li>3-week, 2-week and 1-week to-do lists</li>
+        <li>Turkey thawing times, so you know which day to start</li>
+        <li>A Thanksgiving Day countdown and leftover tips</li>
+      </ul>
+    </section>
+    <section class="signup" id="updates">
+      <h2>Get the free timeline</h2>
+      <p>Enter your email and the printable PDF opens right away. You'll also get one short email when we add new kitchen picks and holiday lists. No spam, unsubscribe anytime.</p>
+      <form name="updates" method="POST" action="/subscribe.php">
+        <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <input type="hidden" name="src" value="thanksgiving">
+        <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email address">
+        <button class="btn" type="submit">Send me the timeline</button>
+      </form>
+      <small>We only use your email to send new kitchen picks, and never sell or share it. See our <a href="/privacy/">privacy policy</a>.</small>
+    </section>
+    <section>
+      <h2>Getting the kitchen ready?</h2>
+      <p>See the <a href="/{gift_path('thanksgiving-kitchen-checklist')}">Thanksgiving Kitchen Checklist for Hosts</a>: the thermometer, fat separator and slow cookers that make the day easier.</p>
+    </section>
+  </main>
+""" + foot(site)
+
+
 def render_newsletter(data, products):
     site, tag = data["site"], data["site"]["associate_tag"]
     latest = "\n".join(card(p, tag, "/") for p in products[:3])
@@ -1109,16 +1167,18 @@ $email = trim((string)($_POST['email'] ?? ''));
 if (strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   header('Location: /#updates', true, 303); exit;
 }
+// Which sign-up form it came from; each freebie has its own thank-you page.
+$src = ((string)($_POST['src'] ?? '')) === 'thanksgiving' ? 'thanksgiving' : 'site';
 $file = dirname(__DIR__) . '/kff-subscribers.csv';
 $fh = @fopen($file, 'a');
 if ($fh) {
   if (flock($fh, LOCK_EX)) {
-    fputcsv($fh, [gmdate('c'), strtolower($email)]);
+    fputcsv($fh, [gmdate('c'), strtolower($email), $src]);
     flock($fh, LOCK_UN);
   }
   fclose($fh);
 }
-header('Location: /thanks/', true, 303);
+header('Location: ' . ($src === 'thanksgiving' ? '/thanks/thanksgiving/' : '/thanks/'), true, 303);
 """
 
 
@@ -1143,12 +1203,51 @@ if ($fh) {
 }
 $subject = '=?UTF-8?B?' . base64_encode('Website message from ' . $name) . '?=';
 $body = "Name: $name\nEmail: $email\n\n$message\n\n-- Sent from the contact form on kitchenfindsfavorites.com\n";
-// Send as the hosting server's own address: Hostinger's PHP mail() goes out from the shared server
-// (unsigned), so a From of @kitchenfindsfavorites.com fails DMARC and lands in Junk.
-$host = gethostname();
-$from = (is_string($host) && strpos($host, '.') !== false) ? 'noreply@' . $host : $to;
-$headers = "From: Kitchen Finds & Favorites website <$from>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
-$sent = @mail($to, $subject, $body, $headers);
+
+// Preferred: sign in to the mailbox over SMTP so Hostinger signs the message (DKIM) and it reaches the
+// Inbox. The password lives in kff-smtp.php next to public_html (never in the repo or the web root):
+//   <?php return ['user' => 'help@kitchenfindsfavorites.com', 'pass' => '...'];
+function kff_smtp_send($cfg, $to, $replyTo, $subject, $body) {
+  $fp = @stream_socket_client('ssl://smtp.hostinger.com:465', $errno, $errstr, 15);
+  if (!$fp) return false;
+  stream_set_timeout($fp, 15);
+  $read = function () use ($fp) { $out = ''; while (($line = fgets($fp, 515)) !== false) { $out .= $line; if (strlen($line) < 4 || $line[3] === ' ') break; } return $out; };
+  $cmd = function ($c, $ok) use ($fp, $read) { fwrite($fp, $c . "\r\n"); return strpos($read(), (string)$ok) === 0; };
+  $user = $cfg['user'];
+  $ok = strpos($read(), '220') === 0
+     && $cmd('EHLO kitchenfindsfavorites.com', 250)
+     && $cmd('AUTH LOGIN', 334)
+     && $cmd(base64_encode($user), 334)
+     && $cmd(base64_encode($cfg['pass']), 235)
+     && $cmd("MAIL FROM:<$user>", 250)
+     && $cmd("RCPT TO:<$to>", 250)
+     && $cmd('DATA', 354);
+  if ($ok) {
+    $msg = "Date: " . date('r') . "\r\n"
+         . "From: Kitchen Finds & Favorites website <$user>\r\n"
+         . "To: <$to>\r\nReply-To: <$replyTo>\r\nSubject: $subject\r\n"
+         . "Message-ID: <" . bin2hex(random_bytes(12)) . "@kitchenfindsfavorites.com>\r\n"
+         . "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n"
+         . chunk_split(base64_encode($body)) . ".";
+    $ok = $cmd($msg, 250);
+  }
+  @fwrite($fp, "QUIT\r\n");
+  fclose($fp);
+  return $ok;
+}
+$cfgFile = dirname(__DIR__) . '/kff-smtp.php';
+$cfg = is_file($cfgFile) ? @include $cfgFile : null;
+$sent = false;
+if (is_array($cfg) && !empty($cfg['user']) && !empty($cfg['pass']) && strpos($cfg['pass'], 'PASTE') === false) {
+  $sent = kff_smtp_send($cfg, $to, $email, $subject, $body);
+}
+if (!$sent) {
+  // Fallback: the server's own mail() (arrives, but Hostinger files it as Junk).
+  $host = gethostname();
+  $from = (is_string($host) && strpos($host, '.') !== false) ? 'noreply@' . $host : $to;
+  $headers = "From: Kitchen Finds & Favorites website <$from>\r\nReply-To: $email\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8";
+  $sent = @mail($to, $subject, $body, $headers);
+}
 header('Location: ' . ($sent ? '/contact/sent/' : '/contact/?error=1#form'), true, 303);
 """
 
@@ -1193,6 +1292,10 @@ def main():
                          if str(v.get("url", "")).startswith("https://m.media-amazon.com/")}
         print(f"Using official Amazon photos for {len(AMAZON_IMAGES)} products")
     import graphics  # needs Pillow; only required for a full build
+    global PHOTO_CREDITS
+    PHOTO_CREDITS = {k: v for k, v in graphics.photo_credits().items() if graphics.product_photo(k)}
+    if PHOTO_CREDITS:
+        print(f"Using similar-item stock photos for {len(PHOTO_CREDITS)} products")
     graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
     render_hero_images(data)
     url, tag = data["site"]["url"], data["site"]["associate_tag"]
@@ -1237,6 +1340,8 @@ def main():
         dst = OUT / lm["file"]
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(src, dst)
+    shutil.copyfile(ROOT / "assets" / "printables" / "thanksgiving-hosting-timeline.pdf",
+                    OUT / "printables" / "thanksgiving-hosting-timeline.pdf")
     import pins  # Pinterest queue: several pins per page (see pins.py)
     pin_list = pins.build(data, OUT, url, force="--force-graphics" in sys.argv)
     (OUT / "pins.json").write_text(json.dumps(pin_list, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -1265,6 +1370,16 @@ def main():
         data, "thanks/", "Thanks for signing up", "You're on the list",
         "Thanks for signing up. Your free printable is ready: <a class=\"btn\" href=\"/printables/small-kitchen-measuring-checklist.pdf\">Download the Small-Kitchen Measuring Checklist (PDF)</a></p><p>We'll send one short email whenever we add new kitchen picks, and every email has an unsubscribe link."),
         encoding="utf-8")
+    (OUT / "thanks" / "thanksgiving").mkdir(exist_ok=True)
+    (OUT / "thanks" / "thanksgiving" / "index.html").write_text(render_simple(
+        data, "thanks/thanksgiving/", "Your Thanksgiving timeline", "Your Thanksgiving timeline is ready",
+        "Thanks for signing up. <a class=\"btn\" href=\"/printables/thanksgiving-hosting-timeline.pdf\">Download the Thanksgiving Hosting Timeline (PDF)</a></p>"
+        f"<p>Getting the kitchen ready? See the <a href=\"/{gift_path('thanksgiving-kitchen-checklist')}\">Thanksgiving Kitchen Checklist for Hosts</a>.</p>"
+        f"<p>For more holiday kitchen ideas, follow us on <a href=\"{e(data['site']['facebook'])}\" rel=\"noopener\">Facebook</a>. We'll send one short email whenever we add new picks, and every email has an unsubscribe link."),
+        encoding="utf-8")
+    (OUT / "thanksgiving-timeline").mkdir(exist_ok=True)
+    (OUT / "thanksgiving-timeline" / "index.html").write_text(render_thanksgiving_timeline(data), encoding="utf-8")
+    extra_urls.append((f"{url}/thanksgiving-timeline/", None))
     (OUT / "404.html").write_text(render_simple(
         data, "404.html", "Page not found", "That page isn't here",
         "The pick you're looking for may have moved or been removed. Everything we currently recommend is on the home page."),
@@ -1273,6 +1388,7 @@ def main():
     # Let the posting routines load the graphics cross-origin (canvas -> file upload on Pinterest/Facebook).
     (OUT / "_headers").write_text("/img/*\n  Access-Control-Allow-Origin: *\n", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
+    (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
     # Machine-readable feed: the posting routines read this as their queue.
     feed = [dict(p, page_url=f"{url}/{page_path(p)}", pin_image=f"{url}/img/{p['asin']}.png",
                  amazon_url=amazon_url(p["asin"], tag))
