@@ -33,7 +33,7 @@ ASIN from the same guide) and `reviewed` (YYYY-MM-DD last-reviewed date, shown a
 star ratings, or testing claims.
 The landing page also keeps a `#<ASIN>` anchor per card, so older pins that link to anchors still work.
 The newest 6 products appear under "This Week's Top Picks"; older ones move into their category section.
-`build.py` also writes `/subscribe.php` (email sign-up; addresses are appended to `kff-subscribers.csv` one level above `public_html`, never web-readable), `/.htaccess` (HTTPS, CORS for graphics, blocks `.git`), `/privacy/`, `/thanks/` (signup success page), `/404.html`, `/favicon.svg`, the sitemap (every indexable page), and JSON-LD structured data.
+`build.py` also writes `/subscribe.php` (email sign-up; addresses are appended to `kff-subscribers.csv` one level above `public_html`, never web-readable), `/.htaccess` (HTTPS, CORS for graphics, blocks `.git`), `/privacy/`, `/thanks/` (signup success page), `/404.html`, `/favicon.svg`, the sitemap (every indexable page), and JSON-LD structured data: Organization/WebSite/ItemList on the homepage, CollectionPage on category hubs, BreadcrumbList + Article + ItemList (+ FAQPage) on guides and comparisons, BreadcrumbList on product pages (Home › category › guide › product, same as the visible crumbs), AboutPage/ContactPage. `ld()` rejects Product/Review/Offer markup and any price or rating keys.
 The site accent is `#ad512b` (light) / `#e07a4f` (dark) so buttons and links meet WCAG AA contrast; the graphics keep their original `#c8643b` orange.
 
 ## Compliance rules the build enforces
