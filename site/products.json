@@ -1050,7 +1050,10 @@
       "noun": "Food Prep Gadget",
       "hashtags": "#kitchengadgets #mealprep #cookingtips #kitchentools",
       "board": "Small Kitchen Gadgets We Love",
-      "related": ["blenders-and-mixers", "countertop-cooking"],
+      "related": [
+        "blenders-and-mixers",
+        "countertop-cooking"
+      ],
       "quick_answer": "Pick the gadget that removes your slowest prep step: a press chopper for dicing onions and peppers, a twist shredder for cooked chicken, a salad spinner for greens, an apple peeler for baking season. Favor tools with dishwasher-safe parts, since easy cleanup is what keeps a gadget in use.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1195,7 +1198,10 @@
       "noun": "Kitchen Scale or Thermometer",
       "hashtags": "#kitchentools #bakingtips #cookingtips #homecook",
       "board": "Small Kitchen Gadgets We Love",
-      "related": ["countertop-cooking", "food-prep-tools"],
+      "related": [
+        "countertop-cooking",
+        "food-prep-tools"
+      ],
       "quick_answer": "A digital scale makes baking consistent, an instant-read thermometer removes the guesswork about doneness, and silicone oven mitts protect against steam and spills that soak through cloth. Start with whichever problem costs you the most ruined meals.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1372,7 +1378,10 @@
       "noun": "Milk Frother or Kettle",
       "hashtags": "#coffeeathome #lattelover #milkfrother #coffeebar",
       "board": "Coffee Bar Ideas",
-      "related": ["insulated-drinkware", "blenders-and-mixers"],
+      "related": [
+        "insulated-drinkware",
+        "blenders-and-mixers"
+      ],
       "quick_answer": "A handheld frother turns plain coffee into a latte without a machine, and an electric kettle boils water for tea, oatmeal or French press faster than the stove, then shuts itself off. Both take almost no counter space.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1531,7 +1540,10 @@
       "noun": "Immersion Blender or Hand Mixer",
       "hashtags": "#kitchentools #souprecipes #bakingtools #smallkitchen",
       "board": "Small Kitchen Gadgets We Love",
-      "related": ["food-prep-tools", "coffee-and-tea"],
+      "related": [
+        "food-prep-tools",
+        "coffee-and-tea"
+      ],
       "quick_answer": "An immersion blender purees soup in the pot and, with a kit, also whisks and chops; a hand mixer covers cookie dough and whipped cream; a 3-cup mini processor handles garlic, herbs and nuts. All three store in a drawer instead of taking over the counter.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -1690,7 +1702,10 @@
       "noun": "Small Kitchen Appliance",
       "hashtags": "#smallappliances #airfryer #smallkitchen #kitchenessentials",
       "board": "Small Kitchen Gadgets We Love",
-      "related": ["cooking-tools", "food-prep-tools"],
+      "related": [
+        "cooking-tools",
+        "food-prep-tools"
+      ],
       "quick_answer": "Choose appliances you'll use every week and size them to your household: a 6-quart air fryer for family batches in a compact footprint, a 2-quart slow cooker for one or two people, and a 4-inch waffle maker for quick breakfasts. Check counter depth and outlet location first.",
       "measure_heading": "Before you buy, measure these",
       "measure": [
@@ -1851,7 +1866,9 @@
       "noun": "Insulated Tumbler or Bottle",
       "hashtags": "#waterbottle #tumbler #hydration #stanleycup",
       "board": "Drinkware & Tumblers We Love",
-      "related": ["coffee-and-tea"],
+      "related": [
+        "coffee-and-tea"
+      ],
       "quick_answer": "Choose by how you drink: a big tumbler with a handle and straw for all-day water at a desk or in the car, a large flip-straw bottle for a full day in one fill, a locking-lid bottle for a work bag, or a slide-lid tumbler for hot coffee on the commute.",
       "measure_heading": "Before you buy, check these",
       "measure": [
@@ -4225,6 +4242,131 @@
         "title": "Stainless Steel Cooling Rack for Baking – Holiday Cookie and Roasting Rack for Half Sheet Pans",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A cooling rack that also goes in the oven. Spring Chef's 11.5 x 16.5 inch rack is solid 304 stainless steel with no coating, oven safe to 575°F and dishwasher safe, and it fits inside a half sheet pan for crispy oven chicken or roasted vegetables. #holidaybaking #christmascookies #bakingessentials #thanksgivingcooking",
         "board": "Small Kitchen Gadgets We Love"
+      },
+      "added": "2026-11-01"
+    },
+    {
+      "asin": "B00006JSUA",
+      "name": "Lodge Pre-Seasoned Cast Iron Skillet, 10.25 Inch",
+      "category": "gadgets",
+      "subcategory": "cooking-tools",
+      "award": "Best cast iron skillet",
+      "graphic": {
+        "label": "Lodge Cast Iron Skillet",
+        "headline": "One Pan for Stove, Oven and Grill",
+        "points": [
+          "10.25-inch cast iron",
+          "Pre-seasoned, ready to use",
+          "Made in the USA"
+        ]
+      },
+      "blurb": "A small kitchen rarely has room for a separate pan for searing, baking cornbread and finishing dishes in the oven. This 10.25 inch Lodge skillet arrives pre-seasoned and works on the stovetop, in the oven, on the grill or over a campfire, and it is made in the USA.",
+      "suits": "For home cooks who want one durable pan that goes from stovetop to oven, and an easy gift for anyone setting up a kitchen.",
+      "check": "Cast iron is heavy and needs hand washing and drying to keep its seasoning.",
+      "pin": {
+        "title": "Lodge 10.25 Inch Cast Iron Skillet – Pre-Seasoned Pan for Stove, Oven and Grill | Gift for Cooks",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A classic cast iron skillet that arrives pre-seasoned and ready to cook. The 10.25 inch Lodge pan goes from stovetop to oven to grill, so one pan handles searing, skillet cornbread and holiday sides. Made in the USA, it makes a lasting gift for any home cook. #castironskillet #castironcooking #giftsforcooks #holidaygiftideas #kitchenessentials",
+        "board": "Holiday Gift Ideas for Cooks"
+      },
+      "added": "2026-11-01"
+    },
+    {
+      "asin": "B0BHBSBYQW",
+      "name": "OXO Good Grips 3-Piece Plastic Mixing Bowl Set",
+      "category": "gadgets",
+      "subcategory": "food-prep-tools",
+      "award": "Best mixing bowls",
+      "graphic": {
+        "label": "OXO Mixing Bowl Set",
+        "headline": "Mix, Pour and Nest to Save Space",
+        "points": [
+          "1.5, 3 and 5 qt sizes",
+          "Non-slip base",
+          "Wide spout for pouring"
+        ]
+      },
+      "blurb": "Holiday baking means batter, dough and stuffing all needing a bowl at once, and a bowl that slides around the counter makes a mess. This OXO set gives you 1.5, 3 and 5 quart bowls with non-slip bases and wide spouts, and they nest together so they take up one shelf spot.",
+      "suits": "For bakers and anyone who preps a lot at once but has limited cabinet space.",
+      "check": "These are plastic bowls; pick a stainless or glass set if you want to whisk over a double boiler.",
+      "pin": {
+        "title": "OXO Good Grips Mixing Bowl Set – Nesting Bowls with Non-Slip Base and Pour Spout for Baking",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Three nesting mixing bowls in 1.5, 3 and 5 quart sizes, each with a non-slip base that stays put while you stir and a wide spout for pouring batter. They stack inside each other, so the whole set fits in one small cabinet spot. Handy for holiday baking and Thanksgiving prep. #holidaybaking #bakingessentials #kitchenorganization #thanksgivingprep",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "added": "2026-11-01"
+    },
+    {
+      "asin": "B07HQMZ7HH",
+      "name": "Utoplike Bamboo Kitchen Drawer Dividers, 4-Pack",
+      "category": "organization",
+      "subcategory": "drawer-organizers",
+      "award": "Best for deep utensil drawers",
+      "graphic": {
+        "label": "Utoplike Drawer Dividers",
+        "headline": "Split Big Drawers Into Neat Lanes",
+        "points": [
+          "Set of 4 bamboo dividers",
+          "Fits 17.8 to 20.6 in drawers",
+          "Spring-loaded, no tools"
+        ]
+      },
+      "blurb": "Wide drawers full of spatulas, ladles and whisks turn into a tangle because nothing keeps them in rows. These four spring-loaded bamboo dividers expand to fit drawers 17.8 to 20.6 inches wide inside, with non-slip pads on the ends, so you can create lanes without tools.",
+      "suits": "For big utensil or gadget drawers where an insert tray is too small and the tools need lanes.",
+      "check": "Measure the inside of your drawer first: they fit 17.8 to 20.6 inches and stand 2.4 inches tall.",
+      "pin": {
+        "title": "Bamboo Drawer Dividers for Kitchen Utensil Drawers – Adjustable Spring-Loaded Organizer Set of 4",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Turn one messy utensil drawer into tidy lanes. These four bamboo dividers are spring-loaded and expand to fit drawers 17.8 to 20.6 inches wide inside, with non-slip pads on each end and no tools needed. Great for spatulas, ladles and big cooking tools. #drawerorganization #kitchenorganization #kitchendrawers #organizedhome",
+        "board": "Kitchen Organization Must-Haves"
+      },
+      "added": "2026-11-01"
+    },
+    {
+      "asin": "B08DY9HRWD",
+      "name": "ORDORA 8-Tier Adjustable Pots and Pans Organizer Rack",
+      "category": "organization",
+      "subcategory": "cookware-organizers",
+      "award": "Best budget pan rack",
+      "graphic": {
+        "label": "ORDORA Pan Organizer",
+        "headline": "Stop Digging for the Bottom Pan",
+        "points": [
+          "8 adjustable tiers",
+          "3 tool-free setups",
+          "Rubber-capped dividers"
+        ]
+      },
+      "blurb": "Stacked pans mean pulling out four to reach the one you need, and the noise and scratches that come with it. This ORDORA rack holds cookware upright in 8 adjustable tiers, sets up three ways without tools, and has rubber caps on each divider to help keep pans in place.",
+      "suits": "For lower cabinets with a jumble of pans, baking sheets, trays and lids.",
+      "check": "It is built for lighter cookware; check the listing's size limits before loading heavy pans.",
+      "pin": {
+        "title": "Pots and Pans Organizer Under Cabinet – 8-Tier Adjustable Pan Rack for Small Kitchen Cabinets",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Store pans upright instead of in a tall stack. This 8-tier rack adjusts to fit pans, lids, baking sheets and cutting boards, sets up vertically or horizontally with no tools, and has rubber-capped dividers to help protect your cookware. A simple fix for a crowded lower cabinet. #kitchenorganization #cabinetorganization #potsandpans #smallkitchenideas",
+        "board": "Small Kitchen Storage Ideas"
+      },
+      "added": "2026-11-01"
+    },
+    {
+      "asin": "B0DXNC34LQ",
+      "name": "STANLEY Cafe-To-Go Travel Mug, 16 oz",
+      "category": "drinkware",
+      "subcategory": "insulated-drinkware",
+      "award": "Best gift travel mug",
+      "graphic": {
+        "label": "STANLEY Cafe-To-Go Mug",
+        "headline": "Hot Coffee Through the Commute",
+        "points": [
+          "16 oz, hot 6 hrs",
+          "Leakproof 2-part lid",
+          "Dishwasher safe"
+        ]
+      },
+      "blurb": "Coffee poured at home is often cold or spilled by the time you get anywhere. This 16 oz Stanley mug keeps drinks hot for 6 hours or cold for 7, has a leakproof two-part drink-through lid and a built-in handle, and goes in the dishwasher.",
+      "suits": "For commuters and coffee drinkers, and an easy stocking stuffer or office gift.",
+      "check": "It fits most car cup holders, but check yours if it runs narrow.",
+      "pin": {
+        "title": "STANLEY Cafe-To-Go Travel Mug 16 oz – Leakproof Insulated Coffee Mug | Stocking Stuffer Idea",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 16 oz insulated travel mug that keeps coffee hot for 6 hours or iced drinks cold for 7. The two-part drink-through lid is leakproof, the handle makes it easy to carry, it fits most car cup holders and it is dishwasher safe. A practical gift for coffee lovers. #stanleycup #travelmug #coffeelover #stockingstuffers #giftsforhim",
+        "board": "Drinkware & Tumblers We Love"
       },
       "added": "2026-11-01"
     }
