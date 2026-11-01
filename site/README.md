@@ -28,7 +28,7 @@ path to the same path on the new domain (see `/netlify.toml`), so existing pins 
 Each product gets its own page at `/picks/<slug>/` (slug from the product name), and pins/posts link there.
 Each entry in `subcategories` becomes a buying-guide landing page at `/guides/<key>/`: disclosure callout, quick-picks table
 (the products' `award` labels), "how we chose" criteria, a section per product, buying guide, FAQ (with FAQPage schema), and
-related guides. Optional guide fields add long-form sections: `quick_answer` (callout under the intro), `measure` + `measure_note`
+related guides. Optional guide fields: `headline` (search-targeted `<title>`/H1, ≤52 chars; `title` stays on cards, crumbs and pins) and long-form sections: `quick_answer` (callout under the intro), `measure` + `measure_note`
 (a "measure these" checklist), `related` (other subcategory keys to list under "Related buying guides" after the same-category ones), `types` (a type comparison table plus "choose / skip it if" lists; each type's optional `pick` is an
 ASIN from the same guide) and `reviewed` (YYYY-MM-DD last-reviewed date, shown as "Updated" when newer than the products). Each guide has a header photo at `assets/guides/<key>.jpg` (a free-license Unsplash stock photo that shows no branded products; credited on the page) — `build.py` renders WebP/JPEG sizes into `public/img/guides/`. `build.py` rejects a subcategory with no products, a title over 60 characters, or guide copy with prices,
 star ratings, or testing claims.

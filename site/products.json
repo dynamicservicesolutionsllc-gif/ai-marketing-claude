@@ -989,9 +989,10 @@
     "food-prep-tools": {
       "category": "gadgets",
       "title": "Best Food Prep Gadgets That Save Time",
-      "keyword": "best food prep gadgets",
-      "description": "Vegetable choppers, a chicken shredder, an apple peeler, a salad spinner and a can opener that cut down the slowest parts of weeknight prep.",
-      "intro": "Most weeknight cooking time goes into chopping, shredding, peeling and drying. These gadgets each take one of those slow jobs and make it faster, without needing a full food processor.",
+      "headline": "Time-Saving Kitchen Gadgets for Faster Meal Prep",
+      "keyword": "time saving kitchen gadgets",
+      "description": "Time-saving kitchen gadgets for meal prep: vegetable choppers, a chicken shredder, salad spinner, apple peeler and can opener for quicker weeknights.",
+      "intro": "The kitchen gadgets that actually save time are the ones that take over a slow, repetitive prep job. Most weeknight cooking time goes into chopping, shredding, peeling and drying, so each pick here speeds up one of those steps, without needing a full food processor.",
       "criteria": [
         "Time saved on a specific prep task",
         "Dishwasher-safe or easy-clean parts",
@@ -1012,6 +1013,10 @@
         ]
       ],
       "faq": [
+        [
+          "Which kitchen gadgets save the most time?",
+          "The ones that replace a repetitive hand job: a press-style vegetable chopper for dicing, a twist chicken shredder for cooked meat, and a salad spinner for washing and drying greens. Pick for the prep step you repeat most often."
+        ],
         [
           "Are vegetable choppers worth it?",
           "For frequent dicing of onions, peppers and similar vegetables, they save time and keep pieces uniform."
@@ -1067,7 +1072,7 @@
         ]
       ],
       "measure_note": "The best prep gadget is the one you'll actually clean and put away. If it's a chore to wash, it ends up in the back of a cabinet.",
-      "types_heading": "Which prep gadget fits how you cook?",
+      "types_heading": "Which time-saving gadget fits how you cook?",
       "types": [
         {
           "name": "Multi-blade chopper",
