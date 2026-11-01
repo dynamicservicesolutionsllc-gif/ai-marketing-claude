@@ -34,6 +34,9 @@ OG_W, OG_H = 1200, 630
 PRIVACY_UPDATED = "2026-10-20"  # bump when the privacy text changes
 GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
 INDEXNOW_KEY = "122e26ae769c42ab31f69e67f167a338"  # served at /<key>.txt; the deploy workflow pings IndexNow (Bing etc.)
+# Pinterest website claim (claimed 2026-11-01): the file /pinterest-b0145.html and the p:domain_verify meta tag on
+# every page. Pinterest re-checks these, so never remove them or the site loses its claimed-domain status.
+PINTEREST_VERIFY = "b0145feee423db9de28b500b6f99355b"
 e = html.escape
 PRICE_CLAIM = re.compile(r"\$\s?\d|\b\d(\.\d)? ?stars?\b|\bcheapest\b|\blowest price\b|\bunder \$", re.I)
 TESTING_CLAIM = re.compile(r"\b(tested|testing|we tried|i tried|i use|we use|hands-on)\b", re.I)
@@ -479,6 +482,7 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="",
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="p:domain_verify" content="{PINTEREST_VERIFY}">
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
 <link rel="canonical" href="{e(url)}">
@@ -1510,6 +1514,9 @@ def main():
     (OUT / "_headers").write_text("/img/*\n  Access-Control-Allow-Origin: *\n", encoding="utf-8")
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
     (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
+    (OUT / "pinterest-b0145.html").write_text(
+        f'<!DOCTYPE html>\n<html>\n<head>\n<meta name="p:domain_verify" content="{PINTEREST_VERIFY}"/>\n</head>\n<body></body>\n</html>\n',
+        encoding="utf-8")
     # Machine-readable feed: the posting routines read this as their queue.
     feed = [dict(p, page_url=f"{url}/{page_path(p)}", pin_image=f"{url}/img/{p['asin']}.png",
                  amazon_url=amazon_url(p["asin"], tag))

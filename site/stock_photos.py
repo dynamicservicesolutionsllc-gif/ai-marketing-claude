@@ -60,10 +60,21 @@ PRODUCT_TYPES = [
     ("kettle", "electric kettle", "kettle"),
     ("french press", "french press coffee", "coffee"),
     ("frother", "milk frother", "frother"),
+    ("air fryer liner", "parchment paper baking", "parchment"),
+    ("parchment", "parchment paper baking", "parchment"),
+    ("oil sprayer", "olive oil bottle", "oil"),
+    ("oil mister", "olive oil bottle", "oil"),
     ("air fryer", "air fryer", "fryer"),
+    ("skillet", "cast iron skillet", "skillet"),
+    ("mixing bowl", "mixing bowl", "bowl"),
+    ("condiment", "coffee station", "coffee"),
+    ("coffee station", "coffee station", "coffee"),
     ("waffle", "waffle maker", "waffle"),
     ("egg cooker", "boiled eggs", "eggs"),
     ("drying rack", "dish drying rack", "dish+rack"),
+    ("dish rack", "dish drying rack", "dish+rack"),
+    ("cooling rack", "cookies cooling rack", "cooling"),
+    ("pots and pans", "pots and pans", "pots"),
     ("drying mat", "dishes drying", "dishes"),
     ("spice", "spice rack", "spice"),
     ("lazy susan", "spice jars", "jars"),
@@ -93,6 +104,8 @@ PRODUCT_TYPES = [
     ("food storage", "food storage containers", "container"),
     ("container", "food storage containers", "container"),
     ("bins", "pantry storage", "pantry"),
+    ("shelf", "kitchen cabinet shelf", "shelf"),
+    ("brush", "cleaning brush", "brush"),
 ]
 
 
@@ -105,6 +118,11 @@ NOUNS = {
     "drawer": "drawer organizer", "sink": "sink organizer", "under sink": "under-sink organizer", "lid": "lid organizer",
     "cookware": "cookware organizer", "food storage": "food storage container", "container": "storage container",
     "bins": "pantry bin", "oven mitt": "oven mitt", "knife": "kitchen knife",
+    "dish rack": "dish rack", "cooling rack": "cooling rack", "pots and pans": "pot and pan organizer",
+    "air fryer liner": "air fryer liner", "parchment": "parchment liner", "oil sprayer": "oil sprayer",
+    "oil mister": "oil sprayer", "skillet": "cast iron skillet", "mixing bowl": "mixing bowl",
+    "condiment": "coffee station organizer", "coffee station": "coffee station organizer", "shelf": "cabinet shelf",
+    "brush": "cleaning brush",
 }
 
 

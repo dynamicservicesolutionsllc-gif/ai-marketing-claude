@@ -11,8 +11,12 @@ photos in assets/guides/; product pins use original graphics (with a Pixabay pho
 item shown", when stock_photos.py has saved one), never Amazon photos.
 
 Queue order: `wave` 0 first (each page's lead pin, gift guides before buying guides before products), then waves 1–3.
+Holiday season (Nov 1 – Dec 20): every gift-guide pin (all waves) moves to the front so the gift guides are fully
+pinned well before Black Friday and Christmas. The posting routine never pins the same page twice in a day, so this
+works out to about one pin per gift guide per day, with buying guides and products filling the rest of each run.
 The Pinterest routine pins the first entries whose `id` is not in its Posted Pins Log.
 """
+import datetime
 import json
 import re
 from pathlib import Path
@@ -336,7 +340,9 @@ def build(data, out, url, force=False):
             fragment=f"#{asin}", photo=photo)
 
     kind_order = {"gift": 0, "guide": 1, "product": 2}
-    pins.sort(key=lambda x: (x["wave"], kind_order[x["kind"]]))
+    today = datetime.date.today()
+    holiday = (today.month == 11) or (today.month == 12 and today.day <= 20)
+    pins.sort(key=lambda x: (0 if holiday and x["kind"] == "gift" else 1, x["wave"], kind_order[x["kind"]]))
     for i, x in enumerate(pins):
         x["order"] = i + 1
     return pins
