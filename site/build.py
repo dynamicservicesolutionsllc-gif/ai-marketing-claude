@@ -125,6 +125,8 @@ def load():
                 errors.append(f"{where}: missing '{field}'")
         if len(s.get("title", "")) > 60:
             errors.append(f"{where}: title over 60 characters (search results truncate it)")
+        if len(s.get("headline", "")) > 52:
+            errors.append(f"{where}: headline over 52 characters (it gets ' (YYYY)' appended and must stay under 60)")
         if len(s.get("description", "")) > 155:
             errors.append(f"{where}: description over 155 characters (search results truncate it)")
         if len(s.get("criteria", [])) < 2 or len(s.get("guide", [])) < 2:
@@ -898,20 +900,21 @@ def render_guide(data, key, items):
         quick_answer += (f'\n      <p class="callout"><strong>Free printable:</strong> '
                          f'<a href="{base}thanksgiving-timeline/">Thanksgiving hosting timeline</a>, a countdown from three weeks out to dinner time.</p>')
     url = f"{site['url']}/{path}"
+    headline = s.get("headline") or s["title"]  # search-targeted page title/H1; `title` stays for cards, crumbs and pins
     graph = [
         {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": site["name"], "item": f"{site['url']}/"},
             {"@type": "ListItem", "position": 2, "name": cat_label, "item": f"{site['url']}/{cat_href}"},
             {"@type": "ListItem", "position": 3, "name": s["title"], "item": url}]},
-        {"@type": "Article", "headline": s["title"], "description": s["description"], "dateModified": updated,
+        {"@type": "Article", "headline": headline, "description": s["description"], "dateModified": updated,
          "url": url, "publisher": {"@id": f"{site['url']}/#org"}, "image": f"{site['url']}/img/guides/{key}.jpg"},
-        {"@type": "ItemList", "name": s["title"], "itemListElement": [
+        {"@type": "ItemList", "name": headline, "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": p["name"], "url": f"{site['url']}/{page_path(p)}"}
             for i, p in enumerate(items)]}]
     if faq:
         graph.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
-    title = seo_title(f"{s['title']} ({year})", site)
+    title = seo_title(f"{headline} ({year})", site)
     return head(site, title, s["description"], path, f"{site['url']}/img/guides/{key}.jpg",
                 s["hero"]["alt"], 1600, 640, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
@@ -920,7 +923,7 @@ def render_guide(data, key, items):
   <main id="main">
     <figure class="hero">{hero_picture(key, base, s['hero']['alt'], eager=True)}<figcaption>Photo: {e(s['hero']['credit'])}</figcaption></figure>
     <header class="guide">
-      <h1>{e(s['title'])} ({year})</h1>
+      <h1>{e(headline)} ({year})</h1>
       <p class="updated">Updated {month} · {len(items)} picks</p>
       <p class="callout"><strong>Affiliate disclosure:</strong> {e(site['name'])} is reader-supported. Buttons marked "Check price on Amazon" are affiliate links. {DISCLOSURE} It costs you nothing extra, and picks are chosen from product research, not commission rates.</p>
       <p class="intro">{e(s['intro'])}</p>{quick_answer}{cmp_callout}
