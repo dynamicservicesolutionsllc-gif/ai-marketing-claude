@@ -49,6 +49,11 @@ jobs:
             git -C deploy remote add origin "$REPO"
           fi
           rsync -a --delete --exclude .git src/site/public/ deploy/
+          # pinterest-b0145.html was uploaded to public_html by hand on 2026-11-01, so it is an untracked file on
+          # the server and Hostinger's `git pull` refuses to overwrite it (every deploy failed silently). Keep it out
+          # of this branch: the server copy (same content) keeps serving, and the p:domain_verify meta tag on every
+          # page also verifies the Pinterest claim. Only remove this line after deleting the server copy in hPanel.
+          rm -f deploy/pinterest-b0145.html
           cd deploy
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
