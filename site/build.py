@@ -147,14 +147,27 @@ def load():
             errors.append(f"{where}: needs hero {{alt, credit}} for its header photo")
         if not (ROOT / "assets" / "guides" / f"{key}.jpg").exists():
             errors.append(f"{where}: missing header photo assets/guides/{key}.jpg (licensed stock photo, no branded products)")
-        if key not in used:
+        picks = s.get("picks")
+        if picks is not None:
+            # Hand-picked guide: lists existing products from any guide; each product keeps its home subcategory.
+            if len(picks) < 3:
+                errors.append(f"{where}: 'picks' needs at least 3 products")
+            for i, pk in enumerate(picks):
+                if pk.get("asin") not in {p.get("asin") for p in data["products"]}:
+                    errors.append(f"{where}.picks[{i}]: ASIN {pk.get('asin')} is not in products")
+                if not str(pk.get("award", "")).strip():
+                    errors.append(f"{where}.picks[{i}]: needs 'award'")
+            if key in used:
+                errors.append(f"{where}: has 'picks', so no product may use it as its subcategory")
+        elif key not in used:
             errors.append(f"{where}: no products assigned — add products or remove the subcategory")
         if "reviewed" in s:
             try:
                 date.fromisoformat(s["reviewed"])
             except ValueError:
                 errors.append(f"{where}: 'reviewed' must be YYYY-MM-DD")
-        own = {p.get("asin") for p in data["products"] if p.get("subcategory") == key}
+        own = ({pk.get("asin") for pk in s["picks"]} if s.get("picks") is not None
+               else {p.get("asin") for p in data["products"] if p.get("subcategory") == key})
         for t in s.get("types", []):
             for field in ("name", "best_for", "advantage", "tradeoff", "choose", "skip"):
                 if not t.get(field):
@@ -563,7 +576,7 @@ def render_home(data, products):
     top_cards = "\n".join(card(p, tag, eager=i < EAGER) for i, p in enumerate(top))
     tiles = "\n".join(
         f'        <a class="gcard" href="{guide_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
-        f'<span>{e(s["description"])}</span><em>{len(guide_products(products, k))} picks · Read the guide →</em></a>'
+        f'<span>{e(s["description"])}</span><em>{len(guide_items(data, k))} picks · Read the guide →</em></a>'
         for k, s in data["subcategories"].items())
     guides = f"""    <section id="guides">
       <h2>Buying Guides</h2>
@@ -791,6 +804,17 @@ def guide_products(products, key):
     return [p for p in products if p["subcategory"] == key]
 
 
+def guide_items(data, key):
+    """A buying guide's products: its hand-picked `picks` (with the guide's own award/why) if it has them,
+    otherwise the products whose subcategory is this guide."""
+    s = data["subcategories"][key]
+    if s.get("picks") is None:
+        return guide_products(data["products"], key)
+    by_asin = {p["asin"]: p for p in data["products"]}
+    return [dict(by_asin[pk["asin"]], award=pk["award"], **({"why": pk["why"]} if pk.get("why") else {}))
+            for pk in s["picks"]]
+
+
 def render_guide(data, key, items):
     site, tag = data["site"], data["site"]["associate_tag"]
     gift = key in data.get("gift_guides", {})
@@ -886,13 +910,18 @@ def render_guide(data, key, items):
         # Buying guides behind this gift list, most picks first.
         counts = Counter(sub_of[p["asin"]] for p in items)
         cross = [(guide_path(k), subs[k]["title"]) for k, _ in counts.most_common()]
+        # Hand-picked buying guides that share picks with this gift list.
+        mine = {p["asin"] for p in items}
+        cross += [(guide_path(k), v["title"]) for k, v in subs.items()
+                  if v.get("picks") is not None and mine & {pk["asin"] for pk in v["picks"]}]
         cross_heading = "Compare more options in our buying guides"
     else:
         same = [k for k, v in subs.items() if k != key and v["category"] == s["category"]]
         others = [(guide_path(k), subs[k]["title"]) for k in same + [r for r in s.get("related", []) if r not in same]]
         rel_heading = "Related buying guides"
         # Gift guides that include picks from this guide, most picks first.
-        counts = Counter({k: sum(sub_of[pk["asin"]] == key for pk in g["picks"]) for k, g in data.get("gift_guides", {}).items()})
+        mine = {p["asin"] for p in items}
+        counts = Counter({k: sum(pk["asin"] in mine for pk in g["picks"]) for k, g in data.get("gift_guides", {}).items()})
         cross = [(gift_path(k), data["gift_guides"][k]["title"]) for k, n in counts.most_common() if n]
         cross_heading = "Gift guides featuring these picks"
     related = ""
@@ -1027,7 +1056,7 @@ def render_hub(data, key, products):
     subs = [(k, s) for k, s in data["subcategories"].items() if s["category"] == key]
     tiles = "\n".join(
         f'        <a class="gcard" href="/{guide_path(k)}"><span class="thumb">{hero_picture(k, "/", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
-        f'<span>{e(s["description"])}</span><em>{len(guide_products(products, k))} picks · Read the guide →</em></a>'
+        f'<span>{e(s["description"])}</span><em>{len(guide_items(data, k))} picks · Read the guide →</em></a>'
         for k, s in subs)
     cards = "\n".join(card(p, tag, "/", eager=i < EAGER) for i, p in enumerate(items))
     url = f"{site['url']}/{h['path']}"
@@ -1434,7 +1463,7 @@ def main():
     shutil.rmtree(OUT / "guides", ignore_errors=True)
     guide_urls = []
     for key in data["subcategories"]:
-        items = guide_products(data["products"], key)
+        items = guide_items(data, key)
         d = OUT / guide_path(key)
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_guide(data, key, items), encoding="utf-8")

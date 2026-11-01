@@ -250,7 +250,7 @@ def product_pin(g, accent, style, headline, kicker, photo=None):
 
 # ------------------------------------------------------------------ queue
 def build(data, out, url, force=False):
-    from build import gift_path, guide_path, page_path, gift_products, guide_products  # noqa: circular-safe at call time
+    from build import gift_path, guide_path, page_path, gift_products, guide_items  # noqa: circular-safe at call time
     img_dir = out / "img" / "pins"
     img_dir.mkdir(parents=True, exist_ok=True)
     assets = ROOT / "assets" / "guides"
@@ -287,7 +287,7 @@ def build(data, out, url, force=False):
 
     # Buying guides
     for key, s in data["subcategories"].items():
-        items = guide_products(data["products"], key)
+        items = guide_items(data, key)
         page = f"{url}/{guide_path(key)}"
         photo = assets / f"{key}.jpg"
         accent = ACCENTS.get(s["category"], ORANGE)
