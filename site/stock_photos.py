@@ -305,8 +305,10 @@ def main(argv=None):
     a = ap.parse_args(argv)
     data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
     credits = json.loads(CREDITS.read_text(encoding="utf-8")) if CREDITS.exists() else {}
+    # hold.json: products whose automatic picks were all wrong; they wait (hidden from the site) for a hand-picked photo.
+    hold = json.loads((OUT_DIR / "hold.json").read_text(encoding="utf-8")) if (OUT_DIR / "hold.json").exists() else {}
     todo = [p for p in data["products"]
-            if p["asin"] in a.asin or not (OUT_DIR / f"{p['asin']}.jpg").exists() or p["asin"] not in credits]
+            if p["asin"] in a.asin or (p["asin"] not in hold and (not (OUT_DIR / f"{p['asin']}.jpg").exists() or p["asin"] not in credits))]
     if a.check:
         for p in todo:
             print(f"no photo: {p['asin']} {p['name']}" + ("" if product_type(p["name"]) else "  (no product type: add one to PRODUCT_TYPES)"))

@@ -808,6 +808,37 @@ def guide_products(products, key):
     return [p for p in products if p["subcategory"] == key]
 
 
+def hide_unphotographed(data, has_photo):
+    """Drop every product without a matching photo from the public build (pages, products.json, pins.json),
+    plus anything that would point at one: gift/guide picks, comparisons, type picks, emptied guides."""
+    keep = {p["asin"] for p in data["products"] if has_photo(p["asin"])}
+    hidden = [p["asin"] for p in data["products"] if p["asin"] not in keep]
+    if not hidden:
+        return
+    print(f"Hiding {len(hidden)} products with no matching photo: {', '.join(hidden)}")
+    data["products"] = [p for p in data["products"] if p["asin"] in keep]
+    for key in list(data.get("gift_guides", {})):
+        g = data["gift_guides"][key]
+        g["picks"] = [pk for pk in g["picks"] if pk["asin"] in keep]
+        if not g["picks"]:
+            del data["gift_guides"][key]
+    for key in list(data.get("comparisons", {})):
+        if any(a not in keep for a in data["comparisons"][key]["products"]):
+            del data["comparisons"][key]
+    subs = data["subcategories"]
+    for key in list(subs):
+        s = subs[key]
+        if s.get("picks") is not None:
+            s["picks"] = [pk for pk in s["picks"] if pk["asin"] in keep]
+        for t in s.get("types", []):
+            if t.get("pick") and t["pick"] not in keep:
+                del t["pick"]
+        if not (s["picks"] if s.get("picks") is not None else guide_products(data["products"], key)):
+            del subs[key]
+    for s in subs.values():
+        s["related"] = [r for r in s.get("related", []) if r in subs]
+
+
 def guide_items(data, key):
     """A buying guide's products: its hand-picked `picks` (with the guide's own award/why) if it has them,
     otherwise the products whose subcategory is this guide."""
@@ -1453,6 +1484,7 @@ def main():
     PHOTO_CREDITS = {k: v for k, v in graphics.photo_credits().items() if graphics.product_photo(k)}
     if PHOTO_CREDITS:
         print(f"Using similar-item stock photos for {len(PHOTO_CREDITS)} products")
+    hide_unphotographed(data, lambda a: a in PHOTO_CREDITS or a in AMAZON_IMAGES)
     graphics.render_all(data, OUT, force="--force-graphics" in sys.argv)
     render_hero_images(data)
     url, tag = data["site"]["url"], data["site"]["associate_tag"]

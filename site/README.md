@@ -20,7 +20,10 @@ path to the same path on the new domain (see `/netlify.toml`), so existing pins 
    captions it ("Photo shows a similar …, not this exact product") with a Pixabay credit. The API key is never committed:
    `PIXABAY_API_KEY`, `--key-file PATH`, `site/.pixabay-key` (gitignored), or the video folder's key at
    `~/Documents/claud create/videos/.pixabay-key`; with no key the build just skips this step. `--check` lists products still without a photo;
-   a product whose name matches no type in `PRODUCT_TYPES` keeps its text-only graphic (add a type to fix it).
+   a product whose name matches no type in `PRODUCT_TYPES` gets no automatic photo (add a type to fix it).
+   **No photo, not published:** `build.py` leaves every product without a photo out of the public build (pages, `products.json`,
+   `pins.json`, gift/guide picks and comparisons that name it). Automatic picks are often the wrong item, so check each one by eye;
+   ASINs in `assets/products/hold.json` are skipped by the automatic fetch and stay hidden until a photo is hand-picked.
 2. `pip install pillow` (once), then `python3 build.py` — validates the data, renders new graphics, and regenerates `public/`.
    `--force-graphics` re-renders every graphic after a design change.
 3. Commit `products.json` and `public/` together and get it onto `main` (the GitHub Action deploys it to Hostinger).
