@@ -88,6 +88,14 @@ PRODUCT_TYPES = [
     ("splatter", "microwave", "microwave"),
     ("fat separator", "gravy", "gravy"),
     ("apple peeler", "apples", "apple"),
+    ("peeler", "vegetable peeler", "peeler"),
+    ("zester", "lemon zest", "lemon"),
+    ("baking dish", "casserole dish", "casserole"),
+    ("cookie sheet", "cookies baking sheet", "cookies"),
+    ("muffin", "muffins baking", "muffin"),
+    ("ice cream scoop", "ice cream scoop", "ice cream"),
+    ("wooden spoon", "wooden spoons", "spoon"),
+    ("frying pan", "frying pan", "pan"),
     ("chopper", "chopped vegetables", "vegetables"),
     ("shredder", "shredded chicken", "chicken"),
     ("knife organizer", "knife block", "knife"),
@@ -122,7 +130,9 @@ NOUNS = {
     "air fryer liner": "air fryer liner", "parchment": "parchment liner", "oil sprayer": "oil sprayer",
     "oil mister": "oil sprayer", "skillet": "cast iron skillet", "mixing bowl": "mixing bowl",
     "condiment": "coffee station organizer", "coffee station": "coffee station organizer", "shelf": "cabinet shelf",
-    "brush": "cleaning brush",
+    "brush": "cleaning brush", "peeler": "vegetable peeler", "zester": "zester", "baking dish": "glass baking dish",
+    "cookie sheet": "cookie sheet", "muffin": "muffin pan", "ice cream scoop": "ice cream scoop",
+    "wooden spoon": "set of wooden spoons", "frying pan": "frying pan",
 }
 
 
