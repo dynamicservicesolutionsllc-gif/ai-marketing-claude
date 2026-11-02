@@ -89,7 +89,7 @@ original pin plus a dark and a colour design (the colour one links to the produc
 `public/img/pins/<id>.jpg`; links carry `utm_source=pinterest&utm_campaign=<pin id>`. Queue order: each page's lead pin
 first (gift guides, then guides, then products), then the remaining variants. The Pinterest routine (twice daily) publishes the
 first unposted ids, ramping from 5/day to 12/day by Nov 9 (see routines/pinterest-pinning.md for the schedule and
-back-off rule; never the same page twice in a day). Guide pins go to keyword boards set per subcategory (`board`). `--force-graphics` re-renders pin images.
+back-off rule; never the same page twice in a day). Guide pins go to keyword boards set per subcategory (`board`). A guide's optional `pin_keywords` (2–4 Pinterest search phrases, ≤40 chars each) lead its "how to choose" pin title and close every guide pin description ("Save for later: …"); the guide pin's main title uses the search-targeted `headline` when set. Pin ids, order, images, links and boards don't change. `--force-graphics` re-renders pin images.
 
 ## Click tracking
 

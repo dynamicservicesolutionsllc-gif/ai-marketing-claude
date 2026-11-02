@@ -295,25 +295,33 @@ def build(data, out, url, force=False):
         tags = s.get("hashtags", CATEGORY_TAGS.get(s["category"], ""))
         board = s.get("board", "Small Kitchen Gadgets We Love")
         n = len(items)
-        add(f"guide-{key}-a", "guide", key, page, None, f"{s['title']} ({year}): {n} Picks Compared",
-            description(f"{s['description']} See all {n} picks and how they compare.", tags), board, 0,
+        # Pinterest search phrases: lead the "how to choose" title and close every guide pin description, so pins
+        # match what people type into Pinterest search. Last body sentence, so it's the first trimmed at 500 chars.
+        kws = s.get("pin_keywords", [])
+        save = f" Save for later: {', '.join(kws[:-1])} and {kws[-1]}." if len(kws) > 1 else ""
+        b_title = (f"{re.sub(r'-([a-z])', lambda m: '-' + m[1].upper(), title_case(kws[0]))}: How to Choose {article(noun)} {noun}" if kws
+                   else f"How to Choose {article(noun)} {noun} for a Small Kitchen")
+        head = s.get("headline") or s["title"]  # the search-targeted H1, when the guide has one
+        a_title = f"{head} ({year})" if ":" in head else f"{head} ({year}): {n} Picks Compared"
+        add(f"guide-{key}-a", "guide", key, page, None, a_title,
+            description(f"{s['description']} See all {n} picks and how they compare.{save}", tags), board, 0,
             lambda: guide_pin(photo, "a", f"{n} PICKS COMPARED", s["title"], accent))
-        add(f"guide-{key}-b", "guide", key, page, None, f"How to Choose {article(noun)} {noun} for a Small Kitchen",
-            description(first_sentences(s.get("quick_answer") or s["intro"]), tags), board, 1,
+        add(f"guide-{key}-b", "guide", key, page, None, b_title,
+            description(first_sentences(s.get("quick_answer") or s["intro"]) + save, tags), board, 1,
             lambda: guide_pin(photo, "b", "SMALL-KITCHEN BUYING GUIDE", f"How to Choose {article(noun)} {noun}", accent))
         if s.get("measure"):
             verb = "Measure" if "measure" in s.get("measure_heading", "measure").lower() else "Check"
             k = len(s["measure"])
             names = [m[0] for m in s["measure"]]
             add(f"guide-{key}-c", "guide", key, page, None, f"Before You Buy {article(noun)} {noun}: {verb} These {k} Things",
-                description(f"{s.get('measure_note', '')} {verb} these first: {', '.join(names).lower()}.", tags), board, 2,
+                description(f"{s.get('measure_note', '')} {verb} these first: {', '.join(names).lower()}.{save}", tags), board, 2,
                 lambda: guide_pin(photo, "c", f"BEFORE YOU BUY {article(noun).upper()} {noun.upper()}",
                                   f"{verb} These {k} Things First", accent, checks=names))
         if s.get("types"):
             t = len(s["types"])
             names = [x["name"] for x in s["types"]]
             add(f"guide-{key}-d", "guide", key, page, None, f"Which {noun} Is Right for You? {t} Types Compared",
-                description(f"Compare {', '.join(names).lower()}, with who should choose or skip each type.", tags), board, 3,
+                description(f"Compare {', '.join(names).lower()}, with who should choose or skip each type.{save}", tags), board, 3,
                 lambda: guide_pin(photo, "d", "COMPARE THE TYPES", f"Which {noun} Fits Your Kitchen?", accent, number=t))
 
     # Products: original pin (a), plus dark (b) and colour (c) designs

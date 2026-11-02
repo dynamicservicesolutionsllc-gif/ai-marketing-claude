@@ -134,6 +134,10 @@ def load():
             errors.append(f"{where}: description over 155 characters (search results truncate it)")
         if len(s.get("criteria", [])) < 2 or len(s.get("guide", [])) < 2:
             errors.append(f"{where}: needs at least 2 'criteria' and 2 'guide' entries")
+        kws = s.get("pin_keywords")
+        if kws is not None and (not isinstance(kws, list) or not 2 <= len(kws) <= 4
+                                or any(not str(k).strip() or len(str(k)) > 40 for k in kws)):
+            errors.append(f"{where}: 'pin_keywords' must be 2-4 Pinterest search phrases of up to 40 characters")
         for r in s.get("related", []):
             if r == key or r not in data["subcategories"]:
                 errors.append(f"{where}: 'related' entry '{r}' must be another subcategory key")
