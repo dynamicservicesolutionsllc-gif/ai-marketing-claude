@@ -29,6 +29,9 @@ PER_PRODUCT = 12
 # Hand-written searches for products the automatic picker missed. Products not listed fall back to their
 # product type's searches in stock_photos.py.
 SEARCHES = {
+    "B0049C2S32": ["sheet pan", "baking tray", "roasted vegetables tray", "cookies on baking sheet"],
+    "B00004S1BU": ["pie crust", "homemade pie", "pumpkin pie", "apple pie baking"],
+    "B0DTQ9VFNX": ["air fryer", "air fryer basket", "air fryer food", "silicone baking"],
     "B0C3QZ7SNF": ["sponge holder", "kitchen sink sponge", "sink caddy", "dish brush sponge"],
     "B09BKTSJFJ": ["apple peeler", "peeling apple", "apple corer", "apple slices"],
     "B07FNRXFTD": ["pot lids", "food container lids", "kitchen cabinet organized", "plastic containers stacked"],
