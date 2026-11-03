@@ -22,6 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQ2TM4X7Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8KQ2TM4X7Z');</script>
+<!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1671181604794472');fbq('track','PageView');</script><!-- End Meta Pixel Code -->
 <script>(function(){var T={"pinterest": "kffpinterest-20", "facebook": "kfffacebook-20"},ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
 try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
 if(!ch){var r=document.referrer;ch=/pinterest\./.test(r)?'pinterest':/(facebook|instagram)\.|fb\.me/.test(r)?'facebook':/google\./.test(r)?'google':/bing\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
@@ -29,6 +30,7 @@ document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.targe
 var m=a.href.match(/\/dp\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
+if(window.fbq)fbq('trackCustom','AmazonClick',{asin:asin,placement:pl,channel:ch});
 try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kitchen Finds & Favorites", "item": "https://kitchenfindsfavorites.com/"}, {"@type": "ListItem", "position": 2, "name": "Small Kitchen Appliances", "item": "https://kitchenfindsfavorites.com/small-kitchen-appliances/"}, {"@type": "ListItem", "position": 3, "name": "Best Small Kitchen Appliances for Small Spaces", "item": "https://kitchenfindsfavorites.com/guides/countertop-cooking/"}, {"@type": "ListItem", "position": 4, "name": "Dash Mini Waffle Maker, 4-Inch", "item": "https://kitchenfindsfavorites.com/picks/dash-mini-waffle-maker-4-inch/"}]}</script>
 <style>
@@ -150,6 +152,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1671181604794472&amp;ev=PageView&amp;noscript=1"></noscript>
 <a class="skip" href="#main">Skip to content</a>
 <div class="disclosure">As an Amazon Associate, we earn from qualifying purchases. <a href="/privacy/">Learn more</a></div>
 <div class="wrap">

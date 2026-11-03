@@ -22,6 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQ2TM4X7Z"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8KQ2TM4X7Z');</script>
+<!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1671181604794472');fbq('track','PageView');</script><!-- End Meta Pixel Code -->
 <script>(function(){var T={"pinterest": "kffpinterest-20", "facebook": "kfffacebook-20"},ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
 try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
 if(!ch){var r=document.referrer;ch=/pinterest\./.test(r)?'pinterest':/(facebook|instagram)\.|fb\.me/.test(r)?'facebook':/google\./.test(r)?'google':/bing\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
@@ -29,6 +30,7 @@ document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.targe
 var m=a.href.match(/\/dp\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
+if(window.fbq)fbq('trackCustom','AmazonClick',{asin:asin,placement:pl,channel:ch});
 try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <style>
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
@@ -149,19 +151,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
 </style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1671181604794472&amp;ev=PageView&amp;noscript=1"></noscript>
 <a class="skip" href="#main">Skip to content</a>
 <div class="disclosure">As an Amazon Associate, we earn from qualifying purchases. <a href="/privacy/">Learn more</a></div>
 <div class="wrap">
   <div class="top"><a class="brand" href="../">Kitchen Finds &amp; Favorites</a></div>
   <main id="main" class="prose">
     <h1>Privacy Policy</h1>
-    <p>Last updated 2026-10-20.</p>
+    <p>Last updated 2026-11-03.</p>
     <h2>Affiliate links and cookies</h2>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.</p>
     <p>When you click a product link on this site you go to Amazon.com. Third parties, including Amazon, may place and read cookies on your browser, or use web beacons, to collect information such as which link you clicked and whether a purchase followed, so that we can be credited for the referral. That information is handled under <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" rel="nofollow noopener">Amazon's Privacy Notice</a>. We never see your Amazon account, payment details, or what you personally bought.</p>
     <p>This site itself sets no advertising cookies.</p>
     <h2>Analytics</h2>
     <p>We use Google Analytics to understand how visitors use this site, such as which pages are viewed, how visitors arrive (for example from Pinterest or a search engine), and what device and browser are used. Google Analytics sets cookies and collects information such as your approximate location, browser, and pages visited; we see only aggregate reports and never your name or contact details. This information is handled under <a href="https://policies.google.com/privacy" rel="nofollow noopener">Google's Privacy Policy</a> (see also <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener">how Google uses data from sites that use its services</a>). You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+    <p>We also use the Meta Pixel, a tool from Meta Platforms (the company behind Facebook and Instagram), to measure how well our Facebook and Instagram posts and ads work and to show our posts and ads to people who may be interested in them. The Meta Pixel sets cookies and sends Meta information such as the pages you view on this site, when you click through to Amazon, and when you sign up for our emails, along with technical details like your browser and IP address. Meta may connect this with your Facebook or Instagram account under <a href="https://www.facebook.com/privacy/policy/" rel="nofollow noopener">Meta's Privacy Policy</a>. You can control ads based on this activity in your <a href="https://accountscenter.facebook.com/ad_preferences" rel="nofollow noopener">Meta ad preferences</a>, or by blocking third-party cookies in your browser.</p>
     <p>When you click a link to Amazon, the site also records which page and product the click came from, where the visit originated (for example Pinterest or a search engine) and the time, so we can tell which pages are useful. This click log stores no IP address, cookies, name or contact details.</p>
     <h2>Email sign-up</h2>
     <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
