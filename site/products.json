@@ -2483,7 +2483,7 @@
         "bakeware set",
         "christmas cookie baking"
       ],
-      "description": "Half sheet pans, a deep 9x13 glass dish, a pie crust shield, a French rolling pin and more for holiday cookies, pies and casseroles.",
+      "description": "Half sheet pans, a lidded glass pie plate, Christmas cookie cutters, a French rolling pin and a deep 9x13 dish for holiday baking.",
       "intro": "Holiday baking puts more pans in the oven at once: casseroles for the table, trays of cookies, pies and batches of muffins for guests. These picks cover those jobs without filling every cabinet, and several nest, flex or store flat in tight spaces.",
       "criteria": [
         "Covers a core holiday baking job",
@@ -5588,31 +5588,6 @@
       }
     },
     {
-      "asin": "B00004S1BU",
-      "name": "Mrs. Anderson's Baking Pie Crust Shield, 9.5 to 10-Inch",
-      "category": "gadgets",
-      "subcategory": "bakeware",
-      "award": "Best pie crust protector",
-      "graphic": {
-        "label": "Mrs. Anderson's Pie Shield",
-        "headline": "No More Burnt Pie Crust Edges",
-        "points": [
-          "Fits 9.5 and 10-inch plates",
-          "Reusable aluminum ring",
-          "Dishwasher safe"
-        ]
-      },
-      "blurb": "Pie crust edges often brown too fast while the filling finishes baking, and wrapping foil strips around a hot pie is fiddly. This reusable aluminum ring sits over the edge of 9.5 and 10-inch pie plates to shield the crust, then goes in the dishwasher.",
-      "suits": "For Thanksgiving and holiday pie bakers making pumpkin, apple or pecan pies in standard 9.5 or 10-inch pie plates.",
-      "check": "It is sized for 9.5 and 10-inch pie plates and measures 11.5 inches across; smaller pies need the 8-inch version.",
-      "added": "2026-11-03",
-      "pin": {
-        "title": "Pie Crust Shield – Reusable Pie Crust Protector for Thanksgiving Pies",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Stop pie crust edges from burning before the filling is done. This reusable aluminum ring fits 9.5 and 10-inch pie plates, replaces fiddly foil strips and is dishwasher safe. A handy tool for pumpkin, apple and pecan pie season. #thanksgivingpie #piebaking #holidaybaking #bakinghacks",
-        "board": "Holiday Gift Ideas for Cooks"
-      }
-    },
-    {
       "asin": "B000IYYFIQ",
       "name": "J.K. Adams Maple French Rolling Pin, 20.5-Inch",
       "category": "gadgets",
@@ -5634,6 +5609,56 @@
       "pin": {
         "title": "French Rolling Pin – Maple Tapered Rolling Pin for Pie Crust and Cookie Dough",
         "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 20.5-inch tapered maple rolling pin made in Vermont by J.K. Adams. The French shape pivots easily for rolling pie crust into even circles, and the wood holds a light dusting of flour. A simple, lasting gift for holiday bakers. #piecrust #holidaybaking #christmascookies #bakinggifts",
+        "board": "Holiday Gift Ideas for Cooks"
+      }
+    },
+    {
+      "asin": "B07PQH8ZTX",
+      "name": "OXO Good Grips 9-Inch Glass Pie Plate with Lid",
+      "category": "gadgets",
+      "subcategory": "bakeware",
+      "award": "Best pie plate with lid",
+      "graphic": {
+        "label": "OXO Glass Pie Plate",
+        "headline": "Bake, Store and Carry Pie in One Dish",
+        "points": [
+          "9-inch borosilicate glass",
+          "Leakproof lid included",
+          "Wide rim for a safer grip"
+        ]
+      },
+      "blurb": "Carrying a pie to a holiday dinner usually means balancing foil over a hot dish. This 9-inch borosilicate glass plate comes with a leakproof lid for storing and transporting, and its wide rim gives you something to hold with oven mitts.",
+      "suits": "For Thanksgiving and holiday bakers who bake pies, quiches or crumbles at home and bring them somewhere else.",
+      "check": "It is a standard 9-inch plate about 2.1 inches deep, so deep-dish recipes may overflow. The lid is for storage, not the oven.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "OXO Glass Pie Plate with Lid – 9-Inch Pie Dish for Thanksgiving Baking and Travel",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 9-inch borosilicate glass pie plate with a leakproof lid, so you can bake, store and carry the pie in one dish. The generous rim is easy to grip, and it's microwave, freezer and dishwasher safe. #thanksgivingpie #piebaking #holidaybaking #bakeware",
+        "board": "Holiday Gift Ideas for Cooks"
+      }
+    },
+    {
+      "asin": "B0747B7PZX",
+      "name": "Ann Clark Christmas Cookie Cutters, Set of 7",
+      "category": "gadgets",
+      "subcategory": "bakeware",
+      "award": "Best Christmas cookie cutters",
+      "graphic": {
+        "label": "Ann Clark Cookie Cutters",
+        "headline": "Classic Christmas Shapes for Cookie Day",
+        "points": [
+          "7 holiday shapes",
+          "Made in USA from steel",
+          "3.5 to 4 inch sizes"
+        ]
+      },
+      "blurb": "Thin, flimsy cutters bend out of shape and leave ragged edges in sugar cookie dough. This set of seven Christmas shapes is made in the USA from food-safe steel with a rolled top edge to press on, in sizes from 3.5 to 4 inches.",
+      "suits": "For families who bake and decorate Christmas cookies together and want the classic shapes: snowflake, star, tree, gingerbread man, angel, candy cane and reindeer.",
+      "check": "They are hand wash only; dry them right away so the steel doesn't rust.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "Christmas Cookie Cutters Set of 7 – Gingerbread Man, Tree, Snowflake and More",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Seven classic Christmas cookie cutter shapes made in the USA from food-safe steel: snowflake, star, tree, gingerbread man, angel, candy cane and reindeer. The rolled top edge is easy to press, and the shapes are sized for decorating. #christmascookies #cookiedecorating #holidaybaking #christmasbaking",
         "board": "Holiday Gift Ideas for Cooks"
       }
     }
