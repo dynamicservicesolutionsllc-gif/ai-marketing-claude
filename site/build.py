@@ -31,8 +31,9 @@ DISCLOSURE = "As an Amazon Associate, we earn from qualifying purchases."
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
-PRIVACY_UPDATED = "2026-10-20"  # bump when the privacy text changes
+PRIVACY_UPDATED = "2026-11-03"  # bump when the privacy text changes
 GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
+META_PIXEL_ID = "1671181604794472"  # Meta (Facebook/Instagram) Pixel; the privacy page discloses it
 INDEXNOW_KEY = "122e26ae769c42ab31f69e67f167a338"  # served at /<key>.txt; the deploy workflow pings IndexNow (Bing etc.)
 # Pinterest website claim (claimed 2026-11-01): the file /pinterest-b0145.html and the p:domain_verify meta tag on
 # every page. Pinterest re-checks these, so never remove them or the site loses its claimed-domain status.
@@ -488,8 +489,19 @@ document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.targe
 var m=a.href.match(/\\/dp\\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
+if(window.fbq)fbq('trackCustom','AmazonClick',{asin:asin,placement:pl,channel:ch});
 try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();""" % json.dumps(tags)
     return "<script>" + js + "</script>\n"
+
+
+def meta_pixel(path):
+    """Meta Pixel base code (PageView on every page). Signup thank-you pages also fire a Lead event."""
+    lead = "fbq('track','Lead');" if path.startswith("thanks/") else ""
+    return ("<!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?"
+            "n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';"
+            "n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}"
+            "(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');"
+            f"fbq('init','{META_PIXEL_ID}');fbq('track','PageView');{lead}</script><!-- End Meta Pixel Code -->\n")
 
 
 def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="", noindex=False):
@@ -518,9 +530,10 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="",
 <meta name="twitter:card" content="summary_large_image">
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_ID}');</script>
-{track_js(site)}{extra}<style>{CSS}</style>
+{meta_pixel(path)}{track_js(site)}{extra}<style>{CSS}</style>
 </head>
 <body>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id={META_PIXEL_ID}&amp;ev=PageView&amp;noscript=1"></noscript>
 <a class="skip" href="#main">Skip to content</a>
 <div class="disclosure">{DISCLOSURE} <a href="/privacy/">Learn more</a></div>
 <div class="wrap">
@@ -1033,6 +1046,7 @@ def render_privacy(data):
     <p>This site itself sets no advertising cookies.</p>
     <h2>Analytics</h2>
     <p>We use Google Analytics to understand how visitors use this site, such as which pages are viewed, how visitors arrive (for example from Pinterest or a search engine), and what device and browser are used. Google Analytics sets cookies and collects information such as your approximate location, browser, and pages visited; we see only aggregate reports and never your name or contact details. This information is handled under <a href="https://policies.google.com/privacy" rel="nofollow noopener">Google's Privacy Policy</a> (see also <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener">how Google uses data from sites that use its services</a>). You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+    <p>We also use the Meta Pixel, a tool from Meta Platforms (the company behind Facebook and Instagram), to measure how well our Facebook and Instagram posts and ads work and to show our posts and ads to people who may be interested in them. The Meta Pixel sets cookies and sends Meta information such as the pages you view on this site, when you click through to Amazon, and when you sign up for our emails, along with technical details like your browser and IP address. Meta may connect this with your Facebook or Instagram account under <a href="https://www.facebook.com/privacy/policy/" rel="nofollow noopener">Meta's Privacy Policy</a>. You can control ads based on this activity in your <a href="https://accountscenter.facebook.com/ad_preferences" rel="nofollow noopener">Meta ad preferences</a>, or by blocking third-party cookies in your browser.</p>
     <p>When you click a link to Amazon, the site also records which page and product the click came from, where the visit originated (for example Pinterest or a search engine) and the time, so we can tell which pages are useful. This click log stores no IP address, cookies, name or contact details.</p>
     <h2>Email sign-up</h2>
     <p>If you join our email list, we collect only the email address you enter. It is stored on our web host, Hostinger (see <a href="https://www.hostinger.com/legal/privacy-policy" rel="nofollow noopener">Hostinger's privacy policy</a>). We use your address only to send new kitchen picks. We never sell, rent, or share it. Every email includes an unsubscribe link, and you can ask us to delete your address at any time.</p>
