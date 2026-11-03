@@ -26,6 +26,14 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "public"
 TOP_PICKS = 6  # newest N products shown in "This Week's Top Picks"
 EAGER = 3  # first N card images on a page load eagerly (above the fold)
+
+
+def load_attrs(eager, high=None):
+    """Image loading hints. Eager images load immediately; only a page's first visible image (its likely LCP)
+    should also get fetchpriority="high", so it isn't competing with images further down."""
+    if not eager:
+        return 'loading="lazy"'
+    return 'loading="eager" fetchpriority="high"' if (eager if high is None else high) else 'loading="eager"'
 EXCLUDED_ASINS = {"B07TVDFVV9"}  # Associates-excluded; never list
 DISCLOSURE = "As an Amazon Associate, we earn from qualifying purchases."
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
@@ -294,9 +302,9 @@ def photo_note(p):
     return f'<p class="photo-note">{what} See the real product photos on Amazon. Photo: {src}</p>'
 
 
-def picture(p, base, eager=False):
+def picture(p, base, eager=False, high=None):
     """Card image: the official Amazon photo when the API supplied one, else our WebP/PNG graphic card."""
-    load = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+    load = load_attrs(eager, high)
     a = AMAZON_IMAGES.get(p["asin"])
     if a:
         return (f'<img class="amz" src="{e(a["url"])}" alt="{e(p["name"])}" {load} '
@@ -310,10 +318,10 @@ def buy(p, tag):
             f'          <small class="paid">{PAID_NOTE}</small>')
 
 
-def card(p, tag, base="", eager=False):
+def card(p, tag, base="", eager=False, high=None):
     return f"""      <article class="card" id="{e(p['asin'])}" data-pl="card">
         <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
-          {picture(p, base, eager)}
+          {picture(p, base, eager, high)}
         </a>
         <div class="body">
           <h3><a href="{base}{page_path(p)}">{e(p['name'])}</a></h3>
@@ -590,7 +598,10 @@ def render_home(data, products):
             sections.append(f'    <section id="{e(key)}">\n      <h2>{e(label)}</h2>\n      <div class="grid">\n{cards}\n      </div>\n    </section>')
     nav = ('<a href="#gifts">Gift Guides</a> ' if data.get("gift_guides") else "") + '<a href="#guides">Buying Guides</a> ' + " ".join(
         f'<a href="/{h["path"]}">{e(h["nav"])}</a>' for h in HUBS.values())
-    top_cards = "\n".join(card(p, tag, eager=i < EAGER) for i, p in enumerate(top))
+    # The gift-guide tiles sit above "This Week's Top Picks", so when there are gift guides their photos load first
+    # (the first one is the likely LCP image) and the product cards further down lazy-load.
+    has_gifts = bool(data.get("gift_guides"))
+    top_cards = "\n".join(card(p, tag, eager=not has_gifts and i < EAGER, high=i == 0) for i, p in enumerate(top))
     tiles = "\n".join(
         f'        <a class="gcard" href="{guide_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
         f'<span>{e(s["description"])}</span><em>{len(guide_items(data, k))} picks · Read the guide →</em></a>'
@@ -604,9 +615,9 @@ def render_home(data, products):
     gifts = ""
     if data.get("gift_guides"):
         gtiles = "\n".join(
-            f'        <a class="gcard" href="{gift_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False)}</span><strong>{e(g["title"])}</strong>'
+            f'        <a class="gcard" href="{gift_path(k)}"><span class="thumb">{hero_picture(k, "", "", wide=False, eager=i < EAGER, high=i == 0)}</span><strong>{e(g["title"])}</strong>'
             f'<span>{e(g["description"])}</span><em>{len(g["picks"])} picks · See the gift guide →</em></a>'
-            for k, g in data["gift_guides"].items())
+            for i, (k, g) in enumerate(data["gift_guides"].items()))
         gifts = f"""    <section id="gifts">
       <h2>Holiday Gift Guides</h2>
       <div class="guides">
@@ -707,9 +718,9 @@ def render_pick(data, p, products):
 """ + foot(site)
 
 
-def hero_picture(key, base, alt, eager=False, wide=True):
+def hero_picture(key, base, alt, eager=False, wide=True, high=None):
     """Guide header photo (licensed stock image, no branded products): WebP + JPEG fallback."""
-    load = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy"'
+    load = load_attrs(eager, high)
     if wide:
         return (f'<picture><source type="image/webp" srcset="{base}img/guides/{key}-800.webp 800w, {base}img/guides/{key}.webp 1600w" sizes="(max-width: 800px) 100vw, 1048px">'
                 f'<img src="{base}img/guides/{key}.jpg" alt="{e(alt)}" {load} width="1600" height="640"></picture>')
@@ -886,7 +897,7 @@ def render_guide(data, key, items):
                 else f'<p class="lede">{e(p["blurb"])}</p>')
         sections.append(f"""    <article class="pick roundup" id="{e(p['asin'])}" data-pl="{'gift' if gift else 'roundup'}">
       <a class="img" href="{base}{page_path(p)}">
-        {picture(p, base, eager=i < 1)}
+        {picture(p, base, eager=i < 1, high=False)}
       </a>
       <div class="info">
         <p class="award">{i + 1}. {e(p['award'])}</p>
@@ -1104,10 +1115,12 @@ def render_hub(data, key, products):
     items = [p for p in products if p["category"] == key]
     subs = [(k, s) for k, s in data["subcategories"].items() if s["category"] == key]
     tiles = "\n".join(
-        f'        <a class="gcard" href="/{guide_path(k)}"><span class="thumb">{hero_picture(k, "/", "", wide=False)}</span><strong>{e(s["title"])}</strong>'
+        f'        <a class="gcard" href="/{guide_path(k)}"><span class="thumb">{hero_picture(k, "/", "", wide=False, eager=i < EAGER, high=i == 0)}</span><strong>{e(s["title"])}</strong>'
         f'<span>{e(s["description"])}</span><em>{len(guide_items(data, k))} picks · Read the guide →</em></a>'
-        for k, s in subs)
-    cards = "\n".join(card(p, tag, "/", eager=i < EAGER) for i, p in enumerate(items))
+        for i, (k, s) in enumerate(subs))
+    # The buying-guide tiles come first on a hub, so they load first (the first one gets fetchpriority="high");
+    # product cards fill any eager slots the tiles leave over, and the rest lazy-load.
+    cards = "\n".join(card(p, tag, "/", eager=i < EAGER - len(subs), high=not subs and i == 0) for i, p in enumerate(items))
     url = f"{site['url']}/{h['path']}"
     graph = [{"@type": "CollectionPage", "name": h["title"], "url": url, "description": h["intro"],
               "isPartOf": {"@id": f"{site['url']}/#site"},
