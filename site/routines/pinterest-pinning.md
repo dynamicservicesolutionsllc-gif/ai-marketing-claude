@@ -9,6 +9,8 @@ COMPLIANCE (Amazon Associates policies — see project doc `claude/compliance-ch
 
 This session is attached to the "amzon associate" Claude project. First read the project docs `claude/pinterest-posting-automation.md` (description-field editing technique, board names, the "Posted Pins Log", excluded-ASIN list) and `claude/compliance-checklist.md`. Where the playbook says to link pins to Amazon, pick products yourself, use products.json as the queue, or extract Amazon images, THIS prompt supersedes it.
 
+SPEED-UP (Frank, 2026-11-02): a second, local scheduled task "kff-pinterest-product-boost" (2:30 PM and 11:30 PM, up to 8 product pins per run, products not yet pinned first) runs on Frank's computer and logs to the same kff-posted-pins-log.md, so every live product gets pinned within a few days. The device-bound routine below couldn't be edited remotely (it needs a device proof), so its own pacing is unchanged.
+
 PACING (confirmed by Frank 2026-10-18). Use today's date and this run's time in America/New_York:
 - Through Oct 25, 2026: evening run only, up to 5 pins. A morning run before Oct 26 stops right away (normal skip, no Run notes entry needed).
 - Oct 26 – Nov 1: up to 4 pins per run (morning + evening = 8/day).
