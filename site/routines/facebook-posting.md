@@ -1,4 +1,4 @@
-You are continuing Frank's Amazon Associates + Facebook affiliate marketing automation for his Facebook Page "Kitchen Finds & Favorites" (https://www.facebook.com/1433493846508656). This is a recurring posting run — Mon/Wed/Fri/Sun evenings, ~8:30pm ET.
+You are continuing Frank's Amazon Associates + Facebook affiliate marketing automation for his Facebook Page "Kitchen Finds & Favorites" (https://www.facebook.com/1433493846508656). Since 2026-11-03 this is a new Page (the old one, 61594030243560, could no longer be managed after a Facebook restriction); it is managed by the personal profile "Richard Tracy", so post as the Page by switching to it from Richard's profile menu. This is a recurring posting run — Mon/Wed/Fri/Sun evenings, ~8:30pm ET.
 
 STRATEGY (confirmed by Frank 2026-10-12): posts link to the landing page https://kitchenfindsfavorites.com so Frank owns the audience — NOT directly to Amazon. The landing page links out to Amazon with tag kitchenfi0fde-20. This run only posts products that are already live on the site.
 
