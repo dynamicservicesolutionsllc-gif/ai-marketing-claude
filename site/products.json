@@ -2277,7 +2277,7 @@
         "air fryer must haves",
         "air fryer liners"
       ],
-      "description": "Reusable silicone liners, parchment liners, an oil sprayer and silicone-tipped tongs: air fryer accessories that cut cleanup and protect the basket.",
+      "description": "Silicone liners and pots, parchment liners, a round rack, an oil sprayer and soft tongs: air fryer accessories that cut cleanup and protect the basket.",
       "intro": "A few small accessories make an air fryer easier to live with: less scrubbing, less sticking and fewer scratches on the nonstick basket. These picks fit common basket air fryers, store in a drawer and earn a spot in a small kitchen.",
       "criteria": [
         "Fits common basket sizes",
@@ -2344,7 +2344,7 @@
         "countertop-cooking",
         "cooking-tools"
       ],
-      "quick_answer": "Start with liners to cut basket scrubbing (reusable silicone for everyday use, parchment for sticky foods), add a refillable oil sprayer for a light, even coat, and swap metal tongs for silicone-tipped ones to protect the nonstick basket.",
+      "quick_answer": "Start with liners to cut basket scrubbing (reusable silicone for everyday use, a deep silicone pot for saucy food, parchment for sticky foods), add a small rack to lift food for crisper bottoms, a refillable oil sprayer for a light coat, and silicone-tipped tongs to protect the nonstick basket.",
       "measure_heading": "Before you buy, measure these",
       "measure": [
         [
@@ -2357,7 +2357,7 @@
         ],
         [
           "Basket depth",
-          "Tall liners and racks must leave space under the heating element."
+          "Tall pots and racks must leave space under the heating element."
         ],
         [
           "Drawer space",
@@ -2383,6 +2383,21 @@
           "pick": "B09SBF44TM"
         },
         {
+          "name": "Deep silicone pot",
+          "best_for": "Saucy wings and marinated food",
+          "advantage": "Tall walls hold drippings",
+          "tradeoff": "Square only; check basket size",
+          "summary": "Square 8.5-inch pots with 2.36-inch walls and raised ribs that lift food above grease, for 5 to 6.5 quart square baskets.",
+          "choose": [
+            "You cook saucy or marinated food",
+            "Your basket is square, 5 to 6.5 quarts"
+          ],
+          "skip": [
+            "Your basket is round or smaller than the pot"
+          ],
+          "pick": "B0DTQ9VFNX"
+        },
+        {
           "name": "Parchment liner",
           "best_for": "Sticky marinades, cheese and fish",
           "advantage": "Toss it and the mess goes with it",
@@ -2396,6 +2411,21 @@
             "You cook above 400°F often"
           ],
           "pick": "B0BKR66QGC"
+        },
+        {
+          "name": "Round cooking rack",
+          "best_for": "Crisper bottoms and steaming",
+          "advantage": "Lifts food 1 inch for airflow",
+          "tradeoff": "Adds height in shallow baskets",
+          "summary": "Two 7.5-inch stainless steel racks that raise food off the basket floor and double as steamer and cooling racks.",
+          "choose": [
+            "Food comes out soggy underneath",
+            "You want a rack for the stockpot too"
+          ],
+          "skip": [
+            "Your basket floor is narrower than 7.5 inches"
+          ],
+          "pick": "B07V54J1DZ"
         },
         {
           "name": "Refillable oil sprayer",
@@ -2442,7 +2472,7 @@
           "Parchment liners keep sticky glazes and cheese off the basket when the oven is full of turkey."
         ]
       ],
-      "reviewed": "2026-11-01"
+      "reviewed": "2026-11-03"
     },
     "bakeware": {
       "category": "gadgets",
@@ -2453,8 +2483,8 @@
         "bakeware set",
         "christmas cookie baking"
       ],
-      "description": "A deep 9x13 glass dish, nonstick cookie sheets and a 12-cup silicone muffin pan for holiday casseroles, cookies and cupcakes.",
-      "intro": "Holiday baking puts more pans in the oven at once: casseroles for the table, trays of cookies and batches of muffins for guests. These picks cover those jobs without filling every cabinet, and two of them nest or flex to store in tight spaces.",
+      "description": "Half sheet pans, a deep 9x13 glass dish, a pie crust shield, a French rolling pin and more for holiday cookies, pies and casseroles.",
+      "intro": "Holiday baking puts more pans in the oven at once: casseroles for the table, trays of cookies, pies and batches of muffins for guests. These picks cover those jobs without filling every cabinet, and several nest, flex or store flat in tight spaces.",
       "criteria": [
         "Covers a core holiday baking job",
         "Oven temperature listed by the maker",
@@ -2486,6 +2516,14 @@
         [
           "Is a deep 9x13 dish worth it?",
           "If you make lasagna, stuffing or layered casseroles, yes. Extra depth means fewer spillovers in the oven and more room for big holiday portions."
+        ],
+        [
+          "How do I keep pie crust edges from burning?",
+          "Bake the pie uncovered until the edges are light golden, then set a pie crust shield or a ring of foil over the rim for the rest of the bake. A reusable shield is quicker to place on a hot pie than foil strips."
+        ],
+        [
+          "Is a French rolling pin better for pie crust?",
+          "Many bakers find a tapered French pin easier to pivot when rolling dough into a circle, and it has no handles to clean around. A handled pin works fine too; choose the one that feels comfortable."
         ],
         [
           "Do silicone muffin pans need greasing?",
@@ -5473,6 +5511,131 @@
         "board": "Drinkware & Tumblers We Love"
       },
       "added": "2026-11-02"
+    },
+    {
+      "asin": "B0DTQ9VFNX",
+      "name": "PINTAUR Square Silicone Air Fryer Liners, 8.5-Inch, 2-Pack",
+      "category": "appliances",
+      "subcategory": "air-fryer-accessories",
+      "award": "Best deep silicone pot",
+      "graphic": {
+        "label": "PINTAUR Silicone Pots",
+        "headline": "Grease Stays Out of the Basket",
+        "points": [
+          "Two 8.5-inch square pots",
+          "Raised ribs lift food",
+          "Heat resistant to 450°F"
+        ]
+      },
+      "blurb": "Saucy wings and marinated vegetables leave grease baked onto the basket floor. These deep square silicone pots have 2.36-inch walls and raised ribs that lift food above the drippings, then go in the dishwasher.",
+      "suits": "For 5 to 6.5 quart square baskets, such as the Ninja AF141 and AF181, when you cook saucy or marinated food that would drip onto the basket.",
+      "check": "Measure the top of your basket first: the pots measure 8.46 inches across the top and fit square baskets up to 8.9 inches. The listing says they do not fit the Cosori CAF-DC601 or Instant Vortex Plus 6-quart.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "Square Silicone Air Fryer Liners – Reusable Air Fryer Pots for Easy Cleanup",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Deep 8.5-inch square silicone pots with 2.36-inch walls keep sauces and grease off the air fryer basket. Raised ribs lift food above the drippings, they're rated to 450°F, and both go in the dishwasher. Measure your basket before you buy. #airfryer #airfryeraccessories #airfryerhacks #easycleanup",
+        "board": "Air Fryer Accessories & Must-Haves"
+      }
+    },
+    {
+      "asin": "B07V54J1DZ",
+      "name": "P&P CHEF 7.5-Inch Round Cooking and Cooling Rack, 2-Pack",
+      "category": "appliances",
+      "subcategory": "air-fryer-accessories",
+      "award": "Best rack for round baskets",
+      "graphic": {
+        "label": "P&P CHEF Round Racks",
+        "headline": "Lift Food So Air Reaches Every Side",
+        "points": [
+          "Two 7.5-inch round racks",
+          "Stands 1 inch tall",
+          "Stainless steel, dishwasher safe"
+        ]
+      },
+      "blurb": "Food that sits flat on the basket floor can steam in its own juices instead of crisping underneath. These 7.5-inch stainless steel racks raise food 1 inch so air circulates below, and they double as steamer and cooling racks.",
+      "suits": "For round air fryer baskets and stockpots with a floor wider than 7.5 inches, and for anyone who wants one rack that also works for steaming and cooling.",
+      "check": "Measure the floor of your basket: the racks are 7.5 inches across and 1 inch tall, so leave room between the food and the heating element.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "Round Air Fryer Rack 2-Pack – Stainless Steel Rack for Crispier Air Fryer Food",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Two 7.5-inch stainless steel racks lift food 1 inch off the air fryer basket floor so hot air can reach underneath. They also work as steamer racks in a stockpot or pressure cooker and as small cooling racks, and they're dishwasher safe. #airfryer #airfryeraccessories #airfryerrecipes #kitchenhacks",
+        "board": "Air Fryer Accessories & Must-Haves"
+      }
+    },
+    {
+      "asin": "B0049C2S32",
+      "name": "Nordic Ware Naturals Aluminum Half Sheet Baking Sheets, 2-Pack",
+      "category": "gadgets",
+      "subcategory": "bakeware",
+      "award": "Best half sheet pans",
+      "graphic": {
+        "label": "Nordic Ware Half Sheets",
+        "headline": "Cookies and Roast Veggies Brown Evenly",
+        "points": [
+          "Two 18 x 13 inch sheets",
+          "Pure aluminum, won't rust",
+          "Steel rim resists warping"
+        ]
+      },
+      "blurb": "Thin sheet pans can warp in a hot oven and brown cookies unevenly. These pure aluminum half sheets spread heat evenly, have encapsulated steel rims to resist warping, and the two-pack covers cookie batches and holiday roast vegetables at once.",
+      "suits": "For holiday cookie bakers and anyone who roasts vegetables or sheet-pan dinners and wants a standard half sheet size that fits most recipes.",
+      "check": "The pans measure 17.9 x 12.9 inches outside, so measure your oven rack first. They are bare aluminum, so hand wash them to keep the finish.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "Nordic Ware Half Sheet Pans 2-Pack – Aluminum Baking Sheets for Holiday Cookies",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Two pure aluminum half sheet pans that spread heat evenly for golden cookies and roast vegetables. Encapsulated steel rims help them resist warping, and they're made in the USA from domestic and imported materials. #holidaybaking #christmascookies #sheetpandinner #bakeware",
+        "board": "Holiday Gift Ideas for Cooks"
+      }
+    },
+    {
+      "asin": "B00004S1BU",
+      "name": "Mrs. Anderson's Baking Pie Crust Shield, 9.5 to 10-Inch",
+      "category": "gadgets",
+      "subcategory": "bakeware",
+      "award": "Best pie crust protector",
+      "graphic": {
+        "label": "Mrs. Anderson's Pie Shield",
+        "headline": "No More Burnt Pie Crust Edges",
+        "points": [
+          "Fits 9.5 and 10-inch plates",
+          "Reusable aluminum ring",
+          "Dishwasher safe"
+        ]
+      },
+      "blurb": "Pie crust edges often brown too fast while the filling finishes baking, and wrapping foil strips around a hot pie is fiddly. This reusable aluminum ring sits over the edge of 9.5 and 10-inch pie plates to shield the crust, then goes in the dishwasher.",
+      "suits": "For Thanksgiving and holiday pie bakers making pumpkin, apple or pecan pies in standard 9.5 or 10-inch pie plates.",
+      "check": "It is sized for 9.5 and 10-inch pie plates and measures 11.5 inches across; smaller pies need the 8-inch version.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "Pie Crust Shield – Reusable Pie Crust Protector for Thanksgiving Pies",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Stop pie crust edges from burning before the filling is done. This reusable aluminum ring fits 9.5 and 10-inch pie plates, replaces fiddly foil strips and is dishwasher safe. A handy tool for pumpkin, apple and pecan pie season. #thanksgivingpie #piebaking #holidaybaking #bakinghacks",
+        "board": "Holiday Gift Ideas for Cooks"
+      }
+    },
+    {
+      "asin": "B000IYYFIQ",
+      "name": "J.K. Adams Maple French Rolling Pin, 20.5-Inch",
+      "category": "gadgets",
+      "subcategory": "bakeware",
+      "award": "Best rolling pin",
+      "graphic": {
+        "label": "J.K. Adams Rolling Pin",
+        "headline": "Roll Even Pie Crust and Cookie Dough",
+        "points": [
+          "20.5 x 1.75 inch maple",
+          "Tapered French style",
+          "Made in Vermont"
+        ]
+      },
+      "blurb": "Handled rolling pins can leave pie dough thick in the middle and thin at the edges. This tapered French pin is a solid maple dowel that pivots easily for turning dough into even circles, and the wood holds a light dusting of flour.",
+      "suits": "For pie, pastry and sugar cookie bakers who want one simple rolling pin that also stores flat in a drawer.",
+      "check": "At 20.5 inches long, measure your drawer. Hand wash only and rub it with food-safe mineral oil now and then so the wood doesn't dry out.",
+      "added": "2026-11-03",
+      "pin": {
+        "title": "French Rolling Pin – Maple Tapered Rolling Pin for Pie Crust and Cookie Dough",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 20.5-inch tapered maple rolling pin made in Vermont by J.K. Adams. The French shape pivots easily for rolling pie crust into even circles, and the wood holds a light dusting of flour. A simple, lasting gift for holiday bakers. #piecrust #holidaybaking #christmascookies #bakinggifts",
+        "board": "Holiday Gift Ideas for Cooks"
+      }
     }
   ],
   "comparisons": {

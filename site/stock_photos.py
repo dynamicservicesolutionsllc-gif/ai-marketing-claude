@@ -90,6 +90,8 @@ PRODUCT_TYPES = [
     ("apple peeler", "apples", "apple"),
     ("peeler", "vegetable peeler", "peeler"),
     ("zester", "lemon zest", "lemon"),
+    ("pie crust", "pie baking", "pie"),
+    ("rolling pin", "rolling pin dough", "dough"),
     ("baking dish", "casserole dish", "casserole"),
     ("cookie sheet", "cookies baking sheet", "cookies"),
     ("muffin", "muffins baking", "muffin"),
@@ -133,6 +135,7 @@ NOUNS = {
     "brush": "cleaning brush", "peeler": "vegetable peeler", "zester": "zester", "baking dish": "glass baking dish",
     "cookie sheet": "cookie sheet", "muffin": "muffin pan", "ice cream scoop": "ice cream scoop",
     "wooden spoon": "set of wooden spoons", "frying pan": "frying pan",
+    "pie crust": "pie crust shield", "rolling pin": "rolling pin", "baking sheet": "baking sheet",
 }
 
 
