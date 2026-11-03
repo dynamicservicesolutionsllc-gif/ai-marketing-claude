@@ -1,8 +1,8 @@
 {
   "B00004OCKR": {
-    "id": "File:Essoreuse à salade.jpg",
+    "id": "File:Essoreuse \u00e0 salade.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Essoreuse_%C3%A0_salade.jpg",
-    "user": "Medjaï",
+    "user": "Medja\u00ef",
     "site": "Wikimedia Commons",
     "license": "Public domain",
     "kind": "salad spinner"
@@ -14,6 +14,13 @@
     "site": "Pexels",
     "kind": "bench scraper",
     "license": "Pexels License"
+  },
+  "B00004S1BU": {
+    "id": 3723444,
+    "page_url": "https://pixabay.com/photos/woman-apple-pie-pastries-dessert-3723444/",
+    "user": "Finn-b",
+    "site": "Pixabay",
+    "kind": "pie crust shield"
   },
   "B0000645YM": {
     "id": 5141249,
@@ -29,6 +36,13 @@
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "cast iron skillet"
+  },
+  "B000IYYFIQ": {
+    "id": 906135,
+    "page_url": "https://pixabay.com/photos/egg-flour-happy-easter-cooking-906135/",
+    "user": "kerdkanno",
+    "site": "Pixabay",
+    "kind": "rolling pin"
   },
   "B000KEM4TQ": {
     "id": 316400,
@@ -66,6 +80,13 @@
     "user": "LAWJR",
     "site": "Pixabay",
     "kind": "slow cooker"
+  },
+  "B0049C2S32": {
+    "id": 235816,
+    "page_url": "https://pixabay.com/photos/springerle-cookie-aniseed-biscuits-235816/",
+    "user": "Hans",
+    "site": "Pixabay",
+    "kind": "baking sheet"
   },
   "B004P2LEE0": {
     "id": 4719155,
@@ -120,7 +141,7 @@
     "kind": "cooling rack"
   },
   "B010TCP3SC": {
-    "id": "File:Liège waffle iron in Brussels-Central railway station.jpg",
+    "id": "File:Li\u00e8ge waffle iron in Brussels-Central railway station.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Li%C3%A8ge_waffle_iron_in_Brussels-Central_railway_station.jpg",
     "user": "Romaine",
     "site": "Wikimedia Commons",
@@ -167,7 +188,7 @@
   "B01N6UE7OF": {
     "id": 9551376,
     "page_url": "https://www.pexels.com/photo/9551376/",
-    "user": "Алексей Вечерин",
+    "user": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
     "site": "Pexels",
     "kind": "pull-out cabinet basket",
     "license": "Pexels License"
@@ -251,7 +272,7 @@
   "B07RGGYLGY": {
     "id": 34578073,
     "page_url": "https://www.pexels.com/photo/34578073/",
-    "user": "Letícia Alvares",
+    "user": "Let\u00edcia Alvares",
     "site": "Pexels",
     "kind": "cabinet shelf riser",
     "license": "Pexels License"
@@ -267,10 +288,17 @@
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer_(Unsplash).jpg",
-    "user": "Jarosław Ceborski jarson",
+    "user": "Jaros\u0142aw Ceborski jarson",
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "silverware organizer"
+  },
+  "B07V54J1DZ": {
+    "id": 7360172,
+    "page_url": "https://pixabay.com/photos/above-baked-baking-cookies-dozen-7360172/",
+    "user": "maraqliimis",
+    "site": "Pixabay",
+    "kind": "cooling rack"
   },
   "B07YP2VH4B": {
     "id": 2202233,
