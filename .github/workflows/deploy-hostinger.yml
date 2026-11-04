@@ -36,6 +36,9 @@ jobs:
           pip install --quiet pillow
           python3 fetch_amazon_images.py
           python3 build.py
+      - name: Add TikTok Pixel before deployment
+        working-directory: src/site
+        run: python3 add_tiktok_pixel.py
       - name: Push site/public to hostinger-deploy
         env:
           REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
