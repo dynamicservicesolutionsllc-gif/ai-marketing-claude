@@ -11,7 +11,7 @@ PIXEL_ID = "DBLO06JC77U0QLCJSSEG"
 PIXEL = f'''<!-- TikTok Pixel Code -->
 <script>
 !function (w, d, t) {{
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){{t[e]=function(){{t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.load=function(e,n){{var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{{}},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{{}},ttq._t[e]=+new Date,ttq._o=ttq._o||{{}},ttq._o[e]=n||{{}};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)}};
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){{t[e]=function(){{t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.load=function(e,n){{var r="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{{}},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{{}},ttq._t[e]=+new Date,ttq._o=ttq._o||{{}},ttq._o[e]=n||{{}};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)}};
   ttq.load("{PIXEL_ID}");
   ttq.page();
 }}(window, document, "ttq");
@@ -36,8 +36,8 @@ def main():
 
         if "<!-- TikTok Pixel Code -->" not in text:
             text, count = re.subn(
-                r"</head\\s*>",
-                PIXEL + "\\n</head>",
+                r"</head\s*>",
+                PIXEL + "\n</head>",
                 text,
                 count=1,
                 flags=re.IGNORECASE,
@@ -47,22 +47,19 @@ def main():
                 continue
 
         if path.relative_to(PUBLIC).as_posix() == "privacy/index.html":
-            text = text.replace(
-                "This site itself sets no advertising cookies.",
-                "This site itself does not directly set advertising cookies. "
-                "Third-party analytics and advertising pixels may use cookies "
-                "or similar technologies.",
-            )
-
             if DISCLOSURE not in text:
                 if "</main>" in text:
-                    text = text.replace("</main>", f"    <h2>TikTok Pixel</h2>\\n    <p>{DISCLOSURE}</p>\\n  </main>", 1)
+                    text = text.replace(
+                        "</main>",
+                        f"    <h2>TikTok Pixel</h2>\n    <p>{DISCLOSURE}</p>\n  </main>",
+                        1,
+                    )
                 else:
                     print(f"Warning: no </main> found in {path}", file=sys.stderr)
 
             today = datetime.now(timezone.utc).date().isoformat()
             text = re.sub(
-                r"Last updated \\d{{4}}-\\d{{2}}-\\d{{2}}\\.",
+                r"Last updated \d{4}-\d{2}-\d{2}\.",
                 f"Last updated {today}.",
                 text,
                 count=1,
