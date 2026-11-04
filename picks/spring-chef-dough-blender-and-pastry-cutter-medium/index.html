@@ -153,7 +153,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
 <!-- TikTok Pixel Code -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
   ttq.load("DBLO06JC77U0QLCJSSEG");
   ttq.page();
 }(window, document, "ttq");
@@ -251,5 +251,24 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <p style="margin-top:8px">Follow along on <a href="https://www.pinterest.com/kitchenfindsfavorites/">Pinterest</a> and <a href="https://www.facebook.com/1433493846508656">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
 </div>
+<!-- TikTok product events -->
+<script>
+  ttq.track('ViewContent', {
+    content_id: window.location.pathname.replace(/^\/+|\/$/g, ''),
+    content_type: 'product',
+    content_name: document.title,
+    currency: 'USD'
+  });
+
+  document.querySelectorAll('a[href*="amazon."]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      ttq.track('ClickButton', {
+        content_type: 'affiliate_product',
+        content_name: document.title
+      });
+    });
+  });
+</script>
+<!-- End TikTok product events -->
 </body>
 </html>
