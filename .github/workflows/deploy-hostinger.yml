@@ -17,11 +17,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
-
     steps:
       - name: Check out source
         uses: actions/checkout@v4
-
       - name: Install SSH key
         shell: bash
         env:
@@ -31,7 +29,6 @@ jobs:
           install -d -m 700 "$HOME/.ssh"
           printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/hostinger_deploy_key"
           chmod 600 "$HOME/.ssh/hostinger_deploy_key"
-
       - name: Verify Hostinger host key
         shell: bash
         env:
@@ -44,7 +41,6 @@ jobs:
           actual="$(ssh-keygen -lf "$HOME/.ssh/known_hosts" -E sha256 | awk '{print $2}')"
           test "$actual" = "$SSH_FINGERPRINT"
           chmod 644 "$HOME/.ssh/known_hosts"
-
       - name: Verify SSH access
         env:
           SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
@@ -52,14 +48,8 @@ jobs:
           SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
         run: |
           set -euo pipefail
-          ssh -i "$HOME/.ssh/hostinger_deploy_key" \
-            -p "$SSH_PORT" \
-            -o BatchMode=yes \
-            -o IdentitiesOnly=yes \
-            -o StrictHostKeyChecking=yes \
-            "$SSH_USER@$SSH_HOST" 'printf "Hostinger SSH access verified\\n"'
-
-      - name: Deploy repository files
+          ssh -i "$HOME/.ssh/hostinger_deploy_key" -p "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" 'printf "Hostinger SSH access verified\\n"'
+      - name: Deploy website files
         env:
           SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
           SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
@@ -67,17 +57,18 @@ jobs:
           DEPLOY_PATH: ${{ secrets.HOSTINGER_DEPLOY_PATH }}
         run: |
           set -euo pipefail
-          rsync -az --checksum \
-            --exclude '.git/' \
-            --exclude '.github/' \
-            --exclude '.env' \
-            --exclude '.env.*' \
-            --exclude 'data/products.json' \
-            --exclude 'data/*.lock' \
-            -e "ssh -i $HOME/.ssh/hostinger_deploy_key -p $SSH_PORT -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
-            ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
-
+          rsync -az --checksum --exclude '.git/' --exclude '.github/' --exclude '.env' --exclude '.env.*' --exclude 'data/products.json' --exclude 'data/*.lock' --exclude 'deploy/' -e "ssh -i $HOME/.ssh/hostinger_deploy_key -p $SSH_PORT -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+      - name: Install private sync wrapper and token
+        env:
+          SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          SYNC_ENDPOINT_TOKEN: ${{ secrets.SYNC_ENDPOINT_TOKEN }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$SYNC_ENDPOINT_TOKEN" | ssh -i "$HOME/.ssh/hostinger_deploy_key" -p "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" 'umask 077; mkdir -p "$HOME/private"; cat > "$HOME/private/sync-endpoint-token.txt"; chmod 600 "$HOME/private/sync-endpoint-token.txt"'
+          scp -i "$HOME/.ssh/hostinger_deploy_key" -P "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes deploy/amazon-sync.sh "$SSH_USER@$SSH_HOST:$HOME/private/amazon-sync.sh"
+          ssh -i "$HOME/.ssh/hostinger_deploy_key" -p "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" 'chmod 700 "$HOME/private/amazon-sync.sh"'
       - name: Remove temporary key material
         if: always()
-        run: |
-          rm -f "$HOME/.ssh/hostinger_deploy_key" "$HOME/.ssh/known_hosts"
+        run: rm -f "$HOME/.ssh/hostinger_deploy_key" "$HOME/.ssh/known_hosts"
