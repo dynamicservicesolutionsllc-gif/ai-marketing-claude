@@ -67,7 +67,7 @@ jobs:
         run: |
           set -euo pipefail
           printf '%s' "$SYNC_ENDPOINT_TOKEN" | ssh -i "$HOME/.ssh/hostinger_deploy_key" -p "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" 'umask 077; mkdir -p "$HOME/private"; cat > "$HOME/private/sync-endpoint-token.txt"; chmod 600 "$HOME/private/sync-endpoint-token.txt"'
-          scp -i "$HOME/.ssh/hostinger_deploy_key" -P "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes deploy/amazon-sync.sh "$SSH_USER@$SSH_HOST:$HOME/private/amazon-sync.sh"
+          scp -i "$HOME/.ssh/hostinger_deploy_key" -P "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes deploy/amazon-sync.sh "$SSH_USER@$SSH_HOST:\$HOME/private/amazon-sync.sh"
           ssh -i "$HOME/.ssh/hostinger_deploy_key" -p "$SSH_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" 'chmod 700 "$HOME/private/amazon-sync.sh"'
       - name: Remove temporary key material
         if: always()
