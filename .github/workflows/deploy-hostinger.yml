@@ -1,98 +1,72 @@
-# Publishes the built site (site/public/) to the `hostinger-deploy` branch, then tells Hostinger to pull it.
-# The branch keeps a normal history (no force-push) so Hostinger's pull is always a fast-forward.
-#
-# Amazon product photos: once the repo has the AMAZON_CREATORS_CLIENT_ID / AMAZON_CREATORS_CLIENT_SECRET
-# secrets (Creators API access needs 10+ qualifying sales in 30 days), every run fetches fresh official
-# Amazon photos and rebuilds the site with them. The daily schedule keeps that data fresh, as Amazon's
-# API terms require. Without the secrets, the committed site/public/ is published unchanged.
-name: Deploy site to Hostinger
+name: Deploy to Hostinger
+
 on:
   push:
-    branches: [main]
-    paths: ["site/**", ".github/workflows/deploy-hostinger.yml"]
-  schedule:
-    - cron: "17 9 * * *"  # daily, ~5:17 AM ET
+    branches:
+      - amazon-ingestion
   workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
+
 concurrency:
-  group: deploy-hostinger
-  cancel-in-progress: false
+  group: hostinger-production-deploy
+  cancel-in-progress: true
+
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
-    env:
-      AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
-      AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+    environment: production
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          path: src
-      - name: Rebuild with official Amazon photos (only when API keys are set)
-        if: env.AMAZON_CREATORS_CLIENT_ID != '' && env.AMAZON_CREATORS_CLIENT_SECRET != ''
-        working-directory: src/site
-        run: |
-          set -euo pipefail
-          pip install --quiet pillow
-          python3 fetch_amazon_images.py
-          python3 build.py
-      - name: Add TikTok Pixel before deployment
-        working-directory: src/site
-        run: python3 add_tiktok_pixel.py
-      - name: Push site/public to hostinger-deploy
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install SSH key and known host
+        shell: bash
         env:
-          REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.HOSTINGER_SSH_KNOWN_HOSTS }}
         run: |
           set -euo pipefail
-          SRC_SHA="$(git -C src rev-parse --short HEAD)"
-          if git ls-remote --exit-code --heads "$REPO" hostinger-deploy >/dev/null; then
-            git clone -q --depth 1 --branch hostinger-deploy "$REPO" deploy
-          else
-            git init -q -b hostinger-deploy deploy
-            git -C deploy remote add origin "$REPO"
-          fi
-          rsync -a --delete --exclude .git src/site/public/ deploy/
-          # pinterest-b0145.html was uploaded to public_html by hand on 2026-11-01, so it is an untracked file on
-          # the server and Hostinger's `git pull` refuses to overwrite it (every deploy failed silently). Keep it out
-          # of this branch: the server copy (same content) keeps serving, and the p:domain_verify meta tag on every
-          # page also verifies the Pinterest claim. Only remove this line after deleting the server copy in hPanel.
-          rm -f deploy/pinterest-b0145.html
-          cd deploy
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then echo "No site changes"; exit 0; fi
-          git commit -q -m "Deploy site from main@${SRC_SHA}"
-          git push origin hostinger-deploy
-      - name: Tell Hostinger to pull the new build
-        # Hostinger's Git auto-deployment webhook (hPanel > Advanced > GIT > Auto Deployment). Its URL is kept
-        # only in the HOSTINGER_DEPLOY_WEBHOOK repository secret, never in this file (the repo is public).
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s\n' "$SSH_PRIVATE_KEY" > "$HOME/.ssh/hostinger_deploy_key"
+          chmod 600 "$HOME/.ssh/hostinger_deploy_key"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 644 "$HOME/.ssh/known_hosts"
+
+      - name: Verify SSH access
         env:
-          HOOK: ${{ secrets.HOSTINGER_DEPLOY_WEBHOOK }}
-        run: |
-          if [ -z "$HOOK" ]; then
-            echo "::error::HOSTINGER_DEPLOY_WEBHOOK secret is not set; Hostinger was not told to pull."
-            exit 1
-          fi
-          curl -fsS -X POST -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
-            -d '{"ref":"refs/heads/hostinger-deploy","repository":{"clone_url":"https://github.com/${{ github.repository }}.git"}}' \
-            "$HOOK"
-      - name: Tell search engines about the pages (IndexNow)
-        # Bing, Yandex and other IndexNow engines recrawl the submitted URLs within hours instead of weeks.
-        # The key file /<INDEXNOW_KEY>.txt is written by build.py. A failure here never blocks the deploy.
-        if: github.event_name != 'schedule'
-        continue-on-error: true
+          SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
         run: |
           set -euo pipefail
-          sleep 90  # give Hostinger time to pull the new build so the key file and new pages are live
-          python3 - <<'EOF'
-          import json, re, urllib.request
-          site = "src/site"
-          key = re.search(r'INDEXNOW_KEY = "([0-9a-f]+)"', open(f"{site}/build.py").read()).group(1)
-          urls = re.findall(r"<loc>([^<]+)</loc>", open(f"{site}/public/sitemap.xml").read())
-          body = json.dumps({"host": "kitchenfindsfavorites.com", "key": key,
-                             "keyLocation": f"https://kitchenfindsfavorites.com/{key}.txt", "urlList": urls[:10000]}).encode()
-          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=body,
-                                       headers={"Content-Type": "application/json; charset=utf-8"})
-          print("IndexNow:", urllib.request.urlopen(req, timeout=30).status, "for", len(urls), "URLs")
-          EOF
+          ssh -i "$HOME/.ssh/hostinger_deploy_key" \
+            -p "$SSH_PORT" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            "$SSH_USER@$SSH_HOST" 'printf "Hostinger SSH access verified\\n"'
+
+      - name: Deploy repository files
+        env:
+          SSH_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          SSH_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          SSH_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          DEPLOY_PATH: ${{ secrets.HOSTINGER_DEPLOY_PATH }}
+        run: |
+          set -euo pipefail
+          rsync -az --checksum \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.env' \
+            --exclude '.env.*' \
+            --exclude 'data/products.json' \
+            --exclude 'data/*.lock' \
+            -e "ssh -i $HOME/.ssh/hostinger_deploy_key -p $SSH_PORT -o BatchMode=yes -o IdentitiesOnly=yes" \
+            ./ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/"
+
+      - name: Remove temporary key material
+        if: always()
+        run: |
+          rm -f "$HOME/.ssh/hostinger_deploy_key" "$HOME/.ssh/known_hosts"
