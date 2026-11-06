@@ -5,7 +5,7 @@
  */
 
 // Auth password - change to your own if desired
-define('ADMIN_PASSWORD', 'N7_bwzBK3a1mv99fBTar5Gg2rpKvxJEQDlIvByjMwKs');
+define('ADMIN_PASSWORD', 'JaqmGSpsWzGD403hRDqQ_FrLzDrK7hSluOI0Ts7O3ug');
 $authenticated = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
