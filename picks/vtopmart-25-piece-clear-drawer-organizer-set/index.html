@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,10 +196,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Measure the drawer, then plan the bin layout on paper first. A 25-piece set may be more than one drawer needs, so check the listing for the sizes.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B07HQMZ7HH" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B07HQMZ7HH" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B07HQMZ7HH?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B07HQMZ7HH-sq.webp" type="image/webp"><img src="../../img/B07HQMZ7HH-sq.png" alt="Utoplike Bamboo Kitchen Drawer Dividers, 4-Pack (photo shows a similar bamboo drawer organizer, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -209,7 +210,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B09NV9WV35" data-pl="card">
+      <article class="card" id="B09NV9WV35" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B09NV9WV35?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B09NV9WV35-sq.webp" type="image/webp"><img src="../../img/B09NV9WV35-sq.png" alt="VaeFae Bamboo In-Drawer Knife Organizer (photo shows a similar in-drawer knife organizer, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -220,14 +221,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B07SRV3SN8" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B07SRV3SN8?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B07SRV3SN8-sq.webp" type="image/webp"><img src="../../img/B07SRV3SN8-sq.png" alt="Pipishell Bamboo Expandable Silverware Drawer Organizer (photo shows a similar silverware organizer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B079M8FPTW" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B079M8FPTW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B079M8FPTW-sq.webp" type="image/webp"><img src="../../img/B079M8FPTW-sq.png" alt="Rubbermaid Brilliance Tritan Food Storage Containers, Set of 5 (3.2 Cup) (photo shows a similar food storage container, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/pipishell-bamboo-expandable-silverware-drawer-organizer/">Pipishell Bamboo Expandable Silverware Drawer Organizer</a></h3>
-          <p>Expands from 13&quot; to almost 20&quot; wide, so it actually fits your drawer instead of the other way around. Seven compartments keep forks, spoons, and knives from turning into a junk pile.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B07SRV3SN8?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/rubbermaid-brilliance-tritan-food-storage-containers-set-of/">Rubbermaid Brilliance Tritan Food Storage Containers, Set of 5 (3.2 Cup)</a></h3>
+          <p>Mismatched containers with lost lids make meal prep and leftovers messier than they need to be. This set gives you five matching 3.2-cup clear Tritan containers with latching leak-proof lids and built-in vents for reheating.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B079M8FPTW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B01N6UE7OF" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B01N6UE7OF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01N6UE7OF-sq.webp" type="image/webp"><img src="../../img/B01N6UE7OF-sq.png" alt="Simple Houseware 2-Tier Sliding Cabinet Basket Organizer (photo shows a similar pull-out cabinet basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/simple-houseware-2-tier-sliding-cabinet-basket-organizer/">Simple Houseware 2-Tier Sliding Cabinet Basket Organizer</a></h3>
+          <p>Narrow cabinets and the gap beside the sink pipes waste space when everything is stacked on the floor. This 8-inch-wide unit adds two sliding mesh baskets, so cleaners, sponges or pantry items pull out instead of getting buried.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01N6UE7OF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,21 +196,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>The limit is 11 pounds, which is plenty for most recipes but not for very large batches. Check the listing for the battery type.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B00008CM69" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
+          <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
+      <article class="card" id="B091XP3VZ7" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -220,14 +221,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00008CM69" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B07Z4R7CJZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07Z4R7CJZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07Z4R7CJZ-sq.webp" type="image/webp"><img src="../../img/B07Z4R7CJZ-sq.png" alt="LE TAUCI 4 oz Ceramic Ramekins, Set of 6 (photo shows a similar ramekin, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
-          <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/le-tauci-4-oz-ceramic-ramekins-set-of-6/">LE TAUCI 4 oz Ceramic Ramekins, Set of 6</a></h3>
+          <p>Single-serve desserts and side sauces need small dishes that can go in a hot oven. These six 4 oz ceramic ramekins are about 3.7 inches across, handle temperatures up to 482°F and stack neatly in a cabinet.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07Z4R7CJZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B003L0OYJ4" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B003L0OYJ4?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B003L0OYJ4-sq.webp" type="image/webp"><img src="../../img/B003L0OYJ4-sq.png" alt="OXO Good Grips 9-Inch Tongs with Silicone Heads (photo shows a similar pair of kitchen tongs, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/oxo-good-grips-9-inch-tongs-with-silicone-heads/">OXO Good Grips 9-Inch Tongs with Silicone Heads</a></h3>
+          <p>Metal tongs and forks are the fastest way to scratch a nonstick air fryer basket. These 9-inch tongs have heat-resistant silicone heads with scalloped edges, so you can flip wings or lift out vegetables without wearing down the coating.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B003L0OYJ4?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

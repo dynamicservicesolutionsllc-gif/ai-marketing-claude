@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,39 +196,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It works on gas, electric and ceramic glass cooktops but not induction.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B01CX2EZ3K" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B01CX2EZ3K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01CX2EZ3K-sq.webp" type="image/webp"><img src="../../img/B01CX2EZ3K-sq.png" alt="Spring Chef Heavy Duty Metal Ice Cream Scoop (photo shows a similar ice cream scoop, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-heavy-duty-metal-ice-cream-scoop/">Spring Chef Heavy Duty Metal Ice Cream Scoop</a></h3>
+          <p>Flimsy scoops bend on hard ice cream and spring-loaded ones can break. This heavy duty metal scoop has no moving parts, a scoop-and-spade shape that curls neat rounds and a soft grip handle, and it goes in the dishwasher.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01CX2EZ3K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B00M2J7PCI" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00M2J7PCI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00M2J7PCI-sq.webp" type="image/webp"><img src="../../img/B00M2J7PCI-sq.png" alt="Pyrex Essentials 3-Piece Glass Measuring Cup Set (photo shows a similar glass measuring cup, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
-          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/pyrex-essentials-3-piece-glass-measuring-cup-set/">Pyrex Essentials 3-Piece Glass Measuring Cup Set</a></h3>
+          <p>Three glass cups in 1, 2 and 4-cup sizes cover everything from a splash of milk to a full batch of batter, with bold ounce and milliliter markings. They go into the microwave to warm butter or milk and pour cleanly through a curved spout, which suits holiday baking.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00M2J7PCI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00008CM69" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B010TCP3SC" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B010TCP3SC-sq.webp" type="image/webp"><img src="../../img/B010TCP3SC-sq.png" alt="Dash Mini Waffle Maker, 4-Inch (photo shows a similar waffle maker, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
-          <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/dash-mini-waffle-maker-4-inch/">Dash Mini Waffle Maker, 4-Inch</a></h3>
+          <p>Heats in a couple of minutes and makes one four-inch waffle at a time, which suits a weekday breakfast better than hauling out a full-size iron. It stores standing up in a narrow cabinet gap and also crisps hash browns, chaffles, and biscuit-dough sandwiches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0738C7RXF" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0738C7RXF-sq.webp" type="image/webp"><img src="../../img/B0738C7RXF-sq.png" alt="Deiss PRO Lemon Zester and Grater (photo shows a similar zester, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/deiss-pro-lemon-zester-and-grater/">Deiss PRO Lemon Zester and Grater</a></h3>
+          <p>A bulky box grater is overkill for a little lemon zest, nutmeg or Parmesan. This handheld zester has a sharp stainless steel blade, a non-slip handle and curved sides that keep it rigid, and it rinses clean under running water.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

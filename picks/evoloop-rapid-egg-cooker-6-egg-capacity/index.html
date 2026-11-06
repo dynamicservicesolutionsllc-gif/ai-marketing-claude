@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,32 +196,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It is a countertop appliance with a plug, so check where it will live. Six eggs per batch is plenty for one household but not for a crowd.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0C4Z39TK9" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0C4Z39TK9-sq.webp" type="image/webp"><img src="../../img/B0C4Z39TK9-sq.png" alt="Chefman XL Electric Griddle, 10 x 20 Inch (photo shows a similar griddle, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B004P2LEE0" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B004P2LEE0?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B004P2LEE0-sq.webp" type="image/webp"><img src="../../img/B004P2LEE0-sq.png" alt="Crock-Pot 2-Quart Manual Slow Cooker (photo shows a similar slow cooker, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/chefman-xl-electric-griddle-10-x-20-inch/">Chefman XL Electric Griddle, 10 x 20 Inch</a></h3>
-          <p>Cooking holiday breakfast in one frying pan means the first pancakes go cold before the last are done. This Chefman griddle gives you a 10 x 20 inch nonstick surface with adjustable heat from 200 to 420°F and a drip tray for grease.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/crock-pot-2-quart-manual-slow-cooker/">Crock-Pot 2-Quart Manual Slow Cooker</a></h3>
+          <p>Sized for dinner for two or a batch of dip, so you are not running a six-quart cooker half empty. The stoneware crock lifts out for the dishwasher, and the Warm setting holds queso or meatballs steady through a long afternoon.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B004P2LEE0?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B003OAJGJO" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B003OAJGJO-sq.webp" type="image/webp"><img src="../../img/B003OAJGJO-sq.png" alt="Crock-Pot 7-Quart Manual Slow Cooker (photo shows a similar slow cooker, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/crock-pot-7-quart-manual-slow-cooker/">Crock-Pot 7-Quart Manual Slow Cooker</a></h3>
-          <p>Feeding a crowd or cooking for the week means a pot big enough for a whole roast or a double batch of chili. This 7-quart slow cooker has high, low and warm settings, and the removable stoneware can go in the oven up to 400°F or straight into the dishwasher.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B0C33CHG99" data-pl="card">
+      <article class="card" id="B0C33CHG99" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0C33CHG99-sq.webp" type="image/webp"><img src="../../img/B0C33CHG99-sq.png" alt="Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart (photo shows a similar air fryer, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -228,6 +218,28 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
           <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
           <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0CGWQ53L3" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0CGWQ53L3-sq.webp" type="image/webp"><img src="../../img/B0CGWQ53L3-sq.png" alt="Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece (photo shows a similar mixing bowl, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/umite-chef-stainless-steel-mixing-bowls-with-lids-5-piece/">Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece</a></h3>
+          <p>Mixing in one bowl and then moving food to a container for the fridge doubles the dishes. These five stainless steel bowls (1.5 to 5 quarts) have non-slip silicone bottoms, airtight lids and three grater attachments, and they nest for storage.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B00XZ81GBQ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00XZ81GBQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00XZ81GBQ-sq.webp" type="image/webp"><img src="../../img/B00XZ81GBQ-sq.png" alt="Spring Chef Stainless Steel Cooling Rack, 11.5 x 16.5 Inch (photo shows a similar cooling rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/spring-chef-stainless-steel-cooling-rack-11-5-x-16-5-inch/">Spring Chef Stainless Steel Cooling Rack, 11.5 x 16.5 Inch</a></h3>
+          <p>Holiday cookies and pies need somewhere to cool where air can get underneath, and a flimsy coated rack can chip or warp. This 11.5 x 16.5 inch rack is solid 304 stainless steel, oven safe to 575°F, and fits inside a standard half sheet pan for roasting too.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00XZ81GBQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

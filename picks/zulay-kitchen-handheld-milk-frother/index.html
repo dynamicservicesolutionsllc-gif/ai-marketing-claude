@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,10 +196,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It is a hand tool, so you hold it in the cup while it runs. Check the listing for how it is powered, and rinse the whisk in a cup of water after each use.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000KEM4TQ" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B000KEM4TQ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B000KEM4TQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B000KEM4TQ-sq.webp" type="image/webp"><img src="../../img/B000KEM4TQ-sq.png" alt="Bodum Brazil French Press Coffee Maker, 34 oz (photo shows a similar french press, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -209,18 +210,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0DPXRJ2VY" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0DPXRJ2VY?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0DPXRJ2VY-sq.webp" type="image/webp"><img src="../../img/B0DPXRJ2VY-sq.png" alt="Zulay Kitchen Milk Frother Wand with Stand (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/zulay-kitchen-milk-frother-wand-with-stand/">Zulay Kitchen Milk Frother Wand with Stand</a></h3>
-          <p>A battery-powered handheld wand whips milk or non-dairy milk into foam for lattes, cappuccinos, matcha, and hot chocolate in seconds. It runs on four included AA batteries and parks on its own metal stand on the counter.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0DPXRJ2VY?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B08PP48979" data-pl="card">
+      <article class="card" id="B08PP48979" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B08PP48979?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B08PP48979-sq.webp" type="image/webp"><img src="../../img/B08PP48979-sq.png" alt="Cosori Glass Electric Kettle, 1.7L (photo shows a similar glass electric kettle, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -228,6 +218,28 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/cosori-glass-electric-kettle-1-7l/">Cosori Glass Electric Kettle, 1.7L</a></h3>
           <p>Boils water for tea, pour-over coffee, or oatmeal faster than a stovetop kettle, then shuts itself off so it can be left unattended. The wide opening makes the glass interior easy to wipe clean, and the water never touches plastic.</p>
           <a class="btn" href="https://www.amazon.com/dp/B08PP48979?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B08JWMVB43" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B08JWMVB43?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08JWMVB43-sq.webp" type="image/webp"><img src="../../img/B08JWMVB43-sq.png" alt="THERMOS Stainless King Travel Mug with Handle, 16 oz (photo shows a similar stainless steel travel mug, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/thermos-stainless-king-travel-mug-with-handle-16-oz/">THERMOS Stainless King Travel Mug with Handle, 16 oz</a></h3>
+          <p>Keeps coffee or tea hot for up to 7 hours and iced drinks cold for up to 18, so a morning refill lasts through a long commute. The DrinkLock lid is leak-proof when closed, the handle makes it easy to carry, and it fits most standard cup holders.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08JWMVB43?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0CQVWT2NH" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0CQVWT2NH?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0CQVWT2NH-sq.webp" type="image/webp"><img src="../../img/B0CQVWT2NH-sq.png" alt="HydroJug Traveler Insulated Bottle, 40 oz (photo shows a similar sports water bottle, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/hydrojug-traveler-insulated-bottle-40-oz/">HydroJug Traveler Insulated Bottle, 40 oz</a></h3>
+          <p>Triple-wall insulation and a leak-resistant flip-straw lid make it a full day of water in one fill. The non-slip base fits a cup holder, and the straw detaches so everything goes in the dishwasher.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0CQVWT2NH?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

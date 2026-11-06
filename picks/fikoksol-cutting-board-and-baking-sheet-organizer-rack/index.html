@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,39 +196,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Each slot is about 1.2 inches wide, so it suits flat items rather than thick pans. Check the rack&#x27;s outside dimensions against your cabinet.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0C6D6SH16" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0C6D6SH16-sq.webp" type="image/webp"><img src="../../img/B0C6D6SH16-sq.png" alt="JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack (photo shows a similar dish rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B079M8FPTW" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B079M8FPTW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B079M8FPTW-sq.webp" type="image/webp"><img src="../../img/B079M8FPTW-sq.png" alt="Rubbermaid Brilliance Tritan Food Storage Containers, Set of 5 (3.2 Cup) (photo shows a similar food storage container, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/jasiway-expandable-stainless-steel-in-sink-dish-drying-rack/">JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack</a></h3>
-          <p>A countertop dish rack takes up prep space that a small kitchen can&#x27;t spare. This stainless steel rack sits in or over the sink, with arms that extend from 15.5 to 23.2 inches, so water drips straight into the basin.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/rubbermaid-brilliance-tritan-food-storage-containers-set-of/">Rubbermaid Brilliance Tritan Food Storage Containers, Set of 5 (3.2 Cup)</a></h3>
+          <p>Mismatched containers with lost lids make meal prep and leftovers messier than they need to be. This set gives you five matching 3.2-cup clear Tritan containers with latching leak-proof lids and built-in vents for reheating.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B079M8FPTW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B01N6UE7OF" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B01N6UE7OF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B01N6UE7OF-sq.webp" type="image/webp"><img src="../../img/B01N6UE7OF-sq.png" alt="Simple Houseware 2-Tier Sliding Cabinet Basket Organizer (photo shows a similar pull-out cabinet basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0C3QZ7SNF" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C3QZ7SNF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C3QZ7SNF-sq.webp" type="image/webp"><img src="../../img/B0C3QZ7SNF-sq.png" alt="Cisily Sponge Holder with Brush Holder for Kitchen Sink (photo shows a similar sink sponge caddy, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/simple-houseware-2-tier-sliding-cabinet-basket-organizer/">Simple Houseware 2-Tier Sliding Cabinet Basket Organizer</a></h3>
-          <p>Narrow cabinets and the gap beside the sink pipes waste space when everything is stacked on the floor. This 8-inch-wide unit adds two sliding mesh baskets, so cleaners, sponges or pantry items pull out instead of getting buried.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B01N6UE7OF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/cisily-sponge-holder-with-brush-holder-for-kitchen-sink/">Cisily Sponge Holder with Brush Holder for Kitchen Sink</a></h3>
+          <p>Corrals the sponge, dish soap, and scrub brushes in one stainless steel caddy that takes up under 10 inches of counter. A swiveling drain spout sends drips straight into the sink instead of leaving a puddle behind the faucet.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C3QZ7SNF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0D7P6XKNP" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0D7P6XKNP?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0D7P6XKNP-sq.webp" type="image/webp"><img src="../../img/B0D7P6XKNP-sq.png" alt="Vtopmart 22 oz Glass Meal Prep Containers, 5-Pack (photo shows a similar glass meal prep container, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B07531HM8Q" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07531HM8Q?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07531HM8Q-sq.webp" type="image/webp"><img src="../../img/B07531HM8Q-sq.png" alt="Rubbermaid Brilliance 12-Cup Airtight Pantry Container (photo shows a similar airtight pantry container, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/vtopmart-22-oz-glass-meal-prep-containers-5-pack/">Vtopmart 22 oz Glass Meal Prep Containers, 5-Pack</a></h3>
-          <p>Holiday leftovers and weekly lunches end up in stained plastic tubs that don&#x27;t seal. These five 22 oz glass containers have hinged lids with removable silicone seals for a leakproof close, and the glass is safe for the oven, microwave, freezer and dishwasher.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0D7P6XKNP?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/rubbermaid-brilliance-12-cup-airtight-pantry-container/">Rubbermaid Brilliance 12-Cup Airtight Pantry Container</a></h3>
+          <p>Latches shut with an airtight seal, so sugar, rice, and cereal stay fresh instead of going stale in a rolled-up bag. The clear walls show what is running low at a glance, and the straight-sided shape stacks to use the full height of a cabinet shelf.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07531HM8Q?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0CNCWY7N6" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0CNCWY7N6?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0CNCWY7N6-sq.webp" type="image/webp"><img src="../../img/B0CNCWY7N6-sq.png" alt="LAMU 3-Pack Lazy Susan Turntable Organizers (photo shows a similar lazy susan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/lamu-3-pack-lazy-susan-turntable-organizers/">LAMU 3-Pack Lazy Susan Turntable Organizers</a></h3>
+          <p>Three turntables in 9.25&quot;, 10.6&quot;, and 12&quot; sizes bring the back of a deep cabinet, fridge shelf, or pantry corner around to the front with a spin. Raised clear edges keep jars and bottles from sliding off as it turns.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0CNCWY7N6?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

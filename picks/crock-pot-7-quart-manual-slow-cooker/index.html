@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,10 +196,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It&#x27;s a manual model with no timer, so it won&#x27;t switch to warm on its own, and a 7-quart pot needs a good-sized spot on the counter and in the cabinet.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0C4Z39TK9" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0C4Z39TK9" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0C4Z39TK9-sq.webp" type="image/webp"><img src="../../img/B0C4Z39TK9-sq.png" alt="Chefman XL Electric Griddle, 10 x 20 Inch (photo shows a similar griddle, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -209,7 +210,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0B9P17YHK" data-pl="card">
+      <article class="card" id="B0B9P17YHK" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0B9P17YHK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0B9P17YHK-sq.webp" type="image/webp"><img src="../../img/B0B9P17YHK-sq.png" alt="Evoloop Rapid Egg Cooker, 6-Egg Capacity (photo shows a similar egg cooker, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -220,14 +221,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0C33CHG99" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0C33CHG99-sq.webp" type="image/webp"><img src="../../img/B0C33CHG99-sq.png" alt="Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart (photo shows a similar air fryer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B00X597ZXS" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00X597ZXS-sq.webp" type="image/webp"><img src="../../img/B00X597ZXS-sq.png" alt="Spring Chef Swivel Vegetable Peeler (photo shows a similar vegetable peeler, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
-          <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-swivel-vegetable-peeler/">Spring Chef Swivel Vegetable Peeler</a></h3>
+          <p>A dull peeler turns a sack of holiday potatoes into a long chore. This swivel peeler has dual stainless steel blades that glide over fruit and vegetables, a built-in blemish remover and a soft non-slip grip for right- or left-handed use.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B00S93EQUK" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00S93EQUK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00S93EQUK-sq.webp" type="image/webp"><img src="../../img/B00S93EQUK-sq.png" alt="Alpha Grillers Instant Read Meat Thermometer (photo shows a similar thermometer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/alpha-grillers-instant-read-meat-thermometer/">Alpha Grillers Instant Read Meat Thermometer</a></h3>
+          <p>Takes the guesswork out of chicken, roasts, and the holiday turkey with a temperature reading in a couple of seconds. The backlit display is easy to read at the oven or the grill, and the waterproof body rinses clean under the tap.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00S93EQUK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

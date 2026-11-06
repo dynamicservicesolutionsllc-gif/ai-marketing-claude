@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,21 +196,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>The largest bowl is 5 quarts; measure your cabinet if you want to store the nested set together.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0D2P1HSCV" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0D2P1HSCV-sq.webp" type="image/webp"><img src="../../img/B0D2P1HSCV-sq.png" alt="Royal Craft Wood Bamboo Cutting Board Set of 3 (photo shows a similar cutting board, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B07YP2VH4B" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07YP2VH4B?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07YP2VH4B-sq.webp" type="image/webp"><img src="../../img/B07YP2VH4B-sq.png" alt="KitchenAid Classic Multifunction Can Opener with Bottle Opener (photo shows a similar can opener, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/royal-craft-wood-bamboo-cutting-board-set-of-3/">Royal Craft Wood Bamboo Cutting Board Set of 3</a></h3>
-          <p>One board is never the right size: too big for a lemon, too small for a roast. This set of three bamboo boards (15x10, 12x8 and 9x6 inches) has deep juice grooves to catch liquid and side handles for carrying.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/kitchenaid-classic-multifunction-can-opener-with-bottle/">KitchenAid Classic Multifunction Can Opener with Bottle Opener</a></h3>
+          <p>A sharp stainless steel cutting wheel and an oversized turning knob get through cans of pumpkin, broth, and beans without the slipping and re-clamping of a worn-out opener. The cushioned handles are easier on tired hands, and the built-in bottle opener means one less tool in the drawer.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07YP2VH4B?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00004OCNJ" data-pl="card">
+      <article class="card" id="B00004OCNJ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B00004OCNJ-sq.webp" type="image/webp"><img src="../../img/B00004OCNJ-sq.png" alt="OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper (photo shows a similar bench scraper, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -220,14 +221,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0738C7RXF" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0738C7RXF-sq.webp" type="image/webp"><img src="../../img/B0738C7RXF-sq.png" alt="Deiss PRO Lemon Zester and Grater (photo shows a similar zester, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B07SR7M6Y9" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07SR7M6Y9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07SR7M6Y9-sq.webp" type="image/webp"><img src="../../img/B07SR7M6Y9-sq.png" alt="Fayomir Stainless Steel Cookie Scoop Set of 3 (photo shows a similar cookie scoop, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/deiss-pro-lemon-zester-and-grater/">Deiss PRO Lemon Zester and Grater</a></h3>
-          <p>A bulky box grater is overkill for a little lemon zest, nutmeg or Parmesan. This handheld zester has a sharp stainless steel blade, a non-slip handle and curved sides that keep it rigid, and it rinses clean under running water.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/fayomir-stainless-steel-cookie-scoop-set-of-3/">Fayomir Stainless Steel Cookie Scoop Set of 3</a></h3>
+          <p>Spooning cookie dough by hand gives uneven sizes, so some cookies burn while others stay raw. This set of three trigger-release scoops portions 1, 2 or 3 tablespoons at a time for even batches of cookies, muffins and meatballs.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07SR7M6Y9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B012T634SM" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B012T634SM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B012T634SM-sq.webp" type="image/webp"><img src="../../img/B012T634SM-sq.png" alt="Magic Bullet Personal Blender, 22 oz (photo shows a similar blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/magic-bullet-personal-blender-22-oz/">Magic Bullet Personal Blender, 22 oz</a></h3>
+          <p>Big blenders are a lot to haul out for one smoothie or a bowl of salsa. The Magic Bullet uses a 250-watt base with a 22 oz cup, a short cup and a party mug, plus resealable lids so you can blend and store in the same cup.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B012T634SM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

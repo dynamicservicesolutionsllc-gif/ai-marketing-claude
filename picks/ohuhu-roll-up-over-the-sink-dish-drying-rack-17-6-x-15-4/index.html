@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,21 +196,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Measure your sink first: it fits sinks whose shorter side is 17 inches or less. The rods are silicone-wrapped steel and support up to 100 pounds, and it rolls up for storage.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0C6D6SH16" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0C6D6SH16-sq.webp" type="image/webp"><img src="../../img/B0C6D6SH16-sq.png" alt="JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack (photo shows a similar dish rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/jasiway-expandable-stainless-steel-in-sink-dish-drying-rack/">JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack</a></h3>
-          <p>A countertop dish rack takes up prep space that a small kitchen can&#x27;t spare. This stainless steel rack sits in or over the sink, with arms that extend from 15.5 to 23.2 inches, so water drips straight into the basin.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B09BVYVFZQ" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B09BVYVFZQ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B09BVYVFZQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B09BVYVFZQ-sq.webp" type="image/webp"><img src="../../img/B09BVYVFZQ-sq.png" alt="OXO Good Grips Aluminum Fold Flat Dish Rack, 2-Tier (photo shows a similar two-tier dish rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -220,14 +210,36 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0B4K1XH8Y" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0B4K1XH8Y?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0B4K1XH8Y-sq.webp" type="image/webp"><img src="../../img/B0B4K1XH8Y-sq.png" alt="Kitsure Compact Dish Drying Rack with Drainboard (photo shows a similar dish drying rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0C6D6SH16" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C6D6SH16-sq.webp" type="image/webp"><img src="../../img/B0C6D6SH16-sq.png" alt="JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack (photo shows a similar dish rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/kitsure-compact-dish-drying-rack-with-drainboard/">Kitsure Compact Dish Drying Rack with Drainboard</a></h3>
-          <p>A 12 by 15.5 inch footprint fits beside the sink in a tight kitchen, yet it is built to hold about ten plates plus bowls and glasses. The drainboard catches drips, and the two-compartment utensil holder lifts off for cleaning.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0B4K1XH8Y?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/jasiway-expandable-stainless-steel-in-sink-dish-drying-rack/">JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack</a></h3>
+          <p>A countertop dish rack takes up prep space that a small kitchen can&#x27;t spare. This stainless steel rack sits in or over the sink, with arms that extend from 15.5 to 23.2 inches, so water drips straight into the basin.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0C3QZ7SNF" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C3QZ7SNF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C3QZ7SNF-sq.webp" type="image/webp"><img src="../../img/B0C3QZ7SNF-sq.png" alt="Cisily Sponge Holder with Brush Holder for Kitchen Sink (photo shows a similar sink sponge caddy, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/cisily-sponge-holder-with-brush-holder-for-kitchen-sink/">Cisily Sponge Holder with Brush Holder for Kitchen Sink</a></h3>
+          <p>Corrals the sponge, dish soap, and scrub brushes in one stainless steel caddy that takes up under 10 inches of counter. A swiveling drain spout sends drips straight into the sink instead of leaving a puddle behind the faucet.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C3QZ7SNF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B08ZK5WDWN" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B08ZK5WDWN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08ZK5WDWN-sq.webp" type="image/webp"><img src="../../img/B08ZK5WDWN-sq.png" alt="Vtopmart 24-Piece Airtight Food Storage Container Set (photo shows a similar food storage container set, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/vtopmart-24-piece-airtight-food-storage-container-set/">Vtopmart 24-Piece Airtight Food Storage Container Set</a></h3>
+          <p>Twenty-four clear containers in four sizes turn half-open cereal boxes and bags of flour into a stackable, labeled pantry. Side-locking lids with a silicone gasket keep dry goods sealed, and every container shares the same lid design.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08ZK5WDWN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

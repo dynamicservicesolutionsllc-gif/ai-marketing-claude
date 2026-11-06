@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,32 +196,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It is a hand-held probe, so you have to open the oven or lift the grill lid to check. The body is waterproof and rinses clean, but check the listing for the temperature range and what powers it.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0026RHI3M" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0026RHI3M?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0026RHI3M-sq.webp" type="image/webp"><img src="../../img/B0026RHI3M-sq.png" alt="GoodCook Everyday Nonstick Baking Sheet Set, 3 Pack (photo shows a similar baking sheet, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/goodcook-everyday-nonstick-baking-sheet-set-3-pack/">GoodCook Everyday Nonstick Baking Sheet Set, 3 Pack</a></h3>
+          <p>One warped baking sheet slows down cookie batches and sheet-pan dinners alike. This set gives you three nonstick carbon steel pans in 13 by 9, 15 by 10 and 17 by 11 inch sizes, so you can match the pan to the job.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0026RHI3M?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
-          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B00008CM69" data-pl="card">
+      <article class="card" id="B00008CM69" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -228,6 +218,28 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
           <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
           <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0C33CHG99" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C33CHG99-sq.webp" type="image/webp"><img src="../../img/B0C33CHG99-sq.png" alt="Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart (photo shows a similar air fryer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
+          <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B00004OCNJ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00004OCNJ-sq.webp" type="image/webp"><img src="../../img/B00004OCNJ-sq.png" alt="OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper (photo shows a similar bench scraper, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/oxo-good-grips-multi-purpose-stainless-steel-scraper-and/">OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper</a></h3>
+          <p>Moving chopped vegetables or dividing dough with a knife blade is slow and dulls the edge. This bench scraper scoops food off the cutting board in one pass, cuts dough cleanly, and its 1-inch markings help portion rolls and pie crust.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

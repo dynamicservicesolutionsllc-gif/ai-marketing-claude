@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,32 +196,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It holds 1.5 quarts, so pick a larger pot for pasta or soup for a family.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B009HBKQ16" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B009HBKQ16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B009HBKQ16-sq.webp" type="image/webp"><img src="../../img/B009HBKQ16-sq.png" alt="Tramontina Professional 10-Inch Nonstick Frying Pan (photo shows a similar frying pan, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/tramontina-professional-10-inch-nonstick-frying-pan/">Tramontina Professional 10-Inch Nonstick Frying Pan</a></h3>
+          <p>Eggs and pancakes stick and tear in a worn-out pan. This 10-inch Tramontina skillet has a reinforced nonstick coating on heavy-gauge aluminum for even heating, a removable silicone handle sleeve and oven-safe use up to 400°F.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B009HBKQ16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
-          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B01CX1RIMQ" data-pl="card">
+      <article class="card" id="B01CX1RIMQ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B01CX1RIMQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B01CX1RIMQ-sq.webp" type="image/webp"><img src="../../img/B01CX1RIMQ-sq.png" alt="Spring Chef Dough Blender and Pastry Cutter, Medium (photo shows a similar pastry blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -228,6 +218,28 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/spring-chef-dough-blender-and-pastry-cutter-medium/">Spring Chef Dough Blender and Pastry Cutter, Medium</a></h3>
           <p>Cutting cold butter into flour with two knives or a fork is slow, and the butter warms up before the crust is mixed. This dough blender&#x27;s thick metal blades break butter into even pieces quickly for flaky pie crust, biscuits and scones.</p>
           <a class="btn" href="https://www.amazon.com/dp/B01CX1RIMQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B09ZLT4FZJ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B09ZLT4FZJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B09ZLT4FZJ-sq.webp" type="image/webp"><img src="../../img/B09ZLT4FZJ-sq.png" alt="Pyrex Deep 9x13 Glass Baking Dish with Lid (photo shows a similar glass baking dish, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/pyrex-deep-9x13-glass-baking-dish-with-lid/">Pyrex Deep 9x13 Glass Baking Dish with Lid</a></h3>
+          <p>Standard 9x13 pans can bubble over when a holiday casserole or lasagna is filled to the top. This Pyrex glass dish is 2.75 inches deep, up to 50% deeper than Pyrex basics dishes, and comes with a BPA-free lid for storing leftovers.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B09ZLT4FZJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0738C7RXF" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0738C7RXF-sq.webp" type="image/webp"><img src="../../img/B0738C7RXF-sq.png" alt="Deiss PRO Lemon Zester and Grater (photo shows a similar zester, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/deiss-pro-lemon-zester-and-grater/">Deiss PRO Lemon Zester and Grater</a></h3>
+          <p>A bulky box grater is overkill for a little lemon zest, nutmeg or Parmesan. This handheld zester has a sharp stainless steel blade, a non-slip handle and curved sides that keep it rigid, and it rinses clean under running water.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

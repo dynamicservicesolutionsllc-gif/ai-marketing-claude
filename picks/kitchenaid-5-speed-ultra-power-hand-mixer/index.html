@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -195,32 +196,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Hand mixers are best for lighter jobs like the ones listed, so check what you plan to make. The cord locks to either side and the beaters release with one button.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B012T634SM" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B012T634SM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B012T634SM-sq.webp" type="image/webp"><img src="../../img/B012T634SM-sq.png" alt="Magic Bullet Personal Blender, 22 oz (photo shows a similar blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/magic-bullet-personal-blender-22-oz/">Magic Bullet Personal Blender, 22 oz</a></h3>
-          <p>Big blenders are a lot to haul out for one smoothie or a bowl of salsa. The Magic Bullet uses a 250-watt base with a 22 oz cup, a short cup and a party mug, plus resealable lids so you can blend and store in the same cup.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B012T634SM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B01FHOWYA2" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B01FHOWYA2-sq.webp" type="image/webp"><img src="../../img/B01FHOWYA2-sq.png" alt="Ninja Fit Compact Personal Blender (photo shows a similar blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/ninja-fit-compact-personal-blender/">Ninja Fit Compact Personal Blender</a></h3>
-          <p>A full-size blender is a lot to haul out and wash for one smoothie. This compact 700-watt blender blends right in a 16 oz cup, then you add the spout lid and take it with you.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B08HSNGR8P" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B08HSNGR8P" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B08HSNGR8P?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B08HSNGR8P-sq.webp" type="image/webp"><img src="../../img/B08HSNGR8P-sq.png" alt="Mueller Multistick 5-in-1 Immersion Blender (photo shows a similar immersion blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -228,6 +207,39 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/mueller-multistick-5-in-1-immersion-blender/">Mueller Multistick 5-in-1 Immersion Blender</a></h3>
           <p>An 800-watt immersion blender with 12 speeds blends soups right in the pot, and the kit adds a whisk, a frother, a 20 oz beaker, and a 16 oz chopper. The detachable parts are dishwasher safe, so one compact tool covers several countertop jobs.</p>
           <a class="btn" href="https://www.amazon.com/dp/B08HSNGR8P?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0000645YM" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0000645YM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0000645YM-sq.webp" type="image/webp"><img src="../../img/B0000645YM-sq.png" alt="Cuisinart Mini-Prep Plus 3-Cup Food Processor (photo shows a similar mini food chopper, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/cuisinart-mini-prep-plus-3-cup-food-processor/">Cuisinart Mini-Prep Plus 3-Cup Food Processor</a></h3>
+          <p>Chops onions, garlic, herbs, and nuts in a few pulses, which takes the tedious knife work out of soups, stuffing, and sauces. The reversible blade switches between chopping and grinding, and the bowl and lid are dishwasher safe, so it earns its small spot in the cabinet.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0000645YM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B07PZF3QS3" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07PZF3QS3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07PZF3QS3-sq.webp" type="image/webp"><img src="../../img/B07PZF3QS3-sq.png" alt="KitchenAid All Purpose Kitchen Shears with Sheath (photo shows a similar pair of kitchen shears, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/kitchenaid-all-purpose-kitchen-shears-with-sheath/">KitchenAid All Purpose Kitchen Shears with Sheath</a></h3>
+          <p>A knife and cutting board is a lot of setup for snipping herbs, trimming twine or opening a stubborn package. These stainless steel shears have micro-serrated edges that grip food, a soft-grip handle, and a sheath so they can live safely in a drawer.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07PZF3QS3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B082314NFL" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B082314NFL-sq.webp" type="image/webp"><img src="../../img/B082314NFL-sq.png" alt="Zulay Kitchen Handheld Milk Frother (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/zulay-kitchen-handheld-milk-frother/">Zulay Kitchen Handheld Milk Frother</a></h3>
+          <p>Whips hot or cold milk into cafe-style foam in about twenty seconds, which turns plain drip coffee into a latte without giving up counter space to a machine. It also breaks up matcha clumps and stirs protein powder smooth, and the whisk rinses clean in a cup of water.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
