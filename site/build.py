@@ -1270,7 +1270,7 @@ RewriteCond %{HTTP_HOST} ^www\\. [NC]
 RewriteRule ^ https://kitchenfindsfavorites.com%{REQUEST_URI} [R=301,L]
 <IfModule mod_headers.c>
   # Posting routines load the graphics cross-origin (canvas -> file upload).
-  <FilesMatch "\\.(png|webp)$">
+  <FilesMatch "\\.(png|webp|jpg|mp4)$">
     Header set Access-Control-Allow-Origin "*"
   </FilesMatch>
   Header always set X-Content-Type-Options "nosniff"
