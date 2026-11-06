@@ -51,3 +51,8 @@ site/videos/
 site/.pixabay-key
 .pixabay-key
 site/photo-candidates/
+
+# API keys and secrets (never commit)
+.env
+.env.local
+.env.*.local

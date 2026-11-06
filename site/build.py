@@ -487,6 +487,12 @@ CSS = """
   .saved-count[hidden] { display:none; }
   .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
   .card.gone .body { opacity:.75; }
+  .video-gen { font:inherit; font-weight:600; cursor:pointer; background:var(--card); color:var(--acc); border:2px solid var(--acc); border-radius:8px; padding:8px 16px; margin-top:8px; }
+  .video-gen:hover { background:var(--acc); color:var(--acc-ink); }
+  .video-gen:disabled { opacity:.6; cursor:wait; }
+  .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .product-video-container { margin-top:12px; }
+  .product-video-container video { width:100%; border-radius:8px; }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -608,6 +614,7 @@ def foot(site):
   </footer>
 </div>
 {SAVED_JS}<script src="/quiz.js?v={QUIZ_VERSION}" defer></script>
+<script src="/js/video-generator.js" defer></script>
 </body>
 </html>
 """
@@ -778,6 +785,7 @@ def render_pick(data, p, products):
         <div class="buy">
           {buy(p, tag)}
           {save_button(p)}
+          {video_button(p)}
         </div>
       </div>
     </article>
@@ -1956,6 +1964,12 @@ def save_button(p):
     # Hidden until JavaScript shows it, since saving needs JavaScript; the shared script sets the saved state.
     return (f'<button type="button" class="save" data-save="{e(p["asin"])}" aria-pressed="false" hidden>&#9825; Save to My Favorites</button>'
             f'<script>document.currentScript.previousElementSibling.hidden=false</script>')
+
+
+def video_button(p):
+    # Video generation button — fetches AI script from Gemini, generates video with Replicate
+    desc = e(p.get("blurb", p["name"])[:100])  # Limit description length
+    return f'<button type="button" class="video-gen" data-generate-video="{e(p["asin"])}" data-description="{desc}">🎬 Generate Demo Video</button>'
 
 
 SAVED_PAGE_JS = r"""<script>document.addEventListener('DOMContentLoaded',function(){var grid=document.getElementById('saved-grid'),st=document.getElementById('saved-status'),note=document.getElementById('saved-note'),items={};
