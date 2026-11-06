@@ -4,8 +4,8 @@
  * Access: https://kitchenfindsfavorites.com/admin/review-products.php
  */
 
-// Simple auth - change this password!
-define('ADMIN_PASSWORD', 'change-me-to-strong-password');
+// Auth password - change to your own if desired
+define('ADMIN_PASSWORD', 'N7_bwzBK3a1mv99fBTar5Gg2rpKvxJEQDlIvByjMwKs');
 $authenticated = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {
