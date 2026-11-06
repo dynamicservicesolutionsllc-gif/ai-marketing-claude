@@ -487,6 +487,26 @@ CSS = """
   .saved-count[hidden] { display:none; }
   .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
   .card.gone .body { opacity:.75; }
+  .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
+  .quiz-cta div { flex:1 1 320px; }
+  dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
+  dialog.quiz::backdrop { background:rgba(30,24,20,.55); }
+  dialog.quiz h2 { margin:0 32px 8px 0; }
+  .quiz-x { position:absolute; top:12px; right:14px; font-size:28px; line-height:1; background:none; border:0; cursor:pointer; color:var(--ink); padding:4px 8px; }
+  .quiz-step { font-size:14px; color:var(--mut); margin:0 0 8px; }
+  .quiz-bar { height:6px; background:var(--bd); border-radius:3px; overflow:hidden; margin-bottom:16px; }
+  .quiz-bar span { display:block; height:100%; background:var(--acc); transition:width .2s; }
+  .quiz-q { font-size:20px; margin:0 0 14px; }
+  .quiz-lede, .quiz-disc { margin:0 0 10px; }
+  .quiz-answers { display:flex; flex-direction:column; gap:10px; }
+  .quiz-a { font:inherit; text-align:left; padding:14px 16px; border:2px solid var(--bd); border-radius:10px; background:var(--card); color:var(--ink); cursor:pointer; }
+  .quiz-a:hover, .quiz-a[aria-pressed="true"] { border-color:var(--acc); }
+  .quiz-a:focus-visible, .quiz-back:focus-visible, .quiz-x:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .quiz-back { font:inherit; margin-top:16px; background:none; border:0; color:var(--acc); cursor:pointer; text-decoration:underline; padding:4px 0; }
+  .quiz-lede { font-size:17px; }
+  .quiz-disc { font-size:13px; color:var(--mut); }
+  .quiz-grid { grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); margin:12px 0; }
+  .quiz-grid .save { margin-top:8px; }
   .modes { border:1px solid var(--bd); border-radius:10px; padding:10px 14px; display:flex; flex-direction:column; gap:10px; }
   .modes legend { font-weight:600; font-size:14px; padding:0 4px; }
   .contact .modes label { flex-direction:row; align-items:flex-start; gap:10px; font-weight:400; }
@@ -582,12 +602,13 @@ def signup():
 def foot(site):
     links = "".join(f'<a href="/{h["path"]}">{e(h["nav"])}</a>' for h in HUBS.values())
     return f"""  <footer>
-    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/#quiz" data-quiz>Kitchen Quiz</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>{e(site['name'])} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. {DISCLOSURE} Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="{e(site['pinterest'])}">Pinterest</a> and <a href="{e(site['facebook'])}">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
 </div>
-{SAVED_JS}</body>
+{SAVED_JS}<script src="/quiz.js?v={QUIZ_VERSION}" defer></script>
+</body>
 </html>
 """
 
@@ -650,7 +671,7 @@ def render_home(data, products):
     <nav>{nav}</nav>
   </header>
   <main id="main">
-{deals_banner(tag)}{gifts}    <section id="top-picks">
+{deals_banner(tag)}{quiz_cta()}{gifts}    <section id="top-picks">
       <h2>This Week's Top Picks</h2>
       <div class="grid">
 {top_cards}
@@ -1970,8 +1991,126 @@ def render_saved(data):
 {SAVED_PAGE_JS}""" + foot(site)
 
 
+# Kitchen Personality Quiz: a 5-question pop-up (native <dialog>) served as /quiz.js on every page. Answers add
+# weights to personalities and to guide subcategories; the result is the top personality plus the 6 best-scoring
+# products from /products.json (at most 2 per subcategory). Rule-based and runs entirely in the browser.
+QUIZ = {
+    "personalities": {
+        "space": {"title": "The Space Maximizer", "guide": "pantry-storage",
+                  "text": "Every inch counts in your kitchen. You get the most from tools that fold, stack, expand or hide away, so the counter stays clear and everything has a home."},
+        "speed": {"title": "The Weeknight Speed Cook", "guide": "food-prep-tools",
+                  "text": "You want dinner on the table fast. Prep shortcuts and countertop appliances that cut chopping and cooking time are your best friends."},
+        "baker": {"title": "The Weekend Baker", "guide": "baking-essentials",
+                  "text": "Cookies, breads and cakes are your thing. Reliable bakeware and a few precise baking tools make every batch turn out the way you planned."},
+        "cafe": {"title": "The Café at Home", "guide": "coffee-and-tea",
+                 "text": "Your favorite part of the kitchen is the drinks. Good coffee and tea gear, blenders and drinkware that keeps things hot or cold make every day better."},
+        "chef": {"title": "The Everyday Home Chef", "guide": "cooking-tools",
+                 "text": "You cook often and from scratch. Sturdy, versatile tools that hold up to daily use are worth more to you than single-purpose gadgets."},
+    },
+    "questions": [
+        {"q": "How big is your kitchen?", "a": [
+            {"t": "Tiny: a galley or apartment kitchen", "p": {"space": 3}, "w": {"drawer-organizers": 2, "spice-racks": 2, "pantry-storage": 2, "under-sink-storage": 1, "cookware-organizers": 1, "dish-drying-racks": 1}},
+            {"t": "Small but workable", "p": {"space": 2}, "w": {"pantry-storage": 1, "drawer-organizers": 1, "spice-racks": 1}},
+            {"t": "About average", "p": {"chef": 1}, "w": {"cooking-tools": 1}},
+            {"t": "Roomy, with plenty of counter space", "p": {"chef": 1, "baker": 1}, "w": {"countertop-cooking": 1, "blenders-and-mixers": 1}}]},
+        {"q": "How often do you cook at home?", "a": [
+            {"t": "Rarely: mostly reheating and takeout", "p": {"cafe": 1, "speed": 1}, "w": {"countertop-cooking": 1, "insulated-drinkware": 1, "coffee-and-tea": 1}},
+            {"t": "A few quick meals a week", "p": {"speed": 2}, "w": {"food-prep-tools": 1, "countertop-cooking": 1, "air-fryer-accessories": 1}},
+            {"t": "Most days", "p": {"chef": 2}, "w": {"cooking-tools": 2, "food-prep-tools": 1}},
+            {"t": "Every day, often from scratch", "p": {"chef": 3}, "w": {"cooking-tools": 2, "food-prep-tools": 2, "cookware-organizers": 1}}]},
+        {"q": "What do you make most?", "a": [
+            {"t": "Fast weeknight dinners", "p": {"speed": 3}, "w": {"countertop-cooking": 2, "air-fryer-accessories": 2, "food-prep-tools": 1}},
+            {"t": "Baked goods and desserts", "p": {"baker": 3}, "w": {"bakeware": 3, "baking-essentials": 3, "blenders-and-mixers": 1}},
+            {"t": "Coffee, tea and smoothies", "p": {"cafe": 3}, "w": {"coffee-and-tea": 3, "blenders-and-mixers": 2, "insulated-drinkware": 1}},
+            {"t": "Big batches and meal prep", "p": {"chef": 2, "space": 1}, "w": {"food-prep-tools": 2, "pantry-storage": 2, "cooking-tools": 1}}]},
+        {"q": "What's your biggest kitchen frustration?", "a": [
+            {"t": "No room: clutter everywhere", "p": {"space": 3}, "w": {"drawer-organizers": 2, "pantry-storage": 2, "spice-racks": 2, "cookware-organizers": 2, "under-sink-storage": 2}},
+            {"t": "Prep takes too long", "p": {"speed": 2}, "w": {"food-prep-tools": 3}},
+            {"t": "The dishes pile up", "p": {"space": 1}, "w": {"dish-drying-racks": 3, "under-sink-storage": 1}},
+            {"t": "My drinks never stay hot or cold", "p": {"cafe": 2}, "w": {"insulated-drinkware": 3, "coffee-and-tea": 1}}]},
+        {"q": "How do you feel about kitchen gadgets?", "a": [
+            {"t": "Keep it simple: a few tools that do a lot", "p": {"space": 1}, "w": {"cooking-tools": 1}},
+            {"t": "I love a clever gadget", "p": {"speed": 1}, "w": {"food-prep-tools": 1, "countertop-cooking": 1}},
+            {"t": "Show me what serious cooks use", "p": {"chef": 1, "baker": 1}, "w": {"cooking-tools": 1, "bakeware": 1}}]},
+    ],
+}
+
+
+def quiz_errors(data):
+    subs, pers = data["subcategories"], QUIZ["personalities"]
+    errs = [f"QUIZ personality '{k}': unknown guide '{v['guide']}'" for k, v in pers.items() if v["guide"] not in subs]
+    for q in QUIZ["questions"]:
+        for a in q["a"]:
+            errs += [f"QUIZ answer '{a['t']}': unknown subcategory '{k}'" for k in a["w"] if k not in subs]
+            errs += [f"QUIZ answer '{a['t']}': unknown personality '{k}'" for k in a["p"] if k not in pers]
+    return errs
+
+
+QUIZ_JS_TEMPLATE = r"""// Generated by build.py — edit there. Kitchen Personality Quiz (see QUIZ in build.py).
+(function(){var Q=__QUIZ__,GUIDES=__GUIDES__,PAID=__PAID__,DISC=__DISC__,d,step=0,ans=[];
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function build(){d=el('dialog','quiz');d.setAttribute('aria-labelledby','quiz-h');
+d.addEventListener('click',function(ev){if(ev.target===d)d.close()});document.body.appendChild(d)}
+function frame(title){d.textContent='';var x=el('button','quiz-x','×');x.type='button';x.setAttribute('aria-label','Close the quiz');x.onclick=function(){d.close()};
+d.appendChild(x);var h=el('h2',null,title);h.id='quiz-h';d.appendChild(h)}
+function ask(){var q=Q.questions[step];frame('Kitchen Personality Quiz');
+d.appendChild(el('p','quiz-step','Question '+(step+1)+' of '+Q.questions.length));
+var bar=el('div','quiz-bar'),fill=el('span');fill.style.width=(100*step/Q.questions.length)+'%';bar.appendChild(fill);d.appendChild(bar);
+d.appendChild(el('h3','quiz-q',q.q));var list=el('div','quiz-answers');
+q.a.forEach(function(a,i){var b=el('button','quiz-a',a.t);b.type='button';if(ans[step]===i)b.setAttribute('aria-pressed','true');
+b.onclick=function(){ans[step]=i;step++;if(step<Q.questions.length)ask();else result()};list.appendChild(b)});d.appendChild(list);
+if(step>0){var bk=el('button','quiz-back','← Back');bk.type='button';bk.onclick=function(){step--;ask()};d.appendChild(bk)}
+var f=list.querySelector('[aria-pressed=true]')||list.firstChild;f.focus()}
+function result(){var ps={},ws={};ans.forEach(function(i,s){var a=Q.questions[s].a[i];
+for(var k in a.p)ps[k]=(ps[k]||0)+a.p[k];for(var k2 in a.w)ws[k2]=(ws[k2]||0)+a.w[k2]});
+var keys=Object.keys(Q.personalities),best=keys[0];keys.forEach(function(k){if((ps[k]||0)>(ps[best]||0))best=k});
+var P=Q.personalities[best];try{localStorage.setItem('kff_quiz',JSON.stringify({p:best,a:ans}))}catch(e){}
+if(window.gtag)gtag('event','quiz_complete',{personality:best});
+frame('You’re '+P.title);d.appendChild(el('p','quiz-lede',P.text));
+var st=el('p','quiz-step','Finding your picks...');d.appendChild(st);
+fetch('/products.json').then(function(r){return r.json()}).then(function(all){
+var ranked=all.map(function(p,i){return{p:p,s:ws[p.subcategory]||0,i:i}}).filter(function(x){return x.s>0})
+.sort(function(a,b){return b.s-a.s||b.i-a.i}),per={},picks=[];
+ranked.forEach(function(x){var k=x.p.subcategory;if(picks.length<6&&(per[k]||0)<2){per[k]=(per[k]||0)+1;picks.push(x.p)}});
+st.remove();d.appendChild(el('p','quiz-disc',DISC+' The “Check price on Amazon” buttons are affiliate links.'));
+var g=el('div','grid quiz-grid');picks.forEach(function(p){g.appendChild(card(p))});d.appendChild(g);
+var more=el('p','quiz-more'),l=el('a','more','Read the full guide: '+GUIDES[P.guide]+' →');l.href='/guides/'+P.guide+'/';more.appendChild(l);d.appendChild(more);
+var again=el('button','quiz-back','↻ Retake the quiz');again.type='button';again.onclick=function(){step=0;ans=[];ask()};d.appendChild(again)})
+.catch(function(){st.textContent='Could not load your picks. Please check your connection and try again.'})}
+function card(p){var c=el('article','card');c.setAttribute('data-pl','quiz');var path=p.page_url.replace(/^https?:\/\/[^\/]+/,''),im=el('a','img'),img=el('img');
+im.href=path;img.src='/img/'+p.asin+'-sq.webp';img.alt=p.name;img.width=800;img.height=800;img.loading='lazy';img.onerror=function(){im.remove()};im.appendChild(img);c.appendChild(im);
+var b=el('div','body'),h=el('h3'),t=el('a',null,p.name);t.href=path;h.appendChild(t);b.appendChild(h);b.appendChild(el('p',null,p.blurb));
+var buy=el('a','btn','Check price on Amazon →');buy.href=p.amazon_url;buy.rel='sponsored nofollow noopener';buy.target='_blank';b.appendChild(buy);b.appendChild(el('small','paid',PAID));
+if(window.kffSaved){var on=kffSaved.get().indexOf(p.asin)>=0,sv=el('button','save',on?'♥ Saved to My Favorites':'♡ Save to My Favorites');sv.type='button';
+sv.setAttribute('data-save',p.asin);sv.setAttribute('aria-pressed',on);b.appendChild(sv)}c.appendChild(b);return c}
+function open(){if(!d)build();step=0;ans=[];ask();if(!d.open)d.showModal();if(window.gtag)gtag('event','quiz_start')}
+document.addEventListener('click',function(ev){var t=ev.target.closest&&ev.target.closest('[data-quiz]');if(!t)return;ev.preventDefault();open()});
+if(location.hash==='#quiz')open()})();
+"""
+
+
+def quiz_js(data):
+    guides = {k: v["title"] for k, v in data["subcategories"].items()}
+    return (QUIZ_JS_TEMPLATE.replace("__QUIZ__", json.dumps(QUIZ, ensure_ascii=False, separators=(",", ":")))
+            .replace("__GUIDES__", json.dumps(guides, ensure_ascii=False, separators=(",", ":")))
+            .replace("__PAID__", json.dumps(PAID_NOTE, ensure_ascii=False))
+            .replace("__DISC__", json.dumps(DISCLOSURE, ensure_ascii=False)))
+
+
+QUIZ_VERSION = ""  # content hash of quiz.js, set in main() so browsers fetch a new copy when it changes
+
+
+def quiz_cta():
+    return """    <section class="callout quiz-cta">
+      <div><strong>Not sure where to start?</strong> Answer 5 quick questions about your kitchen and how you cook, and get picks matched to you.</div>
+      <a class="btn" href="/#quiz" data-quiz>Take the Kitchen Personality Quiz</a>
+    </section>
+"""
+
+
 def main():
     data, errors = load()
+    errors += quiz_errors(data)
     if errors:
         print("products.json has problems:", *errors, sep="\n  - ", file=sys.stderr)
         sys.exit(1)
@@ -1979,6 +2118,10 @@ def main():
         print(f"OK: {len(data['products'])} products")
         return
     OUT.mkdir(exist_ok=True)
+    global QUIZ_VERSION
+    js = quiz_js(data)
+    (OUT / "quiz.js").write_text(js, encoding="utf-8")
+    QUIZ_VERSION = hashlib.md5(js.encode("utf-8")).hexdigest()[:8]
     global AMAZON_IMAGES
     amz = ROOT / "amazon_images.json"
     if amz.exists():
