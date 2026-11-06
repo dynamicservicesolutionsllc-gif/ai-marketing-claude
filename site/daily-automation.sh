@@ -11,7 +11,7 @@
 set -euo pipefail
 
 # Configuration
-SITE_DIR="/home/$(whoami)/public_html"  # Hostinger default: adjust if needed
+SITE_DIR="$HOME/private"  # Your actual Hostinger setup
 LOG_DIR="${SITE_DIR}/logs"
 LOG_FILE="${LOG_DIR}/automation-$(date +%Y-%m-%d).log"
 ERROR_LOG="${LOG_DIR}/automation-error.log"

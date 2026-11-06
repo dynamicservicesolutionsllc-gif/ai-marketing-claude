@@ -26,22 +26,21 @@ New products are added to a **staging section** for your review before going liv
 
 ## Step 1: Upload Files to Hostinger
 
-The following files are already in your repository and need to be on Hostinger:
+Your setup uses `~/private/` instead of the default `~/public_html/`. Files needed in `$HOME/private/`:
 
 ```
-site/
+private/
   ├── discover_products.py          ← Product discovery script
-  ├── daily-automation.sh           ← Main cron wrapper (must be executable)
+  ├── amazon-sync.sh                ← Main cron wrapper (your script, must be executable)
   ├── fetch_amazon_images.py        ← Photo fetching
   ├── build.py                       ← Site rebuilder
   ├── add_tiktok_pixel.py           ← TikTok pixel
   ├── products.json                 ← Product database (will have staging added)
-  └── public/
-      └── admin/
-          └── review-products.php   ← Admin panel to approve staged products
+  ├── .env                          ← Environment variables (credentials)
+  └── logs/                         ← Created automatically for logging
 ```
 
-These are deployed via your normal GitHub Actions workflow to Hostinger. Just ensure they're in `site/` directory.
+**Note:** You have your own `amazon-sync.sh` - the `daily-automation.sh` from the repo is a template. You can use your existing script or replace it with the template (both do the same thing).
 
 ---
 
@@ -53,12 +52,18 @@ SSH into your Hostinger account and run:
 # Connect via SSH (get your Hostinger SSH credentials from hPanel > Advanced > SSH)
 ssh your-username@your-host.com
 
-# Navigate to your site directory (Hostinger default)
-cd ~/public_html
+# Navigate to your private directory
+cd ~/private
 
-# Make automation script executable
-chmod +x site/daily-automation.sh
-chmod +x site/discover_products.py
+# Make automation scripts executable
+chmod +x amazon-sync.sh
+chmod +x discover_products.py
+```
+
+**Verify everything is set up:**
+```bash
+test -x "$HOME/private/amazon-sync.sh" && echo "✓ amazon-sync.sh is executable" || echo "✗ amazon-sync.sh is NOT executable"
+test -f "$HOME/private/.env" && echo "✓ .env exists" || echo "✗ .env is MISSING"
 ```
 
 ---
@@ -67,13 +72,13 @@ chmod +x site/discover_products.py
 
 The automation needs your Amazon API credentials and other configuration.
 
-**Create `.env` file on Hostinger:**
+**Create `.env` file in `~/private/`:**
 
 The script supports both naming conventions. Use whichever matches your setup:
 
 **Option A: Using live sync variable names:**
 ```bash
-cat > ~/public_html/site/.env << 'EOF'
+cat > ~/private/.env << 'EOF'
 AMAZON_CLIENT_ID=your-client-id
 AMAZON_CLIENT_SECRET=your-client-secret
 AMAZON_CREDENTIAL_VERSION=v1
@@ -88,7 +93,7 @@ EOF
 
 **Option B: Using Creators API names (compatible with existing scripts):**
 ```bash
-cat > ~/public_html/site/.env << 'EOF'
+cat > ~/private/.env << 'EOF'
 AMAZON_CREATORS_CLIENT_ID=your-client-id
 AMAZON_CREATORS_CLIENT_SECRET=your-client-secret
 GEMINI_API_KEY=your-gemini-key
@@ -97,9 +102,9 @@ VIDEO_SERVICE=replicate
 EOF
 ```
 
-**Secure it:**
+**Secure it (readable only by you):**
 ```bash
-chmod 600 ~/public_html/site/.env
+chmod 600 ~/private/.env
 ```
 
 **⚠️ SECURITY:** Never commit `.env` to GitHub. It's in `.gitignore` for a reason.
@@ -117,11 +122,16 @@ crontab -e
 Add this line (runs daily at 5:17 AM UTC):
 
 ```cron
-17 5 * * * /home/your-username/public_html/site/daily-automation.sh >> /home/your-username/public_html/site/logs/cron.log 2>&1
+17 5 * * * $HOME/private/amazon-sync.sh >> $HOME/private/logs/cron.log 2>&1
+```
+
+**Or using your full path:**
+
+```cron
+17 5 * * * /home/your-username/private/amazon-sync.sh >> /home/your-username/private/logs/cron.log 2>&1
 ```
 
 **Adjust if needed:**
-- Change `your-username` to your actual Hostinger username
 - Change time: `17 5 * * *` means "5:17 AM UTC every day"
   - First number: minute (0-59)
   - Second number: hour (0-23, UTC)
@@ -143,21 +153,30 @@ crontab -l
 
 You should see your automation line listed.
 
+**Verify your scripts are ready:**
+```bash
+test -x "$HOME/private/amazon-sync.sh" && echo "✓ Script is executable" || echo "✗ Script is NOT executable"
+test -f "$HOME/private/.env" && echo "✓ .env file exists" || echo "✗ .env file is MISSING"
+```
+
 ---
 
 ## Step 6: Monitor Logs
 
-After the first cron run, check the logs:
+After the first cron run, check the logs in `~/private/logs/`:
 
 ```bash
 # View today's log
-cat ~/public_html/site/logs/automation-*.log
+tail ~/private/logs/automation-*.log
 
-# Follow live log
-tail -f ~/public_html/site/logs/automation-*.log
+# Follow live log (watch updates as they happen)
+tail -f ~/private/logs/automation-*.log
 
 # Check for errors
-cat ~/public_html/site/logs/automation-error.log
+cat ~/private/logs/automation-error.log
+
+# List all logs
+ls -lh ~/private/logs/
 ```
 
 ---
@@ -230,23 +249,35 @@ tail -50 ~/public_html/site/logs/automation-error.log
 
 Verify credentials in `.env`:
 ```bash
-cat ~/public_html/site/.env
+cat ~/private/.env
 ```
 
 Make sure:
-- `AMAZON_CREATORS_CLIENT_ID` and `AMAZON_CREATORS_CLIENT_SECRET` are set
+- `AMAZON_CLIENT_ID` and `AMAZON_CLIENT_SECRET` are set (or `AMAZON_CREATORS_CLIENT_ID/SECRET`)
 - Keys haven't expired
 - Your Associates account has 10+ qualifying sales (required by Amazon)
 
-### Python not found?
+### Script not running?
 
-Use full path in crontab. Update the cron line to:
-
-```cron
-17 5 * * * /usr/bin/python3 /home/your-username/public_html/site/daily-automation.sh >> /home/your-username/public_html/site/logs/cron.log 2>&1
+Check permissions:
+```bash
+ls -l ~/private/amazon-sync.sh
 ```
 
-Or find Python path:
+Should show `x` in permissions. If not:
+```bash
+chmod +x ~/private/amazon-sync.sh
+```
+
+### Python not found in cron?
+
+If cron log shows Python not found, use full path in crontab. Update the cron line to:
+
+```cron
+17 5 * * * /usr/bin/python3 $HOME/private/amazon-sync.sh >> $HOME/private/logs/cron.log 2>&1
+```
+
+Find Python path:
 ```bash
 which python3
 ```
@@ -277,7 +308,7 @@ View all staged products:
 
 ```bash
 # Pretty-print staging section
-cat ~/public_html/site/products.json | python3 -m json.tool | grep -A 100 '"staging"'
+cat ~/private/products.json | python3 -m json.tool | grep -A 100 '"staging"'
 ```
 
 ---
@@ -286,13 +317,18 @@ cat ~/public_html/site/products.json | python3 -m json.tool | grep -A 100 '"stag
 
 1. ✅ Deploy the scripts via GitHub (they're already committed)
 2. ✅ SSH into Hostinger
-3. ✅ Make scripts executable
-4. ✅ Create `.env` file with credentials
-5. ✅ Set up cron job with `crontab -e`
-6. ✅ Wait for first automated run (or manually trigger: `bash ~/public_html/site/daily-automation.sh`)
-7. ✅ Check logs: `tail ~/public_html/site/logs/automation-*.log`
-8. ✅ Review staged products at `/admin/review-products.php`
-9. ✅ Approve products to add them to your site
+3. ✅ Make scripts executable: `chmod +x ~/private/amazon-sync.sh ~/private/discover_products.py`
+4. ✅ Create `.env` file in `~/private/` with your credentials
+5. ✅ Verify setup:
+   ```bash
+   test -x "$HOME/private/amazon-sync.sh" && echo "✓ Script executable" || echo "✗ NOT executable"
+   test -f "$HOME/private/.env" && echo "✓ .env exists" || echo "✗ .env MISSING"
+   ```
+6. ✅ Set up cron job with `crontab -e` (add the automation line)
+7. ✅ Wait for first automated run (or manually trigger: `bash ~/private/amazon-sync.sh`)
+8. ✅ Check logs: `tail ~/private/logs/automation-*.log`
+9. ✅ Review staged products at `/admin/review-products.php`
+10. ✅ Approve products to add them to your site
 
 ---
 
