@@ -146,6 +146,13 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .contact textarea:focus-visible, .contact input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .contact button { border:0; cursor:pointer; font:inherit; align-self:flex-start; }
   .contact button:disabled { opacity:.6; cursor:wait; }
+  .save { font:inherit; font-weight:600; cursor:pointer; background:var(--card); color:var(--acc); border:2px solid var(--acc); border-radius:8px; padding:8px 16px; }
+  .save[aria-pressed="true"] { background:var(--acc); color:var(--acc-ink); }
+  .save:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .saved-count { display:inline-block; margin-left:4px; min-width:20px; padding:0 6px; border-radius:10px; background:var(--acc); color:var(--acc-ink); font-size:12px; font-weight:700; text-align:center; }
+  .saved-count[hidden] { display:none; }
+  .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
+  .card.gone .body { opacity:.75; }
   .modes { border:1px solid var(--bd); border-radius:10px; padding:10px 14px; display:flex; flex-direction:column; gap:10px; }
   .modes legend { font-weight:600; font-size:14px; padding:0 4px; }
   .contact .modes label { flex-direction:row; align-items:flex-start; gap:10px; font-weight:400; }
@@ -194,6 +201,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
         <div class="buy">
           <a class="btn" href="https://www.amazon.com/dp/B0747B7PZX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
+          <button type="button" class="save" data-save="B0747B7PZX" aria-pressed="false" hidden>&#9825; Save to My Favorites</button><script>document.currentScript.previousElementSibling.hidden=false</script>
         </div>
       </div>
     </article>
@@ -266,11 +274,20 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     </section>
   </main>
   <footer>
-    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases. Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="https://www.pinterest.com/kitchenfindsfavorites/">Pinterest</a> and <a href="https://www.facebook.com/1433493846508656">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
 </div>
+<script>(function(){var K='kff_saved';function g(){try{var v=JSON.parse(localStorage.getItem(K)||'[]');return Array.isArray(v)?v.filter(function(a){return/^B0[0-9A-Z]{8}$/.test(a)}):[]}catch(e){return[]}}
+function s(v){try{localStorage.setItem(K,JSON.stringify(v))}catch(e){}c()}
+function c(){var n=g().length;[].forEach.call(document.querySelectorAll('.saved-count'),function(x){x.textContent=n;x.hidden=!n})}
+function u(b){var on=g().indexOf(b.getAttribute('data-save'))>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ Saved to My Favorites':'♡ Save to My Favorites'}
+window.kffSaved={get:g,set:s};
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-save]');if(!b)return;var a=b.getAttribute('data-save'),v=g(),i=v.indexOf(a);
+if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>=0?'unsave_product':'save_product',{asin:a})});
+[].forEach.call(document.querySelectorAll('[data-save]'),u);c();
+window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <!-- TikTok product events -->
 <script>
   ttq.track('ViewContent', {
