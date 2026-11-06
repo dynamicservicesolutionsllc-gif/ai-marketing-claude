@@ -65,20 +65,40 @@ chmod +x site/discover_products.py
 
 ## Step 3: Set Environment Variables
 
-The automation needs your Amazon Creators API credentials. 
+The automation needs your Amazon API credentials and other configuration.
 
 **Create `.env` file on Hostinger:**
 
+The script supports both naming conventions. Use whichever matches your setup:
+
+**Option A: Using live sync variable names:**
 ```bash
 cat > ~/public_html/site/.env << 'EOF'
-AMAZON_CREATORS_CLIENT_ID=your-client-id-here
-AMAZON_CREATORS_CLIENT_SECRET=your-client-secret-here
+AMAZON_CLIENT_ID=your-client-id
+AMAZON_CLIENT_SECRET=your-client-secret
+AMAZON_CREDENTIAL_VERSION=v1
+AMAZON_PARTNER_TAG=your-associate-tag
+AMAZON_MARKETPLACE=www.amazon.com
+AMAZON_SEARCHES=kitchen drawer organizer|small kitchen gadgets|kitchen storage
 GEMINI_API_KEY=your-gemini-key
 REPLICATE_API_KEY=your-replicate-key
 VIDEO_SERVICE=replicate
 EOF
+```
 
-# Secure it (readable only by your user)
+**Option B: Using Creators API names (compatible with existing scripts):**
+```bash
+cat > ~/public_html/site/.env << 'EOF'
+AMAZON_CREATORS_CLIENT_ID=your-client-id
+AMAZON_CREATORS_CLIENT_SECRET=your-client-secret
+GEMINI_API_KEY=your-gemini-key
+REPLICATE_API_KEY=your-replicate-key
+VIDEO_SERVICE=replicate
+EOF
+```
+
+**Secure it:**
+```bash
 chmod 600 ~/public_html/site/.env
 ```
 
@@ -279,9 +299,12 @@ cat ~/public_html/site/products.json | python3 -m json.tool | grep -A 100 '"stag
 ## Security Notes
 
 - **Keep `.env` out of Git** — it's in `.gitignore`
-- **Change admin password** in `review-products.php` before deploying
+- **Admin password** — currently set to: `N7_bwzBK3a1mv99fBTar5Gg2rpKvxJEQDlIvByjMwKs`
+  - Change it in `site/public/admin/review-products.php` if you want a different password
+  - Access admin panel at: `https://kitchenfindsfavorites.com/admin/review-products.php`
 - **SSH access should be key-based**, not password (set in hPanel)
 - **Logs contain API details** — consider restricting log access: `chmod 600 logs/*`
+- **Credentials in `.env`** — Only readable by your user: `chmod 600 site/.env`
 
 ---
 

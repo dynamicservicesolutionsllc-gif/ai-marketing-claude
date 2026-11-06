@@ -135,11 +135,12 @@ def score_product(product, rank, is_top_seller=False):
 
 
 def main():
-    cid = os.environ.get("AMAZON_CREATORS_CLIENT_ID")
-    secret = os.environ.get("AMAZON_CREATORS_CLIENT_SECRET")
+    # Support both naming conventions for flexibility
+    cid = os.environ.get("AMAZON_CLIENT_ID") or os.environ.get("AMAZON_CREATORS_CLIENT_ID")
+    secret = os.environ.get("AMAZON_CLIENT_SECRET") or os.environ.get("AMAZON_CREATORS_CLIENT_SECRET")
 
     if not cid or not secret:
-        log_msg("ERROR: Amazon Creators API credentials not set")
+        log_msg("ERROR: Amazon API credentials not set (requires AMAZON_CLIENT_ID and AMAZON_CLIENT_SECRET or AMAZON_CREATORS_CLIENT_ID/SECRET)")
         return 1
 
     # Load existing products
