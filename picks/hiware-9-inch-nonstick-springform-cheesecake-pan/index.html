@@ -153,6 +153,26 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .saved-count[hidden] { display:none; }
   .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
   .card.gone .body { opacity:.75; }
+  .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
+  .quiz-cta div { flex:1 1 320px; }
+  dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
+  dialog.quiz::backdrop { background:rgba(30,24,20,.55); }
+  dialog.quiz h2 { margin:0 32px 8px 0; }
+  .quiz-x { position:absolute; top:12px; right:14px; font-size:28px; line-height:1; background:none; border:0; cursor:pointer; color:var(--ink); padding:4px 8px; }
+  .quiz-step { font-size:14px; color:var(--mut); margin:0 0 8px; }
+  .quiz-bar { height:6px; background:var(--bd); border-radius:3px; overflow:hidden; margin-bottom:16px; }
+  .quiz-bar span { display:block; height:100%; background:var(--acc); transition:width .2s; }
+  .quiz-q { font-size:20px; margin:0 0 14px; }
+  .quiz-lede, .quiz-disc { margin:0 0 10px; }
+  .quiz-answers { display:flex; flex-direction:column; gap:10px; }
+  .quiz-a { font:inherit; text-align:left; padding:14px 16px; border:2px solid var(--bd); border-radius:10px; background:var(--card); color:var(--ink); cursor:pointer; }
+  .quiz-a:hover, .quiz-a[aria-pressed="true"] { border-color:var(--acc); }
+  .quiz-a:focus-visible, .quiz-back:focus-visible, .quiz-x:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .quiz-back { font:inherit; margin-top:16px; background:none; border:0; color:var(--acc); cursor:pointer; text-decoration:underline; padding:4px 0; }
+  .quiz-lede { font-size:17px; }
+  .quiz-disc { font-size:13px; color:var(--mut); }
+  .quiz-grid { grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); margin:12px 0; }
+  .quiz-grid .save { margin-top:8px; }
   .modes { border:1px solid var(--bd); border-radius:10px; padding:10px 14px; display:flex; flex-direction:column; gap:10px; }
   .modes legend { font-weight:600; font-size:14px; padding:0 4px; }
   .contact .modes label { flex-direction:row; align-items:flex-start; gap:10px; font-weight:400; }
@@ -274,7 +294,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     </section>
   </main>
   <footer>
-    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/#quiz" data-quiz>Kitchen Quiz</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases. Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="https://www.pinterest.com/kitchenfindsfavorites/">Pinterest</a> and <a href="https://www.facebook.com/1433493846508656">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
@@ -288,6 +308,7 @@ document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.targe
 if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>=0?'unsave_product':'save_product',{asin:a})});
 [].forEach.call(document.querySelectorAll('[data-save]'),u);c();
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
+<script src="/quiz.js?v=eaee888b" defer></script>
 <!-- TikTok product events -->
 <script>
   ttq.track('ViewContent', {
