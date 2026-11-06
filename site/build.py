@@ -480,6 +480,13 @@ CSS = """
   .contact textarea:focus-visible, .contact input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .contact button { border:0; cursor:pointer; font:inherit; align-self:flex-start; }
   .contact button:disabled { opacity:.6; cursor:wait; }
+  .save { font:inherit; font-weight:600; cursor:pointer; background:var(--card); color:var(--acc); border:2px solid var(--acc); border-radius:8px; padding:8px 16px; }
+  .save[aria-pressed="true"] { background:var(--acc); color:var(--acc-ink); }
+  .save:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .saved-count { display:inline-block; margin-left:4px; min-width:20px; padding:0 6px; border-radius:10px; background:var(--acc); color:var(--acc-ink); font-size:12px; font-weight:700; text-align:center; }
+  .saved-count[hidden] { display:none; }
+  .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
+  .card.gone .body { opacity:.75; }
   .modes { border:1px solid var(--bd); border-radius:10px; padding:10px 14px; display:flex; flex-direction:column; gap:10px; }
   .modes legend { font-weight:600; font-size:14px; padding:0 4px; }
   .contact .modes label { flex-direction:row; align-items:flex-start; gap:10px; font-weight:400; }
@@ -575,12 +582,12 @@ def signup():
 def foot(site):
     links = "".join(f'<a href="/{h["path"]}">{e(h["nav"])}</a>' for h in HUBS.values())
     return f"""  <footer>
-    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>{e(site['name'])} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. {DISCLOSURE} Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="{e(site['pinterest'])}">Pinterest</a> and <a href="{e(site['facebook'])}">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
 </div>
-</body>
+{SAVED_JS}</body>
 </html>
 """
 
@@ -749,6 +756,7 @@ def render_pick(data, p, products):
         <ul>{points}</ul>
         <div class="buy">
           {buy(p, tag)}
+          {save_button(p)}
         </div>
       </div>
     </article>
@@ -1103,6 +1111,8 @@ def render_privacy(data):
     <p>If you use our contact form, we receive the name, email address and message you enter, by email and as a backup copy stored on our web host. We use them only to reply to you and delete them on request.</p>
     <h2>Kitchen Advisor</h2>
     <p>If you ask the <a href="/ask/">Kitchen Advisor</a> a question, the text you type is sent to Anthropic, the company that makes the Claude AI, so it can write the answer (see <a href="https://www.anthropic.com/legal/privacy" rel="nofollow noopener">Anthropic's privacy policy</a>). In Expert research mode, Claude also searches the web for sources. This site does not store your question or the answer. To apply a daily question limit, it keeps a daily count for each visitor, tied to a scrambled code made from your IP address that changes every day; your IP address itself is not stored. Please don't include personal details in your question.</p>
+    <h2>My Favorites</h2>
+    <p>Products you save to <a href="/saved/">My Favorites</a> are kept only in your browser's local storage on your device. The list is never sent to us. To clear it, remove the items on the My Favorites page or clear this site's data in your browser.</p>
     <h2>Hosting and server logs</h2>
     <p>Our host may log standard request data (such as IP address, browser type, and pages requested) to keep the site running and secure.</p>
     <h2>Children</h2>
@@ -1907,6 +1917,59 @@ r.scrollIntoView({behavior:'smooth',block:'start'})})
 """ + foot(site)
 
 
+# Saved products ("My Favorites"): kept only in the visitor's browser (localStorage "kff_saved", a list of ASINs,
+# newest first). Nothing is sent to the server. /saved/ looks the ASINs up in /products.json for current details.
+SAVED_JS = r"""<script>(function(){var K='kff_saved';function g(){try{var v=JSON.parse(localStorage.getItem(K)||'[]');return Array.isArray(v)?v.filter(function(a){return/^B0[0-9A-Z]{8}$/.test(a)}):[]}catch(e){return[]}}
+function s(v){try{localStorage.setItem(K,JSON.stringify(v))}catch(e){}c()}
+function c(){var n=g().length;[].forEach.call(document.querySelectorAll('.saved-count'),function(x){x.textContent=n;x.hidden=!n})}
+function u(b){var on=g().indexOf(b.getAttribute('data-save'))>=0;b.setAttribute('aria-pressed',on);b.textContent=on?'♥ Saved to My Favorites':'♡ Save to My Favorites'}
+window.kffSaved={get:g,set:s};
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-save]');if(!b)return;var a=b.getAttribute('data-save'),v=g(),i=v.indexOf(a);
+if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>=0?'unsave_product':'save_product',{asin:a})});
+[].forEach.call(document.querySelectorAll('[data-save]'),u);c();
+window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
+"""
+
+
+def save_button(p):
+    # Hidden until JavaScript shows it, since saving needs JavaScript; the shared script sets the saved state.
+    return (f'<button type="button" class="save" data-save="{e(p["asin"])}" aria-pressed="false" hidden>&#9825; Save to My Favorites</button>'
+            f'<script>document.currentScript.previousElementSibling.hidden=false</script>')
+
+
+SAVED_PAGE_JS = r"""<script>document.addEventListener('DOMContentLoaded',function(){var grid=document.getElementById('saved-grid'),st=document.getElementById('saved-status'),note=document.getElementById('saved-note'),items={};
+function el(t,cls,txt){var x=document.createElement(t);if(cls)x.className=cls;if(txt!=null)x.textContent=txt;return x}
+function card(a){var p=items[a],c=el('article',p?'card':'card gone');c.setAttribute('data-pl','saved');var b=el('div','body');
+if(p){var path=p.page_url.replace(/^https?:\/\/[^\/]+/,''),im=el('a','img'),img=el('img');im.href=path;img.src='/img/'+a+'-sq.webp';img.alt=p.name;img.width=800;img.height=800;img.loading='lazy';
+img.onerror=function(){im.remove()};im.appendChild(img);c.appendChild(im);var h=el('h3'),l=el('a',null,p.name);l.href=path;h.appendChild(l);b.appendChild(h);b.appendChild(el('p',null,p.blurb));
+var buy=el('a','btn','Check price on Amazon →');buy.href=p.amazon_url;buy.rel='sponsored nofollow noopener';buy.target='_blank';b.appendChild(buy);b.appendChild(el('small','paid',PAID))}
+else{b.appendChild(el('h3',null,'No longer listed'));b.appendChild(el('p',null,'This product is no longer on the site, so its details are gone.'))}
+var r=el('button','remove','Remove');r.type='button';r.onclick=function(){var v=kffSaved.get(),i=v.indexOf(a);if(i>=0)v.splice(i,1);kffSaved.set(v);if(window.gtag)gtag('event','unsave_product',{asin:a});draw()};b.appendChild(r);c.appendChild(b);return c}
+function draw(){var v=kffSaved.get();grid.textContent='';v.forEach(function(a){grid.appendChild(card(a))});note.hidden=!v.some(function(a){return items[a]});
+st.innerHTML=v.length?'You have '+v.length+' saved product'+(v.length===1?'':'s')+'.':'You haven’t saved anything yet. Browse the <a href="/">latest picks</a> and tap <strong>♡ Save to My Favorites</strong> on any product page.'}
+if(!kffSaved.get().length){draw();return}
+fetch('/products.json').then(function(r){return r.json()}).then(function(d){d.forEach(function(p){items[p.asin]=p});draw()}).catch(function(){st.textContent='Could not load your favorites. Please refresh the page.'});
+window.addEventListener('storage',function(ev){if(ev.key==='kff_saved')draw()})});</script>
+"""
+
+
+def render_saved(data):
+    site = data["site"]
+    return head(site, f"My Favorites | {site['name']}", "Products you saved on this device.", "saved/",
+                f"{site['url']}/img/og.png", site["name"], OG_W, OG_H, noindex=True) + page_top(site) + f"""  <main id="main">
+    <section class="prose">
+      <h1>My Favorites</h1>
+      <p>Products you save with the <strong>&#9825; Save to My Favorites</strong> button on any product page are kept here. Your list is stored only in this browser on this device. It isn't sent to us and doesn't follow you to other devices.</p>
+    </section>
+    <p class="callout" id="saved-note" hidden>{DISCLOSURE} The "Check price on Amazon" buttons below are affiliate links.</p>
+    <p id="saved-status" role="status" aria-live="polite">Loading your favorites...</p>
+    <div class="grid" id="saved-grid"></div>
+    <noscript><p>My Favorites needs JavaScript turned on.</p></noscript>
+  </main>
+  <script>var PAID={json.dumps(PAID_NOTE)};</script>
+{SAVED_PAGE_JS}""" + foot(site)
+
+
 def main():
     data, errors = load()
     if errors:
@@ -2000,6 +2063,8 @@ def main():
         data, "contact/sent/", "Message sent", "Thanks, your message is on its way",
         "We usually reply within two business days. Questions about an order go to Amazon, since purchases are made there."),
         encoding="utf-8")
+    (OUT / "saved").mkdir(exist_ok=True)
+    (OUT / "saved" / "index.html").write_text(render_saved(data), encoding="utf-8")
     (OUT / "privacy").mkdir(exist_ok=True)
     (OUT / "privacy" / "index.html").write_text(render_privacy(data), encoding="utf-8")
     (OUT / "thanks").mkdir(exist_ok=True)
