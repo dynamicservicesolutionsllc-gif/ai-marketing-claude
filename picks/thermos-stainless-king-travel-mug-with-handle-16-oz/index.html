@@ -145,6 +145,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .contact input, .contact textarea { padding:10px 12px; border:1px solid var(--bd); border-radius:8px; font:inherit; font-weight:400; background:var(--card); color:var(--ink); }
   .contact textarea:focus-visible, .contact input:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .contact button { border:0; cursor:pointer; font:inherit; align-self:flex-start; }
+  .contact button:disabled { opacity:.6; cursor:wait; }
+  .modes { border:1px solid var(--bd); border-radius:10px; padding:10px 14px; display:flex; flex-direction:column; gap:10px; }
+  .modes legend { font-weight:600; font-size:14px; padding:0 4px; }
+  .contact .modes label { flex-direction:row; align-items:flex-start; gap:10px; font-weight:400; }
+  .modes input { margin-top:5px; }
+  .ask-result { border-top:1px solid var(--bd); margin-top:8px; }
+  .ask-result h3 { font-size:19px; margin:20px 0 8px; }
+  .ask-result sup a { text-decoration:none; font-size:12px; }
   .err { color:#b3261e; font-weight:600; }
   @media (prefers-color-scheme: dark) { .err { color:#f2b8b5; } }
   .fnav { display:flex; flex-wrap:wrap; gap:6px 16px; margin-bottom:12px; font-size:14px; }
@@ -258,7 +266,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     </section>
   </main>
   <footer>
-    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav class="fnav" aria-label="Site"><a href="/kitchen-organization/">Kitchen Organization</a><a href="/kitchen-gadgets/">Kitchen Gadgets</a><a href="/small-kitchen-appliances/">Small Kitchen Appliances</a><a href="/drinkware/">Drinkware</a><a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/ask/">Kitchen Advisor</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>Kitchen Finds &amp; Favorites is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases. Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="https://www.pinterest.com/kitchenfindsfavorites/">Pinterest</a> and <a href="https://www.facebook.com/1433493846508656">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
