@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,10 +187,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Check your counter space for a 10 x 20 inch cooking surface plus room for the drip tray.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B003OAJGJO" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0C33CHG99" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C33CHG99-sq.webp" type="image/webp"><img src="../../img/B0C33CHG99-sq.png" alt="Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart (photo shows a similar air fryer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
+          <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B003OAJGJO" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B003OAJGJO-sq.webp" type="image/webp"><img src="../../img/B003OAJGJO-sq.png" alt="Crock-Pot 7-Quart Manual Slow Cooker (photo shows a similar slow cooker, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -200,25 +212,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0B9P17YHK" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0B9P17YHK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0B9P17YHK-sq.webp" type="image/webp"><img src="../../img/B0B9P17YHK-sq.png" alt="Evoloop Rapid Egg Cooker, 6-Egg Capacity (photo shows a similar egg cooker, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B00XZ81GBQ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00XZ81GBQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00XZ81GBQ-sq.webp" type="image/webp"><img src="../../img/B00XZ81GBQ-sq.png" alt="Spring Chef Stainless Steel Cooling Rack, 11.5 x 16.5 Inch (photo shows a similar cooling rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/evoloop-rapid-egg-cooker-6-egg-capacity/">Evoloop Rapid Egg Cooker, 6-Egg Capacity</a></h3>
-          <p>Boiling a pot of water and watching the timer is a hassle on busy mornings. This compact cooker steams up to six eggs soft, medium or hard (or poaches them) and shuts itself off when they are done.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0B9P17YHK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-stainless-steel-cooling-rack-11-5-x-16-5-inch/">Spring Chef Stainless Steel Cooling Rack, 11.5 x 16.5 Inch</a></h3>
+          <p>Holiday cookies and pies need somewhere to cool where air can get underneath, and a flimsy coated rack can chip or warp. This 11.5 x 16.5 inch rack is solid 304 stainless steel, oven safe to 575°F, and fits inside a standard half sheet pan for roasting too.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00XZ81GBQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0C33CHG99" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0C33CHG99-sq.webp" type="image/webp"><img src="../../img/B0C33CHG99-sq.png" alt="Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart (photo shows a similar air fryer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0D2P1HSCV" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0D2P1HSCV-sq.webp" type="image/webp"><img src="../../img/B0D2P1HSCV-sq.png" alt="Royal Craft Wood Bamboo Cutting Board Set of 3 (photo shows a similar cutting board, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
-          <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/royal-craft-wood-bamboo-cutting-board-set-of-3/">Royal Craft Wood Bamboo Cutting Board Set of 3</a></h3>
+          <p>One board is never the right size: too big for a lemon, too small for a roast. This set of three bamboo boards (15x10, 12x8 and 9x6 inches) has deep juice grooves to catch liquid and side handles for carrying.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,10 +187,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It runs on batteries, so keep spares on hand. The stand adds a small footprint to your counter, so decide where it will sit before you order.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000KEM4TQ" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B000KEM4TQ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B000KEM4TQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B000KEM4TQ-sq.webp" type="image/webp"><img src="../../img/B000KEM4TQ-sq.png" alt="Bodum Brazil French Press Coffee Maker, 34 oz (photo shows a similar french press, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -200,7 +201,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B08PP48979" data-pl="card">
+      <article class="card" id="B08PP48979" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B08PP48979?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B08PP48979-sq.webp" type="image/webp"><img src="../../img/B08PP48979-sq.png" alt="Cosori Glass Electric Kettle, 1.7L (photo shows a similar glass electric kettle, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -211,14 +212,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B082314NFL" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B082314NFL-sq.webp" type="image/webp"><img src="../../img/B082314NFL-sq.png" alt="Zulay Kitchen Handheld Milk Frother (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0BZYCJK89" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0BZYCJK89?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0BZYCJK89-sq.webp" type="image/webp"><img src="../../img/B0BZYCJK89-sq.png" alt="Owala FreeSip Insulated Water Bottle, 24 oz (photo shows a similar reusable water bottle, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/zulay-kitchen-handheld-milk-frother/">Zulay Kitchen Handheld Milk Frother</a></h3>
-          <p>Whips hot or cold milk into cafe-style foam in about twenty seconds, which turns plain drip coffee into a latte without giving up counter space to a machine. It also breaks up matcha clumps and stirs protein powder smooth, and the whisk rinses clean in a cup of water.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/owala-freesip-insulated-water-bottle-24-oz/">Owala FreeSip Insulated Water Bottle, 24 oz</a></h3>
+          <p>The FreeSip spout lets you sip upright through the built-in straw or tip it back and swig. A locking push-button lid keeps the spout clean, and double-wall insulation keeps water cold up to 24 hours.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0BZYCJK89?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0CYQQXRNN" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0CYQQXRNN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0CYQQXRNN-sq.webp" type="image/webp"><img src="../../img/B0CYQQXRNN-sq.png" alt="Contigo West Loop Autoseal Travel Mug, 16 oz (photo shows a similar insulated travel mug, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/contigo-west-loop-autoseal-travel-mug-16-oz/">Contigo West Loop Autoseal Travel Mug, 16 oz</a></h3>
+          <p>The Autoseal lid seals automatically between sips, so a mug tossed in a bag or tipped over in the car does not leak. Vacuum insulation keeps coffee hot through a long morning, and the lid is top-rack dishwasher safe.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0CYQQXRNN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

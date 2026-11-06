@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,10 +187,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It measures 14&quot; deep x 8&quot; wide x 12.75&quot; tall overall, with each basket about 3.8&quot; tall. Rubber feet keep it in place, and it can also be screwed to a wooden shelf.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0C3QZ7SNF" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0C3QZ7SNF" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0C3QZ7SNF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0C3QZ7SNF-sq.webp" type="image/webp"><img src="../../img/B0C3QZ7SNF-sq.png" alt="Cisily Sponge Holder with Brush Holder for Kitchen Sink (photo shows a similar sink sponge caddy, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -200,7 +201,29 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0C6D6SH16" data-pl="card">
+      <article class="card" id="B09NV9WV35" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B09NV9WV35?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B09NV9WV35-sq.webp" type="image/webp"><img src="../../img/B09NV9WV35-sq.png" alt="VaeFae Bamboo In-Drawer Knife Organizer (photo shows a similar in-drawer knife organizer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/vaefae-bamboo-in-drawer-knife-organizer/">VaeFae Bamboo In-Drawer Knife Organizer</a></h3>
+          <p>A countertop knife block takes up prime counter space in a small kitchen. This bamboo insert moves up to 12 knives and a sharpener into a drawer, with slots that keep blades still and separated.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B09NV9WV35?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0C1GNRZ6T" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C1GNRZ6T?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C1GNRZ6T-sq.webp" type="image/webp"><img src="../../img/B0C1GNRZ6T-sq.png" alt="Fikoksol Cutting Board and Baking Sheet Organizer Rack (photo shows a similar bakeware and cutting board organizer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/fikoksol-cutting-board-and-baking-sheet-organizer-rack/">Fikoksol Cutting Board and Baking Sheet Organizer Rack</a></h3>
+          <p>Five upright slots file cutting boards, trays, cooling racks, and baking sheets so you can slide out the one you need. The coated metal wire rack stands on its own in a cabinet or on the counter with no installation; each slot is about 1.2&quot; wide, so it suits flat items rather than thick pans.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C1GNRZ6T?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0C6D6SH16" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0C6D6SH16-sq.webp" type="image/webp"><img src="../../img/B0C6D6SH16-sq.png" alt="JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack (photo shows a similar dish rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -208,17 +231,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/jasiway-expandable-stainless-steel-in-sink-dish-drying-rack/">JASIWAY Expandable Stainless Steel In-Sink Dish Drying Rack</a></h3>
           <p>A countertop dish rack takes up prep space that a small kitchen can&#x27;t spare. This stainless steel rack sits in or over the sink, with arms that extend from 15.5 to 23.2 inches, so water drips straight into the basin.</p>
           <a class="btn" href="https://www.amazon.com/dp/B0C6D6SH16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B0D7P6XKNP" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0D7P6XKNP?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0D7P6XKNP-sq.webp" type="image/webp"><img src="../../img/B0D7P6XKNP-sq.png" alt="Vtopmart 22 oz Glass Meal Prep Containers, 5-Pack (photo shows a similar glass meal prep container, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/vtopmart-22-oz-glass-meal-prep-containers-5-pack/">Vtopmart 22 oz Glass Meal Prep Containers, 5-Pack</a></h3>
-          <p>Holiday leftovers and weekly lunches end up in stained plastic tubs that don&#x27;t seal. These five 22 oz glass containers have hinged lids with removable silicone seals for a leakproof close, and the glass is safe for the oven, microwave, freezer and dishwasher.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0D7P6XKNP?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

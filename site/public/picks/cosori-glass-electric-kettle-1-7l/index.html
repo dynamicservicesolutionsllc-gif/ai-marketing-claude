@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,21 +187,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>At 1.7 liters it needs counter space and a nearby outlet. The wide opening makes the glass easy to wipe clean, and the listing says the water never touches plastic.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000KEM4TQ" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000KEM4TQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000KEM4TQ-sq.webp" type="image/webp"><img src="../../img/B000KEM4TQ-sq.png" alt="Bodum Brazil French Press Coffee Maker, 34 oz (photo shows a similar french press, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B082314NFL" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B082314NFL-sq.webp" type="image/webp"><img src="../../img/B082314NFL-sq.png" alt="Zulay Kitchen Handheld Milk Frother (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/bodum-brazil-french-press-coffee-maker-34-oz/">Bodum Brazil French Press Coffee Maker, 34 oz</a></h3>
-          <p>Brews up to 34 ounces of full-bodied coffee with just hot water and a few minutes of steeping, so there&#x27;s no drip machine or paper filters to store. The heat-resistant borosilicate glass carafe sits in a slim frame that tucks into a cupboard between pots.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000KEM4TQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/zulay-kitchen-handheld-milk-frother/">Zulay Kitchen Handheld Milk Frother</a></h3>
+          <p>Whips hot or cold milk into cafe-style foam in about twenty seconds, which turns plain drip coffee into a latte without giving up counter space to a machine. It also breaks up matcha clumps and stirs protein powder smooth, and the whisk rinses clean in a cup of water.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0DPXRJ2VY" data-pl="card">
+      <article class="card" id="B0DPXRJ2VY" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0DPXRJ2VY?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0DPXRJ2VY-sq.webp" type="image/webp"><img src="../../img/B0DPXRJ2VY-sq.png" alt="Zulay Kitchen Milk Frother Wand with Stand (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -211,14 +212,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B082314NFL" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B082314NFL-sq.webp" type="image/webp"><img src="../../img/B082314NFL-sq.png" alt="Zulay Kitchen Handheld Milk Frother (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0DF472VMZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0DF472VMZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0DF472VMZ-sq.webp" type="image/webp"><img src="../../img/B0DF472VMZ-sq.png" alt="Owala SmoothSip Slider Coffee Tumbler, 12 oz (photo shows a similar travel coffee cup, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/zulay-kitchen-handheld-milk-frother/">Zulay Kitchen Handheld Milk Frother</a></h3>
-          <p>Whips hot or cold milk into cafe-style foam in about twenty seconds, which turns plain drip coffee into a latte without giving up counter space to a machine. It also breaks up matcha clumps and stirs protein powder smooth, and the whisk rinses clean in a cup of water.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B082314NFL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/owala-smoothsip-slider-coffee-tumbler-12-oz/">Owala SmoothSip Slider Coffee Tumbler, 12 oz</a></h3>
+          <p>A slide-top lid seals completely, so coffee rides in a bag or car without splashing. Double-wall insulation keeps it hot about six hours or iced up to 24, in a 12-ounce size that fits one hand.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0DF472VMZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0000645YM" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0000645YM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0000645YM-sq.webp" type="image/webp"><img src="../../img/B0000645YM-sq.png" alt="Cuisinart Mini-Prep Plus 3-Cup Food Processor (photo shows a similar mini food chopper, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/cuisinart-mini-prep-plus-3-cup-food-processor/">Cuisinart Mini-Prep Plus 3-Cup Food Processor</a></h3>
+          <p>Chops onions, garlic, herbs, and nuts in a few pulses, which takes the tedious knife work out of soups, stuffing, and sauces. The reversible blade switches between chopping and grinding, and the bowl and lid are dishwasher safe, so it earns its small spot in the cabinet.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0000645YM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

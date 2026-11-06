@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,32 +187,21 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It is a standard 9-inch plate about 2.1 inches deep, so deep-dish recipes may overflow. The lid is for storage, not the oven.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0049C2S32" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0049C2S32?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0049C2S32-sq.webp" type="image/webp"><img src="../../img/B0049C2S32-sq.png" alt="Nordic Ware Naturals Aluminum Half Sheet Baking Sheets, 2-Pack (photo shows a similar baking sheet, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B01N349SON" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B01N349SON?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01N349SON-sq.webp" type="image/webp"><img src="../../img/B01N349SON-sq.png" alt="HIWARE 9-Inch Nonstick Springform Cheesecake Pan (photo shows a similar springform, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/nordic-ware-naturals-aluminum-half-sheet-baking-sheets-2/">Nordic Ware Naturals Aluminum Half Sheet Baking Sheets, 2-Pack</a></h3>
-          <p>Thin sheet pans can warp in a hot oven and brown cookies unevenly. These pure aluminum half sheets spread heat evenly, have encapsulated steel rims to resist warping, and the two-pack covers cookie batches and holiday roast vegetables at once.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0049C2S32?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/hiware-9-inch-nonstick-springform-cheesecake-pan/">HIWARE 9-Inch Nonstick Springform Cheesecake Pan</a></h3>
+          <p>Cheesecakes and tortes stick to a regular cake pan, and turning them out cracks the top. This 9-inch springform pan has a nonstick coating, a removable bottom and a stainless buckle that opens the side ring so the cake lifts straight off.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01N349SON?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B000IYYFIQ" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000IYYFIQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000IYYFIQ-sq.webp" type="image/webp"><img src="../../img/B000IYYFIQ-sq.png" alt="J.K. Adams Maple French Rolling Pin, 20.5-Inch (photo shows a similar rolling pin, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/j-k-adams-maple-french-rolling-pin-20-5-inch/">J.K. Adams Maple French Rolling Pin, 20.5-Inch</a></h3>
-          <p>Handled rolling pins can leave pie dough thick in the middle and thin at the edges. This tapered French pin is a solid maple dowel that pivots easily for turning dough into even circles, and the wood holds a light dusting of flour.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000IYYFIQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B0747B7PZX" data-pl="card">
+      <article class="card" id="B0747B7PZX" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0747B7PZX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0747B7PZX-sq.webp" type="image/webp"><img src="../../img/B0747B7PZX-sq.png" alt="Ann Clark Christmas Cookie Cutters, Set of 7 (photo shows a similar set of cookie cutters, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -219,6 +209,28 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/ann-clark-christmas-cookie-cutters-set-of-7/">Ann Clark Christmas Cookie Cutters, Set of 7</a></h3>
           <p>Thin, flimsy cutters bend out of shape and leave ragged edges in sugar cookie dough. This set of seven Christmas shapes is made in the USA from food-safe steel with a rolled top edge to press on, in sizes from 3.5 to 4 inches.</p>
           <a class="btn" href="https://www.amazon.com/dp/B0747B7PZX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B000LEXR0K" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
+          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B091XP3VZ7" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
+          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

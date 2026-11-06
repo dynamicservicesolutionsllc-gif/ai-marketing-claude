@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,39 +187,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Measure your counter or table first, since the mat is 28 by 20 inches; it rolls up for storage but shouldn&#x27;t be cut on with a knife.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B08J8GZXKZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B08J8GZXKZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08J8GZXKZ-sq.webp" type="image/webp"><img src="../../img/B08J8GZXKZ-sq.png" alt="KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack (photo shows a similar oven mitt, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/kitchenaid-ribbed-soft-silicone-oven-mitts-2-pack/">KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack</a></h3>
+          <p>Silicone shells rated to 500°F shield hands from hot sheet pans and casserole dishes, and they shrug off steam and spills that soak through cloth mitts. The ribbed grip holds slippery pans, and each mitt is 7 by 13 inches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08J8GZXKZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B01CX1RIMQ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B01CX1RIMQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01CX1RIMQ-sq.webp" type="image/webp"><img src="../../img/B01CX1RIMQ-sq.png" alt="Spring Chef Dough Blender and Pastry Cutter, Medium (photo shows a similar pastry blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
-          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-dough-blender-and-pastry-cutter-medium/">Spring Chef Dough Blender and Pastry Cutter, Medium</a></h3>
+          <p>Cutting cold butter into flour with two knives or a fork is slow, and the butter warms up before the crust is mixed. This dough blender&#x27;s thick metal blades break butter into even pieces quickly for flaky pie crust, biscuits and scones.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01CX1RIMQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00008CM69" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B010TCP3SC" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B010TCP3SC-sq.webp" type="image/webp"><img src="../../img/B010TCP3SC-sq.png" alt="Dash Mini Waffle Maker, 4-Inch (photo shows a similar waffle maker, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
-          <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/dash-mini-waffle-maker-4-inch/">Dash Mini Waffle Maker, 4-Inch</a></h3>
+          <p>Heats in a couple of minutes and makes one four-inch waffle at a time, which suits a weekday breakfast better than hauling out a full-size iron. It stores standing up in a narrow cabinet gap and also crisps hash browns, chaffles, and biscuit-dough sandwiches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B07YP2VL68" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07YP2VL68?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07YP2VL68-sq.webp" type="image/webp"><img src="../../img/B07YP2VL68-sq.png" alt="KitchenAid Classic Pizza Wheel, 9-Inch (photo shows a similar pizza cutter, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/kitchenaid-classic-pizza-wheel-9-inch/">KitchenAid Classic Pizza Wheel, 9-Inch</a></h3>
+          <p>Cutting pizza with a knife tends to drag the cheese and toppings off the crust. This 9-inch rolling cutter has a stainless steel wheel and a built-in finger guard, and it also handles waffles, pie and flatbread.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07YP2VL68?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

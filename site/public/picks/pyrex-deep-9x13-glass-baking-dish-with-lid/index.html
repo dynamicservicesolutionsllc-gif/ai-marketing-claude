@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,10 +187,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Measure your fridge shelf height for the lidded dish, and note the plastic lid is for storage and the microwave, not the oven.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0049C2S32" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0049C2S32" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0049C2S32?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0049C2S32-sq.webp" type="image/webp"><img src="../../img/B0049C2S32-sq.png" alt="Nordic Ware Naturals Aluminum Half Sheet Baking Sheets, 2-Pack (photo shows a similar baking sheet, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -200,25 +201,36 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B000IYYFIQ" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000IYYFIQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000IYYFIQ-sq.webp" type="image/webp"><img src="../../img/B000IYYFIQ-sq.png" alt="J.K. Adams Maple French Rolling Pin, 20.5-Inch (photo shows a similar rolling pin, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B07Z4R7CJZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07Z4R7CJZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07Z4R7CJZ-sq.webp" type="image/webp"><img src="../../img/B07Z4R7CJZ-sq.png" alt="LE TAUCI 4 oz Ceramic Ramekins, Set of 6 (photo shows a similar ramekin, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/j-k-adams-maple-french-rolling-pin-20-5-inch/">J.K. Adams Maple French Rolling Pin, 20.5-Inch</a></h3>
-          <p>Handled rolling pins can leave pie dough thick in the middle and thin at the edges. This tapered French pin is a solid maple dowel that pivots easily for turning dough into even circles, and the wood holds a light dusting of flour.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000IYYFIQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/le-tauci-4-oz-ceramic-ramekins-set-of-6/">LE TAUCI 4 oz Ceramic Ramekins, Set of 6</a></h3>
+          <p>Single-serve desserts and side sauces need small dishes that can go in a hot oven. These six 4 oz ceramic ramekins are about 3.7 inches across, handle temperatures up to 482°F and stack neatly in a cabinet.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07Z4R7CJZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B07PQH8ZTX" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B07PQH8ZTX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B07PQH8ZTX-sq.webp" type="image/webp"><img src="../../img/B07PQH8ZTX-sq.png" alt="OXO Good Grips 9-Inch Glass Pie Plate with Lid (photo shows a similar pie plate, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B01CX1RIMQ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B01CX1RIMQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01CX1RIMQ-sq.webp" type="image/webp"><img src="../../img/B01CX1RIMQ-sq.png" alt="Spring Chef Dough Blender and Pastry Cutter, Medium (photo shows a similar pastry blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/oxo-good-grips-9-inch-glass-pie-plate-with-lid/">OXO Good Grips 9-Inch Glass Pie Plate with Lid</a></h3>
-          <p>Carrying a pie to a holiday dinner usually means balancing foil over a hot dish. This 9-inch borosilicate glass plate comes with a leakproof lid for storing and transporting, and its wide rim gives you something to hold with oven mitts.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B07PQH8ZTX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-dough-blender-and-pastry-cutter-medium/">Spring Chef Dough Blender and Pastry Cutter, Medium</a></h3>
+          <p>Cutting cold butter into flour with two knives or a fork is slow, and the butter warms up before the crust is mixed. This dough blender&#x27;s thick metal blades break butter into even pieces quickly for flaky pie crust, biscuits and scones.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01CX1RIMQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B00M2J7PCI" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00M2J7PCI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00M2J7PCI-sq.webp" type="image/webp"><img src="../../img/B00M2J7PCI-sq.png" alt="Pyrex Essentials 3-Piece Glass Measuring Cup Set (photo shows a similar glass measuring cup, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/pyrex-essentials-3-piece-glass-measuring-cup-set/">Pyrex Essentials 3-Piece Glass Measuring Cup Set</a></h3>
+          <p>Three glass cups in 1, 2 and 4-cup sizes cover everything from a splash of milk to a full batch of batter, with bold ounce and milliliter markings. They go into the microwave to warm butter or milk and pour cleanly through a curved spout, which suits holiday baking.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00M2J7PCI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

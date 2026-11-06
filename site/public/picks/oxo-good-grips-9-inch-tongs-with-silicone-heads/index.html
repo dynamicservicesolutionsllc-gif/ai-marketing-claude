@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,10 +187,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Nine inches is short for a grill or deep pot, so pick longer tongs if that&#x27;s the main use. They go in the dishwasher.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B07V54J1DZ" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B07V54J1DZ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B07V54J1DZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B07V54J1DZ-sq.webp" type="image/webp"><img src="../../img/B07V54J1DZ-sq.png" alt="P&amp;P CHEF 7.5-Inch Round Cooking and Cooling Rack, 2-Pack (photo shows a similar cooling rack, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -200,18 +201,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B012T634SM" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B012T634SM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B012T634SM-sq.webp" type="image/webp"><img src="../../img/B012T634SM-sq.png" alt="Magic Bullet Personal Blender, 22 oz (photo shows a similar blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/magic-bullet-personal-blender-22-oz/">Magic Bullet Personal Blender, 22 oz</a></h3>
-          <p>Big blenders are a lot to haul out for one smoothie or a bowl of salsa. The Magic Bullet uses a 250-watt base with a 22 oz cup, a short cup and a party mug, plus resealable lids so you can blend and store in the same cup.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B012T634SM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B0C4Z39TK9" data-pl="card">
+      <article class="card" id="B0C4Z39TK9" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0C4Z39TK9-sq.webp" type="image/webp"><img src="../../img/B0C4Z39TK9-sq.png" alt="Chefman XL Electric Griddle, 10 x 20 Inch (photo shows a similar griddle, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -219,6 +209,28 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/chefman-xl-electric-griddle-10-x-20-inch/">Chefman XL Electric Griddle, 10 x 20 Inch</a></h3>
           <p>Cooking holiday breakfast in one frying pan means the first pancakes go cold before the last are done. This Chefman griddle gives you a 10 x 20 inch nonstick surface with adjustable heat from 200 to 420°F and a drip tray for grease.</p>
           <a class="btn" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0026RHI3M" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0026RHI3M?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0026RHI3M-sq.webp" type="image/webp"><img src="../../img/B0026RHI3M-sq.png" alt="GoodCook Everyday Nonstick Baking Sheet Set, 3 Pack (photo shows a similar baking sheet, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/goodcook-everyday-nonstick-baking-sheet-set-3-pack/">GoodCook Everyday Nonstick Baking Sheet Set, 3 Pack</a></h3>
+          <p>One warped baking sheet slows down cookie batches and sheet-pan dinners alike. This set gives you three nonstick carbon steel pans in 13 by 9, 15 by 10 and 17 by 11 inch sizes, so you can match the pan to the job.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0026RHI3M?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B08J8GZXKZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B08J8GZXKZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08J8GZXKZ-sq.webp" type="image/webp"><img src="../../img/B08J8GZXKZ-sq.png" alt="KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack (photo shows a similar oven mitt, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/kitchenaid-ribbed-soft-silicone-oven-mitts-2-pack/">KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack</a></h3>
+          <p>Silicone shells rated to 500°F shield hands from hot sheet pans and casserole dishes, and they shrug off steam and spills that soak through cloth mitts. The ribbed grip holds slippery pans, and each mitt is 7 by 13 inches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08J8GZXKZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

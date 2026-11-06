@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,10 +187,10 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>The blades are sharp stainless steel, so take care when changing them. The parts go on the top rack of the dishwasher, and the container&#x27;s 5-cup size limits how much you can chop at once.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0D2P1HSCV" data-pl="card">
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0D2P1HSCV" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0D2P1HSCV-sq.webp" type="image/webp"><img src="../../img/B0D2P1HSCV-sq.png" alt="Royal Craft Wood Bamboo Cutting Board Set of 3 (photo shows a similar cutting board, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -200,7 +201,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0CGWQ53L3" data-pl="card">
+      <article class="card" id="B0CGWQ53L3" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B0CGWQ53L3-sq.webp" type="image/webp"><img src="../../img/B0CGWQ53L3-sq.png" alt="Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece (photo shows a similar mixing bowl, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
@@ -211,14 +212,25 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00004OCNJ" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00004OCNJ-sq.webp" type="image/webp"><img src="../../img/B00004OCNJ-sq.png" alt="OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper (photo shows a similar bench scraper, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0113UZJE2" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0113UZJE2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0113UZJE2-sq.webp" type="image/webp"><img src="../../img/B0113UZJE2-sq.png" alt="Etekcity Digital Food Kitchen Scale, 11 lb (photo shows a similar kitchen scale, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/oxo-good-grips-multi-purpose-stainless-steel-scraper-and/">OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper</a></h3>
-          <p>Moving chopped vegetables or dividing dough with a knife blade is slow and dulls the edge. This bench scraper scoops food off the cutting board in one pass, cuts dough cleanly, and its 1-inch markings help portion rolls and pie crust.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/etekcity-digital-food-kitchen-scale-11-lb/">Etekcity Digital Food Kitchen Scale, 11 lb</a></h3>
+          <p>Weighs ingredients in grams or ounces up to 11 pounds, with a tare button that zeroes out the bowl so you measure only what you add. The slim stainless steel platform wipes clean and stores flat when you are done.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0113UZJE2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B010TCP3SC" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B010TCP3SC-sq.webp" type="image/webp"><img src="../../img/B010TCP3SC-sq.png" alt="Dash Mini Waffle Maker, 4-Inch (photo shows a similar waffle maker, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/dash-mini-waffle-maker-4-inch/">Dash Mini Waffle Maker, 4-Inch</a></h3>
+          <p>Heats in a couple of minutes and makes one four-inch waffle at a time, which suits a weekday breakfast better than hauling out a full-size iron. It stores standing up in a narrow cabinet gap and also crisps hash browns, chaffles, and biscuit-dough sandwiches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B010TCP3SC?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

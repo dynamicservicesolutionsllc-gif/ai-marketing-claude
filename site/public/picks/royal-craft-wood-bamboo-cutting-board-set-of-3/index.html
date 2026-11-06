@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,39 +187,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Bamboo should be hand washed and dried, not put in the dishwasher.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0CGWQ53L3" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0CGWQ53L3-sq.webp" type="image/webp"><img src="../../img/B0CGWQ53L3-sq.png" alt="Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece (photo shows a similar mixing bowl, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B00X597ZXS" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00X597ZXS-sq.webp" type="image/webp"><img src="../../img/B00X597ZXS-sq.png" alt="Spring Chef Swivel Vegetable Peeler (photo shows a similar vegetable peeler, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/umite-chef-stainless-steel-mixing-bowls-with-lids-5-piece/">Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece</a></h3>
-          <p>Mixing in one bowl and then moving food to a container for the fridge doubles the dishes. These five stainless steel bowls (1.5 to 5 quarts) have non-slip silicone bottoms, airtight lids and three grater attachments, and they nest for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-swivel-vegetable-peeler/">Spring Chef Swivel Vegetable Peeler</a></h3>
+          <p>A dull peeler turns a sack of holiday potatoes into a long chore. This swivel peeler has dual stainless steel blades that glide over fruit and vegetables, a built-in blemish remover and a soft non-slip grip for right- or left-handed use.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00004OCNJ" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00004OCNJ-sq.webp" type="image/webp"><img src="../../img/B00004OCNJ-sq.png" alt="OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper (photo shows a similar bench scraper, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B07YP2VH4B" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B07YP2VH4B?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B07YP2VH4B-sq.webp" type="image/webp"><img src="../../img/B07YP2VH4B-sq.png" alt="KitchenAid Classic Multifunction Can Opener with Bottle Opener (photo shows a similar can opener, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/oxo-good-grips-multi-purpose-stainless-steel-scraper-and/">OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper</a></h3>
-          <p>Moving chopped vegetables or dividing dough with a knife blade is slow and dulls the edge. This bench scraper scoops food off the cutting board in one pass, cuts dough cleanly, and its 1-inch markings help portion rolls and pie crust.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/kitchenaid-classic-multifunction-can-opener-with-bottle/">KitchenAid Classic Multifunction Can Opener with Bottle Opener</a></h3>
+          <p>A sharp stainless steel cutting wheel and an oversized turning knob get through cans of pumpkin, broth, and beans without the slipping and re-clamping of a worn-out opener. The cushioned handles are easier on tired hands, and the built-in bottle opener means one less tool in the drawer.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B07YP2VH4B?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0738C7RXF" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0738C7RXF-sq.webp" type="image/webp"><img src="../../img/B0738C7RXF-sq.png" alt="Deiss PRO Lemon Zester and Grater (photo shows a similar zester, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B01FHOWYA2" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B01FHOWYA2-sq.webp" type="image/webp"><img src="../../img/B01FHOWYA2-sq.png" alt="Ninja Fit Compact Personal Blender (photo shows a similar blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/deiss-pro-lemon-zester-and-grater/">Deiss PRO Lemon Zester and Grater</a></h3>
-          <p>A bulky box grater is overkill for a little lemon zest, nutmeg or Parmesan. This handheld zester has a sharp stainless steel blade, a non-slip handle and curved sides that keep it rigid, and it rinses clean under running water.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0738C7RXF?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/ninja-fit-compact-personal-blender/">Ninja Fit Compact Personal Blender</a></h3>
+          <p>A full-size blender is a lot to haul out and wash for one smoothie. This compact 700-watt blender blends right in a 16 oz cup, then you add the spout lid and take it with you.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B003OAJGJO" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B003OAJGJO-sq.webp" type="image/webp"><img src="../../img/B003OAJGJO-sq.png" alt="Crock-Pot 7-Quart Manual Slow Cooker (photo shows a similar slow cooker, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/crock-pot-7-quart-manual-slow-cooker/">Crock-Pot 7-Quart Manual Slow Cooker</a></h3>
+          <p>Feeding a crowd or cooking for the week means a pot big enough for a whole roast or a double batch of chili. This 7-quart slow cooker has high, low and warm settings, and the removable stoneware can go in the oven up to 400°F or straight into the dishwasher.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B003OAJGJO?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

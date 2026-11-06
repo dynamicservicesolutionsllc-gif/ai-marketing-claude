@@ -13,6 +13,7 @@ license through Amazon's own tools/API. When stock_photos.py has saved a Pixabay
 photo of the same kind of item (assets/products/), the graphics include it,
 badged "Similar item shown", and the product page captions and credits it.
 """
+import hashlib
 import html
 import json
 import re
@@ -318,8 +319,8 @@ def buy(p, tag):
             f'          <small class="paid">{PAID_NOTE}</small>')
 
 
-def card(p, tag, base="", eager=False, high=None):
-    return f"""      <article class="card" id="{e(p['asin'])}" data-pl="card">
+def card(p, tag, base="", eager=False, high=None, pl="card"):
+    return f"""      <article class="card" id="{e(p['asin'])}" data-pl="{pl}">
         <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
           {picture(p, base, eager, high)}
         </a>
@@ -388,6 +389,7 @@ CSS = """
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -665,13 +667,41 @@ def describe(text, limit=155):
     return text[:limit].rsplit(" ", 1)[0].rstrip(",;:—-") + "…"
 
 
+def related_products(data, p, products, limit=4):
+    """Up to `limit` other products that share category tags with p, best matches first.
+
+    A product's tags are its subcategory, its category, and the subcategories its guide links to as
+    'related' (in either direction). Up to two picks come from the same subcategory (alternatives), the
+    rest from linked subcategories and then the same category (complementary items). Ties are broken by
+    a hash of the two ASINs, so each page gets its own stable mix and every product gets shown somewhere.
+    """
+    subs = data["subcategories"]
+    linked = set(subs[p["subcategory"]].get("related", []))
+    linked |= {k for k, s in subs.items() if p["subcategory"] in s.get("related", [])}
+    linked.discard(p["subcategory"])
+
+    def order(q):
+        return hashlib.md5(f"{p['asin']}:{q['asin']}".encode()).hexdigest()
+
+    others = [q for q in products if q["asin"] != p["asin"]]
+    same = sorted((q for q in others if q["subcategory"] == p["subcategory"]), key=order)
+    near = sorted((q for q in others if q["subcategory"] in linked), key=order)
+    cat = sorted((q for q in others if q["category"] == p["category"]
+                  and q["subcategory"] != p["subcategory"] and q["subcategory"] not in linked), key=order)
+    picks = same[:2]
+    for q in near + cat + same[2:]:
+        if len(picks) >= limit:
+            break
+        if q not in picks:
+            picks.append(q)
+    return picks
+
+
 def render_pick(data, p, products):
     site, tag = data["site"], data["site"]["associate_tag"]
     sub = data["subcategories"][p["subcategory"]]
     base = "../../"
-    same = [q for q in products if q["subcategory"] == p["subcategory"] and q["asin"] != p["asin"]]
-    near = [q for q in products if q["category"] == p["category"] and q["subcategory"] != p["subcategory"]]
-    more = (same + near)[:3]
+    more = related_products(data, p, products)
     more_html = ""
     cmp_links = "".join(
         f'      <p style="margin-top:8px"><a class="more" href="{base}{comparison_path(k)}">Compare: {e(c["h1"])} →</a></p>\n'
@@ -682,8 +712,8 @@ def render_pick(data, p, products):
                         f'      <h2>Before you buy</h2>\n      <p>{e(p["check"])}</p>\n'
                         f'      <p><small>Product details can change, so check the current listing on Amazon.</small></p>\n    </section>\n')
     if more:
-        cards = "\n".join(card(q, tag, base) for q in more)
-        more_html = (f'    <section>\n      <h2>More picks like this</h2>\n      <div class="grid">\n{cards}\n      </div>\n'
+        cards = "\n".join(card(q, tag, base, pl="related") for q in more)
+        more_html = (f'    <section class="related-products">\n      <h2>Related products</h2>\n      <div class="grid related">\n{cards}\n      </div>\n'
                      f'      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(p["subcategory"])}">See the full guide: {e(sub["title"])} →</a></p>\n'
                      f'{cmp_links}    </section>\n')
     hub = HUBS[sub["category"]]

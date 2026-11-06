@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,39 +187,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>This is the medium (3-inch) size; a 4-inch large version is listed separately. The handle is soft rubber and the tool is dishwasher safe.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B009HBKQ16" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B009HBKQ16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B009HBKQ16-sq.webp" type="image/webp"><img src="../../img/B009HBKQ16-sq.png" alt="Tramontina Professional 10-Inch Nonstick Frying Pan (photo shows a similar frying pan, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/tramontina-professional-10-inch-nonstick-frying-pan/">Tramontina Professional 10-Inch Nonstick Frying Pan</a></h3>
+          <p>Eggs and pancakes stick and tear in a worn-out pan. This 10-inch Tramontina skillet has a reinforced nonstick coating on heavy-gauge aluminum for even heating, a removable silicone handle sleeve and oven-safe use up to 400°F.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B009HBKQ16?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0113UZJE2" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0113UZJE2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0113UZJE2-sq.webp" type="image/webp"><img src="../../img/B0113UZJE2-sq.png" alt="Etekcity Digital Food Kitchen Scale, 11 lb (photo shows a similar kitchen scale, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
-          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/etekcity-digital-food-kitchen-scale-11-lb/">Etekcity Digital Food Kitchen Scale, 11 lb</a></h3>
+          <p>Weighs ingredients in grams or ounces up to 11 pounds, with a tare button that zeroes out the bowl so you measure only what you add. The slim stainless steel platform wipes clean and stores flat when you are done.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0113UZJE2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00008CM69" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0747B7PZX" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0747B7PZX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0747B7PZX-sq.webp" type="image/webp"><img src="../../img/B0747B7PZX-sq.png" alt="Ann Clark Christmas Cookie Cutters, Set of 7 (photo shows a similar set of cookie cutters, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
-          <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/ann-clark-christmas-cookie-cutters-set-of-7/">Ann Clark Christmas Cookie Cutters, Set of 7</a></h3>
+          <p>Thin, flimsy cutters bend out of shape and leave ragged edges in sugar cookie dough. This set of seven Christmas shapes is made in the USA from food-safe steel with a rolled top edge to press on, in sizes from 3.5 to 4 inches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0747B7PZX?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0BHBSBYQW" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0BHBSBYQW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0BHBSBYQW-sq.webp" type="image/webp"><img src="../../img/B0BHBSBYQW-sq.png" alt="OXO Good Grips 3-Piece Plastic Mixing Bowl Set (photo shows a similar mixing bowl, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/oxo-good-grips-3-piece-plastic-mixing-bowl-set/">OXO Good Grips 3-Piece Plastic Mixing Bowl Set</a></h3>
+          <p>Holiday baking means batter, dough and stuffing all needing a bowl at once, and a bowl that slides around the counter makes a mess. This OXO set gives you 1.5, 3 and 5 quart bowls with non-slip bases and wide spouts, and they nest together so they take up one shelf spot.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0BHBSBYQW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

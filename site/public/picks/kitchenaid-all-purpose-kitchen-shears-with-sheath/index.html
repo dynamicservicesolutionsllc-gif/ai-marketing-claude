@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,39 +187,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Hand washing is recommended to keep the blades sharp, even though they are dishwasher safe, and the blades don&#x27;t come apart for cleaning.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B0D2P1HSCV" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0D2P1HSCV-sq.webp" type="image/webp"><img src="../../img/B0D2P1HSCV-sq.png" alt="Royal Craft Wood Bamboo Cutting Board Set of 3 (photo shows a similar cutting board, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0764HS4SL" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0764HS4SL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0764HS4SL-sq.webp" type="image/webp"><img src="../../img/B0764HS4SL-sq.png" alt="Fullstar Pro Original Vegetable Chopper &amp; Spiralizer (product not pictured; photo shows spiralized vegetables, what it makes)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/royal-craft-wood-bamboo-cutting-board-set-of-3/">Royal Craft Wood Bamboo Cutting Board Set of 3</a></h3>
-          <p>One board is never the right size: too big for a lemon, too small for a roast. This set of three bamboo boards (15x10, 12x8 and 9x6 inches) has deep juice grooves to catch liquid and side handles for carrying.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0D2P1HSCV?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/fullstar-pro-original-vegetable-chopper-and-spiralizer/">Fullstar Pro Original Vegetable Chopper &amp; Spiralizer</a></h3>
+          <p>Press vegetables through the stainless steel blade grid and they drop straight into a 5-cup catch container instead of scattering across the board. A non-skid base keeps it steady, and the parts go on the top rack of the dishwasher.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0764HS4SL?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0CGWQ53L3" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0CGWQ53L3-sq.webp" type="image/webp"><img src="../../img/B0CGWQ53L3-sq.png" alt="Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece (photo shows a similar mixing bowl, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B00X597ZXS" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B00X597ZXS-sq.webp" type="image/webp"><img src="../../img/B00X597ZXS-sq.png" alt="Spring Chef Swivel Vegetable Peeler (photo shows a similar vegetable peeler, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/umite-chef-stainless-steel-mixing-bowls-with-lids-5-piece/">Umite Chef Stainless Steel Mixing Bowls with Lids, 5-Piece</a></h3>
-          <p>Mixing in one bowl and then moving food to a container for the fridge doubles the dishes. These five stainless steel bowls (1.5 to 5 quarts) have non-slip silicone bottoms, airtight lids and three grater attachments, and they nest for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0CGWQ53L3?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/spring-chef-swivel-vegetable-peeler/">Spring Chef Swivel Vegetable Peeler</a></h3>
+          <p>A dull peeler turns a sack of holiday potatoes into a long chore. This swivel peeler has dual stainless steel blades that glide over fruit and vegetables, a built-in blemish remover and a soft non-slip grip for right- or left-handed use.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00004OCNJ" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00004OCNJ-sq.webp" type="image/webp"><img src="../../img/B00004OCNJ-sq.png" alt="OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper (photo shows a similar bench scraper, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B000LEXR0K" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/oxo-good-grips-multi-purpose-stainless-steel-scraper-and/">OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper</a></h3>
-          <p>Moving chopped vegetables or dividing dough with a knife blade is slow and dulls the edge. This bench scraper scoops food off the cutting board in one pass, cuts dough cleanly, and its 1-inch markings help portion rolls and pie crust.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
+          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B075X1KPLZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B075X1KPLZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B075X1KPLZ-sq.webp" type="image/webp"><img src="../../img/B075X1KPLZ-sq.png" alt="MuellerLiving Ultra-Stick Immersion Hand Blender (photo shows a similar immersion blender, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/muellerliving-ultra-stick-immersion-hand-blender/">MuellerLiving Ultra-Stick Immersion Hand Blender</a></h3>
+          <p>Purees soup directly in the pot, so there is no ladling hot liquid into a blender in batches and no second jar to wash. The shaft detaches for the dishwasher, and the included whisk and frother attachments cover whipped cream and hot cocoa.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B075X1KPLZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>

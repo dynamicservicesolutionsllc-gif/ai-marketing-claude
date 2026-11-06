@@ -55,6 +55,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   section { padding:24px 0; }
   h2 { font-size:24px; margin-bottom:16px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; }
+  .grid.related { grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
   .card { background:var(--card); border:1px solid var(--bd); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; scroll-margin-top:48px; }
   .card:target { outline:3px solid var(--acc); }
   .img { background:#fbf8f3; display:block; aspect-ratio:1; }  /* graphics are cream in both themes */
@@ -186,39 +187,50 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>The scoops are 18/8 stainless steel and dishwasher safe. The trigger works in either hand, but very stiff doughs take more grip strength.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
-    <section>
-      <h2>More picks like this</h2>
-      <div class="grid">
-      <article class="card" id="B000LEXR0K" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B000LEXR0K-sq.webp" type="image/webp"><img src="../../img/B000LEXR0K-sq.png" alt="Lodge Cast Iron Double Dutch Oven, 5 Quart (photo shows a similar dutch oven, not this exact product)" loading="lazy" width="800" height="800"></picture>
+    <section class="related-products">
+      <h2>Related products</h2>
+      <div class="grid related">
+      <article class="card" id="B0113UZJE2" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0113UZJE2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0113UZJE2-sq.webp" type="image/webp"><img src="../../img/B0113UZJE2-sq.png" alt="Etekcity Digital Food Kitchen Scale, 11 lb (photo shows a similar kitchen scale, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/lodge-cast-iron-double-dutch-oven-5-quart/">Lodge Cast Iron Double Dutch Oven, 5 Quart</a></h3>
-          <p>Small kitchens rarely have room for both a Dutch oven and a skillet. This 5-quart Lodge cast iron pot has a lid that works as a dual-handle skillet, and it goes on the stovetop, in the oven, on the grill or over a campfire.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B000LEXR0K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/etekcity-digital-food-kitchen-scale-11-lb/">Etekcity Digital Food Kitchen Scale, 11 lb</a></h3>
+          <p>Weighs ingredients in grams or ounces up to 11 pounds, with a tare button that zeroes out the bowl so you measure only what you add. The slim stainless steel platform wipes clean and stores flat when you are done.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0113UZJE2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B091XP3VZ7" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B091XP3VZ7-sq.webp" type="image/webp"><img src="../../img/B091XP3VZ7-sq.png" alt="SAYFINE Stainless Steel Vegetable Steamer Basket (photo shows a similar steamer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B08J8GZXKZ" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B08J8GZXKZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08J8GZXKZ-sq.webp" type="image/webp"><img src="../../img/B08J8GZXKZ-sq.png" alt="KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack (photo shows a similar oven mitt, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/sayfine-stainless-steel-vegetable-steamer-basket/">SAYFINE Stainless Steel Vegetable Steamer Basket</a></h3>
-          <p>A dedicated steamer takes up a whole cabinet shelf. This stainless steel basket folds open from 5.5 to 9.2 inches to fit most pots, has a removable center post for lifting it out, and folds back to half size for storage.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B091XP3VZ7?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/kitchenaid-ribbed-soft-silicone-oven-mitts-2-pack/">KitchenAid Ribbed Soft Silicone Oven Mitts, 2-Pack</a></h3>
+          <p>Silicone shells rated to 500°F shield hands from hot sheet pans and casserole dishes, and they shrug off steam and spills that soak through cloth mitts. The ribbed grip holds slippery pans, and each mitt is 7 by 13 inches.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08J8GZXKZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00008CM69" data-pl="card">
-        <a class="img" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00008CM69-sq.webp" type="image/webp"><img src="../../img/B00008CM69-sq.png" alt="Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid (photo shows a similar saucepan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0C4Z39TK9" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0C4Z39TK9-sq.webp" type="image/webp"><img src="../../img/B0C4Z39TK9-sq.png" alt="Chefman XL Electric Griddle, 10 x 20 Inch (photo shows a similar griddle, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cuisinart-chefs-classic-1-5-qt-stainless-steel-saucepan/">Cuisinart Chef&#x27;s Classic 1.5 Qt Stainless Steel Saucepan with Lid</a></h3>
-          <p>Warming a little gravy or melting butter in a big pot wastes heat and scorches the thin layer. This 1.5-quart Cuisinart saucepan has an aluminum-encapsulated base that spreads heat evenly, a stay-cool riveted handle and a lid.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00008CM69?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/chefman-xl-electric-griddle-10-x-20-inch/">Chefman XL Electric Griddle, 10 x 20 Inch</a></h3>
+          <p>Cooking holiday breakfast in one frying pan means the first pancakes go cold before the last are done. This Chefman griddle gives you a 10 x 20 inch nonstick surface with adjustable heat from 200 to 420°F and a drip tray for grease.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0C4Z39TK9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
+      <article class="card" id="B0GV8NG3MG" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0GV8NG3MG?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0GV8NG3MG-sq.webp" type="image/webp"><img src="../../img/B0GV8NG3MG-sq.png" alt="Fimary Silicone Muffin Pan with Metal Reinforced Frame, 12-Cup (photo shows a similar muffin pan, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/fimary-silicone-muffin-pan-with-metal-reinforced-frame-12/">Fimary Silicone Muffin Pan with Metal Reinforced Frame, 12-Cup</a></h3>
+          <p>Floppy silicone pans are hard to move in and out of the oven, and metal tins can leave muffins stuck to the bottom. This 12-cup food-grade silicone pan has a metal reinforced frame for stability and releases muffins, cupcakes and egg bites easily.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0GV8NG3MG?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
