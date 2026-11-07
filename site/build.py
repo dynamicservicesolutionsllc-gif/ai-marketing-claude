@@ -293,6 +293,8 @@ PHOTO_CREDITS = {}
 
 def photo_alt(p):
     c = PHOTO_CREDITS.get(p["asin"]) or {}
+    if c.get("exact_product"):
+        return p["name"]
     if c.get("note"):
         return f"{p['name']} (product not pictured; photo shows {c['note']})"
     return f"{p['name']} (photo shows a similar {c['kind']}, not this exact product)" if c.get("kind") else p["name"]
@@ -305,7 +307,7 @@ def photo_note(p):
     site = c.get("site", "Pixabay") + (f' ({c["license"]})' if c.get("license") else "")
     who = f'{e(c["user"])} / ' if c.get("user") else ""
     src = f'<a href="{e(c["page_url"])}" rel="nofollow noopener">{who}{e(site)}</a>' if c.get("page_url") else e(site)
-    what = (f'Product not pictured: the photo shows {e(c["note"])}.' if c.get("note")
+    what = ("Photo of this product." if c.get("exact_product") else f'Product not pictured: the photo shows {e(c["note"])}.' if c.get("note")
             else f'Photo shows a similar {e(c["kind"])}, not this exact product.')
     return f'<p class="photo-note">{what} See the real product photos on Amazon. Photo: {src}</p>'
 
@@ -917,7 +919,7 @@ def guide_products(products, key):
 def hide_unphotographed(data, has_photo):
     """Drop every product without a matching photo from the public build (pages, products.json, pins.json),
     plus anything that would point at one: gift/guide picks, comparisons, type picks, emptied guides."""
-    keep = {p["asin"] for p in data["products"] if has_photo(p["asin"]) or (p.get("graphic_only") is True and p.get("sitestripe_url"))}
+    keep = {p["asin"] for p in data["products"] if has_photo(p["asin"])}
     hidden = [p["asin"] for p in data["products"] if p["asin"] not in keep]
     if not hidden:
         return
@@ -1974,6 +1976,10 @@ def save_button(p):
 
 
 def video_button(p):
+    if p.get('sitestripe_url') and p.get('photo_review'):
+        from product_campaigns import media_id
+        video = f"/videos/products/{media_id(p)}.mp4"
+        return f'<video controls preload="none" playsinline poster="/img/{e(p["asin"])}-sq.webp" style="width:100%;max-width:360px"><source src="{e(video)}" type="video/mp4">Read the product guide above.</video>'
     # Video generation button — fetches AI script from Gemini, generates video with Replicate
     desc = e(p.get("blurb", p["name"])[:100])  # Limit description length
     return f'<button type="button" class="video-gen" data-generate-video="{e(p["asin"])}" data-description="{desc}">🎬 Generate Demo Video</button>'
@@ -2154,6 +2160,7 @@ def main():
         stock_photos.fetch_missing()
     import graphics  # needs Pillow; only required for a full build
     global PHOTO_CREDITS
+    graphics.REVIEWED_PHOTOS = {p['asin']: dict(p['photo_review'], page_url=p['photo_review']['source_url'], user=p['photo_review']['author'], site='Authorized product photo') for p in data['products'] if p.get('photo_review')}
     PHOTO_CREDITS = {k: v for k, v in graphics.photo_credits().items() if graphics.product_photo(k)}
     if PHOTO_CREDITS:
         print(f"Using similar-item stock photos for {len(PHOTO_CREDITS)} products")

@@ -1,7 +1,7 @@
 # Publishes the built site (site/public/) to the `hostinger-deploy` branch, then tells Hostinger to pull it.
 # The branch keeps a normal history (no force-push) so Hostinger's pull is always a fast-forward.
 #
-# SiteStripe imports use reviewed long links and original editorial graphics.
+# SiteStripe imports use reviewed long links and reviewed product photos and original editorial graphics.
 # Builds run without Amazon API access or network product discovery.
 name: Deploy site to Hostinger
 on:
@@ -25,15 +25,24 @@ jobs:
           path: src
       - name: Install build dependencies
         run: pip install --quiet pillow
-      - name: Test SiteStripe import and links
+      - name: Test photo, import and campaign requirements
         working-directory: src
-        run: python3 -m unittest discover -s tests -p test_sitestripe.py
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Import approved SiteStripe products
         working-directory: src/site
         run: python3 import_sitestripe.py imports/sitestripe.json --apply
       - name: Build without Amazon API access
         working-directory: src/site
         run: python3 build.py --offline
+      - name: Verify video encoder
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y ffmpeg
+          fi
+      - name: Build product videos and native social review queues
+        working-directory: src/site
+        run: python3 product_campaigns.py
       - name: Add TikTok Pixel before deployment
         working-directory: src/site
         run: python3 add_tiktok_pixel.py
