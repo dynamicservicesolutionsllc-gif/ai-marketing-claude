@@ -1,0 +1,15 @@
+{
+  "mode": "SiteStripe reviewed long links; no Amazon API required",
+  "workflow_run": 42376694912,
+  "checks": {
+    "unit_tests": "four passed locally and on GitHub",
+    "integration": "local fixture rendered original graphic, product page and public feed preserving all supplied link parameters; fixture not deployed",
+    "production_build": "passed without Amazon API credentials",
+    "hostinger_deployment_webhook": "passed",
+    "search_engine_notification": "pending when recorded"
+  },
+  "new_products_imported": 0,
+  "required_input": "Actual SiteStripe long link plus reviewed exact variant/seller and manufacturer specifications",
+  "import_ledger": "site/imports/sitestripe.json",
+  "api_discovery": "retired; no automatic triggers, secret use or repository write permission"
+}
