@@ -153,6 +153,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .saved-count[hidden] { display:none; }
   .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
   .card.gone .body { opacity:.75; }
+  .video-gen { font:inherit; font-weight:600; cursor:pointer; background:var(--card); color:var(--acc); border:2px solid var(--acc); border-radius:8px; padding:8px 16px; margin-top:8px; }
+  .video-gen:hover { background:var(--acc); color:var(--acc-ink); }
+  .video-gen:disabled { opacity:.6; cursor:wait; }
+  .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .product-video-container { margin-top:12px; }
+  .product-video-container video { width:100%; border-radius:8px; }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -222,6 +228,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <a class="btn" href="https://www.amazon.com/dp/B0BHBSBYQW?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
           <button type="button" class="save" data-save="B0BHBSBYQW" aria-pressed="false" hidden>&#9825; Save to My Favorites</button><script>document.currentScript.previousElementSibling.hidden=false</script>
+          <button type="button" class="video-gen" data-generate-video="B0BHBSBYQW" data-description="Holiday baking means batter, dough and stuffing all needing a bowl at once, and a bowl that slides a">🎬 Generate Demo Video</button>
         </div>
       </div>
     </article>
@@ -309,6 +316,7 @@ if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>
 [].forEach.call(document.querySelectorAll('[data-save]'),u);c();
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <script src="/quiz.js?v=eaee888b" defer></script>
+<script src="/js/video-generator.js" defer></script>
 <!-- TikTok product events -->
 <script>
   ttq.track('ViewContent', {
