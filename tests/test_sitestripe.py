@@ -3,9 +3,14 @@ import json
 from pathlib import Path
 import sys
 import unittest
+import tempfile
+import hashlib
+from unittest.mock import patch
+from PIL import Image
 
 SITE = Path(__file__).resolve().parents[1] / 'site'
 sys.path.insert(0, str(SITE))
+import import_sitestripe
 import build
 from affiliate_links import validate_sitestripe_url, product_affiliate_url
 from import_sitestripe import prepare_import
@@ -14,12 +19,22 @@ from import_sitestripe import prepare_import
 class SiteStripeTests(unittest.TestCase):
     def setUp(self):
         self.data = json.loads((SITE / 'products.json').read_text())
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        root = Path(self.tmp.name)
+        (root / 'assets/products').mkdir(parents=True)
+        self.photo = root / 'assets/products/B0ZZZZZZZZ.jpg'
+        Image.new('RGB', (1000, 1000), 'white').save(self.photo)
+        self.root_patch = patch.object(import_sitestripe, 'ROOT', root)
+        self.root_patch.start()
+        self.addCleanup(self.root_patch.stop)
         self.product = copy.deepcopy(self.data['products'][0])
         self.product.update(asin='B0ZZZZZZZZ', name='Import validation fixture', approved=True,
                             sitestripe_url='https://www.amazon.com/dp/B0ZZZZZZZZ?tag=kitchenfi0fde-20&linkCode=ll1&linkId=fixture',
                             variant='Fixture variant', seller='Fixture seller', verified_at='2026-11-07',
                             source_url='https://example.com/specifications', content_rights='original-editorial-graphic',
-                            editorial_reason='Test fixture only, never an import entry')
+                            editorial_reason='Test fixture only, never an import entry',
+                            photo_review={'exact_product': True, 'source_url': 'https://example.com/fixture-photo', 'rights_basis': 'owned', 'rights_evidence': 'Test fixture only', 'author': 'Fixture', 'license': 'Owned fixture', 'sha256': hashlib.sha256(self.photo.read_bytes()).hexdigest()})
 
     def test_preserves_long_link_in_pages_and_feed_helper(self):
         p = self.product
@@ -39,10 +54,27 @@ class SiteStripeTests(unittest.TestCase):
         result = prepare_import(self.data, [self.product])
         self.assertEqual(self.data, before)
         self.assertEqual(result['products'][:-1], self.data['products'])
-        self.assertTrue(result['products'][-1]['graphic_only'])
+        self.assertNotIn('graphic_only', result['products'][-1])
+        self.assertTrue(result['products'][-1]['photo_review']['exact_product'])
         sample = {'products': [result['products'][-1]], 'subcategories': {}, 'gift_guides': {}, 'comparisons': {}}
         build.hide_unphotographed(sample, lambda _: False)
-        self.assertEqual(len(sample['products']),1)
+        self.assertEqual(len(sample['products']),0)
+
+    def test_missing_changed_small_or_unapproved_photos_block_import(self):
+        for review in ({}, dict(self.product['photo_review'], exact_product=False), dict(self.product['photo_review'], sha256='wrong')):
+            with self.subTest(review=review), self.assertRaises(ValueError):
+                prepare_import(self.data, [dict(self.product, photo_review=review)])
+        Image.new('RGB', (100, 100), 'white').save(self.photo)
+        self.product['photo_review']['sha256'] = hashlib.sha256(self.photo.read_bytes()).hexdigest()
+        with self.assertRaises(ValueError):
+            prepare_import(self.data, [self.product])
+        self.photo.unlink()
+        with self.assertRaises(ValueError):
+            prepare_import(self.data, [self.product])
+
+    def test_more_than_five_products_in_a_day_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'At most five'):
+            prepare_import(self.data, [self.product] * 6)
 
     def test_invalid_batch_never_changes_source(self):
         before = copy.deepcopy(self.data)
