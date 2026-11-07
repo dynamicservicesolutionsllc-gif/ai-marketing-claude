@@ -22,6 +22,7 @@ import sys
 from collections import Counter
 from datetime import date
 from pathlib import Path
+from affiliate_links import product_affiliate_url, validate_sitestripe_url
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "public"
@@ -61,8 +62,9 @@ def slug(name):
     return s
 
 
-def load():
-    data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
+def load(data=None):
+    if data is None:
+        data = json.loads((ROOT / "products.json").read_text(encoding="utf-8"))
     errors = []
     seen, slugs = set(), set()
     cats = data["categories"]
@@ -74,6 +76,11 @@ def load():
         asin = p.get("asin", "")
         if not re.fullmatch(r"B0[0-9A-Z]{8}", asin):
             errors.append(f"{where}: ASIN must look like B0XXXXXXXX")
+        if p.get("sitestripe_url"):
+            try:
+                validate_sitestripe_url(p["sitestripe_url"], asin, data["site"]["associate_tag"])
+            except ValueError as exc:
+                errors.append(f"{where}: {exc}")
         if asin in seen:
             errors.append(f"{where}: duplicate ASIN")
         if asin in EXCLUDED_ASINS:
@@ -315,13 +322,13 @@ def picture(p, base, eager=False, high=None):
 
 
 def buy(p, tag):
-    return (f'<a class="btn" href="{e(amazon_url(p["asin"], tag))}" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>\n'
+    return (f'<a class="btn" href="{e(product_affiliate_url(p, tag))}" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>\n'
             f'          <small class="paid">{PAID_NOTE}</small>')
 
 
 def card(p, tag, base="", eager=False, high=None, pl="card"):
     return f"""      <article class="card" id="{e(p['asin'])}" data-pl="{pl}">
-        <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
+        <a class="img" href="{e(product_affiliate_url(p, tag))}" rel="sponsored nofollow noopener" target="_blank">
           {picture(p, base, eager, high)}
         </a>
         <div class="body">
@@ -773,7 +780,7 @@ def render_pick(data, p, products):
     <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
     <article class="pick" id="{e(p['asin'])}" data-pl="pick">
       <div class="media">
-      <a class="img" href="{e(amazon_url(p['asin'], tag))}" rel="sponsored nofollow noopener" target="_blank">
+      <a class="img" href="{e(product_affiliate_url(p, tag))}" rel="sponsored nofollow noopener" target="_blank">
         {picture(p, base, eager=True)}
       </a>
       {photo_note(p)}
@@ -910,7 +917,7 @@ def guide_products(products, key):
 def hide_unphotographed(data, has_photo):
     """Drop every product without a matching photo from the public build (pages, products.json, pins.json),
     plus anything that would point at one: gift/guide picks, comparisons, type picks, emptied guides."""
-    keep = {p["asin"] for p in data["products"] if has_photo(p["asin"])}
+    keep = {p["asin"] for p in data["products"] if has_photo(p["asin"]) or (p.get("graphic_only") is True and p.get("sitestripe_url"))}
     hidden = [p["asin"] for p in data["products"] if p["asin"] not in keep]
     if not hidden:
         return
@@ -963,7 +970,7 @@ def render_guide(data, key, items):
     rows = "\n".join(
         f'        <tr><td data-label="Best for">{e(p["award"])}</td>'
         f'<td data-label="Pick"><a href="#{e(p["asin"])}">{e(p["name"])}</a></td>'
-        f'<td><a class="btn sm" href="{e(amazon_url(p["asin"], tag))}" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></td></tr>'
+        f'<td><a class="btn sm" href="{e(product_affiliate_url(p, tag))}" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></td></tr>'
         for p in items)
     sections = []
     for i, p in enumerate(items):
@@ -2143,7 +2150,8 @@ def main():
                          if str(v.get("url", "")).startswith("https://m.media-amazon.com/")}
         print(f"Using official Amazon photos for {len(AMAZON_IMAGES)} products")
     import stock_photos  # similar-item photos for new products (only where a Pixabay key is on this machine)
-    stock_photos.fetch_missing()
+    if "--offline" not in sys.argv:
+        stock_photos.fetch_missing()
     import graphics  # needs Pillow; only required for a full build
     global PHOTO_CREDITS
     PHOTO_CREDITS = {k: v for k, v in graphics.photo_credits().items() if graphics.product_photo(k)}
@@ -2253,7 +2261,7 @@ def main():
         encoding="utf-8")
     # Machine-readable feed: the posting routines read this as their queue.
     feed = [dict(p, page_url=f"{url}/{page_path(p)}", pin_image=f"{url}/img/{p['asin']}.png",
-                 amazon_url=amazon_url(p["asin"], tag))
+                 amazon_url=product_affiliate_url(p, tag))
             for p in sorted(data["products"], key=lambda p: p["added"])]
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
