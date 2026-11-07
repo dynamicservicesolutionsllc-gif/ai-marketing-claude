@@ -81,9 +81,12 @@ def product_photo(asin):
     return path if path.exists() else None
 
 
+REVIEWED_PHOTOS = {}
+
+
 def photo_credits():
     f = PHOTO_DIR / "photos.json"
-    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    return {**(json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}), **REVIEWED_PHOTOS}
 
 
 def cover(path, w, h):
@@ -98,7 +101,7 @@ def cover(path, w, h):
 def badge_text(photo):
     """'Similar item shown', or 'Product not pictured' when the photo is only a related scene."""
     c = photo_credits().get(Path(photo).stem, {}) if photo else {}
-    return BADGE_RELATED if c.get("note") else BADGE
+    return "PRODUCT PHOTO" if c.get("exact_product") else BADGE_RELATED if c.get("note") else BADGE
 
 
 def badge(im, x, y, size=26, text=BADGE):
