@@ -2,13 +2,16 @@
 """Import reviewed editorial products with supplied SiteStripe links. No Amazon requests."""
 import argparse
 import copy
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
+from collections import Counter
 import json
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
 
 from affiliate_links import validate_sitestripe_url
+from product_media import verified_photo
 
 ROOT = Path(__file__).resolve().parent
 
@@ -16,6 +19,9 @@ ROOT = Path(__file__).resolve().parent
 def prepare_import(data, entries):
     if not isinstance(entries, list):
         raise ValueError('Import file must contain a JSON array')
+    counts = Counter(entry.get('added') for entry in entries)
+    if any(count > 5 for count in counts.values()):
+        raise ValueError('At most five new products may be released per day')
     result = copy.deepcopy(data)
     tag = data['site']['associate_tag']
     seen = {p['asin'] for p in data['products']}
@@ -39,7 +45,7 @@ def prepare_import(data, entries):
         allowed = ('asin', 'name', 'category', 'subcategory', 'blurb', 'added', 'award',
                    'graphic', 'pin', 'suits', 'check', 'sitestripe_url')
         product = {k: entry[k] for k in allowed if k in entry}
-        product['graphic_only'] = True
+        product['photo_review'] = verified_photo(entry, ROOT)
         product['source_review'] = {k: entry[k] for k in ('variant', 'seller', 'verified_at', 'source_url', 'content_rights', 'editorial_reason')}
         result['products'].append(product)
         seen.add(asin)
@@ -58,6 +64,11 @@ def main():
     args = parser.parse_args()
     original = json.loads((ROOT / 'products.json').read_text())
     entries = json.loads(args.input.read_text())
+    today = datetime.now(ZoneInfo('America/New_York')).date()
+    # Release only the reviewed entries whose editorial publication date has arrived.
+    if not isinstance(entries, list):
+        raise ValueError('Import file must contain a JSON array')
+    entries = [entry for entry in entries if date.fromisoformat(entry['added']) <= today]
     result = prepare_import(original, entries)
     if args.apply and entries:
         target = ROOT / 'products.json'
