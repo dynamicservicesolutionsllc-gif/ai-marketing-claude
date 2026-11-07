@@ -3,24 +3,25 @@
 Discover and stage new Amazon products for Kitchen Finds & Favorites.
 Runs daily via cron to find 5 new products matching your category/keyword strategy.
 
-Searches Amazon via Creators API, researches competitors, identifies top sellers,
-then adds candidates to products.json staging section for your review.
+Searches Amazon via Creators API and stages candidates for editorial review.
+Search position is not evidence of conversion performance or bestseller status.
 
 Requires: AMAZON_CREATORS_CLIENT_ID, AMAZON_CREATORS_CLIENT_SECRET (from .env)
 """
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PRODUCTS_FILE = ROOT / "products.json"
 LOG_FILE = ROOT / "logs" / "discovery.log"
-TOKEN_URL = "https://api.amazon.com/auth/o2/token"
+TOKEN_ENDPOINTS = {"3.1": "https://api.amazon.com/auth/o2/token", "3.2": "https://api.amazon.co.uk/auth/o2/token", "3.3": "https://api.amazon.co.jp/auth/o2/token"}
 API_URL = "https://creatorsapi.amazon/catalog/v1/searchItems"
 MARKETPLACE = "www.amazon.com"
 
@@ -60,8 +61,9 @@ def post_json(url, body, headers):
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.loads(r.read())
     except urllib.error.HTTPError as e:
-        log_msg(f"HTTP Error {e.code}: {e.read()[:500]}")
-        return None
+        raise RuntimeError(f"Amazon API returned HTTP {e.code}; inspect credentials, access and request parameters") from None
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        raise RuntimeError("Amazon API connection or response failed") from None
 
 
 def get_access_token(cid, secret):
@@ -72,7 +74,10 @@ def get_access_token(cid, secret):
         "client_secret": secret,
         "scope": "creatorsapi::default"
     }
-    resp = post_json(TOKEN_URL, body, {})
+    version = os.environ.get("AMAZON_CREDENTIAL_VERSION", "3.1")
+    if version not in TOKEN_ENDPOINTS:
+        raise RuntimeError("AMAZON_CREDENTIAL_VERSION must be 3.1, 3.2 or 3.3")
+    resp = post_json(TOKEN_ENDPOINTS[version], body, {})
     if not resp:
         return None
     return resp.get("access_token")
@@ -81,11 +86,11 @@ def get_access_token(cid, secret):
 def search_products(token, tag, keyword, limit=10):
     """Search Amazon for products matching keyword."""
     body = {
-        "keywords": [keyword],
+        "keywords": keyword,
         "marketplace": MARKETPLACE,
         "partnerTag": tag,
-        "resources": ["itemInfo.title", "itemInfo.features", "images.primary", "offers.summaries"],
-        "maxResults": limit
+        "resources": ["itemInfo.title"],
+        "itemCount": min(10, max(1, limit))
     }
 
     resp = post_json(
@@ -94,15 +99,15 @@ def search_products(token, tag, keyword, limit=10):
         {"Authorization": f"Bearer {token}", "x-marketplace": MARKETPLACE}
     )
 
-    if not resp:
-        return []
+    if not isinstance(resp, dict) or resp.get("errors") or "searchResult" not in resp:
+        raise RuntimeError("Amazon search failed or returned an unexpected response")
 
     products = []
     for item in resp.get("searchResult", {}).get("items", []):
         asin = item.get("asin")
         title = item.get("itemInfo", {}).get("title", {}).get("displayValue", "")
 
-        if asin and title:
+        if asin and re.fullmatch(r"[A-Z0-9]{10}", asin) and title:
             products.append({
                 "asin": asin,
                 "title": title,
@@ -151,6 +156,11 @@ def main():
         return 1
 
     existing_asins = load_existing_asins()
+    report_path = os.environ.get("KFF_DISCOVERY_REPORT")
+    report = {"candidates": []}
+    if report_path and Path(report_path).exists():
+        report = json.loads(Path(report_path).read_text())
+        existing_asins.update(p["asin"] for p in report["candidates"])
     associate_tag = data.get("site", {}).get("associate_tag")
 
     if not associate_tag:
@@ -171,7 +181,7 @@ def main():
         keyword = query["keyword"]
         category = query["category"]
 
-        results = search_products(token, associate_tag, keyword, limit=20)
+        results = search_products(token, associate_tag, keyword, limit=10)
         log_msg(f"  {keyword}: {len(results)} results")
 
         for product in results:
@@ -198,6 +208,19 @@ def main():
 
     to_stage = candidates[:PRODUCTS_TO_STAGE]
     log_msg(f"Staging {len(to_stage)} new products for review:")
+
+    if report_path:
+        # Keep only ASINs and our own research metadata in Git; no API titles/images/offers.
+        report["last_verified_at"] = datetime.now(timezone.utc).isoformat()
+        report["ranking_basis"] = "Search position only; not conversion research"
+        report["candidates"].extend({"asin": p["asin"], "category": p["category"], "source_keyword": p["source"], "status": "needs_editorial_and_offer_verification", "discovered_at": report["last_verified_at"]} for p in to_stage)
+        target = Path(report_path)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        tmp = target.with_suffix(".tmp")
+        tmp.write_text(json.dumps(report, indent=2) + "\n")
+        tmp.replace(target)
+        log_msg(f"Queued {len(to_stage)} new ASINs; live catalog unchanged")
+        return 0
 
     staged_products = []
     for prod in to_stage:
@@ -237,4 +260,8 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except (RuntimeError, ValueError, KeyError, OSError) as exc:
+        log_msg(f"ERROR: {type(exc).__name__}: discovery stopped; no live import")
+        sys.exit(1)
