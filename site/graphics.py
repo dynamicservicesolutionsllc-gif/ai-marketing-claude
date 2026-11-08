@@ -113,6 +113,14 @@ def badge(im, x, y, size=26, text=BADGE):
     d.text((x + size * .7, y + size * .95), text, font=f, fill="white", anchor="lm")
 
 
+def draw_photo_credit(draw, photo, center, y, size):
+    review = REVIEWED_PHOTOS.get(Path(photo).stem, {})
+    if review.get("credit"):
+        credit = f'{review["credit"]} · Resized and cropped'
+        font, lines = _fit(draw, credit, "DejaVuSans.ttf", size, center * 2 - 60, 1, min_size=14)
+        draw.text((center, y), lines[0], font=font, fill=MUTED, anchor="mm")
+
+
 def pin_graphic(g, accent, site_name, photo=None):
     W, H = 1000, 1500
     if photo:
@@ -163,6 +171,7 @@ def _pin_with_photo(g, accent, site_name, photo):
     d.text((W / 2, 1325), "See the full pick →", font=_font("DejaVuSans-Bold.ttf", 44), fill="white", anchor="mm")
     d.text((W / 2, 1440), "#ad · As an Amazon Associate I earn from qualifying purchases",
            font=_font("DejaVuSans.ttf", 24), fill=MUTED, anchor="mm")
+    draw_photo_credit(d, photo, W / 2, 1480, 20)
     return im
 
 
@@ -178,6 +187,7 @@ def square_graphic(g, accent, photo=None):
         d.text((S / 2, 580), lines[0], font=f, fill=accent, anchor="mm")
         f, lines = _fit(d, g["headline"], "DejaVuSerif-Bold.ttf", 56, S - 90, 2, min_size=30)
         d.multiline_text((S / 2, 690), "\n".join(lines), font=f, fill=INK, anchor="mm", align="center", spacing=10)
+        draw_photo_credit(d, photo, S / 2, 775, 18)
         return im
     im = Image.new("RGB", (S, S), CREAM)
     d = ImageDraw.Draw(im)

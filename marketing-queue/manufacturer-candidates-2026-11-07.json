@@ -16,7 +16,8 @@
       "variant": "Aqua, 2-pack, 1-cup wells",
       "amazon_url": "https://www.amazon.com/dp/B07GSSR5V2",
       "seller_snapshot": "Souper Cubes (Amazon listing snapshot from the prior week, observed 2026-11-07)",
-      "photo_candidate": "https://commons.wikimedia.org/wiki/File:Eiswuerfelform-silikon.jpg"
+      "photo_candidate": "https://commons.wikimedia.org/wiki/File:Eiswuerfelform-silikon.jpg",
+      "photo_candidate_review": "Rejected for the product page: the photo shows shallow ice cube molds rather than deep, lidded food portion trays."
     },
     {
       "name": "Nordic Ware Heritage Bundt Pan",
@@ -35,16 +36,16 @@
     {
       "name": "Chef'n FreshForce Citrus Juicer",
       "source_url": "https://www.chefn.com/products/freshforce-citrus-juicer",
-      "status": "draft",
-      "asin": null,
-      "affiliate_link": null,
-      "photo_rights": "not_established",
-      "blocking_checks": [
-        "Verify exact Amazon listing, variant and seller",
-        "Obtain affiliate link",
-        "Obtain authorized exact-product photograph"
-      ],
-      "editorial_angle": "Citrus preparation for holiday cooking"
+      "status": "approved_for_import",
+      "asin": "B002XOB0P0",
+      "affiliate_link": "https://www.amazon.com/dp/B002XOB0P0/ref=nosim?tag=kitchenfi0fde-20",
+      "photo_rights": "CC BY 4.0, similar item shown",
+      "blocking_checks": [],
+      "editorial_angle": "Citrus preparation for holiday cooking",
+      "variant": "Yellow lemon-size handheld press, single unit",
+      "amazon_url": "https://www.amazon.com/dp/B002XOB0P0",
+      "seller_snapshot": "Amazon.com (new offer shown in Amazon listing snapshot dated 2026-10-17)",
+      "photo_source": "https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg"
     },
     {
       "name": "OXO Good Grips Cookie Press",

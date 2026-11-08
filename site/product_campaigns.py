@@ -60,6 +60,10 @@ def slide(product, heading, body, target):
     if product['photo_review'].get('exact_product') is False:
         draw.rectangle((0, 990, 1080, 1055), fill='#7b3625')
         draw.text((540, 1022), 'SIMILAR ITEM SHOWN', font=font(32), fill='white', anchor='mm')
+    review = product['photo_review']
+    if review.get('credit'):
+        draw.text((540, 1074), f'{review["credit"]} · Resized', font=font(23), fill='#2b2622', anchor='mm')
+        draw.text((540, 1680), review['rights_evidence'].removeprefix('https://'), font=font(24), fill='#2b2622', anchor='mm')
     y = 1090
     for text, size, max_lines in ((heading, 55, 3), (body, 42, 6)):
         while size > 28:
