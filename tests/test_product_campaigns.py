@@ -20,9 +20,9 @@ class ProductCampaignTests(unittest.TestCase):
         self.assertEqual(len(eligible),1)
         self.assertEqual(today,[])
 
-    def test_duplicate_and_sixth_product_fail(self):
+    def test_duplicate_and_sixteenth_product_fail(self):
         with self.assertRaises(ValueError):select_products([self.product,self.product],'2026-11-07')
-        with self.assertRaises(ValueError):select_products([dict(self.product,asin=str(i)) for i in range(6)],'2026-11-07')
+        with self.assertRaises(ValueError):select_products([dict(self.product,asin=str(i)) for i in range(16)],'2026-11-07')
 
     def test_assets_change_identity_and_no_false_post_success(self):
         changed=copy.deepcopy(self.product);changed['photo_review']['sha256']='changed'
