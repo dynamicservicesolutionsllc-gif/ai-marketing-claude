@@ -8,6 +8,7 @@ from collections import Counter
 import json
 from pathlib import Path
 import re
+from shutil import copyfile
 from urllib.parse import urlsplit
 
 from affiliate_links import validate_sitestripe_url
@@ -52,6 +53,8 @@ def prepare_import(data, entries):
         product['sitestripe_url'] = affiliate_url
         product['photo_review'] = verified_photo(entry, ROOT)
         product['source_review'] = {k: entry[k] for k in ('variant', 'seller', 'verified_at', 'source_url', 'content_rights', 'editorial_reason')}
+        if 'listing_evidence' in entry:
+            product['source_review']['listing_evidence'] = entry['listing_evidence']
         product['source_review']['link_source'] = 'supplied' if supplied_link else 'generated_from_asin'
         result['products'].append(product)
         seen.add(asin)
@@ -63,18 +66,47 @@ def prepare_import(data, entries):
     return result
 
 
+def read_due_entries(path, today):
+    entries = json.loads(path.read_text())
+    if not isinstance(entries, list):
+        raise ValueError('Import file must contain a JSON array')
+    return [entry for entry in entries if date.fromisoformat(entry['added']) <= today]
+
+
+def load_feed_entries(directory, reserved, today):
+    """Read a cumulative, verified data feed without running any code from its branch."""
+    entries = read_due_entries(directory / 'entries.json', today)
+    photos = []
+    for entry in entries:
+        asin = entry.get('asin', '')
+        if not re.fullmatch(r'B0[A-Z0-9]{8}', asin) or asin in reserved:
+            raise ValueError(f'Invalid or duplicate feed ASIN: {asin}')
+        reserved.add(asin)
+        proof = urlsplit(entry.get('listing_evidence', ''))
+        if proof.scheme != 'https' or not proof.hostname:
+            raise ValueError(f'Missing verified listing evidence for {asin}')
+        photo = directory / 'assets' / 'products' / f'{asin}.jpg'
+        if photo.is_symlink() or not photo.is_file():
+            raise ValueError(f'Missing feed photo for {asin}')
+        verified_photo(entry, directory)
+        photos.append(photo)
+    for photo in photos:
+        copyfile(photo, ROOT / 'assets' / 'products' / photo.name)
+    return entries
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input', type=Path)
+    parser.add_argument('--feed-directory', type=Path, help='Include entries from the configured verified feed')
     parser.add_argument('--apply', action='store_true', help='Write only after the entire batch validates')
     args = parser.parse_args()
     original = json.loads((ROOT / 'products.json').read_text())
-    entries = json.loads(args.input.read_text())
     today = datetime.now(ZoneInfo('America/New_York')).date()
-    # Release only the reviewed entries whose editorial publication date has arrived.
-    if not isinstance(entries, list):
-        raise ValueError('Import file must contain a JSON array')
-    entries = [entry for entry in entries if date.fromisoformat(entry['added']) <= today]
+    entries = read_due_entries(args.input, today)
+    if args.feed_directory:
+        reserved = {p['asin'] for p in original['products'] + original.get('staging', {}).get('products', []) + entries}
+        entries += load_feed_entries(args.feed_directory, reserved, today)
     result = prepare_import(original, entries)
     if args.apply and entries:
         target = ROOT / 'products.json'
