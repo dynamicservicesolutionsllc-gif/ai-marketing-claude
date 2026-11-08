@@ -1,9 +1,11 @@
 import copy
+from datetime import date
 import json
 from pathlib import Path
 import sys
 import unittest
 import tempfile
+from shutil import copyfile
 import hashlib
 from unittest.mock import patch
 from PIL import Image
@@ -85,6 +87,26 @@ class SiteStripeTests(unittest.TestCase):
                          'https://www.amazon.com/dp/B0ZZZZZZZZ/ref=nosim?tag=kitchenfi0fde-20')
         self.assertEqual(imported['source_review']['link_source'], 'generated_from_asin')
         self.assertIs(imported['photo_review']['exact_product'], False)
+
+    def test_feed_validates_and_copies_photos_only_for_due_unique_entries(self):
+        feed = Path(self.tmp.name) / 'feed'
+        photos = feed / 'assets' / 'products'
+        photos.mkdir(parents=True)
+        copyfile(self.photo, photos / self.photo.name)
+        self.photo.unlink()
+        today = date(2026, 11, 7)
+        entry = dict(self.product, added=today.isoformat(),
+                     listing_evidence='https://example.com/verified-listing')
+        future = dict(entry, asin='B0YYYYYYYY', added='2026-11-08')
+        (feed / 'entries.json').write_text(json.dumps([entry, future]))
+
+        with self.assertRaisesRegex(ValueError, 'duplicate feed ASIN'):
+            import_sitestripe.load_feed_entries(feed, {entry['asin']}, today)
+        self.assertFalse(self.photo.exists())
+        result = import_sitestripe.load_feed_entries(feed, set(), today)
+        self.assertEqual(result, [entry])
+        imported = prepare_import(self.data, result)['products'][-1]
+        self.assertEqual(imported['source_review']['listing_evidence'], entry['listing_evidence'])
 
     def test_invalid_batch_never_changes_source(self):
         before = copy.deepcopy(self.data)
