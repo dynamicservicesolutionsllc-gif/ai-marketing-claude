@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "asin": "B002XOB0P0",
+    "name": "Chef’n FreshForce Lemon Squeezer (Yellow)",
+    "category": "gadgets",
+    "subcategory": "food-prep-tools",
+    "blurb": "A handheld citrus press with a geared hinge for juicing lemon halves over a bowl or measuring cup. It suits recipes that call for a squeeze of fresh lemon, such as dressings, marinades, and glazes.",
+    "added": "2026-11-07",
+    "award": "For juicing lemons",
+    "graphic": {
+      "label": "FreshForce Lemon Squeezer",
+      "headline": "A Handheld Press for Lemons",
+      "points": [
+        "Geared hand press",
+        "Yellow lemon size",
+        "No outlet needed"
+      ]
+    },
+    "pin": {
+      "title": "Chef’n FreshForce Lemon Squeezer | What to Check Before Buying",
+      "description": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: “Lemon squeezing” by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+      "board": "Small Kitchen Gadgets We Love"
+    },
+    "suits": "For cooks who juice a lemon or two for vinaigrettes, marinades, and baking.",
+    "check": "Choose the yellow lemon size and check the cup opening if you regularly juice oversized lemons.",
+    "approved": true,
+    "variant": "Yellow lemon-size handheld press, single unit",
+    "seller": "Amazon.com (new offer shown in Amazon listing snapshot dated 2026-10-17)",
+    "verified_at": "2026-11-07",
+    "source_url": "https://www.chefn.com/products/freshforce-citrus-juicer",
+    "content_rights": "original-editorial-graphic",
+    "editorial_reason": "Holiday citrus prep for dressings, marinades, and glazes.",
+    "photo_review": {
+      "exact_product": false,
+      "kind": "handheld citrus press",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+      "rights_basis": "commercial-license",
+      "rights_evidence": "https://creativecommons.org/licenses/by/4.0/",
+      "author": "SKopp",
+      "license": "CC BY 4.0, resized and cropped",
+      "sha256": "0d45795b6c5548cef8ed7da2aacd97fe2e902c01187b8234f856839ebe8f4a43",
+      "credit": "“Lemon squeezing” by SKopp · CC BY 4.0"
+    }
+  }
+]
