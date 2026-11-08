@@ -14,7 +14,7 @@ from affiliate_links import validate_sitestripe_url
 from product_media import verified_photo
 
 ROOT = Path(__file__).resolve().parent
-DAILY_PRODUCT_LIMIT = 15
+DAILY_PRODUCT_LIMIT = 5
 
 
 def prepare_import(data, entries):
