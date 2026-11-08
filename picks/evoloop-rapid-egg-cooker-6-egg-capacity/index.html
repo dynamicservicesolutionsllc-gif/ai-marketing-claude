@@ -212,7 +212,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <span class="crumbs"><a href="../../">Home</a> › <a href="../../small-kitchen-appliances/">Small Kitchen Appliances</a> › <a href="../../guides/countertop-cooking/">Best Small Kitchen Appliances for Small Spaces</a></span>
   </div>
   <main id="main">
-    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
+    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. Amazon buttons on this page are affiliate links.</p>
     <article class="pick" id="B0B9P17YHK" data-pl="pick">
       <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B0B9P17YHK?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -239,8 +239,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>It is a countertop appliance with a plug, so check where it will live. Six eggs per batch is plenty for one household but not for a crowd.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
+    <section class="prose wide">
+      <h2>Current Amazon deals</h2>
+      <p>Explore Amazon's current deals; offers can change.</p>
+      <a class="btn" href="https://www.amazon.com/deals?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check current deals on Amazon</a>
+    </section>
     <section class="related-products">
-      <h2>Related products</h2>
+      <h2>Explore more kitchen products</h2>
+      <p>Browse other kitchen finds in our guides.</p>
       <div class="grid related">
       <article class="card" id="B004P2LEE0" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B004P2LEE0?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -253,14 +259,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0C33CHG99" data-pl="related">
-        <a class="img" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0C33CHG99-sq.webp" type="image/webp"><img src="../../img/B0C33CHG99-sq.png" alt="Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart (photo shows a similar air fryer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0BYF8PT3L" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0BYF8PT3L/ref=nosim?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0BYF8PT3L-sq.webp" type="image/webp"><img src="../../img/B0BYF8PT3L-sq.png" alt="Cuisinart 6-Quart Basket Air Fryer (AIR-200NAS) (photo shows a similar air fryer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/cosori-turboblaze-9-in-1-air-fryer-6-quart/">Cosori TurboBlaze 9-in-1 Air Fryer, 6-Quart</a></h3>
-          <p>A 6-quart square basket fits a family-size batch while keeping the footprint compact on the counter. Temperature runs from 90°F to 450°F across five fan speeds, and the basket and crisper tray use a PFAS-free ceramic nonstick coating.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0C33CHG99?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/cuisinart-6-quart-basket-air-fryer-air-200nas/">Cuisinart 6-Quart Basket Air Fryer (AIR-200NAS)</a></h3>
+          <p>A 6-quart basket air fryer with five functions, including Keep Warm for when dinner is ready before everyone else. It runs at 1800 watts with heat up to 450°F and a toss reminder on the touchscreen.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0BYF8PT3L/ref=nosim?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
@@ -326,15 +332,24 @@ window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.cal
     currency: 'USD'
   });
 
-  document.querySelectorAll('a[href*="amazon."]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      ttq.track('ClickButton', {
-        content_type: 'affiliate_product',
-        content_name: document.title
-      });
+  // Affiliate clicks are tracked site-wide by the separate handler below.
+</script>
+<!-- End TikTok product events -->
+<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
     });
   });
 </script>
-<!-- End TikTok product events -->
+<!-- End TikTok affiliate click events -->
 </body>
 </html>

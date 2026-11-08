@@ -212,7 +212,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <span class="crumbs"><a href="../../">Home</a> › <a href="../../kitchen-gadgets/">Kitchen Gadgets</a> › <a href="../../guides/cooking-tools/">Best Kitchen Scales, Meat Thermometers and Oven Mitts</a></span>
   </div>
   <main id="main">
-    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
+    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. Amazon buttons on this page are affiliate links.</p>
     <article class="pick" id="B0026RHI3M" data-pl="pick">
       <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B0026RHI3M?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -239,8 +239,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Measure your oven before buying: the large pan is 17 by 11 inches. Hand washing is recommended to keep the nonstick coating longer.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
+    <section class="prose wide">
+      <h2>Current Amazon deals</h2>
+      <p>Explore Amazon's current deals; offers can change.</p>
+      <a class="btn" href="https://www.amazon.com/deals?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check current deals on Amazon</a>
+    </section>
     <section class="related-products">
-      <h2>Related products</h2>
+      <h2>Explore more kitchen products</h2>
+      <p>Browse other kitchen finds in our guides.</p>
       <div class="grid related">
       <article class="card" id="B00M2J7PCI" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B00M2J7PCI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -275,14 +281,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B00X597ZXS" data-pl="related">
-        <a class="img" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B00X597ZXS-sq.webp" type="image/webp"><img src="../../img/B00X597ZXS-sq.png" alt="Spring Chef Swivel Vegetable Peeler (photo shows a similar vegetable peeler, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B096N3FTZP" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B096N3FTZP/ref=nosim?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B096N3FTZP-sq.webp" type="image/webp"><img src="../../img/B096N3FTZP-sq.png" alt="Instant Pot Vortex Plus ClearCook 6-Quart Air Fryer (photo shows a similar air fryer basket, not this exact product)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/spring-chef-swivel-vegetable-peeler/">Spring Chef Swivel Vegetable Peeler</a></h3>
-          <p>A dull peeler turns a sack of holiday potatoes into a long chore. This swivel peeler has dual stainless steel blades that glide over fruit and vegetables, a built-in blemish remover and a soft non-slip grip for right- or left-handed use.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B00X597ZXS?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/">Instant Pot Vortex Plus ClearCook 6-Quart Air Fryer</a></h3>
+          <p>A ClearCook window lets you check food without pulling out the basket. The 6-quart air fryer has six functions, from air frying to dehydrating, and dishwasher-safe baskets and trays.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B096N3FTZP/ref=nosim?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
@@ -326,15 +332,24 @@ window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.cal
     currency: 'USD'
   });
 
-  document.querySelectorAll('a[href*="amazon."]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      ttq.track('ClickButton', {
-        content_type: 'affiliate_product',
-        content_name: document.title
-      });
+  // Affiliate clicks are tracked site-wide by the separate handler below.
+</script>
+<!-- End TikTok product events -->
+<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
     });
   });
 </script>
-<!-- End TikTok product events -->
+<!-- End TikTok affiliate click events -->
 </body>
 </html>

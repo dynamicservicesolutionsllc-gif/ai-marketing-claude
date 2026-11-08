@@ -351,5 +351,21 @@ if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <script src="/quiz.js?v=eaee888b" defer></script>
 <script src="/js/video-generator.js" defer></script>
+<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
+    });
+  });
+</script>
+<!-- End TikTok affiliate click events -->
 </body>
 </html>

@@ -1,0 +1,304 @@
+{
+  "date": "2026-11-08",
+  "target_products": 15,
+  "ready_products": 6,
+  "status": "prepared_for_native_review",
+  "csv_warning": "Review file only. Blank publish dates publish immediately on upload. Never upload without native duplicate checks.",
+  "automatically_published_social_posts": 0,
+  "campaigns": [
+    {
+      "asin": "B0CS3V8M9H",
+      "creative_id": "B0CS3V8M9H-overview-b01c8c738cff",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B0CS3V8M9H-overview-b01c8c738cff.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B0CS3V8M9H.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Ninja Air Fryer Pro XL 6.5 Qt \u2013 Big-Batch Air Fryer for Families",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Ninja Air Fryer Pro XL 6.5 Qt \u2013 Big-Batch Air Fryer for Families",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Ninja Air Fryer Pro XL 6.5 Qt \u2013 Big-Batch Air Fryer for Families",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Ninja Air Fryer Pro XL 6.5 Qt \u2013 Big-Batch Air Fryer for Families",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Ninja Air Fryer Pro XL 6.5 Qt \u2013 Big-Batch Air Fryer for Families",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6.5-quart basket for family-size batches of fries, wings and roasted vegetables, with six functions and heat up to 450\u00b0F. The basket and crisper plate are dishwasher safe. Similar item shown. #airfryer #ninjaairfryer #familydinner #kitchenappliances https://kitchenfindsfavorites.com/picks/ninja-air-fryer-pro-xl-6-in-1-6-5-qt-af181/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B0CS3V8M9H-overview-b01c8c738cff",
+          "post_url": null
+        }
+      }
+    },
+    {
+      "asin": "B0CNY1YVDD",
+      "creative_id": "B0CNY1YVDD-overview-c0bbc48f8033",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B0CNY1YVDD-overview-c0bbc48f8033.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B0CNY1YVDD.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chefman 6-Quart Air Fryer \u2013 Slim Countertop Air Fryer with Hi-Fry",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chefman 6-Quart Air Fryer \u2013 Slim Countertop Air Fryer with Hi-Fry",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chefman 6-Quart Air Fryer \u2013 Slim Countertop Air Fryer with Hi-Fry",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chefman 6-Quart Air Fryer \u2013 Slim Countertop Air Fryer with Hi-Fry",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chefman 6-Quart Air Fryer \u2013 Slim Countertop Air Fryer with Hi-Fry",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A narrow 6-quart air fryer with four touchscreen presets, a 450\u00b0F Hi-Fry finish and a shake reminder. It shuts off automatically when the basket is removed. Similar item shown. #airfryer #smallkitchen #easydinner #kitchenappliances https://kitchenfindsfavorites.com/picks/chefman-turbofry-touch-6-quart-air-fryer/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B0CNY1YVDD-overview-c0bbc48f8033",
+          "post_url": null
+        }
+      }
+    },
+    {
+      "asin": "B096N3FTZP",
+      "creative_id": "B096N3FTZP-overview-9e6e54eb8c8a",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B096N3FTZP-overview-9e6e54eb8c8a.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B096N3FTZP.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Instant Vortex Plus ClearCook 6-Quart Air Fryer with Viewing Window",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Instant Vortex Plus ClearCook 6-Quart Air Fryer with Viewing Window",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Instant Vortex Plus ClearCook 6-Quart Air Fryer with Viewing Window",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Instant Vortex Plus ClearCook 6-Quart Air Fryer with Viewing Window",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Instant Vortex Plus ClearCook 6-Quart Air Fryer with Viewing Window",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart air fryer with a ClearCook window so you can check food without opening the basket. Six functions cover air fry, roast, broil, bake, reheat and dehydrate. Similar item shown. #airfryer #instantpot #airfryerrecipes #kitchenappliances https://kitchenfindsfavorites.com/picks/instant-pot-vortex-plus-clearcook-6-quart-air-fryer/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B096N3FTZP-overview-9e6e54eb8c8a",
+          "post_url": null
+        }
+      }
+    },
+    {
+      "asin": "B0BYF8PT3L",
+      "creative_id": "B0BYF8PT3L-overview-b4277a9db0cb",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B0BYF8PT3L-overview-b4277a9db0cb.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B0BYF8PT3L.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Cuisinart 6-Quart Basket Air Fryer with Keep Warm \u2013 AIR-200NAS",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Cuisinart 6-Quart Basket Air Fryer with Keep Warm \u2013 AIR-200NAS",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Cuisinart 6-Quart Basket Air Fryer with Keep Warm \u2013 AIR-200NAS",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Cuisinart 6-Quart Basket Air Fryer with Keep Warm \u2013 AIR-200NAS",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Cuisinart 6-Quart Basket Air Fryer with Keep Warm \u2013 AIR-200NAS",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances",
+          "website_link": "https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 6-quart basket air fryer with five functions, including Keep Warm, plus heat up to 450\u00b0F and a toss reminder on the touchscreen. Similar item shown. #airfryer #cuisinart #weeknightdinner #kitchenappliances https://kitchenfindsfavorites.com/picks/cuisinart-6-quart-basket-air-fryer-air-200nas/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B0BYF8PT3L-overview-b4277a9db0cb",
+          "post_url": null
+        }
+      }
+    },
+    {
+      "asin": "B07YLGKFR9",
+      "creative_id": "B07YLGKFR9-overview-fc789473e9d6",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B07YLGKFR9-overview-fc789473e9d6.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B07YLGKFR9.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Joseph Joseph Extend Expandable Dish Rack \u2013 Drains Into the Sink",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph",
+          "website_link": "https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Joseph Joseph Extend Expandable Dish Rack \u2013 Drains Into the Sink",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph",
+          "website_link": "https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Joseph Joseph Extend Expandable Dish Rack \u2013 Drains Into the Sink",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph",
+          "website_link": "https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Joseph Joseph Extend Expandable Dish Rack \u2013 Drains Into the Sink",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph",
+          "website_link": "https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Joseph Joseph Extend Expandable Dish Rack \u2013 Drains Into the Sink",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph",
+          "website_link": "https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. This stainless steel dish rack has two parts you can use together or apart, a spout that drains water into the sink, and a moveable cutlery drainer. Similar item shown. #dishrack #smallkitchen #kitchenorganization #josephjoseph https://kitchenfindsfavorites.com/picks/joseph-joseph-extend-steel-expandable-dish-rack/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B07YLGKFR9-overview-fc789473e9d6",
+          "post_url": null
+        }
+      }
+    },
+    {
+      "asin": "B077VHCMRN",
+      "creative_id": "B077VHCMRN-overview-aadd2d9e3a96",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B077VHCMRN-overview-aadd2d9e3a96.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B077VHCMRN.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "OXO POP Container 2.8 Qt \u2013 Airtight Pantry Storage with Push-Button Lid",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization",
+          "website_link": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "OXO POP Container 2.8 Qt \u2013 Airtight Pantry Storage with Push-Button Lid",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization",
+          "website_link": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "OXO POP Container 2.8 Qt \u2013 Airtight Pantry Storage with Push-Button Lid",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization",
+          "website_link": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "OXO POP Container 2.8 Qt \u2013 Airtight Pantry Storage with Push-Button Lid",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization",
+          "website_link": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "OXO POP Container 2.8 Qt \u2013 Airtight Pantry Storage with Push-Button Lid",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization",
+          "website_link": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. A 2.8-quart airtight canister with a push-button lid that seals with one press. It stacks with other POP containers and is BPA free and dishwasher safe. Similar item shown. #pantryorganization #oxo #foodstorage #kitchenorganization https://kitchenfindsfavorites.com/picks/oxo-good-grips-pop-container-2-8-qt/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B077VHCMRN-overview-aadd2d9e3a96",
+          "post_url": null
+        }
+      }
+    }
+  ]
+}

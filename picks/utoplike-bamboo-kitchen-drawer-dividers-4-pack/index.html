@@ -212,7 +212,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <span class="crumbs"><a href="../../">Home</a> › <a href="../../kitchen-organization/">Kitchen Organization</a> › <a href="../../guides/drawer-organizers/">Best Kitchen Drawer Organizers for Small Kitchens</a></span>
   </div>
   <main id="main">
-    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
+    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. Amazon buttons on this page are affiliate links.</p>
     <article class="pick" id="B07HQMZ7HH" data-pl="pick">
       <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B07HQMZ7HH?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -239,8 +239,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>Measure the inside of your drawer first: they fit 17.8 to 20.6 inches and stand 2.4 inches tall.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
+    <section class="prose wide">
+      <h2>Current Amazon deals</h2>
+      <p>Explore Amazon's current deals; offers can change.</p>
+      <a class="btn" href="https://www.amazon.com/deals?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check current deals on Amazon</a>
+    </section>
     <section class="related-products">
-      <h2>Related products</h2>
+      <h2>Explore more kitchen products</h2>
+      <p>Browse other kitchen finds in our guides.</p>
       <div class="grid related">
       <article class="card" id="B08KXKVT4K" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B08KXKVT4K?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -326,15 +332,24 @@ window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.cal
     currency: 'USD'
   });
 
-  document.querySelectorAll('a[href*="amazon."]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      ttq.track('ClickButton', {
-        content_type: 'affiliate_product',
-        content_name: document.title
-      });
+  // Affiliate clicks are tracked site-wide by the separate handler below.
+</script>
+<!-- End TikTok product events -->
+<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
     });
   });
 </script>
-<!-- End TikTok product events -->
+<!-- End TikTok affiliate click events -->
 </body>
 </html>
