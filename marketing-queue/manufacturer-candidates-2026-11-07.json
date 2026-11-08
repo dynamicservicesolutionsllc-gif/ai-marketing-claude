@@ -51,15 +51,19 @@
       "name": "OXO Good Grips Cookie Press",
       "source_url": "https://www.oxo.com/media/wysiwyg/PDF_Files/1243_1257580%20OXO%20Good%20Grips%20Cookie%20Press%20Instruction%20Booklet.pdf",
       "status": "draft",
-      "asin": null,
-      "affiliate_link": null,
+      "asin": "B00ABH0PYI",
+      "affiliate_link": "https://www.amazon.com/dp/B00ABH0PYI/ref=nosim?tag=kitchenfi0fde-20",
       "photo_rights": "not_established",
       "blocking_checks": [
-        "Verify exact Amazon listing, variant and seller",
-        "Obtain affiliate link",
-        "Obtain authorized exact-product photograph"
+        "Verify suitable photo and reuse rights before release"
       ],
-      "editorial_angle": "Holiday spritz cookies"
+      "editorial_angle": "Holiday spritz cookies",
+      "variant": "14-piece set, including 12 stainless steel disks and storage case; OXO SKU 1257580",
+      "manufacturer_product_url": "https://www.oxo.com/14-piece-cookie-press-set.html",
+      "amazon_url": "https://www.amazon.com/dp/B00ABH0PYI",
+      "seller_snapshot": "Hour Loop; Amazon offer snapshot timestamp 2026-11-03. Seller can change.",
+      "photo_candidate": "https://www.si.edu/object/deluxe-cookie-king:nmah_1321747",
+      "photo_candidate_review": "Search listing describes CC0, but direct retrieval did not verify the specific image and dimensions. Vintage similar item only."
     },
     {
       "name": "Lodge Black Silicone Hot Handle Holder",
