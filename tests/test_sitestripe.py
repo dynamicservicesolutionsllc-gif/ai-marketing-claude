@@ -72,9 +72,19 @@ class SiteStripeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             prepare_import(self.data, [self.product])
 
-    def test_more_than_five_products_in_a_day_is_rejected(self):
-        with self.assertRaisesRegex(ValueError, 'At most five'):
-            prepare_import(self.data, [self.product] * 6)
+    def test_more_than_fifteen_products_in_a_day_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'At most 15'):
+            prepare_import(self.data, [self.product] * 16)
+
+    def test_generated_link_and_similar_photo_are_preserved(self):
+        product = copy.deepcopy(self.product)
+        product.pop('sitestripe_url')
+        product['photo_review'].update(exact_product=False, kind='silicone freezer tray')
+        imported = prepare_import(self.data, [product])['products'][-1]
+        self.assertEqual(imported['sitestripe_url'],
+                         'https://www.amazon.com/dp/B0ZZZZZZZZ/ref=nosim?tag=kitchenfi0fde-20')
+        self.assertEqual(imported['source_review']['link_source'], 'generated_from_asin')
+        self.assertIs(imported['photo_review']['exact_product'], False)
 
     def test_invalid_batch_never_changes_source(self):
         before = copy.deepcopy(self.data)
