@@ -1,9 +1,59 @@
 {
   "date": "2026-11-07",
   "target_products": 15,
-  "ready_products": 0,
-  "status": "blocked_no_verified_products",
+  "ready_products": 1,
+  "status": "prepared_for_native_review",
   "csv_warning": "Review file only. Blank publish dates publish immediately on upload. Never upload without native duplicate checks.",
   "automatically_published_social_posts": 0,
-  "campaigns": []
+  "campaigns": [
+    {
+      "asin": "B002XOB0P0",
+      "creative_id": "B002XOB0P0-overview-e122d4414fef",
+      "video": "https://kitchenfindsfavorites.com/videos/products/B002XOB0P0-overview-e122d4414fef.mp4",
+      "image": "https://kitchenfindsfavorites.com/img/B002XOB0P0.png",
+      "page_url": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/",
+      "platforms": {
+        "pinterest": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chef\u2019n FreshForce Lemon Squeezer | What to Check Before Buying",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=pinterest&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg Full guide: link in bio.",
+          "post_url": null
+        },
+        "facebook": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chef\u2019n FreshForce Lemon Squeezer | What to Check Before Buying",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=facebook&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "post_url": null
+        },
+        "instagram": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chef\u2019n FreshForce Lemon Squeezer | What to Check Before Buying",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=instagram&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg Full guide: link in bio.",
+          "post_url": null
+        },
+        "tiktok": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chef\u2019n FreshForce Lemon Squeezer | What to Check Before Buying",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=tiktok&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg Full guide: link in bio.",
+          "post_url": null
+        },
+        "youtube": {
+          "status": "awaiting_native_duplicate_check_and_publish",
+          "title": "Chef\u2019n FreshForce Lemon Squeezer | What to Check Before Buying",
+          "description": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg",
+          "website_link": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "caption": "#ad As an Amazon Associate I earn from qualifying purchases. See whether this handheld press fits your lemon prep. Similar item shown. Photo: \u201cLemon squeezing\u201d by SKopp, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), resized and cropped. Original: https://commons.wikimedia.org/wiki/File:Lemon_squeezing.jpg https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/?utm_source=youtube&utm_medium=organic_social&utm_campaign=B002XOB0P0-overview-e122d4414fef",
+          "post_url": null
+        }
+      }
+    }
+  ]
 }
