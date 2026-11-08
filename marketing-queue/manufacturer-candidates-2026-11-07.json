@@ -6,15 +6,17 @@
       "name": "Souper Cubes 1-Cup Freezer Tray",
       "source_url": "https://www.soupercubes.com/pages/souper-cubes-size-guide",
       "status": "draft",
-      "asin": null,
-      "affiliate_link": null,
+      "asin": "B07GSSR5V2",
+      "affiliate_link": "https://www.amazon.com/dp/B07GSSR5V2/ref=nosim?tag=kitchenfi0fde-20",
       "photo_rights": "not_established",
       "blocking_checks": [
-        "Verify exact Amazon listing, variant and seller",
-        "Obtain affiliate link",
-        "Obtain authorized exact-product photograph"
+        "Clear suitable photo rights for the website, Pin and video outputs"
       ],
-      "editorial_angle": "Portioning holiday leftovers"
+      "editorial_angle": "Portioning holiday leftovers",
+      "variant": "Aqua, 2-pack, 1-cup wells",
+      "amazon_url": "https://www.amazon.com/dp/B07GSSR5V2",
+      "seller_snapshot": "Souper Cubes (Amazon listing snapshot from the prior week, observed 2026-11-07)",
+      "photo_candidate": "https://commons.wikimedia.org/wiki/File:Eiswuerfelform-silikon.jpg"
     },
     {
       "name": "Nordic Ware Heritage Bundt Pan",
