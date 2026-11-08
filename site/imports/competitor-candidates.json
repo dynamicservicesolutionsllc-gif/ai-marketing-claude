@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "description": "Unverified product candidates surfaced in public third-party kitchen shopping roundups. This file is research intake only; it does not approve products for publication or Amazon import.",
+  "candidates": [
+    {
+      "asin": "B07DJ53GZQ",
+      "name": "Spring Chef Stainless Steel Magnetic Measuring Spoons Set",
+      "category": "gadgets",
+      "subcategory": "measuring-tools",
+      "source_publisher": "Food Network",
+      "source_url": "https://www.foodnetwork.com/how-to/packages/shopping/top-rated-bestselling-kitchen-products-on-amazon",
+      "source_product_link": "https://www.amazon.com/dp/B07DJ53GZQ",
+      "accessed": "2026-11-08",
+      "status": "needs_amazon_verification",
+      "fit_rationale": "A compact food-prep measuring tool for home cooks; confirm the exact set and variant before consideration."
+    },
+    {
+      "asin": "B07896RK6Y",
+      "name": "Cambom Manual Rotary Cheese Grater",
+      "category": "gadgets",
+      "subcategory": "food-prep-tools",
+      "source_publisher": "Food Network",
+      "source_url": "https://www.foodnetwork.com/how-to/packages/shopping/top-rated-bestselling-kitchen-products-on-amazon",
+      "source_product_link": "https://www.amazon.com/dp/B07896RK6Y",
+      "accessed": "2026-11-08",
+      "status": "needs_amazon_verification",
+      "fit_rationale": "A manual food-prep tool that may suit cooks who grate cheese at home; confirm the current product identity and included parts."
+    },
+    {
+      "asin": "B01MZ14LJV",
+      "name": "Kitchen Gizmo Snap N’ Strain Pot & Pasta Strainer",
+      "category": "gadgets",
+      "subcategory": "food-prep-tools",
+      "source_publisher": "Food Network",
+      "source_url": "https://www.foodnetwork.com/how-to/packages/shopping/top-rated-bestselling-kitchen-products-on-amazon",
+      "source_product_link": "https://www.amazon.com/dp/B01MZ14LJV",
+      "accessed": "2026-11-08",
+      "status": "needs_amazon_verification",
+      "fit_rationale": "A compact clip-on straining tool that could fit small-kitchen food-prep needs; verify current listing, compatibility, and variant."
+    },
+    {
+      "asin": "B000X6K9J8",
+      "name": "EZ Off Under-Cabinet Jar Opener",
+      "category": "gadgets",
+      "subcategory": "kitchen-tools",
+      "source_publisher": "Food Network",
+      "source_url": "https://www.foodnetwork.com/how-to/packages/shopping/top-rated-bestselling-kitchen-products-on-amazon",
+      "source_product_link": "https://www.amazon.com/dp/B000X6K9J8",
+      "accessed": "2026-11-08",
+      "status": "needs_amazon_verification",
+      "fit_rationale": "An under-cabinet jar-opening aid for kitchen storage and accessibility; verify exact model and installation details."
+    }
+  ]
+}
