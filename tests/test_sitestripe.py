@@ -72,9 +72,9 @@ class SiteStripeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             prepare_import(self.data, [self.product])
 
-    def test_more_than_five_products_in_a_day_is_rejected(self):
-        with self.assertRaisesRegex(ValueError, 'At most 5'):
-            prepare_import(self.data, [self.product] * 6)
+    def test_more_than_twenty_products_in_a_day_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, 'At most 20'):
+            prepare_import(self.data, [self.product] * 21)
 
     def test_generated_link_and_similar_photo_are_preserved(self):
         product = copy.deepcopy(self.product)
