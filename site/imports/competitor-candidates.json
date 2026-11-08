@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Unverified product candidates surfaced in public third-party kitchen shopping roundups. This file is research intake only; it does not approve products for publication or Amazon import.",
+  "description": "Research intake from public third-party kitchen shopping roundups. Listing identity and variant checks are recorded per candidate; candidates are not approved for import. Current offers, sellers, and availability can change and are not confirmed here.",
   "candidates": [
     {
       "asin": "B07DJ53GZQ",
@@ -12,7 +12,14 @@
       "source_product_link": "https://www.amazon.com/dp/B07DJ53GZQ",
       "accessed": "2026-11-08",
       "status": "needs_amazon_verification",
-      "fit_rationale": "A compact food-prep measuring tool for home cooks; confirm the exact set and variant before consideration."
+      "fit_rationale": "A compact food-prep measuring tool for home cooks; confirm the exact set and variant before consideration.",
+      "amazon_identity_status": "not_confirmed_on_amazon",
+      "exact_listing_title": "Spring Chef Stainless Steel Magnetic Measuring Spoons Set of 8, Black | Dual Sided Metal Teaspoon & Tablespoon Measuring Spoons with Leveler for Dry & Liquid Ingredients, Nesting, Dishwasher Safe",
+      "variant": "Set of 8, Black",
+      "identity_evidence": "Public Amazon product link from source page resolves to this ASIN; a third-party Amazon catalog/index snapshot matches this title and variant. The Amazon detail page fetch returned 503, so direct Amazon confirmation remains pending.",
+      "evidence_url": "https://app.parseshelf.com/best-sellers/asin/B07DJ53GZQ/",
+      "evidence_snapshot_age": "2 days before 2026-11-08",
+      "offer_status": "Current offer, seller, and availability not verified."
     },
     {
       "asin": "B07896RK6Y",
@@ -24,7 +31,14 @@
       "source_product_link": "https://www.amazon.com/dp/B07896RK6Y",
       "accessed": "2026-11-08",
       "status": "needs_amazon_verification",
-      "fit_rationale": "A manual food-prep tool that may suit cooks who grate cheese at home; confirm the current product identity and included parts."
+      "fit_rationale": "A manual food-prep tool that may suit cooks who grate cheese at home; confirm the current product identity and included parts.",
+      "amazon_identity_status": "confirmed_on_amazon_product_page_snapshot",
+      "exact_listing_title": "Cambom Rotary Cheese Grater Hand Crank Cheese Shredder for Fresh Cheese, Vegetable, Nuts, Non-slip Suction Base, Three Blades, Blue",
+      "variant": "3 blades, Blue",
+      "identity_evidence": "Amazon product page snapshot title and variation data match this ASIN and selected variant.",
+      "evidence_url": "https://www.amazon.com/dp/B07896RK6Y",
+      "evidence_snapshot_age": "2 weeks before 2026-11-08",
+      "offer_status": "Current offer, seller, and availability not verified."
     },
     {
       "asin": "B01MZ14LJV",
@@ -36,7 +50,14 @@
       "source_product_link": "https://www.amazon.com/dp/B01MZ14LJV",
       "accessed": "2026-11-08",
       "status": "needs_amazon_verification",
-      "fit_rationale": "A compact clip-on straining tool that could fit small-kitchen food-prep needs; verify current listing, compatibility, and variant."
+      "fit_rationale": "A compact clip-on straining tool that could fit small-kitchen food-prep needs; verify current listing, compatibility, and variant.",
+      "amazon_identity_status": "confirmed_on_amazon_product_page_snapshot",
+      "exact_listing_title": "Kitchen Gizmo Snap N' Strain Pot Strainer - Silicone Pasta Strainer Gadget",
+      "variant": "Gray, 1 count",
+      "identity_evidence": "Amazon product page snapshot title and variation data match this ASIN and selected variant.",
+      "evidence_url": "https://www.amazon.com/dp/B01MZ14LJV",
+      "evidence_snapshot_age": "4 days before 2026-11-08",
+      "offer_status": "Current offer, seller, and availability not verified."
     },
     {
       "asin": "B000X6K9J8",
@@ -48,7 +69,14 @@
       "source_product_link": "https://www.amazon.com/dp/B000X6K9J8",
       "accessed": "2026-11-08",
       "status": "needs_amazon_verification",
-      "fit_rationale": "An under-cabinet jar-opening aid for kitchen storage and accessibility; verify exact model and installation details."
+      "fit_rationale": "An under-cabinet jar-opening aid for kitchen storage and accessibility; verify exact model and installation details.",
+      "amazon_identity_status": "confirmed_on_amazon_product_page_snapshot",
+      "exact_listing_title": "EZ Off Jar Opener for Seniors - Under Cabinet Jar Openers for Weak Hands, Easy Grip, Arthritis Jar Opener, One Handed Gadgets & Bottle Opener - White",
+      "variant": "White, 1 pack",
+      "identity_evidence": "Amazon product page snapshot title and variation data match this ASIN and selected variant.",
+      "evidence_url": "https://www.amazon.com/dp/B000X6K9J8",
+      "evidence_snapshot_age": "3 weeks before 2026-11-08",
+      "offer_status": "Current offer, seller, and availability not verified."
     }
   ]
 }
