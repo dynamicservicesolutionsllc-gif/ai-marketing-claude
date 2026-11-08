@@ -13,6 +13,7 @@ from zoneinfo import ZoneInfo
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from product_media import verified_photo
+from import_sitestripe import DAILY_PRODUCT_LIMIT
 
 ROOT = Path(__file__).resolve().parent
 DISCLOSURE = '#ad As an Amazon Associate I earn from qualifying purchases.'
@@ -23,8 +24,8 @@ HEADERS = ['Title', 'Media URL', 'Pinterest board', 'Thumbnail', 'Description', 
 def select_products(feed, day):
     eligible = [p for p in feed if p.get('sitestripe_url') and p.get('photo_review')]
     today = [p for p in eligible if p['added'] == day]
-    if len(today) > 5 or len({p['asin'] for p in eligible}) != len(eligible):
-        raise ValueError('Campaign must contain at most five unique new products per date')
+    if len(today) > DAILY_PRODUCT_LIMIT or len({p['asin'] for p in eligible}) != len(eligible):
+        raise ValueError(f'Campaign must contain at most {DAILY_PRODUCT_LIMIT} unique new products per date')
     return eligible, today
 
 
@@ -56,6 +57,9 @@ def slide(product, heading, body, target):
         # Contain the exact approved photo; do not invent or distort the product.
         photo = ImageOps.contain(source.convert('RGB'), (980, 850))
         image.paste(photo, ((1080-photo.width)//2, 190+(850-photo.height)//2))
+    if product['photo_review'].get('exact_product') is False:
+        draw.rectangle((0, 990, 1080, 1055), fill='#7b3625')
+        draw.text((540, 1022), 'SIMILAR ITEM SHOWN', font=font(32), fill='white', anchor='mm')
     y = 1090
     for text, size, max_lines in ((heading, 55, 3), (body, 42, 6)):
         while size > 28:
@@ -129,14 +133,14 @@ def main():
             writer.writerow({'Title':p['pin']['title'],'Media URL':p['pin_image'],'Pinterest board':p['pin']['board'],
                              'Description':p['pin']['description'],'Link':c['platforms']['pinterest']['website_link'],
                              'Publish date':'','Keywords':p['subcategory'].replace('-',' ')})
-    (folder/'campaigns.json').write_text(json.dumps({'date':args.date,'target_products':5,'ready_products':len(today),
+    (folder/'campaigns.json').write_text(json.dumps({'date':args.date,'target_products':DAILY_PRODUCT_LIMIT,'ready_products':len(today),
         'status':'prepared_for_native_review' if today else 'blocked_no_verified_products',
         'csv_warning':'Review file only. Blank publish dates publish immediately on upload. Never upload without native duplicate checks.',
         'automatically_published_social_posts':0,'campaigns':batch},indent=2)+'\n')
     for p in eligible:
         p['product_video']=f'{base}/videos/products/{media_id(p)}.mp4'
     (ROOT/'public/products.json').write_text(json.dumps(feed,indent=2)+'\n')
-    print(f'{len(today)}/5 verified products prepared for {args.date}; zero social posts claimed')
+    print(f'{len(today)}/{DAILY_PRODUCT_LIMIT} verified products prepared for {args.date}; zero social posts claimed')
 
 
 if __name__=='__main__':
