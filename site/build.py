@@ -20,7 +20,7 @@ import re
 import shutil
 import sys
 from collections import Counter
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from affiliate_links import product_affiliate_url, validate_sitestripe_url
 
@@ -416,6 +416,67 @@ def page_node(site, kind, path, name, description):
     return {"@type": kind, "@id": f"{site['url']}/{path}#page", "url": f"{site['url']}/{path}", "name": name,
             "description": description, "isPartOf": {"@id": f"{site['url']}/#site"},
             "publisher": {"@id": f"{site['url']}/#org"}}
+
+
+# Hand-written articles committed straight into public/ (build.py doesn't render them). The build adds them to the
+# sitemap and keeps an Article + BreadcrumbList (+ FAQPage when the page has a "Frequently asked questions" section)
+# JSON-LD block in each, derived from the page's own <h1>, meta description, "Published" date and Q&A.
+STATIC_ARTICLES = [
+    "thanksgiving-prep-plan/",
+    "thanksgiving-make-ahead-timeline/",
+    "learn/freezer-tray-buying-checklist/",
+]
+STATIC_LD_START, STATIC_LD_END = "<!-- kff:static-ld -->", "<!-- /kff:static-ld -->"
+
+
+def _text(fragment):
+    return html.unescape(re.sub(r"<[^>]+>", "", fragment)).strip()
+
+
+def static_article_ld(site, path, page):
+    """Article/BreadcrumbList/FAQPage graph for a hand-written page; returns (graph, published YYYY-MM-DD)."""
+    url = f"{site['url']}/{path}"
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S)
+    desc = re.search(r'<meta name="description" content="([^"]*)"', page)
+    pub = re.search(r"Published ([A-Z][a-z]+ \d{1,2}, \d{4})", page)
+    if not (h1 and desc and pub):
+        sys.exit(f"Static article {path} needs an <h1>, a meta description and a 'Published Month D, YYYY' line")
+    published = datetime.strptime(pub.group(1), "%B %d, %Y").date().isoformat()
+    headline = _text(h1.group(1))
+    graph = [
+        {"@type": "Article", "@id": f"{url}#article", "headline": headline, "description": html.unescape(desc.group(1)),
+         "datePublished": published, "url": url, "mainEntityOfPage": url,
+         "isPartOf": {"@id": f"{site['url']}/#site"}, "publisher": {"@id": f"{site['url']}/#org"}},
+        breadcrumbs(site, [(headline, path)]),
+    ]
+    faq = re.search(r"<h2[^>]*>\s*Frequently asked questions\s*</h2>(.*?)(?=<h2|</main>|</article>|$)", page, re.S | re.I)
+    if faq:
+        qa = re.findall(r"<h3[^>]*>(.*?)</h3>\s*<p[^>]*>(.*?)</p>", faq.group(1), re.S)
+        if qa:
+            graph.append({"@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": _text(q), "acceptedAnswer": {"@type": "Answer", "text": _text(a)}}
+                for q, a in qa]})
+    return {"@context": "https://schema.org", "@graph": graph}, published
+
+
+def publish_static_articles(site):
+    """Insert/refresh the JSON-LD block in each hand-written article; returns sitemap entries."""
+    urls = []
+    for path in STATIC_ARTICLES:
+        f = OUT / path / "index.html"
+        if not f.exists():
+            print(f"Static article {path} not found; skipped")
+            continue
+        page = f.read_text(encoding="utf-8")
+        page = re.sub(re.escape(STATIC_LD_START) + r".*?" + re.escape(STATIC_LD_END), "", page, flags=re.S)
+        graph, published = static_article_ld(site, path, page)
+        block = STATIC_LD_START + ld(graph) + STATIC_LD_END
+        if "</head>" not in page:
+            sys.exit(f"Static article {path} has no </head>")
+        page = page.replace("</head>", block + "</head>", 1)
+        f.write_text(page, encoding="utf-8")
+        urls.append((f"{site['url']}/{path}", published))
+    return urls
 
 
 CSS = """
@@ -2330,6 +2391,7 @@ def main():
     (OUT / "thanksgiving-timeline").mkdir(exist_ok=True)
     (OUT / "thanksgiving-timeline" / "index.html").write_text(render_thanksgiving_timeline(data), encoding="utf-8")
     extra_urls.append((f"{url}/thanksgiving-timeline/", None))
+    extra_urls += publish_static_articles(data["site"])
     (OUT / "404.html").write_text(render_simple(
         data, "404.html", "Page not found", "That page isn't here",
         "The pick you're looking for may have moved or been removed. Everything we currently recommend is on the home page."),
