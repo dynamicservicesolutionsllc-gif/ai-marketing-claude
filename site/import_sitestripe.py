@@ -14,14 +14,15 @@ from affiliate_links import validate_sitestripe_url
 from product_media import verified_photo
 
 ROOT = Path(__file__).resolve().parent
+DAILY_PRODUCT_LIMIT = 15
 
 
 def prepare_import(data, entries):
     if not isinstance(entries, list):
         raise ValueError('Import file must contain a JSON array')
     counts = Counter(entry.get('added') for entry in entries)
-    if any(count > 5 for count in counts.values()):
-        raise ValueError('At most five new products may be released per day')
+    if any(count > DAILY_PRODUCT_LIMIT for count in counts.values()):
+        raise ValueError(f'At most {DAILY_PRODUCT_LIMIT} new products may be released per day')
     result = copy.deepcopy(data)
     tag = data['site']['associate_tag']
     seen = {p['asin'] for p in data['products']}
@@ -32,7 +33,9 @@ def prepare_import(data, entries):
         asin = entry.get('asin', '')
         if not re.fullmatch(r'B0[A-Z0-9]{8}', asin) or asin in seen or asin in staged:
             raise ValueError(f'Invalid, existing or staged ASIN: {asin}')
-        validate_sitestripe_url(entry.get('sitestripe_url'), asin, tag)
+        supplied_link = entry.get('sitestripe_url')
+        affiliate_url = supplied_link or f'https://www.amazon.com/dp/{asin}/ref=nosim?tag={tag}'
+        validate_sitestripe_url(affiliate_url, asin, tag)
         for field in ('variant', 'seller', 'editorial_reason'):
             if not isinstance(entry.get(field), str) or not entry[field].strip():
                 raise ValueError(f'Missing verified {field}')
@@ -45,8 +48,11 @@ def prepare_import(data, entries):
         allowed = ('asin', 'name', 'category', 'subcategory', 'blurb', 'added', 'award',
                    'graphic', 'pin', 'suits', 'check', 'sitestripe_url')
         product = {k: entry[k] for k in allowed if k in entry}
+        # Keep the existing link key for compatibility with the builder and feeds.
+        product['sitestripe_url'] = affiliate_url
         product['photo_review'] = verified_photo(entry, ROOT)
         product['source_review'] = {k: entry[k] for k in ('variant', 'seller', 'verified_at', 'source_url', 'content_rights', 'editorial_reason')}
+        product['source_review']['link_source'] = 'supplied' if supplied_link else 'generated_from_asin'
         result['products'].append(product)
         seen.add(asin)
     # Reuse all existing site content, taxonomy, disclosure and duplicate checks.
