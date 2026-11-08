@@ -7,11 +7,11 @@
   "candidate_count": 50,
   "purpose": "Research intake and Pinterest copy preparation only. Do not publish, import, or treat as current Amazon offer data until each exact Amazon listing and variation are verified through an authorized method.",
   "methodology": {
-    "source_policy": "Used selected public editorial and affiliate roundup pages. Did not bulk crawl or reuse competitors' prose, images, or tracking IDs. Bare ASINs were copied from the source pages' product links.",
+    "source_policy": "Used selected public Food Network and Good Housekeeping editorial/affiliate roundups. Did not bulk crawl or reuse competitors' prose, images, or tracking IDs. Bare ASINs were copied from source-page product links.",
     "scoring": "Weighted heuristic: demand evidence 25%, audience fit 25%, purchase intent 20%, content gap/competition 15%, affiliate/editorial suitability 15%. A score is a comparative research estimate, not a sales forecast.",
     "demand_limits": "Roundup placement, ratings, and review counts are dated third-party source statements, not current Amazon sales, conversion, rank, or availability. No sales volume is inferred.",
     "pinterest_trends": "Pinterest Spring Trend Report 2026 reports cozy food, creative dining, kitchen comfort and pantry-staple themes. This informs creative direction only, not demand scores.",
-    "publication_gate": "Before publishing any Pin, confirm ASIN title and variant on the live Amazon page, check seller/availability, ensure the matching site product page exists, create an original or licensed image, and review the pin disclosure/destination."
+    "publication_gate": "Before publishing any Pin, confirm the ASIN title and variant on the live Amazon page, check seller/availability, ensure the matching site product page exists, create an original or licensed image, and review Pinterest disclosure and spam guidance. Pin copy is draft only."
   },
   "source_pages": [
     {
@@ -55,6 +55,13 @@
       "url": "https://www.foodnetwork.com/how-to/packages/shopping/best-bakeware-on-amazon",
       "updated": "2026-10-12",
       "signal": "Bakeware roundup states selections have at least a 4.4-star Amazon rating; no live sales rank is provided."
+    },
+    {
+      "publisher": "Good Housekeeping",
+      "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+      "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+      "updated": "2026-07-30",
+      "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
     }
   ],
   "products": [
@@ -255,6 +262,53 @@
       "rank": 4
     },
     {
+      "asin": "B07GSSSTY9",
+      "name": "Souper Cubes Leftover Soup Freezing Tray",
+      "marketplace": "Amazon.com US",
+      "category": "organization",
+      "subcategory": "meal-prep-storage",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B07GSSSTY9",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Meal-prep households and cooks who freeze leftovers",
+        "use_case": "Compare portioned freezer storage for soup, sauces, and batch-cooked food.",
+        "buyer_objection": "Check compartment volume, tray dimensions, lid fit, freezer-to-oven guidance, and cleaning instructions."
+      },
+      "research": {
+        "keyword_hypothesis": "freezer meal prep trays",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.8,
+        "audience_fit_score_0_5": 4.7,
+        "purchase_intent_score_0_5": 4.3,
+        "content_gap_score_0_5": 3.5,
+        "affiliate_suitability_score_0_5": 4.4,
+        "weighted_opportunity_score_0_5": 4.17,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "Compare portioned freezer storage for soup, sauces, and batch-cooked food.",
+        "why_it_may_not_sell": "Check compartment volume, tray dimensions, lid fit, freezer-to-oven guidance, and cleaning instructions."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Freezer meal prep trays for Home Cooks: Souper Cubes Leftover Soup",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Compare portioned freezer storage for soup, sauces, and batch-cooked food. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/souper-cubes-leftover-soup-freezing-tray/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Kitchen Organization Must-Haves",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for freezer meal prep trays. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 5
+    },
+    {
       "rank_candidate": 25,
       "asin": "B00007J5U7",
       "name": "Zojirushi NS-ZCC10 Rice Cooker",
@@ -301,7 +355,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Zojirushi rice cooker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 5
+      "rank": 6
     },
     {
       "rank_candidate": 43,
@@ -350,7 +404,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for enameled cast iron dutch oven. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 6
+      "rank": 7
     },
     {
       "rank_candidate": 45,
@@ -399,7 +453,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for pasta pot with strainer lid. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 7
+      "rank": 8
     },
     {
       "rank_candidate": 27,
@@ -448,7 +502,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for single-serve coffee maker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 8
+      "rank": 9
     },
     {
       "rank_candidate": 44,
@@ -497,7 +551,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for nonstick frying pan set. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 9
+      "rank": 10
     },
     {
       "rank_candidate": 28,
@@ -546,7 +600,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Cuisinart 14 cup coffee maker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 10
+      "rank": 11
     },
     {
       "rank_candidate": 33,
@@ -595,7 +649,54 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for 4 slice toaster oven. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 11
+      "rank": 12
+    },
+    {
+      "asin": "B00BJT61FE",
+      "name": "GIR Premium Silicone Spatula",
+      "marketplace": "Amazon.com US",
+      "category": "gadgets",
+      "subcategory": "kitchen-utensils",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B00BJT61FE",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Everyday home cooks who stir, scrape, and fold ingredients",
+        "use_case": "A daily-use utensil comparison for scraping bowls and stirring pans.",
+        "buyer_objection": "Verify dimensions, heat guidance, handle material, and care instructions for the exact version."
+      },
+      "research": {
+        "keyword_hypothesis": "silicone spatula",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.6,
+        "audience_fit_score_0_5": 4.6,
+        "purchase_intent_score_0_5": 4.2,
+        "content_gap_score_0_5": 2.7,
+        "affiliate_suitability_score_0_5": 4.3,
+        "weighted_opportunity_score_0_5": 3.94,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A daily-use utensil comparison for scraping bowls and stirring pans.",
+        "why_it_may_not_sell": "Verify dimensions, heat guidance, handle material, and care instructions for the exact version."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Silicone spatula for Home Cooks: GIR Premium Silicone Spatula",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A daily-use utensil comparison for scraping bowls and stirring pans. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/gir-premium-silicone-spatula/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Small Kitchen Gadgets We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for silicone spatula. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 13
     },
     {
       "rank_candidate": 30,
@@ -644,7 +745,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Cuisinart contact griddler. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 12
+      "rank": 14
     },
     {
       "rank_candidate": 46,
@@ -693,7 +794,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for 8 piece nonstick cookware set. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 13
+      "rank": 15
     },
     {
       "rank_candidate": 6,
@@ -742,7 +843,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for avocado slicer. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 14
+      "rank": 16
     },
     {
       "rank_candidate": 8,
@@ -791,7 +892,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for box grater. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 15
+      "rank": 17
     },
     {
       "rank_candidate": 1,
@@ -840,7 +941,101 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for microwave popcorn popper. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 16
+      "rank": 18
+    },
+    {
+      "asin": "B002DWA6KM",
+      "name": "OXO Good Grips Jar Opener with Base Pad",
+      "marketplace": "Amazon.com US",
+      "category": "gadgets",
+      "subcategory": "kitchen-tools",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B002DWA6KM",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Home cooks who open jars and bottles during meal prep",
+        "use_case": "A jar-opening tool comparison centered on grip, setup, and drawer storage.",
+        "buyer_objection": "Check the base-pad surface, lid-size range, cleaning, and whether the grip works for your use."
+      },
+      "research": {
+        "keyword_hypothesis": "jar opener with base pad",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.7,
+        "audience_fit_score_0_5": 4.3,
+        "purchase_intent_score_0_5": 4,
+        "content_gap_score_0_5": 3,
+        "affiliate_suitability_score_0_5": 4.2,
+        "weighted_opportunity_score_0_5": 3.88,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A jar-opening tool comparison centered on grip, setup, and drawer storage.",
+        "why_it_may_not_sell": "Check the base-pad surface, lid-size range, cleaning, and whether the grip works for your use."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Jar opener with base pad for Home Cooks: OXO Good Grips Jar",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A jar-opening tool comparison centered on grip, setup, and drawer storage. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-jar-opener-with-base-pad/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Small Kitchen Gadgets We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for jar opener with base pad. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 19
+    },
+    {
+      "asin": "B00SQEZPJ8",
+      "name": "Spatty Daddy Kitchen Spatula Set",
+      "marketplace": "Amazon.com US",
+      "category": "gadgets",
+      "subcategory": "kitchen-utensils",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B00SQEZPJ8",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Home cooks who scrape sauces, spreads, and ingredients from containers",
+        "use_case": "A kitchen-tool comparison for reaching into jars and narrow containers.",
+        "buyer_objection": "Check blade flexibility, sizes, heat limits, and dishwasher guidance."
+      },
+      "research": {
+        "keyword_hypothesis": "small jar spatula set",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.5,
+        "audience_fit_score_0_5": 4.4,
+        "purchase_intent_score_0_5": 4,
+        "content_gap_score_0_5": 3.3,
+        "affiliate_suitability_score_0_5": 4,
+        "weighted_opportunity_score_0_5": 3.87,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A kitchen-tool comparison for reaching into jars and narrow containers.",
+        "why_it_may_not_sell": "Check blade flexibility, sizes, heat limits, and dishwasher guidance."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Small jar spatula set for Home Cooks: Spatty Daddy Kitchen Spatula",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A kitchen-tool comparison for reaching into jars and narrow containers. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/spatty-daddy-kitchen-spatula-set/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Small Kitchen Gadgets We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for small jar spatula set. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 20
     },
     {
       "rank_candidate": 26,
@@ -889,7 +1084,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Ninja Crispi glass air fryer. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 17
+      "rank": 21
     },
     {
       "rank_candidate": 36,
@@ -938,56 +1133,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for electric lunch box. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 18
-    },
-    {
-      "rank_candidate": 31,
-      "asin": "B07C8V4FDR",
-      "name": "Cuisinart Bread Maker Machine",
-      "marketplace": "Amazon.com US",
-      "category": "appliances",
-      "subcategory": "bread-makers",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B07C8V4FDR",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "20 Small Kitchen Appliances on Amazon That Shoppers Swear By",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/best-small-kitchen-appliances-on-amazon",
-        "updated": "2026-04-20",
-        "signal": "Small-appliance roundup describes selections as top-rated/bestselling and provides rating/review counts for some products. Any listed metrics below are source-reported and date-stamped, not current Amazon data.",
-        "item_note": "Food Network reports 4.4/5 and 16.5K ratings in its Apr 2026 article; confirm current figures."
-      },
-      "audience": {
-        "target": "Home bakers interested in making bread without hand-kneading",
-        "use_case": "A bread-machine buying guide angle for loaf size, programs, and counter storage.",
-        "buyer_objection": "Check machine dimensions, noise, recipe requirements, and whether you bake often enough to justify it."
-      },
-      "research": {
-        "keyword_hypothesis": "Cuisinart bread maker",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 4.1,
-        "audience_fit_score_0_5": 4,
-        "purchase_intent_score_0_5": 3.9,
-        "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 4,
-        "weighted_opportunity_score_0_5": 3.85,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A bread-machine buying guide angle for loaf size, programs, and counter storage.",
-        "why_it_may_not_sell": "Check machine dimensions, noise, recipe requirements, and whether you bake often enough to justify it."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Cuisinart bread maker for Home Cooks: Cuisinart Bread Maker Machine",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A bread-machine buying guide angle for loaf size, programs, and counter storage. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #SmallKitchenAppliances #KitchenFinds #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/cuisinart-bread-maker-machine/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Small Kitchen Appliances Worth the Counter Space",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Cuisinart bread maker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
-      "rank": 19
+      "rank": 22
     },
     {
       "rank_candidate": 35,
@@ -1036,7 +1182,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for 2 slice toaster. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 20
+      "rank": 23
     },
     {
       "rank_candidate": 42,
@@ -1085,7 +1231,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for ceramic cookware set. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 21
+      "rank": 24
     },
     {
       "rank_candidate": 40,
@@ -1134,7 +1280,54 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for glass olive oil dispenser. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 22
+      "rank": 25
+    },
+    {
+      "asin": "B0G67LP4LM",
+      "name": "Zyliss Susi 4 Garlic Press",
+      "marketplace": "Amazon.com US",
+      "category": "gadgets",
+      "subcategory": "food-prep-tools",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B0G67LP4LM",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Home cooks who often mince garlic for sauces and weeknight meals",
+        "use_case": "A garlic-prep comparison for cooks weighing a press against a knife or rocker tool.",
+        "buyer_objection": "Verify current listing identity, cleaning method, hand comfort, and whether the press handles unpeeled cloves."
+      },
+      "research": {
+        "keyword_hypothesis": "garlic press",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.5,
+        "audience_fit_score_0_5": 4.2,
+        "purchase_intent_score_0_5": 4.1,
+        "content_gap_score_0_5": 3.1,
+        "affiliate_suitability_score_0_5": 4.1,
+        "weighted_opportunity_score_0_5": 3.82,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A garlic-prep comparison for cooks weighing a press against a knife or rocker tool.",
+        "why_it_may_not_sell": "Verify current listing identity, cleaning method, hand comfort, and whether the press handles unpeeled cloves."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Garlic press for Home Cooks: Zyliss Susi 4 Garlic",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A garlic-prep comparison for cooks weighing a press against a knife or rocker tool. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/zyliss-susi-4-garlic-press/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Small Kitchen Gadgets We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for garlic press. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 26
     },
     {
       "rank_candidate": 47,
@@ -1183,7 +1376,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for reversible cast iron griddle. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 23
+      "rank": 27
     },
     {
       "rank_candidate": 22,
@@ -1232,7 +1425,7 @@
         "board": "Kitchen Organization Must-Haves",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for food bag clips with pour spout. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 24
+      "rank": 28
     },
     {
       "rank_candidate": 48,
@@ -1281,7 +1474,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for nonstick bakeware pan. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 25
+      "rank": 29
     },
     {
       "rank_candidate": 4,
@@ -1330,7 +1523,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for small food processor. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 26
+      "rank": 30
     },
     {
       "rank_candidate": 20,
@@ -1379,7 +1572,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for microwave splatter cover. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 27
+      "rank": 31
     },
     {
       "rank_candidate": 49,
@@ -1428,7 +1621,54 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for reusable silicone baking cups. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 28
+      "rank": 32
+    },
+    {
+      "asin": "B001QTVT4K",
+      "name": "OXO Silicone Cookie Spatula",
+      "marketplace": "Amazon.com US",
+      "category": "bakeware",
+      "subcategory": "baking-tools",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B001QTVT4K",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Home bakers who scoop dough and handle small batches",
+        "use_case": "A small spatula comparison for cookie dough, eggs, and other bowl-to-pan tasks.",
+        "buyer_objection": "Confirm blade dimensions, flexibility, heat limits, and current product variation."
+      },
+      "research": {
+        "keyword_hypothesis": "cookie spatula",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.4,
+        "audience_fit_score_0_5": 4.3,
+        "purchase_intent_score_0_5": 3.9,
+        "content_gap_score_0_5": 2.9,
+        "affiliate_suitability_score_0_5": 4.2,
+        "weighted_opportunity_score_0_5": 3.77,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A small spatula comparison for cookie dough, eggs, and other bowl-to-pan tasks.",
+        "why_it_may_not_sell": "Confirm blade dimensions, flexibility, heat limits, and current product variation."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Cookie spatula for Home Cooks: OXO Silicone Cookie Spatula",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A small spatula comparison for cookie dough, eggs, and other bowl-to-pan tasks. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #HomeBaking #KitchenFinds #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-silicone-cookie-spatula/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Small Kitchen Gadgets We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for cookie spatula. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 33
     },
     {
       "rank_candidate": 3,
@@ -1477,7 +1717,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for electric sandwich maker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 29
+      "rank": 34
     },
     {
       "rank_candidate": 32,
@@ -1526,7 +1766,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Hamilton Beach juicer. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 30
+      "rank": 35
     },
     {
       "rank_candidate": 50,
@@ -1575,7 +1815,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for carbon steel bread pan. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 31
+      "rank": 36
     },
     {
       "rank_candidate": 39,
@@ -1624,7 +1864,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for cordless kitchen crumb vacuum. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 32
+      "rank": 37
     },
     {
       "rank_candidate": 23,
@@ -1673,7 +1913,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for adjustable measuring spoon. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 33
+      "rank": 38
     },
     {
       "rank_candidate": 9,
@@ -1722,7 +1962,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for burger press. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 34
+      "rank": 39
     },
     {
       "rank_candidate": 14,
@@ -1771,7 +2011,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for salad tongs chopper. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 35
+      "rank": 40
     },
     {
       "rank_candidate": 38,
@@ -1820,7 +2060,54 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for frozen fruit soft serve maker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 36
+      "rank": 41
+    },
+    {
+      "asin": "B00NSQF7N8",
+      "name": "OXO Baker's Dusting Wand",
+      "marketplace": "Amazon.com US",
+      "category": "bakeware",
+      "subcategory": "baking-tools",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B00NSQF7N8",
+      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
+      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
+      "current_seller_offer_stock_status": "not_checked",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
+      "source": {
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
+      },
+      "audience": {
+        "target": "Home bakers who dust flour, sugar, or cocoa in small amounts",
+        "use_case": "A small baking-tool comparison for controlled dusting without storing a full-size sifter.",
+        "buyer_objection": "Check capacity, cleaning, and whether it suits your baking frequency."
+      },
+      "research": {
+        "keyword_hypothesis": "baking dusting wand",
+        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
+        "demand_score_0_5": 3.3,
+        "audience_fit_score_0_5": 4,
+        "purchase_intent_score_0_5": 3.6,
+        "content_gap_score_0_5": 3.4,
+        "affiliate_suitability_score_0_5": 4.1,
+        "weighted_opportunity_score_0_5": 3.67,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A small baking-tool comparison for controlled dusting without storing a full-size sifter.",
+        "why_it_may_not_sell": "Check capacity, cleaning, and whether it suits your baking frequency."
+      },
+      "pinterest_pin": {
+        "status": "draft_not_published",
+        "title": "Baking dusting wand for Home Cooks: OXO Baker's Dusting Wand",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A small baking-tool comparison for controlled dusting without storing a full-size sifter. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #HomeBaking #KitchenFinds #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-baker-s-dusting-wand/",
+        "destination_status": "build and verify the product page before publishing",
+        "board": "Small Kitchen Gadgets We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for baking dusting wand. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
+      },
+      "rank": 42
     },
     {
       "rank_candidate": 10,
@@ -1869,7 +2156,7 @@
         "board": "Drinkware & Tumblers We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for wide pasta bowls. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 37
+      "rank": 43
     },
     {
       "rank_candidate": 37,
@@ -1918,7 +2205,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for 4 quart multicooker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 38
+      "rank": 44
     },
     {
       "rank_candidate": 13,
@@ -1967,105 +2254,7 @@
         "board": "Drinkware & Tumblers We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for drinking glasses with lids. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 39
-    },
-    {
-      "rank_candidate": 12,
-      "asin": "B0000CFTD4",
-      "name": "Corelle Livingware Bread-and-Butter Plates",
-      "marketplace": "Amazon.com US",
-      "category": "drinkware",
-      "subcategory": "dinnerware",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B0000CFTD4",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "The Best Kitchen Products on Amazon That Are Under $25",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/cheap-inexpensive-amazon-kitchen-products",
-        "updated": "2026-10-14",
-        "signal": "Recent Amazon shopping roundup. The article reports 13,000+ five-star ratings for the Aroma rice cooker and 47,000+ five-star reviews for the Farberware masher; it does not give item-level metrics for every other pick.",
-        "item_note": "Roundup inclusion; no item-level rating metric in source."
-      },
-      "audience": {
-        "target": "Home cooks refreshing everyday plates or serving small bites",
-        "use_case": "A small-plate comparison for breakfast, dessert, and snack servings.",
-        "buyer_objection": "Confirm the exact pattern, plate diameter, pack quantity, and care instructions."
-      },
-      "research": {
-        "keyword_hypothesis": "small appetizer plates",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.6,
-        "audience_fit_score_0_5": 4,
-        "purchase_intent_score_0_5": 3.5,
-        "content_gap_score_0_5": 2.8,
-        "affiliate_suitability_score_0_5": 4,
-        "weighted_opportunity_score_0_5": 3.62,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A small-plate comparison for breakfast, dessert, and snack servings.",
-        "why_it_may_not_sell": "Confirm the exact pattern, plate diameter, pack quantity, and care instructions."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Small appetizer plates for Home Cooks: Corelle Livingware Bread-and-Butter Plates",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A small-plate comparison for breakfast, dessert, and snack servings. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #HomeCafe #KitchenFinds #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/corelle-livingware-bread-and-butter-plates/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Drinkware & Tumblers We Love",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for small appetizer plates. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
-      "rank": 40
-    },
-    {
-      "rank_candidate": 17,
-      "asin": "B004OXURZ2",
-      "name": "Chef'n SaladShears Nylon Lettuce Chopper",
-      "marketplace": "Amazon.com US",
-      "category": "gadgets",
-      "subcategory": "food-prep-tools",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B004OXURZ2",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "The Coolest Things You Can Get on Amazon Right Now",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/coolest-kitchen-things-gadgets-on-amazon",
-        "updated": "2026-06-15",
-        "signal": "Amazon kitchen-gadget roundup of 26 items; editorial inclusion only, without item-level rank or review counts for these candidates.",
-        "item_note": "Roundup inclusion; overlaps the kitchen-shears category already in the catalog."
-      },
-      "audience": {
-        "target": "Salad makers and home cooks preparing leafy greens",
-        "use_case": "A comparison angle for chopping greens with a rocking-style hand tool.",
-        "buyer_objection": "Check cutting surface, control, hand comfort, and storage; avoid claiming it is faster without testing."
-      },
-      "research": {
-        "keyword_hypothesis": "lettuce chopper",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.3,
-        "audience_fit_score_0_5": 4,
-        "purchase_intent_score_0_5": 3.8,
-        "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 3.9,
-        "weighted_opportunity_score_0_5": 3.62,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A comparison angle for chopping greens with a rocking-style hand tool.",
-        "why_it_may_not_sell": "Check cutting surface, control, hand comfort, and storage; avoid claiming it is faster without testing."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Lettuce chopper for Home Cooks: Chef'n SaladShears Nylon Lettuce",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A comparison angle for chopping greens with a rocking-style hand tool. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/chef-n-saladshears-nylon-lettuce-chopper/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Small Kitchen Gadgets We Love",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for lettuce chopper. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
-      "rank": 41
+      "rank": 45
     },
     {
       "rank_candidate": 5,
@@ -2114,105 +2303,7 @@
         "board": "Small Kitchen Appliances Worth the Counter Space",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for omelet maker. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 42
-    },
-    {
-      "rank_candidate": 15,
-      "asin": "B07F1F6RQH",
-      "name": "Talisman Bacon Bin Grease Holder",
-      "marketplace": "Amazon.com US",
-      "category": "organization",
-      "subcategory": "kitchen-storage",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B07F1F6RQH",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "The Coolest Things You Can Get on Amazon Right Now",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/coolest-kitchen-things-gadgets-on-amazon",
-        "updated": "2026-06-15",
-        "signal": "Amazon kitchen-gadget roundup of 26 items; editorial inclusion only, without item-level rank or review counts for these candidates.",
-        "item_note": "Roundup inclusion; niche demand is uncertain and safe-use details need checking."
-      },
-      "audience": {
-        "target": "Cooks who save cooking fat and keep counters organized",
-        "use_case": "A cleanup-and-storage angle for cooks who keep bacon fat for recipes.",
-        "buyer_objection": "Verify heat tolerance, capacity, filter design, and safe handling instructions."
-      },
-      "research": {
-        "keyword_hypothesis": "bacon grease container",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.2,
-        "audience_fit_score_0_5": 4,
-        "purchase_intent_score_0_5": 3.6,
-        "content_gap_score_0_5": 3.4,
-        "affiliate_suitability_score_0_5": 3.8,
-        "weighted_opportunity_score_0_5": 3.6,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A cleanup-and-storage angle for cooks who keep bacon fat for recipes.",
-        "why_it_may_not_sell": "Verify heat tolerance, capacity, filter design, and safe handling instructions."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Bacon grease container for Home Cooks: Talisman Bacon Bin Grease",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A cleanup-and-storage angle for cooks who keep bacon fat for recipes. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/talisman-bacon-bin-grease-holder/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Kitchen Organization Must-Haves",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for bacon grease container. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
-      "rank": 43
-    },
-    {
-      "rank_candidate": 16,
-      "asin": "B07D73PSN2",
-      "name": "ProKeeper Fresh Guacamole Kitchen Storage Container",
-      "marketplace": "Amazon.com US",
-      "category": "organization",
-      "subcategory": "food-storage",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B07D73PSN2",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "The Coolest Things You Can Get on Amazon Right Now",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/coolest-kitchen-things-gadgets-on-amazon",
-        "updated": "2026-06-15",
-        "signal": "Amazon kitchen-gadget roundup of 26 items; editorial inclusion only, without item-level rank or review counts for these candidates.",
-        "item_note": "Roundup inclusion; no item-level demand figure in source."
-      },
-      "audience": {
-        "target": "Households that make dips or store cut avocado",
-        "use_case": "A food-storage idea for cooks who want a dedicated container for dips.",
-        "buyer_objection": "Check capacity, lid seal, cleaning guidance, and claims about freshness on the exact listing."
-      },
-      "research": {
-        "keyword_hypothesis": "guacamole storage container",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.3,
-        "audience_fit_score_0_5": 4,
-        "purchase_intent_score_0_5": 3.6,
-        "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 4,
-        "weighted_opportunity_score_0_5": 3.6,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A food-storage idea for cooks who want a dedicated container for dips.",
-        "why_it_may_not_sell": "Check capacity, lid seal, cleaning guidance, and claims about freshness on the exact listing."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Guacamole storage container for Home Cooks: ProKeeper Fresh Guacamole Kitchen",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A food-storage idea for cooks who want a dedicated container for dips. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/prokeeper-fresh-guacamole-kitchen-storage-container/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Kitchen Organization Must-Haves",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for guacamole storage container. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
-      "rank": 44
+      "rank": 46
     },
     {
       "rank_candidate": 18,
@@ -2261,7 +2352,7 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for corn kernel remover. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 45
+      "rank": 47
     },
     {
       "rank_candidate": 41,
@@ -2310,201 +2401,99 @@
         "board": "Small Kitchen Gadgets We Love",
         "creative_brief": "Create an original vertical 2:3 lifestyle Pin for Japanese kitchen scissors. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
       },
-      "rank": 46
-    },
-    {
-      "rank_candidate": 21,
-      "asin": "B00LRKMK96",
-      "name": "5-Blade Herb Scissors",
-      "marketplace": "Amazon.com US",
-      "category": "gadgets",
-      "subcategory": "food-prep-tools",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B00LRKMK96",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "The Coolest Things You Can Get on Amazon Right Now",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/coolest-kitchen-things-gadgets-on-amazon",
-        "updated": "2026-06-15",
-        "signal": "Amazon kitchen-gadget roundup of 26 items; editorial inclusion only, without item-level rank or review counts for these candidates.",
-        "item_note": "Roundup inclusion; use-case frequency will vary by cook."
-      },
-      "audience": {
-        "target": "Home cooks who regularly prep fresh herbs",
-        "use_case": "A tool comparison for snipping herbs directly into a dish or pan.",
-        "buyer_objection": "Check blade cleaning and whether a knife and cutting board are easier for your volume."
-      },
-      "research": {
-        "keyword_hypothesis": "herb scissors",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.1,
-        "audience_fit_score_0_5": 4,
-        "purchase_intent_score_0_5": 3.6,
-        "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 3.9,
-        "weighted_opportunity_score_0_5": 3.53,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A tool comparison for snipping herbs directly into a dish or pan.",
-        "why_it_may_not_sell": "Check blade cleaning and whether a knife and cutting board are easier for your volume."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Herb scissors for Home Cooks: 5-Blade Herb Scissors",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A tool comparison for snipping herbs directly into a dish or pan. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/5-blade-herb-scissors/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Small Kitchen Gadgets We Love",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for herb scissors. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
-      "rank": 47
-    },
-    {
-      "rank_candidate": 24,
-      "asin": "B076CTTZKX",
-      "name": "OTOTO Gracula Garlic Crusher",
-      "marketplace": "Amazon.com US",
-      "category": "gadgets",
-      "subcategory": "food-prep-tools",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B076CTTZKX",
-      "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
-      "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
-      "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
-      "source": {
-        "publisher": "Food Network",
-        "page_title": "The Coolest Things You Can Get on Amazon Right Now",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/coolest-kitchen-things-gadgets-on-amazon",
-        "updated": "2026-06-15",
-        "signal": "Amazon kitchen-gadget roundup of 26 items; editorial inclusion only, without item-level rank or review counts for these candidates.",
-        "item_note": "Roundup inclusion; avoid relying on novelty alone to predict conversion."
-      },
-      "audience": {
-        "target": "Cooks who want a compact garlic-prep tool",
-        "use_case": "A playful, giftable prep-tool idea for cooks who use garlic often.",
-        "buyer_objection": "Novelty design can be less important than grip and cleaning; verify how it works before recommending."
-      },
-      "research": {
-        "keyword_hypothesis": "garlic crusher",
-        "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.2,
-        "audience_fit_score_0_5": 3.8,
-        "purchase_intent_score_0_5": 3.7,
-        "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 3.7,
-        "weighted_opportunity_score_0_5": 3.5,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A playful, giftable prep-tool idea for cooks who use garlic often.",
-        "why_it_may_not_sell": "Novelty design can be less important than grip and cleaning; verify how it works before recommending."
-      },
-      "pinterest_pin": {
-        "status": "draft_not_published",
-        "title": "Garlic crusher for Home Cooks: OTOTO Gracula Garlic Crusher",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A playful, giftable prep-tool idea for cooks who use garlic often. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/ototo-gracula-garlic-crusher/",
-        "destination_status": "build and verify the product page before publishing",
-        "board": "Small Kitchen Gadgets We Love",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for garlic crusher. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
-      },
       "rank": 48
     },
     {
-      "rank_candidate": 11,
-      "asin": "B099JTWZXZ",
-      "name": "Gezzeny Vintage Coffee Mug Set with Spoons",
+      "asin": "B007ACTN54",
+      "name": "Tovolo Sphere Ice Molds",
       "marketplace": "Amazon.com US",
       "category": "drinkware",
-      "subcategory": "coffee-drinkware",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B099JTWZXZ",
+      "subcategory": "ice-molds",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B007ACTN54",
       "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
       "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
       "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
       "source": {
-        "publisher": "Food Network",
-        "page_title": "The Best Kitchen Products on Amazon That Are Under $25",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/cheap-inexpensive-amazon-kitchen-products",
-        "updated": "2026-10-14",
-        "signal": "Recent Amazon shopping roundup. The article reports 13,000+ five-star ratings for the Aroma rice cooker and 47,000+ five-star reviews for the Farberware masher; it does not give item-level metrics for every other pick.",
-        "item_note": "Roundup inclusion; no item-level demand metric in source."
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
       },
       "audience": {
-        "target": "Coffee and tea drinkers setting up a home beverage corner",
-        "use_case": "A giftable home-café idea for people who enjoy a coordinated mug set.",
-        "buyer_objection": "Check capacity, glass care, and whether the included spoons fit daily use."
+        "target": "Home beverage makers and hosts serving iced drinks",
+        "use_case": "A drinkware-accessory idea for people comparing large-format ice molds.",
+        "buyer_objection": "Check mold count, fill and release method, leak resistance, and freezer storage space."
       },
       "research": {
-        "keyword_hypothesis": "vintage coffee mugs",
+        "keyword_hypothesis": "sphere ice molds",
         "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3.2,
-        "audience_fit_score_0_5": 3.8,
-        "purchase_intent_score_0_5": 3.3,
+        "demand_score_0_5": 3.4,
+        "audience_fit_score_0_5": 3.9,
+        "purchase_intent_score_0_5": 3.6,
         "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 3.8,
-        "weighted_opportunity_score_0_5": 3.43,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A giftable home-café idea for people who enjoy a coordinated mug set.",
-        "why_it_may_not_sell": "Check capacity, glass care, and whether the included spoons fit daily use."
+        "affiliate_suitability_score_0_5": 3.9,
+        "weighted_opportunity_score_0_5": 3.58,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A drinkware-accessory idea for people comparing large-format ice molds.",
+        "why_it_may_not_sell": "Check mold count, fill and release method, leak resistance, and freezer storage space."
       },
       "pinterest_pin": {
         "status": "draft_not_published",
-        "title": "Vintage coffee mugs for Home Cooks: Gezzeny Vintage Coffee Mug",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A giftable home-café idea for people who enjoy a coordinated mug set. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #HomeCafe #KitchenFinds #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/gezzeny-vintage-coffee-mug-set-with-spoons/",
+        "title": "Sphere ice molds for Home Cooks: Tovolo Sphere Ice Molds",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A drinkware-accessory idea for people comparing large-format ice molds. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #HomeCafe #KitchenFinds #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/tovolo-sphere-ice-molds/",
         "destination_status": "build and verify the product page before publishing",
         "board": "Drinkware & Tumblers We Love",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for vintage coffee mugs. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for sphere ice molds. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
       },
       "rank": 49
     },
     {
-      "rank_candidate": 19,
-      "asin": "B01BKF11SI",
-      "name": "Peleg Design Silicone Egg Separator",
+      "asin": "B005SA85PE",
+      "name": "Lekue Ice Box",
       "marketplace": "Amazon.com US",
-      "category": "gadgets",
-      "subcategory": "baking-tools",
-      "amazon_candidate_url": "https://www.amazon.com/dp/B01BKF11SI",
+      "category": "drinkware",
+      "subcategory": "ice-molds",
+      "amazon_candidate_url": "https://www.amazon.com/dp/B005SA85PE",
       "amazon_link_source": "ASIN copied from the public Amazon product link on the editorial source page; competitor tracking parameters removed.",
       "listing_identity_status": "needs_direct_Amazon_title_and_variant_check",
       "current_seller_offer_stock_status": "not_checked",
-      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger; no exact ASIN match",
+      "existing_catalog_dedupe": "checked against site/products.json and approved SiteStripe ledger by exact ASIN; no exact match",
       "source": {
-        "publisher": "Food Network",
-        "page_title": "The Coolest Things You Can Get on Amazon Right Now",
-        "page_url": "https://www.foodnetwork.com/how-to/packages/shopping/coolest-kitchen-things-gadgets-on-amazon",
-        "updated": "2026-06-15",
-        "signal": "Amazon kitchen-gadget roundup of 26 items; editorial inclusion only, without item-level rank or review counts for these candidates.",
-        "item_note": "Roundup inclusion; niche demand is uncertain."
+        "publisher": "Good Housekeeping",
+        "page_title": "40 Tested Kitchen Tools Our Kitchen Lab Expert Swears By",
+        "page_url": "https://www.goodhousekeeping.com/what-to-buy/g73234117/best-kitchen-gadgets-tested/",
+        "updated": "2026-07-30",
+        "signal": "Affiliate-disclosed Good Housekeeping Institute article by its Kitchen & Cooking Lab director. It includes top-tested tools and personal recommendations; this is editorial testing evidence, not sales data."
       },
       "audience": {
-        "target": "Home bakers who separate eggs for baking or cooking",
-        "use_case": "A baking-prep comparison for separating yolks without relying on shell transfers.",
-        "buyer_objection": "Check cleaning and storage; many cooks can use a shell or slotted spoon instead."
+        "target": "Home beverage makers and hosts who keep ice on hand",
+        "use_case": "A freezer-to-drinkware idea for people who want to make and store ice in one container.",
+        "buyer_objection": "Check ice size, freezer footprint, lid fit, capacity, and how easily cubes release."
       },
       "research": {
-        "keyword_hypothesis": "egg separator",
+        "keyword_hypothesis": "ice cube tray with storage",
         "trend_context": "Pinterest's 2026 Spring Trend Report describes the kitchen as a comfort zone, with cozy food, creative dining and pantry-staple themes; use this as creative context, not product-level sales evidence.",
-        "demand_score_0_5": 3,
-        "audience_fit_score_0_5": 3.7,
+        "demand_score_0_5": 3.4,
+        "audience_fit_score_0_5": 3.8,
         "purchase_intent_score_0_5": 3.4,
-        "content_gap_score_0_5": 3,
-        "affiliate_suitability_score_0_5": 3.8,
-        "weighted_opportunity_score_0_5": 3.37,
-        "confidence": "medium for category/use-case fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
-        "why_it_may_sell": "A baking-prep comparison for separating yolks without relying on shell transfers.",
-        "why_it_may_not_sell": "Check cleaning and storage; many cooks can use a shell or slotted spoon instead."
+        "content_gap_score_0_5": 3.3,
+        "affiliate_suitability_score_0_5": 3.9,
+        "weighted_opportunity_score_0_5": 3.56,
+        "confidence": "medium for editorial/test signal and category fit; low-to-medium for individual listing demand because direct Amazon checks are pending",
+        "why_it_may_sell": "A freezer-to-drinkware idea for people who want to make and store ice in one container.",
+        "why_it_may_not_sell": "Check ice size, freezer footprint, lid fit, capacity, and how easily cubes release."
       },
       "pinterest_pin": {
         "status": "draft_not_published",
-        "title": "Egg separator for Home Cooks: Peleg Design Silicone Egg",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A baking-prep comparison for separating yolks without relying on shell transfers. Compare the size, version, care needs, and counter or storage space before choosing. See the Kitchen Finds & Favorites guide for details. #KitchenGadgets #SmallKitchen #ad",
-        "destination_url": "https://kitchenfindsfavorites.com/picks/peleg-design-silicone-egg-separator/",
+        "title": "Ice cube tray with storage for Home Cooks: Lekue Ice Box",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A freezer-to-drinkware idea for people who want to make and store ice in one container. Compare the size, version, care needs, and storage space before choosing. See the Kitchen Finds & Favorites guide for details. #HomeCafe #KitchenFinds #ad",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/lekue-ice-box/",
         "destination_status": "build and verify the product page before publishing",
-        "board": "Small Kitchen Gadgets We Love",
-        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for egg separator. Show a realistic home-cooking or storage use case with warm, natural light and a fresh green accent. Use a lawfully sourced image of the exact verified product or an original generic scene that does not misrepresent the product. Add a short benefit headline; do not show a price, rating, competitor logo, or unsupported feature."
+        "board": "Drinkware & Tumblers We Love",
+        "creative_brief": "Create an original vertical 2:3 lifestyle Pin for ice cube tray with storage. Show a realistic use case in a warm, organized home kitchen. Use a lawfully sourced image of the exact verified product or a generic original scene that does not misrepresent it. Add a short benefit headline; avoid prices, ratings, competitor logos, and unsupported claims."
       },
       "rank": 50
     }
