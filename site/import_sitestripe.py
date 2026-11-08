@@ -46,7 +46,8 @@ def prepare_import(data, entries):
         if entry.get('content_rights') != 'original-editorial-graphic':
             raise ValueError('This importer requires original editorial graphics')
         allowed = ('asin', 'name', 'category', 'subcategory', 'blurb', 'added', 'award',
-                   'graphic', 'pin', 'suits', 'check', 'sitestripe_url')
+                   'graphic', 'pin', 'suits', 'check', 'sitestripe_url',
+                   'alternatives', 'comparison_facts', 'accessories')
         product = {k: entry[k] for k in allowed if k in entry}
         # Keep the existing link key for compatibility with the builder and feeds.
         product['sitestripe_url'] = affiliate_url
@@ -68,8 +69,8 @@ def main():
     parser.add_argument('input', type=Path)
     parser.add_argument('--apply', action='store_true', help='Write only after the entire batch validates')
     args = parser.parse_args()
-    original = json.loads((ROOT / 'products.json').read_text())
-    entries = json.loads(args.input.read_text())
+    original = json.loads((ROOT / 'products.json').read_text(encoding='utf-8'))
+    entries = json.loads(args.input.read_text(encoding='utf-8'))
     today = datetime.now(ZoneInfo('America/New_York')).date()
     # Release only the reviewed entries whose editorial publication date has arrived.
     if not isinstance(entries, list):
@@ -79,7 +80,7 @@ def main():
     if args.apply and entries:
         target = ROOT / 'products.json'
         tmp = target.with_suffix('.tmp')
-        tmp.write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n')
+        tmp.write_text(json.dumps(result, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
         tmp.replace(target)
     print(f'{len(entries)} SiteStripe products validated; ' + ('catalog updated' if args.apply and entries else 'catalog unchanged'))
 

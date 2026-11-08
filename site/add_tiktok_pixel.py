@@ -27,16 +27,26 @@ PRODUCT_EVENTS = '''<!-- TikTok product events -->
     currency: 'USD'
   });
 
-  document.querySelectorAll('a[href*="amazon."]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      ttq.track('ClickButton', {
-        content_type: 'affiliate_product',
-        content_name: document.title
-      });
+  // Affiliate clicks are tracked site-wide by the separate handler below.
+</script>
+<!-- End TikTok product events -->'''
+
+SITE_CLICK_EVENTS = '''<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
     });
   });
 </script>
-<!-- End TikTok product events -->'''
+<!-- End TikTok affiliate click events -->'''
 
 DISCLOSURE = (
     "We use TikTok Pixel to measure visits and interactions from TikTok "
@@ -67,16 +77,16 @@ def main():
                 print(f"Warning: no </head> found in {path}", file=sys.stderr)
                 continue
 
-        if relative.startswith("picks/") and "<!-- TikTok product events -->" not in text:
-            text, count = re.subn(
-                r"</body\s*>",
-                PRODUCT_EVENTS + "\n</body>",
-                text,
-                count=1,
-                flags=re.IGNORECASE,
-            )
-            if not count:
-                print(f"Warning: no </body> found in {path}", file=sys.stderr)
+        # Replace the legacy product block so its old click listener cannot double count.
+        text = re.sub(r"<!-- TikTok product events -->.*?<!-- End TikTok product events -->",
+                      "", text, flags=re.DOTALL)
+        text = re.sub(r"<!-- TikTok affiliate click events -->.*?<!-- End TikTok affiliate click events -->",
+                      "", text, flags=re.DOTALL)
+        events = (PRODUCT_EVENTS + "\n" if relative.startswith("picks/") else "") + SITE_CLICK_EVENTS
+        text, count = re.subn(r"</body\s*>", lambda _: events + "\n</body>",
+                              text, count=1, flags=re.IGNORECASE)
+        if not count:
+            print(f"Warning: no </body> found in {path}", file=sys.stderr)
 
         if relative == "privacy/index.html":
             if DISCLOSURE not in text and "</main>" in text:

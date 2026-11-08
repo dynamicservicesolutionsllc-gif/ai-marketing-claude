@@ -153,6 +153,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .saved-count[hidden] { display:none; }
   .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
   .card.gone .body { opacity:.75; }
+  .video-gen { font:inherit; font-weight:600; cursor:pointer; background:var(--card); color:var(--acc); border:2px solid var(--acc); border-radius:8px; padding:8px 16px; margin-top:8px; }
+  .video-gen:hover { background:var(--acc); color:var(--acc-ink); }
+  .video-gen:disabled { opacity:.6; cursor:wait; }
+  .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .product-video-container { margin-top:12px; }
+  .product-video-container video { width:100%; border-radius:8px; }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -186,6 +192,15 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 </style>
+<!-- TikTok Pixel Code -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load("DBLO06JC77U0QLCJSSEG");
+  ttq.page();
+}(window, document, "ttq");
+</script>
+<!-- End TikTok Pixel Code -->
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1671181604794472&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -197,7 +212,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <span class="crumbs"><a href="../../">Home</a> › <a href="../../small-kitchen-appliances/">Small Kitchen Appliances</a> › <a href="../../guides/blenders-and-mixers/">Best Immersion Blenders, Hand Mixers &amp; Mini Choppers</a></span>
   </div>
   <main id="main">
-    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
+    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. Amazon buttons on this page are affiliate links.</p>
     <article class="pick" id="B01FHOWYA2" data-pl="pick">
       <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -213,6 +228,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <a class="btn" href="https://www.amazon.com/dp/B01FHOWYA2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
           <button type="button" class="save" data-save="B01FHOWYA2" aria-pressed="false" hidden>&#9825; Save to My Favorites</button><script>document.currentScript.previousElementSibling.hidden=false</script>
+          <button type="button" class="video-gen" data-generate-video="B01FHOWYA2" data-description="A full-size blender is a lot to haul out and wash for one smoothie. This compact 700-watt blender bl">🎬 Generate Demo Video</button>
         </div>
       </div>
     </article>
@@ -223,8 +239,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>The cups hold 16 oz, so it&#x27;s sized for one serving at a time, and it blends only while you press down on the cup.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
+    <section class="prose wide">
+      <h2>Current Amazon deals</h2>
+      <p>Explore Amazon's current deals; offers can change.</p>
+      <a class="btn" href="https://www.amazon.com/deals?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check current deals on Amazon</a>
+    </section>
     <section class="related-products">
-      <h2>Related products</h2>
+      <h2>Explore more kitchen products</h2>
+      <p>Browse other kitchen finds in our guides.</p>
       <div class="grid related">
       <article class="card" id="B075X1KPLZ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B075X1KPLZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -300,5 +322,34 @@ if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>
 [].forEach.call(document.querySelectorAll('[data-save]'),u);c();
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <script src="/quiz.js?v=eaee888b" defer></script>
+<script src="/js/video-generator.js" defer></script>
+<!-- TikTok product events -->
+<script>
+  ttq.track('ViewContent', {
+    content_id: window.location.pathname.replace(/^\/+|\/$/g, ''),
+    content_type: 'product',
+    content_name: document.title,
+    currency: 'USD'
+  });
+
+  // Affiliate clicks are tracked site-wide by the separate handler below.
+</script>
+<!-- End TikTok product events -->
+<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
+    });
+  });
+</script>
+<!-- End TikTok affiliate click events -->
 </body>
 </html>

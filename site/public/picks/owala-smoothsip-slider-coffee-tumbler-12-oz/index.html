@@ -153,6 +153,12 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .saved-count[hidden] { display:none; }
   .card .remove { margin-top:8px; align-self:flex-start; font:inherit; font-size:14px; background:none; border:0; color:var(--acc); text-decoration:underline; cursor:pointer; padding:4px 0; }
   .card.gone .body { opacity:.75; }
+  .video-gen { font:inherit; font-weight:600; cursor:pointer; background:var(--card); color:var(--acc); border:2px solid var(--acc); border-radius:8px; padding:8px 16px; margin-top:8px; }
+  .video-gen:hover { background:var(--acc); color:var(--acc-ink); }
+  .video-gen:disabled { opacity:.6; cursor:wait; }
+  .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
+  .product-video-container { margin-top:12px; }
+  .product-video-container video { width:100%; border-radius:8px; }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -186,6 +192,15 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 </style>
+<!-- TikTok Pixel Code -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  ttq.load("DBLO06JC77U0QLCJSSEG");
+  ttq.page();
+}(window, document, "ttq");
+</script>
+<!-- End TikTok Pixel Code -->
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1671181604794472&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -197,7 +212,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
     <span class="crumbs"><a href="../../">Home</a> › <a href="../../drinkware/">Drinkware</a> › <a href="../../guides/insulated-drinkware/">Best Insulated Tumblers and Water Bottles</a></span>
   </div>
   <main id="main">
-    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. The "Check price on Amazon" button below is an affiliate link.</p>
+    <p class="callout">As an Amazon Associate, we earn from qualifying purchases. Amazon buttons on this page are affiliate links.</p>
     <article class="pick" id="B0DF472VMZ" data-pl="pick">
       <div class="media">
       <a class="img" href="https://www.amazon.com/dp/B0DF472VMZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -213,6 +228,7 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <a class="btn" href="https://www.amazon.com/dp/B0DF472VMZ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
           <button type="button" class="save" data-save="B0DF472VMZ" aria-pressed="false" hidden>&#9825; Save to My Favorites</button><script>document.currentScript.previousElementSibling.hidden=false</script>
+          <button type="button" class="video-gen" data-generate-video="B0DF472VMZ" data-description="A slide-top lid seals completely, so coffee rides in a bag or car without splashing. Double-wall ins">🎬 Generate Demo Video</button>
         </div>
       </div>
     </article>
@@ -223,8 +239,68 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
       <p>At 12 ounces it is the smallest of our drinkware picks, so it will not hold a large coffee. The hot and cold times in the listing are the manufacturer&#x27;s claims.</p>
       <p><small>Product details can change, so check the current listing on Amazon.</small></p>
     </section>
+    <section class="prose wide">
+      <h2>Featured product: key facts</h2>
+      <ul><li>12-ounce capacity.</li><li>Slide-top lid.</li><li>Double-wall insulation.</li><li>Designed for hot or cold coffee.</li><li>The smaller capacity means more frequent refills than a 16- or 20-ounce mug.</li></ul>
+    </section>
     <section class="related-products">
-      <h2>Related products</h2>
+      <h2>Compare similar products</h2>
+      <p>Compare the featured product above with these four alternatives.</p>
+      <div class="grid related">
+<div>      <article class="card" id="B08JWMVB43" data-pl="comparison">
+        <a class="img" href="https://www.amazon.com/dp/B08JWMVB43?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08JWMVB43-sq.webp" type="image/webp"><img src="../../img/B08JWMVB43-sq.png" alt="THERMOS Stainless King Travel Mug with Handle, 16 oz (photo shows a similar stainless steel travel mug, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/thermos-stainless-king-travel-mug-with-handle-16-oz/">THERMOS Stainless King Travel Mug with Handle, 16 oz</a></h3>
+          <p>Keeps coffee or tea hot for up to 7 hours and iced drinks cold for up to 18, so a morning refill lasts through a long commute. The DrinkLock lid is leak-proof when closed, the handle makes it easy to carry, and it fits most standard cup holders.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08JWMVB43?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article><h3>Key facts</h3><ul><li>16-ounce capacity.</li><li>Handle for carrying.</li><li>DrinkLock lid is leakproof when closed and properly assembled.</li><li>Double-wall vacuum insulation.</li><li>Thermos states up to 7 hours hot and 18 hours cold.</li></ul></div>
+<div>      <article class="card" id="B0CYQQXRNN" data-pl="comparison">
+        <a class="img" href="https://www.amazon.com/dp/B0CYQQXRNN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0CYQQXRNN-sq.webp" type="image/webp"><img src="../../img/B0CYQQXRNN-sq.png" alt="Contigo West Loop Autoseal Travel Mug, 16 oz (photo shows a similar insulated travel mug, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/contigo-west-loop-autoseal-travel-mug-16-oz/">Contigo West Loop Autoseal Travel Mug, 16 oz</a></h3>
+          <p>The Autoseal lid seals automatically between sips, so a mug tossed in a bag or tipped over in the car does not leak. Vacuum insulation keeps coffee hot through a long morning, and the lid is top-rack dishwasher safe.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0CYQQXRNN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article><h3>Key facts</h3><ul><li>16-ounce capacity.</li><li>AUTOSEAL lid closes between sips.</li><li>Vacuum insulated.</li><li>The lid is top-rack dishwasher safe.</li><li>The lid is designed to prevent leaks when closed.</li></ul></div>
+<div>      <article class="card" id="B073WJMKHN" data-pl="comparison">
+        <a class="img" href="https://www.amazon.com/dp/B073WJMKHN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B073WJMKHN-sq.webp" type="image/webp"><img src="../../img/B073WJMKHN-sq.png" alt="YETI Rambler 20 oz Tumbler with MagSlider Lid (photo shows a similar insulated tumbler, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/yeti-rambler-20-oz-tumbler-with-magslider-lid/">YETI Rambler 20 oz Tumbler with MagSlider Lid</a></h3>
+          <p>Big tumblers keep drinks hot or cold but often won&#x27;t fit the car cup holder. The 20 oz Rambler is double-wall vacuum insulated, sized for standard cup holders, and the magnetic MagSlider lid pulls apart for cleaning.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B073WJMKHN?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article><h3>Key facts</h3><ul><li>20-ounce capacity.</li><li>MagSlider lid.</li><li>Double-wall vacuum insulation.</li><li>Dishwasher safe.</li><li>Splash resistant; the lid is not leakproof.</li></ul></div>
+<div>      <article class="card" id="B0DXNC34LQ" data-pl="comparison">
+        <a class="img" href="https://www.amazon.com/dp/B0DXNC34LQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0DXNC34LQ-sq.webp" type="image/webp"><img src="../../img/B0DXNC34LQ-sq.png" alt="STANLEY Cafe-To-Go Travel Mug, 16 oz (photo shows a similar stainless steel tumbler, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/stanley-cafe-to-go-travel-mug-16-oz/">STANLEY Cafe-To-Go Travel Mug, 16 oz</a></h3>
+          <p>Coffee poured at home is often cold or spilled by the time you get anywhere. This 16 oz Stanley mug keeps drinks hot for 6 hours or cold for 7, has a leakproof two-part drink-through lid and a built-in handle, and goes in the dishwasher.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0DXNC34LQ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article><h3>Key facts</h3><ul><li>16-ounce capacity.</li><li>Two-part drink-through lid.</li><li>Handle for carrying.</li><li>Dishwasher safe.</li><li>Stanley states up to 6 hours hot and 7 hours cold.</li></ul></div>
+      </div>
+    </section>
+    <section class="prose wide">
+      <h2>Current Amazon deals</h2>
+      <p>Explore Amazon's current deals; offers can change.</p>
+      <a class="btn" href="https://www.amazon.com/deals?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check current deals on Amazon</a>
+    </section>
+    <section class="related-products">
+      <h2>Explore more kitchen products</h2>
+      <p>Browse other kitchen finds in our guides.</p>
       <div class="grid related">
       <article class="card" id="B0DR9PMK1W" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B0DR9PMK1W?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
@@ -300,5 +376,34 @@ if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>
 [].forEach.call(document.querySelectorAll('[data-save]'),u);c();
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <script src="/quiz.js?v=eaee888b" defer></script>
+<script src="/js/video-generator.js" defer></script>
+<!-- TikTok product events -->
+<script>
+  ttq.track('ViewContent', {
+    content_id: window.location.pathname.replace(/^\/+|\/$/g, ''),
+    content_type: 'product',
+    content_name: document.title,
+    currency: 'USD'
+  });
+
+  // Affiliate clicks are tracked site-wide by the separate handler below.
+</script>
+<!-- End TikTok product events -->
+<!-- TikTok affiliate click events -->
+<script>
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    var host;
+    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
+    catch (_) { return; }
+    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
+    if (window.ttq) ttq.track('ClickButton', {
+      content_type: 'affiliate_product',
+      content_name: document.title
+    });
+  });
+</script>
+<!-- End TikTok affiliate click events -->
 </body>
 </html>

@@ -227,6 +227,48 @@ def load(data=None):
             errors.append(f"{where}: copy implies hands-on testing/personal use")
         if PRICE_CLAIM.search(copy):
             errors.append(f"{where}: no prices, star ratings, or price claims in gift guide copy")
+    # Approved SiteStripe ledger entries are merged into the catalog at deploy time, so curated
+    # comparisons may point at them before they are folded into products.json.
+    try:
+        pending = {x.get("asin") for x in json.loads((ROOT / "imports" / "sitestripe.json").read_text(encoding="utf-8"))
+                   if x.get("approved") is True}
+    except (OSError, ValueError):
+        pending = set()
+    for p in data["products"]:
+        where = f"products['{p.get('asin')}']"
+        alts = p.get("alternatives")
+        if alts is not None or p.get("comparison_facts") is not None:
+            if len(alts or []) != 4:
+                errors.append(f"{where}: 'alternatives' needs exactly 4 comparable products")
+            seen = set()
+            for i, item in enumerate(alts or []):
+                a = item.get("asin")
+                if a not in by_asin and a not in pending or a == p.get("asin") or a in seen:
+                    errors.append(f"{where}.alternatives[{i}]: ASIN {a} must be a different catalog product, listed once")
+                seen.add(a)
+                facts = item.get("facts") or []
+                if len(facts) != 5 or not all(isinstance(f, str) and f.strip() for f in facts):
+                    errors.append(f"{where}.alternatives[{i}]: needs exactly 5 verified facts")
+            facts = p.get("comparison_facts") or []
+            if len(facts) != 5 or not all(isinstance(f, str) and f.strip() for f in facts):
+                errors.append(f"{where}: 'comparison_facts' needs exactly 5 verified facts")
+        acc = p.get("accessories")
+        if acc is not None:
+            if not str(acc.get("title", "")).strip() or not str(acc.get("note", "")).strip():
+                errors.append(f"{where}: accessories need 'title' and 'note'")
+            ids = acc.get("asins") or []
+            if not ids:
+                errors.append(f"{where}: accessories need at least one ASIN")
+            for a in ids:
+                if a not in by_asin and a not in pending or a == p.get("asin"):
+                    errors.append(f"{where}: accessory ASIN {a} must be another catalog product")
+                if a in {x.get("asin") for x in p.get("alternatives") or []}:
+                    errors.append(f"{where}: {a} is listed as both an alternative and an accessory")
+        copy = json.dumps({k: p.get(k) for k in ("alternatives", "comparison_facts", "accessories")}, ensure_ascii=False)
+        if TESTING_CLAIM.search(copy):
+            errors.append(f"{where}: comparison/accessory copy implies hands-on testing/personal use")
+        if PRICE_CLAIM.search(copy):
+            errors.append(f"{where}: no prices, star ratings, or price claims in comparison/accessory copy")
     for key, c in data.get("comparisons", {}).items():
         where = f"comparisons['{key}']"
         if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", key):
@@ -755,6 +797,40 @@ def render_pick(data, p, products):
     base = "../../"
     more = related_products(data, p, products)
     more_html = ""
+    # Explicitly curated accessories, rather than treating broad category matches as compatible.
+    acc = p.get("accessories") or {}
+    accessory_ids = tuple(acc.get("asins", ()))
+    by_asin = {q["asin"]: q for q in products}
+    accessories = [by_asin[a] for a in accessory_ids if a in by_asin]
+    accessory_html = ""
+    if accessories:
+        accessory_cards = "\n".join(card(q, tag, base, pl="accessories") for q in accessories)
+        accessory_html = (f'    <section class="related-products">\n      <h2>{e(acc["title"])}</h2>\n'
+                          f'      <p>{e(acc["note"])}</p>\n'
+                          f'      <div class="grid related">\n{accessory_cards}\n      </div>\n    </section>\n')
+        more = [q for q in more if q["asin"] not in accessory_ids]
+    # Comparisons are curated per product. Never guess matches from a broad category.
+    alternatives = p.get("alternatives", [])
+    deals_html = (f'    <section class="prose wide">\n'
+                  f'      <h2>Current Amazon deals</h2>\n'
+                  f'      <p>Explore Amazon\'s current deals; offers can change.</p>\n'
+                  f'      <a class="btn" href="https://www.amazon.com/deals?tag={e(tag)}" rel="sponsored nofollow noopener" target="_blank">Check current deals on Amazon</a>\n'
+                  f'    </section>\n')
+    featured_facts_html = ""
+    featured_facts = p.get("comparison_facts", [])
+    if len(featured_facts) >= 5 and all(isinstance(fact, str) and fact.strip() for fact in featured_facts):
+        featured_facts_html = ('    <section class="prose wide">\n      <h2>Featured product: key facts</h2>\n      <ul>'
+                               + ''.join(f'<li>{e(fact)}</li>' for fact in featured_facts) + '</ul>\n    </section>\n')
+    comparison_html = ""
+    if len(alternatives) == 4 and all(item.get("asin") in by_asin and len(item.get("facts", [])) >= 5 and all(isinstance(fact, str) and fact.strip() for fact in item.get("facts", [])) for item in alternatives):
+        comparison_cards = []
+        for item in alternatives:
+            q = by_asin[item["asin"]]
+            facts = ''.join(f'<li>{e(fact)}</li>' for fact in item["facts"])
+            comparison_cards.append('<div>' + card(q, tag, base, pl="comparison") + f'<h3>Key facts</h3><ul>{facts}</ul></div>')
+        comparison_html = ('    <section class="related-products">\n      <h2>Compare similar products</h2>\n'
+                           '      <p>Compare the featured product above with these four alternatives.</p>\n'
+                           '      <div class="grid related">\n' + '\n'.join(comparison_cards) + '\n      </div>\n    </section>\n')
     cmp_links = "".join(
         f'      <p style="margin-top:8px"><a class="more" href="{base}{comparison_path(k)}">Compare: {e(c["h1"])} →</a></p>\n'
         for k, c in data.get("comparisons", {}).items() if p["asin"] in c["products"])
@@ -765,7 +841,7 @@ def render_pick(data, p, products):
                         f'      <p><small>Product details can change, so check the current listing on Amazon.</small></p>\n    </section>\n')
     if more:
         cards = "\n".join(card(q, tag, base, pl="related") for q in more)
-        more_html = (f'    <section class="related-products">\n      <h2>Related products</h2>\n      <div class="grid related">\n{cards}\n      </div>\n'
+        more_html = (f'    <section class="related-products">\n      <h2>Explore more kitchen products</h2>\n      <p>Browse other kitchen finds in our guides.</p>\n      <div class="grid related">\n{cards}\n      </div>\n'
                      f'      <p style="margin-top:16px"><a class="more" href="{base}{guide_path(p["subcategory"])}">See the full guide: {e(sub["title"])} →</a></p>\n'
                      f'{cmp_links}    </section>\n')
     hub = HUBS[sub["category"]]
@@ -779,7 +855,7 @@ def render_pick(data, p, products):
     <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{hub['path']}">{e(hub['nav'])}</a> › <a href="{base}{guide_path(p['subcategory'])}">{e(sub['title'])}</a></span>
   </div>
   <main id="main">
-    <p class="callout">{DISCLOSURE} The "Check price on Amazon" button below is an affiliate link.</p>
+    <p class="callout">{DISCLOSURE} Amazon buttons on this page are affiliate links.</p>
     <article class="pick" id="{e(p['asin'])}" data-pl="pick">
       <div class="media">
       <a class="img" href="{e(product_affiliate_url(p, tag))}" rel="sponsored nofollow noopener" target="_blank">
@@ -798,7 +874,7 @@ def render_pick(data, p, products):
         </div>
       </div>
     </article>
-{details_html}{more_html}{signup()}  </main>
+{details_html}{featured_facts_html}{comparison_html}{deals_html}{accessory_html}{more_html}{signup()}  </main>
 """ + foot(site)
 
 
