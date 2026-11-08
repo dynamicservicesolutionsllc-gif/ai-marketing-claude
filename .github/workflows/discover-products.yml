@@ -53,7 +53,7 @@ jobs:
             before="$(sha256sum "$report" | cut -d' ' -f1)"
           fi
           if git ls-remote --exit-code origin refs/heads/amazon-api-discovery-queue >/dev/null 2>&1; then
-            git fetch --quiet origin amazon-api-discovery-queue
+            git fetch --quiet origin refs/heads/amazon-api-discovery-queue:refs/remotes/origin/amazon-api-discovery-queue
             git show origin/amazon-api-discovery-queue:"$report" > "$report"
             before="$(sha256sum "$report" | cut -d' ' -f1)"
           else
@@ -83,5 +83,11 @@ jobs:
           git commit -m "Queue one Amazon product candidate"
           git push --force-with-lease origin amazon-api-discovery-queue
           if ! gh pr view amazon-api-discovery-queue --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh pr create               --repo "$GITHUB_REPOSITORY"               --base main               --head amazon-api-discovery-queue               --draft               --title "Amazon product candidate queue"               --body "Automated candidate queue from the authorized Amazon Creators API. This contains ASIN and search metadata only. Verify the current exact listing, seller, variant, SiteStripe link, editorial content, and photo rights before adding anything to the approved SiteStripe import ledger. This workflow does not modify main or publish products."
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head amazon-api-discovery-queue \
+              --draft \
+              --title "Amazon product candidate queue" \
+              --body "Automated candidate queue from the authorized Amazon Creators API. This contains ASIN and search metadata only. Verify the current exact listing, seller, variant, SiteStripe link, editorial content, and photo rights before adding anything to the approved SiteStripe import ledger. This workflow does not modify main or publish products."
           fi
