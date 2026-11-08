@@ -23,6 +23,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           path: src
+      - name: Check out the verified product feed
+        if: vars.VERIFIED_PRODUCT_FEED_ENABLED == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: verified-product-feed
+          path: verified-product-feed
+          persist-credentials: false
       - name: Install build dependencies
         run: pip install --quiet pillow
       - name: Test photo, import and campaign requirements
@@ -30,7 +37,14 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Import approved SiteStripe products
         working-directory: src/site
-        run: python3 import_sitestripe.py imports/sitestripe.json --apply
+        env:
+          VERIFIED_PRODUCT_FEED_ENABLED: ${{ vars.VERIFIED_PRODUCT_FEED_ENABLED }}
+        run: |
+          args=(imports/sitestripe.json --apply)
+          if [ "$VERIFIED_PRODUCT_FEED_ENABLED" = true ]; then
+            args+=(--feed-directory "$GITHUB_WORKSPACE/verified-product-feed")
+          fi
+          python3 import_sitestripe.py "${args[@]}"
       - name: Build without Amazon API access
         working-directory: src/site
         run: python3 build.py --offline
