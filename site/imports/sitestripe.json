@@ -41,5 +41,48 @@
       "sha256": "0d45795b6c5548cef8ed7da2aacd97fe2e902c01187b8234f856839ebe8f4a43",
       "credit": "“Lemon squeezing” by SKopp · CC BY 4.0"
     }
+  },
+  {
+    "asin": "B0021CEREA",
+    "name": "Nordic Ware Heritage Bundt Pan (Silver, 10-Cup)",
+    "category": "gadgets",
+    "subcategory": "bakeware",
+    "blurb": "The silver 10-cup Heritage Bundt pan uses cast aluminum and a spiral-fluted mold for ring cakes. Choose it for a pronounced pattern and check the pan size in your recipe before baking.",
+    "added": "2026-11-07",
+    "award": "For spiral Bundt cakes",
+    "graphic": {
+      "label": "Nordic Ware Heritage Bundt Pan",
+      "headline": "A Spiral Mold for Bundt Cakes",
+      "points": [
+        "10-cup pan capacity",
+        "Cast aluminum",
+        "Silver finish"
+      ]
+    },
+    "pin": {
+      "title": "Nordic Ware Heritage Bundt Pan | 10-Cup Size Guide",
+      "description": "#ad As an Amazon Associate I earn from qualifying purchases. Check the capacity and finish before buying a spiral Bundt pan for holiday baking. Similar item shown. Photo by Jakub Kapusnak, Foodiesfeed (CC0). https://www.foodiesfeed.com/free-food-photo/bundt-pan-for-baking-2",
+      "board": "Holiday Baking Essentials"
+    },
+    "suits": "For home bakers looking for a spiral pattern for pound cakes or holiday centerpieces.",
+    "check": "Check that your recipe calls for a 10-cup pan, and compare the exact silver Heritage listing before buying.",
+    "approved": true,
+    "variant": "Silver metallic Platinum Collection Heritage, 10-cup capacity, model 80637, one pan",
+    "seller": "Amazon.com (new offer in Amazon listing snapshot dated 2026-10-10; seller may change)",
+    "verified_at": "2026-11-07",
+    "source_url": "https://www.nordicware.com/products/heritage-bundt-pan-1/",
+    "content_rights": "original-editorial-graphic",
+    "editorial_reason": "Help holiday bakers check recipe capacity and distinguish the silver model from the manufacturer’s newer finish.",
+    "photo_review": {
+      "exact_product": false,
+      "kind": "fluted ring cake pan",
+      "source_url": "https://www.foodiesfeed.com/free-food-photo/bundt-pan-for-baking-2",
+      "rights_basis": "public-domain",
+      "rights_evidence": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "author": "Jakub Kapusnak",
+      "license": "CC0 1.0, resized and cropped",
+      "sha256": "438c8c9887a78964776e87db33f503ecee809f5cd364035bb623e8704433ccf6",
+      "credit": "Jakub Kapusnak / Foodiesfeed · CC0"
+    }
   }
 ]

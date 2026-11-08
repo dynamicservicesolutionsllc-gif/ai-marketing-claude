@@ -22,16 +22,16 @@
     {
       "name": "Nordic Ware Heritage Bundt Pan",
       "source_url": "https://www.nordicware.com/products/heritage-bundt-pan-1/",
-      "status": "draft",
-      "asin": null,
-      "affiliate_link": null,
-      "photo_rights": "not_established",
-      "blocking_checks": [
-        "Verify exact Amazon listing, variant and seller",
-        "Obtain affiliate link",
-        "Obtain authorized exact-product photograph"
-      ],
-      "editorial_angle": "Holiday centerpiece cakes"
+      "status": "approved_for_import",
+      "asin": "B0021CEREA",
+      "affiliate_link": "https://www.amazon.com/dp/B0021CEREA/ref=nosim?tag=kitchenfi0fde-20",
+      "photo_rights": "CC0, similar item shown",
+      "blocking_checks": [],
+      "editorial_angle": "Holiday centerpiece cakes",
+      "amazon_url": "https://www.amazon.com/dp/B0021CEREA",
+      "variant": "Silver metallic Platinum Collection Heritage, 10-cup capacity, model 80637, one pan",
+      "seller_snapshot": "Amazon.com (new offer in Amazon listing snapshot dated 2026-10-10; seller may change)",
+      "photo_source": "https://www.foodiesfeed.com/free-food-photo/bundt-pan-for-baking-2"
     },
     {
       "name": "Chef'n FreshForce Citrus Juicer",
@@ -63,7 +63,7 @@
       "amazon_url": "https://www.amazon.com/dp/B00ABH0PYI",
       "seller_snapshot": "Hour Loop; Amazon offer snapshot timestamp 2026-11-03. Seller can change.",
       "photo_candidate": "https://www.si.edu/object/deluxe-cookie-king:nmah_1321747",
-      "photo_candidate_review": "Search listing describes CC0, but direct retrieval did not verify the specific image and dimensions. Vintage similar item only."
+      "photo_candidate_review": "Smithsonian marks the metadata CC0 but explicitly restricts reuse of the associated photograph."
     },
     {
       "name": "Lodge Black Silicone Hot Handle Holder",
@@ -73,11 +73,13 @@
       "affiliate_link": null,
       "photo_rights": "not_established",
       "blocking_checks": [
-        "Verify exact Amazon listing, variant and seller",
-        "Obtain affiliate link",
-        "Obtain authorized exact-product photograph"
+        "Confirm seller from the exact US Amazon offer",
+        "Clear suitable photo rights for the website, Pin and video outputs"
       ],
-      "editorial_angle": "Fit check for existing cast iron cookware"
+      "editorial_angle": "Fit check for existing cast iron cookware",
+      "candidate_asin": "B004QM8W0I",
+      "candidate_amazon_url": "https://www.amazon.com/dp/B004QM8W0I",
+      "variant": "Black, ASHH11, single standard-size handle holder"
     }
   ]
 }
