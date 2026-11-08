@@ -6,8 +6,10 @@ from urllib.parse import urlsplit
 
 def verified_photo(entry, site_root):
     review = entry.get('photo_review') or {}
-    if review.get('exact_product') is not True:
-        raise ValueError('An approved photo of the exact product is required')
+    exact = review.get('exact_product')
+    kind = review.get('kind')
+    if exact is not True and (exact is not False or not isinstance(kind, str) or not kind.strip()):
+        raise ValueError('An approved exact photo or labeled similar-item photo is required')
     for field in ('source_url', 'rights_basis', 'rights_evidence', 'author', 'license'):
         if not isinstance(review.get(field), str) or not review[field].strip():
             raise ValueError(f'Missing photo {field}')
@@ -28,4 +30,4 @@ def verified_photo(entry, site_root):
     with Image.open(path) as image:
         if min(image.size) < 800:
             raise ValueError('Product photo must be at least 800 pixels on both sides')
-    return dict(review, exact_product=True)
+    return dict(review)
