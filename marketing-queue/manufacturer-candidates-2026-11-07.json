@@ -1,0 +1,76 @@
+{
+  "status": "research_candidates_not_approved_imports",
+  "catalog_checked_products": 108,
+  "candidates": [
+    {
+      "name": "Souper Cubes 1-Cup Freezer Tray",
+      "source_url": "https://www.soupercubes.com/pages/souper-cubes-size-guide",
+      "status": "draft",
+      "asin": null,
+      "affiliate_link": null,
+      "photo_rights": "not_established",
+      "blocking_checks": [
+        "Verify exact Amazon listing, variant and seller",
+        "Obtain affiliate link",
+        "Obtain authorized exact-product photograph"
+      ],
+      "editorial_angle": "Portioning holiday leftovers"
+    },
+    {
+      "name": "Nordic Ware Heritage Bundt Pan",
+      "source_url": "https://www.nordicware.com/products/heritage-bundt-pan-1/",
+      "status": "draft",
+      "asin": null,
+      "affiliate_link": null,
+      "photo_rights": "not_established",
+      "blocking_checks": [
+        "Verify exact Amazon listing, variant and seller",
+        "Obtain affiliate link",
+        "Obtain authorized exact-product photograph"
+      ],
+      "editorial_angle": "Holiday centerpiece cakes"
+    },
+    {
+      "name": "Chef'n FreshForce Citrus Juicer",
+      "source_url": "https://www.chefn.com/products/freshforce-citrus-juicer",
+      "status": "draft",
+      "asin": null,
+      "affiliate_link": null,
+      "photo_rights": "not_established",
+      "blocking_checks": [
+        "Verify exact Amazon listing, variant and seller",
+        "Obtain affiliate link",
+        "Obtain authorized exact-product photograph"
+      ],
+      "editorial_angle": "Citrus preparation for holiday cooking"
+    },
+    {
+      "name": "OXO Good Grips Cookie Press",
+      "source_url": "https://www.oxo.com/media/wysiwyg/PDF_Files/1243_1257580%20OXO%20Good%20Grips%20Cookie%20Press%20Instruction%20Booklet.pdf",
+      "status": "draft",
+      "asin": null,
+      "affiliate_link": null,
+      "photo_rights": "not_established",
+      "blocking_checks": [
+        "Verify exact Amazon listing, variant and seller",
+        "Obtain affiliate link",
+        "Obtain authorized exact-product photograph"
+      ],
+      "editorial_angle": "Holiday spritz cookies"
+    },
+    {
+      "name": "Lodge Black Silicone Hot Handle Holder",
+      "source_url": "https://www.lodgecastiron.com/products/silicone-handle-holder?variant=51685758566772",
+      "status": "draft",
+      "asin": null,
+      "affiliate_link": null,
+      "photo_rights": "not_established",
+      "blocking_checks": [
+        "Verify exact Amazon listing, variant and seller",
+        "Obtain affiliate link",
+        "Obtain authorized exact-product photograph"
+      ],
+      "editorial_angle": "Fit check for existing cast iron cookware"
+    }
+  ]
+}
