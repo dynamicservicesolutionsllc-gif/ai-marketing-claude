@@ -192,15 +192,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 </style>
-<!-- TikTok Pixel Code -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-  ttq.load("DBLO06JC77U0QLCJSSEG");
-  ttq.page();
-}(window, document, "ttq");
-</script>
-<!-- End TikTok Pixel Code -->
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1671181604794472&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -335,14 +326,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B0DPXRJ2VY" data-pl="related">
-        <a class="img" href="https://www.amazon.com/dp/B0DPXRJ2VY?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0DPXRJ2VY-sq.webp" type="image/webp"><img src="../../img/B0DPXRJ2VY-sq.png" alt="Zulay Kitchen Milk Frother Wand with Stand (photo shows a similar milk frother, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B0169ZDUSI" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0169ZDUSI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0169ZDUSI-sq.webp" type="image/webp"><img src="../../img/B0169ZDUSI-sq.png" alt="Mind Reader 6-Compartment Coffee Condiment Station, 13-Inch (product not pictured; photo shows sugar packets in a caddy, the kind of thing it holds)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/zulay-kitchen-milk-frother-wand-with-stand/">Zulay Kitchen Milk Frother Wand with Stand</a></h3>
-          <p>A battery-powered handheld wand whips milk or non-dairy milk into foam for lattes, cappuccinos, matcha, and hot chocolate in seconds. It runs on four included AA batteries and parks on its own metal stand on the counter.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0DPXRJ2VY?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/mind-reader-6-compartment-coffee-condiment-station-13-inch/">Mind Reader 6-Compartment Coffee Condiment Station, 13-Inch</a></h3>
+          <p>Coffee bars get messy fast when cups, lids, sugar packets and stirrers all share one basket. This 13-inch upright station gives each one its own compartment so a home coffee bar or office breakroom stays tidy.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0169ZDUSI?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
@@ -378,33 +369,5 @@ if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <script src="/quiz.js?v=eaee888b" defer></script>
 <script src="/js/video-generator.js" defer></script>
-<!-- TikTok product events -->
-<script>
-  ttq.track('ViewContent', {
-    content_id: window.location.pathname.replace(/^\/+|\/$/g, ''),
-    content_type: 'product',
-    content_name: document.title,
-    currency: 'USD'
-  });
-
-  // Affiliate clicks are tracked site-wide by the separate handler below.
-</script>
-<!-- End TikTok product events -->
-<!-- TikTok affiliate click events -->
-<script>
-  document.addEventListener('click', function (event) {
-    var link = event.target.closest && event.target.closest('a[href]');
-    if (!link) return;
-    var host;
-    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
-    catch (_) { return; }
-    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
-    if (window.ttq) ttq.track('ClickButton', {
-      content_type: 'affiliate_product',
-      content_name: document.title
-    });
-  });
-</script>
-<!-- End TikTok affiliate click events -->
 </body>
 </html>

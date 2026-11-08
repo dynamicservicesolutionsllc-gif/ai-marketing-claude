@@ -192,15 +192,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   footer { border-top:1px solid var(--bd); padding:24px 0 40px; color:var(--mut); font-size:13px; }
   footer a { color:var(--acc); }
 </style>
-<!-- TikTok Pixel Code -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-  ttq.load("DBLO06JC77U0QLCJSSEG");
-  ttq.page();
-}(window, document, "ttq");
-</script>
-<!-- End TikTok Pixel Code -->
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1671181604794472&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -335,14 +326,14 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
-      <article class="card" id="B09NV9WV35" data-pl="related">
-        <a class="img" href="https://www.amazon.com/dp/B09NV9WV35?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B09NV9WV35-sq.webp" type="image/webp"><img src="../../img/B09NV9WV35-sq.png" alt="VaeFae Bamboo In-Drawer Knife Organizer (photo shows a similar in-drawer knife organizer, not this exact product)" loading="lazy" width="800" height="800"></picture>
+      <article class="card" id="B08DY9HRWD" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B08DY9HRWD?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B08DY9HRWD-sq.webp" type="image/webp"><img src="../../img/B08DY9HRWD-sq.png" alt="ORDORA 8-Tier Adjustable Pots and Pans Organizer Rack (product not pictured; photo shows a crowded pots-and-pans cupboard, the clutter it sorts out)" loading="lazy" width="800" height="800"></picture>
         </a>
         <div class="body">
-          <h3><a href="../../picks/vaefae-bamboo-in-drawer-knife-organizer/">VaeFae Bamboo In-Drawer Knife Organizer</a></h3>
-          <p>A countertop knife block takes up prime counter space in a small kitchen. This bamboo insert moves up to 12 knives and a sharpener into a drawer, with slots that keep blades still and separated.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B09NV9WV35?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <h3><a href="../../picks/ordora-8-tier-adjustable-pots-and-pans-organizer-rack/">ORDORA 8-Tier Adjustable Pots and Pans Organizer Rack</a></h3>
+          <p>Stacked pans mean pulling out four to reach the one you need, and the noise and scratches that come with it. This ORDORA rack holds cookware upright in 8 adjustable tiers, sets up three ways without tools, and has rubber caps on each divider to help keep pans in place.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B08DY9HRWD?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
@@ -377,33 +368,5 @@ if(i>=0)v.splice(i,1);else v.unshift(a);s(v);u(b);if(window.gtag)gtag('event',i>
 window.addEventListener('storage',function(ev){if(ev.key===K){c();[].forEach.call(document.querySelectorAll('[data-save]'),u)}})})();</script>
 <script src="/quiz.js?v=eaee888b" defer></script>
 <script src="/js/video-generator.js" defer></script>
-<!-- TikTok product events -->
-<script>
-  ttq.track('ViewContent', {
-    content_id: window.location.pathname.replace(/^\/+|\/$/g, ''),
-    content_type: 'product',
-    content_name: document.title,
-    currency: 'USD'
-  });
-
-  // Affiliate clicks are tracked site-wide by the separate handler below.
-</script>
-<!-- End TikTok product events -->
-<!-- TikTok affiliate click events -->
-<script>
-  document.addEventListener('click', function (event) {
-    var link = event.target.closest && event.target.closest('a[href]');
-    if (!link) return;
-    var host;
-    try { host = new URL(link.href, location.href).hostname.toLowerCase(); }
-    catch (_) { return; }
-    if (host !== 'amazon.com' && !host.endsWith('.amazon.com')) return;
-    if (window.ttq) ttq.track('ClickButton', {
-      content_type: 'affiliate_product',
-      content_name: document.title
-    });
-  });
-</script>
-<!-- End TikTok affiliate click events -->
 </body>
 </html>
