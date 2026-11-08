@@ -1,6 +1,6 @@
 {
   "date": "2026-11-07",
-  "target_products": 5,
+  "target_products": 15,
   "ready_products": 0,
   "status": "blocked_no_verified_products",
   "csv_warning": "Review file only. Blank publish dates publish immediately on upload. Never upload without native duplicate checks.",
