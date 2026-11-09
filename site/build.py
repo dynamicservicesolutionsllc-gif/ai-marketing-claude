@@ -429,6 +429,33 @@ STATIC_ARTICLES = [
 STATIC_LD_START, STATIC_LD_END = "<!-- kff:static-ld -->", "<!-- /kff:static-ld -->"
 
 
+# Inbound links to the hand-written articles (they live outside the generated pages, so nothing links to them by
+# default). Guide/gift key -> [(article path, descriptive anchor text, short note)], rendered as "Helpful articles".
+ARTICLE_LINKS = {
+    "thanksgiving-kitchen-checklist": [
+        ("thanksgiving-prep-plan/", "The 3-day Thanksgiving prep plan for busy families", "a day-by-day plan from three days out to Thanksgiving morning"),
+        ("thanksgiving-make-ahead-timeline/", "Thanksgiving make-ahead timeline", "which dishes to prep 1\u20133 days before the meal"),
+    ],
+    "pantry-storage": [
+        ("learn/freezer-tray-buying-checklist/", "Freezer tray buying checklist", "portion size, freezer clearance, lids and care to check before you buy"),
+    ],
+    "food-prep-tools": [
+        ("learn/freezer-tray-buying-checklist/", "Freezer tray buying checklist", "what to check before buying trays for meal-prep soups and sauces"),
+    ],
+}
+
+
+def article_links_html(key, base):
+    links = ARTICLE_LINKS.get(key)
+    if not links:
+        return ""
+    for path, _, _ in links:
+        if path not in STATIC_ARTICLES:
+            sys.exit(f"ARTICLE_LINKS[{key!r}] points at {path}, which is not in STATIC_ARTICLES")
+    return ("    <section>\n      <h2>Helpful articles</h2>\n      <ul class=\"links\">" + "".join(
+        f'<li><a href="{base}{p}">{e(t)}</a>: {e(n)}</li>' for p, t, n in links) + "</ul>\n    </section>\n")
+
+
 def _text(fragment):
     return html.unescape(re.sub(r"<[^>]+>", "", fragment)).strip()
 
@@ -1204,7 +1231,7 @@ def render_guide(data, key, items):
         counts = Counter({k: sum(pk["asin"] in mine for pk in g["picks"]) for k, g in data.get("gift_guides", {}).items()})
         cross = [(gift_path(k), data["gift_guides"][k]["title"]) for k, n in counts.most_common() if n]
         cross_heading = "Gift guides featuring these picks"
-    related = ""
+    related = article_links_html(key, base)
     for heading, links in ((cross_heading, cross), (rel_heading, others)):
         if links:
             related += f"    <section>\n      <h2>{heading}</h2>\n      <ul class=\"links\">" + "".join(
@@ -1453,6 +1480,7 @@ def render_thanksgiving_timeline(data):
     <section>
       <h2>Getting the kitchen ready?</h2>
       <p>See the <a href="/{gift_path('thanksgiving-kitchen-checklist')}">Thanksgiving Kitchen Checklist for Hosts</a>: the thermometer, fat separator and slow cookers that make the day easier.</p>
+      <p>Planning the cooking too? Follow <a href="/thanksgiving-prep-plan/">the 3-day Thanksgiving prep plan for busy families</a>, or see the <a href="/thanksgiving-make-ahead-timeline/">Thanksgiving make-ahead timeline</a> for dishes you can prep 1\u20133 days before.</p>
     </section>
   </main>
 """ + foot(site)
@@ -2399,7 +2427,7 @@ def main():
     (OUT / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     # Let the posting routines load the graphics cross-origin (canvas -> file upload on Pinterest/Facebook).
     (OUT / "_headers").write_text("/img/*\n  Access-Control-Allow-Origin: *\n", encoding="utf-8")
-    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /click.php\nSitemap: {url}/sitemap.xml\n", encoding="utf-8")
     (OUT / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY, encoding="utf-8")
     (OUT / "pinterest-b0145.html").write_text(
         f'<!DOCTYPE html>\n<html>\n<head>\n<meta name="p:domain_verify" content="{PINTEREST_VERIFY}"/>\n</head>\n<body></body>\n</html>\n',
