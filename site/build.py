@@ -632,6 +632,13 @@ CSS = """
   .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .product-video-container { margin-top:12px; }
   .product-video-container video { width:100%; border-radius:8px; }
+  .appliance-video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; }
+  .appliance-video { min-width:0; background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:16px; }
+  .appliance-video h3 { margin:0 0 10px; }
+  .appliance-video-frame { width:100%; aspect-ratio:9/16; overflow:hidden; border-radius:10px; background:#000; }
+  .appliance-video-frame iframe { display:block; width:100%; height:100%; border:0; }
+  .appliance-video p { margin-top:10px; }
+  .appliance-video a { color:var(--acc); }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -770,6 +777,39 @@ def site_ld(site, products):
     return ld({"@context": "https://schema.org", "@graph": [org, web, items]})
 
 
+def featured_appliance_videos():
+    """Featured Black Friday appliance Shorts with crawlable, accessible YouTube embeds."""
+    videos = [
+        ("Refrigerator", "enl2ZlXnQPo"),
+        ("Stove", "2FayuuDCEWI"),
+        ("Dishwasher", "eNYKShJ2oFs"),
+    ]
+    cards = []
+    for label, video_id in videos:
+        watch_url = f"https://www.youtube.com/shorts/{video_id}"
+        embed_url = f"https://www.youtube.com/embed/{video_id}"
+        cards.append(
+            f'''      <article class="appliance-video">
+        <h3>{e(label)} Video</h3>
+        <div class="appliance-video-frame">
+          <iframe src="{embed_url}" title="Kitchen Finds &amp; Favorites {e(label)} video"
+            loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <p><a href="{watch_url}" target="_blank" rel="noopener">Watch the {e(label.lower())} Short on YouTube</a></p>
+      </article>'''
+        )
+    return f"""    <section id="featured-black-friday-appliances" aria-labelledby="featured-black-friday-appliances-title">
+      <h2 id="featured-black-friday-appliances-title">Featured Black Friday Appliances</h2>
+      <p>Watch our refrigerator, stove, and dishwasher videos, then explore the appliance details on their pages.</p>
+      <div class="appliance-video-grid">
+{chr(10).join(cards)}
+      </div>
+    </section>
+"""
+
+
 def render_home(data, products):
     site, tag = data["site"], data["site"]["associate_tag"]
     top = products[:TOP_PICKS]
@@ -817,7 +857,7 @@ def render_home(data, products):
     <nav>{nav}</nav>
   </header>
   <main id="main">
-{deals_banner(tag)}{quiz_cta()}{gifts}    <section id="top-picks">
+{deals_banner(tag)}{quiz_cta()}{featured_appliance_videos()}{gifts}    <section id="top-picks">
       <h2>This Week's Top Picks</h2>
       <div class="grid">
 {top_cards}
