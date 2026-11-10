@@ -243,7 +243,14 @@ def load(data=None):
             seen = set()
             for i, item in enumerate(alts or []):
                 a = item.get("asin")
-                if a not in by_asin and a not in pending or a == p.get("asin") or a in seen:
+                external = a not in by_asin and a not in pending
+                source_url = item.get("source_url", "")
+                source_ok = isinstance(source_url, str) and source_url.startswith("https://") and bool(re.match(r"https://[^/]+", source_url))
+                if (external and (not item.get("name") or not source_ok)) or a == p.get("asin") or a in seen:
+                    errors.append(f"{where}.alternatives[{i}]: external alternatives need a name and HTTPS manufacturer source")
+                if not re.fullmatch(r"B0[0-9A-Z]{8}", str(a or "")):
+                    errors.append(f"{where}.alternatives[{i}]: ASIN must look like B0XXXXXXXX")
+                if a not in by_asin and a not in pending and not external:
                     errors.append(f"{where}.alternatives[{i}]: ASIN {a} must be a different catalog product, listed once")
                 seen.add(a)
                 facts = item.get("facts") or []
@@ -950,12 +957,17 @@ def render_pick(data, p, products):
         featured_facts_html = ('    <section class="prose wide">\n      <h2>Featured product: key facts</h2>\n      <ul>'
                                + ''.join(f'<li>{e(fact)}</li>' for fact in featured_facts) + '</ul>\n    </section>\n')
     comparison_html = ""
-    if len(alternatives) == 4 and all(item.get("asin") in by_asin and len(item.get("facts", [])) >= 5 and all(isinstance(fact, str) and fact.strip() for fact in item.get("facts", [])) for item in alternatives):
+    if len(alternatives) == 4 and all((item.get("asin") in by_asin or (item.get("name") and item.get("source_url"))) and len(item.get("facts", [])) == 5 and all(isinstance(fact, str) and fact.strip() for fact in item.get("facts", [])) for item in alternatives):
         comparison_cards = []
         for item in alternatives:
-            q = by_asin[item["asin"]]
             facts = ''.join(f'<li>{e(fact)}</li>' for fact in item["facts"])
-            comparison_cards.append('<div>' + card(q, tag, base, pl="comparison") + f'<h3>Key facts</h3><ul>{facts}</ul></div>')
+            q = by_asin.get(item["asin"])
+            if q:
+                comparison_cards.append('<div>' + card(q, tag, base, pl="comparison") + f'<h3>Key facts</h3><ul>{facts}</ul></div>')
+            else:
+                amazon_url = product_affiliate_url({"asin": item["asin"]}, tag)
+                source = e(item["source_url"])
+                comparison_cards.append(f'<article class="card comparison" data-pl="comparison"><div class="body"><h3>{e(item["name"])}</h3><ul>{facts}</ul><p><a class="more" href="{source}" target="_blank" rel="noopener">See manufacturer specifications</a></p><a class="btn" href="{e(amazon_url)}" rel="sponsored nofollow noopener" target="_blank">Check current Amazon listing</a><small class="paid">{PAID_NOTE}</small></div></article>')
         comparison_html = ('    <section class="related-products">\n      <h2>Compare similar products</h2>\n'
                            '      <p>Compare the featured product above with these four alternatives.</p>\n'
                            '      <div class="grid related">\n' + '\n'.join(comparison_cards) + '\n      </div>\n    </section>\n')
@@ -976,14 +988,22 @@ def render_pick(data, p, products):
     crumbs = ld({"@context": "https://schema.org", **breadcrumbs(site, [
         (hub["nav"], hub["path"]), (sub["title"], guide_path(p["subcategory"])), (p["name"], page_path(p))])})
     points = "".join(f"<li>{e(pt)}</li>" for pt in p["graphic"]["points"])
-    title = seo_title(p["name"], site)
-    return head(site, title, describe(p["blurb"]), page_path(p), f"{site['url']}/img/{p['asin']}.png",
-                p["graphic"]["headline"], 1000, 1500, crumbs + "\n") + f"""  <div class="top">
+    faq = p.get("faq", [])
+    faq_html = ""
+    faq_schema = ""
+    if faq:
+        faq_html = '<section class="prose wide"><h2>FAQ: Victorinox Fibrox Pro 8-Inch Chef\'s Knife</h2>' + ''.join(f'<h3>{e(q)}</h3><p>{e(a)}</p>' for q, a in faq) + '</section>'
+        faq_schema = ld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+    title = seo_title(p.get("seo_title", p["name"]), site)
+    meta_description = p.get("meta_description", p["blurb"])
+    disclosure_extra = f' {e(p["affiliate_disclosure"])}' if p.get("affiliate_disclosure") else ""
+    return head(site, title, describe(meta_description), page_path(p), f"{site['url']}/img/{p['asin']}.png",
+                p["graphic"]["headline"], 1000, 1500, crumbs + "\n" + faq_schema + "\n") + f"""  <div class="top">
     <a class="brand" href="{base}">{e(site['name'])}</a>
     <span class="crumbs"><a href="{base}">Home</a> › <a href="{base}{hub['path']}">{e(hub['nav'])}</a> › <a href="{base}{guide_path(p['subcategory'])}">{e(sub['title'])}</a></span>
   </div>
   <main id="main">
-    <p class="callout">{DISCLOSURE} Amazon buttons on this page are affiliate links.</p>
+    <p class="callout">{DISCLOSURE} Amazon buttons on this page are affiliate links.{disclosure_extra}</p>
     <article class="pick" id="{e(p['asin'])}" data-pl="pick">
       <div class="media">
       <a class="img" href="{e(product_affiliate_url(p, tag))}" rel="sponsored nofollow noopener" target="_blank">
@@ -1002,7 +1022,7 @@ def render_pick(data, p, products):
         </div>
       </div>
     </article>
-{details_html}{featured_facts_html}{comparison_html}{deals_html}{accessory_html}{more_html}{signup()}  </main>
+{details_html}{featured_facts_html}{comparison_html}{faq_html}{deals_html}{accessory_html}{more_html}{signup()}  </main>
 """ + foot(site)
 
 

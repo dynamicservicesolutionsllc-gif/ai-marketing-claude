@@ -1,8 +1,8 @@
 {
   "B00004OCKR": {
-    "id": "File:Essoreuse \u00e0 salade.jpg",
+    "id": "File:Essoreuse à salade.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Essoreuse_%C3%A0_salade.jpg",
-    "user": "Medja\u00ef",
+    "user": "Medjaï",
     "site": "Wikimedia Commons",
     "license": "Public domain",
     "kind": "salad spinner"
@@ -165,7 +165,7 @@
     "kind": "cooling rack"
   },
   "B010TCP3SC": {
-    "id": "File:Li\u00e8ge waffle iron in Brussels-Central railway station.jpg",
+    "id": "File:Liège waffle iron in Brussels-Central railway station.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Li%C3%A8ge_waffle_iron_in_Brussels-Central_railway_station.jpg",
     "user": "Romaine",
     "site": "Wikimedia Commons",
@@ -236,7 +236,7 @@
   "B01N6UE7OF": {
     "id": 9551376,
     "page_url": "https://www.pexels.com/photo/9551376/",
-    "user": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
+    "user": "Алексей Вечерин",
     "site": "Pexels",
     "kind": "pull-out cabinet basket",
     "license": "Pexels License"
@@ -359,7 +359,7 @@
   "B07RGGYLGY": {
     "id": 34578073,
     "page_url": "https://www.pexels.com/photo/34578073/",
-    "user": "Let\u00edcia Alvares",
+    "user": "Letícia Alvares",
     "site": "Pexels",
     "kind": "cabinet shelf riser",
     "license": "Pexels License"
@@ -375,7 +375,7 @@
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer_(Unsplash).jpg",
-    "user": "Jaros\u0142aw Ceborski jarson",
+    "user": "Jarosław Ceborski jarson",
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "silverware organizer"
@@ -627,7 +627,7 @@
     "license": "Unsplash License"
   },
   "B0BKR66QGC": {
-    "id": "Today\u2019s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here\u2019s to hoping it\u2019s good.",
+    "id": "Today’s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here’s to hoping it’s good.",
     "page_url": "https://www.flickr.com/photos/73451168@N00/49753908536",
     "user": "J Wynia",
     "site": "Flickr",
@@ -834,5 +834,12 @@
     "site": "Unsplash",
     "kind": "muffin pan",
     "license": "Unsplash License"
+  },
+  "B008M5U1C2": {
+    "author": "Kitchen Finds & Favorites",
+    "site": "Original AI-generated illustration",
+    "license": "Original illustration created for Kitchen Finds & Favorites",
+    "kind": "generic unbranded chef's knife",
+    "note": "Illustrative image only; it does not depict the exact product."
   }
 }
