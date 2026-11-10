@@ -33,6 +33,7 @@ if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,li
 if(window.fbq)fbq('trackCustom','AmazonClick',{asin:asin,placement:pl,channel:ch});
 try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kitchen Finds & Favorites", "item": "https://kitchenfindsfavorites.com/"}, {"@type": "ListItem", "position": 2, "name": "Kitchen Gadgets", "item": "https://kitchenfindsfavorites.com/kitchen-gadgets/"}, {"@type": "ListItem", "position": 3, "name": "Best Food Prep Gadgets That Save Time", "item": "https://kitchenfindsfavorites.com/guides/food-prep-tools/"}, {"@type": "ListItem", "position": 4, "name": "Chef’n FreshForce Lemon Squeezer (Yellow)", "item": "https://kitchenfindsfavorites.com/picks/chefn-freshforce-lemon-squeezer-yellow/"}]}</script>
+
 <style>
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
