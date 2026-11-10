@@ -33,6 +33,7 @@ if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,li
 if(window.fbq)fbq('trackCustom','AmazonClick',{asin:asin,placement:pl,channel:ch});
 try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kitchen Finds & Favorites", "item": "https://kitchenfindsfavorites.com/"}, {"@type": "ListItem", "position": 2, "name": "Small Kitchen Appliances", "item": "https://kitchenfindsfavorites.com/small-kitchen-appliances/"}, {"@type": "ListItem", "position": 3, "name": "Best Small Kitchen Appliances for Small Spaces", "item": "https://kitchenfindsfavorites.com/guides/countertop-cooking/"}, {"@type": "ListItem", "position": 4, "name": "Dash Mini Waffle Maker, 4-Inch", "item": "https://kitchenfindsfavorites.com/picks/dash-mini-waffle-maker-4-inch/"}]}</script>
+
 <style>
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
@@ -159,6 +160,13 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .product-video-container { margin-top:12px; }
   .product-video-container video { width:100%; border-radius:8px; }
+  .appliance-video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; }
+  .appliance-video { min-width:0; background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:16px; }
+  .appliance-video h3 { margin:0 0 10px; }
+  .appliance-video-frame { width:100%; aspect-ratio:9/16; overflow:hidden; border-radius:10px; background:#000; }
+  .appliance-video-frame iframe { display:block; width:100%; height:100%; border:0; }
+  .appliance-video p { margin-top:10px; }
+  .appliance-video a { color:var(--acc); }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }

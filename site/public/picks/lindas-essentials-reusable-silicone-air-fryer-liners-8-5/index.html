@@ -33,6 +33,7 @@ if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,li
 if(window.fbq)fbq('trackCustom','AmazonClick',{asin:asin,placement:pl,channel:ch});
 try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a:asin,c:ch,l:pl,k:cp}))}catch(e){}},true)})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Kitchen Finds & Favorites", "item": "https://kitchenfindsfavorites.com/"}, {"@type": "ListItem", "position": 2, "name": "Small Kitchen Appliances", "item": "https://kitchenfindsfavorites.com/small-kitchen-appliances/"}, {"@type": "ListItem", "position": 3, "name": "Best Air Fryer Accessories for Small Kitchens", "item": "https://kitchenfindsfavorites.com/guides/air-fryer-accessories/"}, {"@type": "ListItem", "position": 4, "name": "Linda's Essentials Reusable Silicone Air Fryer Liners, 8.5-Inch, 3-Pack", "item": "https://kitchenfindsfavorites.com/picks/lindas-essentials-reusable-silicone-air-fryer-liners-8-5/"}]}</script>
+
 <style>
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
@@ -159,6 +160,13 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .product-video-container { margin-top:12px; }
   .product-video-container video { width:100%; border-radius:8px; }
+  .appliance-video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; }
+  .appliance-video { min-width:0; background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:16px; }
+  .appliance-video h3 { margin:0 0 10px; }
+  .appliance-video-frame { width:100%; aspect-ratio:9/16; overflow:hidden; border-radius:10px; background:#000; }
+  .appliance-video-frame iframe { display:block; width:100%; height:100%; border:0; }
+  .appliance-video p { margin-top:10px; }
+  .appliance-video a { color:var(--acc); }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -261,6 +269,17 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
+      <article class="card" id="B008M5U1C2" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B008M5U1C2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B008M5U1C2-sq.webp" type="image/webp"><img src="../../img/B008M5U1C2-sq.png" alt="Victorinox Fibrox Pro 8 Inch Chef&#x27;s Knife, Dishwasher Safe, Black (product not pictured; photo shows Illustrative image only; it does not depict the exact product.)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/victorinox-fibrox-pro-8-inch-chefs-knife-dishwasher-safe/">Victorinox Fibrox Pro 8 Inch Chef&#x27;s Knife, Dishwasher Safe, Black</a></h3>
+          <p>The Victorinox Fibrox Pro 8-inch chef&#x27;s knife gives home cooks one versatile blade for chopping vegetables, slicing meat and everyday prep, with a textured, non-slip handle and an NSF-listed model.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B008M5U1C2?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
       <article class="card" id="B07SR7M6Y9" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B07SR7M6Y9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B07SR7M6Y9-sq.webp" type="image/webp"><img src="../../img/B07SR7M6Y9-sq.png" alt="Fayomir Stainless Steel Cookie Scoop Set of 3 (photo shows a similar cookie scoop, not this exact product)" loading="lazy" width="800" height="800"></picture>
@@ -269,17 +288,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/fayomir-stainless-steel-cookie-scoop-set-of-3/">Fayomir Stainless Steel Cookie Scoop Set of 3</a></h3>
           <p>Spooning cookie dough by hand gives uneven sizes, so some cookies burn while others stay raw. This set of three trigger-release scoops portions 1, 2 or 3 tablespoons at a time for even batches of cookies, muffins and meatballs.</p>
           <a class="btn" href="https://www.amazon.com/dp/B07SR7M6Y9?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B0D96PVGJ5" data-pl="related">
-        <a class="img" href="https://www.amazon.com/dp/B0D96PVGJ5?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B0D96PVGJ5-sq.webp" type="image/webp"><img src="../../img/B0D96PVGJ5-sq.png" alt="Riveira Dark Bamboo Wooden Spoons for Cooking, 6-Piece (photo shows a similar set of wooden spoons, not this exact product)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/riveira-dark-bamboo-wooden-spoons-for-cooking-6-piece/">Riveira Dark Bamboo Wooden Spoons for Cooking, 6-Piece</a></h3>
-          <p>Metal utensils can scratch nonstick pans, and a mismatched drawer of spoons slows cooking down. This 6-piece bamboo set covers stirring, flipping and serving with slotted and solid spatulas, a turner, solid and slotted spoons and a spoon fork.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B0D96PVGJ5?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
