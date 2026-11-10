@@ -1,0 +1,30 @@
+name: Publish Black Friday appliance Pins
+
+on:
+  push:
+    branches:
+      - publish/black-friday-appliance-pins-2026
+    paths:
+      - campaigns/pinterest/black-friday-appliances-2026.json
+      - .github/workflows/publish-appliance-pins.yml
+      - scripts/publish_pinterest_appliance_pins.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: black-friday-appliance-pins
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out campaign
+        uses: actions/checkout@v4
+
+      - name: Publish or safely skip
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: python3 scripts/publish_pinterest_appliance_pins.py campaigns/pinterest/black-friday-appliances-2026.json

@@ -1,0 +1,35 @@
+{
+  "campaign": "Black Friday Appliance Pins 2026",
+  "site": "https://kitchenfindsfavorites.com",
+  "created_at": "2026-11-10",
+  "status": "ready_for_github_publish",
+  "pins": [
+    {
+      "key": "refrigerator",
+      "title": "Black Friday Refrigerator Ideas for Your Kitchen",
+      "description": "Black Friday refrigerator ideas: compare dimensions, layout, and features for your kitchen. #ad As an Amazon Associate I earn from qualifying purchases. Follow us: YouTube https://www.youtube.com/@kitchenfindsfavorites · TikTok https://www.tiktok.com/@kitchenfindsfavorites · Facebook https://www.facebook.com/1433493846508656 · Instagram https://www.instagram.com/KitchenFindsAndFavorites/ · Pinterest https://www.pinterest.com/kitchenfindsfavorites/",
+      "board_url": "https://www.pinterest.com/kitchenfindsfavorites/black-friday-refrigerator-deals-2026/",
+      "source_youtube_short": "https://www.youtube.com/shorts/enl2ZlXnQPo",
+      "media_image_url": "https://i.ytimg.com/vi/enl2ZlXnQPo/hqdefault.jpg",
+      "destination_url": "https://kitchenfindsfavorites.com/?utm_source=pinterest&utm_medium=organic&utm_campaign=black_friday_appliances_2026&utm_content=refrigerator#featured-black-friday-appliances"
+    },
+    {
+      "key": "stove",
+      "title": "Black Friday Stove Ideas: What to Compare",
+      "description": "Black Friday stove ideas: compare cooktop style, fit, and required connections for your kitchen. #ad As an Amazon Associate I earn from qualifying purchases. Follow us: YouTube https://www.youtube.com/@kitchenfindsfavorites · TikTok https://www.tiktok.com/@kitchenfindsfavorites · Facebook https://www.facebook.com/1433493846508656 · Instagram https://www.instagram.com/KitchenFindsAndFavorites/ · Pinterest https://www.pinterest.com/kitchenfindsfavorites/",
+      "board_url": "https://www.pinterest.com/kitchenfindsfavorites/black-friday-stove-deals-2026/",
+      "source_youtube_short": "https://www.youtube.com/shorts/2FayuuDCEWI",
+      "media_image_url": "https://i.ytimg.com/vi/2FayuuDCEWI/hqdefault.jpg",
+      "destination_url": "https://kitchenfindsfavorites.com/?utm_source=pinterest&utm_medium=organic&utm_campaign=black_friday_appliances_2026&utm_content=stove#featured-black-friday-appliances"
+    },
+    {
+      "key": "dishwasher",
+      "title": "Black Friday Dishwasher Ideas for Your Home",
+      "description": "Black Friday dishwasher ideas: compare dimensions, capacity, and features for your household. #ad As an Amazon Associate I earn from qualifying purchases. Follow us: YouTube https://www.youtube.com/@kitchenfindsfavorites · TikTok https://www.tiktok.com/@kitchenfindsfavorites · Facebook https://www.facebook.com/1433493846508656 · Instagram https://www.instagram.com/KitchenFindsAndFavorites/ · Pinterest https://www.pinterest.com/kitchenfindsfavorites/",
+      "board_url": "https://www.pinterest.com/kitchenfindsfavorites/black-friday-dishwasher-deals-2026/",
+      "source_youtube_short": "https://www.youtube.com/shorts/eNYKShJ2oFs",
+      "media_image_url": "https://i.ytimg.com/vi/eNYKShJ2oFs/hqdefault.jpg",
+      "destination_url": "https://kitchenfindsfavorites.com/?utm_source=pinterest&utm_medium=organic&utm_campaign=black_friday_appliances_2026&utm_content=dishwasher#featured-black-friday-appliances"
+    }
+  ]
+}
