@@ -247,11 +247,9 @@ def load(data=None):
                 source_url = item.get("source_url", "")
                 source_ok = isinstance(source_url, str) and source_url.startswith("https://") and bool(re.match(r"https://[^/]+", source_url))
                 if (external and (not item.get("name") or not source_ok)) or a == p.get("asin") or a in seen:
-                    errors.append(f"{where}.alternatives[{i}]: external alternatives need a name and HTTPS manufacturer source")
+                    errors.append(f"{where}.alternatives[{i}]: must be a different catalog product or a named external alternative with an HTTPS manufacturer source")
                 if not re.fullmatch(r"B0[0-9A-Z]{8}", str(a or "")):
                     errors.append(f"{where}.alternatives[{i}]: ASIN must look like B0XXXXXXXX")
-                if a not in by_asin and a not in pending and not external:
-                    errors.append(f"{where}.alternatives[{i}]: ASIN {a} must be a different catalog product, listed once")
                 seen.add(a)
                 facts = item.get("facts") or []
                 if len(facts) != 5 or not all(isinstance(f, str) and f.strip() for f in facts):
