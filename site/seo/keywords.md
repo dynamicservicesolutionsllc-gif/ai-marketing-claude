@@ -8,12 +8,12 @@ short `title` used on cards, breadcrumbs and pins.
 |---|---|---|---|---|
 | /guides/food-prep-tools/ | time saving kitchen gadgets | kitchen gadgets that save time, meal prep tools, time-saving kitchen tools | 2026-11-01: title/H1 "Time-Saving Kitchen Gadgets for Faster Meal Prep", description, intro, types H2, new FAQ "Which kitchen gadgets save the most time?" | Page-one results for these queries are dominated by "time-saving kitchen gadgets/tools" and "meal prep tools" list titles (HGTV, Brit+Co, GadgetReview, Farm & Fleet, Unexpectedly Domestic, Scary Mommy); "food prep gadgets" phrasing rarely appears. |
 | /guides/baking-essentials/ (new) | baking essentials for beginners | baking tools for beginners, must have baking tools, basic baking tools list | 2026-11-01: new hand-picked buying guide (10 existing products from cooking-tools, blenders-and-mixers, food-prep-tools); title/H1 "Baking Essentials for Beginners: 10 Tools to Start" | Page one for these queries is all beginner list posts (Silver Spoon, Baking Mad, Bake School, Sweet & Savory, Kindly Unspoken, Fox News, Cuisine at Home); the site had the tools but no page for the query — only the gift-intent "gifts for bakers" list. |
+| /guides/pantry-storage/ | best pantry organizers | pantry storage containers, small pantry organization ideas, pantry organization ideas | 2026-11-10: title/H1 "Best Pantry Organizers and Storage Containers", description, intro, types H2 "Which pantry organizers do you need?", new FAQ "What are the best pantry organizers for a small pantry?" | Page one for "best pantry organizers and storage containers" is led by "best pantry organizers" list titles (Bustle, Real Homes, Tasting Table, Gear Patrol, CNN Underscored); "small pantry organization ideas" results are tip/list posts (Little House Living, Savvy and Sorted, Happy Happy Nester). The guide covers bins, can racks and turntables, not just containers, so "organizers" fits the page better than "storage containers". |
 
 ## Candidates for later runs
 
 - small kitchen appliances for small spaces (countertop-cooking — already aligned)
 - kitchen drawer organizer ideas / small kitchen organization ideas (drawer-organizers)
-- pantry organization ideas, pantry storage containers (pantry-storage)
 - under sink organizer (under-sink-storage)
 
 ## Pinterest search phrases (`pin_keywords`)
