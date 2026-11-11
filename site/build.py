@@ -430,6 +430,7 @@ STATIC_ARTICLES = [
     "thanksgiving-prep-plan/",
     "thanksgiving-make-ahead-timeline/",
     "learn/freezer-tray-buying-checklist/",
+    "appliance-picks/comfee-countertop-dishwasher/",
 ]
 STATIC_LD_START, STATIC_LD_END = "<!-- kff:static-ld -->", "<!-- /kff:static-ld -->"
 
