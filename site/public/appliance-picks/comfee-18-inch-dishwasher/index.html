@@ -25,6 +25,7 @@ h1{font-size:clamp(30px,5.5vw,48px);line-height:1.1;letter-spacing:-.025em;margi
 .lede{color:var(--mut);font-size:19px;margin:0 0 6px}.meta{color:var(--mut);font-size:14px;margin:0 0 22px}
 figure{margin:0 0 26px}figure img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--bd)}
 figcaption{color:var(--mut);font-size:13px;margin-top:8px}figcaption a{color:inherit}
+.video{max-width:360px;margin:0 auto 30px}.video video{display:block;width:100%;aspect-ratio:9/16;border-radius:16px;background:#000}
 .buy{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;margin:0 0 30px}
 .buy h2{margin-top:0}
 .cta{display:block;background:var(--acc);color:var(--accink);text-align:center;text-decoration:none;font-weight:750;padding:14px 16px;border-radius:9px;margin-top:14px}
@@ -53,6 +54,13 @@ a:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 <img src="dishwasher.jpg" width="1200" height="854" fetchpriority="high" alt="Stainless built-in dishwasher control panel with clean white dishes stacked on the counter above">
 </picture>
 <figcaption>Photo shows a similar built-in dishwasher, not this exact model. Photo: <a href="https://pixabay.com/photos/dishes-dishwasher-kitchen-555203/" rel="noopener">congerdesign on Pixabay</a>.</figcaption>
+</figure>
+
+<figure class="video">
+<video controls playsinline preload="metadata" poster="dishwasher-video-poster.jpg" width="720" height="1280">
+<source src="dishwasher-video.mp4" type="video/mp4">
+</video>
+<figcaption>Video from Kitchen Finds &amp; Favorites. It shows a countertop dishwasher, a smaller model than the COMFEE' built-in on this page.</figcaption>
 </figure>
 
 <section class="buy" aria-labelledby="buy-h">
