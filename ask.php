@@ -93,6 +93,7 @@ Rules:
   - Best Food Prep Gadgets That Save Time: https://kitchenfindsfavorites.com/guides/food-prep-tools/
   - Best Kitchen Scales, Meat Thermometers and Oven Mitts: https://kitchenfindsfavorites.com/guides/cooking-tools/
   - Baking Essentials for Beginners: https://kitchenfindsfavorites.com/guides/baking-essentials/
+  - Kitchen Essentials for Beginner Cooks: https://kitchenfindsfavorites.com/guides/kitchen-essentials/
   - Best Milk Frothers and Electric Kettles for Coffee and Tea: https://kitchenfindsfavorites.com/guides/coffee-and-tea/
   - Best Immersion Blenders, Hand Mixers & Mini Choppers: https://kitchenfindsfavorites.com/guides/blenders-and-mixers/
   - Best Small Kitchen Appliances for Small Spaces: https://kitchenfindsfavorites.com/guides/countertop-cooking/
