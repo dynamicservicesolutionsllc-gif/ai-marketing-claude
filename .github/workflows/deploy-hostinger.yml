@@ -34,6 +34,9 @@ jobs:
       - name: Build without Amazon API access
         working-directory: src/site
         run: python3 build.py --offline
+      - name: Audit Amazon Associates tags across all published HTML
+        working-directory: src/site
+        run: python3 audit_affiliate_links.py
       - name: Verify video encoder
         run: |
           if ! command -v ffmpeg >/dev/null; then
