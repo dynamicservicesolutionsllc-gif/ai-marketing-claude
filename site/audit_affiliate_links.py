@@ -25,6 +25,8 @@ class Audit(HTMLParser):
         host = (parsed.hostname or "").lower()
         if host not in {"amazon.com", "www.amazon.com", "smile.amazon.com"}:
             return
+        if parsed.path.startswith("/gp/help/"):
+            return  # informational Amazon policy link, not a product referral
         count += 1
         tags = parse_qs(parsed.query).get("tag", [])
         if len(tags) != 1 or tags[0] not in allowed:
