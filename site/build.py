@@ -2498,6 +2498,7 @@ def main():
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
     urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + comparison_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
+    urls.append((f"{url}/buying-guides/", None))
     urls += [(f"{url}/buying-guides/{p.parent.name}/", None) for p in sorted((OUT / "buying-guides").glob("*/index.html"))]
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
