@@ -1417,7 +1417,7 @@ HUBS = {
 
 
 def page_top(site, crumb=""):
-    return f"""  <div class="top"><a class="brand" href="/">{e(site['name'])}</a>{crumb}</div>
+    return f"""  <div class="top"><a class="brand" href="/">{e(site['name'])}</a> <a href="/buying-guides/" aria-label="Browse kitchen buying guides">Buying guides</a>{crumb}</div>
 """
 
 
