@@ -1,0 +1,92 @@
+{
+  "name": "Nordic Ware Original Stovetop Belgian Waffler",
+  "asin": "B00004W4UE",
+  "variant": "Manufacturer SKU 15040, cast-aluminum stovetop model. Current Amazon variant and pack count are unknown.",
+  "category": "gadgets",
+  "subcategory": "cooking-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-13",
+  "sources": [
+    {
+      "publisher": "Nordic Ware",
+      "url": "https://www.nordicware.com/products/original-stovetop-belgian-waffler/",
+      "updated": null,
+      "evidence": "Manufacturer identifies SKU 15040 and lists cast aluminum with compatibility for gas, electric, and ceramic cooktops."
+    },
+    {
+      "publisher": "Nordic Ware",
+      "url": "https://www.nordicware.com/products/categories/waffle-pans/",
+      "updated": null,
+      "evidence": "Manufacturer does not recommend its stovetop waffle pans for induction."
+    },
+    {
+      "publisher": "Epicurious",
+      "url": "https://www.epicurious.com/expert-advice/the-best-waffle-makers-article",
+      "published": "2024-06-01",
+      "updated": null,
+      "evidence": "Indexed hands-on comparison favored the Nordic Ware among its stovetop models and documented inconsistent browning during the test."
+    },
+    {
+      "publisher": "Serious Eats",
+      "url": "https://www.seriouseats.com/the-best-waffle-makers",
+      "updated": null,
+      "evidence": "A separate indexed 21-product hands-on comparison selected the Nordic Ware Belgian model in its stovetop category. Exact update date is unknown."
+    },
+    {
+      "publisher": "Swirls and Spice",
+      "url": "https://swirlsandspice.com/2015/02/13/lentil-pesto-pizza-waffles/",
+      "published": "2015-02-13",
+      "updated": null,
+      "evidence": "An indexed US Amazon product link exposes the bare ASIN for the Nordic Ware cast-aluminum stovetop Belgian waffler. Used for identifier provenance only."
+    }
+  ],
+  "research_evidence": "The hinged iron cooks Belgian-style waffles over a compatible burner without a countertop power cord. Two independent editorial tests show product relevance and give a practical basis for discussing the learning curve. The evidence does not establish current sales, conversion, Amazon rank, exact-variant review count, seller, or availability.",
+  "audience_fit": "Home cooks with limited counter space who make weekend waffles and are comfortable timing and flipping a stovetop pan.",
+  "buying_objection": "Check burner compatibility first. Manual flipping and heat adjustment take attention, and cooks who want a ready signal or repeatable browning may prefer an electric model.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 3,
+        "rationale": "Two editorial tests featured the stovetop model. Current US search volume, Amazon review counts, and sales are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 4.1,
+        "rationale": "A good editorial fit for home cooks with a compatible stove and limited counter space who make waffles occasionally."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4,
+        "rationale": "Shoppers can compare stovetop and electric waffle makers by burner compatibility, attention required, and storage."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 4.3,
+        "rationale": "The catalog covers a plug-in mini waffle maker. This model addresses a separate stovetop use case."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 3.8,
+        "rationale": "The buying trade-offs can be illustrated with original breakfast photography. Current Amazon offer and exact listing suitability remain unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.79
+  },
+  "confidence": "Medium for model and editorial fit. Low for current Amazon demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Stovetop vs. Electric Waffle Maker for a Small Kitchen",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Want Belgian waffles without another appliance on the counter? Compare a stovetop waffle iron and a plug-in model by burner fit, hands-on cooking time, and where you’ll store it after brunch.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/nordic-ware-original-stovetop-belgian-waffler/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Shoot an original vertical 1000 × 1500 photo of Belgian waffles on a plate near an unlit stovetop. Add “Stovetop or Electric?” and small labels for burner fit, flipping, and storage. Keep the waffle iron, packaging, and logos out of frame. Retain the original photo and creator credit."
+  }
+}
