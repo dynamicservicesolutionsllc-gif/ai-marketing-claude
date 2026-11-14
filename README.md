@@ -65,7 +65,7 @@ hf extensions install hf-claude --force
 hf claude                        # add --bill-to your-org-name to bill an organization
 ```
 
-**Manual path** — use the provided template:
+**Manual path (macOS / Linux / WSL)** — use the provided template:
 
 ```bash
 cp .env.example .env             # .env is gitignored
@@ -73,6 +73,20 @@ cp .env.example .env             # .env is gitignored
 set -a; source .env; set +a
 claude
 ```
+
+**Manual path (Windows PowerShell)** — PowerShell does not read `.env` files, so set the variables directly (they last for the current window only):
+
+```powershell
+$env:ANTHROPIC_BASE_URL = "https://router.huggingface.co"
+$env:ANTHROPIC_AUTH_TOKEN = "hf_your_token_here"
+$env:ANTHROPIC_DEFAULT_OPUS_MODEL = "zai-org/GLM-5.1"
+$env:ANTHROPIC_DEFAULT_SONNET_MODEL = "google/gemma-4-31B-it:together"
+$env:ANTHROPIC_DEFAULT_HAIKU_MODEL = "openai/gpt-oss-120b:cerebras"
+$env:CLAUDE_CODE_SUBAGENT_MODEL = "zai-org/GLM-5.1"
+claude
+```
+
+`install.sh` is a bash script; on Windows run it from WSL or Git Bash.
 
 | Variable | Purpose |
 |---|---|
