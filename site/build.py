@@ -37,7 +37,7 @@ def load_attrs(eager, high=None):
         return 'loading="lazy"'
     return 'loading="eager" fetchpriority="high"' if (eager if high is None else high) else 'loading="eager"'
 EXCLUDED_ASINS = {"B07TVDFVV9"}  # Associates-excluded; never list
-DISCLOSURE = "As an Amazon Associate, we earn from qualifying purchases."
+DISCLOSURE = "As an Amazon Associate I earn from qualifying purchases."
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630

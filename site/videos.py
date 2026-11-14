@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Make 9:16 short videos (TikTok / Reels / Shorts) from each buying guide's "measure first" list.
 
-`python3 site/videos.py` writes public/videos/<guide>.mp4 (1080x1920, about 20 s, silent: add a
+`python3 site/videos.py` writes public/videos/<guide>.mp4 (1080x1920, about 15 s, silent: add a
 sound in the app) and public/videos.json, the posting queue the free short-video routine reads
 (site/routines/short-videos.md). Existing MP4s are kept (pass --force to re-render). Uses only the
 site's own text and the licensed hero photos in assets/guides/ (never Amazon images).
@@ -82,7 +82,7 @@ def caption(key, sub, data):
     site = data["site"]["url"]
     noun = sub.get("noun", sub["title"]).lower()
     noun = ("an " if noun[0] in "aeiou" else "a ") + noun
-    tips = sub["measure"][:4]
+    tips = sub["measure"][:3]
     tags = list(dict.fromkeys(sub.get("hashtags", "").split() + ["#kitchenorganization", "#smallkitchen", "#kitchenhacks"]))[:5]
     page = f"{site}/guides/{key}/"
     hook = f"Measure these {len(tips)} things before you buy {noun}."
@@ -104,7 +104,7 @@ def make(key, sub, tmp, force=False):
     bg, top = background(ROOT / "assets" / "guides" / f"{key}.jpg")
     noun = sub.get("noun", sub["title"]).lower()
     noun = ("an " if noun[0] in "aeiou" else "a ") + noun
-    tips = sub["measure"][:4]
+    tips = sub["measure"][:3]
     slides = [("hook", card(bg, top, "Before you buy", f"Measure these {len(tips)} things first", f"Buying {noun}? Save yourself a return."))]
     for i, (h, b) in enumerate(tips, 1):
         slides.append(("tip", card(bg, top, "Measure", h, b, number=i)))

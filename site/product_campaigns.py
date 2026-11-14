@@ -84,6 +84,9 @@ def slide(product, heading, body, target):
     image.save(target)
 
 
+SLIDE_SECONDS = (3, 4, 5, 3)  # 15 s total; the fit-check slide carries the most text
+
+
 def make_video(product, output):
     if output.exists():
         return
@@ -94,12 +97,12 @@ def make_video(product, output):
         for n, (heading, body) in enumerate(content):
             slide(product, heading, body, Path(tmp)/f'{n}.png')
         playlist = Path(tmp)/'frames.txt'
-        playlist.write_text(''.join(f"file '{n}.png'\nduration 6\n" for n in range(4))+"file '3.png'\n")
+        playlist.write_text(''.join(f"file '{n}.png'\nduration {secs}\n" for n, secs in enumerate(SLIDE_SECONDS))+"file '3.png'\n")
         output.parent.mkdir(parents=True, exist_ok=True)
         partial = output.with_suffix('.tmp.mp4')
         subprocess.run(['ffmpeg','-y','-loglevel','error','-f','concat','-safe','0','-i',str(playlist),
                         '-vf','fps=24,format=yuv420p','-c:v','libx264','-preset','veryfast','-crf','22',
-                        '-t','24','-movflags','+faststart',str(partial)],check=True)
+                        '-t',str(sum(SLIDE_SECONDS)),'-movflags','+faststart',str(partial)],check=True)
         partial.replace(output)
 
 
