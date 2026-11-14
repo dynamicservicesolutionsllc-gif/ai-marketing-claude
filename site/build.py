@@ -2136,7 +2136,7 @@ def render_ask(data):
     site = data["site"]
     desc = "Ask the Kitchen Advisor a cooking or kitchen question. Get a quick answer, or an expert, research-backed answer with sources."
     graph = [page_node(site, "WebPage", "ask/", f"Kitchen Advisor | {site['name']}", desc)]
-    return head(site, f"Kitchen Advisor: Ask a Kitchen Question | {site['name']}", desc, "ask/", f"{site['url']}/img/og.png",
+    return head(site, f"Kitchen Advisor: Ask a Kitchen Question", desc, "ask/", f"{site['url']}/img/og.png",
                 site["name"], OG_W, OG_H, ld({"@context": "https://schema.org", "@graph": graph}) + "\n") + page_top(site) + """  <main id="main" class="prose">
     <h1>Ask the Kitchen Advisor</h1>
     <p>Stuck on a kitchen problem? Ask about cooking technique, food safety and storage, fixing a mistake, or caring for your cookware and gadgets.</p>
@@ -2498,6 +2498,7 @@ def main():
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
     urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + comparison_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
+    urls += [(f"{url}/{p}", None) for p in ("appliance-picks/", "small-kitchen/", "videos/small-kitchen-three-picks/")]
     urls.append((f"{url}/buying-guides/", None))
     urls += [(f"{url}/buying-guides/{p.parent.name}/", None) for p in sorted((OUT / "buying-guides").glob("*/index.html"))]
     (OUT / "sitemap.xml").write_text(
