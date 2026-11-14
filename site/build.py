@@ -42,7 +42,7 @@ PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
 PRIVACY_UPDATED = "2026-11-06"  # bump when the privacy text changes
-GA_ID = "G-8KQ2TM4X7Z"  # Google Analytics 4 measurement ID; the privacy page discloses it
+GA_ID = "G-G7WPSMPB7T"  # Kitchen Finds & Favorites web stream connected to OpenSEO
 META_PIXEL_ID = "1671181604794472"  # Meta (Facebook/Instagram) Pixel; the privacy page discloses it
 INDEXNOW_KEY = "122e26ae769c42ab31f69e67f167a338"  # served at /<key>.txt; the deploy workflow pings IndexNow (Bing etc.)
 # Pinterest website claim (claimed 2026-11-01): the file /pinterest-b0145.html and the p:domain_verify meta tag on
@@ -433,11 +433,15 @@ STATIC_ARTICLES = [
     "appliance-picks/comfee-countertop-dishwasher/",
 ]
 STATIC_LD_START, STATIC_LD_END = "<!-- kff:static-ld -->", "<!-- /kff:static-ld -->"
+SMALL_AIR_FRYER_GUIDE = "microsites/best-small-air-fryers-2026/"
 
 
 # Inbound links to the hand-written articles (they live outside the generated pages, so nothing links to them by
 # default). Guide/gift key -> [(article path, descriptive anchor text, short note)], rendered as "Helpful articles".
 ARTICLE_LINKS = {
+    "air-fryer-accessories": [
+        (SMALL_AIR_FRYER_GUIDE, "Best small air fryers for apartments", "compare five models by basket capacity, controls and countertop fit"),
+    ],
     "thanksgiving-kitchen-checklist": [
         ("thanksgiving-prep-plan/", "The 3-day Thanksgiving prep plan for busy families", "a day-by-day plan from three days out to Thanksgiving morning"),
         ("thanksgiving-make-ahead-timeline/", "Thanksgiving make-ahead timeline", "which dishes to prep 1\u20133 days before the meal"),
@@ -456,8 +460,8 @@ def article_links_html(key, base):
     if not links:
         return ""
     for path, _, _ in links:
-        if path not in STATIC_ARTICLES:
-            sys.exit(f"ARTICLE_LINKS[{key!r}] points at {path}, which is not in STATIC_ARTICLES")
+        if path not in STATIC_ARTICLES and path != SMALL_AIR_FRYER_GUIDE:
+            sys.exit(f"ARTICLE_LINKS[{key!r}] points at an unknown article: {path}")
     return ("    <section>\n      <h2>Helpful articles</h2>\n      <ul class=\"links\">" + "".join(
         f'<li><a href="{base}{p}">{e(t)}</a>: {e(n)}</li>' for p, t, n in links) + "</ul>\n    </section>\n")
 
@@ -680,15 +684,16 @@ CSS = """
 """
 
 
-def track_js(site):
+def track_js(site, use_channel_tags=True):
     """Records every Amazon link click: GA4 'amazon_click' event plus a beacon to /click.php (page, ASIN,
     channel, placement; no IP or cookies). If site.channel_tags has a tracking ID for the visitor's channel
     (from utm_source or the referrer), the link's tag is swapped to it at click time."""
-    tags = {k: v for k, v in (site.get("channel_tags") or {}).items() if v}
+    tags = {k: v for k, v in (site.get("channel_tags") or {}).items() if v} if use_channel_tags else {}
     js = """(function(){var T=%s,ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
 try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
 if(!ch){var r=document.referrer;ch=/pinterest\\./.test(r)?'pinterest':/(facebook|instagram)\\.|fb\\.me/.test(r)?'facebook':/google\\./.test(r)?'google':/bing\\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
-document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/"]');if(!a)return;
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;
+var link=new URL(a.href,location.href);if(!['amazon.com','www.amazon.com','smile.amazon.com'].includes(link.hostname)||!link.searchParams.get('tag'))return;
 var m=a.href.match(/\\/dp\\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
@@ -705,6 +710,27 @@ def meta_pixel(path):
             "n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}"
             "(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');"
             f"fbq('init','{META_PIXEL_ID}');fbq('track','PageView');{lead}</script><!-- End Meta Pixel Code -->\n")
+
+
+def google_tag():
+    return (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
+            f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}"
+            f"gtag('js',new Date());gtag('config','{GA_ID}');</script>\n")
+
+
+def track_static_pages(site):
+    """Apply the shared tracking to hand-written pages outside the page templates."""
+    tracking_start = "<!-- kff:static-tracking -->"
+    tracking_end = "<!-- /kff:static-tracking -->"
+    for path in sorted(OUT.rglob("index.html")):
+        page = path.read_text(encoding="utf-8")
+        original = re.sub(re.escape(tracking_start) + r".*?" + re.escape(tracking_end), "", page, flags=re.S)
+        if "googletagmanager.com/gtag/js" in original:
+            continue
+        tracking = google_tag() + track_js(site, use_channel_tags=False)
+        tracked = original.replace("</head>", tracking_start + tracking + tracking_end + "</head>", 1)
+        if tracked != page:
+            path.write_text(tracked, encoding="utf-8")
 
 
 def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="", noindex=False):
@@ -731,9 +757,7 @@ def head(site, title, description, path, og_image, og_alt, og_w, og_h, extra="",
 <meta property="og:image:height" content="{og_h}">
 <meta property="og:image:alt" content="{e(og_alt)}">
 <meta name="twitter:card" content="summary_large_image">
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_ID}');</script>
-{meta_pixel(path)}{track_js(site)}{extra}<style>{CSS}</style>
+{google_tag()}{meta_pixel(path)}{track_js(site)}{extra}<style>{CSS}</style>
 </head>
 <body>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id={META_PIXEL_ID}&amp;ev=PageView&amp;noscript=1"></noscript>
@@ -2498,7 +2522,8 @@ def main():
     (OUT / "products.json").write_text(json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     newest = products[0]["added"]
     urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + comparison_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
-    urls += [(f"{url}/{p}", None) for p in ("appliance-picks/", "small-kitchen/", "videos/small-kitchen-three-picks/")]
+    # The air fryer guide is hosted separately at this path on the same domain.
+    urls += [(f"{url}/{p}", None) for p in ("appliance-picks/", "small-kitchen/", "videos/small-kitchen-three-picks/", SMALL_AIR_FRYER_GUIDE)]
     urls.append((f"{url}/buying-guides/", None))
     urls += [(f"{url}/buying-guides/{p.parent.name}/", None) for p in sorted((OUT / "buying-guides").glob("*/index.html"))]
     (OUT / "sitemap.xml").write_text(
@@ -2506,6 +2531,7 @@ def main():
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + "".join(f"  <url><loc>{e(u)}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</url>\n" for u, m in urls)
         + "</urlset>\n", encoding="utf-8")
+    track_static_pages(data["site"])
     print(f"Built public/ with {len(products)} products")
 
 
