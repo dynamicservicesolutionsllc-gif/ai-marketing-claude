@@ -1,8 +1,8 @@
 {
   "B00004OCKR": {
-    "id": "File:Essoreuse \u00e0 salade.jpg",
+    "id": "File:Essoreuse à salade.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Essoreuse_%C3%A0_salade.jpg",
-    "user": "Medja\u00ef",
+    "user": "Medjaï",
     "site": "Wikimedia Commons",
     "license": "Public domain",
     "kind": "salad spinner"
@@ -116,6 +116,13 @@
     "site": "Pixabay",
     "kind": "slow cooker"
   },
+  "B007TUQF9O": {
+    "id": 554071,
+    "page_url": "https://pixabay.com/photos/sieve-tea-strainer-kitchen-tea-554071/",
+    "user": "Silberfuchs",
+    "site": "Pixabay",
+    "kind": "strainer"
+  },
   "B008M5U1C2": {
     "author": "Kitchen Finds & Favorites",
     "site": "Original AI-generated illustration",
@@ -169,6 +176,13 @@
     "kind": "glass measuring cup",
     "license": "Unsplash License"
   },
+  "B00MUEHPGQ": {
+    "id": 932966,
+    "page_url": "https://pixabay.com/photos/meal-plate-dinner-meat-932966/",
+    "user": "tookapic",
+    "site": "Pixabay",
+    "kind": "potato ricer"
+  },
   "B00S93EQUK": {
     "id": "File:11.09.11 Turkey top questions blog - Flickr - USDAgov.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:11.09.11_Turkey_top_questions_blog_-_Flickr_-_USDAgov.jpg",
@@ -193,7 +207,7 @@
     "kind": "cooling rack"
   },
   "B010TCP3SC": {
-    "id": "File:Li\u00e8ge waffle iron in Brussels-Central railway station.jpg",
+    "id": "File:Liège waffle iron in Brussels-Central railway station.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Li%C3%A8ge_waffle_iron_in_Brussels-Central_railway_station.jpg",
     "user": "Romaine",
     "site": "Wikimedia Commons",
@@ -224,6 +238,13 @@
     "license": "CC BY 2.0",
     "kind": "",
     "note": "sugar packets in a caddy, the kind of thing it holds"
+  },
+  "B019FHD0FK": {
+    "id": 2848605,
+    "page_url": "https://pixabay.com/photos/potato-casserole-potatoes-cheese-2848605/",
+    "user": "RitaE",
+    "site": "Pixabay",
+    "kind": "glass baking dish"
   },
   "B01ACUA8HC": {
     "id": 4697588,
@@ -261,6 +282,13 @@
     "site": "Pixabay",
     "kind": "blender"
   },
+  "B01GJOMWVA": {
+    "id": 4413345,
+    "page_url": "https://pixabay.com/photos/coffee-machine-coffee-caffeine-4413345/",
+    "user": "SabineRuhland",
+    "site": "Pixabay",
+    "kind": "coffee maker"
+  },
   "B01N349SON": {
     "id": 6183342,
     "page_url": "https://pixabay.com/photos/dough-bake-cake-cake-mix-6183342/",
@@ -271,7 +299,7 @@
   "B01N6UE7OF": {
     "id": 9551376,
     "page_url": "https://www.pexels.com/photo/9551376/",
-    "user": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
+    "user": "Алексей Вечерин",
     "site": "Pexels",
     "kind": "pull-out cabinet basket",
     "license": "Pexels License"
@@ -290,6 +318,13 @@
     "site": "Pexels",
     "kind": "zester",
     "license": "Pexels License"
+  },
+  "B073P52PPR": {
+    "id": 5671124,
+    "page_url": "https://pixabay.com/photos/bread-slices-organic-healthy-5671124/",
+    "user": "sofi5t",
+    "site": "Pixabay",
+    "kind": "loaf pan"
   },
   "B073WJMKHN": {
     "id": "photo-1642698215328-129d08188792",
@@ -370,6 +405,13 @@
     "kind": "bamboo drawer organizer",
     "license": "Unsplash License"
   },
+  "B07N9JTJ6K": {
+    "id": 6795070,
+    "page_url": "https://pixabay.com/photos/glasses-dishes-chore-kitchen-clean-6795070/",
+    "user": "ivandesouza",
+    "site": "Pixabay",
+    "kind": "dish drying mat"
+  },
   "B07NDZWMXF": {
     "id": 1853439,
     "page_url": "https://pixabay.com/photos/jars-herbs-shelves-store-shop-1853439/",
@@ -394,7 +436,7 @@
   "B07RGGYLGY": {
     "id": 34578073,
     "page_url": "https://www.pexels.com/photo/34578073/",
-    "user": "Let\u00edcia Alvares",
+    "user": "Letícia Alvares",
     "site": "Pexels",
     "kind": "cabinet shelf riser",
     "license": "Pexels License"
@@ -410,7 +452,7 @@
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer_(Unsplash).jpg",
-    "user": "Jaros\u0142aw Ceborski jarson",
+    "user": "Jarosław Ceborski jarson",
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "silverware organizer"
@@ -597,6 +639,13 @@
     "kind": "",
     "note": "dishes drying by the sink"
   },
+  "B09715G57M": {
+    "id": 5252372,
+    "page_url": "https://pixabay.com/photos/coffee-black-coffee-drip-coffee-5252372/",
+    "user": "DiDeeChen",
+    "site": "Pixabay",
+    "kind": "coffee maker"
+  },
   "B09BKTSJFJ": {
     "id": 5064725,
     "page_url": "https://pixabay.com/photos/apple-cut-open-apple-divider-fruit-5064725/",
@@ -669,7 +718,7 @@
     "license": "Unsplash License"
   },
   "B0BKR66QGC": {
-    "id": "Today\u2019s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here\u2019s to hoping it\u2019s good.",
+    "id": "Today’s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here’s to hoping it’s good.",
     "page_url": "https://www.flickr.com/photos/73451168@N00/49753908536",
     "user": "J Wynia",
     "site": "Flickr",
@@ -728,6 +777,13 @@
     "user": "BuyMeACoffee",
     "site": "Pixabay",
     "kind": "griddle"
+  },
+  "B0C5Z8VCHX": {
+    "id": 874805,
+    "page_url": "https://pixabay.com/photos/kitchen-toaster-kettle-home-874805/",
+    "user": "27707",
+    "site": "Pixabay",
+    "kind": "kettle"
   },
   "B0C6D6SH16": {
     "id": 29778641,
@@ -806,6 +862,13 @@
     "user": "ajhgb",
     "site": "Pixabay",
     "kind": "insulated travel mug"
+  },
+  "B0D1K6BKM4": {
+    "id": 1844458,
+    "page_url": "https://pixabay.com/photos/muffins-chocolate-muffins-pastries-1844458/",
+    "user": "congerdesign",
+    "site": "Pixabay",
+    "kind": "muffin pan"
   },
   "B0D2P1HSCV": {
     "id": 1838785,
