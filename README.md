@@ -74,6 +74,8 @@ set -a; source .env; set +a
 claude
 ```
 
+Or let `./hf-claude.sh` do it: it loads `.env`, checks the token and model variables, sends a 1-token test request to each model, then launches `claude` (extra arguments after `--` are passed through). Use `--check-only` to run the checks without launching, or `--no-probe` to skip the test requests.
+
 **Manual path (Windows PowerShell)** — PowerShell does not read `.env` files, so set the variables directly (they last for the current window only):
 
 ```powershell
