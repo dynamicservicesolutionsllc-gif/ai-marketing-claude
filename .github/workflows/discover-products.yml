@@ -1,11 +1,93 @@
-name: Amazon API discovery (retired)
+name: Amazon Creators API discovery
 on:
+  schedule:
+    # Run after the daily site deployment. GitHub scheduled workflows use UTC.
+    - cron: "35 15 * * *"
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
+concurrency:
+  group: amazon-product-discovery
+  cancel-in-progress: false
 jobs:
-  retired:
+  discover:
     runs-on: ubuntu-latest
     steps:
-      - name: SiteStripe imports replace unavailable API discovery
-        run: echo 'Amazon API discovery is disabled. Use the reviewed SiteStripe import ledger in site/imports/sitestripe.json; the Hostinger deployment workflow validates and builds it.'
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Check Amazon API credentials
+        id: credentials
+        shell: bash
+        env:
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+        run: |
+          if [[ -n "$AMAZON_CREATORS_CLIENT_ID" && -n "$AMAZON_CREATORS_CLIENT_SECRET" ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Amazon discovery skipped. Add eligible Creators API credentials as GitHub Actions secrets."
+          fi
+      - uses: actions/setup-python@v5
+        if: steps.credentials.outputs.ready == 'true'
+        with:
+          python-version: "3.12"
+      - name: Restore discovery history and pull one candidate
+        if: steps.credentials.outputs.ready == 'true'
+        working-directory: site
+        env:
+          AMAZON_CREATORS_CLIENT_ID: ${{ secrets.AMAZON_CREATORS_CLIENT_ID }}
+          AMAZON_CREATORS_CLIENT_SECRET: ${{ secrets.AMAZON_CREATORS_CLIENT_SECRET }}
+          AMAZON_CREDENTIAL_VERSION: "3.1"
+          KFF_DISCOVERY_REPORT: ../marketing-queue/amazon-api-discovery.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd ..
+          mkdir -p marketing-queue
+          report="marketing-queue/amazon-api-discovery.json"
+          before=""
+          if [[ -f "$report" ]]; then
+            before="$(sha256sum "$report" | cut -d' ' -f1)"
+          fi
+          if git ls-remote --exit-code origin refs/heads/amazon-api-discovery-queue >/dev/null 2>&1; then
+            git fetch --quiet origin refs/heads/amazon-api-discovery-queue:refs/remotes/origin/amazon-api-discovery-queue
+            git show origin/amazon-api-discovery-queue:"$report" > "$report"
+            before="$(sha256sum "$report" | cut -d' ' -f1)"
+          else
+            printf '{"candidates":[]}\n' > "$report"
+            before="$(sha256sum "$report" | cut -d' ' -f1)"
+          fi
+          (cd site && python3 discover_github_products.py)
+          after="$(sha256sum "$report" | cut -d' ' -f1)"
+          if [[ "$before" == "$after" ]]; then
+            echo "No new Amazon ASIN candidates."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+        id: discover
+      - name: Update the non-production queue branch
+        if: steps.credentials.outputs.ready == 'true' && steps.discover.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c amazon-api-discovery-queue
+          git add marketing-queue/amazon-api-discovery.json
+          git commit -m "Queue one Amazon product candidate"
+          git push --force-with-lease origin amazon-api-discovery-queue
+          if ! gh pr view amazon-api-discovery-queue --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base main \
+              --head amazon-api-discovery-queue \
+              --draft \
+              --title "Amazon product candidate queue" \
+              --body "Automated candidate queue from the authorized Amazon Creators API. This contains ASIN and search metadata only. Verify the current exact listing, seller, variant, SiteStripe link, editorial content, and photo rights before adding anything to the approved SiteStripe import ledger. This workflow does not modify main or publish products."
+          fi
