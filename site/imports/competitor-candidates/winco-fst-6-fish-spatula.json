@@ -1,0 +1,93 @@
+{
+  "name": "Winco FST-6 Fish Spatula with Wooden Handle",
+  "asin": "B003HEOLXI",
+  "variant": "Winco model FST-6, wooden handle and 6¾ × 3¼-inch stainless-steel blade per the manufacturer. Amazon variant and pack count remain unknown.",
+  "category": "gadgets",
+  "subcategory": "cooking-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-12",
+  "sources": [
+    {
+      "publisher": "Food & Wine",
+      "url": "https://www.foodandwine.com/best-fish-spatulas-11732845",
+      "published": "2025-05-13",
+      "updated": null,
+      "evidence": "The indexed hands-on comparison selected the wood-handled Winco for its value. The linked retailer model is FST-6."
+    },
+    {
+      "publisher": "Serious Eats",
+      "url": "https://www.seriouseats.com/best-fish-spatula-slotted-offset-spatula",
+      "published": "2017-04-04",
+      "updated": null,
+      "evidence": "A separate indexed 12-tool test selected the Winco as its budget choice. Its indexed publication date is historical and its latest update date is unknown."
+    },
+    {
+      "publisher": "Winco",
+      "url": "https://www.wincous.com/products/fst-6",
+      "updated": null,
+      "evidence": "The manufacturer identifies the FST-6 SKU, wooden handle, stainless-steel blade, and blade dimensions."
+    },
+    {
+      "publisher": "KaTom",
+      "url": "https://www.katom.com/080-FST6.html",
+      "updated": null,
+      "evidence": "The indexed US restaurant-supply product page identifies the slotted wooden-handle model as FST-6."
+    },
+    {
+      "publisher": "Yet Another Food Blog",
+      "url": "https://yetanotherfoodblog.com/2020/05/17/walleye-eggs-with-sauteed-mushrooms-and-onions/",
+      "published": "2020-05-17",
+      "updated": null,
+      "evidence": "The public indexed recipe link shows B003HEOLXI in the US Amazon product URL for FST-6. Used for ASIN provenance only."
+    }
+  ],
+  "research_evidence": "A thin, slotted turner supports delicate fillets while lifting them from a skillet. The two comparative tests provide independent editorial signals. The authorized US Amazon listing, selected variant, pack count, seller, current offer, and demand metrics remain unknown.",
+  "audience_fit": "Home cooks who sear fish, fry eggs, or flip pancakes in uncoated cast iron or stainless steel. The comparison can start with the pan shoppers already own.",
+  "buying_objection": "The bare metal blade is a poor fit for pans that require nonstick-safe utensils. Left-handed cooks should check whether the blade angle feels natural. Care guidance differs across manufacturer and editorial sources, so keep dishwasher claims out of the Pin.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 3.2,
+        "rationale": "Two separate comparative tests selected the Winco as a value option. Current US sales, rank, search volume, and reliable exact-variant review count are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 4.4,
+        "rationale": "Fits home cooks who flip fish, eggs, or pancakes in cast iron or stainless steel and want one drawer-friendly utensil."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4,
+        "rationale": "Comparison shoppers can make a concrete choice based on pan surface, blade size, and grip. Query volume is unknown."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "The reviewed catalog and drafts have no match for this model. A pan-material guide offers a distinct angle. Broader keyword competition is unknown."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "Pan and blade compatibility lends itself to an original visual comparison. Amazon offer and affiliate suitability for the exact listing remain unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.9
+  },
+  "confidence": "Medium for manufacturer model and editorial fit. Low for current Amazon demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Fish Spatula for Cast Iron: What to Check Before You Buy",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Flipping salmon or eggs? Start with the pan you already own. Compare a thin metal fish spatula with a silicone-edged turner by pan surface, blade width, and grip before you give either one drawer space.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/winco-fst-6-fish-spatula/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Take an original 1000 × 1500 overhead photo of a salmon fillet in an uncoated cast-iron skillet with room for the headline “Which Fish Spatula Fits Your Pan?” Add original Cast Iron and Nonstick labels in a lower comparison strip. Keep tools, retail packaging, and logos out of frame. Retain the original photo and creator credit."
+  }
+}
