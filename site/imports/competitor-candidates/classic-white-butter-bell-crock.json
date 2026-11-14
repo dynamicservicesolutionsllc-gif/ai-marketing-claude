@@ -1,0 +1,79 @@
+{
+  "name": "Classic White Butter Bell Crock",
+  "asin": null,
+  "variant": "L. Tremain Original Butter Bell, Classic White, manufacturer item BB-WHT. Amazon variant and pack count unknown.",
+  "category": "gadgets",
+  "subcategory": "cooking-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-14",
+  "sources": [
+    {
+      "publisher": "Butter Bell",
+      "url": "https://butterbell.com/products/white-retro-butter-bell-crocks",
+      "updated": null,
+      "evidence": "Indexed manufacturer page identifies the Classic White BB-WHT and half-cup capacity. The indexed page displayed 16 reviews for this product page. Exact snapshot date and current count are unknown."
+    },
+    {
+      "publisher": "Food & Wine",
+      "url": "https://www.foodandwine.com/best-butter-dishes-11773835",
+      "published": "2025-07-22",
+      "updated": null,
+      "evidence": "Indexed hands-on roundup selected the Original Butter Bell in its crock category. The tested color was not established."
+    },
+    {
+      "publisher": "Serious Eats",
+      "url": "https://www.seriouseats.com/best-butter-dishes-8549417",
+      "updated": null,
+      "evidence": "A separate indexed two-week comparison included the Original Butter Bell. Exact update date and tested color are unknown."
+    }
+  ],
+  "research_evidence": "The ceramic vessel holds butter in an inverted lid above a water-filled base. Editorial testing supports the use case at the model level, and the manufacturer-page review count is an engagement signal for Classic White. Neither establishes current US sales or conversion. An exact-variant ASIN was not exposed in an indexed US Amazon product link. The exact US listing, variant, pack count, seller and offer remain unknown.",
+  "audience_fit": "Cooks who serve toast or dinner rolls frequently and want to compare two ways to keep butter handy at the table.",
+  "buying_objection": "A crock adds a water-change step and needs counter space. The ceramic can chip if dropped. Compare it with a covered dish if you prefer simpler upkeep. Avoid storage-duration or food-safety promises.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 2.8,
+        "rationale": "Independent test coverage of the Original model and manufacturer-page engagement for Classic White. Current US Amazon search volume, ratings and unit sales are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 3.8,
+        "rationale": "Useful for households that serve toast or rolls often and have room for a small counter vessel."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4,
+        "rationale": "A crock-versus-dish comparison answers whether a water seal is worth the extra upkeep."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "No butter crock in checked records. A care-and-counter-space comparison adds a distinct angle."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 3.7,
+        "rationale": "A visual comparison is feasible. The exact Amazon offer remains unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.61
+  },
+  "confidence": "Medium for Classic White manufacturer identity and model-level editorial fit. Low for current Amazon demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Butter Crock vs. Butter Dish for a Small Kitchen",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Is a French butter crock worth the counter space? Compare a water-seal crock with a covered butter dish by capacity, cleanup, and how often you’ll refresh the water.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/classic-white-butter-bell-crock/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Shoot an original vertical 1000 × 1500 photo of buttered toast on a small breakfast counter. Add “Butter Crock or Butter Dish?” and three callouts for counter space, capacity, and upkeep. Keep branded products and packaging out of frame. Retain the original photograph and creator credit."
+  }
+}
