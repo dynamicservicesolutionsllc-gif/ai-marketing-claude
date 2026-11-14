@@ -54,6 +54,45 @@ cd ai-marketing-claude
 pip install reportlab
 ```
 
+### Optional: Run with Open Models via Hugging Face
+
+Claude Code's terminal CLI, VS Code, and JetBrains integrations can route requests through [Hugging Face Inference Providers](https://huggingface.co/inference/models) instead of an Anthropic account. The web, desktop, and mobile apps do not support this.
+
+**Quickest path** — the `hf-claude` extension sets everything up:
+
+```bash
+hf extensions install hf-claude --force
+hf claude                        # add --bill-to your-org-name to bill an organization
+```
+
+**Manual path** — use the provided template:
+
+```bash
+cp .env.example .env             # .env is gitignored
+# edit .env: set HF_TOKEN and choose models
+set -a; source .env; set +a
+claude
+```
+
+| Variable | Purpose |
+|---|---|
+| `ANTHROPIC_BASE_URL` | `https://router.huggingface.co` |
+| `ANTHROPIC_AUTH_TOKEN` | Your HF token (do not also set `ANTHROPIC_API_KEY`) |
+| `ANTHROPIC_DEFAULT_OPUS_MODEL` / `_SONNET_MODEL` / `_HAIKU_MODEL` | Model per slot, most capable to quickest |
+| `CLAUDE_CODE_SUBAGENT_MODEL` | Model used by subagents (the skills in this suite use subagents heavily, so pick a capable one) |
+| `ANTHROPIC_CUSTOM_HEADERS` | Optional `X-HF-Bill-To: your-org-name` to bill a Team/Enterprise org |
+
+**Routing suffixes** — append to any model ID:
+
+| Suffix | Behavior |
+|---|---|
+| none / `:fastest` | Highest-throughput provider, automatic failover (default) |
+| `:cheapest` | Lowest-cost provider |
+| `:preferred` | Your provider order from HF settings |
+| `:<provider>` (e.g. `:cerebras`) | Pins one provider; deterministic, but no failover |
+
+Non-Claude models may handle tool use and long multi-agent runs less reliably, so audit results can vary from what Claude produces.
+
 ---
 
 ## Commands
