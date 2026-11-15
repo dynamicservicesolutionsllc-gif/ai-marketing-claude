@@ -516,6 +516,51 @@ def publish_static_articles(site):
     return urls
 
 
+# Hand-written pages outside build.py that had no structured data (the /buying-guides/ pages come from
+# generate_buying_guides.py). The build keeps a BreadcrumbList (+ ItemList of the linked /picks/ pages on
+# buying-guides pages) block in each, between the same kff:static-ld markers.
+STATIC_PAGE_PARENTS = {
+    "buying-guides/": ("Buying guides", None),
+    "appliance-picks/": ("Appliance picks", None),
+    "small-kitchen/": ("Small kitchen essentials", None),
+    "newsletter/": ("Small-kitchen measuring checklist", None),
+    "thanksgiving-timeline/": ("Thanksgiving hosting timeline", None),
+    "videos/small-kitchen-three-picks/": ("3 small kitchen essentials for two", None),
+}
+
+
+def publish_static_pages(site):
+    """Add BreadcrumbList/ItemList JSON-LD to hand-written pages that have none."""
+    paths = dict(STATIC_PAGE_PARENTS)
+    for f in sorted((OUT / "buying-guides").glob("*/index.html")):
+        paths[f"buying-guides/{f.parent.name}/"] = None
+    for path, meta in paths.items():
+        f = OUT / path / "index.html"
+        if not f.exists():
+            continue
+        page = f.read_text(encoding="utf-8")
+        if "noindex" in page or "application/ld+json" in page and STATIC_LD_START not in page:
+            continue
+        page = re.sub(re.escape(STATIC_LD_START) + r".*?" + re.escape(STATIC_LD_END), "", page, flags=re.S)
+        h1 = re.search(r"<h1[^>]*>(.*?)</h1>", page, re.S)
+        if not h1 or "</head>" not in page:
+            sys.exit(f"Static page {path} needs an <h1> and a </head>")
+        name = _text(h1.group(1))
+        trail = [("Buying guides", "buying-guides/")] if path.startswith("buying-guides/") and path != "buying-guides/" else []
+        graph = [breadcrumbs(site, trail + [(name, path)])]
+        if path.startswith("buying-guides/"):
+            main = page.split("<main>", 1)[-1]
+            seen, items = set(), []
+            for href, label in re.findall(r'<(?:h3|li)><a href="(/(?:picks|buying-guides)/[^"]+)">(.*?)</a>', main):
+                if href not in seen:
+                    seen.add(href)
+                    items.append({"@type": "ListItem", "position": len(items) + 1, "name": _text(label), "url": site["url"] + href})
+            if items:
+                graph.append({"@type": "ItemList", "name": name, "itemListElement": items})
+        block = STATIC_LD_START + ld({"@context": "https://schema.org", "@graph": graph}) + STATIC_LD_END
+        f.write_text(page.replace("</head>", block + "</head>", 1), encoding="utf-8")
+
+
 CSS = """
   :root { color-scheme:light dark; --bg:#fbf8f3; --card:#fff; --ink:#2b2622; --mut:#6f665d; --acc:#ad512b; --acc-hover:#9a4724; --acc-ink:#fff; --bd:#ece4d8; }
   @media (prefers-color-scheme: dark) { :root { --bg:#1c1a18; --card:#262320; --ink:#f1ebe3; --mut:#b3a99d; --acc:#e07a4f; --acc-hover:#ec9470; --acc-ink:#1c1a18; --bd:#3a3530; } }
@@ -2463,6 +2508,7 @@ def main():
     (OUT / "thanksgiving-timeline" / "index.html").write_text(render_thanksgiving_timeline(data), encoding="utf-8")
     extra_urls.append((f"{url}/thanksgiving-timeline/", None))
     extra_urls += publish_static_articles(data["site"])
+    publish_static_pages(data["site"])
     (OUT / "404.html").write_text(render_simple(
         data, "404.html", "Page not found", "That page isn't here",
         "The pick you're looking for may have moved or been removed. Everything we currently recommend is on the home page."),
