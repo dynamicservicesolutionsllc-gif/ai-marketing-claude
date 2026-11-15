@@ -133,9 +133,9 @@ PRODUCT_TYPES = [
     ("shelf", "kitchen cabinet shelf", "shelf"),
     ("brining bag", "roast turkey", "turkey"),
     ("spatula", "kitchen spatula cooking", "spatula+kitchen"),
-    ("basting", "pastry brush baking", "pastry"),
+    ("basting", "basting brush grilling", "brush+grill"),
     ("piping bag", "piping bag icing", "piping"),
-    ("cheesecloth", "cheese cloth muslin", "cloth"),
+    ("cheesecloth", "cheese making strainer cloth", "cheese"),
     ("brush", "cleaning brush", "brush"),
 ]
 
