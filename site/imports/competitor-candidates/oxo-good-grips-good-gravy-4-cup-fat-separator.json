@@ -1,0 +1,91 @@
+{
+  "name": "OXO Good Grips Good Gravy Fat Separator – 4 Cup",
+  "asin": "B071F2ZM15",
+  "variant": "OXO SKU 11198900, four-cup bottom-release model. Amazon variant and pack count are unknown.",
+  "category": "gadgets",
+  "subcategory": "cooking-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-15",
+  "sources": [
+    {
+      "publisher": "OXO",
+      "url": "https://www.oxo.com/good-gravy-fat-separator-4-cup.html",
+      "updated": null,
+      "evidence": "The indexed manufacturer page identifies the SKU, four-cup capacity and trigger-operated bottom drain."
+    },
+    {
+      "publisher": "Reviewed",
+      "url": "https://www.reviewed.com/cooking/best-right-now/the-best-fat-separators",
+      "updated": "2024-03-12",
+      "evidence": "The indexed hands-on comparison names the bottom-release model as its overall pick and separately covers the OXO pour-spout model."
+    },
+    {
+      "publisher": "Serious Eats",
+      "url": "https://www.seriouseats.com/best-fat-separators-11849569",
+      "updated": null,
+      "evidence": "The indexed hands-on test selected this exact four-cup Good Gravy model overall. The exact update date is unknown."
+    },
+    {
+      "publisher": "Food & Wine",
+      "url": "https://www.foodandwine.com/oxo-gravy-fat-separator-amazon-review-12154774",
+      "published": "2026-10-04",
+      "updated": null,
+      "evidence": "Indexed fall shopping coverage identifies the same model. Used as evidence of seasonal editorial interest."
+    },
+    {
+      "publisher": "Milkwood Restaurant",
+      "url": "https://milkwoodrestaurant.com/best-fat-separator/",
+      "updated": null,
+      "evidence": "The indexed product link exposes the bare ASIN on the US Amazon domain. Used only for identifier provenance."
+    }
+  ],
+  "research_evidence": "A trigger lets cooking liquid drain into a bowl from below the floating fat layer. Two independent tests support the buying comparison. Current US Amazon listing identity, variant, pack count, seller, offer, verified review count and sales remain unknown.",
+  "audience_fit": "Home cooks making turkey gravy, roast drippings, or stock from scratch who want to use the cooking liquid during the same meal.",
+  "buying_objection": "A trigger and valve add parts to clean. Consider how often you make gravy, whether four cups suits your batch size, and whether the simpler pour-spout pitcher already does the job.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 3.3,
+        "rationale": "Two independent hands-on comparisons and seasonal coverage. Current Amazon demand and exact-variant review count are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 4.4,
+        "rationale": "Holiday hosts and home cooks who make stock can use pan juices without waiting for them to chill."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4.2,
+        "rationale": "A bottom-release versus pour-spout comparison addresses a concrete cookware choice. Query volume is unknown."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 3.5,
+        "rationale": "The catalog includes an OXO pour-spout separator. This model adds a different release mechanism and a direct comparison."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "The release mechanism and cleanup trade-off support original content. The Amazon offer remains unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.89
+  },
+  "confidence": "Medium for the manufacturer model and editorial fit. Low for current Amazon product demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Gravy Fat Separator: Bottom Release vs. Pour Spout",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Making gravy from turkey drippings? Compare a bottom-release fat separator with a pour-spout pitcher by batch size, how you drain the juices, and what you’ll need to wash afterward.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-good-gravy-4-cup-fat-separator/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Shoot an original 1000 × 1500 photo of a small gravy bowl beside a roasting pan. Add the headline “Bottom Release or Pour Spout?” and two original schematic arrows showing where liquid exits each design. Keep branded tools and packaging out of frame. Retain the original photo and creator credit."
+  }
+}
