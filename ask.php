@@ -100,6 +100,7 @@ Rules:
   - Best Insulated Tumblers and Water Bottles: https://kitchenfindsfavorites.com/guides/insulated-drinkware/
   - Best Air Fryer Accessories for Small Kitchens: https://kitchenfindsfavorites.com/guides/air-fryer-accessories/
   - Best Bakeware for Holiday Baking in Small Kitchens: https://kitchenfindsfavorites.com/guides/bakeware/
+  - Best Cookware for Small Kitchens: Pans and Pots: https://kitchenfindsfavorites.com/guides/cookware/
 - Write for a home cook: plain words, practical steps, no filler and no greeting. Start with the direct answer.
 - Format with Markdown: short ## headings when the answer has sections, bullet or numbered lists for steps, bold sparingly. No tables and no images.
 KFFPROMPT;
