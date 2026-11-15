@@ -131,6 +131,11 @@ PRODUCT_TYPES = [
     ("container", "food storage containers", "container"),
     ("bins", "pantry storage", "pantry"),
     ("shelf", "kitchen cabinet shelf", "shelf"),
+    ("brining bag", "roast turkey", "turkey"),
+    ("spatula", "silicone spatula", "spatula"),
+    ("basting", "pastry brush", "brush"),
+    ("piping bag", "piping bag icing", "piping"),
+    ("cheesecloth", "cheesecloth", "cheesecloth"),
     ("brush", "cleaning brush", "brush"),
 ]
 
@@ -148,7 +153,7 @@ NOUNS = {
     "air fryer liner": "air fryer liner", "parchment": "parchment liner", "oil sprayer": "oil sprayer",
     "oil mister": "oil sprayer", "skillet": "cast iron skillet", "mixing bowl": "mixing bowl",
     "condiment": "coffee station organizer", "coffee station": "coffee station organizer", "shelf": "cabinet shelf",
-    "brush": "cleaning brush", "peeler": "vegetable peeler", "zester": "zester", "baking dish": "glass baking dish",
+    "brush": "cleaning brush", "brining bag": "roast turkey", "spatula": "silicone spatula", "basting": "basting brush", "piping bag": "piping bag", "cheesecloth": "piece of cheesecloth", "peeler": "vegetable peeler", "zester": "zester", "baking dish": "glass baking dish",
     "cookie sheet": "cookie sheet", "muffin": "muffin pan", "ice cream scoop": "ice cream scoop",
     "wooden spoon": "set of wooden spoons", "frying pan": "frying pan",
     "pie plate": "pie plate", "cookie cutter": "set of cookie cutters", "rolling pin": "rolling pin", "baking sheet": "baking sheet",
