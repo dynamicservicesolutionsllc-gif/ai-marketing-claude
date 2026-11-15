@@ -8302,31 +8302,6 @@
       "check": "Heat ratings are the maker's figure, so keep silicone off direct flame and hot burners. Different sizes suit different jobs, so check the set has the shapes you reach for."
     },
     {
-      "asin": "B000HD7FJ4",
-      "name": "OXO Good Grips Silicone Basting & Pastry Brush, Large",
-      "category": "gadgets",
-      "blurb": "A large silicone brush with center-hole bristles that hold melted butter, glaze and marinade for even brushing. The silicone is heat resistant and dishwasher safe, and the angled head keeps bristles off the counter.",
-      "added": "2026-11-15",
-      "graphic": {
-        "label": "OXO Silicone Basting Brush",
-        "headline": "Butter the Bird, Glaze the Rolls",
-        "points": [
-          "Center-hole silicone bristles",
-          "Heat resistant",
-          "Dishwasher safe"
-        ]
-      },
-      "subcategory": "cooking-tools",
-      "award": "Best basting brush",
-      "pin": {
-        "title": "Silicone Basting & Pastry Brush – OXO Good Grips Large",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A large silicone basting brush with center-hole bristles that hold butter, glaze and marinade. Heat resistant, dishwasher safe, and handy for the turkey, rolls and holiday pastry. #bastingbrush #pastrybrush #thanksgivingcooking #holidaybaking",
-        "board": "Holiday Baking Essentials"
-      },
-      "suits": "Good for holiday cooks who baste turkey, glaze rolls and brush egg wash without shedding bristles.",
-      "check": "Silicone bristles are firmer than natural ones, so very delicate pastry may need a lighter touch. Check the size suits your pans."
-    },
-    {
       "asin": "B0CGNZ7BGR",
       "name": "Riccle Piping Bags and Tips Set, 124 Pieces",
       "category": "gadgets",
@@ -8352,29 +8327,54 @@
       "check": "Most of the kit is disposable bags, so frequent bakers may use them up quickly. Wash and dry the tips and reusable bag by hand."
     },
     {
-      "asin": "B08FXSD575",
-      "name": "Cotton Farm Grade 100 Cheesecloth, 36 x 36 Inch, Unbleached",
-      "category": "gadgets",
-      "blurb": "A 36 x 36-inch sheet of unbleached, pre-washed cotton cheesecloth in a fine Grade 100 weave, with hemmed edges so it can be washed and reused. Use it to strain stock, yogurt or cold brew, or to wrap a turkey for roasting.",
+      "asin": "B0B6PLG6G2",
+      "name": "Vailnd 8-Inch Square Parchment Air Fryer Liners, 125 Count",
+      "category": "appliances",
+      "blurb": "125 disposable 8-inch square parchment liners sized for 5 to 8 quart basket air fryers and listed as good to 428°F. They catch grease and sticky marinades so the basket wipes clean, and no cutting is needed.",
       "added": "2026-11-15",
       "graphic": {
-        "label": "Cotton Farm Grade 100 Cheesecloth",
-        "headline": "Strain Stocks, Butter and Cold Brew",
+        "label": "Vailnd Air Fryer Liners",
+        "headline": "Skip the Basket Scrubbing",
         "points": [
-          "36 x 36 in unbleached cotton",
-          "Grade 100 fine weave",
-          "Hemmed, reusable"
+          "125 liners, 8 in square",
+          "Fits 5-8 qt air fryers",
+          "Listed to 428°F"
         ]
       },
-      "subcategory": "food-prep-tools",
-      "award": "Best cheesecloth",
+      "subcategory": "air-fryer-accessories",
+      "award": "Best bulk liner pack",
       "pin": {
-        "title": "Grade 100 Cheesecloth, 36 x 36 Inch – Reusable Unbleached Cotton",
-        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 36 x 36-inch Grade 100 unbleached cotton cheesecloth with hemmed edges. Strain stock, yogurt, nut milk or cold brew, and wash it to reuse. A tidy holiday kitchen helper. #cheesecloth #strainer #kitchenessentials #thanksgivingprep",
+        "title": "Air Fryer Parchment Liners, 125 Count 8-Inch Square – 5-8 Qt",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. 125 disposable 8-inch square parchment liners for 5 to 8 quart air fryers, listed as good to 428°F. They catch grease so the basket cleans up fast. #airfryeraccessories #airfryerliners #airfryer #easycleanup",
+        "board": "Air Fryer Accessories & Must-Haves"
+      },
+      "suits": "Good for air fryer owners who want a big stash of liners for messy foods like wings and marinated chicken.",
+      "check": "Match the 8-inch size to your basket and keep the liner weighed down by food so it cannot lift into the heating element. Liners are single-use."
+    },
+    {
+      "asin": "B06X9NQ8GX",
+      "name": "Amazon Basics Digital Kitchen Scale with LCD Display, 11 lb",
+      "category": "gadgets",
+      "blurb": "A compact 8.3 x 7-inch stainless steel platform scale that weighs up to 11 pounds and switches between pounds, ounces, grams, fluid ounces and ml. The tare button zeroes out the bowl, and it runs on two included AAA batteries.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Amazon Basics Kitchen Scale",
+        "headline": "Measure Baking by Weight",
+        "points": [
+          "Weighs up to 11 lb",
+          "Tare button, 5 units",
+          "2 AAA batteries included"
+        ]
+      },
+      "subcategory": "cooking-tools",
+      "award": "Best budget kitchen scale",
+      "pin": {
+        "title": "Digital Kitchen Scale, 11 lb Capacity with Tare – Amazon Basics",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A compact digital kitchen scale that weighs up to 11 pounds, with a tare button and pounds, ounces, grams, fluid ounces and ml modes. Handy for holiday baking and portioning. #kitchenscale #bakingtools #holidaybaking #smallkitchen",
         "board": "Small Kitchen Gadgets We Love"
       },
-      "suits": "Good for cooks who strain stock, make cold brew or want one reusable cloth for straining and wrapping.",
-      "check": "Cheesecloth is a single flat sheet, not a bag or strainer, so you will need a bowl or sieve to hold it. Rinse it well after greasy or strongly flavored foods."
+      "suits": "Good for bakers and meal preppers who want a simple, space-saving scale for recipes written in grams.",
+      "check": "The scale reads to about 1 gram and tops out at 11 pounds, so it is not suited to very small pinches or heavy batches."
     }
   ],
   "comparisons": {
