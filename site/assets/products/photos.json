@@ -1,8 +1,8 @@
 {
   "B00004OCKR": {
-    "id": "File:Essoreuse à salade.jpg",
+    "id": "File:Essoreuse \u00e0 salade.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Essoreuse_%C3%A0_salade.jpg",
-    "user": "Medjaï",
+    "user": "Medja\u00ef",
     "site": "Wikimedia Commons",
     "license": "Public domain",
     "kind": "salad spinner"
@@ -50,6 +50,13 @@
     "user": "Monfocus",
     "site": "Pixabay",
     "kind": "measuring cup"
+  },
+  "B000HD7FJ4": {
+    "id": 5850470,
+    "page_url": "https://pixabay.com/photos/christmas-cookies-baking-kitchen-5850470/",
+    "user": "HelenJank",
+    "site": "Pixabay",
+    "kind": "basting brush"
   },
   "B000IYYFIQ": {
     "id": 906135,
@@ -214,7 +221,7 @@
     "kind": "cooling rack"
   },
   "B010TCP3SC": {
-    "id": "File:Liège waffle iron in Brussels-Central railway station.jpg",
+    "id": "File:Li\u00e8ge waffle iron in Brussels-Central railway station.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Li%C3%A8ge_waffle_iron_in_Brussels-Central_railway_station.jpg",
     "user": "Romaine",
     "site": "Wikimedia Commons",
@@ -306,7 +313,7 @@
   "B01N6UE7OF": {
     "id": 9551376,
     "page_url": "https://www.pexels.com/photo/9551376/",
-    "user": "Алексей Вечерин",
+    "user": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
     "site": "Pexels",
     "kind": "pull-out cabinet basket",
     "license": "Pexels License"
@@ -443,7 +450,7 @@
   "B07RGGYLGY": {
     "id": 34578073,
     "page_url": "https://www.pexels.com/photo/34578073/",
-    "user": "Letícia Alvares",
+    "user": "Let\u00edcia Alvares",
     "site": "Pexels",
     "kind": "cabinet shelf riser",
     "license": "Pexels License"
@@ -459,7 +466,7 @@
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer_(Unsplash).jpg",
-    "user": "Jarosław Ceborski jarson",
+    "user": "Jaros\u0142aw Ceborski jarson",
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "silverware organizer"
@@ -566,6 +573,13 @@
     "license": "CC BY 2.0",
     "kind": "",
     "note": "a crowded pots-and-pans cupboard, the clutter it sorts out"
+  },
+  "B08FXSD575": {
+    "id": 1099399,
+    "page_url": "https://pixabay.com/photos/texture-fabric-burlap-background-1099399/",
+    "user": "lovepixs",
+    "site": "Pixabay",
+    "kind": "piece of cheesecloth"
   },
   "B08HSNGR8P": {
     "id": "File:Immersion blender used to puree applesauce.jpg",
@@ -725,7 +739,7 @@
     "license": "Unsplash License"
   },
   "B0BKR66QGC": {
-    "id": "Today’s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here’s to hoping it’s good.",
+    "id": "Today\u2019s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here\u2019s to hoping it\u2019s good.",
     "page_url": "https://www.flickr.com/photos/73451168@N00/49753908536",
     "user": "J Wynia",
     "site": "Flickr",
@@ -830,6 +844,13 @@
     "user": "StockSnap",
     "site": "Pixabay",
     "kind": "mixing bowl"
+  },
+  "B0CHGFG64S": {
+    "id": 1467287,
+    "page_url": "https://pixabay.com/photos/eggs-fried-sunny-side-up-skillet-1467287/",
+    "user": "ponce_photography",
+    "site": "Pixabay",
+    "kind": "silicone spatula"
   },
   "B0CJF94M8J": {
     "id": "Olive Oil",
