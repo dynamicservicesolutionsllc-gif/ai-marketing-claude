@@ -70,6 +70,7 @@ jobs:
             git init -q -b hostinger-deploy deploy
             git -C deploy remote add origin "$REPO"
           fi
+          printf '%s\\n' "$(git -C src rev-parse HEAD)" > src/site/public/kff-deployment-id.txt
           rsync -a --delete --exclude .git src/site/public/ deploy/
           # pinterest-b0145.html was uploaded to public_html by hand on 2026-11-01, so it is an untracked file on
           # the server and Hostinger's `git pull` refuses to overwrite it (every deploy failed silently). Keep it out
@@ -96,6 +97,24 @@ jobs:
           curl -fsS -X POST -H "Content-Type: application/json" -H "X-GitHub-Event: push" \
             -d '{"ref":"refs/heads/hostinger-deploy","repository":{"clone_url":"https://github.com/${{ github.repository }}.git"}}' \
             "$HOOK"
+      - name: Verify the exact GitHub revision reached the live website
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          URL="https://kitchenfindsfavorites.com/kff-deployment-id.txt"
+          for attempt in $(seq 1 30); do
+            ACTUAL="$(curl --silent --show-error --fail --max-time 10 -H 'Cache-Control: no-cache' "${URL}?check=${EXPECTED_SHA}" || true)"
+            if [ "${ACTUAL}" = "${EXPECTED_SHA}" ]; then
+              echo "Confirmed production deployment revision ${EXPECTED_SHA}"
+              curl -fsS -o /dev/null --max-time 15 https://kitchenfindsfavorites.com/
+              exit 0
+            fi
+            echo "Waiting for Hostinger deployment verification (attempt ${attempt}/30)"
+            sleep 6
+          done
+          echo "::error::The expected GitHub revision was not observed on production."
+          exit 1
       - name: Tell search engines about the pages (IndexNow)
         # Bing, Yandex and other IndexNow engines recrawl the submitted URLs within hours instead of weeks.
         # The key file /<INDEXNOW_KEY>.txt is written by build.py. A failure here never blocks the deploy.
