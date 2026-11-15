@@ -1,0 +1,333 @@
+{
+  "marketplace": "US",
+  "candidates": [
+    {
+      "asin": "B000PS1HS6",
+      "name": "Mercer Culinary Millennia 10-Inch Wavy Edge Wide Bread Knife",
+      "variant": "M23210, 10-inch wavy-edge blade and black handle, corroborated by Mercer and the indexed product card.",
+      "category": "gadgets",
+      "subcategory": "cooking-tools",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-15",
+      "keyword": "bread knife for crusty sourdough",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #56 in US Kitchen Utensils & Gadgets on November 15, 2026. This observed category rank does not establish unit sales."
+        },
+        {
+          "url": "https://www.mercerculinary.com/product/millennia-wavy-edge-wide-bread-knife-10-25-4-cm/",
+          "updated": null,
+          "evidence": "Mercer confirms the M23210 blade size and design."
+        },
+        {
+          "url": "https://www.bonappetit.com/story/best-bread-knives",
+          "updated": null,
+          "published": "2026-09-08",
+          "evidence": "Bon Appétit compared bread knives hands-on and picked this exact model as its budget choice. Latest revision date unknown."
+        }
+      ],
+      "research_evidence": "November 15 ParseShelf snapshot: #56 in US Kitchen Utensils & Gadgets. Current Amazon listing identity, variant, seller, availability and sales are unknown. No sales estimates used.",
+      "audience_fit": "Home bakers and sandwich makers who slice crusty loaves frequently.",
+      "buying_objection": "A 10-inch blade needs a suitable storage slot. Measure clearance and consider how often you slice wide loaves.",
+      "angle": "Three-minute video, “Does a 10-inch bread knife earn its drawer space?” 0:00–0:20 show a crusty loaf and the storage-fit question. 0:20–0:55 show the confirmed 10-inch blade and black handle with an original close-up of the exact model. 0:55–1:50 compare it with a shorter serrated knife on equally sized pieces from the same loaf, filming slice consistency, crumbs, and strokes. 1:50–2:30 measure cutting-board clearance and safe storage space. 2:30–3:00 summarize who would use it weekly, ask which loaf is hardest to slice, and include the affiliate disclosure. Use actual owned or licensed footage of the exact model. Leave comparison results open until filmed.",
+      "confidence": "Medium",
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.5
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.6
+          }
+        },
+        "weighted_score_0_5": 4.26
+      },
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Bread Knife for Sourdough: Is a 10-Inch Blade Worth It?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Slice crusty bread often? Compare blade length, room for a full stroke, and drawer storage before choosing a serrated bread knife.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/mercer-millennia-m23210-bread-knife/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Original 1000 × 1500 vertical composition. Photograph an original overhead scene of a crusty loaf, sliced bread, and a ruler on a clear board. Keep branded tools out of frame. Retain source photo and creator credit."
+      }
+    },
+    {
+      "asin": "B001T6JTMY",
+      "name": "If You Care Parchment Baking Paper, 70 sq ft",
+      "variant": "70-square-foot roll, unbleached parchment, corroborated by manufacturer and Target.",
+      "category": "gadgets",
+      "subcategory": "bakeware",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-15",
+      "keyword": "parchment roll for half sheet pans",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #30 in US Kitchen Utensils & Gadgets on November 15, 2026. This observed category rank does not establish unit sales."
+        },
+        {
+          "url": "https://ifyoucare.com/products/parchment-baking-paper",
+          "updated": null,
+          "evidence": "Manufacturer identifies the unbleached 70-square-foot roll."
+        },
+        {
+          "url": "https://www.target.com/p/-/A-51989374",
+          "updated": null,
+          "evidence": "US retailer independently lists the same roll size."
+        }
+      ],
+      "research_evidence": "November 15 ParseShelf snapshot: #30 in US Kitchen Utensils & Gadgets. Current Amazon listing identity, variant, seller, availability and sales are unknown. No sales estimates used.",
+      "audience_fit": "Home bakers who use several pan sizes and prefer trimming a roll to fit.",
+      "buying_objection": "A roll adds a measuring step and can curl. Precut sheets may make more sense if you mainly use one pan size.",
+      "angle": "Compare roll versus precut using the inside dimensions of a sheet pan.",
+      "confidence": "Medium",
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.9
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.2
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.6
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          }
+        },
+        "weighted_score_0_5": 3.98
+      },
+      "microsite_url": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Parchment Roll vs. Precut Sheets for Half-Sheet Pans",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Measure the inside of your baking pan before choosing a parchment roll or precut sheets. Compare fit, curling, and storage for your usual baking routine.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/if-you-care-parchment-baking-paper-70-sq-ft/",
+        "destination_status": "pending",
+        "board": "Holiday Baking Essentials",
+        "image_brief": "Original 1000 × 1500 vertical composition. Shoot your own photo of an unbranded parchment roll beside a half-sheet pan, with clear measurement arrows. Retain source photo and creator credit."
+      }
+    },
+    {
+      "asin": "B08FXSD575",
+      "name": "Cotton Farm Grade 100 XL Cheesecloth, 36 × 36 Inch",
+      "variant": "Grade 100, 36 × 36 inches, unbleached cotton. Amazon pack count unknown.",
+      "category": "gadgets",
+      "subcategory": "food-prep-tools",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-15",
+      "keyword": "fine cheesecloth for straining stock",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #20 in US Kitchen Utensils & Gadgets on November 15, 2026. This observed category rank does not establish unit sales."
+        },
+        {
+          "url": "https://www.cheesecloth.co/retailproducts",
+          "updated": null,
+          "evidence": "Cotton Farm identifies its grade-100 unbleached cotton retail cloth."
+        },
+        {
+          "url": "https://www.newegg.com/p/2S6-009F-00611",
+          "updated": null,
+          "evidence": "US retailer corroborates the 36-inch square format and brand."
+        }
+      ],
+      "research_evidence": "November 15 ParseShelf snapshot: #20 in US Kitchen Utensils & Gadgets. Current Amazon listing identity, variant, seller, availability and sales are unknown. No sales estimates used.",
+      "audience_fit": "Cooks who strain stock, yogurt, or other liquids in batches.",
+      "buying_objection": "Fine cloth can drain slowly and needs washing and drying. Check the size against your strainer.",
+      "angle": "Show when fine cloth is worth the extra cleanup compared with a sieve.",
+      "confidence": "Medium",
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 3.9
+          }
+        },
+        "weighted_score_0_5": 3.94
+      },
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Cheesecloth vs. Fine Mesh for Straining Stock",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Making stock from scratch? Compare fine cheesecloth with a mesh sieve by the texture you want, how fast it drains, and what you’ll wash afterward.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cotton-farm-grade-100-xl-cheesecloth/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Original 1000 × 1500 vertical composition. Photograph an original cloth-lined sieve over a bowl, with a clear comparison label and no branded packaging. Retain source photo and creator credit."
+      }
+    },
+    {
+      "asin": "B0FH6YL3XC",
+      "name": "Astercook Deep-Carbonized Bamboo Cutting Board Set with Wood Storage Stand",
+      "variant": "Rank card and independent listing summaries support the reversible bamboo boards and wood stand. Exact piece count and dimensions are unknown.",
+      "category": "gadgets",
+      "subcategory": "food-prep-tools",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-15",
+      "keyword": "bamboo cutting board set with stand",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #81 in US Kitchen Utensils & Gadgets on November 15, 2026. This observed category rank does not establish unit sales."
+        },
+        {
+          "url": "https://marketnexx.com/product.html?id=B0FH6YL3XC",
+          "updated": null,
+          "evidence": "Third-party indexed product record ties the ASIN to deep-carbonized boards and a wood stand. It cannot confirm the live offer."
+        }
+      ],
+      "research_evidence": "November 15 ParseShelf snapshot: #81 in US Kitchen Utensils & Gadgets. Current Amazon listing identity, variant, seller, availability and sales are unknown. No sales estimates used.",
+      "audience_fit": "Small-kitchen cooks who want to store cutting boards upright between prep tasks.",
+      "buying_objection": "Measure the stand’s footprint and overhead clearance. Consider handwashing and whether the boards can dry fully before storage.",
+      "angle": "Show how to measure the footprint and height of upright storage.",
+      "confidence": "Low",
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.3
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.9
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          }
+        },
+        "weighted_score_0_5": 3.89
+      },
+      "microsite_url": "https://kitchenfindsfavorites.com/microsites/cutting-boards-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Bamboo Cutting Boards With a Stand: Measure Before Buying",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Would upright cutting board storage work in your kitchen? Measure the counter footprint and the space under your cabinets. Then compare stand storage with stacking boards flat.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/astercook-bamboo-cutting-board-set-with-stand/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Original 1000 × 1500 vertical composition. Shoot an original side view with generic upright boards and measurement arrows. Label it “Illustrative setup.” Retain source photo and creator credit."
+      }
+    },
+    {
+      "asin": "B091JXDLDX",
+      "name": "TILUCK Stainless Steel Measuring Cups & Spoons Set, 10-Piece",
+      "variant": "Ten-piece stainless-steel nesting set as indexed for this ASIN. Exact current contents unverified.",
+      "category": "gadgets",
+      "subcategory": "baking-essentials",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-15",
+      "keyword": "nesting stainless steel measuring cups and spoons set",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #45 in US Kitchen Utensils & Gadgets on November 15, 2026. This observed category rank does not establish unit sales."
+        },
+        {
+          "url": "https://manuals.plus/asin/B091JXDLDX",
+          "updated": null,
+          "evidence": "A third-party indexed manual ties this ASIN to a ten-piece nesting set. First-party manual provenance is unknown."
+        }
+      ],
+      "research_evidence": "November 15 ParseShelf snapshot: #45 in US Kitchen Utensils & Gadgets. Current Amazon listing identity, variant, seller, availability and sales are unknown. No sales estimates used.",
+      "audience_fit": "Beginning bakers who want cups and spoons in one drawer.",
+      "buying_objection": "Check the smallest measures and whether the spoons fit the spice jars you use. Nesting still takes drawer depth.",
+      "angle": "Compare sets by which sizes you use and how they fit your drawers and jars.",
+      "confidence": "Low",
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.7
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.5
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 3.8
+          }
+        },
+        "weighted_score_0_5": 3.82
+      },
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Nesting Measuring Cups and Spoons for a Small Kitchen",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Setting up a baking drawer? Check which cup and spoon sizes you actually use, how tall the nested stack gets, and whether your spoons fit your spice jars.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/tiluck-stainless-steel-measuring-cups-spoons-10-piece/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Original 1000 × 1500 vertical composition. Photograph an original drawer with generic measuring tools, a ruler, and a spice jar. Label it “Illustrative setup.” Retain source photo and creator credit."
+      }
+    }
+  ]
+}
