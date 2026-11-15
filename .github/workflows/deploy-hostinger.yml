@@ -9,7 +9,7 @@ on:
     branches: [main]
     paths: ["site/**", "tests/test_sitestripe.py", ".github/workflows/deploy-hostinger.yml"]
   schedule:
-    - cron: "17 9 * * *"  # daily, ~5:17 AM ET
+    - cron: "17 * * * *"  # hourly automated checks, builds, and approved fixes
   workflow_dispatch:
 permissions:
   contents: write
@@ -49,6 +49,15 @@ jobs:
       - name: Add TikTok Pixel before deployment
         working-directory: src/site
         run: python3 add_tiktok_pixel.py
+      - name: Automatically repair supported SEO and affiliate disclosure defects
+        working-directory: src/site
+        env:
+          KFF_SITE_ROOT: public
+          KFF_REPAIR_DRY_RUN: "0"
+        run: |
+          python3 -m py_compile auto_repair.py
+          python3 auto_repair.py
+          python3 audit_affiliate_links.py
       - name: Push site/public to hostinger-deploy
         env:
           REPO: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
