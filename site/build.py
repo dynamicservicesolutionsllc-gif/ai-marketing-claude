@@ -2394,6 +2394,46 @@ def quiz_cta():
 """
 
 
+def curated_pick_sections():
+    """Capture deliberately marked public product sections before regenerating picks."""
+    curated = {}
+    for entry in (OUT / "picks").glob("*/index.html"):
+        if not re.fullmatch(r"[a-z0-9-]+", entry.parent.name):
+            continue
+        page = entry.read_text(encoding="utf-8")
+        if "data-kff-comparable=" not in page or "data-kff-accessories=" not in page:
+            continue
+        sections = re.findall(r"<section\b[^>]*>[\s\S]*?</section\s*>", page, flags=re.I)
+        alternatives = [section for section in sections if "data-kff-comparable=" in section]
+        accessories = [section for section in sections if "data-kff-accessories=" in section]
+        if len(alternatives) == 1 and len(accessories) == 1 and alternatives[0].count("data-kff-comparable=") == 4:
+            curated[entry.parent.name] = (page, alternatives[0], accessories[0])
+    return curated
+
+
+def restore_curated_pick_sections(curated):
+    """Keep curated facts on generated pages and retain their explicit static entrypoints."""
+    static_urls = []
+    for slug, (source, alternatives, accessories) in curated.items():
+        entry = OUT / "picks" / slug / "index.html"
+        if not entry.exists():
+            entry.parent.mkdir(parents=True, exist_ok=True)
+            entry.write_text(source, encoding="utf-8")
+            if not re.search(r'<meta\b[^>]*\bnoindex\b', source, re.I):
+                static_urls.append(f"picks/{slug}/")
+            continue
+        page = entry.read_text(encoding="utf-8")
+        missing = []
+        if "data-kff-comparable=" not in page:
+            missing.append(alternatives)
+        if "data-kff-accessories=" not in page:
+            missing.append(accessories)
+        if missing and "</main>" in page:
+            supplement = "\n".join(missing)
+            entry.write_text(page.replace("</main>", supplement + "\n</main>", 1), encoding="utf-8")
+    return static_urls
+
+
 def main():
     data, errors = load()
     errors += quiz_errors(data)
@@ -2430,11 +2470,13 @@ def main():
     products = sorted(data["products"], key=lambda p: p["added"], reverse=True)
     (OUT / "index.html").write_text(render_home(data, products), encoding="utf-8")
     # Rebuild product pages from scratch so removed products don't leave stale pages.
+    curated = curated_pick_sections()
     shutil.rmtree(OUT / "picks", ignore_errors=True)
     for p in products:
         d = OUT / page_path(p)
         d.mkdir(parents=True)
         (d / "index.html").write_text(render_pick(data, p, products), encoding="utf-8")
+    curated_static_urls = restore_curated_pick_sections(curated)
     shutil.rmtree(OUT / "guides", ignore_errors=True)
     guide_urls = []
     for key in data["subcategories"]:
@@ -2536,6 +2578,7 @@ def main():
     urls = [(f"{url}/", newest), (f"{url}/privacy/", PRIVACY_UPDATED)] + extra_urls + gift_urls + guide_urls + comparison_urls + [(f"{url}/{page_path(p)}", p["added"]) for p in products]
     # The air fryer guide is hosted separately at this path on the same domain.
     urls += [(f"{url}/{p}", None) for p in ("appliance-picks/", "small-kitchen/", "videos/small-kitchen-three-picks/", SMALL_AIR_FRYER_GUIDE)]
+    urls += [(f"{url}/{path}", None) for path in curated_static_urls]
     urls.append((f"{url}/buying-guides/", None))
     urls += [(f"{url}/buying-guides/{p.parent.name}/", None) for p in sorted((OUT / "buying-guides").glob("*/index.html"))]
     (OUT / "sitemap.xml").write_text(
