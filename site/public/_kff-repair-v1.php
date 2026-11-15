@@ -203,4 +203,7 @@ if ($written !== strlen($repaired) || $mode === false || !@chmod($temp, $mode & 
 }
 $revision = hash('sha256', $repaired);
 if (@hash_file('sha256', $path) !== $revision) finish(500, ['error'=>'Hostinger could not verify the saved repair.']);
+if (parse_url($url, PHP_URL_HOST) === SITE) {
+    header('X-LiteSpeed-Purge: url=' . parse_url($url, PHP_URL_PATH));
+}
 finish(200, ['changes'=>$changes, 'revision'=>$revision]);
