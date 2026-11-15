@@ -20,13 +20,14 @@
 <meta property="og:image:height" content="1500">
 <meta property="og:image:alt" content="A Cleaner Microwave That Stores Flat">
 <meta name="twitter:card" content="summary_large_image">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KQ2TM4X7Z"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8KQ2TM4X7Z');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G7WPSMPB7T"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-G7WPSMPB7T');</script>
 <!-- Meta Pixel Code --><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1671181604794472');fbq('track','PageView');</script><!-- End Meta Pixel Code -->
 <script>(function(){var T={"pinterest": "kffpinterest-20", "facebook": "kfffacebook-20"},ch,cp='',s=sessionStorage,q=new URLSearchParams(location.search);
 try{if(q.get('utm_source')){ch=q.get('utm_source').toLowerCase();cp=q.get('utm_campaign')||'';s.setItem('kff_ch',ch);s.setItem('kff_cp',cp)}else{ch=s.getItem('kff_ch');cp=s.getItem('kff_cp')||''}}catch(e){}
 if(!ch){var r=document.referrer;ch=/pinterest\./.test(r)?'pinterest':/(facebook|instagram)\.|fb\.me/.test(r)?'facebook':/google\./.test(r)?'google':/bing\./.test(r)?'bing':(r&&r.indexOf(location.host)<0?'referral':'direct');try{s.setItem('kff_ch',ch)}catch(e){}}
-document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href*="amazon.com/"]');if(!a)return;
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;
+var link=new URL(a.href,location.href);if(!['amazon.com','www.amazon.com','smile.amazon.com'].includes(link.hostname)||!link.searchParams.get('tag'))return;
 var m=a.href.match(/\/dp\/([A-Z0-9]{10})/),asin=m?m[1]:'',pe=a.closest('[data-pl]'),pl=pe?pe.getAttribute('data-pl'):'other';
 if(T[ch])a.href=a.href.replace(/([?&]tag=)[^&#]*/,'$1'+T[ch]);
 if(window.gtag)gtag('event','amazon_click',{asin:asin,placement:pl,channel:ch,link_page:location.pathname,transport_type:'beacon'});
@@ -160,13 +161,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
   .video-gen:focus-visible { outline:3px solid var(--acc); outline-offset:2px; }
   .product-video-container { margin-top:12px; }
   .product-video-container video { width:100%; border-radius:8px; }
-  .appliance-video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:20px; }
-  .appliance-video { min-width:0; background:var(--card); border:1px solid var(--bd); border-radius:14px; padding:16px; }
-  .appliance-video h3 { margin:0 0 10px; }
-  .appliance-video-frame { width:100%; aspect-ratio:9/16; overflow:hidden; border-radius:10px; background:#000; }
-  .appliance-video-frame iframe { display:block; width:100%; height:100%; border:0; }
-  .appliance-video p { margin-top:10px; }
-  .appliance-video a { color:var(--acc); }
   .quiz-cta { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px 20px; }
   .quiz-cta div { flex:1 1 320px; }
   dialog.quiz { margin:auto; inset:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; border:0; border-radius:16px; padding:24px; background:var(--bg); color:var(--ink); box-shadow:0 20px 60px rgba(0,0,0,.35); }
@@ -269,6 +263,17 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
+      <article class="card" id="B0CGNZ7BGR" data-pl="related">
+        <a class="img" href="https://www.amazon.com/dp/B0CGNZ7BGR?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
+          <picture><source srcset="../../img/B0CGNZ7BGR-sq.webp" type="image/webp"><img src="../../img/B0CGNZ7BGR-sq.png" alt="Riccle Piping Bags and Tips Set, 124 Pieces (photo shows a similar piping bag, not this exact product)" loading="lazy" width="800" height="800"></picture>
+        </a>
+        <div class="body">
+          <h3><a href="../../picks/riccle-piping-bags-and-tips-set-124-pieces/">Riccle Piping Bags and Tips Set, 124 Pieces</a></h3>
+          <p>A 124-piece kit with 100 disposable 11.8-inch piping bags, 16 stainless steel tips, two couplers, bag ties, one reusable silicone bag and three scrapers. It covers holiday cookie and cupcake decorating without buying pieces separately.</p>
+          <a class="btn" href="https://www.amazon.com/dp/B0CGNZ7BGR?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
+          <small class="paid">Paid link · we may earn a commission</small>
+        </div>
+      </article>
       <article class="card" id="B00004OCNJ" data-pl="related">
         <a class="img" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
           <picture><source srcset="../../img/B00004OCNJ-sq.webp" type="image/webp"><img src="../../img/B00004OCNJ-sq.png" alt="OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper (photo shows a similar bench scraper, not this exact product)" loading="lazy" width="800" height="800"></picture>
@@ -277,17 +282,6 @@ try{navigator.sendBeacon('/click.php',new URLSearchParams({p:location.pathname,a
           <h3><a href="../../picks/oxo-good-grips-multi-purpose-stainless-steel-scraper-and/">OXO Good Grips Multi-Purpose Stainless Steel Scraper and Chopper</a></h3>
           <p>Moving chopped vegetables or dividing dough with a knife blade is slow and dulls the edge. This bench scraper scoops food off the cutting board in one pass, cuts dough cleanly, and its 1-inch markings help portion rolls and pie crust.</p>
           <a class="btn" href="https://www.amazon.com/dp/B00004OCNJ?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
-          <small class="paid">Paid link · we may earn a commission</small>
-        </div>
-      </article>
-      <article class="card" id="B09SBF44TM" data-pl="related">
-        <a class="img" href="https://www.amazon.com/dp/B09SBF44TM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">
-          <picture><source srcset="../../img/B09SBF44TM-sq.webp" type="image/webp"><img src="../../img/B09SBF44TM-sq.png" alt="Linda&#x27;s Essentials Reusable Silicone Air Fryer Liners, 8.5-Inch, 3-Pack (product not pictured; photo shows sausages cooked in an air fryer basket)" loading="lazy" width="800" height="800"></picture>
-        </a>
-        <div class="body">
-          <h3><a href="../../picks/lindas-essentials-reusable-silicone-air-fryer-liners-8-5/">Linda&#x27;s Essentials Reusable Silicone Air Fryer Liners, 8.5-Inch, 3-Pack</a></h3>
-          <p>Grease and stuck-on crumbs in the bottom of the basket are the main chore of air frying. These thick, perforated silicone liners catch the drips, go in the dishwasher and can be trimmed to fit, so you are not buying paper liners every week.</p>
-          <a class="btn" href="https://www.amazon.com/dp/B09SBF44TM?tag=kitchenfi0fde-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon →</a>
           <small class="paid">Paid link · we may earn a commission</small>
         </div>
       </article>
