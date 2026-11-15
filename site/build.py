@@ -37,7 +37,8 @@ def load_attrs(eager, high=None):
         return 'loading="lazy"'
     return 'loading="eager" fetchpriority="high"' if (eager if high is None else high) else 'loading="eager"'
 EXCLUDED_ASINS = {"B07TVDFVV9"}  # Associates-excluded; never list
-DISCLOSURE = "As an Amazon Associate I earn from qualifying purchases."
+ASSOCIATE_STATEMENT = "As an Amazon Associate I earn from qualifying purchases."
+DISCLOSURE = f"#ad {ASSOCIATE_STATEMENT}"
 PIN_DISCLOSURE = "#ad As an Amazon Associate I earn from qualifying purchases."
 PAID_NOTE = "Paid link · we may earn a commission"
 OG_W, OG_H = 1200, 630
@@ -761,13 +762,18 @@ def track_static_pages(site):
     tracking_start = "<!-- kff:static-tracking -->"
     tracking_end = "<!-- /kff:static-tracking -->"
     for path in sorted(OUT.rglob("index.html")):
-        page = path.read_text(encoding="utf-8")
+        saved = path.read_text(encoding="utf-8")
+        page = saved
+        for opening in ('<div class="disclosure">', '<p class="callout">'):
+            page = page.replace(opening + ASSOCIATE_STATEMENT, opening + DISCLOSURE)
         original = re.sub(re.escape(tracking_start) + r".*?" + re.escape(tracking_end), "", page, flags=re.S)
         if "googletagmanager.com/gtag/js" in original:
+            if page != saved:
+                path.write_text(page, encoding="utf-8")
             continue
         tracking = google_tag() + track_js(site, use_channel_tags=False)
         tracked = original.replace("</head>", tracking_start + tracking + tracking_end + "</head>", 1)
-        if tracked != page:
+        if tracked != saved:
             path.write_text(tracked, encoding="utf-8")
 
 
