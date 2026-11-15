@@ -132,10 +132,10 @@ PRODUCT_TYPES = [
     ("bins", "pantry storage", "pantry"),
     ("shelf", "kitchen cabinet shelf", "shelf"),
     ("brining bag", "roast turkey", "turkey"),
-    ("spatula", "silicone spatula", "spatula"),
-    ("basting", "pastry brush", "brush"),
+    ("spatula", "kitchen spatula cooking", "spatula+kitchen"),
+    ("basting", "pastry brush baking", "pastry"),
     ("piping bag", "piping bag icing", "piping"),
-    ("cheesecloth", "cheesecloth", "cheesecloth"),
+    ("cheesecloth", "cheese cloth muslin", "cloth"),
     ("brush", "cleaning brush", "brush"),
 ]
 
