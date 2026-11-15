@@ -2868,6 +2868,157 @@
         ]
       ],
       "reviewed": "2026-11-02"
+    },
+    "cookware": {
+      "category": "gadgets",
+      "title": "Best Cookware for Small Kitchens: Pans and Pots",
+      "keyword": "best cookware for small kitchens",
+      "pin_keywords": [
+        "best frying pan",
+        "cast iron skillet",
+        "dutch oven for beginners"
+      ],
+      "description": "A 12-inch cast iron skillet, a nonstick frying pan, a tri-ply stainless fry pan and a 5-quart enameled Dutch oven for everyday cooking.",
+      "intro": "A small kitchen can get by with a few well-chosen pans instead of a 20-piece set. These picks cover the main jobs: searing, everyday eggs and sautes, big stir-fries and slow-cooked stews, and each one is chosen for how it fits your stove, your oven and your cabinet.",
+      "criteria": [
+        "Covers a core cooking job on its own",
+        "Cooktop and oven compatibility stated by the maker",
+        "Cleaning and care steps are realistic for a busy kitchen",
+        "Size fits a standard burner and a normal cabinet",
+        "Has limitations we can state clearly, so you know who should skip it"
+      ],
+      "guide": [
+        [
+          "Match the pan to your burner",
+          "Check the base diameter against your burner, and confirm the cookware works with your cooktop type, including induction if you have it."
+        ],
+        [
+          "Nonstick, stainless or cast iron",
+          "Nonstick releases eggs and delicate foods easily but needs gentle tools. Stainless handles high heat and browning. Cast iron holds heat for searing and goes from stove to oven, but it is heavy and needs seasoning care."
+        ],
+        [
+          "Check the oven limit",
+          "Pans and lids list a maximum oven temperature. Stay under it, and check handles and knobs as well as the pan body."
+        ],
+        [
+          "Care keeps cookware working",
+          "Use soft sponges on nonstick, dry cast iron right after washing, and let enameled pots cool before rinsing."
+        ]
+      ],
+      "faq": [
+        [
+          "What cookware do I need in a small kitchen?",
+          "A nonstick frying pan for eggs, a larger skillet or stainless pan for searing and stir-fries, and one covered pot such as a Dutch oven handle most home cooking."
+        ],
+        [
+          "Is cast iron hard to take care of?",
+          "A pre-seasoned skillet needs only a quick rinse, a thorough dry and an occasional light coat of oil. Avoid long soaks."
+        ],
+        [
+          "Can a Dutch oven go in the oven?",
+          "Enameled cast iron pots are made for it, but check the maker's temperature limit for the pot and lid before baking bread or finishing a braise."
+        ],
+        [
+          "Does stainless steel work on induction?",
+          "Only if the maker lists it as induction compatible. The Tramontina pan here is listed as induction-ready."
+        ],
+        [
+          "How were these picks chosen?",
+          "This is a research-based guide. Picks are compared on published specifications, recurring themes in owner feedback and the criteria above. We don't claim to have handled every product personally."
+        ]
+      ],
+      "hero": {
+        "alt": "Pots and pans hanging from a rail on a brick kitchen wall",
+        "credit": "Unsplash",
+        "source_id": "photo-1557212060-dd397c79fa5a"
+      },
+      "noun": "Cookware Pick",
+      "hashtags": "#cookware #castiron #fryingpan #smallkitchen",
+      "board": "Cookware Essentials",
+      "related": [
+        "cooking-tools",
+        "cookware-organizers"
+      ],
+      "quick_answer": "Start with a nonstick frying pan for everyday eggs, add a 12-inch skillet for searing and bigger meals, and a 5-quart enameled Dutch oven for stews and braises.",
+      "measure_heading": "Before you buy, measure these",
+      "measure": [
+        [
+          "Burner size",
+          "Compare the pan base to your burner so heat reaches the edges."
+        ],
+        [
+          "Oven interior",
+          "Make sure a Dutch oven with its lid fits under the rack above it."
+        ],
+        [
+          "Cabinet space",
+          "Heavy cast iron needs a low, sturdy shelf."
+        ]
+      ],
+      "measure_note": "Check your cooktop type before buying, since induction needs compatible bases.",
+      "types_heading": "Which pan fits your cooking?",
+      "types": [
+        {
+          "name": "Nonstick frying pan",
+          "best_for": "Eggs and quick weeknight sautes",
+          "advantage": "Easy release and quick cleanup",
+          "tradeoff": "Needs gentle tools",
+          "summary": "A 9.5-inch pan with a nonstick coating, cast aluminum body and a magnetic stainless steel base.",
+          "choose": [
+            "You cook eggs and delicate foods often",
+            "You want fast cleanup"
+          ],
+          "skip": [
+            "You want to sear at very high heat"
+          ],
+          "pick": "B086PHS2V8"
+        },
+        {
+          "name": "Cast iron skillet",
+          "best_for": "Searing, baking and campfire meals",
+          "advantage": "Holds heat and lasts for years",
+          "tradeoff": "Heavy and needs care",
+          "summary": "A 12-inch pre-seasoned skillet with a silicone handle holder, made in the USA.",
+          "choose": [
+            "You like a hard sear",
+            "You want one pan for stove and oven"
+          ],
+          "skip": [
+            "You prefer lightweight pans"
+          ],
+          "pick": "B00G2XGC88"
+        },
+        {
+          "name": "Tri-ply stainless fry pan",
+          "best_for": "Searing and large stir-fries",
+          "advantage": "Induction-ready and oven-safe to 500°F",
+          "tradeoff": "Food can stick without enough oil",
+          "summary": "A 12-inch tri-ply clad pan with an aluminum core and riveted stainless handle.",
+          "choose": [
+            "You cook larger portions",
+            "You use an induction cooktop"
+          ],
+          "skip": [
+            "You mostly cook delicate eggs"
+          ],
+          "pick": "B00JAP44MQ"
+        }
+      ],
+      "situations": [
+        [
+          "Cooking for a crowd",
+          "A 12-inch pan and a 5-quart Dutch oven handle bigger batches without crowding."
+        ],
+        [
+          "Induction cooktop",
+          "Choose pans the maker lists as induction compatible, like the tri-ply and cast iron options here."
+        ],
+        [
+          "Small apartment kitchen",
+          "Pick three versatile pieces instead of a large boxed set that fills every cabinet."
+        ]
+      ],
+      "reviewed": "2026-11-15"
     }
   },
   "gift_guides": {
@@ -8375,6 +8526,256 @@
       },
       "suits": "Good for bakers and meal preppers who want a simple, space-saving scale for recipes written in grams.",
       "check": "The scale reads to about 1 gram and tops out at 11 pounds, so it is not suited to very small pinches or heavy batches."
+    },
+    {
+      "asin": "B0C5HRJHGL",
+      "name": "Elite Gourmet 7-Egg Electric Egg Cooker, 360W",
+      "category": "appliances",
+      "blurb": "Cooks up to seven eggs to soft, medium or hard-boiled firmness using a pre-marked measuring cup of water. Auto shut-off and dishwasher-safe removable parts keep prep and cleanup simple.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Elite Gourmet Egg Cooker",
+        "headline": "Boil 7 Eggs, No Watching",
+        "points": [
+          "Soft, medium or hard",
+          "Auto shut-off",
+          "360W, compact base"
+        ]
+      },
+      "subcategory": "countertop-cooking",
+      "award": "Best 7-egg cooker",
+      "pin": {
+        "title": "7-Egg Electric Egg Cooker with Auto Shut-Off – Elite Gourmet",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. An electric egg cooker that boils up to seven eggs soft, medium or hard, with a measuring cup and auto shut-off. Useful for deviled eggs and holiday prep. #eggcooker #deviledeggs #smallkitchen #kitchenappliances",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "suits": "Good for holiday cooks making deviled eggs, and for small kitchens where a pot of boiling water is a hassle.",
+      "check": "It cooks up to seven eggs at a time, so check that is enough for the batch sizes you make."
+    },
+    {
+      "asin": "B0FBT84P65",
+      "name": "Crockpot Programmable 7-Quart Cook and Carry Slow Cooker",
+      "category": "appliances",
+      "blurb": "A 7-quart programmable slow cooker sized for potlucks, family meals and feeding 8 or more. The Auto-Warm setting holds food at serving temperature, and the stoneware and glass lid are dishwasher-safe.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Crockpot 7-Quart Slow Cooker",
+        "headline": "Feed a Crowd, Set and Forget",
+        "points": [
+          "7-quart capacity",
+          "Auto-Warm setting",
+          "Dishwasher-safe stoneware"
+        ]
+      },
+      "subcategory": "countertop-cooking",
+      "award": "Best programmable 7-quart",
+      "pin": {
+        "title": "Programmable 7-Quart Slow Cooker for Potlucks – Crockpot",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 7-quart programmable Crockpot with an Auto-Warm setting and dishwasher-safe stoneware and lid, sized for potlucks and holiday meals. #slowcooker #crockpot #thanksgivingsides #potluck",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "suits": "Good for hosts and potluck cooks who need to keep a big batch of food warm without using the stove.",
+      "check": "Seven quarts is large, so measure counter and cabinet space before ordering."
+    },
+    {
+      "asin": "B001CH0ZLE",
+      "name": "Hamilton Beach 6-Speed Electric Hand Mixer with QuickBurst",
+      "category": "appliances",
+      "blurb": "A 6-speed hand mixer with a QuickBurst button and a bowl rest that steadies it on the edge of the bowl. Two beaters and a whisk store in the included snap-on case so nothing gets lost.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Hamilton Beach Hand Mixer",
+        "headline": "Mix Batter Without a Stand",
+        "points": [
+          "6 speeds plus QuickBurst",
+          "250W peak power",
+          "Snap-on storage case"
+        ]
+      },
+      "subcategory": "blenders-and-mixers",
+      "award": "Best 6-speed hand mixer",
+      "pin": {
+        "title": "6-Speed Electric Hand Mixer with Snap-On Case – Hamilton Beach",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A Hamilton Beach hand mixer with 6 speeds, a QuickBurst button, two beaters, a whisk and a snap-on storage case. A compact choice for cookies and mashed potatoes. #handmixer #holidaybaking #bakingtools #smallkitchen",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "suits": "Good for occasional bakers who want mixing power without a stand mixer taking up counter space.",
+      "check": "It is a hand-held mixer, so very stiff doughs may be better suited to a stand mixer."
+    },
+    {
+      "asin": "B0FSZSKB92",
+      "name": "Turelar 400W Corded Immersion Blender, 2 Speed",
+      "category": "appliances",
+      "blurb": "A corded 400W immersion blender with two speeds and a pulse-activated control for soups, sauces and smoothies. The stainless steel stick detaches for easy cleaning and storage.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Turelar Immersion Blender",
+        "headline": "Blend Soups Right in the Pot",
+        "points": [
+          "400W, 2 speeds",
+          "Stainless steel blades",
+          "Detachable for cleaning"
+        ]
+      },
+      "subcategory": "blenders-and-mixers",
+      "award": "Best budget stick blender",
+      "pin": {
+        "title": "400W Corded Immersion Blender, 2 Speeds – Turelar",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A corded 400W hand blender with 2 speeds, stainless steel blades and a detachable stick. Handy for soups, gravy and sauces without moving them to a blender jar. #immersionblender #handblender #soupseason #smallkitchen",
+        "board": "Small Kitchen Gadgets We Love"
+      },
+      "suits": "Good for small kitchens where a full-size blender is too bulky, and for soup and sauce makers.",
+      "check": "The motor and plastic parts should not be submerged, so check the care steps before washing."
+    },
+    {
+      "asin": "B0FDQJFRYS",
+      "name": "Veken 34 oz Glass French Press with Stainless Steel Filter",
+      "category": "gadgets",
+      "blurb": "A 34-ounce French press with a thick borosilicate glass carafe and a four-layer stainless steel filter. It is built with 304 stainless steel and food-grade silicone so no plastic touches the coffee.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Veken 34oz French Press",
+        "headline": "Brew Rich Coffee, No Paper",
+        "points": [
+          "34 oz borosilicate glass",
+          "4-layer steel filter",
+          "No plastic touching coffee"
+        ]
+      },
+      "subcategory": "coffee-and-tea",
+      "award": "Best glass French press, 34 oz",
+      "pin": {
+        "title": "34 oz Glass French Press with 4-Layer Filter – Veken",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 34-ounce borosilicate glass French press with a 4-layer stainless steel filter and no plastic touching your coffee. Good for home, office or travel. #frenchpress #coffeelover #coffeebar #smallkitchen",
+        "board": "Coffee Bar Ideas"
+      },
+      "suits": "Good for coffee drinkers who want a simple, paper-free brewer for a few mugs at a time.",
+      "check": "The carafe is glass, so handle it with care and hand wash the glass parts."
+    },
+    {
+      "asin": "B09YRC9SXW",
+      "name": "ComSaf 4 oz Mini Glass Mason Jars with Lids, 8-Pack",
+      "category": "organization",
+      "blurb": "Eight 4-ounce glass jars with matching lids for spices, mini jams, honey and small-batch desserts. The clear glass lets you see contents at a glance, and labels and twine are included.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "ComSaf Mini Mason Jars",
+        "headline": "Small Jars for Spices and Jam",
+        "points": [
+          "4 oz glass jars, 8 pack",
+          "Regular mouth, 2.8 in",
+          "Labels and twine included"
+        ]
+      },
+      "subcategory": "pantry-storage",
+      "award": "Best mini jars for spices",
+      "pin": {
+        "title": "4 oz Mini Glass Mason Jars, 8-Pack with Lids – ComSaf",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. An 8-pack of 4-ounce glass mason jars with lids, labels and twine. Great for spices, mini jams and homemade holiday gifts. #masonjars #pantryorganization #holidaygifts #spicestorage",
+        "board": "Pantry Organization Ideas"
+      },
+      "suits": "Good for people who portion spices, jams or homemade gifts and want small clear containers.",
+      "check": "Each jar holds only 4 ounces, and the metal lids should be hand washed."
+    },
+    {
+      "asin": "B00G2XGC88",
+      "name": "Lodge 12-Inch Pre-Seasoned Cast Iron Skillet with Silicone Handle Holder",
+      "category": "gadgets",
+      "blurb": "A 12-inch pre-seasoned cast iron skillet for searing, sautéing, baking and frying. It comes with a silicone handle holder for moving it after cooking.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Lodge 12-Inch Cast Iron Skillet",
+        "headline": "Sear, Bake and Fry in One Pan",
+        "points": [
+          "12-inch, pre-seasoned",
+          "Silicone handle holder",
+          "Made in the USA"
+        ]
+      },
+      "subcategory": "cookware",
+      "award": "Best 12-inch cast iron skillet",
+      "pin": {
+        "title": "12-Inch Pre-Seasoned Cast Iron Skillet with Handle Holder – Lodge",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 12-inch pre-seasoned Lodge cast iron skillet with a silicone handle holder for searing, baking and frying. Made in the USA. #castiron #skillet #cookware #cookingessentials",
+        "board": "Cookware Essentials"
+      },
+      "suits": "Good for cooks who want one durable pan for searing and oven recipes.",
+      "check": "Cast iron is heavy and needs drying and light oiling after washing."
+    },
+    {
+      "asin": "B086PHS2V8",
+      "name": "SENSARTE 9.5-Inch Nonstick Frying Pan with Granite Coating",
+      "category": "gadgets",
+      "blurb": "A 9.5-inch PFOA-free nonstick skillet with a cast aluminum body and a woodgrain bakelite handle. The flat, magnetic stainless steel base spreads heat evenly, and it is dishwasher safe.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "SENSARTE 9.5-Inch Nonstick Pan",
+        "headline": "Eggs That Slide Right Out",
+        "points": [
+          "9.5-inch, PFOA-free",
+          "Woodgrain bakelite handle",
+          "Magnetic stainless base"
+        ]
+      },
+      "subcategory": "cookware",
+      "award": "Best everyday nonstick pan",
+      "pin": {
+        "title": "9.5-Inch PFOA-Free Nonstick Frying Pan – SENSARTE",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 9.5-inch PFOA-free nonstick frying pan with a cast aluminum body, bakelite handle and magnetic stainless steel base. Dishwasher safe. #fryingpan #nonstick #cookware #smallkitchen",
+        "board": "Cookware Essentials"
+      },
+      "suits": "Good for everyday eggs, omelets and quick weeknight sautes.",
+      "check": "Nonstick surfaces last longer with soft tools, so skip metal utensils."
+    },
+    {
+      "asin": "B00JAP44MQ",
+      "name": "Tramontina Signature Tri-Ply Clad 12-Inch Stainless Steel Frying Pan",
+      "category": "gadgets",
+      "blurb": "A 12-inch tri-ply clad stainless steel fry pan with an aluminum core for even heat. It is induction-ready, oven-safe up to 500°F and dishwasher-safe with a riveted stainless handle.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Tramontina 12-Inch Fry Pan",
+        "headline": "Big Stainless Pan, Induction-Ready",
+        "points": [
+          "12-inch tri-ply clad",
+          "Oven-safe to 500°F",
+          "Induction-ready"
+        ]
+      },
+      "subcategory": "cookware",
+      "award": "Best stainless fry pan",
+      "pin": {
+        "title": "12-Inch Tri-Ply Stainless Steel Frying Pan, Induction-Ready – Tramontina",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A Tramontina 12-inch tri-ply clad stainless steel frying pan with an aluminum core, oven-safe to 500°F and induction-ready. #stainlesssteel #fryingpan #cookware #inductioncooking",
+        "board": "Cookware Essentials"
+      },
+      "suits": "Good for larger meals, stir-fries and searing multiple portions at once.",
+      "check": "At 12 inches it needs a large burner and cabinet space."
+    },
+    {
+      "asin": "B0DXJTNWJN",
+      "name": "Umite Chef 5-Quart Enameled Cast Iron Dutch Oven with Lid",
+      "category": "gadgets",
+      "blurb": "A 5-quart enameled cast iron Dutch oven with a lid, cotton potholders and wide stainless steel handles. It suits stews, sauces, casseroles and rice.",
+      "added": "2026-11-15",
+      "graphic": {
+        "label": "Umite Chef 5QT Dutch Oven",
+        "headline": "Slow-Cook Stews in One Pot",
+        "points": [
+          "5-quart enameled cast iron",
+          "Lid with potholders",
+          "Wide stainless handles"
+        ]
+      },
+      "subcategory": "cookware",
+      "award": "Best enameled Dutch oven",
+      "pin": {
+        "title": "5-Quart Enameled Cast Iron Dutch Oven with Lid – Umite Chef",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. A 5-quart Umite Chef enameled cast iron Dutch oven with lid, potholders and wide stainless steel handles for stews, sauces and rice. #dutchoven #castironcookware #stewseason #cookware",
+        "board": "Cookware Essentials"
+      },
+      "suits": "Good for cooks making soups, stews and braises who want one covered pot.",
+      "check": "It is heavy when full, so check your cabinet shelf and lifting comfort."
     }
   ],
   "comparisons": {

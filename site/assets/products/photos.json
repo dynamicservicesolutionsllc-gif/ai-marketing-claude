@@ -72,6 +72,13 @@
     "site": "Pixabay",
     "kind": "dutch oven"
   },
+  "B001CH0ZLE": {
+    "id": 413737,
+    "page_url": "https://pixabay.com/photos/food-mixer-hand-held-electric-413737/",
+    "user": "RonPorter",
+    "site": "Pixabay",
+    "kind": "hand mixer"
+  },
   "B0026RHI3M": {
     "id": 10449447,
     "page_url": "https://pixabay.com/photos/halloween-pumpkin-cookies-cookie-10449447/",
@@ -160,12 +167,26 @@
     "site": "Pixabay",
     "kind": "roast turkey"
   },
+  "B00G2XGC88": {
+    "id": 4229579,
+    "page_url": "https://pixabay.com/photos/cast-iron-kitchen-pan-breakfast-4229579/",
+    "user": "Ernest_Roy",
+    "site": "Pixabay",
+    "kind": "cast iron skillet"
+  },
   "B00HEZ888K": {
     "id": 1212845,
     "page_url": "https://pixabay.com/photos/vegetables-carrots-garlic-celery-1212845/",
     "user": "LubosHouska",
     "site": "Pixabay",
     "kind": "garlic press"
+  },
+  "B00JAP44MQ": {
+    "id": 592336,
+    "page_url": "https://pixabay.com/photos/fat-oil-deep-fry-oil-streaks-cook-592336/",
+    "user": "Hans",
+    "site": "Pixabay",
+    "kind": "stainless steel frying pan"
   },
   "B00L9X2XK2": {
     "id": "DSC_0273",
@@ -533,6 +554,13 @@
     "kind": "roll-up over-the-sink dish rack",
     "license": "Unsplash License"
   },
+  "B086PHS2V8": {
+    "id": 554072,
+    "page_url": "https://pixabay.com/photos/pan-cook-fry-frying-pan-554072/",
+    "user": "Silberfuchs",
+    "site": "Pixabay",
+    "kind": "frying pan"
+  },
   "B088X3CS5V": {
     "id": 439984,
     "page_url": "https://pixabay.com/photos/mashed-potatoes-potatoes-meal-food-439984/",
@@ -692,6 +720,13 @@
     "kind": "",
     "note": "sausages cooked in an air fryer basket"
   },
+  "B09YRC9SXW": {
+    "id": 2742757,
+    "page_url": "https://pixabay.com/photos/christmas-background-mason-jars-2742757/",
+    "user": "CSU-Extension",
+    "site": "Pixabay",
+    "kind": "mason jars"
+  },
   "B09ZLT4FZJ": {
     "id": "photo-1788464730134-333936411dc2",
     "page_url": "https://unsplash.com/photos/baked-spinach-and-cheese-casserole-avoA6dZXjyw",
@@ -715,6 +750,15 @@
     "site": "Unsplash",
     "kind": "dish drying rack",
     "license": "Unsplash License"
+  },
+  "B0B6PLG6G2": {
+    "id": "Air Fryer Salmon with Crispy Skin_-2",
+    "page_url": "https://www.flickr.com/photos/58367355@N00/53615632495",
+    "user": "jules:stonesoup",
+    "site": "Flickr",
+    "license": "CC BY 2.0",
+    "kind": "",
+    "note": "salmon cooked in an air fryer"
   },
   "B0B9P17YHK": {
     "id": 3891805,
@@ -791,6 +835,13 @@
     "user": "BuyMeACoffee",
     "site": "Pixabay",
     "kind": "griddle"
+  },
+  "B0C5HRJHGL": {
+    "id": 3891793,
+    "page_url": "https://pixabay.com/photos/egg-eggs-cooked-on-hard-boiled-3891793/",
+    "user": "ivabalk",
+    "site": "Pixabay",
+    "kind": "egg cooker"
   },
   "B0C5Z8VCHX": {
     "id": 874805,
@@ -952,6 +1003,13 @@
     "kind": "",
     "note": "salmon cooked in an air fryer"
   },
+  "B0DXJTNWJN": {
+    "id": 7439185,
+    "page_url": "https://pixabay.com/photos/cook-vegetables-pot-ingredients-7439185/",
+    "user": "neelam279",
+    "site": "Pixabay",
+    "kind": "dutch oven"
+  },
   "B0DXNC34LQ": {
     "id": "photo-1581157019452-2b854e1a020a",
     "page_url": "https://unsplash.com/photos/stainless-steel-cup-on-white-and-red-floral-textile-OE2xZeARDV8",
@@ -960,6 +1018,20 @@
     "kind": "stainless steel tumbler",
     "license": "Unsplash License"
   },
+  "B0FDQJFRYS": {
+    "id": 316400,
+    "page_url": "https://pixabay.com/photos/aroma-aromatic-beverage-bio-black-316400/",
+    "user": "PublicDomainPictures",
+    "site": "Pixabay",
+    "kind": "french press coffee"
+  },
+  "B0FSZSKB92": {
+    "id": 5141249,
+    "page_url": "https://pixabay.com/photos/audio-black-brush-cable-close-up-5141249/",
+    "user": "jeanvdmeulen",
+    "site": "Pixabay",
+    "kind": "immersion blender"
+  },
   "B0GV8NG3MG": {
     "id": "photo-1780027128034-efda5fd14915",
     "page_url": "https://unsplash.com/photos/freshly-baked-muffins-with-crumb-topping-in-a-metal-tin-w6blB1eA7SQ",
@@ -967,14 +1039,5 @@
     "site": "Unsplash",
     "kind": "muffin pan",
     "license": "Unsplash License"
-  },
-  "B0B6PLG6G2": {
-    "id": "Air Fryer Salmon with Crispy Skin_-2",
-    "page_url": "https://www.flickr.com/photos/58367355@N00/53615632495",
-    "user": "jules:stonesoup",
-    "site": "Flickr",
-    "license": "CC BY 2.0",
-    "kind": "",
-    "note": "salmon cooked in an air fryer"
   }
 }
