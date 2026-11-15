@@ -39,7 +39,7 @@ def repair(path):
     if not title and h1 and len(h1)<=100:
         text=re.sub(r"</head\s*>","<title>"+html.escape(h1)+"</title>\n</head>",text,count=1,flags=re.I)
         changes.append("missing-title-from-existing-h1")
-    if not re.search(r'<meta\s+[^>]*name\s*=\s*["\\']description["\\']',text,re.I) and h1 and len(h1)>=25:
+    if not re.search(r"""<meta\s+[^>]*name\s*=\s*["']description["']""",text,re.I) and h1 and len(h1)>=25:
         # No invented marketing copy: use existing on-page H1 exactly.
         description=h1[:155]
         text=re.sub(r"</head\s*>",'<meta name="description" content="'+html.escape(description,quote=True)+'">\n</head>',text,count=1,flags=re.I)
