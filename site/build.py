@@ -828,7 +828,7 @@ def signup():
 def foot(site):
     links = "".join(f'<a href="/{h["path"]}">{e(h["nav"])}</a>' for h in HUBS.values())
     return f"""  <footer>
-    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/newsletter/">Free Checklist</a><a href="/#quiz" data-quiz>Kitchen Quiz</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav class="fnav" aria-label="Site">{links}<a href="/#gifts">Gift Guides</a><a href="/buying-guides/">Quick Buying Guides</a><a href="/appliance-picks/">Compact Appliance Picks</a><a href="/small-kitchen/">Small Kitchen Essentials</a><a href="/newsletter/">Free Checklist</a><a href="/#quiz" data-quiz>Kitchen Quiz</a><a href="/ask/">Kitchen Advisor</a><a href="/saved/">My Favorites<span class="saved-count" hidden></span></a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
     <p>{e(site['name'])} is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. {DISCLOSURE} Product details can change — check the current listing on Amazon before you buy.</p>
     <p style="margin-top:8px">Follow along on <a href="{e(site['pinterest'])}">Pinterest</a> and <a href="{e(site['facebook'])}">Facebook</a> · <a href="/privacy/">Privacy policy</a></p>
   </footer>
