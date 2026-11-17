@@ -1,0 +1,129 @@
+{
+  "marketplace": "US",
+  "candidates": [
+    {
+      "asin": "B083TCZDMT",
+      "name": "Contigo Byron 2.0 Stainless Steel Travel Mug with SNAPSEAL Lid and Grip, 16 oz, Licorice",
+      "variant": "Model 2094843, Licorice, 16 oz, as specified by Contigo.",
+      "category": "drinkware",
+      "keyword": "16 oz travel mug for a car cup holder",
+      "accessed": "2026-11-16",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://www.gocontigo.com/mugs/contigo-byron-2.0-stainless-steel-travel-mug-with-snapseal-lid-and-grip-16oz/SAP_2094843.html",
+          "updated": null
+        },
+        {
+          "url": "https://www.desertcart.us/products/315135073-byron-vacuum-insulated-stainless-steel-travel-mug-with-leak-proof",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf observed #40 in US Kitchen & Dining on November 16, 2026. Rank is a category position. Unit sales, estimates, exact-variant Amazon review count, current listing and seller offer are unknown. Contigo identifies the model, color, capacity, and care guidance. A separate retailer catalog associates the ASIN and model.",
+      "audience_fit": "Coffee drinkers carrying a morning drink on a commute.",
+      "buying_objection": "Check cup-holder and brewer clearance. Contigo calls for handwashing the body.",
+      "score": {
+        "weighted_score_0_5": 4.2,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.4
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.4
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute commuter mug comparison. 0:00–0:20 state the affiliate disclosure and the fit question. 0:20–0:55 measure the exact mug under a brewer and in a parked car’s cup holder. 0:55–1:45 compare lid operation with a second travel mug using cool water and a tray. 1:45–2:30 show lid and body cleaning side by side. 2:30–3:00 summarize measured fit and cleaning trade-offs and ask which fit problem viewers encounter. Use owned or licensed footage and report only demonstrated results.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "16-Ounce Travel Mug: Check Cup Holder and Brewer Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Measure your cup holder and brewer clearance before picking a travel mug. Compare the lid action, grip, and what you’ll need to handwash.",
+        "board": "Drinkware & Tumblers We Love",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/contigo-byron-2-16-oz-licorice/",
+        "destination_status": "pending",
+        "image_brief": "Shoot an original 1000 × 1500 photo of a mug beside a ruler beneath a coffee brewer. Use the exact mug only with owned or licensed assets. Mark a generic mug illustrative."
+      }
+    },
+    {
+      "asin": "B08J8CM68R",
+      "name": "KitchenAid Albany Kitchen Towel Set, 4-Pack, Milkshake Tan/White",
+      "variant": "Milkshake Tan/White, four 16 × 26-inch towels per KitchenAid.",
+      "category": "kitchen-linens",
+      "keyword": "four pack kitchen towels for dish drying",
+      "accessed": "2026-11-16",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://www.kitchenaid.com/countertop-appliances/kitchenware/kitchen-linens/kitchen-towels/p.albany-kitchen-towel-set-4-pack.028332736374.html",
+          "updated": null
+        },
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/weekly/",
+          "updated": "2026-11-16"
+        }
+      ],
+      "evidence": "ParseShelf observed #49 in US Kitchen & Dining on November 16, 2026. Rank is a category position. Unit sales, estimates, exact-variant Amazon review count, current listing and seller offer are unknown. KitchenAid identifies the exact towel set and variant. ParseShelf’s weekly comparison tracked it from #80 on Nov. 9 to #49 on Nov. 16.",
+      "audience_fit": "Small-kitchen households that want separate towels for drying dishes and wiping hands.",
+      "buying_objection": "Check hanging clearance, drying space, and how often four towels will need laundering.",
+      "score": {
+        "weighted_score_0_5": 3.92,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.1
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 3.9
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.8
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Compare a four-towel set by hanging length, drawer space, and how many clean towels you reach for between laundry days.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Kitchen Towels for Dish Drying: Check Size and Storage",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Compare a four-towel set by hanging length, drawer space, and how many clean towels you reach for between laundry days.",
+        "board": "Small Kitchen Gadgets We Love",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/kitchenaid-albany-kitchen-towels-milkshake-tan-white/",
+        "destination_status": "pending",
+        "image_brief": "Shoot an original 1000 × 1500 photo of a folded towel stack beside a rail and measuring tape. Use owned or licensed assets and label any generic substitution illustrative."
+      }
+    }
+  ]
+}
