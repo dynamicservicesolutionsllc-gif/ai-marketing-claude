@@ -41,6 +41,13 @@ SKIP_TAGS = ("ai generated", "ai created", "ai-generated", "logo")
 # Same table as stock.py: (words to find in the product name, Pixabay photo search, tag(s) a photo must have;
 # "a+b" means both). First match wins, so specific types come before general ones.
 PRODUCT_TYPES = [
+    ("food storage containers", "glass food containers", "glass+food"),
+    ("proofing basket", "sourdough bread basket", "basket"),
+    ("ice cube tray", "ice cube tray freezer", "tray"),
+    ("cheese grater", "grated cheese", "cheese"),
+    ("rice cooker", "rice cooker", "rice"),
+    ("pepper grinder", "salt and pepper shakers", "pepper"),
+    ("canister", "coffee beans jar", "coffee"),
     # Drinkware first, so "MagSlider Lid" or "Slider" tumblers aren't read as lid organizers.
     ("tumbler", "tumbler cup", "cup"),
     ("water bottle", "water bottle", "bottle"),
