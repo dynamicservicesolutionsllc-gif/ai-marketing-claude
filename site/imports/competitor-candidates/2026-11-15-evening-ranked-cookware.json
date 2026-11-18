@@ -1,0 +1,253 @@
+{
+  "marketplace": "US",
+  "candidates": [
+    {
+      "asin": "B003YLJZ6M",
+      "name": "Cuisinart Chef’s Classic Stainless 16-Inch Roasting Pan with Rack",
+      "category": "bakeware",
+      "variant": "7117-16URP1, 16-inch stainless roaster with rack per Cuisinart",
+      "accessed": "2026-11-15",
+      "status": "needs_amazon_verification",
+      "keyword": "roasting pan with rack for a small oven",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/weekly/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #78 on Nov. 8 and #41 on Nov. 15 in the US Cookware list."
+        },
+        {
+          "url": "https://www.cuisinart.com/chefs-classic-stainless-16-roasting-pan-with-rack/7117-16URP1.html",
+          "updated": null,
+          "evidence": "Cuisinart names the stainless 16-inch model and its rack."
+        }
+      ],
+      "evidence": "ParseShelf US Cookware snapshot for Nov. 15, 2026: #41, from #78 on Nov. 8. Observed rank only. Exact-variant review count, estimated and actual sales, current US offer, seller and pack contents are unknown. Cuisinart names the stainless 16-inch model and its rack.",
+      "audience_fit": "Holiday hosts roasting poultry or vegetables who want a reusable pan.",
+      "buying_objection": "Check usable oven width with handles and enough room to lift the rack with mitts.",
+      "score": {
+        "scale": "0–5",
+        "weighted_score_0_5": 4.43,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.6
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.5
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.6
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original comparison: 0:00–0:20 ask whether a 16-inch roaster fits a small oven. 0:20–0:55 measure oven clearance, including the door and handles, with the exact Cuisinart model and a shorter comparison pan. 0:55–1:40 compare rack stability and lift room using the same cold load and mitts. 1:40–2:25 film a matched cooking comparison with the same amount of vegetables, then show observed drippings access and cleanup. 2:25–3:00 show storage, summarize the observed trade-offs, ask which oven measurement viewers checked first, and include the affiliate disclosure. Use owned or licensed exact-product footage and report results only after testing.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "16-Inch Roasting Pan With Rack: Will It Fit Your Oven?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Measure the oven with its racks in place, then compare handle clearance, rack lift, and storage before choosing a holiday roaster.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cuisinart-chefs-classic-16-inch-roasting-pan/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Photograph an original vertical 1000 × 1500 kitchen setup illustrating the measurement or storage decision in “16-Inch Roasting Pan With Rack: Will It Fit Your Oven?” with your own unbranded cookware and a tape measure. Mark generic cookware illustrative and retain the source photo."
+      }
+    },
+    {
+      "asin": "B0CL16FS67",
+      "name": "Glad Nonstick Roasting Pan with Rack",
+      "category": "bakeware",
+      "variant": "Nominal 15-inch nonstick roaster with V-rack. Retailer labels vary between 11 × 15 and 15 × 10.3 inches, so usable dimensions remain unknown.",
+      "accessed": "2026-11-15",
+      "status": "needs_amazon_verification",
+      "keyword": "nonstick roasting pan with V rack",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/weekly/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #74 on Nov. 8 and #23 on Nov. 15 in the US Cookware list."
+        },
+        {
+          "url": "https://www.walmart.com/ip/10306552550",
+          "updated": null,
+          "evidence": "US retailer corroborates the 15-inch Glad nonstick roaster with a V-rack."
+        }
+      ],
+      "evidence": "ParseShelf US Cookware snapshot for Nov. 15, 2026: #23, from #74 on Nov. 8. Observed rank only. Exact-variant review count, estimated and actual sales, current US offer, seller and pack contents are unknown. US retailer corroborates the 15-inch Glad nonstick roaster with a V-rack.",
+      "audience_fit": "Occasional holiday cooks who want a rack and a pan for roasting vegetables afterward.",
+      "buying_objection": "Verify inside and outside measurements and check the coating care instructions. A rack adds storage and cleaning.",
+      "score": {
+        "scale": "0–5",
+        "weighted_score_0_5": 4.16,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4.4
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.2
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.2
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.8
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          }
+        }
+      },
+      "confidence": "Low",
+      "angle": "Hosting a holiday dinner? Compare pan depth, rack clearance, and cleanup before picking a roaster for your bird and your oven.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Nonstick Roasting Pan With Rack: What to Measure",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Hosting a holiday dinner? Compare pan depth, rack clearance, and cleanup before picking a roaster for your bird and your oven.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/glad-nonstick-roasting-pan-with-rack/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Photograph an original vertical 1000 × 1500 kitchen setup illustrating the measurement or storage decision in “Nonstick Roasting Pan With Rack: What to Measure” with your own unbranded cookware and a tape measure. Mark generic cookware illustrative and retain the source photo."
+      }
+    },
+    {
+      "asin": "B08R7D4CCM",
+      "name": "DOWAN 9 × 13-Inch Ceramic Casserole Dish, 4.2 Quart, Soft White",
+      "category": "bakeware",
+      "variant": "Soft White, ceramic, nominal 9 × 13 inches and 4.2 quarts, corroborated by the branded catalog.",
+      "accessed": "2026-11-15",
+      "status": "needs_amazon_verification",
+      "keyword": "deep ceramic lasagna baking dish",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/weekly/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #59 on Nov. 8 and #46 on Nov. 15 in the US Cookware list."
+        },
+        {
+          "url": "https://www.viaceramic.com/product/dowan-casserole-dish-9x13-ceramic-baking-dish-large-lasagna-pan-deep-for-oven-4-2-quarts-baking-pan-with-handles-oven-safe-and-durable-bakeware-for-lasagna-home-decor-wedding-white/",
+          "updated": null,
+          "evidence": "Branded catalog corroborates the Soft White dish and capacity."
+        }
+      ],
+      "evidence": "ParseShelf US Cookware snapshot for Nov. 15, 2026: #46, from #59 on Nov. 8. Observed rank only. Exact-variant review count, estimated and actual sales, current US offer, seller and pack contents are unknown. Branded catalog corroborates the Soft White dish and capacity.",
+      "audience_fit": "Batch cooks who build layered lasagnas or oven-to-table casseroles.",
+      "buying_objection": "Deep ceramic gets heavy when full. Measure the usable oven width and cupboard height.",
+      "score": {
+        "scale": "0–5",
+        "weighted_score_0_5": 4.13,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.9
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.4
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.2
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Do your lasagna layers crowd a shallow pan? Compare usable depth, space around the handles, and how you’ll carry the finished dish to the table.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Deep 9 × 13 Lasagna Dish: Check Capacity and Oven Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Do your lasagna layers crowd a shallow pan? Compare usable depth, space around the handles, and how you’ll carry the finished dish to the table.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/dowan-deep-ceramic-casserole-dish-soft-white/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Photograph an original vertical 1000 × 1500 kitchen setup illustrating the measurement or storage decision in “Deep 9 × 13 Lasagna Dish: Check Capacity and Oven Fit” with your own unbranded cookware and a tape measure. Mark generic cookware illustrative and retain the source photo."
+      }
+    },
+    {
+      "asin": "B005H05SXM",
+      "name": "Cuisinart Chef’s Classic Stainless 11-Piece Cookware Set",
+      "category": "cookware",
+      "variant": "Manufacturer model 77-11G, 11-piece stainless set.",
+      "accessed": "2026-11-15",
+      "status": "needs_amazon_verification",
+      "keyword": "stainless cookware set for first apartment",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/weekly/",
+          "updated": "2026-11-15",
+          "evidence": "ParseShelf recorded #100 on Nov. 8 and #88 on Nov. 15 in the US Cookware list."
+        },
+        {
+          "url": "https://www.cuisinart.com/chefs-classic-stainless-11-piece-set/77-11G.html",
+          "updated": null,
+          "evidence": "Cuisinart identifies the 11-piece set as model 77-11G."
+        }
+      ],
+      "evidence": "ParseShelf US Cookware snapshot for Nov. 15, 2026: #88, from #100 on Nov. 8. Observed rank only. Exact-variant review count, estimated and actual sales, current US offer, seller and pack contents are unknown. Cuisinart identifies the 11-piece set as model 77-11G.",
+      "audience_fit": "First-apartment cooks building a starter cookware cabinet.",
+      "buying_objection": "Count pans and lids separately and compare the sizes with meals you cook. Stainless has a different learning curve from nonstick.",
+      "score": {
+        "scale": "0–5",
+        "weighted_score_0_5": 3.95,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.4
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.2
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.8
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Setting up your first kitchen? Count the pans and lids separately, then check which sizes fit your burners and which pieces you’ll use every week.",
+      "micrositeUrl": "https://cookware-sets-first-apartments.kitchenfindsfavorites.com/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "11-Piece Stainless Cookware Set: Count the Pans First",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Setting up your first kitchen? Count the pans and lids separately, then check which sizes fit your burners and which pieces you’ll use every week.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cuisinart-chefs-classic-stainless-11-piece-set/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Photograph an original vertical 1000 × 1500 kitchen setup illustrating the measurement or storage decision in “11-Piece Stainless Cookware Set: Count the Pans First” with your own unbranded cookware and a tape measure. Mark generic cookware illustrative and retain the source photo."
+      }
+    }
+  ]
+}
