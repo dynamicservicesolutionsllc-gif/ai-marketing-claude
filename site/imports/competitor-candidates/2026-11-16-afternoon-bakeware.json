@@ -1,0 +1,241 @@
+{
+  "marketplace": "US",
+  "candidates": [
+    {
+      "asin": "B0064OM53G",
+      "name": "Nordic Ware Naturals Big Sheet Baking Pan",
+      "variant": "Natural aluminum, nominal 21 × 15 inches, indexed single pan",
+      "category": "bakeware",
+      "keyword": "extra large sheet pan oven fit",
+      "accessed": "2026-11-16",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://www.nordicware.com/products/naturals-big-sheet-baking-pan/",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #84 on the US Bakeware list on November 16, 2026. Category rank is a demand signal. Actual and estimated unit sales, exact-variant review count, and the current Amazon listing, seller, offer and pack contents are unknown. Nordic Ware identifies the Naturals Big Sheet and reinforced rim. The indexed rank card supports the nominal size and single-pan variant.",
+      "audience_fit": "Families baking or roasting in batches who already own a half sheet.",
+      "buying_objection": "Measure the usable rack and door clearance. A larger tray takes more storage space.",
+      "score": {
+        "weighted_score_0_5": 4.27,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.6
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.6
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.5
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.3
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.5
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute production brief, Big Sheet versus half sheet: 0:00–0:20 show both pans and disclose the affiliate relationship. 0:20–0:55 measure both pans, the usable oven rack and door clearance. 0:55–1:50 run separate batches of similarly sized vegetables with the same recipe and oven settings, then show the usable single-layer area. 1:50–2:35 compare lifting clearance, cleanup and cupboard fit. 2:35–3:00 summarize who benefits and ask viewers what size oven rack they use. Film with owned or licensed assets and report measured results only.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/nordic-ware-naturals-big-sheet/",
+        "board": "Holiday Baking Essentials",
+        "title": "Extra-Large Sheet Pan vs. Half Sheet: Will It Fit?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Compare rack clearance, usable baking area, and storage before upgrading to an extra-large sheet pan.",
+        "image_brief": "Original 1000 × 1500 photo. Photograph two nested pan outlines with a tape measure across the oven rack. Label generic cookware illustrative and use only owned or licensed images."
+      }
+    },
+    {
+      "asin": "B00008W70F",
+      "name": "Farberware Nonstick Bakeware 9 × 13-Inch Rectangular Cake Pan, Gray",
+      "variant": "Gray nonstick 9 × 13-inch format. Manufacturer SKU 52102.",
+      "category": "bakeware",
+      "keyword": "gray nonstick 9x13 cake pan",
+      "accessed": "2026-11-16",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://farberwarecookware.com/products/nonstick-bakeware-rectangular-cake-pan",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #67 on the US Bakeware list on November 16, 2026. Category rank is a demand signal. Actual and estimated unit sales, exact-variant review count, and the current Amazon listing, seller, offer and pack contents are unknown. Farberware identifies the gray nonstick format as SKU 52102.",
+      "audience_fit": "Home bakers making sheet cakes and brownies with limited cupboard space.",
+      "buying_objection": "Measure interior capacity and handles. Consider whether a coated pan fits your utensil and cleaning habits.",
+      "score": {
+        "weighted_score_0_5": 4.01,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.6
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.1
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.9
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.2
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Baking brownies or a sheet cake? Compare pan depth, grip space, and how you’ll lift and slice your bake before choosing a 9 × 13 pan.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/farberware-gray-9x13-rectangular-cake-pan/",
+        "board": "Holiday Baking Essentials",
+        "title": "9 × 13 Cake Pan: Check Depth Before You Bake",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Baking brownies or a sheet cake? Compare pan depth, grip space, and how you’ll lift and slice your bake before choosing a 9 × 13 pan.",
+        "image_brief": "Original 1000 × 1500 photo. Shoot an overhead tray of uncut brownies alongside a ruler and a clean pan. Label generic cookware illustrative and use only owned or licensed images."
+      }
+    },
+    {
+      "asin": "B0BM52GF2N",
+      "name": "HexClad Hybrid Roasting Pan with Rack, 17 × 14 Inches",
+      "variant": "Indexed 17 × 14-inch configuration with rack. The manufacturer corroborates the Hybrid roasting pan and V-rack.",
+      "category": "bakeware",
+      "keyword": "large roasting pan with removable rack",
+      "accessed": "2026-11-16",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://hexclad.com/products/hexclad-hybrid-roasting-pan",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #90 on the US Bakeware list on November 16, 2026. Category rank is a demand signal. Actual and estimated unit sales, exact-variant review count, and the current Amazon listing, seller, offer and pack contents are unknown. HexClad identifies the Hybrid roasting pan and V-rack. Nominal size is from the indexed rank card.",
+      "audience_fit": "Frequent hosts who cook larger roasts and value a removable rack.",
+      "buying_objection": "Allow oven clearance around handles and space to lift the rack wearing mitts. Consider how often you’ll need the capacity.",
+      "score": {
+        "weighted_score_0_5": 3.86,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.2
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.1
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.1
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.9
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.2
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Before choosing a large roaster, measure the oven opening and leave room to lift the rack and grip the handles with mitts.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/hexclad-hybrid-roasting-pan-with-rack/",
+        "board": "Holiday Baking Essentials",
+        "title": "17 × 14 Roasting Pan: Check Oven and Rack Clearance",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Before choosing a large roaster, measure the oven opening and leave room to lift the rack and grip the handles with mitts.",
+        "image_brief": "Original 1000 × 1500 photo. Photograph a roasting rack beside an empty oven with original arrows marking width and lift clearance. Label generic cookware illustrative and use only owned or licensed images."
+      }
+    },
+    {
+      "asin": "B08ZQF4K3Y",
+      "name": "365 by Whole Foods Market Unbleached Parchment Paper, 72 Sq Ft",
+      "variant": "72-square-foot unbleached roll, corroborated by Whole Foods Market.",
+      "category": "bakeware",
+      "keyword": "72 square foot parchment roll for baking",
+      "accessed": "2026-11-16",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://www.wholefoodsmarket.com/365-WFM-Unbleached-Parchment-Paper/dp/B08ZQF4K3Y",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #26 on the US Bakeware list on November 16, 2026. Category rank is a demand signal. Actual and estimated unit sales, exact-variant review count, and the current Amazon listing, seller, offer and pack contents are unknown. Whole Foods Market identifies its 72-square-foot roll and exposes the same ASIN in its public product URL.",
+      "audience_fit": "Bakers who trim parchment for multiple pan shapes.",
+      "buying_objection": "A roll requires cutting and flattening. Compare the roll’s usable width against your most-used pan.",
+      "score": {
+        "weighted_score_0_5": 3.75,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 3.7
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 3.9
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 3.9
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Use more than one pan size? Compare parchment width, how much paper you trim away, and whether a roll is easier to store than sheets.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/365-unbleached-parchment-paper-72-sq-ft/",
+        "board": "Holiday Baking Essentials",
+        "title": "Parchment Roll for Baking: Check Width Before You Buy",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Use more than one pan size? Compare parchment width, how much paper you trim away, and whether a roll is easier to store than sheets.",
+        "image_brief": "Original 1000 × 1500 photo. Shoot an original pan-lining setup with parchment, a ruler, and offcuts. Label generic cookware illustrative and use only owned or licensed images."
+      }
+    }
+  ]
+}
