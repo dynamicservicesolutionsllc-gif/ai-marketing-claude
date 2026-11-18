@@ -1167,5 +1167,36 @@
     "site": "Unsplash",
     "kind": "muffin pan",
     "license": "Unsplash License"
+  },
+  "B0C2CLQW34": {
+    "id": "File:Kitchen-Scissors.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen-Scissors.jpg",
+    "user": "Evan-Amos",
+    "site": "Wikimedia Commons",
+    "license": "Public domain",
+    "kind": "pair of kitchen scissors"
+  },
+  "B005KDEIZ0": {
+    "id": "File:Oven thermometer 1 2017-07-24.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Oven_thermometer_1_2017-07-24.jpg",
+    "user": "Fastily",
+    "site": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "kind": "dial oven thermometer"
+  },
+  "B00004OCJW": {
+    "id": 2202233,
+    "page_url": "https://pixabay.com/photos/kitchen-modern-can-opener-2202233/",
+    "user": "WikimediaImages",
+    "site": "Pixabay",
+    "kind": "can opener"
+  },
+  "B0F5X4FM3Q": {
+    "id": "File:11.09.11 Turkey top questions blog - Flickr - USDAgov.jpg",
+    "page_url": "https://commons.wikimedia.org/wiki/File:11.09.11_Turkey_top_questions_blog_-_Flickr_-_USDAgov.jpg",
+    "user": "U.S. Department of Agriculture",
+    "site": "Wikimedia Commons",
+    "license": "Public domain",
+    "kind": "thermometer"
   }
 }
