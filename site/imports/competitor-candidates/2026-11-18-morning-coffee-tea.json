@@ -1,0 +1,415 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-18-morning",
+  "marketplace": "US",
+  "access_date": "2026-11-18",
+  "candidate_count": 5,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main catalog and SiteStripe, both research ledgers at open PR62 and PR63 heads (not on main), all 20 open PR snapshots/diffs and authenticated GET /api/research priorAsins. Exact ASIN and model/family checks performed.",
+    "source_access": "Public search-indexed material only. No access-rule bypass, bulk crawl, Amazon scraping, affiliate clicks or paid research.",
+    "evidence_limits": "Dated ranks, manufacturer specifications and editorial testing are separate signals. Rank publisher methodology and collection compliance not independently audited. No unit sales estimated. Missing update dates are null. No prices, ratings or review text copied.",
+    "publication_gate": "All entries remain research drafts pending current Amazon identity/variant, pack, seller/offer, matching destination and asset review. Nothing added to approved SiteStripe or live catalog."
+  },
+  "products": [
+    {
+      "asin": "B003KYSLNQ",
+      "name": "Cuisinart PerfecTemp Cordless Electric Kettle CPK-17P1",
+      "category": "small-appliances",
+      "keyword": "Cuisinart temperature control electric kettle",
+      "rank": 13,
+      "variant": {
+        "model": "CPK-17P1",
+        "capacity": "1.7 liters",
+        "finish": "Stainless Steel P1",
+        "pack_count": 1,
+        "status": "Manufacturer model, capacity and finish supported. Indexed US product link supports ASIN lead. Current Amazon selection and included components unverified."
+      },
+      "purpose": "Heating water with selectable presets for different drink routines.",
+      "audience_fit": "Tea households that want more than one water setting and enough nominal capacity for several servings.",
+      "objections": "A larger body occupies counter space. Buttons and extra settings may add little for boil-only users. Check minimum fill, reach and lid clearance in the actual manual. Search volume and conversion are unknown.",
+      "scores": {
+        "demand": 4,
+        "audience_fit": 4.5,
+        "purchase_intent": 4.3,
+        "content_gap": 3.5,
+        "affiliate_editorial_suitability": 4.4
+      },
+      "confidence": "Medium",
+      "micrositeUrl": "https://electric-kettles-busy-families.kitchenfindsfavorites.com/",
+      "angle": "Three-minute original production plan, 'Do you need kettle presets or only a boil button?' 0:00–0:20 show two drink routines and disclose the affiliate relationship aloud. 0:20–0:45 identify the verified CPK-17P1 and explain rated versus practical fill. 0:45–1:15 demonstrate selecting a preset without claiming laboratory accuracy. 1:15–1:50 compare the footprint and pouring access with an already-owned basic kettle, using room-temperature water when possible. 1:50–2:20 show lid clearance and discuss cleaning from the exact manual. 2:20–2:40 explain when a larger preset kettle fits a household and when an existing simple kettle is sufficient. 2:40–3:00 recap the buyer checklist and send viewers to the reviewed KFF guide. Use original footage of the verified unit, licensed music and accessible captions. No speed, energy, health or temperature-accuracy guarantees. Production pending product and asset verification.",
+      "pin": {
+        "title": "Temperature Control Electric Kettle: Is Cuisinart PerfecTemp Right for You?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Do you need several water settings or just a boil button? Our planned Cuisinart PerfecTemp guide compares drink routines, counter space and everyday handling before you choose.",
+        "board": "Electric Kettles & Tea Station Ideas",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cuisinart-perfectemp-cpk-17p1-kettle/",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_page_exists_and_is_verified",
+        "image_brief": "Original photograph, at least 1000 x 1500. Verified stainless CPK-17P1 on a measured counter beside two cups. Show controls and lid clearance. Use an owned photograph of the exact verified item or retain written commercial site, Pin and video license and attribution. An original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted imagery."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf records this ASIN at position 13 in US Coffee, Tea & Espresso Appliances on November 18. This is a third-party rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://www.cuisinart.com/perfectemp-cordless-electric-kettle/CPK-17P1.html",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer identifies CPK-17P1, 1.7-liter stainless steel version with six presets. These are manufacturer specifications, not KFF measurements."
+        },
+        {
+          "url": "https://www.bhg.com/best-electric-kettles-11690500",
+          "updated": "2025-03-05",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Dated editorial home-testing comparison includes the PerfecTemp family. Testing is historical quality/context evidence, not current sales or confirmation of this Amazon variant."
+        },
+        {
+          "url": "https://slickdeals.net/f/17986446-59-99-1-7-l-cuisinart-stainless-steel-cordless-electric-kettle-w-6-preset-temperatures-at-amazon",
+          "updated": "2024-12-12",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Indexed public link exposes amazon.com/dp/B003KYSLNQ. Retained solely as historical identity support. No old offer, seller or price adopted."
+        }
+      ],
+      "amazonUrl": "https://www.amazon.com/dp/B003KYSLNQ",
+      "asin_source": "Bare ASIN exposed in indexed public product card with Amazon link; historical public-link corroboration added where found. No Amazon or Special Link clicked.",
+      "status": "needs_amazon_verification",
+      "current_offer_seller": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 4.17,
+      "score_confidence_note": "Comparative research heuristic on 0–5 scale. Search volume and conversions unknown. Rank source not independently audited. Confidence covers research support, not Amazon verification.",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B07T1CH2HH",
+      "name": "COSORI Original Electric Gooseneck Kettle CO108-NK, Matte Black",
+      "category": "small-appliances",
+      "keyword": "Cosori gooseneck kettle for pour over coffee",
+      "rank": 19,
+      "variant": {
+        "model": "CO108-NK",
+        "capacity": "0.8 liters",
+        "finish": "Matte Black",
+        "pack_count": 1,
+        "status": "Manufacturer page supports matte black CO108-NK and capacity. Separate CS108-NK smart model excluded. Current Amazon variant unverified."
+      },
+      "purpose": "Heating and pouring water for a small pour-over or tea routine.",
+      "audience_fit": "Home coffee makers comparing a narrow spout with a conventional kettle for controlled manual pouring.",
+      "objections": "Small nominal capacity may not suit repeated household servings. A narrow spout does not establish better coffee or measured flow accuracy. Confirm finish and CO108 model rather than the similar smart model.",
+      "scores": {
+        "demand": 3.8,
+        "audience_fit": 4.3,
+        "purchase_intent": 4.5,
+        "content_gap": 3.6,
+        "affiliate_editorial_suitability": 4.3
+      },
+      "confidence": "Medium",
+      "micrositeUrl": "https://electric-kettles-small-apartments.kitchenfindsfavorites.com/",
+      "angle": "Original comparison brief showing spout reach, room-temperature pouring into a dripper, storage and fill markings. Separate pouring preference from coffee-flavor claims. No app-control claim for CO108-NK.",
+      "pin": {
+        "title": "Gooseneck Kettle for Pour-Over Coffee: Compare COSORI Size and Spout",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning a small pour-over station? Compare kettle capacity, spout reach and counter space before choosing. Our planned COSORI guide helps you check the exact model and finish.",
+        "board": "Pour-Over Coffee & Small Kitchen Finds",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cosori-co108-nk-black-gooseneck-kettle/",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_page_exists_and_is_verified",
+        "image_brief": "Original photograph, at least 1000 x 1500. Exact verified matte black CO108-NK beside a dripper with a measured small counter layout. Avoid fake steam or performance charts. Use an owned photograph of the exact verified item or retain written commercial site, Pin and video license and attribution. An original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted imagery."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf records this ASIN at position 19 in US Coffee, Tea & Espresso Appliances on November 18. This is a third-party rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://cosori.com/collections/bfcm-2026/products/electric-gooseneck-kettle-co108-nk",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer lists CO108-NK, matte black option, 0.8-liter capacity and five presets. Manufacturer data is separate from rank and current Amazon identity."
+        },
+        {
+          "url": "https://slickdeals.net/f/18608980-45-94-0-8l-cosori-electric-pour-over-gooseneck-kettle-w-5-temperature-control-presets-black-stainless-steel-at-amazon",
+          "updated": "2025-09-16",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Historical public US product link exposes B07T1CH2HH. No historical offer copied. Do not merge the black and stainless variants merely because the post mentions both."
+        }
+      ],
+      "amazonUrl": "https://www.amazon.com/dp/B07T1CH2HH",
+      "asin_source": "Bare ASIN exposed in indexed public product card with Amazon link; historical public-link corroboration added where found. No Amazon or Special Link clicked.",
+      "status": "needs_amazon_verification",
+      "current_offer_seller": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 4.11,
+      "score_confidence_note": "Comparative research heuristic on 0–5 scale. Search volume and conversions unknown. Rank source not independently audited. Confidence covers research support, not Amazon verification.",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B00004R946",
+      "name": "Farberware 2–8 Cup Electric Percolator FCP280, Stainless Steel",
+      "category": "small-appliances",
+      "keyword": "Farberware FCP280 8 cup electric percolator",
+      "rank": 16,
+      "variant": {
+        "model": "FCP280",
+        "capacity": "2–8 manufacturer cups, approximately 5 ounces each",
+        "finish": "Stainless Steel",
+        "pack_count": 1,
+        "status": "Manufacturer supports FCP280 and 2–8-cup designation. Do not substitute FCP412 or compare its cups to full-size mugs. Current Amazon pack/components unverified."
+      },
+      "purpose": "Brewing coffee with an electric percolator instead of a drip machine.",
+      "audience_fit": "Households familiar with percolated coffee and shoppers comparing a compact traditional brewer with their existing drip setup.",
+      "objections": "Cup terminology can overstate expected mug servings. Brewing preference varies, and independent family-level tests disagree. Internal basket and tube cleanup may be an objection. No taste or brew-strength promise.",
+      "scores": {
+        "demand": 3.5,
+        "audience_fit": 4,
+        "purchase_intent": 4,
+        "content_gap": 4,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Medium",
+      "micrositeUrl": "https://coffee-makers-busy-families.kitchenfindsfavorites.com/",
+      "angle": "Original 'eight cups versus your mug' explanation with measured room-temperature water and cup markings, followed by basket and tube cleanup questions. No claim of stronger, faster or superior coffee.",
+      "pin": {
+        "title": "8-Cup Electric Percolator: Check Farberware FCP280 Serving Size",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. How many of your mugs fit an eight-cup percolator? Our planned Farberware FCP280 guide explains cup terminology, cleanup questions and household fit before you change brewing methods.",
+        "board": "Coffee Makers & Home Brewing Comparisons",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/farberware-fcp280-8-cup-electric-percolator/",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_page_exists_and_is_verified",
+        "image_brief": "Original photograph, at least 1000 x 1500. Verified FCP280 beside a measuring jug and two differently sized mugs. No coffee-quality claims or unsupported serving counts. Use an owned photograph of the exact verified item or retain written commercial site, Pin and video license and attribution. An original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted imagery."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf records this ASIN at position 16 in US Coffee, Tea & Espresso Appliances on November 18. This is a third-party rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://farberwareproducts.com/product/2-8-cup-electric-percolator-stainless-steel/",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer names FCP280 and defines its cup as approximately five ounces. This is model/capacity evidence, not an assertion of brewing performance."
+        },
+        {
+          "url": "https://slickdeals.net/f/17782656-47-37-8-cup-farberware-electric-coffee-percolator-fcp280-at-amazon",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Historical indexed public link exposes B00004R946 and FCP280. Publication date not established. No past price, seller, availability or purchase count retained."
+        },
+        {
+          "url": "https://www.foodandwine.com/lifestyle/kitchen/best-coffee-percolators",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Editorial testing covers a Farberware electric percolator. Exact tested capacity and update date unknown, so the result is family-level context only."
+        },
+        {
+          "url": "https://www.seriouseats.com/best-coffee-percolator-8400291",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "A separate testing comparison raises limitations about Farberware electric percolation. Exact tested variant unknown. Conflicting family-level results lower confidence in performance recommendations."
+        }
+      ],
+      "amazonUrl": "https://www.amazon.com/dp/B00004R946",
+      "asin_source": "Bare ASIN exposed in indexed public product card with Amazon link; historical public-link corroboration added where found. No Amazon or Special Link clicked.",
+      "status": "needs_amazon_verification",
+      "current_offer_seller": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 3.85,
+      "score_confidence_note": "Comparative research heuristic on 0–5 scale. Search volume and conversions unknown. Rank source not independently audited. Confidence covers research support, not Amazon verification.",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B000CO89T8",
+      "name": "Mr. Coffee Mug Warmer, Black, MWBLK",
+      "category": "small-appliances",
+      "keyword": "Mr Coffee mug warmer for desk",
+      "rank": 68,
+      "variant": {
+        "model": "MWBLK in rank source; MWBLKPDQ-RB on manufacturer page",
+        "color": "Black",
+        "pack_count": 1,
+        "status": "Black mug-warmer family supported by manufacturer and historical link. Exact suffix/pack correspondence remains pending. Do not infer timed shutoff or adjustable temperature."
+      },
+      "purpose": "A plug-in warming plate for a compatible drink mug.",
+      "audience_fit": "Slow coffee or tea drinkers considering a desk accessory while keeping their existing mug.",
+      "objections": "Compatibility depends on mug shape and material. Requires outlet access and space for a heated surface. Confirm supervision and shutoff instructions from the exact manual. Single-day rank appearance gives limited persistence evidence.",
+      "scores": {
+        "demand": 3.1,
+        "audience_fit": 4,
+        "purchase_intent": 3.8,
+        "content_gap": 3.7,
+        "affiliate_editorial_suitability": 3.6
+      },
+      "confidence": "Low",
+      "angle": "Compare the desk space and mug-base compatibility questions for a warming plate versus an insulated cup. Show the off/unplugged product during layout shots, follow the exact manual and avoid timed warmth or energy-saving claims.",
+      "pin": {
+        "title": "Desk Mug Warmer: Check Mr. Coffee Mug Fit and Outlet Space",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Prefer sipping slowly? Compare mug-base fit, desk space, outlet access and care instructions before choosing a warmer. Our planned Mr. Coffee guide lists the details to verify.",
+        "board": "Coffee Station Accessories & Gift Ideas",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/mr-coffee-mwblk-black-mug-warmer/",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_page_exists_and_is_verified",
+        "image_brief": "Original photograph, at least 1000 x 1500. Verified black warmer switched off beside a compatible mug on a clear desk. Show cord routing honestly without presenting unsafe placement. Use an owned photograph of the exact verified item or retain written commercial site, Pin and video license and attribution. An original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted imagery."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf records this ASIN at position 68 in US Coffee, Tea & Espresso Appliances on November 18. This is a third-party rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://www.mrcoffee.com/accessories/mug-warmers/mr.coffee-mug-warmer/SP_525366.html",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer lists black warmer MWBLKPDQ-RB with an on/off indicator. Exact suffix correspondence to the rank-source MWBLK remains unknown."
+        },
+        {
+          "url": "https://slickdeals.net/f/17162398-limited-time-deal-mr-coffee-mug-warmer-for-coffee-and-tea-portable-cup-warmer-for-travel-office-desks-and-home-black-gifts-for-teachers-14-99",
+          "updated": "2023-12-13",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Indexed public link explicitly exposes amazon.com/dp/B000CO89T8. Historical identity only, no expired offer retained."
+        },
+        {
+          "url": "https://www.foodandwine.com/best-coffee-mug-warmers-7093965",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Editorial testing includes Mr. Coffee's warmer as a comparison option rather than the leading recommendation. Update date and exact suffix unknown. No test result copied into promotional copy."
+        }
+      ],
+      "amazonUrl": "https://www.amazon.com/dp/B000CO89T8",
+      "asin_source": "Bare ASIN exposed in indexed public product card with Amazon link; historical public-link corroboration added where found. No Amazon or Special Link clicked.",
+      "status": "needs_amazon_verification",
+      "current_offer_seller": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 3.63,
+      "score_confidence_note": "Comparative research heuristic on 0–5 scale. Search volume and conversions unknown. Rank source not independently audited. Confidence covers research support, not Amazon verification.",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B07NQPYGYD",
+      "name": "Ember Temperature Control Smart Mug 2, 10 oz, White",
+      "category": "small-appliances",
+      "keyword": "Ember Mug 2 10 oz white",
+      "rank": 39,
+      "variant": {
+        "model": "CM191002US in independent document index",
+        "capacity": "10 US fluid ounces",
+        "color": "White",
+        "pack_count": 1,
+        "status": "Manufacturer offers White/10 oz Mug 2 and independent index maps this ASIN/model. Battery duration differs between indexed title and manufacturer family page, so no battery-duration specification is adopted. Current Amazon selection unverified."
+      },
+      "purpose": "A rechargeable heated drink mug for temperature-managed sipping.",
+      "audience_fit": "Home coffee drinkers comparing an active heated mug with a warming plate or an already-owned insulated cup.",
+      "objections": "Charging, app compatibility, hand-care requirements and small serving capacity can outweigh convenience. Verify battery specification and exact generation before producing runtime copy. No measured heat-retention claim.",
+      "scores": {
+        "demand": 3.5,
+        "audience_fit": 4.1,
+        "purchase_intent": 4.2,
+        "content_gap": 3.7,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Medium",
+      "angle": "Original heated-mug versus warming-plate comparison covering usable drink volume, charging-coaster space and care. Do not claim a runtime until exact battery/variant evidence is resolved. Separate subjective sipping preference from a temperature test.",
+      "pin": {
+        "title": "Ember Mug 2, 10 oz: Compare Charging, Care and Daily Drink Size",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering a heated mug? Compare drink size, charging space, app requirements and care with your current cup. Our planned Ember Mug 2 guide explains what to verify before choosing.",
+        "board": "Coffee Station Accessories & Gift Ideas",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/ember-mug-2-10-oz-white/",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_page_exists_and_is_verified",
+        "image_brief": "Original photograph, at least 1000 x 1500. Verified white 10-ounce Mug 2 beside its actual charging coaster and a measuring cup. No invented temperature display, battery graphic or runtime claim. Use an owned photograph of the exact verified item or retain written commercial site, Pin and video license and attribution. An original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted imagery."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf records this ASIN at position 39 in US Coffee, Tea & Espresso Appliances on November 18. This is a third-party rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://ember.com/products/ember-mug-2?view=10oz",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer supports Mug 2 in white and 10-ounce size. Indexed battery-duration naming differs from current family copy; battery duration is unresolved."
+        },
+        {
+          "url": "https://device.report/ember/cm191002us",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Independent document index maps B07NQPYGYD to CM191002US, white and 10 ounces. Historical identity corroboration only."
+        },
+        {
+          "url": "https://www.seriouseats.com/best-temperature-control-mugs-5498744",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Independent testing selects the Ember Mug 2 family. Exact tested color/size and update date unknown. This supports editorial interest, not verified sales or this variant's performance."
+        }
+      ],
+      "amazonUrl": "https://www.amazon.com/dp/B07NQPYGYD",
+      "asin_source": "Bare ASIN exposed in indexed public product card with Amazon link; historical public-link corroboration added where found. No Amazon or Special Link clicked.",
+      "status": "needs_amazon_verification",
+      "current_offer_seller": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 3.87,
+      "score_confidence_note": "Comparative research heuristic on 0–5 scale. Search volume and conversions unknown. Rank source not independently audited. Confidence covers research support, not Amazon verification.",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    }
+  ],
+  "validation": {
+    "json_roundtrip": true,
+    "unique_asins": true,
+    "canonical_untagged_links": true,
+    "distinct_sources": true,
+    "pin_required_fields": true,
+    "pin_character_limits": true,
+    "exact_disclosure_prefix": true,
+    "weighted_score_calculations": true,
+    "repo_checks": "Applied site/build.py Pin required-field, disclosure-prefix, character-limit and price/testing-claim rules. Full catalog build/import not run because these are separate research-only records."
+  },
+  "workflow_desk": {
+    "saved": 5,
+    "duplicates": 0,
+    "readback_verified": true,
+    "post_http_status": 200,
+    "get_http_status": 200,
+    "published": 0,
+    "method": "Direct authenticated HTTPS POST /api/research and GET readback on current Site origin. Token stayed in memory and hidden stdin only.",
+    "note": "Full timed angle payload returned a generic HTTP400. Concise production summary succeeded. Full source notes, timed brief and original Pin copy are retained in this research file."
+  }
+}
