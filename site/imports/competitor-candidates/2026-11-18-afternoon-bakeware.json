@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-18-afternoon",
+  "access_date": "2026-11-18",
+  "marketplace": "US",
+  "candidate_count": 4,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main catalog and SiteStripe ledger, research ledgers at PR62 and PR63 heads (absent on main), all 21 open PR snapshots/diffs and authenticated GET /api/research priorAsins. Exact ASIN and model/family comparison used to exclude overlaps.",
+    "source_access": "Public search-indexed evidence only. No page access-rule bypass, bulk crawl, Amazon scrape, affiliate click, purchase or paid research.",
+    "limits": "Rank snapshot publisher and collection compliance not independently audited. Ranks are positions, not sales. Manufacturer specs and editorial tests are separate signals. No current offer, seller, price, ratings or review text copied. Missing update dates are null.",
+    "publication_gate": "All candidates remain research drafts pending authorized Amazon identity/variant, pack/current seller and offer, destination and asset review."
+  },
+  "products": [
+    {
+      "asin": "B0BR5ZLMFP",
+      "name": "ThermiChef 16\" x 16\" Pizza Steel, 1/4\" Thickness",
+      "category": "cookware",
+      "keyword": "16 inch quarter inch pizza steel",
+      "rank": 46,
+      "variant": {
+        "model": "CS-1416 in independent identity records",
+        "size": "16 x 16 inches",
+        "thickness": "1/4 inch",
+        "manufacturer_weight": "17.6 pounds",
+        "pack_count": 1,
+        "status": "Manufacturer size/thickness/weight match the indexed ASIN card. Model cross-reference is third-party. Do not substitute 3/8-inch model B085S8XRRB. Current Amazon selection unverified."
+      },
+      "purpose": "A steel baking surface for home pizza and other uses allowed by the exact manual.",
+      "audience_fit": "Home pizza bakers comparing a substantial oven accessory with their existing stone or pan. Fit and lifting requirements are meaningful buying decisions.",
+      "objections": "Check usable rack space, the oven manual and handling comfort before choosing. Weight, seasoning, drying and storage can outweigh the appeal. No faster-baking, energy-saving, health or crust-quality promises.",
+      "scores": {
+        "demand": 3.6,
+        "audience_fit": 4.2,
+        "purchase_intent": 4.4,
+        "content_gap": 4.2,
+        "affiliate_editorial_suitability": 3.9
+      },
+      "confidence": "Medium",
+      "micrositeUrl": "https://baking-pans-busy-families.kitchenfindsfavorites.com/",
+      "angle": "Three-minute production concept, 'Will a pizza steel fit your oven and routine?' Begin with spoken affiliate disclosure and the fit question. Identify the verified quarter-inch model, compare a cold cardboard footprint with usable rack space, show actual cold-unit weight and handling only after obtaining authorized footage, then discuss seasoning, drying and storage from the exact maker instructions. Compare the buying tradeoffs with an already-owned pizza stone or pan and close with a reviewed KFF guide. No hot lifting demo, result guarantee or claim of KFF testing.",
+      "video_production": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Disclosed hook showing a cold oven rack and measuring tape.",
+          "voice": "Before choosing a pizza steel, check whether it fits your oven and your routine."
+        },
+        {
+          "time": "0:20–0:50",
+          "shot": "Identify the actual quarter-inch model beside the specification card.",
+          "voice": "This plan concerns the quarter-inch version. A thicker steel is a different purchase."
+        },
+        {
+          "time": "0:50–1:20",
+          "shot": "Cold cardboard template and rack measurements. Keep ventilation and placement decisions tied to the oven manual.",
+          "voice": "Measure usable space and read your oven instructions before assuming a square steel will fit."
+        },
+        {
+          "time": "1:20–1:50",
+          "shot": "Only with verified original footage, show the cold unit on a suitable scale and its storage location.",
+          "voice": "Consider lifting, carrying and storing it as carefully as you consider baking."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Maker-instruction care checklist beside the cool, dry steel.",
+          "voice": "Seasoning and drying are part of ownership. Use the instructions for the exact version."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Existing stone or pan beside the cold steel. No fabricated bake comparison.",
+          "voice": "Your current pan or stone may already suit the way you bake. Compare fit, care and handling before replacing it."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "KFF destination card only after the page is reviewed and exists.",
+          "voice": "See the Kitchen Finds & Favorites guide for the buyer checklist and verified product details."
+        }
+      ],
+      "pin": {
+        "title": "Pizza Steel Buying Guide: Check ThermiChef Oven Fit, Weight and Care",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering a pizza steel? Measure usable oven space and think through lifting, care and storage first. Our planned ThermiChef guide compares the quarter-inch version with the questions your current pan or stone already answers.",
+        "board": "Pizza Night & Home Baking Tools",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/thermichef-16-inch-quarter-inch-pizza-steel/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph at least 1000 x 1500. Exact verified quarter-inch steel shown cold beside a measuring tape and oven-rack template. No false bake-results comparison. Use owned exact-product photography or a documented commercial site, Pin and video license, retaining attribution. Original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted photos."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf reports US Bakeware position 46 for this ASIN on November 18. Independent published rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://cookingsteels.com/cooking-steel-16-x16/",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Maker offers 16 x 16 inches in quarter-inch and three-eighths-inch versions. Quarter-inch version is listed at 17.6 pounds. Manufacturer specs, not KFF measurements."
+        },
+        {
+          "url": "https://hibid.com/georgia/lot/323880736/thermichef-16--x-16--pizza-steel---1-4--steel",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Historical auction identity record links CS-1416 and B0BR5ZLMFP to the quarter-inch 16-inch square. Auction condition, seller and availability are not evidence of a current Amazon offer."
+        },
+        {
+          "url": "https://www.seriouseats.com/best-pizza-steels-8637887",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Independent pizza-steel testing includes ThermiChef as an editorial choice. Exact tested thickness and latest update date unknown. Family-level editorial evidence is not proof of this variant's performance."
+        }
+      ],
+      "score": 4.05,
+      "confidence_scope": "Research support only. Exact Amazon listing and current offer are not verified. Search volume, conversion and unit sales are unknown.",
+      "amazonUrl": "https://www.amazon.com/dp/B0BR5ZLMFP",
+      "asin_source": "Bare ASIN exposed in indexed public product card alongside its Amazon product link. No Amazon link clicked.",
+      "status": "needs_amazon_verification",
+      "current_seller_offer": "unknown",
+      "estimated_unit_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B01N1F1I81",
+      "name": "Ateco Disposable Decorating Bags, 18-Inch, Pack of 100",
+      "category": "kitchen-tools",
+      "keyword": "Ateco 18 inch decorating bags 100 pack",
+      "rank": 98,
+      "variant": {
+        "model": "4718",
+        "length": "18 inches",
+        "count": 100,
+        "pack": "one retail roll or box, not a master carton",
+        "status": "Official catalog describes 4718 as 18-inch high-grip bags on a 100-bag roll. Retail identity records match the ASIN. Current Amazon count and components unverified."
+      },
+      "purpose": "Disposable pastry bags for piping icing or other foods within the manufacturer's instructions.",
+      "audience_fit": "Home bakers planning several icing colors or larger decorating projects who are comparing bag size and cleanup tradeoffs.",
+      "objections": "A large bag can be awkward for small amounts of icing. Confirm tip/coupler fit and whether any tools are included. Disposable waste and a large quantity may favor an existing reusable bag for occasional projects.",
+      "scores": {
+        "demand": 3,
+        "audience_fit": 4.3,
+        "purchase_intent": 4,
+        "content_gap": 3.8,
+        "affiliate_editorial_suitability": 4.2
+      },
+      "confidence": "Medium",
+      "angle": "Original decorating-station comparison showing an unfilled bag, actual tip fit, small versus larger icing portions and box storage. Discuss disposable versus reusable tradeoffs without assuming every project needs a bulk roll.",
+      "pin": {
+        "title": "18-Inch Piping Bags: Check Ateco Pack Count and Decorating Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning a multi-color decorating project? Compare bag length, tip fit, quantity and cleanup before choosing. Our planned Ateco guide explains the difference between a retail roll and carton packaging.",
+        "board": "Cookie Decorating & Baking Tools",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/ateco-4718-18-inch-decorating-bags-100/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph at least 1000 x 1500. Verified 4718 box and empty bag beside an owned decorating tip. Clearly show that tips are props unless inclusion is verified. Use owned exact-product photography or a documented commercial site, Pin and video license, retaining attribution. Original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted photos."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf reports US Bakeware position 98 for this ASIN on November 18. Independent published rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://www.atecousa.com/assets/ateco_catalog.pdf",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Maker catalog identifies 4718, UPC 014963047187, 18-inch length and 100 bags per roll. Its carton pack column is not the retail bag count. Revision date unknown."
+        },
+        {
+          "url": "https://coolthings.us/B01N1F1I81/ateco-disposable-decorating-bags-18-inch-pack-of-100",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Independent indexed identity record matches B01N1F1I81, model 4718, 18 inches and 100 count. No current Amazon offer, price or claim adopted."
+        }
+      ],
+      "score": 3.83,
+      "confidence_scope": "Research support only. Exact Amazon listing and current offer are not verified. Search volume, conversion and unit sales are unknown.",
+      "amazonUrl": "https://www.amazon.com/dp/B01N1F1I81",
+      "asin_source": "Bare ASIN exposed in indexed public product card alongside its Amazon product link. No Amazon link clicked.",
+      "status": "needs_amazon_verification",
+      "current_seller_offer": "unknown",
+      "estimated_unit_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B08J8DFPRF",
+      "name": "GoodCook Nonstick Baking Pan and Raised Wire Rack, 15 x 10.5 Inches",
+      "category": "cookware",
+      "keyword": "GoodCook baking pan raised rack set",
+      "rank": 69,
+      "variant": {
+        "model": "4139",
+        "nominal_pan_size": "15 x 10.5 inches",
+        "set_count": "one pan and one rack",
+        "color": "Dark Gray in indexed identity record",
+        "status": "Maker disclosure lists 4139 as a rack-and-pan set of matching nominal size. Retail identity record maps this ASIN to 4139. Current Amazon pack, coating, use limits and care require verification."
+      },
+      "purpose": "A baking pan with a raised rack for tasks supported by the exact product instructions.",
+      "audience_fit": "Home cooks comparing a matched pan-and-rack pair with buying or fitting the pieces separately.",
+      "objections": "Check whether the rack fits existing pans, clearance for food and cleaning needs. Nominal pan size may not describe external footprint or the rack's size. Avoid assuming the pan and rack share every heat or care limit.",
+      "scores": {
+        "demand": 3.4,
+        "audience_fit": 4.2,
+        "purchase_intent": 4.1,
+        "content_gap": 3.9,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Medium",
+      "micrositeUrl": "https://baking-pans-small-apartments.kitchenfindsfavorites.com/",
+      "angle": "Original cold setup comparison showing how the matched rack sits in the pan, usable clearance and cabinet storage. Use actual manual limits after verification. Do not claim crispier food or adopt conflicting coating descriptions.",
+      "pin": {
+        "title": "Baking Pan and Rack Set: Check GoodCook Fit, Clearance and Cleanup",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a matched pan and rack with separate pieces? Check usable fit, clearance, storage and care instructions. Our planned GoodCook guide focuses on those practical questions before you choose.",
+        "board": "Baking Pans & Sheet Pan Kitchen Finds",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/goodcook-4139-baking-pan-raised-rack/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph at least 1000 x 1500. Exact verified 4139 pan with rack raised just enough to show its fit, photographed cold. No invented coating badge or food-result promise. Use owned exact-product photography or a documented commercial site, Pin and video license, retaining attribution. Original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted photos."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf reports US Bakeware position 69 for this ASIN on November 18. Independent published rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://www.goodcook.com/pub/media/GC-%26-Bialetti-for-AB1200-231208.pdf",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Maker disclosure identifies stock 4139 as a nonstick rack-and-pan item sized 15 x 10.5 x 1 inches. It does not establish a current Amazon offer or support blanket coating-safety claims."
+        },
+        {
+          "url": "https://discompare.co.uk/product/goodcook-nonstick-carbon-steel-baking-pan-rack/",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Indexed identity record links B08J8DFPRF and 4139 with one pan and one rack. Retail claims about coating, warranty, care or performance are not adopted."
+        }
+      ],
+      "score": 3.88,
+      "confidence_scope": "Research support only. Exact Amazon listing and current offer are not verified. Search volume, conversion and unit sales are unknown.",
+      "amazonUrl": "https://www.amazon.com/dp/B08J8DFPRF",
+      "asin_source": "Bare ASIN exposed in indexed public product card alongside its Amazon product link. No Amazon link clicked.",
+      "status": "needs_amazon_verification",
+      "current_seller_offer": "unknown",
+      "estimated_unit_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B0026RHI9Q",
+      "name": "GoodCook Everyday Nonstick Steel Muffin Pan, 12 Cup, Gray",
+      "category": "cookware",
+      "keyword": "GoodCook 12 cup muffin pan",
+      "rank": 95,
+      "variant": {
+        "model": "04031 / 4031",
+        "cavity_count": 12,
+        "color": "Gray",
+        "pack_count": 1,
+        "status": "Maker disclosure confirms stock 4031 as a 12-cup nonstick muffin pan. UPC index maps B0026RHI9Q to 04031 and UPC 076753040310. Published dimensions conflict, so no external dimensions adopted."
+      },
+      "purpose": "A conventional muffin pan for portioned baking.",
+      "audience_fit": "Home bakers comparing a fixed steel pan with existing silicone molds or a different cavity count.",
+      "objections": "The kitchen already has competing muffin-pan options, lowering the content gap. Verify actual cup and outer dimensions, care and pack count. Do not treat cavity count as volume capacity or assume results with every recipe.",
+      "scores": {
+        "demand": 3,
+        "audience_fit": 4.1,
+        "purchase_intent": 3.8,
+        "content_gap": 2.9,
+        "affiliate_editorial_suitability": 3.6
+      },
+      "confidence": "Low",
+      "micrositeUrl": "https://baking-pans-budget-conscious-buyers.kitchenfindsfavorites.com/",
+      "angle": "Original comparison brief checking actual cavity size, pan footprint and storage against already-owned baking molds. No even-baking or release promise without an actual documented comparison.",
+      "pin": {
+        "title": "12-Cup Muffin Pan: Compare GoodCook Size, Storage and Care",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a muffin pan? Compare actual cup size, outer footprint, storage and care with your existing molds. Our planned GoodCook guide keeps the twelve-cup count separate from serving volume.",
+        "board": "Muffin Pans & Home Baking Essentials",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/goodcook-4031-gray-12-cup-muffin-pan/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph at least 1000 x 1500. Verified gray 4031 pan shown with a ruler and a standard liner as a separate prop. Do not display unverified external dimensions. Use owned exact-product photography or a documented commercial site, Pin and video license, retaining attribution. Original generic substitute must visibly say 'Similar item shown'. No competitor or Amazon-hosted photos."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf reports US Bakeware position 95 for this ASIN on November 18. Independent published rank snapshot, not unit sales."
+        },
+        {
+          "url": "https://www.goodcook.com/media/AB1200/GC-AB1200-Jun-24.pdf",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Maker disclosure lists stock 4031 as a nonstick 12-cup muffin pan. Document revision date is not independently established. No quantitative coating or material-safety claim adopted."
+        },
+        {
+          "url": "https://www.upcitemdb.com/upc/76753040310",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Independent UPC index maps B0026RHI9Q to model 04031, gray and UPC 076753040310. Its listed external dimensions are not treated as verified due conflicting third-party records."
+        }
+      ],
+      "score": 3.51,
+      "confidence_scope": "Research support only. Exact Amazon listing and current offer are not verified. Search volume, conversion and unit sales are unknown.",
+      "amazonUrl": "https://www.amazon.com/dp/B0026RHI9Q",
+      "asin_source": "Bare ASIN exposed in indexed public product card alongside its Amazon product link. No Amazon link clicked.",
+      "status": "needs_amazon_verification",
+      "current_seller_offer": "unknown",
+      "estimated_unit_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    }
+  ],
+  "validation": {
+    "json_roundtrip": true,
+    "unique_asins": true,
+    "untagged_canonical_links": true,
+    "distinct_source_urls": true,
+    "pin_lengths_disclosure_required_fields": true,
+    "weighted_scores": true,
+    "repo_pin_rules": "Applied site/build.py required-field, disclosure-prefix, character-limit and price/testing-claim checks. Catalog import/build not run because research drafts stay outside approved/live data."
+  },
+  "workflow_desk": {
+    "saved": 4,
+    "duplicates": 0,
+    "post_http_status": 200,
+    "get_http_status": 200,
+    "readback_verified": true,
+    "published": 0,
+    "method": "Direct HTTPS POST /api/research and GET readback on fresh Sites current_live_url origin with required authorization and Origin headers. Token remained in memory/hidden stdin and was not persisted."
+  }
+}
