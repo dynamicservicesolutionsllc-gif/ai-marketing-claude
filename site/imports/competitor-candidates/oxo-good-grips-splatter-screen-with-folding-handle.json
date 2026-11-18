@@ -1,0 +1,87 @@
+{
+  "name": "OXO Good Grips Stainless Steel Splatter Screen with Folding Handle",
+  "asin": "B0007VO0DU",
+  "variant": "OXO manufacturer SKU 1064468, perforated stainless steel with folding handle. The Amazon variant and pack count are unknown.",
+  "category": "gadgets",
+  "subcategory": "cooking-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-10",
+  "sources": [
+    {
+      "publisher": "Consumer Reports",
+      "url": "https://www.consumerreports.org/appliances/cooking-baking/best-splatter-screens-and-splatter-guards-a1201966205/",
+      "published": "2026-01-09",
+      "updated": null,
+      "evidence": "The indexed article identifies the OXO folding-handle model in a six-product comparison that included frying bacon and searing chicken."
+    },
+    {
+      "publisher": "Serious Eats",
+      "url": "https://www.seriouseats.com/best-splatter-screens-8744718",
+      "published": "2025-02-13",
+      "updated": null,
+      "evidence": "A separate indexed comparison evaluated ten screens and identified the OXO folding-handle design in the storage discussion."
+    },
+    {
+      "publisher": "FenrisFour",
+      "url": "https://www.fenrisfour.com/best-splatter-guards-for-frying-pans/",
+      "published": "2026-09-30",
+      "updated": null,
+      "evidence": "The indexed roundup exposes the bare ASIN in its US Amazon product link. Used for identifier provenance only."
+    },
+    {
+      "publisher": "OXO",
+      "url": "https://www.oxo.com/oxo-gg-splatter-screen.html",
+      "updated": null,
+      "evidence": "The indexed manufacturer specifications identify SKU 1064468 and state that the perforated stainless-steel model is designed for pans up to 13 inches wide and has a fold-down handle."
+    }
+  ],
+  "research_evidence": "This stovetop accessory sits over a skillet while pan-frying. The perforations vent steam while the screen intercepts some grease droplets. Two dated tests provide editorial evidence of a recurring buying problem. They supply no unit-sales or conversion evidence. The current US listing, selected variant, pack count, seller, offer, and exact-variant US review count remain unknown.",
+  "audience_fit": "Home cooks who sear or shallow-fry regularly and have limited utensil or cookware storage. A fit-first guide helps them check their main skillet and storage spot before buying.",
+  "buying_objection": "A folding handle shortens the stored tool, but the round screen still takes up its full diameter. Measure the skillet rim and storage opening. Consider how often you lift the screen to turn food and whether an extra greasy item to wash is worth it.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 2.8,
+        "rationale": "Two independent hands-on comparisons included the folding-handle screen. Current US rating and review counts, search volume, sales, and conversion are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 4.4,
+        "rationale": "Fits the site's small-kitchen focus for people who often pan-fry and store tools in shallow drawers or narrow cabinets."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4,
+        "rationale": "The indexed shopping roundups and the query 'splatter screen for frying pan' point to a defined shopping need. Query volume and conversion are unknown."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "The catalog contains a microwave cover. The reviewed files do not contain a stovetop screen comparison focused on pan-rim fit and folded storage."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "A measuring guide can explain the buying decision with an original kitchen photo. Amazon offer and exact-variant details remain unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.8
+  },
+  "confidence": "Medium for manufacturer identity and editorial fit. Low for current US listing demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Frying Pan Splatter Screen for Small Kitchens: Check Fit and Storage",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Shopping for a stovetop splatter screen? Measure your skillet rim, check where the screen would go after dinner, and think about cleanup. See whether the OXO Good Grips folding-handle design fits the way you cook.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-splatter-screen-with-folding-handle/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Shoot an original 1000 × 1500 overhead photo of a cool skillet with a ruler spanning its rim. Add a simple diameter arrow and the headline “Measure Your Skillet First.” Keep the screen and packaging out of frame. Retain the original photo and creator credit."
+  }
+}
