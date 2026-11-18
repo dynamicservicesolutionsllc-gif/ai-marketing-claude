@@ -116,6 +116,8 @@ PRODUCT_TYPES = [
     ("cookie cutter", "cookie cutters", "cookie"),
     ("rolling pin", "rolling pin dough", "dough"),
     ("baking dish", "casserole dish", "casserole"),
+    ("casserole", "casserole dish", "casserole"),
+    ("mason jar", "mason jars", "jar"),
     ("cookie sheet", "cookies baking sheet", "cookies"),
     ("muffin", "muffins baking", "muffin"),
     ("ice cream scoop", "ice cream scoop", "ice cream"),
