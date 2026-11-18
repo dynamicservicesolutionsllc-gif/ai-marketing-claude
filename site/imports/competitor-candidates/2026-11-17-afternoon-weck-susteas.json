@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "created": "2026-11-17",
+  "batch": "afternoon",
+  "marketplace": "US",
+  "status": "research_draft_only",
+  "candidate_count": 2,
+  "methodology": {
+    "weights": {
+      "demand": 0.25,
+      "audience_fit": 0.25,
+      "purchase_intent": 0.2,
+      "content_gap": 0.15,
+      "affiliate_editorial_suitability": 0.15
+    },
+    "scale": "0 to 5 heuristic, not a sales forecast",
+    "limitations": "Rank snapshot methodology and underlying collection were not independently audited. Search-indexed evidence only. Source update dates are unknown unless explicitly shown. No current authorized Amazon listing connection used. No assets, price, seller or stock verified.",
+    "dedupe": "Checked main live catalog and SiteStripe, competitor ledger in PR62, 50-item ledger in PR63 (both absent on main), all 18 open PR diffs and Desk priorAsins. Name and ASIN searches found no WECK or SUSTEAS duplicate.",
+    "delivery": "Private connected Workflow Desk save/get tools used because functions runtime has no fetch. Raw authenticated HTTPS endpoint path not executed.",
+    "publication_gate": "Exact Amazon identity, variant, seller/current offer and original or licensed assets must pass review. No live catalog or approved ledger changes."
+  },
+  "products": [
+    {
+      "asin": "B08CFWDQX1",
+      "name": "Weck Tulip Jars 1 Liter, 2 with Glass Lids",
+      "category": "food-storage",
+      "variant": {
+        "model": "745",
+        "capacity": "1 liter per jar",
+        "pack_count": 2,
+        "status": "Manufacturer confirms individual model and capacity. Two-pack is supported by indexed third-party product links only. Manufacturer US page sells a different six-pack."
+      },
+      "keyword": "Weck 745 1 liter tulip jars",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-17",
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf labels this ASIN #57 in its US Cookware snapshot. Independently published rank, not independently audited Amazon data or unit sales."
+        },
+        {
+          "url": "https://weckjars.com/product/745-tulip-jar/",
+          "updated": null,
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer identifies model 745 as 1 L Tulip Jar. Manufacturer package is six, so it does not validate the Amazon two-pack."
+        },
+        {
+          "url": "https://grandgoldman.com/products/weck-tulip-jars-1-liter-large-sour-dough-starter-jars-with-wide-mouth-suitable-for-canning-and-storage-2-with-glass-lids",
+          "updated": null,
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Indexed retailer exposes B08CFWDQX1, model 745, 1L and two jars with glass lids. Historical identity support, not a current Amazon offer."
+        },
+        {
+          "url": "https://sourdoughschoolhouse.com/products/weck-jars-tulip-shape",
+          "updated": null,
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Specialist baking source lists 1 LT #745 in its jar selection. Audience/use-case support only, not product-level sales."
+        }
+      ],
+      "audience_fit": "Home bakers choosing a reusable jar for starter maintenance or pantry storage. A measured spoon-access and shelf-fit demonstration would answer practical purchase questions.",
+      "objections": "Tulip shoulders complicate judging volume growth compared with straight-sided jars. Check shelf height, cleaning access, glass breakage risk and the actual supplied lids, rings and clips. Owning a suitable jar may remove the need to buy.",
+      "score_components": {
+        "demand": 3.2,
+        "audience_fit": 4.4,
+        "purchase_intent": 4,
+        "content_gap": 4,
+        "affiliate_editorial_suitability": 3.6
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original production plan, 'Does a 1-liter tulip jar fit your baking routine?' 0:00–0:20 show the jar-access problem and spoken affiliate disclosure. 0:20–0:50 identify the actual model and supplied pieces after procurement or owner-provided footage, without claiming a hands-on test now. 0:50–1:25 use measured room-temperature water to demonstrate usable headroom and show that tulip shape is not a linear volume gauge. 1:25–2:00 compare spoon access and cleanup with an already-owned straight-sided jar. 2:00–2:35 measure shelf fit and discuss breakage and unnecessary extra purchases. 2:35–3:00 identify suitable buyers and link to the reviewed KFF guide. No canning instructions or freshness claims. Original footage only, music with documented commercial rights, price-free. Production remains pending exact product and asset verification.",
+      "pinterest_pin": {
+        "title": "Weck 745 Tulip Jars: Check Headroom, Spoon Access and Shelf Fit",
+        "description": "Choosing a 1-liter jar for your baking routine? Compare headroom, spoon access and shelf space before adding another container. Our planned guide explains what to check in the exact pack. #ad As an Amazon Associate I earn from qualifying purchases.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/weck-745-1-liter-tulip-jars/",
+        "board": "Kitchen Storage & Home Baking",
+        "image_brief": "Original 1000 x 1500 or larger photo of the verified model beside a ruler and spoon. If using an original generic jar scene instead, visibly label 'Similar item shown'. Retain photographer ownership or signed commercial site, Pin and video license and attribution. No competitor or Amazon imagery.",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_site_page_verification"
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B08CFWDQX1",
+      "listing_status": "needs_amazon_verification",
+      "current_seller": "unknown",
+      "current_offer": "unknown",
+      "estimated_unit_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 3.84,
+      "asset_status": "brief_only_no_licensed_asset_attached"
+    },
+    {
+      "asin": "B07QG2R4PY",
+      "name": "SUSTEAS Whistling Tea Kettle, Black",
+      "category": "cookware",
+      "variant": {
+        "color": "Black",
+        "pack_count": 1,
+        "capacity": null,
+        "status": "Indexed rank listing says 2.7QT. Manufacturer's matching black stovetop family says 2.64QT. Exact capacity mapping and included mitt remain unresolved. Do not conflate with the 3.17-quart model."
+      },
+      "keyword": "black stovetop whistling tea kettle",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-17",
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "ParseShelf labels this black kettle ASIN #53 in its US Cookware snapshot. Third-party rank only, not current Amazon confirmation or sales."
+        },
+        {
+          "url": "https://susteas.com/products/susteas-stovetop-kettle",
+          "updated": null,
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Manufacturer describes black option and 2.64-quart capacity. This differs from indexed 2.7QT naming. Family specs do not establish ASIN identity or seller."
+        },
+        {
+          "url": "https://www.reviewed.com/cooking/best-right-now/best-tea-kettles-and-teapots",
+          "updated": null,
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Indexed editorial testing reports comparison of 11 kettles and selects the SUSTEAS stovetop family. Tested color and exact ASIN match are unknown. No test findings adopted as our own claims."
+        },
+        {
+          "url": "https://homeer.com/product/B07QG2R4PY/",
+          "updated": null,
+          "accessed": "2026-11-17",
+          "access_method": "public search-indexed evidence only",
+          "evidence": "Historical indexed product page maps bare ASIN to black PDH-Black, 2.64-quart naming. Identity lead only, not current Amazon offer."
+        }
+      ],
+      "audience_fit": "Tea drinkers comparing a stovetop kettle with an electric kettle and households considering a kettle that stays on the stove.",
+      "objections": "Confirm actual capacity, compatible cooktop and supplied pieces. Full-kettle handling, handle clearance, exterior care and storage space warrant a real demonstration. An existing electric kettle may suit the buyer better.",
+      "score_components": {
+        "demand": 3.4,
+        "audience_fit": 4.2,
+        "purchase_intent": 4,
+        "content_gap": 3.6,
+        "affiliate_editorial_suitability": 3.2
+      },
+      "confidence": "Low",
+      "angle": "Proposed original stovetop-versus-electric comparison focused on usable water volume, pouring ergonomics and storage. Start with unresolved 2.7 versus 2.64-quart labeling as an internal verification check, not a published claim. Film only the confirmed model and follow its manual. No boil-time, cool-handle or safety promises without actual evidence.",
+      "pinterest_pin": {
+        "title": "Black Stovetop Tea Kettle: What to Check Before Choosing SUSTEAS",
+        "description": "Stovetop or electric for your tea routine? Compare capacity, pouring comfort, cooktop compatibility and storage before choosing. Our planned SUSTEAS guide will separate confirmed details from listing questions. #ad As an Amazon Associate I earn from qualifying purchases.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/susteas-black-stovetop-whistling-tea-kettle/",
+        "board": "Tea & Coffee Kitchen Finds",
+        "image_brief": "Original 1000 x 1500 or larger photograph of the exact verified black kettle in a dry, unheated kitchen setup. Generic original scene must say 'Similar item shown'. Require documented commercial site, Pin and video rights and retained attribution. No Amazon or competitor imagery.",
+        "status": "draft_not_published",
+        "destination_status": "pending_matching_site_page_verification"
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B07QG2R4PY",
+      "listing_status": "needs_amazon_verification",
+      "current_seller": "unknown",
+      "current_offer": "unknown",
+      "estimated_unit_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "score": 3.72,
+      "asset_status": "brief_only_no_licensed_asset_attached"
+    }
+  ],
+  "workflow_desk_result": {
+    "saved": 2,
+    "duplicates": 0,
+    "readback_verified": true,
+    "publications": 0
+  },
+  "validation": {
+    "json_roundtrip": true,
+    "unique_asins": true,
+    "pin_limits_and_exact_disclosure": true,
+    "two_distinct_sources_per_candidate": true,
+    "tracked_links_absent": true,
+    "repository_test_harness": "Root package.json absent. Research-only JSON validated with targeted structural checks. No application tests claimed."
+  }
+}
