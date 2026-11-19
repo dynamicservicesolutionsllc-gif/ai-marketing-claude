@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-19-morning",
+  "marketplace": "US",
+  "access_date": "2026-11-19",
+  "candidate_count": 2,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main products.json and SiteStripe ledger; competitor ledger at PR62 and 50-item ledger at PR63 because absent on main; all 23 open PR snapshots/diffs; fresh authenticated Desk priorAsins. Compared ASINs plus model/family names, including catalog comparison references.",
+    "access": "Public search-indexed information only, no direct source page reading when rules unestablished. No Amazon scrape, Special Link clicks, purchase or paid research. No callable already-authorized free Amazon Creators API connection discovered.",
+    "rank_limit": "ParseShelf's dated third-party list observations are not current verified Amazon ranks, unit sales or estimates. Publisher collection compliance and accuracy not independently established; search-indexed observations retained as provisional context only.",
+    "score_limit": "0–5 editorial comparison heuristic using the user's 50-item weights. Purchase intent and audience fit are reasoned judgements, not measured conversion data. Search volume, conversions and estimated unit sales unknown. Missing specifications remain unknown rather than scored as zero.",
+    "microsite_matching": "Returned microsites do not include a dedicated poultry-shears or ladle page. Generic Gadget omitted to avoid implying a specific relevant destination.",
+    "status": "Research only; listing, variant, current seller/offer, assets and matching page must clear before publication."
+  },
+  "products": [
+    {
+      "asin": "B000PGG7ZQ",
+      "name": "OXO Good Grips Spring-Loaded Poultry Shears, Black",
+      "category": "gadgets",
+      "keyword": "OXO spring loaded poultry shears",
+      "variant": {
+        "model": "1072292",
+        "upc": "719812019680",
+        "color": "Black",
+        "pack_count": 1,
+        "status": "Manufacturer SKU and independent retailer UPC support the model; Whole Foods indexed ASIN URL exposes 1 EA and a separate pack-of-2 option. One-unit candidate intended, but exact Amazon selected pack remains unverified."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-19",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "third_party_rank",
+          "evidence": "November 19 US Kitchen Utensils & Gadgets observation lists this ASIN at position 81. Two consecutive visible daily observations are reported. This is rank context, not sales."
+        },
+        {
+          "url": "https://www.oxo.com/shop/kitchenware/tools-gadgets/meat-seafood-tools/poultry-shears.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "identity",
+          "evidence": "Manufacturer identifies SKU 1072292, stainless steel blades, a storage lock and removable blades. These model facts do not verify Amazon selection."
+        },
+        {
+          "url": "https://www.wholefoodsmarket.com/grocery/product/oxo-oxo-good-grips-spring-loaded-poultry-shears-black-b000pgg7zq",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "identity",
+          "evidence": "Public product URL exposes the bare ASIN. Indexed selector contains single and two-pack options; do not assume the current Amazon pack."
+        },
+        {
+          "url": "https://www.nfm.com/oxo-spring-loaded-poultry-shears-in-black-and-silver-71258073/71258073.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "identity",
+          "evidence": "Independent retailer ties model 1072292 to UPC 719812019680."
+        },
+        {
+          "url": "https://www.seriouseats.com/oxo-poultry-shears-review-8770609",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "editorial_context",
+          "evidence": "Independent editorial review covers the named spring-loaded poultry shears. Exact revision/update date unknown. No review findings copied or represented as KFF testing."
+        },
+        {
+          "url": "https://www.foodandwine.com/oxo-good-grips-poultry-shears-amazon-12138768",
+          "updated": "2026-09-26",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "editorial_attention",
+          "evidence": "September 26, 2026 affiliate shopping coverage provides a separate dated editorial attention signal. Shopper quotations and product-performance claims not adopted."
+        }
+      ],
+      "purpose": "Trimming and portioning poultry using purpose-built shears.",
+      "audience_fit": "Home cooks considering whole-chicken preparation or replacing general kitchen scissors with a dedicated poultry tool.",
+      "objections": "A dedicated tool may not be necessary for cooks who buy prepared portions. Check hand fit, required pressure, lock action and cleaning access on the exact model. Do not promise effortless cutting, safety superiority, suitability for arthritis, dishwasher compatibility or a maximum bone size. Conflicting care descriptions require exact instructions.",
+      "scores": {
+        "demand": 3.4,
+        "audience_fit": 4.5,
+        "purchase_intent": 4.1,
+        "content_gap": 4,
+        "affiliate_editorial_suitability": 4.3
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original guide: dedicated poultry shears versus general kitchen scissors. Identify the exact model and pack, show dry handle fit and lock operation, explain intended tasks, cleaning and storage from exact instructions, then discuss whether a dedicated tool fits the viewer's routine. Any cutting footage must come from an actual authorized demonstration; no fabricated result or medical/ease claim.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Disclosed hook beside clearly identified shears and general kitchen scissors.",
+          "voice": "Preparing whole chickens? Here are the checks to make before choosing dedicated poultry shears. This is an affiliate product guide."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Verified packaging and model label, followed by a cold close-up.",
+          "voice": "Confirm the OXO model 1072292 and the pack you are considering. Similar kitchen scissors are separate products."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Dry, controlled demonstration of hand fit, spring travel and lock, following exact instructions.",
+          "voice": "Consider handle spacing, the motion needed to close the blades and how the lock works. Hand fit is personal."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "Only actual authorized food preparation footage after product verification; otherwise a labeled task checklist.",
+          "voice": "Think about your usual prep. Whole birds and already-portioned meat create different needs. Do not assume every bone or food is suitable."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Cool empty tool and a cleaning station. Follow current model instructions for separation and washing.",
+          "voice": "Check how the blades separate and how the maker says to clean and dry them. Keep care guidance specific to this version."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Clearly labeled comparison tools and storage space.",
+          "voice": "A dedicated tool adds another item to wash and store. If you rarely prepare whole poultry, your existing routine may be enough."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF destination only after the matching page exists; affiliate disclosure visible.",
+          "voice": "See Kitchen Finds & Favorites for the comparison checklist and verified details before deciding."
+        }
+      ],
+      "pin": {
+        "title": "OXO Poultry Shears: Check Handle Fit, Cleaning and Storage",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Preparing whole poultry? Compare dedicated shears with general kitchen scissors. Our planned OXO guide covers model checks, handle fit, cleaning access and storage so you can decide whether another tool suits your routine.",
+        "board": "Kitchen Tools & Holiday Prep",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-1072292-spring-loaded-poultry-shears/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph, minimum 1000 x 1500 pixels, of the verified black 1072292 on a clean dry board, blades locked as instructed. Label general scissors used as comparison props. Use owned photography or a documented commercial license covering site, Pin and video; retain attribution and license. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 4.04,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B000PGG7ZQ",
+      "asin_source": "Bare ASIN exposed beside the public product-link card in the indexed rank source; no Amazon link clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending"
+    },
+    {
+      "asin": "B007RPYRR8",
+      "name": "Cuisinart CTG-08-SLD Stainless Steel Ladle",
+      "category": "gadgets",
+      "keyword": "Cuisinart stainless steel soup ladle",
+      "variant": {
+        "model": "CTG-08-SLD",
+        "upc": "086279045140",
+        "color": "Stainless Steel",
+        "pack_count": 1,
+        "status": "Maker confirms model and stainless finish. Independent identity records tie ASIN, UPC and one ladle. Current Amazon pack and selection unverified. Historical case-pack quantities are wholesale packaging, not the candidate's consumer count."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-19",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "third_party_rank",
+          "evidence": "November 19 US Kitchen Utensils & Gadgets observation lists ASIN B007RPYRR8 at position 92 with two consecutive visible daily observations. Rank is neither units sold nor demand growth."
+        },
+        {
+          "url": "https://www.cuisinart.com/stainless-steel-ladle/CTG-08-SLD.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "identity",
+          "evidence": "Manufacturer confirms CTG-08-SLD, stainless steel finish, serving role and dishwasher care. Capacity, alloy grade, join type and detailed dimensions are not established by the maker source."
+        },
+        {
+          "url": "https://www.nfm.com/cuisinart-stainless-steel-ladle-51928430/51928430.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "identity",
+          "evidence": "Independent retailer identifies CTG-08-SLD and UPC 086279045140. Retail dimensions may describe packaging; not adopted as exact working dimensions."
+        },
+        {
+          "url": "https://haiti.desertcart.com/products/10465998-cuisinart-ctg-08-sld-stainless-steel-ladle",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "identity",
+          "evidence": "Historical independent record associates ASIN B007RPYRR8, model, UPC and one-piece consumer count. Not a current US Amazon offer or seller verification."
+        },
+        {
+          "url": "https://stainlesssteelguide.com/best-stainless-steel-ladles/",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual page access rules not established",
+          "type": "editorial_context",
+          "evidence": "Independent editorial comparison includes the exact model and distinguishes unavailable maker specifications. Update date unknown; no independent hands-on test established."
+        }
+      ],
+      "purpose": "Transferring soup, stew or sauce into serving dishes.",
+      "audience_fit": "Home cooks seeking a simple metal serving ladle and a practical comparison of pot reach, portions and storage.",
+      "objections": "Bowl capacity is unknown, so do not call it a measured portion tool. Exact working length, handle construction and alloy grade need confirmation. Check cookware maker rules before using metal on coated cookware. An existing ladle may already serve the same purpose.",
+      "scores": {
+        "demand": 3,
+        "audience_fit": 4.1,
+        "purchase_intent": 3.8,
+        "content_gap": 4,
+        "affiliate_editorial_suitability": 3.9
+      },
+      "confidence": "Medium",
+      "angle": "Original serving-ladle comparison using a cool empty pot and bowls. Focus on pot reach, storage and care. Treat bowl capacity and working dimensions as unknown until measured or documented. No guaranteed drip-free, rust-proof or universal cookware-compatibility claims.",
+      "pin": {
+        "title": "Stainless Steel Soup Ladle: Compare Cuisinart Fit, Portions and Care",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a soup ladle? Start with pot reach, serving portions and storage. Our planned Cuisinart CTG-08-SLD guide separates documented details from unknown capacity and checks cookware care before you choose metal.",
+        "board": "Soup Prep & Everyday Kitchen Tools",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cuisinart-ctg-08-sld-stainless-steel-ladle/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph, minimum 1000 x 1500 pixels, of the verified CTG-08-SLD beside a cool empty pot and serving bowl. No invented capacity marks or performance badges. Use owned photography or a documented commercial license for site, Pin and video; retain license and attribution. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor images. Rights and suitability pending."
+      },
+      "score": 3.72,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B007RPYRR8",
+      "asin_source": "Bare ASIN exposed beside the public product-link card in the indexed rank source; no Amazon link clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending"
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "Unique ASINs and model/family review against refreshed corpora",
+      "Canonical untagged Amazon URLs",
+      "Two or more distinct source URLs",
+      "Weighted score arithmetic",
+      "site/build.py Pin required fields, disclosure prefix and character limits",
+      "site/build.py price/rating and unsupported testing phrase checks"
+    ],
+    "scope": "Research JSON only. No live-catalog build/import."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B000PGG7ZQ",
+      "B007RPYRR8"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "status": "draft_only"
+  }
+}
