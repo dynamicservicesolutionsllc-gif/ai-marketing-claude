@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-19-afternoon",
+  "marketplace": "US",
+  "access_date": "2026-11-19",
+  "candidate_count": 2,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main products.json and approved SiteStripe ledger; missing main research ledgers read at PR62 and PR63 heads; all 24 open PR snapshots/diffs; fresh authenticated Workflow Desk priorAsins. Checked ASIN, model and family names, including catalog comparison references.",
+    "source_access": "Search-indexed public information only where individual-page rules unestablished. No Amazon scrape, Special Link click, paid data, purchase or account creation. No callable already-authorized free Creators API connection found.",
+    "rank_limit": "Dated third-party observations, not directly verified current Amazon ranks, unit sales or conversion evidence. Publisher collection compliance and accuracy not independently established. Large category turnover prevents inferring growth from entries; rank evidence provisional.",
+    "score_limit": "0–5 editorial comparison heuristic using the requested weights. Audience fit, purchase intent and content gap are reasoned judgements. Search volume, actual conversion, independent physical test results and estimated unit sales unknown.",
+    "microsite_matching": "Only compact-fridge microsites returned; no demonstrated filter compatibility with those appliances. Omitted micrositeUrl rather than attaching to unrelated pages.",
+    "publication_gate": "Research drafts only; exact current Amazon identity/variant/pack/seller/offer, photo clearance and matching page must be verified."
+  },
+  "products": [
+    {
+      "asin": "B0882ZJ48W",
+      "name": "GE XWFE Refrigerator Water Filter, 1-Pack",
+      "category": "appliance-accessories",
+      "keyword": "GE XWFE refrigerator water filter compatibility",
+      "variant": {
+        "model": "XWFE",
+        "color": "White",
+        "pack_count": 1,
+        "status": "Manufacturer identifies XWFE model; rank card and independent identity record expose ASIN and single-pack name. Current Amazon selected pack unverified. XWF is a separate filter and is not an interchangeable choice in every direction."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/appliances/",
+          "updated": "2026-11-19",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "third_party_rank",
+          "evidence": "November 19 US Appliances snapshot records B0882ZJ48W at position 1, with two consecutive visible daily observations. This is a third-party list position, not sales or a verified live offer."
+        },
+        {
+          "url": "https://products.geappliances.com/appliance/gea-support-search-content?contentId=000060638",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer support identifies XWFE and explains directional XWF/XWFE compatibility and RFID interaction. Exact refrigerator model still needs maker fit confirmation. No filtration-performance claim adopted."
+        },
+        {
+          "url": "https://www.geapplianceparts.com/store/parts/spec/XWFE",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer parts source identifies XWFE for selected refrigerators and links model instructions. Brand alone does not establish compatibility or current Amazon seller."
+        },
+        {
+          "url": "https://www.geappliances.com/appliance/GE-XWFE-REFRIGERATOR-WATER-FILTER-XWFE",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer model page identifies white XWFE. Indexed availability/manufacturing status text is conflicting; neither discontinuation nor current availability is established."
+        },
+        {
+          "url": "https://www.justbid.com/item/OLARRM0525917/3621439",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Historical independent item record exposes B0882ZJ48W with XWFE and one-pack naming. Not proof of current Amazon authenticity, seller or offer."
+        },
+        {
+          "url": "https://offgridfilters.com/reviews/ge-xwfe/",
+          "updated": "2026-10-23",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "editorial_attention",
+          "evidence": "Independent editorial page updated October 23, 2026 covers XWFE. Physical testing and methodology unverified; coverage is attention context only, not filtration proof."
+        }
+      ],
+      "purpose": "Replacement cartridge for the water-filtration system in a compatible refrigerator.",
+      "audience_fit": "Owners of refrigerators whose maker documentation specifically calls for XWFE, seeking to avoid ordering a similar-looking but unsuitable replacement.",
+      "objections": "Check the refrigerator model and complete filter code before choosing. XWF/XWFE direction matters, and GE brand alone is insufficient. Current offer authenticity and seller cannot be inferred from manufacturer identity. Installation, flushing and replacement intervals must follow the exact appliance/filter instructions. No water-safety, contaminant-reduction or health promise. Indexed manufacturer status text conflicts and needs resolution.",
+      "scores": {
+        "demand": 3.8,
+        "audience_fit": 4.1,
+        "purchase_intent": 4.6,
+        "content_gap": 4.3,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original compatibility guide: read the refrigerator model and old cartridge code, distinguish XWF from XWFE using manufacturer support, verify the intended single pack, and find the exact installation and flushing instructions. Show owned model-specific footage only after verification. No universal-fit, contamination, health or taste claims.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Affiliate disclosure over an original shot of a closed refrigerator and replacement checklist.",
+          "voice": "Before choosing a refrigerator filter, match the exact code. This is an affiliate guide to checking GE XWFE compatibility."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Original appliance model-label footage, personal serial information obscured, beside a handwritten XWFE code.",
+          "voice": "Find your refrigerator model and check its manufacturer documentation. The brand name by itself is not enough."
+        },
+        {
+          "time": "0:45–1:20",
+          "shot": "Original text cards XWF and XWFE; no copied manufacturer illustrations.",
+          "voice": "GE documents that XWFE can replace XWF, while XWF does not work forward in newer XWFE systems. Confirm the rule for your exact model before buying."
+        },
+        {
+          "time": "1:20–1:50",
+          "shot": "Verified authentic packaging and cartridge label, only after an actual verified unit is available.",
+          "voice": "Match the complete code and intended pack. A product name does not establish the current marketplace seller or authenticity."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Original checklist pointing to exact appliance and filter instructions. No simulated installation.",
+          "voice": "Use the exact instructions for installation, flushing and resetting any indicator. Procedures depend on the appliance."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Checklist for model, filter code, pack and seller verification.",
+          "voice": "These checks help narrow the choice. This guide does not test filtration or promise that the cartridge suits every refrigerator."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF guide destination only after the matching page exists, with affiliate disclosure.",
+          "voice": "See Kitchen Finds & Favorites for the model-check checklist and verified product details."
+        }
+      ],
+      "pin": {
+        "title": "GE XWFE Refrigerator Filter: Check the Model and Pack Before Choosing",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Replacing a refrigerator filter? Start with the appliance model and complete cartridge code. Our planned GE XWFE guide explains the compatibility checks, pack details and instruction sources to review before choosing.",
+        "board": "Refrigerator Care & Kitchen Maintenance",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/ge-xwfe-refrigerator-water-filter-one-pack/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photo, at least 1000 x 1500 pixels, of the verified authentic XWFE single cartridge and packaging beside an original model-check card. No water-purity visual, certification badge, contaminant graphic or invented label. Use owned photography or documented commercial site, Pin and video rights; retain license and attribution. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 4.11,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B0882ZJ48W",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "asin_source": "Bare ASIN exposed beside the indexed public Amazon product-link card; Amazon link not clicked."
+    },
+    {
+      "asin": "B00UXG4WR8",
+      "name": "everydrop Refrigerator Ice & Water Filter 1, EDR1RXD1, Purple, 1-Pack",
+      "category": "appliance-accessories",
+      "keyword": "everydrop filter 1 EDR1RXD1 compatibility",
+      "variant": {
+        "model": "EDR1RXD1",
+        "color": "Purple identifier",
+        "pack_count": 1,
+        "status": "Manufacturer identifies Filter 1 EDR1RXD1 and 1-pack. Public rank link exposes ASIN; independent identity record supports single count and UPC 883049361901. Current Amazon selected offer unverified; separate 2-pack and other Filter numbers are excluded."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/appliances/",
+          "updated": "2026-11-19",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "third_party_rank",
+          "evidence": "November 19 US Appliances snapshot records B00UXG4WR8 at position 2, with two consecutive visible daily observations. Rank is not unit sales or evidence of accelerated demand."
+        },
+        {
+          "url": "https://www.whirlpool.com/accessories/kitchen-accessories/refrigerator/p.everydrop-refrigerator-water-filter-1-edr1rxd1-pack-of-1.edr1rxd1.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer identifies EDR1RXD1, purple Filter 1, single pack. The page also references separate bundles/two-packs, which are not this candidate."
+        },
+        {
+          "url": "https://www.everydropwater.com/water-filter.everydrop-refrigerator-ice-and-water-filter-1-purple.edr1rxd1.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Brand source corroborates Filter 1 EDR1RXD1. Certification and contaminant-performance statements not adopted without exact claim review."
+        },
+        {
+          "url": "https://www.everydropwater.com/water-filter-finder.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer finder is the route for exact refrigerator-model compatibility; brand or purple color alone does not establish fit."
+        },
+        {
+          "url": "https://www.partspeek.com/part/B00UXG4WR8/everydrop-by-whirlpool-ice-and-water-refrigerator-filter-1-edr1rxd1-single-pack-b00uxg4wr8",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Historical independent record links ASIN to EDR1RXD1, single count and UPC 883049361901. Not a current US Amazon seller/offer verification."
+        },
+        {
+          "url": "https://filterreport.com/reviews/everydrop-filter-1-edr1rxd1",
+          "updated": "2026-06-18",
+          "accessed": "2026-11-19",
+          "access_method": "public search-indexed information only; individual-page reading permissions not established",
+          "type": "editorial_context",
+          "evidence": "Independent documentation review dated June 18, 2026 associates exact model and ASIN. No physical water test established, and certification conclusions are not copied."
+        }
+      ],
+      "purpose": "Replacement water-filter cartridge for specifically compatible refrigerator systems.",
+      "audience_fit": "Owners whose refrigerator documentation specifies Filter 1 EDR1RXD1, looking to distinguish the correct model from other numbered cartridges or multipacks.",
+      "objections": "Filter numbers, similarly named replacements and bundle counts can be confusing. Confirm the complete refrigerator model through the manufacturer finder. Current seller, authenticity and availability remain unknown. Do not assume all Whirlpool-family refrigerators use this part. Follow exact installation/flushing instructions and avoid general health, water-quality or service-life guarantees.",
+      "scores": {
+        "demand": 3.8,
+        "audience_fit": 4,
+        "purchase_intent": 4.6,
+        "content_gap": 4.1,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Medium",
+      "angle": "Original Filter 1 identification checklist: match refrigerator model, EDR1RXD1 code and single-pack contents, then locate model-specific care instructions. Explain that other numbered filters and separate two-packs are different choices. No universal compatibility or filtration-performance claims.",
+      "pin": {
+        "title": "everydrop Filter 1 EDR1RXD1: Match Your Refrigerator Model First",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Filter numbers and pack sizes can be easy to mix up. Our planned everydrop Filter 1 guide checks the EDR1RXD1 code, intended single pack and manufacturer fit finder before you choose a replacement.",
+        "board": "Refrigerator Care & Kitchen Maintenance",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/everydrop-filter-1-edr1rxd1-purple-one-pack/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph, minimum 1000 x 1500 pixels, of the verified authentic purple-identified EDR1RXD1 single cartridge and packaging with an original model/part/pack checklist. No invented certification marks, contaminant imagery or health badges. Owned photo or documented commercial site, Pin and video license only; retain attribution. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 4.06,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B00UXG4WR8",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "asin_source": "Bare ASIN exposed beside the indexed public Amazon product-link card; Amazon link not clicked."
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "Unique ASIN/model/family against refreshed repo and Desk",
+      "Canonical untagged Amazon URLs",
+      "Two or more distinct source URLs",
+      "Weighted score arithmetic",
+      "site/build.py Pin required fields, disclosure prefix and character limits",
+      "site/build.py price/rating and unsupported testing phrase checks"
+    ],
+    "scope": "Research-only JSON; no live catalog import/build."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B0882ZJ48W",
+      "B00UXG4WR8"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 165,
+    "status": "draft_only"
+  }
+}
