@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-20-morning",
+  "marketplace": "US",
+  "access_date": "2026-11-20",
+  "candidate_count": 2,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main products.json and approved SiteStripe; absent main research ledgers read at PR62 and PR63 heads; all 26 open PR snapshots/diffs; fresh authenticated Desk priorAsins. Checked ASIN, model and family including comparison references.",
+    "source_access": "Public search-indexed material only when individual-page permissions unestablished. No Amazon scrape, Special Link clicks, purchases or paid credits. No callable already-authorized free Creators API connection discovered.",
+    "rank_limit": "Dated third-party list observations are provisional rank evidence, not verified live Amazon ranks, unit sales or conversion predictions. Publisher collection compliance and accuracy not independently established.",
+    "score_limit": "0–5 comparative editorial judgement using requested weights. Unknown search volume, actual sales, conversion and current exact-variant testing are not represented as zero. Intent and fit scores are reasoned judgements.",
+    "microsite_matching": "OVENTE matched to the existing electric-kettles budget page returned by Desk. No thermometer-specific microsite returned; no unrelated destination forced.",
+    "publication_gate": "Research-only draft. Current Amazon identity/variant/pack/seller/offer, image clearance and matching product page must clear."
+  },
+  "products": [
+    {
+      "asin": "B07477NMF4",
+      "name": "TempPro TempTrack Digital Cooking Meat Thermometer with Dual Meat Probe, Silver",
+      "category": "gadgets",
+      "keyword": "TP17 dual probe meat thermometer vs instant read",
+      "variant": {
+        "model": "TP-17 / TP17",
+        "color": "Light Silver",
+        "pack_count": 1,
+        "probe_count": 2,
+        "status": "Rank card and independent identity records support the dual-probe TP17. Historical manufacturer-hosted TP-17 manual corroborates the model family. Current TempPro branding/revision and included kit contents not directly verified; four-probe versions are separate."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-20",
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "third_party_rank",
+          "evidence": "November 20 US Kitchen Utensils & Gadgets observation places B07477NMF4 at 62. One visible daily observation is reported; this is neither a new-launch nor unit-sales claim."
+        },
+        {
+          "url": "https://buythermopro.com/wp-content/uploads/2018/06/Thermopro-EN-DE-FR-IT-ES-TP-17-instruction-manual-20180111.pdf",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Historical manufacturer-hosted manual identifies TP-17 and dual-probe monitoring. Current revision, packaging and modern brand presentation are unknown. Historical model documentation is not current offer confirmation."
+        },
+        {
+          "url": "https://buythermopro.com/pages/setup-videos",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Current indexed manufacturer site uses TempPro branding and includes TP17 in its setup index. This is supporting context, not exact listing or rebrand-equivalence verification."
+        },
+        {
+          "url": "https://www.desertcart.com.au/products/48526221-temppro-temptrack-digital-cooking-meat-thermometer-with-dual-meat-probe",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Independent historical record maps B07477NMF4 to TP-17 and two-probe style. Current kit, accuracy, response time, certifications and battery inclusion not adopted."
+        },
+        {
+          "url": "https://pickoryx.com/compare/temppro-tp19h-vs-tp17",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "editorial_context",
+          "evidence": "Independent comparison distinguishes spot checks from leave-in monitoring and exposes this ASIN. Exact update date and hands-on testing unknown; historical offer fields not retained."
+        }
+      ],
+      "purpose": "Monitoring food temperatures with wired probes and a separate display, subject to exact model instructions.",
+      "audience_fit": "Cooks deciding whether monitoring during cooking addresses a different need from the existing TP19H instant-read spot-check tool.",
+      "objections": "An existing spot-check thermometer may be sufficient. Confirm probe count, cable/body placement limits, current model revision and cleaning instructions. Current accuracy, alarm performance, wireless capability, batteries and exact kit are unknown. Do not copy preset temperature advice, promise safe doneness or imply KFF has measured performance.",
+      "scores": {
+        "demand": 3,
+        "audience_fit": 4.4,
+        "purchase_intent": 4.3,
+        "content_gap": 4.5,
+        "affiliate_editorial_suitability": 3.9
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original comparison: spot-check versus leave-in thermometer workflow. Use the existing TP19H reference and verify the two-probe TP17 before filming. Show cold kit layout, display location and instructions-based probe/cable care. Real monitoring footage only after actual model verification and demonstration; no invented accuracy, response-time or doneness claim.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Affiliate disclosure beside clearly labeled thermometer categories.",
+          "voice": "Do you want a quick temperature check, or a display you can follow during cooking? This affiliate guide compares two different thermometer workflows."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Actual verified TP17 model and kit labels; compare with existing TP19H guide without claiming new tests.",
+          "voice": "Check the full model and probe count. The two-probe TP17 and the TP19H spot-check tool serve different routines."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Unpowered cold layout of actual display, cables and probes, following exact current instructions.",
+          "voice": "Work out where the display belongs and how the probes and cables are meant to be positioned. Their limits are model specific."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "Actual authorized monitoring footage only after verification, otherwise an explicitly labeled workflow storyboard.",
+          "voice": "Record real operation before claiming how the alarms or readings behave. This plan does not establish accuracy or cooking results."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Cool unplugged probes and the exact care instructions, with the electronic body kept out of washing imagery.",
+          "voice": "Check which parts can be cleaned and how. Do not assume probes, cables and the display share the same care rules."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Simple two-column task checklist and available storage space.",
+          "voice": "Choose by your routine and the equipment you already own. A second thermometer needs a clear purpose."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF guide only after its page exists, disclosure visible.",
+          "voice": "See Kitchen Finds & Favorites for the comparison checklist and verified model details."
+        }
+      ],
+      "pin": {
+        "title": "Dual-Probe Meat Thermometer vs Instant Read: Compare the TP17 Workflow",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Want a spot check or monitoring during cooking? Our planned TP17 guide compares the two-probe workflow with an instant-read tool, including model checks, display placement, cable care and storage.",
+        "board": "Cooking Thermometers & Kitchen Prep",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/temppro-tp17-dual-probe-cooking-thermometer/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph at least 1000 x 1500 of the verified two-probe TP17, display off, with clearly labeled comparison tool. Do not fabricate readings, alarms, temperature marks or cooked-food outcomes. Owned photograph or documented commercial site/Pin/video license, with retained license and attribution. Generic substitute must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 3.97,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B07477NMF4",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "asin_source": "Bare ASIN exposed beside indexed public Amazon product-link card; Amazon link not clicked."
+    },
+    {
+      "asin": "B00DEQDEZA",
+      "name": "OVENTE Electric Kettle, 1.7 Liter, White KP72W",
+      "category": "appliances",
+      "keyword": "OVENTE KP72W white electric kettle comparison",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/electric-kettles-budget-conscious-buyers/",
+      "variant": {
+        "model": "KP72W",
+        "capacity": "1.7 liter",
+        "color": "White",
+        "pack_count": 1,
+        "status": "Manufacturer KP72 family source includes white, with model-specific retailer and independent editorial identity corroboration. ASIN exposed by public rank product link. Current Amazon selected color/pack unverified; other KP72 colors and KG83 glass models remain separate."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-20",
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "third_party_rank",
+          "evidence": "November 20 US Coffee, Tea & Espresso Appliances observation records B00DEQDEZA at position 3 with seven consecutive visible observations. Rank is not unit sales or proven conversion."
+        },
+        {
+          "url": "https://ovente.com/ovente-fast-heating-electric-kettle-with-auto-shut-off-and-boil-dry-protection-1-7-liters-kp72-series",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Manufacturer identifies KP72 series at nominal 1.7 liters and a white option. Health, purification, energy-saving and boiling-speed marketing claims not adopted."
+        },
+        {
+          "url": "https://ovente.com/media/wysiwyg/manual/KP72_IM.pdf",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Manufacturer-hosted KP72 family instructions. Current exact revision and Amazon bundle remain unknown."
+        },
+        {
+          "url": "https://shouldit.com/kettles/reviews/ovente/ovente-electric-kettle-kp72w/",
+          "updated": "2025-12-19",
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "editorial_testing",
+          "evidence": "Independent exact-model editorial testing updated December 19, 2025 identifies white KP72W. Test conditions are historical, not current-unit promises; no results, scores or images copied."
+        },
+        {
+          "url": "https://www.bjs.com/product/ovente-17l-lighted-cordless-electric-kettle---white/3000000000006099287",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Independent retailer associates white KP72W with UPC 045635600362. Retailer speed, safety and health language not retained."
+        },
+        {
+          "url": "https://www.guru-picks.com/showroom/ovente/produits-services/electric-kettle-17l-fast-boiling-water-heater-for-coffee-or-tea-bpa-free-with-water-level-gauge-auto-shut-off-boil-dry-protection-indicator-light-and-removable-filter-white-kp72w",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Historical identity record associates ASIN B00DEQDEZA with model KP72W and white color. Not current Amazon seller or offer verification."
+        }
+      ],
+      "purpose": "Heating water in an electric kettle according to the exact model instructions.",
+      "audience_fit": "Cooks comparing a basic 1.7-liter kettle with existing glass or preset-temperature options, especially where simple controls and storage matter.",
+      "objections": "Existing kettle coverage reduces the content gap. Check actual fill limits, lid access, viewing window, hand fit, counter space and cleaning instructions. Do not assume variable-temperature presets. Current boiling time, energy use and keep-warm behavior unverified. No plastic-health or water-purification claim.",
+      "scores": {
+        "demand": 3.7,
+        "audience_fit": 4.1,
+        "purchase_intent": 4,
+        "content_gap": 2.8,
+        "affiliate_editorial_suitability": 4
+      },
+      "confidence": "Medium",
+      "angle": "Original basic-kettle comparison focused on fill-window access, lid opening, handle clearance and storage. Distinguish a simple kettle from preset-temperature models using verified instructions. No promised boiling time, energy savings or health advantage.",
+      "pin": {
+        "title": "OVENTE KP72W Electric Kettle: Check Fill Access, Controls and Storage",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a basic electric kettle with preset-temperature options? Our planned white OVENTE KP72W guide checks fill access, controls, handle clearance and storage without promising a boiling time.",
+        "board": "Electric Kettles & Small Kitchen Appliances",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/ovente-kp72w-white-1-7-liter-electric-kettle/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph, minimum 1000 x 1500, of verified white KP72W empty, unplugged and cool on a dry counter, showing actual water window and lid. No invented display, steam result, purity badge or energy graphic. Owned photograph or documented commercial site/Pin/video rights with retained attribution/license. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 3.77,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B00DEQDEZA",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "asin_source": "Bare ASIN exposed beside indexed public Amazon product-link card; Amazon link not clicked."
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "Unique ASIN/model/family against refreshed repo and Desk",
+      "Canonical untagged Amazon URLs",
+      "Two or more distinct source URLs",
+      "Weighted score arithmetic",
+      "site/build.py Pin required fields, disclosure prefix and length limits",
+      "site/build.py price/rating and unsupported testing phrase checks"
+    ],
+    "scope": "Research-only JSON; no live-catalog import/build."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B07477NMF4",
+      "B00DEQDEZA"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 177,
+    "status": "draft_only"
+  }
+}
