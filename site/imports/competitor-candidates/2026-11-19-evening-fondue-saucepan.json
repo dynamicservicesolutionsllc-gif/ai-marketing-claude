@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-19-evening",
+  "marketplace": "US",
+  "access_date": "2026-11-19",
+  "candidate_count": 2,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main products.json and approved SiteStripe; research ledgers at PR62 and PR63 heads because absent on main; all 25 open PR snapshots/diffs; authenticated Workflow Desk priorAsins. Compared exact ASIN plus model/family including catalog comparison references.",
+    "source_access": "Public search-indexed material only. No Amazon scraping, Special Link clicks, purchases or paid tools. No callable already-authorized free Creators API connection found.",
+    "rank_limit": "November 19 publisher observations are provisional third-party rank evidence, not verified live Amazon ranks, unit sales or conversion predictions. Publisher collection compliance and accuracy not independently established. Unobserved baseline entries do not imply a new launch or growth.",
+    "score_limit": "0–5 editorial heuristic using the requested weights. Audience fit, intent and content gap are original judgements, not measured conversion. Search volume, actual sales, conversion and exact-variant KFF test results unknown.",
+    "microsites": "No dedicated fondue or saucepan microsite returned. Cookware-set pages and generic Gadget page are not asserted to be matching destinations. micrositeUrl omitted.",
+    "publication_gate": "Draft research only. Exact current Amazon selected model/variant/pack, seller and offer plus image clearance and matching page required."
+  },
+  "products": [
+    {
+      "asin": "B00018RR48",
+      "name": "Cuisinart 3-Quart Electric Fondue Pot Set, CFO-3SSNAS, Stainless Steel",
+      "category": "appliances",
+      "keyword": "Cuisinart electric fondue pot CFO-3SSNAS",
+      "variant": {
+        "model": "CFO-3SSNAS",
+        "capacity": "3 quart",
+        "finish": "Stainless Steel",
+        "pack_count": 1,
+        "included_forks": 8,
+        "status": "Exact manufacturer NAS page supports model, capacity and eight forks. Public rank/product-link card ties NAS to ASIN. A third-party specification record instead lists CFO-3SSP1; current Amazon model and bundle need direct confirmation. Older CFO-3SS and CFO-3SSP1 discontinued pages are separate records; not proof NAS is discontinued."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-19",
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "third_party_rank",
+          "evidence": "November 19 US Cookware snapshot records B00018RR48 at position 89, with six consecutive visible observations. This is list-rank context, not unit sales or an offer."
+        },
+        {
+          "url": "https://www.cuisinart.com/electric-fondue-pot/CFO-3SSNAS.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer identifies CFO-3SSNAS, a three-quart bowl, eight control settings and eight forks. No current marketplace seller or selected bundle inferred."
+        },
+        {
+          "url": "https://slickdeals.net/f/20282190-cuisinart-3-quart-electric-fondue-pot-set-w-8-forks-cfo-3ssnas-59-95-free-shipping",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Indexed public page exposes the untagged Amazon /dp/B00018RR48 link alongside CFO-3SSNAS. Its historical seller/offer claims are not adopted as current evidence."
+        },
+        {
+          "url": "https://www.seriouseats.com/best-fondue-pots-8422973",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "editorial_context",
+          "evidence": "Independent comparative testing includes a Cuisinart fondue model. Exact tested suffix and update date unknown; family-level editorial context only. No test findings copied."
+        },
+        {
+          "url": "https://www.foodandwine.com/lifestyle/kitchen/best-fondue-pots",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "editorial_context",
+          "evidence": "Independent editorial test roundup includes Cuisinart electric fondue. Exact suffix and revision date unknown; does not validate NAS performance."
+        },
+        {
+          "url": "https://www.desertcart.ma/products/999093-cuisinart-3-quart-electric-fondue-pot-and-set-cfo-3ssnas",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Historical independent listing ties ASIN and NAS title but model field says CFO-3SSP1. Record preserved as an identity conflict, not variant verification."
+        },
+        {
+          "url": "https://www.cuisinart.com/discontinued-cuisinart-electric-fondue-pot/CFO-3SS.html",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer's discontinued status belongs to older CFO-3SS. Do not transfer that status or its specs to NAS."
+        }
+      ],
+      "purpose": "Electrically heating fondue recipes in a tabletop vessel when used according to the exact model instructions.",
+      "audience_fit": "Hosts considering a dedicated fondue appliance for occasional cheese or chocolate gatherings and comparing it with existing serving equipment.",
+      "objections": "Storage, cord routing, table space and frequency of use may outweigh another appliance. Included forks do not establish an eight-person serving capacity. Control settings do not prove temperature precision. Exact removable parts, washing instructions and current bundle need confirmation. Do not imply KFF testing, guaranteed texture, fast heating or unattended holding.",
+      "scores": {
+        "demand": 3.4,
+        "audience_fit": 4,
+        "purchase_intent": 4.1,
+        "content_gap": 4.7,
+        "affiliate_editorial_suitability": 4.2
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original fondue-night planning guide. Identify CFO-3SSNAS separately from older suffixes, check the intended bundle, lay out cold table space and controls, plan an actual cheese or chocolate demonstration after model and footage clearance, then compare cleaning, storage and how often it would be used. No implied KFF test or guaranteed result.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Original table layout with affiliate disclosure, verified empty appliance unplugged.",
+          "voice": "Planning a fondue night? Start with the space, the model and how often you will use it. This is an affiliate product guide."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Actual NAS model label and packaging after verification; serial information obscured.",
+          "voice": "This guide concerns CFO-3SSNAS. Similar Cuisinart fondue models have different suffixes, so confirm the complete model and bundle."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Cold layout showing pot, intended accessories, stable table space and model-appropriate power route.",
+          "voice": "Check the footprint and the instructions before setting the table. The number of included forks is not a promise about serving capacity."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "Actual authorized cheese or chocolate preparation only after verified unit and exact instructions are available; otherwise clearly labeled planning visuals.",
+          "voice": "Choose a recipe supported by the exact instructions. Record the real preparation and result before making any claims about heating or texture."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Unplugged cooled unit and only the removable parts specified for cleaning.",
+          "voice": "Find out which parts can be washed and how they should be dried and stored. Do not assume the whole appliance goes in water."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Storage space and a simple frequency-of-use checklist.",
+          "voice": "A dedicated appliance makes the most sense when its purpose fits your routine and you have room to keep it."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF guide after matching page exists, with visible affiliate disclosure.",
+          "voice": "See Kitchen Finds & Favorites for the model checklist and verified details before deciding."
+        }
+      ],
+      "pin": {
+        "title": "Electric Fondue Pot: Plan Table Space, Cleanup and Storage with Cuisinart",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Thinking about a cheese or chocolate fondue night? Our planned Cuisinart CFO-3SSNAS guide checks the exact model, bundle, table space, cleanup and storage before you add a dedicated appliance.",
+        "board": "Entertaining & Small Kitchen Appliances",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/cuisinart-cfo-3ssnas-three-quart-electric-fondue-pot/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photo at least 1000 x 1500 pixels of verified NAS appliance on a stable table, unplugged and cool, with clearly labeled food props. Do not fabricate heated-food results. Use owned exact-product photography or documented commercial site/Pin/video rights with retained attribution and license. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 4,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B00018RR48",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "asin_source": "Bare ASIN exposed beside indexed public Amazon product-link card; Amazon link not clicked."
+    },
+    {
+      "asin": "B000058AK8",
+      "name": "Farberware Classic Series Stainless Steel Saucepan with Lid, 2-Quart, Silver",
+      "category": "cookware",
+      "keyword": "Farberware 50002 two quart stainless steel saucepan",
+      "variant": {
+        "model": "50002",
+        "capacity": "2 quart",
+        "finish": "Silver / stainless steel",
+        "pack_count": 1,
+        "included_components": "Saucepan and lid",
+        "status": "Manufacturer selected two-quart source identifies SKU 50002 and lid. Independent ASIN record matches model. Other capacity selectors are separate variants; current Amazon selected size/pack unverified."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-19",
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "third_party_rank",
+          "evidence": "November 19 US Cookware snapshot records B000058AK8 at position 45, with seven consecutive visible observations. Rank does not establish unit sales or conversion."
+        },
+        {
+          "url": "https://farberwarecookware.com/products/classic-stainless-steel-saucepan-with-lid",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer identifies two-quart SKU 50002, steel interior/exterior and steel lid, with care information. Other page capacities must not be conflated."
+        },
+        {
+          "url": "https://farberwarecookware.com/pages/product-disclosures",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Manufacturer disclosure record explicitly maps SKU 50002 to two-quart covered saucepan; no non-toxic or universal material-safety claim inferred."
+        },
+        {
+          "url": "https://www.desertcart.in/products/251088960-farberware-classic-stainless-steel-2-quart-covered-saucepan",
+          "updated": null,
+          "accessed": "2026-11-19",
+          "access_method": "Public search-indexed information only; individual-page reading permissions not established",
+          "type": "identity",
+          "evidence": "Historical independent record associates ASIN B000058AK8 with model 50002. Not proof of current US Amazon pack, seller or offer."
+        }
+      ],
+      "purpose": "Cooking or reheating modest portions of liquids, sauces and side dishes in a covered saucepan.",
+      "audience_fit": "Home cooks replacing a small pan or comparing a two-quart covered saucepan with the existing 1.5-quart Cuisinart comparison reference.",
+      "objections": "Existing cookware may already cover this task, reducing the content gap. Nominal capacity is not practical fill volume. Confirm burner/induction compatibility and exact handle/lid care before publication. Do not promise cool handles, nonstick performance, even heating or a universal safe temperature without current model instructions.",
+      "scores": {
+        "demand": 3.7,
+        "audience_fit": 4.3,
+        "purchase_intent": 4,
+        "content_gap": 2.8,
+        "affiliate_editorial_suitability": 4.1
+      },
+      "confidence": "Medium",
+      "angle": "Original small-saucepan comparison using a cool empty pot. Compare nominal size, lid, storage and handle clearance with an existing pan; identify confirmed care rules separately. Avoid invented heating tests, nonstick claims or claims that a new pan is necessary.",
+      "pin": {
+        "title": "Two-Quart Stainless Steel Saucepan: Check Farberware Size, Lid and Storage",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Replacing a small saucepan? Compare nominal capacity, lid fit, handle clearance and storage with what you already own. Our planned Farberware 50002 guide checks the exact two-quart version and care details.",
+        "board": "Cookware Comparisons & Everyday Prep",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/farberware-50002-two-quart-stainless-steel-saucepan/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photo, minimum 1000 x 1500 pixels, of verified 50002 saucepan and matching lid on a cool unpowered surface. Label any comparison pan. No invented measurements, capacity markings or heat-performance badges. Owned photo or documented commercial site/Pin/video license only, retaining license and attribution. Generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      },
+      "score": 3.84,
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B000058AK8",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "asin_source": "Bare ASIN exposed beside indexed public Amazon product-link card; Amazon link not clicked."
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "Unique ASIN/model/family against refreshed repo and Desk",
+      "Canonical untagged Amazon URLs",
+      "Two or more distinct source URLs",
+      "Weighted score arithmetic",
+      "site/build.py Pin required fields, disclosure prefix and length limits",
+      "site/build.py price/rating and unsupported testing phrase checks"
+    ],
+    "scope": "Research JSON only. No live catalog import/build."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B00018RR48",
+      "B000058AK8"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 171,
+    "status": "draft_only"
+  }
+}
