@@ -7,9 +7,9 @@
     "kind": "can opener"
   },
   "B00004OCKR": {
-    "id": "File:Essoreuse à salade.jpg",
+    "id": "File:Essoreuse \u00e0 salade.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Essoreuse_%C3%A0_salade.jpg",
-    "user": "Medjaï",
+    "user": "Medja\u00ef",
     "site": "Wikimedia Commons",
     "license": "Public domain",
     "kind": "salad spinner"
@@ -109,6 +109,13 @@
     "site": "Pixabay",
     "kind": "baking sheet"
   },
+  "B0029JOC6I": {
+    "id": 5293847,
+    "page_url": "https://pixabay.com/photos/cakes-cherrycake-sprinkles-5293847/",
+    "user": "congerdesign",
+    "site": "Pixabay",
+    "kind": "cake pan"
+  },
   "B0036OQU56": {
     "id": "photo-1757802261994-3c31584daafd",
     "page_url": "https://unsplash.com/photos/jars-of-spices-and-seasonings-neatly-arranged-on-shelves-aIcw-jdp53s",
@@ -131,6 +138,13 @@
     "user": "LAWJR",
     "site": "Pixabay",
     "kind": "slow cooker"
+  },
+  "B003YLJZ6M": {
+    "id": 8295778,
+    "page_url": "https://pixabay.com/photos/sweet-potatoes-potatoes-cook-meal-8295778/",
+    "user": "Mondgesicht",
+    "site": "Pixabay",
+    "kind": "roasting pan"
   },
   "B0049C2S32": {
     "id": 7623108,
@@ -266,7 +280,7 @@
     "kind": "cooling rack"
   },
   "B010TCP3SC": {
-    "id": "File:Liège waffle iron in Brussels-Central railway station.jpg",
+    "id": "File:Li\u00e8ge waffle iron in Brussels-Central railway station.jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Li%C3%A8ge_waffle_iron_in_Brussels-Central_railway_station.jpg",
     "user": "Romaine",
     "site": "Wikimedia Commons",
@@ -355,6 +369,13 @@
     "site": "Pixabay",
     "kind": "coffee maker"
   },
+  "B01LX8I3R3": {
+    "id": 1578255,
+    "page_url": "https://pixabay.com/photos/vegetables-salad-sliced-1578255/",
+    "user": "Ajale",
+    "site": "Pixabay",
+    "kind": "vegetable chopper"
+  },
   "B01N349SON": {
     "id": 6183342,
     "page_url": "https://pixabay.com/photos/dough-bake-cake-cake-mix-6183342/",
@@ -365,7 +386,7 @@
   "B01N6UE7OF": {
     "id": 9551376,
     "page_url": "https://www.pexels.com/photo/9551376/",
-    "user": "Алексей Вечерин",
+    "user": "\u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0435\u0447\u0435\u0440\u0438\u043d",
     "site": "Pexels",
     "kind": "pull-out cabinet basket",
     "license": "Pexels License"
@@ -530,7 +551,7 @@
   "B07RGGYLGY": {
     "id": 34578073,
     "page_url": "https://www.pexels.com/photo/34578073/",
-    "user": "Letícia Alvares",
+    "user": "Let\u00edcia Alvares",
     "site": "Pexels",
     "kind": "cabinet shelf riser",
     "license": "Pexels License"
@@ -546,7 +567,7 @@
   "B07SRV3SN8": {
     "id": "File:Kitchen drawer (Unsplash).jpg",
     "page_url": "https://commons.wikimedia.org/wiki/File:Kitchen_drawer_(Unsplash).jpg",
-    "user": "Jarosław Ceborski jarson",
+    "user": "Jaros\u0142aw Ceborski jarson",
     "site": "Wikimedia Commons",
     "license": "CC0",
     "kind": "silverware organizer"
@@ -804,6 +825,13 @@
     "kind": "two-tier dish rack",
     "license": "Unsplash License"
   },
+  "B09HWYBCXQ": {
+    "id": 2106825,
+    "page_url": "https://pixabay.com/photos/carrots-yellow-beets-vegetables-2106825/",
+    "user": "RitaE",
+    "site": "Pixabay",
+    "kind": "frying pan"
+  },
   "B09KH38HF2": {
     "id": 1972423,
     "page_url": "https://pixabay.com/photos/pan-water-food-boiling-water-fire-1972423/",
@@ -891,7 +919,7 @@
     "license": "Unsplash License"
   },
   "B0BKR66QGC": {
-    "id": "Today’s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here’s to hoping it’s good.",
+    "id": "Today\u2019s lunch concoction: air fryer potatoes with stir fried pork, sriracha and maple bourbon bbq sour cream and pickles. Here\u2019s to hoping it\u2019s good.",
     "page_url": "https://www.flickr.com/photos/73451168@N00/49753908536",
     "user": "J Wynia",
     "site": "Flickr",
@@ -1049,6 +1077,13 @@
     "site": "Pixabay",
     "kind": "lazy susan"
   },
+  "B0CNY1F31S": {
+    "id": 8594892,
+    "page_url": "https://pixabay.com/photos/potatoes-food-dish-meal-air-fryer-8594892/",
+    "user": "katarzynajavaheri0",
+    "site": "Pixabay",
+    "kind": "air fryer"
+  },
   "B0CP4XY9QC": {
     "id": 3112195,
     "page_url": "https://pixabay.com/photos/oil-olive-oil-food-tomato-kitchen-3112195/",
@@ -1136,6 +1171,13 @@
     "site": "Unsplash",
     "kind": "set of wooden spoons",
     "license": "Unsplash License"
+  },
+  "B0DDGRWKCM": {
+    "id": 3420002,
+    "page_url": "https://pixabay.com/photos/spring-onion-kitchen-scissors-food-3420002/",
+    "user": "Regenwolke0",
+    "site": "Pixabay",
+    "kind": "pair of kitchen shears"
   },
   "B0DF472VMZ": {
     "id": 1111443,
@@ -1225,6 +1267,13 @@
     "user": "blandinejoannic",
     "site": "Pixabay",
     "kind": "cooling rack"
+  },
+  "B0FH6YL3XC": {
+    "id": 756406,
+    "page_url": "https://pixabay.com/photos/mushrooms-brown-mushrooms-cook-meal-756406/",
+    "user": "congerdesign",
+    "site": "Pixabay",
+    "kind": "cutting board"
   },
   "B0FP3SBXW9": {
     "id": 4081671,
