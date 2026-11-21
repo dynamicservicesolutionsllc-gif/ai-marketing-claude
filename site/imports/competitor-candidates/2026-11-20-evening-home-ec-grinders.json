@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-20-evening",
+  "marketplace": "US",
+  "access_date": "2026-11-20",
+  "candidate_count": 1,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main catalog and approved SiteStripe; research ledgers at PR62/63 heads (absent on main in prior checks); all 26 open PR snapshots/diffs plus unreconciled morning branch file; fresh Desk priorAsins. Compared ASIN/model/family and catalog comparison references. Morning branch now has draft PR103; its two ASINs were read back and not reimported.",
+    "access": "Public search-indexed content only where individual-page permissions unestablished; no bulk crawl, Amazon scrape, Special Link click, purchase or paid research.",
+    "rank_limit": "Third-party recorded position is provisional, not verified live Amazon rank or units sold. Publisher collection compliance/accuracy not independently established. Declining position not presented as accelerating demand.",
+    "score_limit": "0–5 editorial heuristic using requested weights. Intent, audience and gap are original judgements, not measured conversions. Search volume and unit sales unknown. Missing data not treated as zero.",
+    "microsite_matching": "No specific seasoning/grinder microsite returned; generic Gadget omitted.",
+    "publication_gate": "Research only. Current Amazon exact variant/pack/seller/offer, asset clearance and matching page required."
+  },
+  "products": [
+    {
+      "asin": "B01N1PSWSB",
+      "name": "Home EC Premium Stainless Steel Salt and Pepper Grinder Set of 2, Tall Glass",
+      "category": "gadgets",
+      "keyword": "Home EC tall salt and pepper grinder set comparison",
+      "variant": {
+        "style": "Tall glass, brushed stainless steel",
+        "pack_count": 2,
+        "model": "Salt and Pepper Mills Shaker Grinder in third-party index",
+        "status": "Brand collection distinguishes the tall two-pack from short, single and four-pack versions. Independent identity index associates ASIN with EC Brandz LLC and tall set. Current Amazon selection, finish, kit contents and precise model revision unverified."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-20",
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading permissions unestablished",
+          "type": "third_party_rank",
+          "evidence": "November 20 US Kitchen Utensils & Gadgets snapshot records B01N1PSWSB at position 88, down 10 positions from the prior observation, with seven consecutive visible observations. Rank is not units sold, current offer or proof of growth."
+        },
+        {
+          "url": "https://homeec.io/collections/frontpage",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading permissions unestablished",
+          "type": "identity",
+          "evidence": "Brand collection explicitly identifies a tall two-grinder set separately from short, single and four-pack options. Specific finish-to-ASIN mapping remains unverified."
+        },
+        {
+          "url": "https://homeec.io/pages/use-and-care-instructions-salt-pepper-grinder-set",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading permissions unestablished",
+          "type": "identity",
+          "evidence": "Brand care source describes filling, use, adjustment and care for its grinder family. Exact revision and current included accessories require confirmation."
+        },
+        {
+          "url": "https://homeec.io/pages/faq",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading permissions unestablished",
+          "type": "identity",
+          "evidence": "Brand FAQ distinguishes multiple counts and sizes. General family guidance does not verify the selected Amazon variant or seller."
+        },
+        {
+          "url": "https://device.report/home-ec/salt-and-pepper-mills-shaker-grinder",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading permissions unestablished",
+          "type": "identity",
+          "evidence": "Independent identity index exposes ASIN B01N1PSWSB with tall two-grinder naming and manufacturer EC Brandz LLC. Historical identity corroboration only."
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=KSfKurcdXdQ",
+          "updated": null,
+          "accessed": "2026-11-20",
+          "access_method": "Public search-indexed information only; individual-page reading permissions unestablished",
+          "type": "editorial_context",
+          "evidence": "Independent public review title identifies the original Home EC stainless steel grinder set. Exact update date, tested revision and physical testing methodology unestablished. No findings, footage or engagement metrics adopted."
+        }
+      ],
+      "purpose": "Manually grinding dry salt, pepper or other fillings specifically permitted by exact product instructions.",
+      "audience_fit": "Cooks comparing refillable manual mills with preground seasoning or electric grinders, especially when table storage and refill access matter.",
+      "objections": "An existing mill may already serve the same role. Tall bottles need storage height and manual twisting may not fit every user. Confirm filling compatibility, assembly, exact kit and cleaning/drying rules on the selected revision. Do not promise uniform grind, freshness duration, leak resistance, effortless operation, environmental savings or medical accessibility.",
+      "scores": {
+        "demand": 3.5,
+        "audience_fit": 4.4,
+        "purchase_intent": 4.1,
+        "content_gap": 4.5,
+        "affiliate_editorial_suitability": 4.1
+      },
+      "score": 4.09,
+      "confidence": "Medium",
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B01N1PSWSB",
+      "asin_source": "Bare ASIN exposed beside public Amazon product-link card in the search index; link not clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "angle": "Three-minute original manual-mill buying guide: identify the tall two-pack, check storage height and hand motion, show verified refill and adjustment steps from exact instructions, then compare care and the need for another set. Real grinding results only after an actual verified-unit demonstration. No promised grind uniformity or ease-of-use claim.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Affiliate disclosure over original empty-table setup and identified manual mills.",
+          "voice": "Before choosing a new salt and pepper set, check the refill routine and where it will live. This is an affiliate product guide."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Verified packaging and tall two-pack labels, without copying manufacturer imagery.",
+          "voice": "Home EC sells different heights, finishes and pack counts. This guide concerns the tall two-grinder candidate; confirm the selected version."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Dry shelf-fit and hand-position demonstration with exact verified units.",
+          "voice": "Compare the space you have and the motion needed to turn the grinder. Hand fit is personal."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "Authorized actual filling/adjustment only after matching instructions; actual grind samples only if genuinely recorded.",
+          "voice": "Use fillings allowed by the exact instructions and record actual results before comparing grind output. A dial setting alone does not prove uniformity."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Empty disassembled parts only as permitted by the exact care guide.",
+          "voice": "Check which parts can be cleaned and how they must dry before reassembly. Avoid assuming every part is dishwasher safe."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Owned existing mill and new candidate clearly labeled, storage checklist.",
+          "voice": "If your current set already fits your routine, another pair may not add much. Choose by refill access, storage and care."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF destination only after page exists, affiliate disclosure visible.",
+          "voice": "See Kitchen Finds & Favorites for the comparison checklist and verified product details."
+        }
+      ],
+      "pin": {
+        "title": "Salt and Pepper Grinder Set: Check Home EC Tall Two-Pack Fit and Care",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing manual mills with electric grinders? Our planned Home EC guide checks the tall two-pack, refill access, hand motion, storage height and care before you choose another set.",
+        "board": "Kitchen Seasoning Tools & Tabletop Organization",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/home-ec-tall-two-pack-salt-pepper-grinders/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph at least 1000 x 1500 pixels of verified tall brushed-steel Home EC two-pack empty on a dry counter beside an original refill/storage checklist. No fabricated grind samples, guarantee badges or invented labels. Owned exact-product photo or documented commercial site/Pin/video license with retained attribution and license. Generic substitute must visibly say 'Similar item shown'. No Amazon-hosted or competitor images. Rights and suitability pending."
+      }
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "ASIN/model/family dedupe",
+      "Canonical untagged URL",
+      "Multiple distinct source URLs",
+      "Weighted arithmetic",
+      "Existing Pin disclosure/length/price/testing-phrase rules"
+    ],
+    "scope": "Research JSON only; no live catalog build/import."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B01N1PSWSB"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 180,
+    "status": "draft_only"
+  }
+}
