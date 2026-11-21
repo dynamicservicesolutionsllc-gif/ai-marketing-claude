@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-18-evening",
+  "marketplace": "US",
+  "access_date": "2026-11-18",
+  "candidate_count": 3,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main catalog and approved SiteStripe, research ledgers at PR62 and PR63 heads, all 22 open PR snapshots/diffs and authenticated GET /api/research priorAsins. Model/family identity checked. Standard OXO 26981 is kept distinct from PR64 adjustable-ricer research.",
+    "source_policy": "Search-indexed public content only. No bulk crawl, blocked-page workaround, Amazon scrape, automatic Special Link click, purchase or paid data.",
+    "limits": "Ranks, editorial context and specifications are distinct. Rank publisher methodology and collection compliance not independently audited. No unit-sales or conversion inference. Unknown source revision dates are null.",
+    "microsite_matching": "No returned dedicated can-opener, ricer or timer microsite. Generic Gadget URL omitted rather than treating it as a proven relevant destination.",
+    "publication_gate": "Research drafts only. Exact Amazon identity/variant, pack/current seller/offer, matching destination and asset clearance required."
+  },
+  "products": [
+    {
+      "asin": "B00004OCJQ",
+      "name": "OXO Good Grips Stainless Steel Potato Ricer",
+      "category": "kitchen-tools",
+      "keyword": "OXO stainless steel potato ricer",
+      "rank": 45,
+      "variant": {
+        "model": "26981",
+        "pack_count": 1,
+        "status": "Manufacturer identifies standard Potato Ricer SKU 26981. ASIN/name and UPC identity are supported by independent indexed records. Separate from the adjustable model researched in PR64. Current Amazon selection and pack unverified."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "ParseShelf reports this ASIN at position 45 in US Kitchen Utensils & Gadgets on November 18. Third-party rank observation, not unit sales."
+        },
+        {
+          "url": "https://www.oxo.com/potato-ricer.html",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Manufacturer identifies Potato Ricer SKU 26981 and stainless steel construction. Exact Amazon identity is not directly confirmed."
+        },
+        {
+          "url": "https://manuals.plus/asin/B00004OCJQ",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Third-party manual index ties this ASIN to the standard ricer name and UPC 719812269818. Not an independently verified manufacturer-hosted manual."
+        },
+        {
+          "url": "https://www.seriouseats.com/best-potato-ricers-8604978",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Independent comparison of nine ricers includes an OXO model. Exact tested model identity and revision date unknown. Family-level editorial context only."
+        }
+      ],
+      "purpose": "Pressing cooked potatoes or other foods allowed by the exact instructions through a ricer.",
+      "audience_fit": "Home cooks comparing a standard ricer with a hand masher or adjustable ricer for holiday and everyday portions.",
+      "objections": "Hand pressure, hopper capacity, bowl fit and cleanup may matter more than extra settings. The existing adjustable-model draft reduces the content gap. An already-owned masher may remain suitable. No claim that this model suits arthritis or produces guaranteed texture.",
+      "scores": {
+        "demand": 3.6,
+        "audience_fit": 4.5,
+        "purchase_intent": 4.2,
+        "content_gap": 3,
+        "affiliate_editorial_suitability": 4.2
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute original comparison, standard ricer versus adjustable ricer versus a hand masher. Disclose the affiliate relationship, identify the verified 26981, show bowl fit and portion handling, explain cleaning from the exact instructions and compare storage and manual effort. Close with who needs a ricer and who can keep an existing masher. No promised texture, ease-of-use for medical conditions or implied KFF test. Full timed plan in the batch PR.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Disclosed hook beside a hand masher and bowl.",
+          "voice": "Before adding a ricer, decide what you want to change about your current mashing routine."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Label the actual verified 26981 separately from the adjustable-model comparison.",
+          "voice": "This guide concerns the standard OXO ricer. The adjustable version is a separate model."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Show cold bowl fit, handle travel and pot-rim support.",
+          "voice": "Check where it rests and how much space your hands need."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "After an actual authorized demonstration, show a modest cooked-food portion. No fabricated result.",
+          "voice": "Consider how much fits in each press and whether repeated portions suit the amount you usually cook."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Cool empty tool and cleaning setup guided by the exact care instructions.",
+          "voice": "Look at food-contact surfaces, cleaning access and where you will store it."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Three tools clearly identified. Refer to PR64 for prior adjustable-model research rather than repeating its testing claims.",
+          "voice": "Choose by portions, effort, cleanup and storage. More settings are useful only if you want them."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF guide destination, only after it exists.",
+          "voice": "See Kitchen Finds & Favorites for the comparison checklist and verified product details."
+        }
+      ],
+      "pin": {
+        "title": "OXO Potato Ricer: Compare Bowl Fit, Portions and Cleanup",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Standard ricer, adjustable ricer or hand masher? Our planned OXO guide compares bowl fit, portions, manual effort and cleanup so you can decide whether another tool belongs in your kitchen.",
+        "board": "Kitchen Tools & Holiday Prep",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-26981-stainless-steel-potato-ricer/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph, at least 1000 x 1500. Original exact-product photo of verified 26981 beside a cool empty bowl and existing hand masher. Identify comparison props clearly. Use owned exact-product imagery or a documented commercial site, Pin and video license and retain attribution. Original generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor images."
+      },
+      "score": 3.95,
+      "score_scope": "Comparative research heuristic, not sales forecast. Search volume and conversions unknown.",
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B00004OCJQ",
+      "asin_source": "Bare ASIN exposed in public search-indexed product card alongside Amazon product link; no link clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B07D3BFY6R",
+      "name": "Antonki Digital Kitchen Timer, 2 Pack, Classic White",
+      "category": "kitchen-tools",
+      "keyword": "two pack digital kitchen timer",
+      "rank": 35,
+      "variant": {
+        "model": "Kitchen Timer 2 Pack in third-party records",
+        "color": "Classic White in indexed identity record",
+        "pack_count": 2,
+        "status": "Rank card and independent manual/spec indexes support a two-pack. Exact color, included batteries and feature revision need direct confirmation. Manufacturer-hosted specification source not established."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "ParseShelf records this ASIN at position 35 in US Kitchen Utensils & Gadgets on November 18. One-day entry in the visible window, not a sales or new-product claim."
+        },
+        {
+          "url": "https://device.report/antonki/kitchen-timer-2-pack",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Independent specification index maps B07D3BFY6R to Antonki Kitchen Timer 2 Pack and Classic White. Historical identity corroboration, not a current Amazon offer."
+        },
+        {
+          "url": "https://manuals.plus/asin/B07D3BFY6R",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Third-party manual describes the two-timer family. Not independently established as a manufacturer publication, so timer accuracy, alarm performance and current feature revision remain unknown."
+        }
+      ],
+      "purpose": "Keeping track of separate kitchen tasks with standalone timers.",
+      "audience_fit": "Cooks who prefer two visible countdowns for parallel prep tasks instead of using a phone.",
+      "objections": "An existing phone or oven timer may be sufficient. Confirm display readability, sound/visual mode and placement on the actual revision. Battery inclusion and count, mounting strength and timing accuracy are unverified.",
+      "scores": {
+        "demand": 3,
+        "audience_fit": 4.3,
+        "purchase_intent": 4,
+        "content_gap": 4,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Low",
+      "angle": "Original two-task planning brief with labeled prep timers at a clear counter station. Demonstrate actual buttons only after revision verification. Avoid claims about alarm loudness, timing accuracy or suitability for hearing or vision conditions.",
+      "pin": {
+        "title": "Two-Pack Kitchen Timers: Plan Separate Countdown Tasks with Antonki",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Prefer separate timers for two kitchen tasks? Our planned Antonki guide checks display readability, controls, placement and battery details before you choose a two-pack.",
+        "board": "Kitchen Prep & Cooking Organization",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/antonki-two-pack-digital-kitchen-timer/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph, at least 1000 x 1500. Two verified white timers beside handwritten task labels at a dry countertop. Do not invent a display, alarm symbol or included batteries. Use owned exact-product imagery or a documented commercial site, Pin and video license and retain attribution. Original generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor images."
+      },
+      "score": 3.8,
+      "score_scope": "Comparative research heuristic, not sales forecast. Search volume and conversions unknown.",
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B07D3BFY6R",
+      "asin_source": "Bare ASIN exposed in public search-indexed product card alongside Amazon product link; no link clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    },
+    {
+      "asin": "B0D8R9QRWL",
+      "name": "Zulay Kitchen Manual Can Opener with Bottle Opener, Black",
+      "category": "kitchen-tools",
+      "keyword": "Zulay black manual can opener",
+      "rank": 63,
+      "variant": {
+        "model": "Z-3150 / Comfy Grip in independent records",
+        "upc": "195702024468",
+        "color": "Black",
+        "pack_count": 1,
+        "status": "Manufacturer page supports black COMFY can-and-bottle-opener family. Retail identity records map UPC and model to this ASIN. Exact Amazon selection and pack unverified. Do not conflate with other Zulay opener designs."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-18",
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "ParseShelf reports position 63 for this ASIN in US Kitchen Utensils & Gadgets on November 18. One-day entry in the visible window, not sales evidence."
+        },
+        {
+          "url": "https://www.zulaykitchen.com/products/stainless-steel-manual-can-opener-with-bottle-opener",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Manufacturer offers the black COMFY can opener with bottle opener and recommends hand washing. No current Amazon seller inferred from brand identity."
+        },
+        {
+          "url": "https://shop.simon.com/products/zulay-kitchen-heavy-duty-stainless-steel-can-opener-manual-with-bottle-opener",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Independent retail record identifies black variation with barcode 195702024468. Does not confirm current Amazon offer."
+        },
+        {
+          "url": "https://www.desertcart.in/products/676158863-zulay-kitchen-manual-can-opener-heavy-duty-patented-stainless-steel",
+          "updated": null,
+          "accessed": "2026-11-18",
+          "access_timezone": "America/New_York",
+          "access_method": "public search-indexed content only",
+          "evidence": "Historical indexed record links B0D8R9QRWL to black Comfy Grip and UPC 195702024468. No price, rating, sales estimate or performance claim retained."
+        }
+      ],
+      "purpose": "Manually opening appropriate food cans and bottle caps.",
+      "audience_fit": "Home cooks comparing a manual replacement opener with existing OXO or KitchenAid choices.",
+      "objections": "Several manual openers are already covered, lowering the content gap. Verify exact cutting style and hand fit. Avoid assuming every can size works or that a product guarantees smooth edges, rust resistance or medically easier use.",
+      "scores": {
+        "demand": 3.1,
+        "audience_fit": 4.2,
+        "purchase_intent": 4,
+        "content_gap": 2.8,
+        "affiliate_editorial_suitability": 3.8
+      },
+      "confidence": "Medium",
+      "angle": "Original replacement-opener comparison focused on handle span, knob access, storage and cleaning. Verify the cutting style on the actual unit before making edge claims. Keep sharp-lid handling out of unsupported demonstrations.",
+      "pin": {
+        "title": "Manual Can Opener Comparison: Check Zulay Handle Fit and Care",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Replacing a manual can opener? Compare handle fit, knob access, storage and cleaning before choosing. Our planned Zulay guide keeps exact model checks separate from performance claims.",
+        "board": "Everyday Kitchen Tools & Comparisons",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/zulay-black-manual-can-bottle-opener/",
+        "destination_status": "pending_matching_site_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original photograph, at least 1000 x 1500. Verified black opener photographed beside unopened food cans. No medical-benefit, smooth-edge or rust-proof badge. Use owned exact-product imagery or a documented commercial site, Pin and video license and retain attribution. Original generic substitutes must visibly say 'Similar item shown'. No Amazon-hosted or competitor images."
+      },
+      "score": 3.62,
+      "score_scope": "Comparative research heuristic, not sales forecast. Search volume and conversions unknown.",
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B0D8R9QRWL",
+      "asin_source": "Bare ASIN exposed in public search-indexed product card alongside Amazon product link; no link clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_rights_and_suitability_pending"
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "Unique 10-character ASINs against refreshed repo and Desk corpus",
+      "Weighted score arithmetic",
+      "Repository Pin disclosure prefix and length limits",
+      "Repository promotional price/rating and unsupported testing phrase checks",
+      "Two or more distinct source URLs per candidate",
+      "Canonical untagged Amazon URLs"
+    ],
+    "scope": "Research-only JSON. Live-catalog import/build intentionally not run."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B00004OCJQ",
+      "B07D3BFY6R",
+      "B0D8R9QRWL"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 153,
+    "publication_status": "draft_only"
+  }
+}
