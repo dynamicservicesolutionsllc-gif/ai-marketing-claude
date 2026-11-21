@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-21-afternoon",
+  "marketplace": "US",
+  "access_date": "2026-11-21",
+  "candidate_count": 1,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main catalog/SiteStripe; missing main research-ledger paths read at PR62/63 heads; all 30 open PR snapshots/diffs and fresh authenticated Desk priorAsins. ASIN/model and product family checked, including comparison references.",
+    "source_access": "Public search-indexed material only when individual-page reading rules unestablished. No bulk crawl, Amazon scrape, Special Link click, purchases or paid data. No callable already-authorized free Creators API connection found.",
+    "rank_limit": "Third-party recorded position is provisional and separate from sales or conversion; publisher collection compliance and accuracy not independently established.",
+    "score_limit": "0–5 editorial heuristic with requested weights. Intent and fit are original judgement; search volume, actual sales and conversion unknown. Missing facts not zero.",
+    "microsites": "No dedicated rolling-pin microsite returned; generic Gadget and baking-pan pages not forced as matching destinations.",
+    "publication_gate": "Exact current Amazon identity/variant/pack/seller/offer, manufacturer specs/care, asset clearance and matching page need verification."
+  },
+  "products": [
+    {
+      "asin": "B005D6GFFA",
+      "name": "Farberware Classic Wood Rolling Pin",
+      "category": "gadgets",
+      "keyword": "Farberware handled wood rolling pin vs French rolling pin",
+      "variant": {
+        "model": "5215807 in independent identity records",
+        "style": "Handled wood rolling pin",
+        "color": "Natural in historical records",
+        "pack_count": 1,
+        "status": "ASIN exposed by public rank link. Independent sources associate model 5215807 and one pin. Indexed overall lengths, working lengths and diameters conflict; exact dimensions and current revision unknown. Manufacturer-hosted model specification/care sheet not established."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-21",
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "third_party_rank",
+          "evidence": "November 21 US Bakeware observation records B005D6GFFA at position 89 with one visible consecutive observation. A new observation is not a launch claim. Rank is neither sales nor a verified live offer."
+        },
+        {
+          "url": "https://www.truevalue.com/product/628766/farberware-classic-wood-rolling-pin-628766/",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Independent retailer identifies model 5215807 and UPC 024131384655, associating it with Lifetime Brands. Retail dimensional and durability claims not adopted as verified manufacturer specs."
+        },
+        {
+          "url": "https://www.desertcart.in/products/1106818-farberware-classic-wood-rolling-pin-18-inch-hardwood-dough-roller",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Historical independent identity record associates ASIN B005D6GFFA with model 5215807. Current selected size, count, seller and offer unverified."
+        },
+        {
+          "url": "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-rolling-pin",
+          "updated": "2026-02-05",
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "editorial_testing",
+          "evidence": "Food Network tested the named handled pin; updated February 5, 2026. Exact tested revision unknown."
+        },
+        {
+          "url": "https://www.reviewed.com/cooking/best-right-now/the-best-rolling-pins",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "editorial_testing",
+          "evidence": "Independent comparative testing includes the named Farberware Classic pin. Exact update date and tested revision unknown. No findings or images copied."
+        },
+        {
+          "url": "https://www.farberware.com/customer-service",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Official brand customer-service source is available as a manufacturer/license-holder contact route. A model-specific specification or care sheet was not found; no exact specs inferred."
+        }
+      ],
+      "purpose": "Rolling dough with a traditional handled pin.",
+      "audience_fit": "Home bakers comparing a handled roller with the existing French-pin option, especially for work-surface space, hand position and storage.",
+      "objections": "Existing rolling-pin coverage reduces the content gap. Total length is different from usable barrel length; both need confirmation. An existing pin may already work well. Exact care rules, wood species, bearing design and current revision remain unknown. Do not promise uniform dough thickness, nonstick behavior, comfortable use, moisture resistance or dishwasher compatibility.",
+      "scores": {
+        "demand": 3.1,
+        "audience_fit": 4.5,
+        "purchase_intent": 4.1,
+        "content_gap": 3.3,
+        "affiliate_editorial_suitability": 4.1
+      },
+      "score": 3.83,
+      "confidence": "Medium",
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B005D6GFFA",
+      "asin_source": "Bare ASIN exposed beside public Amazon product-link card in search index; Amazon link not clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "angle": "Three-minute original handled-versus-French rolling-pin guide. Identify exact Farberware model, distinguish total from usable rolling length, compare cold hand position and storage, then plan actual dough footage only after a verified-unit demonstration. Explain care from exact instructions when found. No copied test findings or promised dough results.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Affiliate disclosure over original labeled handled and French-pin props.",
+          "voice": "Handled rolling pin or French pin? Start with the space and hand position that fit your baking routine. This is an affiliate guide."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Actual verified model and packaging after identity confirmation.",
+          "voice": "Confirm the Farberware model and selected size. Indexed lengths do not agree, so check the current product before choosing."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Cold labeled measurement demonstration only with actual verified unit.",
+          "voice": "Overall length includes the handles. The part that touches dough is a separate measurement."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "Actual authorized dough rolling footage after verification; otherwise a clearly labeled demonstration plan.",
+          "voice": "Record real handling before comparing results. A traditional roller and a tapered pin ask for different hand positions."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Exact care instructions and a dry storage setup; no soaking or dishwasher demonstration.",
+          "voice": "Find the current care instructions before cleaning. Do not transfer care rules from a different wooden pin."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Owned existing pin and drawer or shelf space, clearly labeled.",
+          "voice": "If your current pin suits the dough you make, another tool may not add much. Compare usable space, storage and care."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF guide only once matching page exists, disclosure visible.",
+          "voice": "See Kitchen Finds & Favorites for the comparison checklist and verified model details."
+        }
+      ],
+      "pin": {
+        "title": "Handled Rolling Pin vs French Pin: Compare Farberware Fit and Storage",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a rolling pin? Our planned Farberware guide compares handled and French styles, overall versus usable rolling length, hand position and storage. Check the exact model and care instructions before deciding.",
+        "board": "Baking Tools & Dough Prep",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/farberware-classic-wood-rolling-pin/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph at least 1000 x 1500 pixels of verified Farberware handled pin beside an owned French-pin comparison prop, clearly labeled. No invented measurements, wood species, results or performance badges. Owned exact-product photography or documented commercial site/Pin/video license; retain license and attribution. Generic substitute must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      }
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "ASIN/model/family dedupe",
+      "Canonical untagged URL",
+      "Multiple distinct sources",
+      "Weighted arithmetic",
+      "site/build.py Pin required fields/disclosure/length/price/testing-phrase rules"
+    ],
+    "scope": "Research JSON only; no live catalog import/build."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B005D6GFFA"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 186,
+    "status": "draft_only"
+  }
+}
