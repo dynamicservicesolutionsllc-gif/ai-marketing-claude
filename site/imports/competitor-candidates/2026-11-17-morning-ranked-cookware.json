@@ -1,0 +1,179 @@
+{
+  "marketplace": "US",
+  "candidates": [
+    {
+      "asin": "B0CLHLDB84",
+      "name": "HexClad Hybrid Deep Sauté Pan with Lid, 5.5 Quart",
+      "variant": "5.5-quart configuration with lid, corroborated by the manufacturer.",
+      "category": "cookware",
+      "keyword": "5.5 quart deep sauté pan for one pan meals",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-17",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-17"
+        },
+        {
+          "url": "https://hexclad.com/collections/all/products/deep-saute-pan-with-lid",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #20 on the US Cookware bestseller list on November 17, 2026. This is a dated category position. Unit sales, estimates, exact-variant review counts and current US listing, seller and offer remain unknown. HexClad identifies the 5.5-quart pan and lid. The indexed tracker matches that configuration. Coating generation and current offer are unknown.",
+      "audience_fit": "Home cooks making family-size one-pan dinners.",
+      "buying_objection": "Check loaded weight, burner coverage and cabinet clearance before choosing a deep pan.",
+      "score": {
+        "weighted_score_0_5": 4.33,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4.2
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.4
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.5
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.4
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute deep sauté pan vs. skillet comparison. 0:00–0:20 state the affiliate disclosure and the one-pan dinner question. 0:20–0:55 measure usable cooking area, side depth and burner clearance on both pans. 0:55–1:50 cook matched vegetable batches according to care instructions and film stirring access and usable space. 1:50–2:35 show loaded lifting with two hands and demonstrate cleanup. 2:35–3:00 explain which households benefit from taller sides and ask what meal viewers would cook first. Use owned or licensed exact-product footage and report demonstrated results only.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Deep Sauté Pan vs. Skillet for Family Dinners",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Making dinner in one pan? Compare usable surface, side height, and room to lift a loaded pan before choosing a deep sauté pan.",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/hexclad-hybrid-deep-saute-pan-5-5-quart/",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Original vertical 1000 × 1500 image. Photograph an original side-by-side pan profile with a ruler. Use owned or licensed images and label any generic substitution illustrative."
+      }
+    },
+    {
+      "asin": "B0GQCSM6HQ",
+      "name": "Ball Regular Mouth Mason Jars with Lids & Bands, 16 oz, 8-Pack",
+      "variant": "Eight 16-ounce regular-mouth jars with lids and bands, per Ball.",
+      "category": "food-storage",
+      "keyword": "regular mouth 16 oz glass mason jars 8 pack",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-17",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-17"
+        },
+        {
+          "url": "https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-with-lids-bands%2C-regular-mouth%2C-16-oz.%2C-8-pack/SAP_2203756.html",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #22 on the US Cookware bestseller list on November 17, 2026. This is a dated category position. Unit sales, estimates, exact-variant review counts and current US listing, seller and offer remain unknown. Ball identifies the pack size, pint capacity and regular mouth. The buying guide focuses on dry pantry use.",
+      "audience_fit": "Cooks portioning dry ingredients or organizing pantry shelves.",
+      "buying_objection": "The regular opening may be awkward to fill with bulky ingredients. Check shelf height and opening width.",
+      "score": {
+        "weighted_score_0_5": 4.1,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4.2
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.2
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.1
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.8
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Compare jar opening, shelf clearance, and how easily you can scoop your usual ingredients before stocking a small pantry.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "16-Ounce Mason Jars: Regular Mouth vs. Wide Mouth",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Compare jar opening, shelf clearance, and how easily you can scoop your usual ingredients before stocking a small pantry.",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/ball-regular-mouth-pint-mason-jars-8-pack/",
+        "board": "Pantry Organization Ideas",
+        "image_brief": "Original vertical 1000 × 1500 image. Shoot your own overhead photo of dry ingredients beside two jar openings. Use owned or licensed images and label any generic substitution illustrative."
+      }
+    },
+    {
+      "asin": "B09KH38HF2",
+      "name": "SENSARTE Swiss Granite Nonstick Saucepan with Lid, 1.5 Quart",
+      "variant": "Indexed exact-ASIN references agree on a 1.5-quart saucepan with lid. Manufacturer confirmation for this exact coating variant is unknown.",
+      "category": "cookware",
+      "keyword": "small 1.5 quart saucepan with lid",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-17",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-17"
+        },
+        {
+          "url": "https://www.justbid.com/item/OLARRK0021412/4730028",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #32 on the US Cookware bestseller list on November 17, 2026. This is a dated category position. Unit sales, estimates, exact-variant review counts and current US listing, seller and offer remain unknown. A separate indexed product record identifies the same ASIN, capacity, finish family and lid. No manufacturer exact-ASIN mapping was found.",
+      "audience_fit": "Single-person households reheating small portions or making a quick sauce.",
+      "buying_objection": "A small pot may crowd larger servings. Confirm the base fits your burner and check coating care before purchase.",
+      "score": {
+        "weighted_score_0_5": 4.09,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.9
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.2
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4
+          }
+        }
+      },
+      "confidence": "Low",
+      "angle": "Reheat single portions or make small batches of sauce? Compare capacity, burner fit, and storage before picking a small saucepan.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "1.5-Quart Saucepan: Is It Big Enough for One?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Reheat single portions or make small batches of sauce? Compare capacity, burner fit, and storage before picking a small saucepan.",
+        "destination_status": "pending",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/sensarte-1-5-quart-swiss-granite-saucepan/",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Original vertical 1000 × 1500 image. Photograph an original small-pot setup beside a measuring jug and burner-width guide. Use owned or licensed images and label any generic substitution illustrative."
+      }
+    }
+  ]
+}
