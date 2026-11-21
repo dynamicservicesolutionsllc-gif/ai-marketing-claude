@@ -1,0 +1,316 @@
+{
+  "marketplace": "US",
+  "candidates": [
+    {
+      "asin": "B07NWCGNDW",
+      "name": "Dash Fresh Pop Popcorn Maker, 16-Cup, Red",
+      "variant": "Red hot-air model, 16-cup stated output",
+      "category": "small-appliances",
+      "keyword": "compact hot air popcorn maker",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://bydash.com/products/fresh-pop-popcorn-maker",
+          "updated": null
+        },
+        {
+          "url": "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-popcorn-machines",
+          "updated": "2026-02-05",
+          "evidence": "Food Network chose the Fresh Pop in hands-on testing. The tested color is unknown."
+        },
+        {
+          "url": "https://www.kroger.com/p/dash-fresh-pop-popcorn-maker-in-red/0085000411500",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #75 in US Kitchen & Dining on November 16, 2026. This is a category position. Unit sales, estimates, conversion, exact-variant ratings and current Amazon listing, seller, pack contents and offer are unverified or unknown. Dash identifies the Fresh Pop model and red color. Kroger corroborates the red 16-cup product.",
+      "audience_fit": "Families and apartment cooks making popcorn for movie night.",
+      "buying_objection": "Check storage height and whether scattered kernels and single-purpose storage are worth it.",
+      "score": {
+        "weighted_score_0_5": 4.3,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.6
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.2
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.6
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Three-minute comparison, air popper versus saucepan. 0:00–0:20 introduce the movie-night question and disclose the affiliate relationship. 0:20–0:55 show the exact Dash model, measure counter and storage clearance, and check its instructions. 0:55–1:55 run matched batches with the same kernels using each manufacturer's instructions. 1:55–2:35 count unpopped kernels, compare cleanup and show any stray kernels. 2:35–3:00 explain which routine suits occasional versus frequent popcorn nights. Use owned or licensed footage. Report only measured results.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Air Popper vs. Stovetop Popcorn for Movie Night",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Compare an air popper and a saucepan by counter space, unpopped kernels, and cleanup before picking your movie-night setup.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/dash-fresh-pop-popcorn-maker-red/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Take an original vertical 1000 × 1500 photograph illustrating “Air Popper vs. Stovetop Popcorn for Movie Night” using your own kitchen setup, with the measuring or comparison detail centered. Show the exact product only with owned or licensed assets. Label any generic substitution illustrative."
+      }
+    },
+    {
+      "asin": "B0CYJDVT31",
+      "name": "bella Fits-anywhere Slim 4-Quart Air Fryer, Oatmilk",
+      "variant": "Oatmilk, 4-quart Slim model, corroborated by bella",
+      "category": "small-appliances",
+      "keyword": "slim 4 quart air fryer for small apartments",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://bellakitchenware.com/shop/products/4qt-slim-air-fryer/?variant=43925683699912",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #76 in US Kitchen & Dining on November 16, 2026. This is a category position. Unit sales, estimates, conversion, exact-variant ratings and current Amazon listing, seller, pack contents and offer are unverified or unknown. bella identifies the Oatmilk 4-quart model and long basket.",
+      "audience_fit": "Apartment cooks with shallow or crowded counters.",
+      "buying_objection": "Measure the counter and the room needed to pull the basket forward. Check whether food fits in one layer.",
+      "score": {
+        "weighted_score_0_5": 4.2,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.6
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.6
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.4
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.4
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Measure your counter, basket pull-out space, and room for food in a single layer before choosing a slim air fryer.",
+      "micrositeUrl": "https://air-fryers-small-apartments.kitchenfindsfavorites.com/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Slim 4-Quart Air Fryer: Measure Your Counter First",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Measure your counter, basket pull-out space, and room for food in a single layer before choosing a slim air fryer.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/bella-slim-4-quart-air-fryer-oatmilk/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Take an original vertical 1000 × 1500 photograph illustrating “Slim 4-Quart Air Fryer: Measure Your Counter First” using your own kitchen setup, with the measuring or comparison detail centered. Show the exact product only with owned or licensed assets. Label any generic substitution illustrative."
+      }
+    },
+    {
+      "asin": "B005KDEIZ0",
+      "name": "Rubbermaid Commercial Stainless Steel Oven Thermometer",
+      "variant": "FGTHO550, stainless dial, manufacturer range 60–580°F",
+      "category": "bakeware",
+      "keyword": "hanging oven thermometer for baking",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://www.rubbermaidcommercial.com/foodservice/monitoring/oven-thermometer-60-580-f/",
+          "updated": null
+        },
+        {
+          "url": "https://device.report/rubbermaid-commercial-products/fgtho550",
+          "updated": null,
+          "evidence": "Indexed reference associates model FGTHO550 with the ASIN."
+        }
+      ],
+      "evidence": "ParseShelf recorded #73 in US Kitchen & Dining on November 16, 2026. This is a category position. Unit sales, estimates, conversion, exact-variant ratings and current Amazon listing, seller, pack contents and offer are unverified or unknown. Rubbermaid identifies FGTHO550 and the stated dial range.",
+      "audience_fit": "Bakers trying to understand uneven batches or differences between rack positions.",
+      "buying_objection": "The dial may be hard to read through the door. It measures oven air and is not a food probe.",
+      "score": {
+        "weighted_score_0_5": 4.08,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.2
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.2
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.2
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Check whether you can read a dial through your oven door. Compare hanging and standing placement before choosing a thermometer for baking.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Oven Thermometer for Baking: Hang It or Stand It?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Check whether you can read a dial through your oven door. Compare hanging and standing placement before choosing a thermometer for baking.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/rubbermaid-commercial-oven-thermometer-fgtho550/",
+        "destination_status": "pending",
+        "board": "Holiday Baking Essentials",
+        "image_brief": "Take an original vertical 1000 × 1500 photograph illustrating “Oven Thermometer for Baking: Hang It or Stand It?” using your own kitchen setup, with the measuring or comparison detail centered. Show the exact product only with owned or licensed assets. Label any generic substitution illustrative."
+      }
+    },
+    {
+      "asin": "B0028JURDQ",
+      "name": "FoodSaver 8-Inch and 11-Inch Vacuum Seal Rolls, 5-Pack",
+      "variant": "Indexed ASIN card records two 8-inch rolls and three 11-inch rolls. Current pack contents unknown.",
+      "category": "food-storage",
+      "keyword": "custom length vacuum sealer rolls for meal prep",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://www.foodsaver.com/shop/vacuum-seal-bags-rolls/vacuum-seal-rolls/standard-rolls/foodsaver-8-11-vacuum-seal-rolls-multi-pack/SAP_2159288.html",
+          "updated": null
+        },
+        {
+          "url": "https://app.parseshelf.com/best-sellers/asin/B0028JURDQ/",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #30 in US Kitchen & Dining on November 16, 2026. This is a category position. Unit sales, estimates, conversion, exact-variant ratings and current Amazon listing, seller, pack contents and offer are unverified or unknown. FoodSaver lists a multipack with both widths. The indexed tracker records the ASIN's roll count.",
+      "audience_fit": "Batch cooks who own a compatible vacuum sealer and freeze varied portion sizes.",
+      "buying_objection": "Rolls require cutting and making an extra seal. Check that both widths fit your sealer.",
+      "score": {
+        "weighted_score_0_5": 4.06,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 3.8
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.2
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 3.9
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Do you freeze both single portions and family packs? Compare custom-cut rolls with precut bags by sealer width, prep time, and leftover material.",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Vacuum Sealer Rolls vs. Precut Bags for Meal Prep",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Do you freeze both single portions and family packs? Compare custom-cut rolls with precut bags by sealer width, prep time, and leftover material.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/foodsaver-vacuum-seal-rolls-8-11-inch-5-pack/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Gadgets We Love",
+        "image_brief": "Take an original vertical 1000 × 1500 photograph illustrating “Vacuum Sealer Rolls vs. Precut Bags for Meal Prep” using your own kitchen setup, with the measuring or comparison detail centered. Show the exact product only with owned or licensed assets. Label any generic substitution illustrative."
+      }
+    },
+    {
+      "asin": "B081THCMXB",
+      "name": "Ultra Cuisine Stainless Steel Cooling and Baking Rack Set, 11.5 × 16.5 Inches, 2-Pack",
+      "variant": "Indexed product records support two stainless racks, each 11.5 × 16.5 inches.",
+      "category": "bakeware",
+      "keyword": "stainless cooling rack for half-sheet pan",
+      "status": "needs_amazon_verification",
+      "accessed": "2026-11-16",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-16"
+        },
+        {
+          "url": "https://walfosbrand.com/products/ultra-cuisine-oven-safe-dishwasher-safe-100-stainless-steel-cooling-and-baking-rack-set-heavy-duty-tight-wire-11-5-x-16-5-inch-set-of-2-half-sheet-pan-cooling-racks",
+          "updated": null
+        }
+      ],
+      "evidence": "ParseShelf recorded #87 in US Bakeware on November 16, 2026. This is a category position. Unit sales, estimates, conversion, exact-variant ratings and current Amazon listing, seller, pack contents and offer are unverified or unknown. Retail product page corroborates the dimensions and two-pack.",
+      "audience_fit": "Home bakers cooling multiple batches who want racks that nest inside their pans.",
+      "buying_objection": "Measure internal space inside the pan lip. Tight wire spacing may add cleanup.",
+      "score": {
+        "weighted_score_0_5": 3.94,
+        "factors": {
+          "demand": {
+            "weight_percent": 25,
+            "score_0_5": 3.2
+          },
+          "audience_fit": {
+            "weight_percent": 25,
+            "score_0_5": 4.3
+          },
+          "purchase_intent": {
+            "weight_percent": 20,
+            "score_0_5": 4.1
+          },
+          "content_gap": {
+            "weight_percent": 15,
+            "score_0_5": 4.2
+          },
+          "affiliate_editorial_suitability": {
+            "weight_percent": 15,
+            "score_0_5": 4.1
+          }
+        }
+      },
+      "confidence": "Medium",
+      "angle": "Before buying a cooling rack, measure the flat space inside your sheet pan. Then compare rack height, wire spacing, and how you’ll store two racks.",
+      "micrositeUrl": "https://kitchenfindsfavorites.com/microsites/baking-pans-busy-families/",
+      "pinterest_pin": {
+        "status": "draft",
+        "title": "Half-Sheet Cooling Rack: Measure Inside the Pan Lip",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Before buying a cooling rack, measure the flat space inside your sheet pan. Then compare rack height, wire spacing, and how you’ll store two racks.",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/ultra-cuisine-half-sheet-cooling-racks-2-pack/",
+        "destination_status": "pending",
+        "board": "Holiday Baking Essentials",
+        "image_brief": "Take an original vertical 1000 × 1500 photograph illustrating “Half-Sheet Cooling Rack: Measure Inside the Pan Lip” using your own kitchen setup, with the measuring or comparison detail centered. Show the exact product only with owned or licensed assets. Label any generic substitution illustrative."
+      }
+    }
+  ]
+}
