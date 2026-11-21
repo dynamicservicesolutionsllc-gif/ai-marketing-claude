@@ -1,0 +1,91 @@
+{
+  "name": "OXO Good Grips Stainless Steel Spider Scoop & Strain Skimmer",
+  "asin": "B09WG1KKHP",
+  "variant": "Stainless-steel wire-coil scoop with black handle. Retailer-listed model 11338200. Amazon variant and pack count unknown.",
+  "category": "gadgets",
+  "subcategory": "cooking-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-11",
+  "sources": [
+    {
+      "publisher": "Food & Wine",
+      "url": "https://www.foodandwine.com/best-spider-strainers-8425437",
+      "published": "2024-01-17",
+      "updated": null,
+      "evidence": "The indexed editorial roundup tested 12 spider strainers and selected this OXO scoop as its runner-up. The basket and handle design match the OXO product page."
+    },
+    {
+      "publisher": "OXO",
+      "url": "https://www.oxo.com/oxo-good-grips-scoop-and-strain-skimmer.html",
+      "updated": null,
+      "evidence": "Indexed manufacturer specifications identify a stainless-steel coil basket and angled handle for lifting boiled, blanched, and fried foods."
+    },
+    {
+      "publisher": "Whole Foods Market",
+      "url": "https://www.wholefoodsmarket.com/OXO-Grips-Scoop-Strain-Skimmer/dp/B09WG1KKHP",
+      "updated": null,
+      "evidence": "The public US product link exposes the bare ASIN. It identifies the same branded wire-coil skimmer and does not establish the current Amazon offer."
+    },
+    {
+      "publisher": "Everything Kitchens",
+      "url": "https://www.everythingkitchens.com/oxo-scoop-and-strain-skimmer.html",
+      "updated": null,
+      "evidence": "The indexed product page identifies model 11338200 for the stainless-steel coil skimmer."
+    },
+    {
+      "publisher": "Target",
+      "url": "https://www.target.com/p/-/A-87892365",
+      "updated": null,
+      "evidence": "The indexed October-era product-page snapshot displayed an aggregate feedback count of 29 for the black-handled stainless-steel model. The exact snapshot date and current count are unknown. This is retailer engagement, not sales."
+    }
+  ],
+  "research_evidence": "A handheld basket lifts food in batches while letting water drain back into the pot. A hands-on comparison and retailer feedback give separate signals of editorial relevance and customer engagement. Current US Amazon listing identity, selected variant, pack count, seller, offer, and demand metrics remain unknown.",
+  "audience_fit": "Home cooks making dumplings or ravioli in batches, especially when reusing the same cooking water or keeping it for sauce.",
+  "buying_objection": "If you drain a whole pot at once, a colander may be more practical. Check the basket against your smallest pot and allow room for the angled handle in your drawer. Fine bits may slip through a coil basket.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 2.8,
+        "rationale": "Food & Wine hands-on inclusion and a separate Target product-page engagement signal. Current US Amazon ratings count, search volume, and sales are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 4.2,
+        "rationale": "Useful to cooks lifting dumplings, ravioli, or blanched vegetables in batches. The basket and angled handle take drawer space."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4,
+        "rationale": "The product appears in a shopping comparison and addresses a concrete choice between a spider strainer, slotted spoon, and colander. Query volume is unknown."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "No exact model in the checked catalog or drafts. The proposed guide compares leaving cooking water in the pot, batch capacity, and drawer clearance."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 3.8,
+        "rationale": "The workflow can be illustrated with original photos. The exact Amazon offer and listing variant remain unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.72
+  },
+  "confidence": "Medium for product identity and editorial fit. Low for current Amazon demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Spider Strainer vs. Colander for Dumplings and Ravioli",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Cooking dumplings or ravioli in batches? Compare a spider strainer and a colander by how much food you lift at once, whether you want to keep the cooking water, and how much drawer space you have.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-scoop-and-strain-skimmer/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Shoot an original 1000 × 1500 vertical photo of a pot beside a bowl of cooked dumplings on a bright counter. Keep utensils and packaging out of frame. Add the headline “Spider Strainer or Colander?” and use an original arrow graphic to suggest transferring one batch at a time. Retain the original photograph and creator credit."
+  }
+}
