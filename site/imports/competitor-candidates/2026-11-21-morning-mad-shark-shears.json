@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "batch": "2026-11-21-morning",
+  "marketplace": "US",
+  "access_date": "2026-11-21",
+  "candidate_count": 1,
+  "weights": {
+    "demand": 0.25,
+    "audience_fit": 0.25,
+    "purchase_intent": 0.2,
+    "content_gap": 0.15,
+    "affiliate_editorial_suitability": 0.15
+  },
+  "methodology": {
+    "dedupe": "Fresh main catalog/SiteStripe; main research-ledger paths returned missing, so PR62/63 head ledgers read; all 28 open PR snapshots/diffs and authenticated Desk priorAsins. Checked ASIN plus model/family and comparison references.",
+    "access": "Search-indexed public material only where direct page permissions unestablished. No bulk crawl, Amazon scrape, Special Link clicks, purchase or paid source. No callable already-authorized free Creators API connection found.",
+    "rank_limit": "Provisional third-party observation, not verified live Amazon rank, sales or conversion. Publisher collection compliance/accuracy not independently established.",
+    "score_limit": "0–5 editorial heuristic with requested weights. Fit, intent and content gap are reasoned judgement. Search volume, unit sales and exact-variant independent physical testing unknown.",
+    "microsites": "No dedicated poultry-shears microsite returned; unrelated generic page omitted.",
+    "publication_gate": "Exact Amazon identity/variant/pack/seller/offer, disputed specifications, asset rights/suitability and matching destination require confirmation."
+  },
+  "products": [
+    {
+      "asin": "B0DDGRWKCM",
+      "name": "MAD SHARK Heavy Duty Spring-Loaded Poultry Shears",
+      "category": "gadgets",
+      "keyword": "MAD SHARK poultry shears vs OXO comparison",
+      "variant": {
+        "model": "ZXJQJ in independent records; exact current model unverified",
+        "pack_count": 1,
+        "color": null,
+        "status": "Independent records associate ASIN with a single pair and model ZXJQJ. Brand-hosted pages support the spring-loaded poultry-shears family, but exact ASIN-to-page mapping, color and revision are unconfirmed. Indexed color, weight, dimensions and material fields conflict; no disputed specification adopted."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-21",
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "third_party_rank",
+          "evidence": "November 21 US Kitchen Utensils & Gadgets snapshot records B0DDGRWKCM at 19, up five positions from prior observation, with seven consecutive visible observations. Rank is not units sold or a verified current offer."
+        },
+        {
+          "url": "https://madshark.net/products/mad-shark-heavy-duty-poultry-shears-spring-loaded-kitchen",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Brand-hosted page names the spring-loaded poultry-shears family. Exact ASIN mapping and revision not independently established; performance, steel and safety marketing claims not adopted."
+        },
+        {
+          "url": "https://www.desertcart.com.my/products/664617196-mad-shark-heavy-duty-poultry-shears-spring-loaded-kitchen-shears",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Historical independent record ties ASIN to ZXJQJ and one pair. Inconsistent color, weight, dimensions and material fields are unresolved; not proof of current Amazon pack, seller or offer."
+        },
+        {
+          "url": "https://manuals.plus/asin/B0DDGRWKCM",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "identity",
+          "evidence": "Third-party manual index identifies model ZXJQJ. Manufacturer authorization and exact revision unverified; not a current verified instruction source."
+        },
+        {
+          "url": "https://www.worthrated.com/guide/best-poultry-shears",
+          "updated": null,
+          "accessed": "2026-11-21",
+          "access_method": "Public search-indexed information only; individual-page reading rules unestablished",
+          "type": "editorial_context",
+          "evidence": "Independent editorial comparison includes MAD SHARK but states it uses specifications and buyer feedback rather than a lab test. Exact update date unknown. No findings, descriptions or claims copied."
+        }
+      ],
+      "purpose": "A dedicated shear for poultry preparation when used according to verified exact-model instructions.",
+      "audience_fit": "Cooks comparing a dedicated poultry tool with general kitchen scissors or the existing OXO shear candidate in PR100.",
+      "objections": "Current OXO coverage lowers the content gap. Hand fit, lock operation, pivot access and cleaning may matter more than marketing thickness or strength figures. Exact color, mass, dimensions, included parts and care instructions remain unresolved. No promise of bone-cutting limits, effortless use, rust resistance, dishwasher suitability, medical accessibility or safety superiority.",
+      "scores": {
+        "demand": 3.9,
+        "audience_fit": 4.3,
+        "purchase_intent": 4,
+        "content_gap": 2.7,
+        "affiliate_editorial_suitability": 3.5
+      },
+      "score": 3.78,
+      "confidence": "Medium",
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B0DDGRWKCM",
+      "asin_source": "Bare ASIN exposed beside public Amazon product-link card in the search index; Amazon link not clicked.",
+      "current_seller_offer": "unknown",
+      "estimated_sales": "unknown",
+      "rating_review_counts": "unknown_not_copied",
+      "asset_status": "brief_only_clearance_pending",
+      "angle": "Three-minute original poultry-shears comparison checklist, extending existing OXO research. Identify the verified MAD SHARK variant, check dry hand fit and lock action, compare pivot-cleaning access and storage, and discuss whether a dedicated pair is needed. Actual cutting footage only after exact-model verification and a real authorized demonstration. No strength, speed or safety-superiority promises.",
+      "video_plan": [
+        {
+          "time": "0:00–0:20",
+          "shot": "Affiliate disclosure and clearly labeled dedicated versus general-scissor categories.",
+          "voice": "Before choosing poultry shears, compare how they fit your routine. This is an affiliate buying guide."
+        },
+        {
+          "time": "0:20–0:45",
+          "shot": "Actual verified packaging and model label; no invented model graphics.",
+          "voice": "Confirm the complete MAD SHARK model and pack. Similar brand pages do not establish the selected Amazon variant."
+        },
+        {
+          "time": "0:45–1:15",
+          "shot": "Dry controlled hand-fit and lock demonstration following exact instructions.",
+          "voice": "Check handle spacing, movement and lock operation on the actual pair. Hand fit is personal."
+        },
+        {
+          "time": "1:15–1:50",
+          "shot": "Only real authorized preparation footage after verification; otherwise a labeled task-planning board.",
+          "voice": "Choose tasks permitted by the exact instructions. Record actual results before making any claims about cutting performance."
+        },
+        {
+          "time": "1:50–2:20",
+          "shot": "Cool tool and instructions-based pivot-cleaning and drying setup.",
+          "voice": "Check access around the pivot and the correct cleaning method. Do not assume that every version separates or goes in a dishwasher."
+        },
+        {
+          "time": "2:20–2:45",
+          "shot": "Existing OXO comparison reference and general scissors, labeled without new test claims.",
+          "voice": "Compare care, storage and how often you prepare whole poultry. An existing tool may already meet your needs."
+        },
+        {
+          "time": "2:45–3:00",
+          "shot": "Reviewed KFF destination only after its page exists; disclosure visible.",
+          "voice": "See Kitchen Finds & Favorites for the comparison checklist and verified model details."
+        }
+      ],
+      "pin": {
+        "title": "Poultry Shears Comparison: Check MAD SHARK Fit, Lock and Cleaning",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing dedicated poultry shears? Our planned MAD SHARK comparison checks the exact model, hand fit, lock, pivot cleaning and storage alongside existing OXO research. Decide whether another tool fits your routine.",
+        "board": "Kitchen Tools & Poultry Prep",
+        "destination_url": "https://kitchenfindsfavorites.com/picks/mad-shark-spring-loaded-poultry-shears/",
+        "destination_status": "pending_matching_page_verification",
+        "status": "draft_not_published",
+        "image_brief": "Original vertical photograph, at least 1000 x 1500 pixels, of the exact verified MAD SHARK pair on a dry board, locked as instructed, with clearly identified comparison props. No invented color, model label, strength badge or cutting result. Owned exact-product photo or documented commercial site/Pin/video license, retaining license and attribution. Generic substitute must visibly say 'Similar item shown'. No Amazon-hosted or competitor imagery. Rights and suitability pending."
+      }
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "checks": [
+      "ASIN/model/family dedupe",
+      "Canonical untagged URL",
+      "Multiple distinct sources",
+      "Weighted arithmetic",
+      "site/build.py Pin required-field/disclosure/length/price/testing-phrase rules"
+    ],
+    "scope": "Research JSON only; no live catalog import/build."
+  },
+  "workflow_desk": {
+    "post_status": 200,
+    "added": [
+      "B0DDGRWKCM"
+    ],
+    "duplicates": [],
+    "get_status": 200,
+    "readback_all_asins_present": true,
+    "queue_entries_after": 183,
+    "status": "draft_only"
+  }
+}
