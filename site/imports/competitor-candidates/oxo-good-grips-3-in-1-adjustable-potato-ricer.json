@@ -1,0 +1,79 @@
+{
+  "name": "OXO Good Grips 3-in-1 Adjustable Potato Ricer",
+  "asin": null,
+  "variant": "Manufacturer SKU 1129780, 3-in-1 adjustable model. Amazon variant and pack count are unknown.",
+  "category": "gadgets",
+  "subcategory": "food-prep-tools",
+  "status": "needs_amazon_verification",
+  "accessed": "2026-11-09",
+  "sources": [
+    {
+      "publisher": "Food Network",
+      "url": "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-potato-ricer",
+      "updated": "2026-09-24",
+      "evidence": "Search-indexed roundup documents a hands-on comparison across eight ricers and placed this model first overall."
+    },
+    {
+      "publisher": "Food & Wine",
+      "url": "https://www.foodandwine.com/best-potato-ricers-8748835",
+      "updated": null,
+      "published": "2024-11-21",
+      "evidence": "Search-indexed, separate hands-on comparison also placed this model first overall. Exact update date is unknown."
+    },
+    {
+      "publisher": "OXO",
+      "url": "https://www.oxo.com/shop/kitchenware/tools-gadgets/fruit-vegetable-tools/3-in-1-adjustable-potato-ricer-453.html",
+      "updated": null,
+      "evidence": "The search-indexed manufacturer page identifies SKU 1129780 and gives dimensions of 11.75 × 5.75 × 5 inches. Its use-and-care guide describes rotating the disc to choose texture and removing it for cleanup."
+    }
+  ],
+  "research_evidence": "A hand-operated press for cooked potatoes with a rotating disc for changing the texture. The independent tests are dated editorial signals. Current US listing identity, selected variant, pack count, seller, offer, exact-variant review count, and product-level demand metrics are unknown. The indexed US editorial results did not expose a bare ASIN in a product link.",
+  "audience_fit": "Home cooks with limited kitchen storage who make holiday sides or batch-cook mashed potatoes. A ricer-versus-masher comparison can show when texture control earns the extra drawer space.",
+  "buying_objection": "A basic masher may already cover occasional use. Check drawer clearance and bowl fit, and consider whether repeated squeezes and removing the disc for cleanup suit the way you cook.",
+  "score": {
+    "scale": "0–5",
+    "factors": [
+      {
+        "factor": "demand",
+        "weight_percent": 25,
+        "score_0_5": 2.5,
+        "rationale": "Two separate test kitchens selected the same model in comparison roundups. This supports sustained editorial interest. Current product-level search volume, listing engagement, and sales are unknown."
+      },
+      {
+        "factor": "audience_fit",
+        "weight_percent": 25,
+        "score_0_5": 4.2,
+        "rationale": "Useful for home cooks who regularly make mashed potatoes for several people or want to vary texture across recipes. Drawer space, hand pressure, and cleaning make it a narrower fit for occasional use."
+      },
+      {
+        "factor": "purchase_intent",
+        "weight_percent": 20,
+        "score_0_5": 4,
+        "rationale": "Product-specific recommendations appear in two shopping roundups, and a ricer-versus-masher guide answers a concrete buying decision. Search volume is unknown."
+      },
+      {
+        "factor": "content_gap",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "The checked catalog and drafts contain no potato ricer. A small-kitchen comparison focused on drawer fit, bowl fit, and repeated batches adds a specific angle. Broader keyword competition is unknown."
+      },
+      {
+        "factor": "affiliate_editorial_suitability",
+        "weight_percent": 15,
+        "score_0_5": 4,
+        "rationale": "The use case supports an original comparison and a visual explanation using a food-only image. Current Amazon offer and affiliate terms for this listing are unknown."
+      }
+    ],
+    "weighted_score_0_5": 3.68
+  },
+  "confidence": "Medium for model identity and editorial fit. Low for current Amazon demand and offer.",
+  "pinterest_pin": {
+    "status": "draft",
+    "title": "Potato Ricer vs. Masher for Holiday Mashed Potatoes",
+    "description": "#ad As an Amazon Associate I earn from qualifying purchases. Cooking for a crowd? Compare a potato ricer and a masher by texture, how many batches you’ll press, and cleanup. See where the OXO Good Grips adjustable ricer fits before giving it drawer space.",
+    "destination_url": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-3-in-1-adjustable-potato-ricer/",
+    "destination_status": "pending",
+    "board": "Small Kitchen Gadgets We Love",
+    "image_brief": "Shoot an original 1000 × 1500 overhead photo of two bowls of mashed potatoes with different textures on a home kitchen counter. Add the headline “Ricer or Masher?” and a small “Texture • Cleanup • Storage” line. Keep utensils and retail packaging out of frame. Retain the original image file and creator credit."
+  }
+}
