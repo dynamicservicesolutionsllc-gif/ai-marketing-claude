@@ -1,0 +1,201 @@
+{
+  "batch_id": "2026-11-21-evening-cuisinart-can-opener",
+  "marketplace": "US",
+  "access_date": "2026-11-21",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent on main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent on main)"
+    ],
+    "open_pr_numbers": [
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "scope": "Fresh catalog, ledger, full open PR snapshots/diffs and private Workflow Desk priorAsins; ASIN, CCO-50 model family and product-name checks found no match.",
+    "workflow_prior_asin_count": 63
+  },
+  "candidates": [
+    {
+      "name": "Cuisinart Deluxe Can Opener, CCO-50BKN, Black",
+      "asin": "B001C2F5NW",
+      "variant": {
+        "model": "CCO-50BKN",
+        "color": "Black",
+        "support": "manufacturer record and secondary identity records",
+        "amazon_variant_status": "needs_amazon_verification",
+        "amazon_pack_count": null,
+        "amazon_seller": null,
+        "current_offer": null
+      },
+      "category": "Small appliances / electric can openers",
+      "keyword": "Cuisinart CCO-50BKN electric can opener comparison",
+      "amazonUrl": "https://www.amazon.com/dp/B001C2F5NW",
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://www.cuisinart.com/deluxe-can-opener/CCO-50BKN.html",
+          "updated_at": null,
+          "accessed_at": "2026-11-21",
+          "access_method": "search_index_only; page reading rules not established",
+          "type": "manufacturer_identity",
+          "evidence": "Manufacturer identifies the Deluxe Can Opener as model CCO-50BKN, Black; removable activation lever and magnetic lid holder. Confirms manufacturer model, not current Amazon variant, pack, seller or offer."
+        },
+        {
+          "url": "https://www.reviewed.com/cooking/best-right-now/the-best-electric-can-openers",
+          "updated_at": "2025-07-26",
+          "accessed_at": "2026-11-21",
+          "access_method": "search_index_only",
+          "type": "independent_editorial_testing",
+          "evidence": "Cassidy Olsen's dated electric-can-opener comparison includes testing of the exact CCO-50BKN. Historical editorial consideration, not evidence of present sales or KFF hands-on experience; no performance findings adopted."
+        },
+        {
+          "url": "https://app.parseshelf.com/best-sellers/asin/B001C2F5NW/",
+          "updated_at": "2026-11-18",
+          "accessed_at": "2026-11-21",
+          "access_method": "search_index_only; no scraping service invoked",
+          "type": "third_party_historical_rank",
+          "evidence": "ParseShelf reports US Kitchen Utensils & Gadgets rank 89 on November 18, 2026. One visible product observation; seven-day change unknown. This is a dated third-party snapshot, not a current rank, sales estimate, units or conversion. Collection compliance and accuracy not independently established."
+        },
+        {
+          "url": "https://device.report/cuisinart/cco-50bkn",
+          "updated_at": null,
+          "accessed_at": "2026-11-21",
+          "access_method": "search_index_only",
+          "type": "secondary_identity",
+          "evidence": "Cross-references CCO-50BKN, Black and ASIN B001C2F5NW. Secondary historical identity only; conflicting weight/dimension records not adopted."
+        },
+        {
+          "url": "https://slickdeals.net/f/19368681-19-95-cuisinart-can-opener-with-one-touch-operation-black-cco-50bkn-at-amazon",
+          "updated_at": null,
+          "accessed_at": "2026-11-21",
+          "access_method": "search_index_only",
+          "type": "public_product_link_identity",
+          "evidence": "Public historical deal link explicitly exposes amazon.com/dp/B001C2F5NW alongside CCO-50BKN Black. Link not clicked. No historical offer, seller, price or purchase-volume claim adopted."
+        }
+      ],
+      "purpose": "Countertop corded can opening for everyday canned-food preparation.",
+      "audience_fit_notes": "Home cooks comparing a dedicated countertop opener with manual or handheld electric options. Inferred audience fit; no medical, dexterity or universal compatibility promise.",
+      "buying_objections": [
+        "Dedicated counter and storage space",
+        "Need for a suitable nearby outlet",
+        "Cleaning and lid handling procedure must be checked against current manufacturer instructions",
+        "A working manual opener may already meet the household's needs"
+      ],
+      "research_evidence": {
+        "rank": "Third-party historical category rank 89, November 18, 2026; not current",
+        "editorial": "Exact model included in Reviewed's comparison updated July 26, 2025; historical independent testing signal",
+        "manufacturer_specs": "Model and black finish supported by manufacturer; current Amazon selection remains unconfirmed",
+        "estimated_sales": "unknown; no estimates adopted",
+        "rating_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown",
+        "trend_velocity": "unknown"
+      },
+      "score": {
+        "scale": "0–5 editorial judgment; not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.2,
+          "audience_fit": 4.4,
+          "purchase_intent": 4.3,
+          "content_gap": 3.1,
+          "affiliate_editorial_suitability": 4.4
+        },
+        "weighted_total": 3.89,
+        "rationale": {
+          "demand": "Recent but single visible rank observation; editorial test older than a year.",
+          "audience_fit": "Everyday prep matches KFF kitchen-tool focus.",
+          "purchase_intent": "Exact model versus opener-type comparison addresses a concrete decision; inferred, no conversion evidence.",
+          "content_gap": "Distinct corded countertop angle; existing manual/handheld coverage reduces novelty.",
+          "affiliate_editorial_suitability": "Practical checklist and comparison opportunity; assets and listing verification remain pending."
+        }
+      },
+      "confidence": "Medium",
+      "confidence_limits": "Medium research confidence; low confidence in current Amazon offer. Missing quantities, seller and offer stay unknown.",
+      "pinterest": {
+        "title": "Electric Can Opener Comparison: Does the Cuisinart CCO-50BKN Fit Your Kitchen?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering a countertop electric can opener? Plan around counter space, outlet access, lid handling and cleanup before choosing the Cuisinart CCO-50BKN. Save this buyer checklist and compare corded, handheld and manual options.",
+        "destination": "https://kitchenfindsfavorites.com/picks/cuisinart-cco-50bkn-electric-can-opener/",
+        "destination_status": "pending; public matching page not confirmed",
+        "board": "Kitchen Tools & Everyday Prep",
+        "image_brief": "Create an original 1000 x 1500 overhead buyer checklist with a counter footprint, outlet marker and generic can silhouettes. No competitor or Amazon imagery. Use exact-product photography only after a genuine unit and commercial reuse rights are documented. If a generic opener appears, label it 'Similar item shown'.",
+        "asset_status": "brief_only; no image license or actual product footage verified; not publishable"
+      },
+      "video": {
+        "duration_seconds": 180,
+        "title": "Countertop or Drawer? A Three-Minute Electric Can Opener Buying Checklist",
+        "production_status": "planning_only; no footage created or product test performed",
+        "angle": "Compare the CCO-50BKN's countertop setup with manual and handheld alternatives through space, power, cleanup and lid-handling questions, without claiming a winner before genuine demonstration.",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Show original counter and drawer footage; ask whether this job deserves permanent counter space. Display and speak the affiliate disclosure."
+          },
+          {
+            "seconds": "20–50",
+            "brief": "Identify CCO-50BKN Black using an owned unit or original text/diagram; distinguish it from white CCO-50N, chrome CCO-55 and steel SCO-60."
+          },
+          {
+            "seconds": "50–90",
+            "brief": "Measure the actual unit and available workspace on camera if obtained. Show outlet positioning without asserting unverified cord length."
+          },
+          {
+            "seconds": "90–125",
+            "brief": "Only with a genuine unit and current instructions, film a normal-use demonstration and lid handling. Otherwise use a clearly labeled conceptual checklist; no simulated product performance."
+          },
+          {
+            "seconds": "125–155",
+            "brief": "Show cleanup questions and storage choices. Film lever removal only after checking current instructions and disconnecting power."
+          },
+          {
+            "seconds": "155–177",
+            "brief": "Summarize which setup may suit frequent canned-food prep versus occasional use; distinguish historical third-party rank from sales."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card and affiliate disclosure. Activate destination and outbound CTA only after verification and page review."
+          }
+        ],
+        "rights": "Use original recorded footage or separately licensed commercial material; no Amazon or competitor media, no unlicensed audio."
+      }
+    }
+  ]
+}
