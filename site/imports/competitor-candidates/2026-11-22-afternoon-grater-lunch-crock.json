@@ -1,0 +1,321 @@
+{
+  "batch_id": "2026-11-22-afternoon-grater-lunch-crock",
+  "marketplace": "US",
+  "access_date": "2026-11-22",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent on main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent on main)"
+    ],
+    "open_pr_numbers": [
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asin_count": 65,
+    "scope": "Fresh full catalog, approved ledger, both research-ledger heads, all 33 open PR snapshots/diffs and Workflow Desk priorAsins. Neither ASIN nor Geedel/PS-336A or Lunch Crock/CPSCLC20 family matched."
+  },
+  "candidates": [
+    {
+      "name": "Geedel Rotary Cheese Grater Hand Crank, Cheese Shredder Vegetable Slicer, 3 Blades",
+      "asin": "B09NKZFTXS",
+      "category": "Kitchen tools / rotary graters",
+      "keyword": "Geedel three blade rotary cheese grater comparison",
+      "slug": "geedel-three-blade-rotary-cheese-grater",
+      "variant": {
+        "researched_configuration": "Three interchangeable drums, one grater; white finish associated by secondary identity records.",
+        "model": "PS-336A (secondary identity association; present Amazon model unverified)",
+        "current_amazon_variant": null,
+        "pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "status": "needs_amazon_verification"
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-22",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "ParseShelf reports US Kitchen & Dining rank 27 on November 22 versus 45 on November 21, 2026. Rank movement is not sales acceleration, units or current offer verification. Public product link exposes B09NKZFTXS. Collection compliance and accuracy not independently established; no scraping service invoked."
+        },
+        {
+          "url": "https://www.geedeldirect.net/collections/grater",
+          "type": "brand_store_product_family",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Brand-marketed collection lists separate three-, five- and six-blade configurations. Only the three-blade option is relevant here; this does not independently verify the current Amazon ASIN selection or manufacturer authority."
+        },
+        {
+          "url": "https://www.geedeldirect.net/products/feeding-jar",
+          "type": "brand_store_model_family",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Replacement feeding-jar record names PS-336A. Family-level model cross-check only, not evidence that every Geedel grater or current Amazon variant is compatible."
+        },
+        {
+          "url": "https://www.allrecipes.com/allstar-loved-kitchen-tools-holidays-amazon-12240772",
+          "type": "independent_editorial_recommendation",
+          "updated_at": "2026-11-09",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Allrecipes' dated holiday roundup includes a Geedel rotary grater and attributes its use to Renee Pajestka. Product-family editorial signal; exact reviewed ASIN, model and color not confirmed. No quoted endorsement or performance claim adopted."
+        },
+        {
+          "url": "https://slickdeals.net/f/19914768-geedel-rotary-cheese-grater-hand-crank-cheese-shredder-vegetable-slicer-22-78",
+          "type": "public_product_link_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Historical public deal exposes amazon.com/dp/B09NKZFTXS for a Geedel three-blade rotary grater. Link not clicked. No price, seller or speed claim adopted."
+        },
+        {
+          "url": "https://www.desertcart.com.eg/products/433313212-geedel-rotary-cheese-grater-hand-crank-cheese-shredder-vegetable-slicer",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Secondary catalog associates B09NKZFTXS with PS-336A, white, three blades and one item. Historical catalog association only; imported marketplace record is not a verified US offer."
+        }
+      ],
+      "purpose": "Hand-crank drum grating and slicing for meal preparation.",
+      "audience_fit_notes": "Inferred fit for cooks preparing multiple portions of grated cheese or vegetables and comparing a countertop manual tool with a box grater.",
+      "buying_objections": [
+        "Confirm suction compatibility with the household's counter surface.",
+        "Allow storage space for the base, barrel and interchangeable drums.",
+        "Check food fit, assembly and blade-cleaning instructions before recommendation.",
+        "Verify exact drum count and model before buying replacement parts."
+      ],
+      "research_evidence": {
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown",
+        "rank": "US Kitchen & Dining 45 on 2026-11-21 → 27 on 2026-11-22, attributed to ParseShelf; no sales inference.",
+        "editorial": "November 9, 2026 Allrecipes product-family recommendation; exact variant unknown.",
+        "specs": "Three-blade brand-store option and PS-336A family documented separately; current Amazon configuration unconfirmed."
+      },
+      "score": {
+        "factors": {
+          "demand": 3.7,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.3,
+          "content_gap": 3.3,
+          "affiliate_editorial_suitability": 4
+        },
+        "weighted_total": 4.01,
+        "rationale": "Recent rank rise and editorial-family inclusion support research interest. Actual search volume and sales unknown. Existing prep tools reduce content novelty; surface fit and cleanup offer a useful original comparison.",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "scale": "0–5 editorial heuristic, not sales forecast"
+      },
+      "confidence": "Medium",
+      "pinterest": {
+        "title": "Rotary Cheese Grater Buying Guide: Geedel’s Three-Blade Setup",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning meals with freshly grated cheese? Compare counter surface, drum storage, food fit and cleanup before choosing a Geedel three-blade rotary grater. Save this checklist alongside your box-grater options.",
+        "board": "Kitchen Tools & Everyday Prep",
+        "image_brief": "Original 1000 x 1500 planning graphic: counter-surface checklist, three generic drum outlines and storage diagram. No Amazon, brand-store or competitor images. Use exact-product photography only with verified identity and commercial rights. Label any generic grater 'Similar item shown'.",
+        "destination": "https://kitchenfindsfavorites.com/picks/geedel-three-blade-rotary-cheese-grater/",
+        "destination_status": "pending; matching public page not confirmed",
+        "asset_status": "brief_only; actual image, rights and media review pending"
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09NKZFTXS",
+      "status": "needs_amazon_verification",
+      "microsite_match": "No specifically relevant existing grater or personal-food-warmer microsite in current Desk inventory; unrelated guides not assigned."
+    },
+    {
+      "name": "Crock-Pot Lunch Crock Food Warmer, 20 Ounce, Faded Blue",
+      "asin": "B09BDG5RP3",
+      "category": "Small appliances / personal food warmers",
+      "keyword": "Crock Pot Lunch Crock 20 ounce food warmer Faded Blue",
+      "slug": "crock-pot-lunch-crock-20-ounce-faded-blue",
+      "variant": {
+        "researched_configuration": "20-ounce Faded Blue Lunch Crock food warmer.",
+        "manufacturer_model": "CPSCLC20-N2",
+        "manufacturer_sap": "2143870",
+        "support": "Manufacturer specifications identify capacity, finish, model and SAP; secondary records associate SAP 2143870 with this ASIN.",
+        "current_amazon_variant": null,
+        "pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "status": "needs_amazon_verification"
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-22",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "ParseShelf reports US Kitchen & Dining rank 31 on November 22, down five positions versus the prior daily snapshot. Rank is not units or guaranteed conversion. Public product card exposes B09BDG5RP3. Collection compliance and accuracy not independently established."
+        },
+        {
+          "url": "https://www.crock-pot.com/specialty-products/lunch-crock/crock-pot-lunch-crock-food-warmer/SAP_2143870.html",
+          "type": "manufacturer_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Manufacturer specifications identify Faded Blue, 20 ounces, CPSCLC20-N2 and SAP 2143870. Body copy also mentions Black Licorice; therefore use labeled specification fields provisionally and require current listing/manual reconciliation. Dimensions, spill-proof claims and vehicle-use claims not adopted."
+        },
+        {
+          "url": "https://www.businessinsider.com/guides/kitchen/amazon-kitchen-deals-2026-10-20",
+          "type": "independent_editorial_coverage",
+          "updated_at": "2026-10-20",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Business Insider includes the Crock-Pot electric lunchbox and lists Faded Blue among the finishes. Dated editorial shopping coverage, not direct testing of this exact ASIN or proof of current sales. No price or deal claim adopted."
+        },
+        {
+          "url": "https://www.thekitchn.com/crockpot-electric-lunch-box-review-ll-23611209",
+          "type": "independent_editorial_use",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "The Kitchn publishes an electric-lunch-box use review. Exact update date, reviewed model and color unconfirmed from indexed evidence; use only as older product-family editorial context, not exact-variant performance validation."
+        },
+        {
+          "url": "https://www.bestmarket.us/crock-pot-20-ounce-electric-lunch-box-portable-food-warmer-faded-blue-perfect-for-travel-car-on-the-go-keeps-food-warm-spill-free-dishwasher-safe-ideal-gift-for-men-and-women.html",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Secondary catalog associates B09BDG5RP3 with part 2143870, Faded Blue and 20 ounces. Its body contains conflicting color text; exact current variant requires authorized Amazon confirmation. No seller field adopted."
+        },
+        {
+          "url": "https://slickdeals.net/f/18984052-crock-pot-20-ounce-electric-lunch-box-29-99-amazon",
+          "type": "public_product_link_identity",
+          "updated_at": "2025-12-17",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Historical deal exposes an Amazon public product link ending in B09BDG5RP3. Identity evidence only; no old offer, seller, price or present availability claim adopted."
+        }
+      ],
+      "purpose": "Personal-size electric food warming for a packed-meal routine.",
+      "audience_fit_notes": "Inferred fit for people planning an individual lunch where a suitable outlet and manufacturer-approved warming routine are available. Do not equate warming with cooking raw food or temperature-safe storage.",
+      "buying_objections": [
+        "Measure the usable food container against the intended portion.",
+        "Confirm suitable power access and exact current instructions; no car-power compatibility assumed.",
+        "Check warming time and temperature instructions for the intended food; no universal timing claim.",
+        "Review transport, lid and cleaning instructions; no spill-proof or food-safety guarantee."
+      ],
+      "research_evidence": {
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown",
+        "rank": "US Kitchen & Dining 31 on 2026-11-22, down five positions in ParseShelf's daily comparison; no sales inference.",
+        "editorial": "October 20, 2026 independent shopping coverage plus older product-family use review; exact test variant unknown.",
+        "specs": "Manufacturer labeled specs support 20 oz Faded Blue CPSCLC20-N2/SAP 2143870; conflicting body copy explicitly unresolved."
+      },
+      "score": {
+        "factors": {
+          "demand": 3.5,
+          "audience_fit": 4.4,
+          "purchase_intent": 4.3,
+          "content_gap": 3.7,
+          "affiliate_editorial_suitability": 4.3
+        },
+        "weighted_total": 4.04,
+        "rationale": "Recent rank presence but daily decline; independent dated editorial coverage. Useful fit-first lunch-planning comparison, with manufacturer model support. Missing conversion data and current offer limit confidence.",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "scale": "0–5 editorial heuristic, not sales forecast"
+      },
+      "confidence": "Medium",
+      "pinterest": {
+        "title": "Electric Lunch Box Buying Guide: Crock-Pot’s 20-Ounce Lunch Crock",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering a personal food warmer for packed lunches? Check portion size, outlet access, warming instructions and cleanup before choosing the Faded Blue 20-ounce Lunch Crock. Save this checklist for your lunch routine.",
+        "board": "Meal Prep & Work Lunch Ideas",
+        "image_brief": "Original 1000 x 1500 planning graphic with a generic lunch-container outline, portion-size checklist and outlet icon. No product performance depiction or copied media. Exact-product photography needs verified model and commercial rights. Label any generic warmer 'Similar item shown'.",
+        "destination": "https://kitchenfindsfavorites.com/picks/crock-pot-lunch-crock-20-ounce-faded-blue/",
+        "destination_status": "pending; matching public page not confirmed",
+        "asset_status": "brief_only; actual image, rights and media review pending"
+      },
+      "amazonUrl": "https://www.amazon.com/dp/B09BDG5RP3",
+      "status": "needs_amazon_verification",
+      "microsite_match": "No specifically relevant existing grater or personal-food-warmer microsite in current Desk inventory; unrelated guides not assigned.",
+      "video": {
+        "duration_seconds": 180,
+        "title": "Will Your Lunch Fit? A Personal Food Warmer Buying Checklist",
+        "production_status": "brief_only; no real product demonstration performed",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Original packed-lunch footage and disclosed hook: plan the meal, portion and workspace before picking a warmer."
+          },
+          {
+            "seconds": "20–50",
+            "brief": "Identify Lunch Crock 20 oz Faded Blue, separating it from Crockpot GO and larger slow cookers. Use original diagrams until a genuine verified unit is available."
+          },
+          {
+            "seconds": "50–85",
+            "brief": "With the genuine unit, measure usable container fit and show the intended portion; otherwise retain a labeled conceptual illustration. Do not convert nominal capacity into a guaranteed meal size."
+          },
+          {
+            "seconds": "85–120",
+            "brief": "Show the outlet and schedule checklist. After checking the exact manual, film normal warming use; no raw-food cooking, vehicle-power or universal time/temperature claims."
+          },
+          {
+            "seconds": "120–150",
+            "brief": "Compare carrying and cleaning steps with an ordinary lunch container. Make no leak-proof or food-safety promise."
+          },
+          {
+            "seconds": "150–177",
+            "brief": "State who may benefit from a personal warmer and who may prefer a microwave routine. No sales forecast or claimed meal-cost savings."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card with disclosure. Activate the planned destination only after listing verification and public page review."
+          }
+        ],
+        "rights": "Original footage or documented commercial license only; no Amazon or competitor media. Similar items labeled. No claimed hands-on experience before filming."
+      }
+    }
+  ]
+}
