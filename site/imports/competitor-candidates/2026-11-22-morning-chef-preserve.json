@@ -1,0 +1,197 @@
+{
+  "batch_id": "2026-11-22-morning-chef-preserve",
+  "marketplace": "US",
+  "access_date": "2026-11-22",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent from main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent from main)"
+    ],
+    "open_pr_numbers": [
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asin_count": 64,
+    "scope": "Fresh full catalog, approved ledger, research-ledger heads, all 32 open PR snapshots/diffs and Desk priorAsins; exact ASIN and Chef Preserve name absent.",
+    "excluded_known_duplicate": "bella Fits-Anywhere 2-Slice Slim Toaster Oatmilk B0CYJBB2JQ already in Workflow Desk."
+  },
+  "candidates": [
+    {
+      "name": "Chef Preserve Compact Vacuum Sealer for Food (Vacuum Sealer Machine + 30 Reusable Vacuum Bags)",
+      "asin": "B0D3ZBFMW6",
+      "category": "Food storage / handheld vacuum sealers",
+      "keyword": "Chef Preserve handheld vacuum sealer 30 bags comparison",
+      "amazonUrl": "https://www.amazon.com/dp/B0D3ZBFMW6",
+      "variant": {
+        "supported_option": "One handheld sealer with 30 reusable bags; manufacturer offers this option and public secondary records associate it with this ASIN.",
+        "model": null,
+        "color": null,
+        "bag_size_split": null,
+        "current_amazon_pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "status": "needs_amazon_verification"
+      },
+      "status": "needs_amazon_verification",
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/asin/B0D3ZBFMW6/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-22",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "ParseShelf reports Kitchen & Dining rank 40 on November 22 versus 66 on November 21, 2026. Two observed dates in that category; seven-day category change unavailable. Dated third-party rank only; not units, revenue, conversion or a currently verified Amazon offer. Public product card exposes ASIN B0D3ZBFMW6. Collection compliance and accuracy not independently established; no scraper, API job or Special Link invoked."
+        },
+        {
+          "url": "https://chefpreserve.com/products/chef-preserve-vacuum-sealer",
+          "type": "manufacturer_product_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Manufacturer offers the Chef Preserve handheld vacuum sealer with separate 10-, 20-, 30-bag and 30-bag-plus-container choices. Supports existence of a 30-bag option; does not prove the present Amazon bundle. Manufacturer freshness, speed, usage and scarcity claims not adopted."
+        },
+        {
+          "url": "https://healthyrecipes101.com/food/tips/testing-18-popular-vacuum-sealers/",
+          "type": "independent_editorial_testing",
+          "updated_at": "2026-06-03",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Luna Regina's comparison includes Chef Preserve among portable and countertop vacuum sealers, attributing test data to ShouldIt.com. Editorial inclusion is a second signal, not evidence of sales. Internally varying battery/seal-count figures are not adopted. No measured performance findings, images, ratings or price copied."
+        },
+        {
+          "url": "https://nordicdesignblog.com/chef-preserve-vacuum-sealer-review/",
+          "type": "secondary_bundle_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Search-indexed article identifies B0D3ZBFMW6 as the sealer plus 30 reusable bags. Historical secondary bundle association, not direct Amazon confirmation. Exact model identifier, current seller and offer unknown."
+        }
+      ],
+      "purpose": "Remove air from compatible valve bags for household food storage.",
+      "audience_fit_notes": "Inferred fit for meal-prep households with limited counter space who are comparing a handheld valve-bag system with a countertop roll-bag machine.",
+      "buying_objections": [
+        "Confirm replacement-bag availability and compatible valve design.",
+        "Check usable bag sizes against actual portions; bundle size split remains unknown.",
+        "Check current instructions for cleaning, liquids and food handling before recommending applications.",
+        "Compare ongoing bag replacement needs and charging requirements with a countertop machine."
+      ],
+      "research_evidence": {
+        "demand_rank": "Third-party Kitchen & Dining snapshot: 66 on 2026-11-21 and 40 on 2026-11-22. Snapshot movement, not sales acceleration.",
+        "editorial": "Dated June 3, 2026 comparative article includes this sealer; test outcomes not adopted.",
+        "manufacturer_specs": "Handheld sealer and distinct 30-bag option supported; no Amazon variant verification.",
+        "estimated_sales": "unknown; third-party sales estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown",
+        "shelf_life_improvement": "unknown; no freshness multiplier or food-safety guarantee adopted"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.8,
+          "audience_fit": 4.5,
+          "purchase_intent": 4,
+          "content_gap": 3.4,
+          "affiliate_editorial_suitability": 3.9
+        },
+        "weighted_total": 3.97,
+        "rationale": {
+          "demand": "Recent upward daily category snapshot; category history only two visible dates and no unit sales.",
+          "audience_fit": "Meal prep and limited kitchen storage match KFF's existing focus.",
+          "purchase_intent": "Bag-system and bundle comparison supports a concrete purchase decision; actual query volume unknown.",
+          "content_gap": "Compact valve-bag versus countertop roll-bag workflow offers an original comparison; broad storage coverage limits novelty.",
+          "affiliate_editorial_suitability": "A useful original buyer checklist is possible, but verified unit, instructions and media remain pending."
+        }
+      },
+      "confidence": "Medium",
+      "confidence_limits": "Research confidence Medium; current Amazon variant/seller/offer not verified.",
+      "pinterest": {
+        "title": "Handheld Vacuum Sealer Buying Guide: Chef Preserve’s 30-Bag Kit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering a handheld vacuum sealer for meal prep? Compare bag sizes, replacement availability, cleaning steps and storage space before choosing the Chef Preserve 30-bag kit. Save this checklist for your kitchen planning.",
+        "destination": "https://kitchenfindsfavorites.com/picks/chef-preserve-compact-vacuum-sealer-30-bags/",
+        "destination_status": "pending; matching public site page not confirmed",
+        "board": "Meal Prep & Food Storage Ideas",
+        "image_brief": "Create an original 1000 x 1500 kitchen-planning flat lay using a measuring tape, labeled blank bag outlines and drawer-space diagram. No manufacturer, Amazon or competitor media. Exact-product photography requires an owned unit or documented commercial license. If any generic sealer is shown, label 'Similar item shown'.",
+        "asset_status": "brief_only; image rights and exact-product footage pending"
+      },
+      "video": {
+        "duration_seconds": 180,
+        "title": "Handheld or Countertop? Plan Your Vacuum-Sealer Setup",
+        "angle": "A three-minute practical comparison of bag fit, storage and maintenance rather than unsupported freshness or savings promises.",
+        "production_status": "brief_only; no filming, hands-on test or publication performed",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Original counter/drawer footage: ask where the sealer and bags would live. Show and speak the affiliate disclosure."
+          },
+          {
+            "seconds": "20–50",
+            "brief": "Diagram a valve-bag system beside a roll-bag system. Identify the researched Chef Preserve sealer-plus-30-bag option; clearly state current bundle verification is pending."
+          },
+          {
+            "seconds": "50–85",
+            "brief": "Use an owned unit only after identity verification, otherwise a labeled conceptual diagram. Show measuring portion size and checking usable bag space; do not invent size split or sealing speed."
+          },
+          {
+            "seconds": "85–120",
+            "brief": "With a genuine unit, current instructions and original footage, document a dry-food demonstration. Otherwise retain an unfilmed shot brief. No time-lapse implying long-term freshness or food safety."
+          },
+          {
+            "seconds": "120–150",
+            "brief": "Show a buyer checklist for replacement bags, charging, cleaning and liquid-use restrictions. Confirm each detail against current instructions before narration."
+          },
+          {
+            "seconds": "150–177",
+            "brief": "Compare who may prefer compact storage versus custom roll sizes; no unverified claims of superiority, savings or shelf-life extension."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card. Use the planned destination only after the page exists and the listing and content are reviewed."
+          }
+        ],
+        "rights": "Original footage and commercially licensed audio only. No Amazon-hosted or competitor imagery. Any similar-item visual must say 'Similar item shown'."
+      },
+      "microsite_match": "No specifically relevant vacuum-sealer microsite returned by the current Desk inventory; no unrelated appliance guide assigned."
+    }
+  ]
+}
