@@ -1,0 +1,302 @@
+{
+  "batch_id": "2026-11-22-evening-oxo-jigger-sink-strainer",
+  "marketplace": "US",
+  "access_date": "2026-11-22",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent from main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent from main)"
+    ],
+    "open_pr_numbers": [
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asin_count": 67,
+    "scope": "Fresh full catalog, approved ledger, both research-ledger heads, all 34 open PR snapshots/diffs and Desk priorAsins. Neither ASIN, jigger nor sink-strainer name matched."
+  },
+  "candidates": [
+    {
+      "name": "OXO Steel Angled Measuring Jigger",
+      "asin": "B00B6LUAPW",
+      "category": "Kitchen tools / small liquid measures",
+      "keyword": "OXO Steel angled jigger ounce tablespoon measuring comparison",
+      "slug": "oxo-steel-angled-measuring-jigger",
+      "variant": {
+        "manufacturer_sku": "1233080",
+        "manufacturer_material": "Stainless steel",
+        "researched_configuration": "Steel angled measuring jigger with ounce/tablespoon markings; public secondary records associate a 2-ounce configuration with this ASIN.",
+        "current_amazon_variant": null,
+        "pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "status": "needs_amazon_verification",
+        "identity_limit": "Older third-party title includes Bulk; do not assume single-unit pack or exact current offer."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/asin/B00B6LUAPW/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-22",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "ParseShelf reports US Bar Tools & Drinkware rank 77 on November 22, 2026, present on 14 of 14 visible recent product dates. Rank is not units, revenue or conversion. Public product card exposes ASIN B00B6LUAPW. Accuracy and collection compliance not independently established; no scraping service invoked."
+        },
+        {
+          "url": "https://www.oxo.com/steel-angled-jigger.html",
+          "type": "manufacturer_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "OXO identifies Steel Angled Jigger SKU 1233080, stainless steel, with ounce and tablespoon markings. Supports product identity and measurement format, not current Amazon pack, seller, stock or calibrated accuracy."
+        },
+        {
+          "url": "https://www.americastestkitchen.com/equipment-reviews/2027-jiggers",
+          "type": "independent_editorial_testing",
+          "updated_at": "2025-11-26",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Miye Bromberg's dated jigger comparison includes the OXO SteeL Angled Jigger and separate plastic mini measuring cup. Testing inclusion supports editorial interest; no rating, award, measured result or performance claim copied. Do not attribute the plastic cup's revised markings to the steel jigger."
+        },
+        {
+          "url": "https://www.desertcart.in/products/1342628-oxo-steel-angled-measuring-jigger-stainless-finish",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Secondary catalog links ASIN B00B6LUAPW with manufacturer part 1233080. Historical non-US catalog association only, not a verified US offer."
+        }
+      ],
+      "purpose": "Measure small liquid quantities using an angled marked surface.",
+      "audience_fit_notes": "Inferred fit for home cooks and home beverage makers comparing a small marked measure with spoons or a double-ended jigger.",
+      "buying_objections": [
+        "Confirm required volume increments and units before choosing this over measuring spoons.",
+        "Check contrast/readability in the intended lighting with a genuine unit; no universal readability claim.",
+        "Verify present pack count because historical bulk wording appears in third-party records.",
+        "Check current cleaning instructions and whether a steel or transparent measure suits the workflow."
+      ],
+      "research_evidence": {
+        "rank": "Third-party Bar Tools & Drinkware rank 77 dated 2026-11-22; 14 of 14 visible product-date observations. No upward momentum inferred.",
+        "editorial": "America's Test Kitchen comparison published November 26, 2025 includes this product type; current exact ASIN variant not independently confirmed.",
+        "manufacturer_specs": "SKU 1233080 stainless steel and ounce/tablespoon format supported by OXO.",
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown"
+      },
+      "score": {
+        "factors": {
+          "demand": 3.5,
+          "audience_fit": 4.1,
+          "purchase_intent": 4.2,
+          "content_gap": 4.3,
+          "affiliate_editorial_suitability": 4.2
+        },
+        "weighted_total": 4.02,
+        "rationale": "Recent persistent category observations and dated independent testing inclusion; actual search/sales data unknown. Uncovered small-volume measurement comparison offers a useful KFF content gap. Current pack ambiguity limits publication readiness.",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "scale": "0–5 editorial heuristic; not a sales forecast"
+      },
+      "confidence": "Medium",
+      "pinterest": {
+        "title": "Small Liquid Measuring Guide: OXO Steel Angled Jigger vs Measuring Spoons",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a small liquid measure? Compare ounce and tablespoon markings, the volumes you use, cleanup and storage before picking the OXO Steel Angled Jigger. Save this checklist for dressings, syrups and homemade drinks.",
+        "board": "Kitchen Measuring & Prep Tools",
+        "image_brief": "Create an original 1000 x 1500 liquid-measuring checklist with generic spoon and angled-cup silhouettes, plus ingredient icons. No copied product photos, logos or exact graduations. Exact-product photography requires verified unit identity and documented commercial rights. Label any generic measure 'Similar item shown'.",
+        "destination": "https://kitchenfindsfavorites.com/picks/oxo-steel-angled-measuring-jigger/",
+        "destination_status": "pending; matching public page not confirmed",
+        "asset_status": "brief_only; no image or commercial media license verified"
+      },
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B00B6LUAPW",
+      "microsite_match": "No specifically matching sink-strainer or small-measure microsite returned by Desk inventory; unrelated guides not assigned.",
+      "video": {
+        "duration_seconds": 180,
+        "title": "Small Pours, Clear Choices: Jigger or Measuring Spoons?",
+        "production_status": "brief_only; no filmed product demonstration or KFF test performed",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Original dressing/syrup prep scene: ask which small-volume measurements the recipe actually needs. Display and speak affiliate disclosure."
+          },
+          {
+            "seconds": "20–50",
+            "brief": "Identify Steel Angled Jigger SKU 1233080 and separate it from OXO's plastic mini cup and double jigger. Use original diagram until genuine unit and current ASIN selection are verified."
+          },
+          {
+            "seconds": "50–90",
+            "brief": "With an owned verified unit, show actual graduation labels and required recipe volumes. Otherwise retain as an unfilmed shot brief; no invented markings or calibrated-accuracy assertion."
+          },
+          {
+            "seconds": "90–125",
+            "brief": "Film equal intended pours using water and spoons versus the genuine jigger only after instructions and identity checks. Show the real process without speed, precision or spill-proof promises."
+          },
+          {
+            "seconds": "125–155",
+            "brief": "Show cleanup and storage questions. Compare steel visibility with a transparent measure without claiming either suits all users."
+          },
+          {
+            "seconds": "155–177",
+            "brief": "Explain who may prefer multiple marked volumes versus existing measuring spoons. No winner based on unperformed testing or sales predictions."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card and disclosure; destination CTA only after matching public page and offer verification."
+          }
+        ],
+        "rights": "Original footage or documented commercial license only; no Amazon/competitor imagery or unlicensed audio. Any similar-item depiction labeled."
+      }
+    },
+    {
+      "name": "OXO Good Grips Silicone Sink Strainer",
+      "asin": "B000U0K5PU",
+      "category": "Kitchen tools / sink cleanup",
+      "keyword": "OXO silicone sink strainer 1308200 fit cleaning comparison",
+      "slug": "oxo-good-grips-silicone-sink-strainer",
+      "variant": {
+        "manufacturer_sku": "1308200",
+        "manufacturer_materials": [
+          "Silicone",
+          "Stainless steel"
+        ],
+        "researched_configuration": "Standard strainer; distinct from OXO's 2-in-1 strainer-and-stopper and Softworks models.",
+        "current_amazon_variant": null,
+        "pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "status": "needs_amazon_verification"
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/asin/B000U0K5PU/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-22",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "ParseShelf reports US Kitchen & Bath Fixtures rank 96 on November 22, 2026, present on 14 of 14 visible recent product dates. Category includes bathroom fixtures; do not treat as Kitchen & Dining rank. Rank is not sales or a current offer. Collection compliance and accuracy not independently established."
+        },
+        {
+          "url": "https://www.oxo.com/silicone-sink-strainer.html",
+          "type": "manufacturer_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "OXO identifies Silicone Sink Strainer SKU 1308200, silicone and stainless steel, 4.4 x 4.4 x 1.6 inches. Manufacturer describes inverting its flexible basket. These overall dimensions do not establish drain-opening compatibility; current Amazon pack/variant unverified."
+        },
+        {
+          "url": "https://www.foodandwine.com/hand-washing-dishes-essentials-amazon-october-2024-8733973",
+          "type": "independent_editorial_roundup",
+          "updated_at": "2024-10-26",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Food & Wine's dated dishwashing roundup includes the standard OXO Good Grips Silicone Sink Strainer. Older editorial inclusion, not present sales or product testing. No claims, prices, ratings or images adopted."
+        },
+        {
+          "url": "https://www.thekitchn.com/amazon-oxo-sink-strainer-review-260777",
+          "type": "independent_editorial_use",
+          "updated_at": "2019-05-01",
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Ayn-Monique Klahre's older use review concerns the standard OXO silicone sink strainer. Historical product-family experience only, not KFF testing, current offer data or compatibility proof. Do not confuse with newer 2-in-1 stopper reviews."
+        },
+        {
+          "url": "https://mrboatparts.com/products/oxo-good-grips-silicone-sink-strainer-1308200v7mlnyk",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-22",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Public secondary product record associates 1308200 with B000U0K5PU. Identity cross-check only; no seller, availability or offer claim adopted."
+        }
+      ],
+      "purpose": "Collect food debris at a compatible kitchen drain opening.",
+      "audience_fit_notes": "Inferred fit for households comparing a flexible basket with a mesh strainer, especially when planning a sink cleanup routine.",
+      "buying_objections": [
+        "Measure the sink opening and recess; overall product width does not guarantee fit.",
+        "This researched product is a strainer, so do not assume stopper functionality.",
+        "Compare basket capacity, emptying and cleaning steps with current mesh insert.",
+        "Check disposal and sink instructions; no universal fit, clog prevention or odor-elimination promise."
+      ],
+      "research_evidence": {
+        "rank": "Third-party Kitchen & Bath Fixtures rank 96 dated 2026-11-22, present on 14 of 14 visible product-date observations; no growth inferred.",
+        "editorial": "October 26, 2024 roundup and May 1, 2019 use review are older context, not recent demand velocity.",
+        "manufacturer_specs": "SKU 1308200 and overall dimensions/materials supported by OXO; sink compatibility unknown.",
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown"
+      },
+      "score": {
+        "factors": {
+          "demand": 3.1,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.1,
+          "content_gap": 4.1,
+          "affiliate_editorial_suitability": 4.3
+        },
+        "weighted_total": 3.98,
+        "rationale": "Current category presence but low rank, mixed category and older editorial evidence temper demand confidence. Sink-fit and standard-versus-stopper comparison provide useful kitchen-specific intent and a new content gap.",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "scale": "0–5 editorial heuristic; not a sales forecast"
+      },
+      "confidence": "Medium",
+      "pinterest": {
+        "title": "Kitchen Sink Strainer Buying Guide: Check Fit Before Choosing OXO",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Replacing a kitchen sink strainer? Check the drain opening, basket space and cleanup routine before choosing OXO’s standard silicone strainer. Compare it with mesh inserts and keep strainer-only and stopper models separate.",
+        "board": "Kitchen Cleanup & Sink Organization",
+        "image_brief": "Create an original 1000 x 1500 fit checklist using a generic sink-drain diagram, tape measure and basket outline. Do not depict guaranteed compatibility or blockage prevention. No Amazon or competitor media. Exact-product photo requires verified identity and commercial rights; label any generic insert 'Similar item shown'.",
+        "destination": "https://kitchenfindsfavorites.com/picks/oxo-good-grips-silicone-sink-strainer/",
+        "destination_status": "pending; matching public page not confirmed",
+        "asset_status": "brief_only; no image or commercial media license verified"
+      },
+      "status": "needs_amazon_verification",
+      "amazonUrl": "https://www.amazon.com/dp/B000U0K5PU",
+      "microsite_match": "No specifically matching sink-strainer or small-measure microsite returned by Desk inventory; unrelated guides not assigned."
+    }
+  ]
+}
