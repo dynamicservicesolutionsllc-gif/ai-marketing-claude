@@ -1,0 +1,209 @@
+{
+  "batch_id": "2026-11-23-afternoon-nordic-springform",
+  "marketplace": "US",
+  "access_date": "2026-11-23",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent from main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent from main)"
+    ],
+    "open_pr_numbers": [
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asin_count": 70,
+    "scope": "Fresh complete catalog and approved ledger, both research-ledger heads, all 36 open PR snapshots/diffs and current Workflow Desk summary. Exact ASIN and Nordic Ware springform identity absent; existing other-brand springform coverage noted."
+  },
+  "intake_method": "Direct HTTPS executor unavailable: no attached computer and no environment attach tool exposed. Used connected Workflow Desk service for private intake and readback; fresh Sites current origin/token obtained and token retained only in memory, never output or sent elsewhere.",
+  "candidates": [
+    {
+      "name": "Nordic Ware 9-Inch Springform Pan, 10-Cup Capacity",
+      "asin": "B000237FSA",
+      "category": "Bakeware / springform pans",
+      "keyword": "Nordic Ware 9 inch springform pan fit capacity comparison",
+      "amazonUrl": "https://www.amazon.com/dp/B000237FSA",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "manufacturer_sku": "55742",
+        "secondary_amazon_model_association": "55742AMZ; not direct current Amazon verification",
+        "manufacturer_upc": "011172557421",
+        "manufacturer_nominal_size": "9 inch",
+        "manufacturer_nominal_capacity": "10 cups",
+        "current_amazon_model": null,
+        "material": null,
+        "finish": null,
+        "pack_count": null,
+        "included_piece_count": null,
+        "seller": null,
+        "current_offer": null,
+        "identity_limits": "Material wording conflicts across manufacturer metadata/body; gray/charcoal naming and two-piece/one-item wording require current listing reconciliation. No two-pan pack asserted."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-23",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "ParseShelf reports US Bakeware rank 93 on November 23, 2026, newly observed versus the prior daily snapshot. This does not mean a new product launch. One visible consecutive observation; growth, units and conversion unknown. Public product card exposes B000237FSA. Collection compliance and accuracy not independently established; no scraping service invoked."
+        },
+        {
+          "url": "https://www.nordicware.com/products/9-springform-pan/",
+          "type": "manufacturer_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Manufacturer identifies 9-inch Springform Pan SKU 55742 and 10-cup capacity. Indexed image descriptions say aluminum while body says carbon steel; current material remains unresolved. Coating, heat limit, warranty, release and seal claims not adopted."
+        },
+        {
+          "url": "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-springform-pans",
+          "type": "independent_editorial_testing",
+          "updated_at": "2026-02-05",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Dated comparative testing includes Nordic Ware's nine-inch springform pan; exact current variant unconfirmed."
+        },
+        {
+          "url": "https://www.nordicware.com/materials/",
+          "type": "manufacturer_model_cross_reference",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Manufacturer material table associates SKU family 55742 with UPC 011172557421 and lists several retailer suffixes. Does not independently prove present Amazon model or pack."
+        },
+        {
+          "url": "https://www.desertcart.ae/products/310173-nordic-ware-springform-2-piece-set-9-inch-pan-10",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Historical secondary catalog associates ASIN B000237FSA with 55742AMZ and UPC 011172557421. Its title says two-piece set while count says one item. Do not infer two complete pans; reconcile exact included pieces through an authorized current Amazon source. Non-US catalog not a US offer."
+        }
+      ],
+      "purpose": "A baking pan with a removable ring and base for releasing delicate desserts.",
+      "audience_fit_notes": "Inferred fit for home bakers planning cheesecakes or other recipes that specify a removable-sided pan, especially when checking cupboard and roasting-vessel space.",
+      "buying_objections": [
+        "Confirm recipe capacity and usable dimensions rather than relying only on nominal diameter.",
+        "Verify whether two-piece wording describes ring and base, rather than two complete pans.",
+        "Resolve material, finish, coating and care/temperature instructions for the exact current unit.",
+        "Do not assume a water-tight seal or a match to an existing roasting vessel.",
+        "An occasional-use pan may not justify cupboard space if existing bakeware suits the recipe."
+      ],
+      "research_evidence": {
+        "rank": "Third-party US Bakeware rank 93 dated 2026-11-23; new in prior-day comparison, not a product launch or unit-sales signal.",
+        "editorial": "Dated February 5, 2026 comparative editorial testing includes the nine-inch product family; present Amazon variant unconfirmed.",
+        "manufacturer_specs": "SKU 55742, nominal nine-inch size and ten-cup capacity supported by manufacturer; disputed material not adopted.",
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown",
+        "trend_velocity": "unknown; one visible consecutive category observation"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 2.9,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.1,
+          "content_gap": 3,
+          "affiliate_editorial_suitability": 3.8
+        },
+        "weighted_total": 3.69,
+        "rationale": "Recent low category rank and dated testing inclusion support a research draft, with no sales data. Baking fit is strong but existing springform coverage and unresolved variant details reduce novelty and suitability."
+      },
+      "confidence": "Medium",
+      "confidence_limits": "Medium product-family research confidence; Low current variant/offer confidence. Not publication-qualified.",
+      "pinterest": {
+        "title": "9-Inch Springform Pan Buying Guide: Nordic Ware Fit and Storage Checklist",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning cheesecake or a delicate dessert? Compare recipe capacity, base-and-ring fit, outer dimensions and storage before choosing a Nordic Ware 9-inch springform pan. Confirm the exact pieces and care instructions before buying.",
+        "board": "Baking Pans & Cheesecake Ideas",
+        "destination": "https://kitchenfindsfavorites.com/picks/nordic-ware-9-inch-springform-pan/",
+        "destination_status": "pending; matching public product page not confirmed",
+        "image_brief": "Create an original 1000 x 1500 planning graphic with a generic removable ring/base diagram, recipe-capacity checklist and cupboard-space outline. No copied product photos, brand-store or Amazon imagery. Exact-product photography needs verified current unit identity and commercial reuse rights. Label generic pan 'Similar item shown'.",
+        "asset_status": "brief_only; media and commercial reuse rights pending"
+      },
+      "micrositeUrl": "https://baking-pans-small-apartments.kitchenfindsfavorites.com/",
+      "microsite_match_status": "Existing Desk inventory target; thematic match only, live page health not checked and no edits made.",
+      "video": {
+        "duration_seconds": 180,
+        "title": "One Pan or Two Pieces? A Springform Pan Buying Checklist",
+        "production_status": "brief_only; no KFF hands-on testing or recorded video",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Original dessert-planning scene and disclosure: ask what the recipe needs before selecting a pan."
+          },
+          {
+            "seconds": "20–50",
+            "brief": "Use an original generic ring/base diagram to explain why piece count can differ from pan count. Do not show two pans as this ASIN's contents."
+          },
+          {
+            "seconds": "50–90",
+            "brief": "With a genuine verified unit, measure usable diameter, height and storage footprint; otherwise leave as unfilmed shot plan. Keep nominal nine-inch and ten-cup labels distinct from measured fit."
+          },
+          {
+            "seconds": "90–125",
+            "brief": "Check the actual recipe and roasting-vessel clearance. Do not assert water-tightness, release performance, coating or heat limit until current model instructions and genuine footage support it."
+          },
+          {
+            "seconds": "125–155",
+            "brief": "Show an instruction checklist for ring assembly, care and storage. No staged bake that implies unperformed performance testing."
+          },
+          {
+            "seconds": "155–177",
+            "brief": "Compare removable-sided format with existing round cake pans for the viewer's recipe and cupboard; no universal best-pan claim."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card with disclosure; activate destination only after listing, page and assets are reviewed."
+          }
+        ],
+        "rights": "Original footage or separately documented commercial license only. No competitor or Amazon media; similar-item illustrations labeled."
+      }
+    }
+  ]
+}
