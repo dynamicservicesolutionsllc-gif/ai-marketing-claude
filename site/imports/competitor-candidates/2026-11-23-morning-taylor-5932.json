@@ -1,0 +1,218 @@
+{
+  "batch_id": "2026-11-23-morning-taylor-5932",
+  "marketplace": "US",
+  "access_date": "2026-11-23",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent on main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent on main)"
+    ],
+    "open_pr_numbers": [
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asin_count": 69,
+    "scope": "Fresh catalog, approved ledger, both research-ledger heads, all 35 open PR snapshots/diffs and Desk priorAsins. ASIN and Taylor 5932 identity absent."
+  },
+  "held_research": {
+    "name": "Zulay Kitchen Stainless Steel Turkey Baster",
+    "asin": "B09Y6RN2G2",
+    "status": "not_submitted",
+    "blocker": "Manufacturer product page returned unrelated milk-frother FAQ content; exact accessory set and model support unresolved.",
+    "source": "https://www.zulaykitchen.com/products/turkey-baster-stainless-steel"
+  },
+  "candidates": [
+    {
+      "name": "Taylor Large Dial Oven Thermometer, Model 5932",
+      "asin": "B0000DJUYR",
+      "category": "Kitchen tools / oven thermometers",
+      "keyword": "Taylor 5932 large dial oven thermometer placement comparison",
+      "amazonUrl": "https://www.amazon.com/dp/B0000DJUYR",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "manufacturer_model": "5932",
+        "manufacturer_nominal_dial": "3 inch",
+        "manufacturer_listed_range": "100–600 F / 50–300 C",
+        "manufacturer_listed_material": "Stainless steel",
+        "supported_association": "Public product link and secondary manual associate this ASIN with Taylor 5932.",
+        "current_amazon_model": null,
+        "pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "dimension_limit": "Secondary 3.25-inch wording differs from manufacturer nominal 3-inch label; current packaging and instructions need reconciliation."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-23",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "ParseShelf reports US Kitchen Utensils & Gadgets rank 36 on November 23, 2026, up eight places from the preceding daily snapshot. Public card exposes B0000DJUYR. Rank is not units, revenue, conversion or a currently verified Amazon offer. Collection compliance and accuracy not independently established; no scraping service invoked."
+        },
+        {
+          "url": "https://www.taylorusa.com/products/oven-thermometer",
+          "type": "manufacturer_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Taylor identifies Large Dial Oven Thermometer SKU 5932 with a nominal 3-inch dial, stainless steel housing, hanging/standing placement, and marked range 100–600 F / 50–300 C. These are manufacturer-listed specifications, not verified measurement accuracy. Current Amazon model/pack/offer remain unconfirmed."
+        },
+        {
+          "url": "https://www.reviewed.com/ovens/best-right-now/the-best-oven-thermometers/",
+          "type": "independent_editorial_testing",
+          "updated_at": "2024-05-02",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Sarah Zorn and Danielle DeSiato's comparison includes Taylor 5932. Exact-model historical testing signal, not present sales. Its assessment differs from the other independent comparison; do not convert editorial inclusion into a KFF accuracy guarantee or recommendation."
+        },
+        {
+          "url": "https://www.yourbestdigs.com/reviews/the-best-oven-thermometer/",
+          "type": "independent_editorial_testing",
+          "updated_at": "2020-01-31",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Gene Gerrard's older seven-thermometer comparison includes Taylor 5932. Its findings conflict with Reviewed's assessment. No numerical performance result, review prose, ratings or imagery copied; current-unit verification required before making accuracy or durability claims."
+        },
+        {
+          "url": "https://slickdeals.net/f/20344467-4-99-taylor-analog-oven-thermometer-3-inch-at-amazon",
+          "type": "public_product_link_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Public historical deal explicitly exposes amazon.com/dp/B0000DJUYR for Taylor's three-inch analog oven thermometer. Amazon link not clicked. No price, shipping, seller or availability claim adopted."
+        },
+        {
+          "url": "https://manuals.plus/asin/B0000DJUYR.pdf",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page access rules not established",
+          "evidence": "Search-indexed manual associates B0000DJUYR with Taylor 5932; mentions 3.25-inch dial wording versus manufacturer's nominal 3-inch label. Do not assert these dimensions are interchangeable or a new variant; reconcile current packaging and instructions."
+        }
+      ],
+      "purpose": "Observe oven air temperature using a dial instrument placed according to current instructions.",
+      "audience_fit_notes": "Inferred fit for bakers comparing a rack-mounted dial instrument with their existing oven display or a separately verified probe system. Category overlap with the existing Rubbermaid thermometer reduces novelty.",
+      "buying_objections": [
+        "Independent historical comparisons disagree; do not assume any current unit's accuracy.",
+        "Check visibility through the actual oven window, rack clearance and hanging/standing fit.",
+        "Reconcile nominal dial wording and present pack contents before purchase.",
+        "Check current use and care instructions and wait for stabilization; no instant-reading claim.",
+        "This product is not an internal-food probe or proof of safe cooking."
+      ],
+      "research_evidence": {
+        "rank": "Third-party Kitchen Utensils & Gadgets rank 36 on 2026-11-23, up eight daily positions; no sales or conversion inference.",
+        "manufacturer_specs": "Taylor SKU 5932, nominal 3-inch dial and labeled temperature range supported by manufacturer; accuracy not verified.",
+        "editorial": "Exact model included in May 2, 2024 Reviewed and January 31, 2020 Your Best Digs comparisons; conflicting assessments explicitly unresolved.",
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown",
+        "current_unit_accuracy": "unknown; verification required before endorsement"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.6,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.2,
+          "content_gap": 2.8,
+          "affiliate_editorial_suitability": 3.4
+        },
+        "weighted_total": 3.8,
+        "rationale": "Current category observation and exact-model editorial inclusion support a research draft. Existing oven-thermometer coverage reduces content gap; contradictory older performance findings lower editorial suitability. Search volume, sales and current offer remain unknown."
+      },
+      "confidence": "Medium",
+      "confidence_limits": "Medium identity/research confidence; current offer and measurement performance unverified. Research selection is not a product endorsement.",
+      "pinterest": {
+        "title": "Oven Thermometer Buying Guide: Taylor 5932 Placement and Dial Checklist",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering a Taylor 5932 oven thermometer? Compare rack fit, dial visibility, marked range and cleaning instructions before choosing. Save this checklist alongside your baking setup, and confirm readings before changing your oven routine.",
+        "board": "Baking Tools & Oven Setup",
+        "destination": "https://kitchenfindsfavorites.com/picks/taylor-5932-large-dial-oven-thermometer/",
+        "destination_status": "pending; matching public site page not confirmed",
+        "image_brief": "Create an original 1000 x 1500 oven-planning checklist with a generic rack outline, sightline diagram and unlabeled dial silhouette. No copied product photos or exact simulated readings. Use genuine Taylor imagery only after verified identity and documented commercial reuse rights. Label any generic thermometer 'Similar item shown'.",
+        "asset_status": "brief_only; original image and commercial media rights not yet verified"
+      },
+      "microsite_match": "No specifically relevant oven-thermometer microsite in the current Desk inventory; no unrelated appliance guide assigned.",
+      "video": {
+        "duration_seconds": 180,
+        "title": "Can You Read It Through the Door? An Oven Thermometer Setup Checklist",
+        "production_status": "brief_only; no KFF hands-on test, recording or public video created",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Original oven-window footage: ask whether the chosen dial will be visible where it actually sits. Show and speak affiliate disclosure."
+          },
+          {
+            "seconds": "20–50",
+            "brief": "Identify Taylor 5932 and the manufacturer's nominal dial/range; distinguish an oven-air thermometer from an internal-food probe. Use original diagrams until genuine unit identity is verified."
+          },
+          {
+            "seconds": "50–85",
+            "brief": "On a cool oven, show checking rack clearance and sightline with the genuine verified unit and current instructions; otherwise retain an unfilmed shot list."
+          },
+          {
+            "seconds": "85–125",
+            "brief": "If an actual controlled comparison is later performed, film the full stabilization and reference procedure and report only measured observations. Do not invent accuracy, instant response or an oven calibration result."
+          },
+          {
+            "seconds": "125–155",
+            "brief": "Explain that historical editorial findings differ. Show a neutral checklist for visibility, placement, handling and care without adopting either review's performance claims."
+          },
+          {
+            "seconds": "155–177",
+            "brief": "Compare the workflow with the existing oven display and a separately verified probe system; do not prescribe thermostat repairs or guarantee cooking results."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card and disclosure; destination CTA only after listing, page and media review."
+          }
+        ],
+        "rights": "Original footage or documented commercial license only. No Amazon-hosted or competitor images/audio. Clearly label any similar-item illustration."
+      }
+    }
+  ]
+}
