@@ -1,0 +1,205 @@
+{
+  "batch_id": "2026-11-23-evening-all-clad-ha1",
+  "marketplace": "US",
+  "access_date": "2026-11-23",
+  "state": "research_draft_only",
+  "deduplication": {
+    "files": [
+      "site/products.json",
+      "site/imports/sitestripe.json",
+      "site/imports/competitor-candidates.json (PR 62 head; absent from main)",
+      "site/imports/pinterest-research-batch-50.json (PR 63 head; absent from main)"
+    ],
+    "open_pr_numbers": [
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asin_count": 71,
+    "scope": "Fresh full catalog, approved ledger, both research-ledger heads, all 37 open PR snapshots/diffs and current authenticated Desk priorAsins. Exact ASIN and HA1 family absent."
+  },
+  "candidates": [
+    {
+      "name": "All-Clad HA1 Nonstick 2-Piece Fry Pan Set, 8 and 10 Inch",
+      "asin": "B0170TFNXM",
+      "category": "Cookware / nonstick fry-pan sets",
+      "keyword": "All Clad HA1 8 10 inch fry pan set original Expert comparison",
+      "amazonUrl": "https://www.amazon.com/dp/B0170TFNXM",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "publicly_associated_configuration": "Eight- and ten-inch fry-pan pair; current pack count unverified.",
+        "secondary_model_association": "2100090557; historical non-US catalog association only",
+        "manufacturer_comparison_model": "Current HA1 Expert page: 2100137085 / E122S274, not verified as this ASIN.",
+        "current_generation": null,
+        "current_model": null,
+        "pack_count": null,
+        "included_lids": null,
+        "seller": null,
+        "current_offer": null,
+        "identity_limits": "Original HA1, HA1 Expert and HA1 Ceramic are distinct. No interchangeability, current coating, care, oven limit, warranty or handle-spec claim adopted."
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/weekly/",
+          "type": "independent_published_rank_snapshot",
+          "updated_at": "2026-11-23",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "ParseShelf reports US Cookware rank 74 on November 16 and 59 on November 23, 2026 for B0170TFNXM. Weekly rank improvement is not units, revenue, conversion or guaranteed current demand. Public product card exposes ASIN. Collection compliance and accuracy not independently established; no scraper or enrichment service invoked."
+        },
+        {
+          "url": "https://www.all-clad.com/ha1-expert-cookware-nonstick-2-piece-fry-set-8-and-10-in.html",
+          "type": "manufacturer_generation_comparison",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Current manufacturer page identifies the HA1 Expert eight- and ten-inch two-fry-pan configuration, SKU 2100137085/model E122S274. This differs from secondary older-ASIN model association 2100090557. Do not identify B0170TFNXM as E122S274 or transfer current Expert coating, handles, care, temperature or warranty claims."
+        },
+        {
+          "url": "https://prudentreviews.com/all-clad-ha1-review/",
+          "type": "independent_editorial_testing",
+          "updated_at": "2026-01-08",
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Andrew Palermo's dated HA1 review reports testing the original line and distinguishes the later HA1 Expert update. Product-family testing, not this exact two-pan bundle or KFF hands-on evidence. No performance findings, review prose, prices, images or ratings adopted."
+        },
+        {
+          "url": "https://www.desertcart.com.eg/products/28887329-ha1-nonstick-2-piece-fry-pan-set-induction-ready",
+          "type": "secondary_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Historical secondary catalog associates B0170TFNXM with part 2100090557 and an eight-/ten-inch pair. Non-US catalog is not a verified current US model/variant, pack, seller or offer."
+        },
+        {
+          "url": "https://slickdeals.net/f/17757999-45-2-piece-all-clad-ha1-hard-anodized-nonstick-fry-pan-set-8-inch-10-inch-at-amazon",
+          "type": "public_product_link_identity",
+          "updated_at": null,
+          "accessed_at": "2026-11-23",
+          "access_method": "search_index_only; direct-page reading rules not established",
+          "evidence": "Historical public deal explicitly exposes amazon.com/dp/B0170TFNXM for the eight-/ten-inch pair. Amazon link not clicked. No historical price, purchase volume, coupon, shipping or seller claim adopted."
+        }
+      ],
+      "purpose": "A two-size fry-pan format for everyday stovetop meal preparation.",
+      "audience_fit_notes": "Inferred fit for cooks replacing two commonly used fry-pan sizes while avoiding a full cookware set; generation and actual cupboard/burner fit matter more than brand-name comparison alone.",
+      "buying_objections": [
+        "Verify original HA1 versus Expert or Ceramic identity before comparing claims.",
+        "Nominal eight-/ten-inch sizing does not establish usable flat cooking area or overall handle footprint.",
+        "Check actual handle feel and pan weight with genuine units; no maneuverability promise.",
+        "Confirm care instructions, heat limits, utensils and included accessories for the exact model.",
+        "Existing serviceable pans may already cover the intended portion sizes."
+      ],
+      "research_evidence": {
+        "rank": "Third-party US Cookware rank 74 on 2026-11-16 → 59 on 2026-11-23; rank positions only.",
+        "editorial": "Independent January 8, 2026 family-level review distinguishes original HA1 from Expert; exact two-pan bundle performance unknown.",
+        "manufacturer_specs": "Current manufacturer eight-/ten-inch Expert pair documented as comparison context; generation/model mismatch prevents transferring specs to researched ASIN.",
+        "estimated_sales": "unknown; estimates excluded",
+        "ratings_review_counts": "unknown_not_copied",
+        "search_volume": "unknown",
+        "conversion": "unknown"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.6,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.2,
+          "content_gap": 3,
+          "affiliate_editorial_suitability": 3.6
+        },
+        "weighted_total": 3.86,
+        "rationale": "Recent weekly rank improvement and dated family testing justify a research draft; broad existing cookware coverage reduces gap. Generation/model ambiguity limits editorial suitability and current-offer confidence. Actual sales/search volume unknown."
+      },
+      "confidence": "Medium",
+      "confidence_limits": "Medium research confidence; current generation, listing and offer confidence Low. Research selection is not publication qualification.",
+      "pinterest": {
+        "title": "All-Clad HA1 Fry Pan Set Buying Guide: Check Sizes and Generation",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing an 8- and 10-inch All-Clad HA1 fry-pan set? Check the exact model, handle design, usable cooking area and care instructions. Keep original HA1, HA1 Expert and HA1 Ceramic versions separate when planning your kitchen upgrade.",
+        "board": "Cookware Comparisons & Small Kitchen Ideas",
+        "destination": "https://kitchenfindsfavorites.com/picks/all-clad-ha1-8-10-inch-fry-pan-set/",
+        "destination_status": "pending; matching public product page not confirmed",
+        "image_brief": "Original 1000 x 1500 buyer checklist showing two generic pan silhouettes, a model-label checklist and cupboard-footprint outline. No Amazon, manufacturer or competitor images. Exact-product photography needs verified generation and commercial reuse rights. Label generic pans 'Similar item shown'.",
+        "asset_status": "brief_only; no actual imagery, footage or commercial media rights verified"
+      },
+      "micrositeUrl": "https://cookware-sets-small-apartments.kitchenfindsfavorites.com/",
+      "microsite_match_status": "Existing Desk inventory guide; thematic two-pan storage match only, no live health check or site edits.",
+      "video": {
+        "duration_seconds": 180,
+        "title": "Which HA1 Is It? A Two-Pan Buying Checklist",
+        "production_status": "brief_only; no KFF product test or footage created",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "brief": "Original cupboard and meal-planning footage; disclose affiliate relationship and ask whether two pan sizes cover the viewer's routine."
+          },
+          {
+            "seconds": "20–55",
+            "brief": "Original generation checklist: distinguish original HA1, Expert and Ceramic by verified labels, not assumed photos. Keep ASIN/model uncertainty explicit."
+          },
+          {
+            "seconds": "55–90",
+            "brief": "With genuine verified units, measure flat cooking area and handle/storage footprint; otherwise keep the shot list unfilmed. Do not treat nominal diameters as cooking-surface dimensions."
+          },
+          {
+            "seconds": "90–125",
+            "brief": "Only after exact identity, instructions and rights checks, film normal stovetop use. No invented release, heating-speed or durability result."
+          },
+          {
+            "seconds": "125–155",
+            "brief": "Compare each exact model's current care and utensil instructions. Do not transfer Expert oven, coating, dishwasher or warranty statements to the older ASIN."
+          },
+          {
+            "seconds": "155–177",
+            "brief": "Summarize fit questions: portions, cupboard space, handle preference and existing cookware. No universal best-set, safety or sales claims."
+          },
+          {
+            "seconds": "177–180",
+            "brief": "KFF end card and disclosure; activate destination only after current listing, page and assets pass review."
+          }
+        ],
+        "rights": "Original footage or separately documented commercial media license only; no Amazon or competitor imagery/audio. Similar items clearly labeled."
+      }
+    }
+  ]
+}
