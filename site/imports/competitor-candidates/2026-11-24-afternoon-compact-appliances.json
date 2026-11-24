@@ -1,0 +1,377 @@
+{
+  "batch_id": "2026-11-24-afternoon",
+  "marketplace": "US",
+  "access_date": "2026-11-24",
+  "state": "research_draft_only",
+  "deduplication": {
+    "main_paths": [
+      "site/products.json",
+      "site/imports/sitestripe.json"
+    ],
+    "research_paths": [
+      "refs/pull/62/head:site/imports/competitor-candidates.json",
+      "refs/pull/63/head:site/imports/pinterest-research-batch-50.json"
+    ],
+    "note": "Both research ledgers absent on main; full PR-head files inspected.",
+    "open_prs": [
+      115,
+      114,
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "desk_prior_asins": 73,
+    "result": "Neither ASIN/model is an existing product candidate. AF141 appears once as an accessory-fit example only; existing AF181 and other kettle coverage reduce content-gap scores."
+  },
+  "candidates": [
+    {
+      "name": "Ninja Air Fryer Pro 4-in-1, 5 Qt, Grey, AF141",
+      "asin": "B0CSZ7WBYW",
+      "category": "Small appliances / air fryers",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "publicly_associated_model": "AF141",
+        "publicly_associated_size": "5 QT",
+        "publicly_associated_color": "Grey",
+        "current_amazon_model": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Manufacturer identifies AF141 and nominal capacity; indexed public Amazon link associates the grey 5-QT model with this ASIN. This is corroborated identity, not direct present Amazon verification. AF140 and AF181 are separate models. Coating/cleaning/physical measurements and exact included accessories must be checked for the current listing."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-24",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "US Kitchen & Dining snapshot places exact ASIN at 67 versus 97 on November 23. Dated third-party positions, not units or verified current Amazon rank/offer. No enrichment or Amazon request made; publisher collection compliance/accuracy not independently established."
+        },
+        {
+          "publisher": "SharkNinja",
+          "url": "https://www.sharkninja.com/ninja-air-fryer-pro-4-in-1/AF141.html",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Manufacturer identifies AF141, nominal 5-QT capacity, four functions and US electrical rating 120V/1750W. These are model specifications, not measured KFF results or ASIN offer verification. No crispness, batch-serving, oil/fat, speed, availability or warranty claims adopted."
+        },
+        {
+          "publisher": "RTINGS",
+          "url": "https://www.rtings.com/air-fryer/reviews/ninja/pro-af141",
+          "updated": "2026-02-20",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Independent exact-model review first published September 23, 2024; indexed review shows a February 20, 2026 test-bench update. Other comparison pages show later updates, so this is the indexed review date, not an assertion of its latest revision. No numerical ratings, test results, comparative findings or images adopted."
+        },
+        {
+          "publisher": "Slickdeals",
+          "url": "https://slickdeals.net/f/20359062-ninja-air-fryer-pro-4-in-1-5-qt-af141-grey-79-99",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Indexed post explicitly exposes https://www.amazon.com/dp/B0CSZ7WBYW for AF141 grey 5-QT. Exact posting/update date unknown because relative indexed dates conflict. Identity evidence only; all deal, seller, shipping, price and rating claims excluded."
+        },
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/weekly/",
+          "updated": "2026-11-24",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Weekly comparison November 17 to 24 records 43 to 67, down 24 places. The daily recovery does not establish sustained demand growth."
+        }
+      ],
+      "purpose": "Single-basket countertop appliance for air-frying and other labeled cooking modes.",
+      "audience_fit": "Small-kitchen households comparing a nominal 5-QT single basket with the larger AF181 already covered by KFF; buyers who value a short model-and-fit checklist.",
+      "buying_objections": [
+        "Nominal quarts do not establish useful single-layer area or a guaranteed serving count.",
+        "Check counter clearance, drawer travel, electrical instructions and actual basket dimensions from the exact unit.",
+        "Confirm AF141 rather than AF140, AF181 or a different bundle; do not reuse accessory-fit wording as measured compatibility evidence.",
+        "Current materials/coating, care, accessories, condition and seller remain unresolved for the ASIN.",
+        "Existing KFF air-fryer coverage reduces novelty; the useful gap is an original fit-first comparison, not another general best-air-fryer claim."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "category": "Kitchen & Dining",
+          "date": "2026-11-24",
+          "rank": 67,
+          "daily_baseline": "2026-11-23",
+          "daily_baseline_rank": 97,
+          "weekly_baseline": "2026-11-17",
+          "weekly_baseline_rank": 43
+        },
+        "demand_interpretation": "Recent daily recovery but weaker weekly position; no sustained growth or unit-sales inference.",
+        "verified_specs": {
+          "source": "SharkNinja indexed exact-model page",
+          "model": "AF141",
+          "nominal_capacity": "5 QT",
+          "functions": [
+            "Air Fry",
+            "Roast",
+            "Reheat",
+            "Dehydrate"
+          ],
+          "rated_voltage": "120 V",
+          "rated_power": "1750 W"
+        },
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion": null,
+        "ratings": null,
+        "review_counts": null,
+        "independent_editorial": "Exact-model testing exists; no findings copied.",
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.5,
+          "audience_fit": 4.6,
+          "purchase_intent": 4.3,
+          "content_gap": 2.4,
+          "affiliate_editorial_suitability": 4
+        },
+        "weighted_total": 3.85,
+        "rationale": "Recent but mixed rank evidence, manufacturer model identity and dated independent comparison support a draft. Existing Ninja coverage reduces content-gap score. Actual sales, search volume and current offer unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "Ninja AF141 5 quart air fryer buying guide",
+      "amazon_url": "https://www.amazon.com/dp/B0CSZ7WBYW",
+      "microsite_match": {
+        "url": "https://air-fryers-small-apartments.kitchenfindsfavorites.com/",
+        "status": "Existing Desk inventory; thematic match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Ninja AF141 Air Fryer Buying Guide: Check Basket Space Before You Choose",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing the Ninja AF141 5-quart air fryer? Start with counter clearance, drawer space, basket layout and the exact model label. Use this small-kitchen checklist before deciding whether a single-basket air fryer fits your cooking routine.",
+        "board": "Small Kitchen Appliances & Air Fryer Ideas",
+        "destination": "https://kitchenfindsfavorites.com/picks/ninja-af141-5-quart-air-fryer/",
+        "destination_status": "pending; matching public product page not confirmed",
+        "image_brief": "Original 1000 x 1500 kitchen-counter composition with a generic single-basket air-fryer silhouette, drawer-clearance outline and model-check graphic. Label generic depiction 'Similar item shown'. Commission original art or photography with documented commercial site, Pin and video rights. No Amazon, competitor or unlicensed manufacturer imagery.",
+        "asset_status": "brief_only; media and rights pending"
+      },
+      "video_production_angle": {
+        "duration_seconds": 180,
+        "title": "Will a 5-Quart Air Fryer Fit Your Routine?",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "direction": "Open on an original countertop scene with disclosure. Ask what matters beyond the 5-QT label; identify AF141 as the researched model."
+          },
+          {
+            "seconds": "20–55",
+            "direction": "Use a generic appliance silhouette labeled Similar item shown to illustrate drawer travel and counter clearance. No invented numerical clearance."
+          },
+          {
+            "seconds": "55–90",
+            "direction": "Show a generic basket outline to explain nominal volume versus food layout. Any actual AF141 measurements require the verified unit; do not copy publisher measurements or results."
+          },
+          {
+            "seconds": "90–125",
+            "direction": "Original model checklist: AF141, AF140 and AF181 are different. Discuss intended cooking tasks without claiming comparative cooking speed or crispness."
+          },
+          {
+            "seconds": "125–155",
+            "direction": "Show a checklist for exact instructions, electrical requirements, care and supplied parts. No coating, dishwasher or accessory-fit assertion until verified."
+          },
+          {
+            "seconds": "155–177",
+            "direction": "Conclude with buyer questions: routine batch size, available space and whether existing cookware already meets the need. No sales or performance promises."
+          },
+          {
+            "seconds": "177–180",
+            "direction": "KFF end card; use the matching reviewed destination only after it exists."
+          }
+        ],
+        "status": "production_plan_only; no KFF hands-on testing, footage or commercial media rights verified"
+      },
+      "publication_holds": [
+        "Current Amazon identity, exact variant/pack, condition, seller and offer need authorized verification",
+        "Actual media and commercial reuse rights pending",
+        "Matching public /picks/ destination pending"
+      ]
+    },
+    {
+      "name": "Hamilton Beach Compact 1 Liter Glass Kettle, 40930",
+      "asin": "B074T6KZRK",
+      "category": "Small appliances / electric kettles",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "publicly_associated_model": "40930",
+        "publicly_associated_capacity": "1 liter",
+        "publicly_associated_finish": "Glass with stainless steel accents",
+        "current_amazon_model": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Secondary record associates ASIN and 40930; manufacturer exact-model page matches nominal capacity and glass construction. 40930G and 40930C have separate documentation and must not be substituted. Manufacturer archive placement and a retailer's new-condition unavailability do not establish Amazon availability or discontinuation."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/asin/B074T6KZRK/",
+          "updated": "2026-11-24",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "US Coffee, Tea & Espresso Appliances rank 83 on November 24 versus 41 on November 17. Observed on 14 of 14 recent recorded product dates. Presence supports interest, but the weekly decline does not support a trending-up claim. Third-party rank only; publisher accuracy/collection compliance not independently established."
+        },
+        {
+          "publisher": "Hamilton Beach",
+          "url": "https://hamiltonbeach.com/compact-1-liter-glass-kettle-40930",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Manufacturer identifies 40930, nominal 1-liter capacity, glass sides/stainless accents, cord-free serving, mesh filter and dimensions 8.07 H x 7.87 W x 5.51 D inches. These model facts do not verify the Amazon variant or offer. Comparative speed/safety and convenience claims excluded."
+        },
+        {
+          "publisher": "Device.report",
+          "url": "https://device.report/hamilton-beach/40930",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Secondary model record explicitly links 40930 and B074T6KZRK. Its aggregated specifications contain inconsistent capacity and weight fields; do not adopt these. Model/ASIN corroboration only, not an authorized Amazon offer source."
+        },
+        {
+          "publisher": "Hamilton Beach",
+          "url": "https://hamiltonbeach.com/editors-picks?filter=electric+lunch+box",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Manufacturer attributes older Best Reviews syndicated coverage to November 2022. This is not independently inspected editorial testing and does not prove current demand; excluded from demand score."
+        },
+        {
+          "publisher": "Best Buy",
+          "url": "https://www.bestbuy.com/product/hamilton-beach-1l-electric-kettle-black-stainless-steel/J78R3HTX52",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; page access rules not established, so no direct page fetch",
+          "evidence": "Indexed retailer record confirms model 40930 but says not available new there. Do not transfer retailer condition/stock to Amazon. No rating or review material retained."
+        }
+      ],
+      "purpose": "Electric kettle for heating water for a small household's tea, coffee or other hot-water preparation.",
+      "audience_fit": "One-person or two-person households seeking a nominal 1-liter kettle and comparing countertop footprint with existing larger KFF kettle coverage.",
+      "buying_objections": [
+        "A 1-liter label may mean more refills for entertaining; useful minimum-fill and working-volume guidance needs exact instructions.",
+        "Confirm 40930 rather than suffix variants, used/open-box units or a replacement model.",
+        "Check handling, lid access, descaling and actual available counter space; no safe-to-touch or break-resistance claim.",
+        "Manufacturer archive and retailer condition limitations make current exact Amazon condition/offer confirmation necessary.",
+        "No clearly dated independent exact-model test was independently found; do not treat a manufacturer's award list as fresh editorial proof."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "category": "Coffee, Tea & Espresso Appliances",
+          "date": "2026-11-24",
+          "rank": 83,
+          "weekly_baseline": "2026-11-17",
+          "weekly_baseline_rank": 41,
+          "observed_recent_product_dates": 14,
+          "total_recent_product_dates": 14
+        },
+        "demand_interpretation": "Observed category presence with a deteriorating weekly position, not a growth story.",
+        "verified_specs": {
+          "source": "Hamilton Beach indexed exact-model page",
+          "model": "40930",
+          "nominal_capacity": "1 liter",
+          "manufacturer_dimensions": "8.07 H x 7.87 W x 5.51 D inches"
+        },
+        "independent_dated_testing": "unknown; manufacturer-attributed older award not independently inspected",
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion": null,
+        "ratings": null,
+        "review_counts": null,
+        "confidence": "Medium",
+        "editorial_test_confidence": "Low",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 2.8,
+          "audience_fit": 4.6,
+          "purchase_intent": 4,
+          "content_gap": 2.8,
+          "affiliate_editorial_suitability": 3.7
+        },
+        "weighted_total": 3.63,
+        "rationale": "Manufacturer exact-model identity and recent independent rank snapshot support a cautious compact-kettle draft. Weekly rank deterioration, older/missing independent testing and existing kettle coverage limit the score. Actual sales/search/conversion remain unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "Hamilton Beach 40930 compact 1 liter glass kettle guide",
+      "amazon_url": "https://www.amazon.com/dp/B074T6KZRK",
+      "microsite_match": {
+        "url": "https://electric-kettles-small-apartments.kitchenfindsfavorites.com/",
+        "status": "Existing Desk inventory; thematic match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Compact 1-Liter Kettle Buying Guide: Check the Hamilton Beach 40930",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a compact glass kettle? Compare the Hamilton Beach 40930 model label, available counter space, refill needs and care instructions. Check the exact version and condition before planning a small-kitchen upgrade.",
+        "board": "Small Kitchen Coffee & Tea Stations",
+        "destination": "https://kitchenfindsfavorites.com/picks/hamilton-beach-40930-1-liter-glass-kettle/",
+        "destination_status": "pending; matching public product page not confirmed",
+        "image_brief": "Original 1000 x 1500 beverage-station composition with a generic glass kettle, two mugs and a counter-footprint checklist. Label generic depiction 'Similar item shown'. Use original/commissioned photography or art with documented commercial site, Pin and video rights. No Amazon, competitor or unlicensed manufacturer media.",
+        "asset_status": "brief_only; media and rights pending"
+      },
+      "publication_holds": [
+        "Current Amazon identity, exact variant/pack, condition, seller and offer need authorized verification",
+        "Actual media and commercial reuse rights pending",
+        "Matching public /picks/ destination pending"
+      ]
+    }
+  ]
+}
