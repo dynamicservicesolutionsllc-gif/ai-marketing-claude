@@ -1,0 +1,237 @@
+{
+  "batch_id": "2026-11-24-morning",
+  "marketplace": "US",
+  "access_date": "2026-11-24",
+  "state": "research_draft_only",
+  "deduplication": {
+    "catalog": "main:site/products.json",
+    "approved_ledger": "main:site/imports/sitestripe.json",
+    "competitor_ledger": "refs/pull/62/head:site/imports/competitor-candidates.json (absent on main)",
+    "fifty_item_ledger": "refs/pull/63/head:site/imports/pinterest-research-batch-50.json (absent on main)",
+    "open_prs_checked": [
+      114,
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "workflow_prior_asins_checked": 72,
+    "result": "No ASIN, Mrs. Anderson or pie-weight name match. Existing generic baking coverage considered in fit and content-gap judgment."
+  },
+  "candidates": [
+    {
+      "name": "Mrs. Anderson's Baking Ceramic Pie Crust Weights",
+      "asin": "B00004S1BT",
+      "category": "Baking tools / pie weights",
+      "marketplace": "US",
+      "amazon_url": "https://www.amazon.com/dp/B00004S1BT",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "publicly_associated_configuration": "135 ceramic beads / natural stoneware; search-indexed association only",
+        "secondary_model": "108",
+        "secondary_upc": "781723001085",
+        "manufacturer_exact_specification_confirmation": null,
+        "current_amazon_model": null,
+        "current_amazon_variant": null,
+        "current_pack_count": null,
+        "current_net_weight": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Public ASIN-linked rank card and secondary catalog associate the ceramic version with this ASIN. Retailer model/UPC association is not manufacturer verification. The older editorial comparison used an eight-ounce package and discusses other quantities; do not transfer its tested quantity to the present ASIN. Separate model 108/2 and larger packages are not this candidate."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-24",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only",
+          "evidence": "US Bakeware snapshot associates B00004S1BT with Mrs. Anderson's ceramic pie weights: rank 15 on November 24 versus 26 on November 23. Dated third-party positions, not units sold or a verified current Amazon offer. Publisher collection compliance and accuracy not independently established; no enrichment, export, image or Amazon request made."
+        },
+        {
+          "publisher": "Serious Eats",
+          "url": "https://www.seriouseats.com/best-pie-weights-8746413",
+          "updated": "2025-02-03",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only",
+          "evidence": "Meghan Splawn's nine-product comparison includes Mrs. Anderson's ceramic pie weights. This is older independent product-family testing, not evidence of present sales, current pack identity or KFF testing. No performance findings, rankings, ratings, descriptions or media adopted."
+        },
+        {
+          "publisher": "Max Warehouse",
+          "url": "https://www.maxwarehouse.com/products/baking-pie-weights",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only",
+          "evidence": "Secondary retailer identifies model 108 and UPC 781723001085. Revision date unknown; not manufacturer authority or present Amazon offer verification. Package shipping weight is not treated as net bead weight; no heat limit, cleaning or performance claim adopted."
+        },
+        {
+          "publisher": "SHEIN USA",
+          "url": "https://m.shein.com/us/Mrs.%27s-Baking-Ceramic-Pie-Crust-Weights%2C-135-Count%2C-Natural-Stoneware%2C-Blind-Baking-Pie-Crusts-And-Tart-Shells-With-Even-Baking-Results-p-458670024.html",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only",
+          "evidence": "Secondary catalog explicitly associates ASIN B00004S1BT, model 108 and UPC 781723001085 with the 135-count ceramic product. This is identity corroboration only, not a current US Amazon variant or pack confirmation."
+        },
+        {
+          "publisher": "HIC, Harold Import Co. official blog",
+          "url": "https://hickitchenblog.com/about/",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only",
+          "evidence": "Manufacturer's About page identifies Mrs. Anderson's Baking as an owned brand. It does not verify model 108, bead count, mass, care or heat specifications; exact manufacturer specification source remains missing."
+        }
+      ],
+      "purpose": "Loose weights used with a lined pastry shell during blind baking; verify exact product and recipe instructions before demonstrating.",
+      "audience_fit": "Home bakers planning pies or quiches who want a compact dedicated baking tool. Relevant to KFF's baking-pan audience and a useful companion topic to existing pans.",
+      "buying_objections": [
+        "Does the actual package contain enough mass and volume for the reader's pan depth? Bead count alone cannot answer this.",
+        "Verify exact SKU, net weight, supplied storage container and pack quantity rather than combining different catalog versions.",
+        "Cleaning, drying, handling and temperature instructions need current exact-model documentation.",
+        "An occasional baker may already have a suitable recipe-approved alternative; do not promise that buying ceramic weights is necessary.",
+        "No hands-on KFF footage, test results or licensed product media exists for this draft."
+      ],
+      "research_evidence": {
+        "demand": "Recent exact-ASIN third-party Bakeware rank improved 26 to 15 between November 23 and 24, 2026. One older independent comparative editorial test includes the product family. These are imperfect signals and cannot establish units, conversion or future demand.",
+        "rank": {
+          "publisher": "ParseShelf",
+          "category": "Bakeware",
+          "marketplace": "US",
+          "previous_date": "2026-11-23",
+          "previous_rank": 26,
+          "date": "2026-11-24",
+          "rank": 15
+        },
+        "estimated_unit_sales": null,
+        "verified_unit_sales": null,
+        "search_volume": null,
+        "conversion_rate": null,
+        "ratings": null,
+        "review_counts": null,
+        "editorial_date": "2025-02-03",
+        "editorial_exact_current_variant_match": "unknown",
+        "content_gap": "No pie-weight product identity or ASIN match across the refreshed catalog/research corpus. Proposed gap: package mass and pan depth as buyer questions, rather than promising a perfect crust.",
+        "manufacturer_verified_specs": "unknown; brand ownership only",
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 4,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.2,
+          "content_gap": 4,
+          "affiliate_editorial_suitability": 3.2
+        },
+        "weighted_total": 4.05,
+        "rationale": "Fresh rank and older comparative testing support research interest; clear baking fit and no existing pie-weight identity. Missing exact manufacturer specs and present variant/offer limit editorial suitability. Actual sales/search/conversion data remain unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "ceramic pie weights buying guide",
+      "microsite_match": {
+        "name": "Baking Pans Small Apartments",
+        "url": "https://baking-pans-small-apartments.kitchenfindsfavorites.com/",
+        "status": "Existing Workflow Desk inventory match by theme only; public health not checked or changed"
+      },
+      "pinterest": {
+        "title": "Ceramic Pie Weights Buying Guide: Check Package Weight and Pan Depth",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Shopping for ceramic pie weights? Compare package weight, pan depth, storage and care instructions before choosing Mrs. Anderson's baking weights. Use this buyer checklist to separate bead count from the amount your recipe and pie plate require.",
+        "board": "Baking Tools & Pie-Making Ideas",
+        "destination": "https://kitchenfindsfavorites.com/picks/mrs-andersons-ceramic-pie-weights/",
+        "destination_status": "pending; matching public page not confirmed",
+        "image_brief": "Original 1000 x 1500 composition: unbranded pie plate, generic ceramic beads and an empty storage container beside a package-weight checklist. Label generic product depiction 'Similar item shown'. Use original photography or commissioned/licensed art with documented commercial site, Pin and video rights; no Amazon, competitor or unlicensed manufacturer media.",
+        "asset_status": "brief_only; no images, footage or commercial rights verified"
+      },
+      "video_production_angle": {
+        "duration_seconds": 180,
+        "title": "Bead Count or Package Weight? A Pie-Weights Buying Checklist",
+        "concept": "A visual buying guide to choosing a package for a particular pie plate. Explain the distinction between number of beads, net mass, pan depth and recipe instructions without promising crust results.",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "shot": "Original overhead pie-plate setup and affiliate disclosure.",
+            "spoken_direction": "Introduce the question: how do you decide which package belongs with your pie plate? State that this is a research buying guide."
+          },
+          {
+            "seconds": "20–55",
+            "shot": "Original scale and generic beads; label Similar item shown.",
+            "spoken_direction": "Show count and mass as different measurements. Do not represent generic weights or measurements as this ASIN."
+          },
+          {
+            "seconds": "55–90",
+            "shot": "Compare empty shallow and deep pie plates with a ruler.",
+            "spoken_direction": "Explain why package quantity and a recipe's instructions must be checked together. Do not assert a universal fill quantity."
+          },
+          {
+            "seconds": "90–125",
+            "shot": "Model/UPC/package checklist graphic.",
+            "spoken_direction": "Distinguish candidate model 108 from 108/2 or larger versions. Exact present Amazon configuration is unverified; no purchase recommendation until resolved."
+          },
+          {
+            "seconds": "125–155",
+            "shot": "Care-label and storage checklist, without invented directions.",
+            "spoken_direction": "Prompt checking exact manufacturer's cleaning, drying, storage and handling instructions. No temperature or dishwasher claims."
+          },
+          {
+            "seconds": "155–177",
+            "shot": "Original decision checklist.",
+            "spoken_direction": "Dedicated-tool fit versus an existing recipe-approved alternative; no perfect-crust, time-saving or sales guarantee."
+          },
+          {
+            "seconds": "177–180",
+            "shot": "KFF end card.",
+            "spoken_direction": "Link only to the matching reviewed destination after it exists; retain affiliate disclosure."
+          }
+        ],
+        "production_status": "plan_only; exact product identity, documentation, original media and commercial rights must be resolved before production/publication",
+        "no_testimony": "No KFF hands-on testing or filmed demonstration has occurred."
+      },
+      "publication_holds": [
+        "Current Amazon identity, exact variant/pack, seller and offer unverified",
+        "Exact manufacturer specifications and care documentation not located",
+        "Media and commercial reuse rights unverified",
+        "Matching public destination pending"
+      ]
+    }
+  ]
+}
