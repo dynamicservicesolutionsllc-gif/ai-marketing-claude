@@ -1,0 +1,244 @@
+{
+  "batch_id": "2026-11-25-afternoon",
+  "marketplace": "US",
+  "access_date": "2026-11-25",
+  "state": "research_draft_only",
+  "deduplication": {
+    "main_paths": [
+      "site/products.json",
+      "site/imports/sitestripe.json"
+    ],
+    "research_ledgers": [
+      "refs/pull/62/head:site/imports/competitor-candidates.json",
+      "refs/pull/63/head:site/imports/pinterest-research-batch-50.json"
+    ],
+    "note": "Both research ledger paths absent on main; complete PR-head versions read.",
+    "open_prs": [
+      117,
+      116,
+      115,
+      114,
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "desk_prior_asins": 76,
+    "result": "No exact ASIN or identified Wilton model match. Existing fluted ring-pan coverage is Nordic Ware Heritage; reduces content-gap score."
+  },
+  "candidates": [
+    {
+      "name": "Wilton Gold Non-Stick Fluted Tube Cake Pan, 9.49 inch",
+      "asin": "B004EBK7TK",
+      "category": "Bakeware / fluted tube cake pans",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "search_indexed_name": "Wilton Gold Non-Stick Fluted Tube Cake Pan, 9.49 inch",
+        "historical_model_association": "Perfect Results 2105-6803",
+        "manufacturer_comparison_model": "US Gold 191011492; not verified as this ASIN",
+        "current_amazon_model": null,
+        "current_generation": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "current_capacity": null,
+        "current_dimensions": null,
+        "current_coating": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Recent exact-ASIN rank card uses Gold naming, while an older public Amazon-link record uses Perfect Results. Manufacturer US Gold and Canada-only Gold pages have different model IDs; historical tested versions are not proof of current variant. Do not transfer nominal dimensions, recipe capacity, material/coating, heat limits, care or warranty to this ASIN."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-25",
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "US Bakeware snapshot associates B004EBK7TK with Wilton Gold fluted tube pan at rank 43 versus 61 on November 24. Dated third-party positions only, not units, estimated sales or a directly verified Amazon offer. Publisher collection compliance/accuracy not independently established; no Amazon requests, enrichment or exports invoked."
+        },
+        {
+          "publisher": "Wilton",
+          "url": "https://wilton.com/gold-non-stick-bakeware-fluted-tube-pan/191011492/",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Manufacturer US Gold page identifies model 191011492, different from the historic Perfect Results identifier. Its dimensional inch/metric wording is inconsistent; no dimensions adopted. Current Amazon generation mapping remains unknown. No coating, heat, care, performance or warranty claim transferred."
+        },
+        {
+          "publisher": "Better Homes & Gardens",
+          "url": "https://www.bhg.com/best-bundt-pans-11764291",
+          "updated": "2025-07-02",
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Dated independent comparative testing includes a Wilton Premium Non-Stick Fluted Tube Pan. Exact current Gold generation/ASIN match unknown. Product-family evidence only; no findings, results, ratings, rankings, descriptions or photographs copied."
+        },
+        {
+          "publisher": "Slickdeals",
+          "url": "https://slickdeals.net/f/19983183-ac-10-49-9-51-wilton-perfect-results-premium-non-stick-fluted-tube-pan-at-amazon",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Public indexed product link explicitly exposes amazon.com/dp/B004EBK7TK with Perfect Results naming. Exact post/update date unknown. ASIN identity evidence only; expired or historical deal/seller/price/shipping/pack assertions excluded."
+        },
+        {
+          "publisher": "America's Test Kitchen",
+          "url": "https://www.americastestkitchen.com/equipment-reviews/1735-bundt-pans",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Indexed comparison explicitly identifies a tested Perfect Results model 2105-6803. Exact revision date not established. Historical family/model context only, not proof of current Gold version. No results, scores, measurements, capacities or recommendations adopted."
+        },
+        {
+          "publisher": "Wilton",
+          "url": "https://wilton.com/gold-bakeware-non-stick-fluted-tube-pan/190201537/",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Manufacturer marks model 190201537 Canada-only. This is a separate regional model and is not used to confirm the US Amazon product."
+        }
+      ],
+      "purpose": "Ring-shaped cake pan format for recipes designed for a fluted tube pan; verify exact capacity and recipe instructions before choosing.",
+      "audience_fit": "Occasional home bakers who want a decorative ring cake and are comparing a simpler fluted mold with existing KFF Nordic Ware Heritage coverage. Relevant to compact-kitchen baking pages.",
+      "buying_objections": [
+        "Confirm current generation, model, pack quantity and actual capacity; a diameter label does not establish batter volume.",
+        "Match the recipe's pan capacity and fill instructions rather than promising a universal cake yield.",
+        "Check actual handles, oven space and storage footprint for the exact unit.",
+        "Coating, heat limits, care and warranty must come from matching current manufacturer documentation.",
+        "Existing round cake or ring pans may already meet the baker's needs; this is a fit comparison, not a necessary upgrade."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "marketplace": "US",
+          "category": "Bakeware",
+          "date": "2026-11-25",
+          "rank": 43,
+          "previous_date": "2026-11-24",
+          "previous_rank": 61
+        },
+        "demand_interpretation": "Recent one-day rank improvement is an imperfect interest signal; no sustained growth, sales volume or guaranteed conversion inferred.",
+        "manufacturer_specification_status": "Generation/model mismatch unresolved; no current ASIN specifications verified.",
+        "independent_editorial_date": "2025-07-02",
+        "independent_current_variant_match": "unknown",
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion_rate": null,
+        "ratings": null,
+        "review_counts": null,
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.8,
+          "audience_fit": 4.3,
+          "purchase_intent": 4,
+          "content_gap": 3.2,
+          "affiliate_editorial_suitability": 3
+        },
+        "weighted_total": 3.76,
+        "rationale": "Fresh exact-ASIN rank and dated independent family testing support research interest. Existing ring-pan coverage reduces gap; unresolved Gold/Perfect Results generation mapping limits editorial suitability. Sales/search/conversion unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "Wilton fluted tube cake pan buying guide",
+      "amazon_url": "https://www.amazon.com/dp/B004EBK7TK",
+      "microsite_match": {
+        "name": "Baking Pans Small Apartments",
+        "url": "https://baking-pans-small-apartments.kitchenfindsfavorites.com/",
+        "status": "Existing Workflow Desk inventory; thematic match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Wilton Fluted Tube Pan Buying Guide: Check Capacity and Model First",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a Wilton fluted tube cake pan? Check the exact model, recipe capacity, handles and care instructions before buying. Keep Gold and older Perfect Results versions separate when comparing pans for a small kitchen.",
+        "board": "Baking Tools & Cake Pan Comparisons",
+        "destination": "https://kitchenfindsfavorites.com/picks/wilton-fluted-tube-cake-pan/",
+        "destination_status": "pending; matching public product page not confirmed",
+        "image_brief": "Original 1000 x 1500 composition with a generic fluted ring-pan silhouette, recipe-capacity checklist and model-label graphic. Label generic cookware 'Similar item shown'. Commission original art or photography with documented commercial site, Pin and video rights. Do not use Amazon, competitor or unlicensed manufacturer imagery.",
+        "asset_status": "brief_only; no actual images, footage or commercial reuse rights verified"
+      },
+      "video_production_angle": {
+        "duration_seconds": 180,
+        "title": "Pan Capacity Is Not Diameter: A Fluted-Pan Buying Checklist",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "direction": "Original baking-counter setup with affiliate disclosure. Introduce the difference between a pan's diameter and recipe capacity; identify the research candidate without claiming its generation is confirmed."
+          },
+          {
+            "seconds": "20–55",
+            "direction": "Use generic ring-pan diagrams labeled Similar item shown. Show how two pans with similar outside size can have different shapes; do not invent volume measurements."
+          },
+          {
+            "seconds": "55–90",
+            "direction": "Original model-label checklist separates Gold, Perfect Results and regional model numbers. Explain that present ASIN identity needs confirmation."
+          },
+          {
+            "seconds": "90–125",
+            "direction": "Show a recipe's pan-capacity field and a blank manufacturer-capacity field. Fill in only after exact model documentation is verified; do not provide an assumed batter quantity."
+          },
+          {
+            "seconds": "125–155",
+            "direction": "Illustrate storage footprint, handles and care-document checks without filming a claimed product test or repeating unverified heat/coating assertions."
+          },
+          {
+            "seconds": "155–177",
+            "direction": "Help viewers compare their existing ring pan with the intended recipe. Avoid release, browning, durability or upgrade guarantees."
+          },
+          {
+            "seconds": "177–180",
+            "direction": "KFF end card; destination must exist and pass review before linking publicly."
+          }
+        ],
+        "status": "production_plan_only; no KFF hands-on testing, footage or licensed media created"
+      },
+      "publication_holds": [
+        "Exact Amazon generation, model, variant, pack, seller and current offer unresolved",
+        "Matching current manufacturer capacity, dimensions and care documentation unresolved",
+        "Actual media and commercial reuse rights pending",
+        "Matching public destination pending"
+      ]
+    }
+  ]
+}
