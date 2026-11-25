@@ -1,0 +1,247 @@
+{
+  "batch_id": "2026-11-24-evening",
+  "marketplace": "US",
+  "access_date": "2026-11-24",
+  "state": "research_draft_only",
+  "deduplication": {
+    "main_catalog": "site/products.json",
+    "approved_ledger": "site/imports/sitestripe.json",
+    "research_ledgers": [
+      "refs/pull/62/head:site/imports/competitor-candidates.json",
+      "refs/pull/63/head:site/imports/pinterest-research-batch-50.json"
+    ],
+    "note": "Research ledger paths absent on main; inspected complete PR-head versions.",
+    "open_prs": [
+      116,
+      115,
+      114,
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "desk_prior_asins": 75,
+    "result": "No exact ASIN, L9OG3 or round-griddle product candidate match; existing skillet/general cookware topics considered in score."
+  },
+  "candidates": [
+    {
+      "name": "Lodge 10.5 Inch Round Seasoned Cast Iron Griddle, L9OG3",
+      "asin": "B00008GKDN",
+      "category": "Cookware / stovetop griddles",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "publicly_associated_model": "L9OG3",
+        "publicly_associated_size": "10.5 inch",
+        "publicly_associated_configuration": "Classic round seasoned cast iron griddle",
+        "current_amazon_model": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Manufacturer's size-specific page identifies L9OG3; an older publicly exposed Amazon /dp/ link associates it with this ASIN. Do not substitute 8-inch L6OG3, decorative 10.5-inch designs, reversible griddles or multipacks. No current Amazon listing or seller was directly verified."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/asin/B00008GKDN/",
+          "updated": "2026-11-24",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Historical US Cookware rank 99 on November 14, 2026; source says not in top 100 on November 24. Earlier observed ranks 89 on November 12 and 91 on November 13. Recent historical signal only: not a current bestseller, unit sales, stock inference or upward trend. Publisher collection compliance/accuracy not independently established; no Amazon request or enrichment invoked."
+        },
+        {
+          "publisher": "Lodge Cast Iron",
+          "url": "https://www.lodgecastiron.com/collections/all-products/products/cast-iron-griddle?variant=51685746803060",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Manufacturer size-specific page identifies 10.5 Inch Round Seasoned Cast Iron Griddle and model L9OG3. Only model, nominal size, shape and material are adopted. Exact dimensions, net weight, care, heat limits, present ASIN pack and accessories remain unverified. Functional size selector retained; tracking removed."
+        },
+        {
+          "publisher": "Allrecipes",
+          "url": "https://www.allrecipes.com/black-friday-cast-iron-deals-amazon-12267534",
+          "updated": "2026-11-21",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Recent affiliate/editorial roundup includes the Lodge round griddle family. Inclusion is not independent product testing or proof of demand, sales or current offer. No deal, price, review, description, image or performance claim retained; exact ASIN/variant match in this roundup unknown."
+        },
+        {
+          "publisher": "TechGearLab",
+          "url": "https://www.techgearlab.com/topics/kitchen/best-griddle",
+          "updated": "2025-12-05",
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Indexed editor's note dates the comparison update December 5, 2025; it includes a Lodge round 10.5-inch griddle in its test group. Exact current ASIN/version match unknown. Older product-family comparative testing context only; no findings, scores, rankings, measurements or photographs adopted."
+        },
+        {
+          "publisher": "Slickdeals",
+          "url": "https://slickdeals.net/f/17138395-lodge-l9og3-cast-iron-round-griddle-pre-seasoned-10-5-inch-19-90",
+          "updated": null,
+          "accessed": "2026-11-24",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Older search-indexed post explicitly exposes https://www.amazon.com/dp/B00008GKDN for L9OG3 10.5-inch. Exact publication/update date unknown. Identifier evidence only; no old offer, price, seller, shipping, availability or pack-count claim treated as current."
+        }
+      ],
+      "purpose": "Low-sided round stovetop griddle format for foods that need a flat surface and easy spatula access; follow verified model and cooktop instructions before use.",
+      "audience_fit": "Small-kitchen cooks comparing a single-burner round griddle with a deeper skillet or large two-burner griddle. Useful to KFF cookware readers considering a dedicated pancake, flatbread or sandwich pan.",
+      "buying_objections": [
+        "Confirm whether the low-sided format suits intended food and grease handling; no universal spill-prevention promise.",
+        "Nominal diameter does not establish usable cooking area, handle footprint, burner coverage or a particular batch size.",
+        "Verify actual weight, grip and storage fit with the exact unit; no easy-lifting or arthritis-friendly claim.",
+        "Check exact care, seasoning, heat-source and handling instructions rather than promising maintenance-free or nonstick results.",
+        "Existing skillets may already cover the reader's needs; do not imply a dedicated griddle is essential."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "marketplace": "US",
+          "category": "Cookware",
+          "observations": [
+            {
+              "date": "2026-11-12",
+              "rank": 89
+            },
+            {
+              "date": "2026-11-13",
+              "rank": 91
+            },
+            {
+              "date": "2026-11-14",
+              "rank": 99
+            }
+          ],
+          "category_checked": "2026-11-24",
+          "current_top_100_status": "not observed in top 100"
+        },
+        "demand_interpretation": "Rank evidence is ten days old and weakened across the visible dates; no current bestseller, upward momentum, launch, availability or sales inference. Recent roundup inclusion and older family testing provide separate editorial context.",
+        "manufacturer_supported_model_facts": {
+          "model": "L9OG3",
+          "nominal_size": "10.5 inch",
+          "shape": "round",
+          "material": "seasoned cast iron",
+          "verification_scope": "indexed exact-model manufacturer page; not present Amazon offer"
+        },
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion_rate": null,
+        "ratings": null,
+        "review_counts": null,
+        "exact_editorial_tested_variant": "unknown",
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 2.6,
+          "audience_fit": 4.3,
+          "purchase_intent": 4,
+          "content_gap": 3.9,
+          "affiliate_editorial_suitability": 4
+        },
+        "weighted_total": 3.71,
+        "rationale": "Historical rank deterioration and no latest top-100 presence limit demand score. Manufacturer model identity, recent editorial inclusion, older family testing and a distinct round-griddle topic support a draft. Existing general cookware coverage reduces the gap; actual sales/search/conversion unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "Lodge L9OG3 10.5 inch round griddle buying guide",
+      "amazon_url": "https://www.amazon.com/dp/B00008GKDN",
+      "microsite_match": {
+        "name": "Cookware Sets Small Apartments",
+        "url": "https://cookware-sets-small-apartments.kitchenfindsfavorites.com/",
+        "status": "Existing Workflow Desk inventory; thematic cookware match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Lodge Round Griddle Buying Guide: Check Size, Weight and Kitchen Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Considering the Lodge L9OG3 10.5-inch round griddle? Compare the low-sided shape, usable cooking space, storage fit and care requirements with your existing skillet. Use this checklist before adding another pan to a small kitchen.",
+        "board": "Cookware Comparisons & Small Kitchen Ideas",
+        "destination": "https://kitchenfindsfavorites.com/picks/lodge-l9og3-10-5-inch-round-griddle/",
+        "destination_status": "pending; matching public product page not confirmed",
+        "image_brief": "Original 1000 x 1500 composition comparing generic round low-sided griddle and deep skillet silhouettes, with a handle-footprint checklist and spatula. Label generic cookware 'Similar item shown'. Use original/commissioned art or photography with documented commercial site, Pin and video rights. No Amazon, competitor or unlicensed manufacturer images.",
+        "asset_status": "brief_only; actual imagery, footage and commercial reuse rights pending"
+      },
+      "video_production_angle": {
+        "duration_seconds": 180,
+        "title": "Round Griddle or Skillet: Does Your Kitchen Need Both?",
+        "concept": "Original buyer guide comparing shape, storage footprint and intended cooking tasks. No performance test or purchase testimonial implied.",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "direction": "Original overhead kitchen scene with affiliate disclosure. Introduce a shape-and-fit comparison and identify the researched L9OG3."
+          },
+          {
+            "seconds": "20–55",
+            "direction": "Show generic low-sided and deeper-pan silhouettes labeled Similar item shown. Explain their geometry without claiming better browning, release or heat distribution."
+          },
+          {
+            "seconds": "55–90",
+            "direction": "Counter and cupboard footprint illustration: nominal diameter, usable area and total handle length are different measurements. Exact measurements require verified unit/documentation."
+          },
+          {
+            "seconds": "90–125",
+            "direction": "Original model checklist: L9OG3 versus 8-inch, decorated versions and multipacks. Current ASIN variant and pack remain unresolved."
+          },
+          {
+            "seconds": "125–155",
+            "direction": "Show an instruction checklist for care, seasoning, cooktop compatibility and handling. No invented heat limit or care demonstration."
+          },
+          {
+            "seconds": "155–177",
+            "direction": "Help viewers decide whether their existing skillet already meets the intended cooking task. Do not promise a specific serving count or spill prevention."
+          },
+          {
+            "seconds": "177–180",
+            "direction": "KFF end card; link only after the matching reviewed destination exists."
+          }
+        ],
+        "status": "production_plan_only; no KFF hands-on testing, footage or licensed media created"
+      },
+      "publication_holds": [
+        "Current Amazon exact model/variant/pack, seller and offer unverified",
+        "Exact-unit dimensions, weight and care/compatibility documentation need confirmation",
+        "Actual media and commercial reuse rights pending",
+        "Matching public destination pending"
+      ]
+    }
+  ]
+}
