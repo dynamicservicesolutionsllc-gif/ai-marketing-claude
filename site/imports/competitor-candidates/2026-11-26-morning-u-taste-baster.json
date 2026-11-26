@@ -1,0 +1,241 @@
+{
+  "batch_id": "2026-11-26-morning",
+  "marketplace": "US",
+  "access_date": "2026-11-26",
+  "state": "research_draft_only",
+  "deduplication": {
+    "main_paths": [
+      "site/products.json",
+      "site/imports/sitestripe.json"
+    ],
+    "research_ledgers": [
+      "refs/pull/62/head:site/imports/competitor-candidates.json",
+      "refs/pull/63/head:site/imports/pinterest-research-batch-50.json"
+    ],
+    "note": "Research paths absent on main; complete PR-head files inspected.",
+    "open_prs": [
+      119,
+      118,
+      117,
+      116,
+      115,
+      114,
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "desk_prior_asins": 79,
+    "result": "No exact ASIN, U-Taste or ET-TB01 product-family match. Existing other-brand roasting tools considered in gap score."
+  },
+  "candidates": [
+    {
+      "name": "U-Taste 1.5oz Angled Turkey Baster with Cleaning Brush, Aqua Sky",
+      "asin": "B09JGF28TK",
+      "category": "Kitchen tools / basters",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "publicly_associated_color": "Aqua Sky",
+        "publicly_associated_nominal_capacity": "1.5 oz",
+        "secondary_model_association": "ET-TB01-42-AS",
+        "brand_family_sku": "ET-TB01-42",
+        "current_amazon_model": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "current_included_components": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Exact-ASIN rank card uses Aqua Sky naming; secondary record associates AS suffix. Brand product page lists multiple colors and family SKU, but its selector/default text is inconsistent. Do not treat family SKU or default selector as direct confirmation of the present Amazon color, brush inclusion or pack."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-26",
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "US Kitchen Utensils & Gadgets snapshot records B09JGF28TK Aqua Sky at rank 57 versus 53 on November 25. Dated third-party positions, not unit sales/current offer; daily decline explicit. Publisher collection compliance/accuracy not independently established; no Amazon request, enrichment or export invoked."
+        },
+        {
+          "publisher": "U-Taste",
+          "url": "https://u-taste.com/product/angled-turkey-baster/",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Brand-hosted product page identifies family SKU ET-TB01-42, nominal 1.5oz angled baster and multiple color options including Aqua Sky. Selector/default color wording is inconsistent. Tube and bulb have separate stated heat limits; no numeric heat, food-contact, dishwasher, leak, suction or performance claim adopted for the current ASIN. Exact model instructions remain needed."
+        },
+        {
+          "publisher": "mybest",
+          "url": "https://us.my-best.com/20993",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Public editorial baster comparison includes U-Taste 1.5oz angled baster. Revision date and exact-ASIN hands-on testing not established. Inclusion only, not proof of current sales, popularity rank or laboratory results; no rankings, findings, ratings, descriptions or images copied."
+        },
+        {
+          "publisher": "Desertcart India",
+          "url": "https://www.desertcart.in/products/393676456-u-taste-1-5oz-angled-turkey-baster-228-2-heat",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Secondary non-US catalog explicitly links B09JGF28TK with ET-TB01-42-AS. Identifier corroboration only; its older rank, offer, dimensions, weight, safety and care assertions are not treated as present US Amazon facts."
+        },
+        {
+          "publisher": "Justia patent reference index",
+          "url": "https://patents.justia.com/patent/D964821",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Patent issued September 27, 2022 cites a historical U-Taste 1.5oz Angled Turkey Baster Amazon link ending /dp/B09JGF28TK and an August 2, 2022 reference access date. Used only to confirm the exposed bare ASIN, not ownership, product performance, current variant, offer or seller."
+        }
+      ],
+      "purpose": "Handheld bulb-and-tube format for drawing up and dispensing cooking liquids, subject to matching exact-model instructions.",
+      "audience_fit": "Home cooks comparing an angled tube and storage/cleaning format with a spoon or existing baster. Relevant to KFF kitchen-tool and roasting content beyond a single holiday.",
+      "buying_objections": [
+        "Check exact Aqua Sky model, pack, brush and other supplied parts; default color selectors are not present-ASIN verification.",
+        "Confirm tube and bulb limits separately in exact instructions; one component's rating must not be applied to the whole tool.",
+        "Nominal 1.5oz capacity does not establish measurement accuracy, useful fill or number of passes for a recipe.",
+        "Evaluate reach, grip, disassembly and brush access using the verified unit; no easy-use, suction or drip-free promise.",
+        "No independently established exact-variant hands-on test or KFF demonstration exists; an existing spoon/baster may meet the reader's needs."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "marketplace": "US",
+          "category": "Kitchen Utensils & Gadgets",
+          "date": "2026-11-26",
+          "rank": 57,
+          "previous_date": "2026-11-25",
+          "previous_rank": 53
+        },
+        "demand_interpretation": "Observed category presence with a four-position daily decline. Editorial list inclusion has unknown date; no sustained growth or unit-sales inference.",
+        "manufacturer_supported_facts": {
+          "scope": "brand-hosted family page only",
+          "family_sku": "ET-TB01-42",
+          "nominal_capacity": "1.5oz",
+          "shape": "angled baster",
+          "color_options_include": "Aqua Sky"
+        },
+        "independent_exact_variant_testing": "unknown",
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion": null,
+        "ratings": null,
+        "review_counts": null,
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.3,
+          "audience_fit": 4.3,
+          "purchase_intent": 4,
+          "content_gap": 3.5,
+          "affiliate_editorial_suitability": 3.1
+        },
+        "weighted_total": 3.69,
+        "rationale": "Fresh exact-ASIN category observation and corroborated brand-family identity support a draft. Unknown editorial date/testing and current variant/accessory/offer gaps reduce suitability. Existing roasting tools reduce content gap; sales/search/conversion unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "U-Taste angled turkey baster buying guide",
+      "amazon_url": "https://www.amazon.com/dp/B09JGF28TK",
+      "microsite_match": {
+        "name": "Gadget",
+        "url": "https://gadget.kitchenfindsfavorites.com/",
+        "status": "Existing Workflow Desk inventory; thematic kitchen-tool match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Angled Turkey Baster Buying Guide: Check the U-Taste Model and Parts",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing the U-Taste angled baster? Check the exact color, supplied brush, capacity markings and care instructions. Review the tube and bulb information separately before deciding whether it fits your roasting routine.",
+        "board": "Kitchen Tools & Roasting Prep Ideas",
+        "destination": "https://kitchenfindsfavorites.com/picks/u-taste-angled-turkey-baster-aqua-sky/",
+        "destination_status": "pending; matching public page not confirmed",
+        "image_brief": "Original 1000 x 1500 generic angled-baster silhouette beside separate bulb/tube labels, a brush outline and model checklist. Label generic depiction 'Similar item shown'. Commission original art/photography with documented commercial site, Pin and video rights. No Amazon, competitor or unlicensed manufacturer images.",
+        "asset_status": "brief_only; actual media and commercial reuse rights pending"
+      },
+      "video_production_angle": {
+        "duration_seconds": 180,
+        "title": "Bulb, Tube and Brush: An Angled-Baster Buying Checklist",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "direction": "Original kitchen-tool layout with affiliate disclosure. Introduce an angled-baster buyer checklist and identify the researched Aqua Sky candidate."
+          },
+          {
+            "seconds": "20–55",
+            "direction": "Generic empty baster diagram labeled Similar item shown: distinguish bulb, tube, tip and optional cleaning tool. No suction or leak test implied."
+          },
+          {
+            "seconds": "55–90",
+            "direction": "Original model/color/pack checklist. Explain that family SKU and color selector do not establish present package identity."
+          },
+          {
+            "seconds": "90–125",
+            "direction": "Show separate blank instruction fields for tube and bulb. Fill exact limits only after matching current documentation; no hot-liquid demonstration or invented temperature."
+          },
+          {
+            "seconds": "125–155",
+            "direction": "Illustrate reach, storage and cleaning-access questions with generic outlines; actual dimensions and brush inclusion remain verification tasks."
+          },
+          {
+            "seconds": "155–177",
+            "direction": "Compare intended task with tools already owned. No juiciness, cooking-time, food-safety, drip-free or performance guarantee."
+          },
+          {
+            "seconds": "177–180",
+            "direction": "KFF end card; link only when matching reviewed destination exists."
+          }
+        ],
+        "status": "production_plan_only; no KFF hands-on testing, footage or approved media created"
+      },
+      "publication_holds": [
+        "Exact current Amazon model, color/variant, pack, included parts, seller and offer unresolved",
+        "Matching exact-model component limits and care instructions need confirmation",
+        "Actual media and commercial reuse rights pending",
+        "Matching public destination pending"
+      ]
+    }
+  ]
+}
