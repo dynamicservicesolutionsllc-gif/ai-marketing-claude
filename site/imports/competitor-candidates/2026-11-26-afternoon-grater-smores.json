@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "batch_name": "KFF US kitchen research — 2026-11-26 afternoon",
+  "created": "2026-11-26",
+  "marketplace": "US",
+  "candidate_count": 2,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Selected public search-indexed evidence only. No individual page fetched when access rules were not established; no bulk crawl, Amazon scrape, listing-enrichment request, Special Link click, purchase or paid credit.",
+    "authorized_amazon_source": "No already-authorized free Creators API tool was exposed. Exact listing identity/variant/seller/offer remain needs_amazon_verification; no tagged link generated.",
+    "scoring": "Existing 50-item framework: demand 25%, audience fit 25%, purchase intent 20%, content gap 15%, affiliate/editorial suitability 15%. Factor ratings are editorial estimates on 0–5, not observed metrics. Missing factual data remains unknown; confidence covers research only.",
+    "rank_limits": "Public third-party historical rank, manufacturer identity/specifications and editorial attention are distinct signals. No sales estimates, prices, ratings or competitor review text copied. Publisher collection compliance and accuracy are not independently established.",
+    "deduplication": "Fresh main products.json and SiteStripe ledger; full competitor ledger at PR62 head and 50-item ledger at PR63 head because both paths return404 on main; all44 open PR snapshots/diffs; authenticated Desk priorAsins80. Exact ASIN and model-family checks clear. Existing Cambom/Geedel overlap reflected in grater gap score.",
+    "destination": "Planned /picks/ pages remain pending. Gadget microsite appears in authenticated Desk inventory; public health not rechecked.",
+    "publication_gates": [
+      "Authorized exact current listing, variant, pack, seller and offer confirmation",
+      "Matching instructions and unresolved specifications",
+      "Original/licensed commercially cleared media and suitability review",
+      "Matching public destination exists"
+    ],
+    "validation": "JSON, fresh deduplication, weights/math, source URLs, Pin limits/disclosure and current site/build.py public-copy price/testing claim patterns; no production build or CI asserted."
+  },
+  "candidates": [
+    {
+      "name": "SUSTEAS Rotary Cheese Grater with Handle, 5 Blades and Blade Storage Box, Green",
+      "asin": "B0C2CK11L9",
+      "category": "Kitchen tools / rotary cheese graters",
+      "keyword": "SUSTEAS five blade rotary cheese grater comparison",
+      "variant": {
+        "researched_configuration": "Green / Retro Green, five-blade configuration; one tool with blade box",
+        "model_family": "LS-1070",
+        "manufacturer_alignment": "Brand-hosted LS-1070 page offers Green and five blades. Secondary exact-ASIN record associates LS-1070 and Retro Green. A911 six-blade configuration is distinct.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification"
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-26",
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Third-party US Kitchen & Dining daily snapshot: rank 50 on November 26 versus 75 on November 25. Observed rank only; not units, estimated sales or offer verification. Publisher accuracy and collection compliance not independently established; no scraper or listing-enrichment request used."
+        },
+        {
+          "url": "https://susteas.com/products/susteas-rotary-cheese-grater",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Brand page identifies LS-1070 family, Green option and five interchangeable blades. Update date unknown. Manufacturer configuration evidence; exact Amazon pack/model mapping remains provisional."
+        },
+        {
+          "url": "https://nymag.com/strategist/article/susteas-rotary-grater-review.html",
+          "updated": "2025-09-08",
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Dated review by Alyse Whitney describes personal use of the SUSTEAS grater. Older editorial evidence, not current demand or KFF testing; exact tested color/ASIN not established."
+        },
+        {
+          "url": "https://slickdeals.net/f/20002254-susteas-rotary-cheese-grater-large-vegetable-food-shredder-5-blades-14-84",
+          "updated": "2026-09-11",
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Historical community page exposes the direct amazon.com/dp/B0C2CK11L9 link and Green five-blade identity. No expired deal terms adopted."
+        },
+        {
+          "url": "https://www.desertcart.in/products/538216920-susteas-rotary-cheese-grater-with-handle-vegetable-shredder-with-5-well-designed-blades-strong-suction-base-round-mandoline-slicer-food-chopper-for-kitchen-with-blade-storage-box-retro-green",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Secondary non-US record associates B0C2CK11L9 with LS-1070, Green and five blades. Not US offer or seller evidence."
+        }
+      ],
+      "purpose": "Manual grating and slicing for meal preparation.",
+      "audience_fit": "Home cooks comparing a countertop crank grater with a box grater; batch vegetable and cheese preparation. Fits Gadget theme.",
+      "buying_objections": [
+        "Existing Cambom and Geedel coverage reduces the content gap; any article must explain the five-blade configuration rather than repeat their guides.",
+        "Confirm smooth-counter compatibility, storage footprint and required hand effort; performance is unknown.",
+        "Check actual supplied blades, pusher, blade box and care instructions before production. No speed, safety, suction-strength, food-contact or dishwasher claim adopted."
+      ],
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": 3.7,
+          "audience_fit": 4.4,
+          "purchase_intent": 4.1,
+          "content_gap": 3,
+          "affiliate_editorial_suitability": 3.5
+        },
+        "weighted_total": 3.82,
+        "rationale": "Recent rank climb and older first-person editorial coverage; strong meal-prep fit, reduced gap because two grater brands are already covered. Heuristic assessment, not sales forecast.",
+        "unknown": [
+          "unit sales",
+          "sales estimates",
+          "search volume",
+          "own conversions",
+          "exact tested variant"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "SUSTEAS Rotary Cheese Grater: Five-Blade Buying Checklist",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a hand-crank grater for meal prep? Check the SUSTEAS five-blade model, included parts, counter fit and storage needs. Our planned guide separates the green LS-1070 family from newer configurations.",
+        "destination": "https://kitchenfindsfavorites.com/picks/susteas-five-blade-rotary-cheese-grater-green/",
+        "destination_status": "pending",
+        "board": "Kitchen Tools & Meal Prep Ideas",
+        "image_brief": "Create an original 1000 × 1500 generic hand-crank grater diagram with counter-fit, parts and storage callouts. Label Similar item shown. No exact-brand rendering, third-party images or unverified performance demonstration. Commercial rights and final suitability must be documented before publication."
+      },
+      "angle": "Three-minute Counter, Crank and Cleanup buying checklist: distinguish LS-1070 five-blade Green from A911 six-blade versions; compare storage and parts with existing Cambom/Geedel coverage. No KFF performance test implied.",
+      "micrositeUrl": "https://gadget.kitchenfindsfavorites.com/"
+    },
+    {
+      "name": "Nostalgia Tabletop Indoor Electric S'mores Maker, Brown, SMM200",
+      "asin": "B00PY05VMS",
+      "category": "Small appliances / tabletop treat makers",
+      "keyword": "Nostalgia SMM200 indoor smores maker buying guide",
+      "variant": {
+        "researched_configuration": "Brown tabletop electric S'mores maker; four-compartment tray and two forks in SMM200 brand description",
+        "model_family": "SMM200",
+        "manufacturer_alignment": "Manufacturer SMM200 page gives UPC 082677748478. Secondary exact-ASIN record matches SMM200/Brown. Other brand models NSM200BK6A and Lazy Susan variants must not be substituted.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification"
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289814-cookware/",
+          "updated": "2026-11-26",
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Third-party US Cookware daily snapshot: rank 19 on November 26 versus 24 on November 25 for B00PY05VMS. Different category from the grater; ranks are not directly comparable. No units or estimated sales inferred."
+        },
+        {
+          "url": "https://nostalgiaproducts.com/collections/nostalgia/products/smm200",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Manufacturer page identifies SMM200, UPC 082677748478, four tray compartments and two forks. Its dimensions/weight differ from secondary listing records, so those specifications are held. Update date unknown."
+        },
+        {
+          "url": "https://www.dealseek.com/shopping-guides/nostalgia-smores-maker-review",
+          "updated": "2026-11-06",
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Rhett R publishes a self-described hands-on review with an embedded video. This supports editorial interest, not sales. Exact ASIN/model tested is unconfirmed; no performance, smoke or safety claim adopted."
+        },
+        {
+          "url": "https://device.report/nostalgia/b00py05vms",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Secondary identity record links B00PY05VMS to SMM200/Brown. Not authorized current Amazon offer evidence."
+        },
+        {
+          "url": "https://www.drewandjonathan.com/product/nostalgia-tabletop-indoor-electric-smores-maker/",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Public affiliate product page exposes B00PY05VMS; publication/update date unknown. Used for product identity and editorial inclusion only."
+        }
+      ],
+      "purpose": "Tabletop electric appliance intended for roasting marshmallows and arranging S'mores ingredients.",
+      "audience_fit": "Adults planning a small indoor dessert activity or movie-night station; a distinct treat-maker topic for the Gadget guide.",
+      "buying_objections": [
+        "A specialty appliance needs storage space and an outlet; compare expected use with equipment already owned.",
+        "Confirm correct manual, clearances, supervision and cool-down/cleaning instructions; flameless does not mean touch-safe.",
+        "Included forks, actual footprint and model generation require confirmation; manufacturer and secondary dimensions disagree.",
+        "Do not infer party throughput, roasting speed, smoke-free operation or suitability for children from editorial enthusiasm."
+      ],
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": 3.2,
+          "audience_fit": 3.8,
+          "purchase_intent": 3.7,
+          "content_gap": 3.8,
+          "affiliate_editorial_suitability": 3.2
+        },
+        "weighted_total": 3.54,
+        "rationale": "Recent category rank plus November editorial coverage and a new dessert-appliance topic; specialized use and model/spec uncertainty lower suitability. Heuristic, not conversion prediction.",
+        "unknown": [
+          "unit sales",
+          "sales estimates",
+          "search volume",
+          "own conversions",
+          "exact tested model",
+          "usable footprint"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "Indoor S'mores Maker Buying Guide: Check the Nostalgia SMM200",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning an indoor dessert station? Compare the Nostalgia SMM200 model, included forks, storage needs and manual requirements. Our planned guide helps adults check the setup before choosing a tabletop S'mores maker.",
+        "destination": "https://kitchenfindsfavorites.com/picks/nostalgia-smm200-indoor-smores-maker-brown/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Appliances & Dessert Ideas",
+        "image_brief": "Photograph an original unheated flat lay of crackers, chocolate and marshmallows with a generic tabletop-appliance silhouette; 1000 × 1500. Label Similar item shown. No children handling a heater and no performance imagery. Retain ownership/release records; no competitor or Amazon photos."
+      },
+      "angle": "Adult indoor-dessert-station planning brief: check model, fork count, storage, manual and cleaning requirements before comparing with other treat makers. No roasting demonstration until exact unit and instructions are verified.",
+      "micrositeUrl": "https://gadget.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B0C2CK11L9",
+    "title": "Counter, Crank and Cleanup: A Rotary-Grater Buying Checklist",
+    "duration_seconds": 180,
+    "format": "1920 × 1080 master plus planned vertical crop; original diagrams and optional owner-recorded exact-unit footage after verification",
+    "status": "production_plan_only",
+    "disclosure": "Spoken and visible at introduction: #ad As an Amazon Associate I earn from qualifying purchases.",
+    "segments": [
+      {
+        "seconds": "0–20",
+        "visual": "Original generic grater/box-grater diagram; Similar item shown.",
+        "spoken": "Comparing a countertop crank grater with the grater already in your drawer? Start with the counter, the supplied parts and the cleanup instructions. This is a buying checklist, with exact listing details still pending."
+      },
+      {
+        "seconds": "20–50",
+        "visual": "Original model-name comparison card, LS-1070 five blades versus A911 six blades.",
+        "spoken": "The brand lists more than one configuration. Our research candidate is the green five-blade family. Match the model and supplied parts before assuming that another color or a newer version includes the same equipment."
+      },
+      {
+        "seconds": "50–85",
+        "visual": "Original countertop measuring illustration without asserted product dimensions.",
+        "spoken": "Measure the available work area and the cabinet where the tool would go. Check the maker's surface requirements and the space needed to turn the handle. A good fit depends on your kitchen and how you prepare food."
+      },
+      {
+        "seconds": "85–120",
+        "visual": "Generic pusher, blade box and component inventory diagram, Similar item shown.",
+        "spoken": "Check the actual box contents against the current listing and instructions. Include the pusher, blades and storage pieces in that check. Follow the exact manual for handling and cleaning; do not assume that every component has the same care requirements."
+      },
+      {
+        "seconds": "120–155",
+        "visual": "Original decision chart: prep frequency, counter fit, storage and care. No speed or output demo.",
+        "spoken": "Compare the jobs you do most often with the equipment you own. An occasional garnish and a larger prep session can call for different tools. Our existing Cambom and Geedel research gives the comparison a starting point, but brand-to-brand performance is still unmeasured."
+      },
+      {
+        "seconds": "155–177",
+        "visual": "Pending-guide status card and checklist.",
+        "spoken": "The next step is to confirm the exact model, current seller, supplied parts and instructions. Only then can we finish the product guide and plan an honest demonstration with cleared original footage."
+      },
+      {
+        "seconds": "177–180",
+        "visual": "KFF end card; site and verified social handles from existing project only at final production.",
+        "spoken": "Kitchen Finds & Favorites."
+      }
+    ],
+    "asset_rules": "No competitor footage, Amazon product imagery, copied scripts, simulated test outcomes or unstated exact-product lookalikes. Retain media rights and attribution; no completed video or test claimed."
+  }
+}
