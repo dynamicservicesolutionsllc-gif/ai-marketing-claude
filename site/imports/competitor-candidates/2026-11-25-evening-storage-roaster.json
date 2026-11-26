@@ -1,0 +1,382 @@
+{
+  "batch_id": "2026-11-25-evening",
+  "marketplace": "US",
+  "access_date": "2026-11-25",
+  "state": "research_draft_only",
+  "deduplication": {
+    "main_paths": [
+      "site/products.json",
+      "site/imports/sitestripe.json"
+    ],
+    "research_ledgers": [
+      "refs/pull/62/head:site/imports/competitor-candidates.json",
+      "refs/pull/63/head:site/imports/pinterest-research-batch-50.json"
+    ],
+    "note": "Research paths absent on main; complete PR-head versions inspected.",
+    "open_prs": [
+      118,
+      117,
+      116,
+      115,
+      114,
+      113,
+      112,
+      111,
+      110,
+      109,
+      108,
+      107,
+      106,
+      105,
+      104,
+      103,
+      102,
+      101,
+      100,
+      99,
+      98,
+      95,
+      94,
+      93,
+      90,
+      89,
+      88,
+      86,
+      85,
+      84,
+      80,
+      74,
+      73,
+      72,
+      70,
+      67,
+      64,
+      63,
+      62,
+      61,
+      59,
+      57
+    ],
+    "desk_prior_asins": 77,
+    "result": "Neither exact ASIN nor EasyStore/48563 product-model candidate matched. Existing Brilliance containers and other-brand roasters considered in content-gap scoring."
+  },
+  "candidates": [
+    {
+      "name": "Rubbermaid EasyStore Large Containers, 18-Piece Set, Food Storage Containers with Lids",
+      "asin": "B0FD7LSCTD",
+      "category": "Storage / food containers",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "secondary_model_association": "2210142",
+        "secondary_upc": "071691543220",
+        "publicly_associated_configuration": "18-piece large set; exact container/lid count and size assortment unverified",
+        "manufacturer_family_comparison_model": "2210140; different multi-size set, not confirmed as this ASIN",
+        "current_model": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "current_container_count": null,
+        "current_lid_count": null,
+        "current_capacities": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Secondary records associate 2210142 and UPC with this ASIN. Manufacturer 2210140 page has multiple size selectors and a different default assortment. Do not apply its default set contents, color, care, capacity or origin to the current ASIN. Target and secondary records disagree on contents; set-composition confirmation is a publication hold."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/",
+          "updated": "2026-11-25",
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "US Kitchen & Dining snapshot records B0FD7LSCTD at rank 60 versus 63 on November 24. Dated third-party positions, not verified units, sales or current offer. No sustained-growth inference. Publisher collection compliance/accuracy not independently established; no Amazon request or enrichment invoked."
+        },
+        {
+          "publisher": "Rubbermaid",
+          "url": "https://www.rubbermaid.com/food-storage/everyday-use-containers/easystore/easystore-food-storage-container-set/SAP_2210140.html",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Manufacturer confirms EasyStore product family and shows model 2210140 with multiple set-size selectors. Its default assortment differs from the ASIN-associated secondary 18-piece set. Family context only: no precise contents or other specifications transferred."
+        },
+        {
+          "publisher": "Allrecipes",
+          "url": "https://www.allrecipes.com/meal-prep-containers-amazon-11982462",
+          "updated": "2026-05-24",
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Dated affiliate/editorial roundup includes an EasyStore 18-piece set. Exact present ASIN match and hands-on testing unknown. Inclusion is editorial context, not current sales or offer verification. No description, savings, price, images, ratings or claims copied."
+        },
+        {
+          "publisher": "Desertcart India",
+          "url": "https://www.desertcart.in/products/755791963-rubbermaid-easystore-large-containers-18-piece-set-food-storage-containers",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Secondary non-US catalog explicitly associates ASIN B0FD7LSCTD and UPC 071691543220 with an 18-piece EasyStore set. Identifier corroboration only; no foreign offer, care, count/assortment or performance claim treated as current US Amazon evidence."
+        },
+        {
+          "publisher": "Target",
+          "url": "https://www.target.com/p/-/A-94304651",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Retailer record identifies an 18-piece large set and UPC 071691543220, but its capacity/quantity fields do not reconcile with other records. Do not adopt listed contents, color, warranty or care; exact set needs verification."
+        },
+        {
+          "publisher": "DK Hardware",
+          "url": "https://www.dkhardware.com/rubbermaid-2210142-food-storage-container-set-easy-store-clear-clear-product-9034328.html",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Secondary retailer corroborates model 2210142, UPC 071691543220 and 18-piece label. Not manufacturer specification verification or proof of present Amazon pack."
+        }
+      ],
+      "purpose": "Container-and-lid assortment for organizing leftovers, meal components and kitchen storage.",
+      "audience_fit": "Small-kitchen households replacing a mismatched container drawer and comparing actual useful box sizes rather than headline piece counts. Suitable for KFF pantry and food-storage themes.",
+      "buying_objections": [
+        "Does the piece count include lids, and how many useful containers of each size are actually supplied?",
+        "Secondary assortment fields conflict; verify UPC/model and current Amazon selected set before shopping.",
+        "Check shelf and drawer footprint using matching exact-model dimensions, not aggregate package dimensions.",
+        "No airtight, leakproof, freezer, microwave, dishwasher, food-freshness or durability claim until matching manufacturer instructions are confirmed.",
+        "Do not promise cross-compatibility with Rubbermaid Brilliance or other EasyStore sets; existing containers may already serve the need."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "category": "Kitchen & Dining",
+          "marketplace": "US",
+          "date": "2026-11-25",
+          "rank": 60,
+          "previous_date": "2026-11-24",
+          "previous_rank": 63
+        },
+        "independent_editorial_date": "2026-05-24",
+        "exact_tested_variant": "unknown; no independent exact-set testing established",
+        "manufacturer_verified_specs": "Family identity only; exact model/set composition unknown",
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion": null,
+        "ratings": null,
+        "review_counts": null,
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.4,
+          "audience_fit": 4.5,
+          "purchase_intent": 4.1,
+          "content_gap": 4,
+          "affiliate_editorial_suitability": 3.5
+        },
+        "weighted_total": 3.92,
+        "rationale": "Recent exact-ASIN rank and dated editorial set-family coverage support a distinct storage draft. Assortment conflicts and manufacturer-family versus exact-model gap limit suitability. Actual sales/search/conversion unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "Rubbermaid EasyStore 18 piece storage set buying guide",
+      "amazon_url": "https://www.amazon.com/dp/B0FD7LSCTD",
+      "microsite_match": {
+        "name": "Pantry Organizers Small Apartments",
+        "url": "https://pantry-organizers-small-apartments.kitchenfindsfavorites.com/",
+        "status": "Existing Workflow Desk inventory; thematic storage match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Rubbermaid EasyStore Buying Guide: Count Containers, Lids and Useful Sizes",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing an EasyStore food-storage set? Check how the pieces are counted, which container sizes are included and whether the set fits your drawer or shelf. Confirm the exact model and care instructions before replacing a mismatched container collection.",
+        "board": "Small Kitchen Storage & Meal Prep Organization",
+        "destination": "https://kitchenfindsfavorites.com/picks/rubbermaid-easystore-large-container-set/",
+        "destination_status": "pending; matching public page not confirmed",
+        "image_brief": "Original 1000 x 1500 drawer composition with generic containers and lids separated into groups and a blank size checklist. Label generic products 'Similar item shown'. Commission original photography/art with documented commercial site, Pin and video rights. No Amazon, competitor or unlicensed manufacturer media.",
+        "asset_status": "brief_only; actual media and commercial reuse rights pending"
+      },
+      "video_production_angle": {
+        "duration_seconds": 180,
+        "title": "A Piece Is Not Always a Container: A Food-Storage Set Checklist",
+        "timeline": [
+          {
+            "seconds": "0–20",
+            "direction": "Original drawer scene with affiliate disclosure. Introduce the difference between a set's headline piece count and useful containers; identify the EasyStore research candidate."
+          },
+          {
+            "seconds": "20–55",
+            "direction": "Generic containers and lids labeled Similar item shown illustrate counting components separately. Do not present the props as the ASIN's actual contents."
+          },
+          {
+            "seconds": "55–90",
+            "direction": "Original blank size chart for snacks, leftovers and larger batches. Fill exact EasyStore quantities only after current model verification; no invented capacity."
+          },
+          {
+            "seconds": "90–125",
+            "direction": "Measure a generic storage drawer and sketch a footprint; distinguish package dimensions from actual product dimensions."
+          },
+          {
+            "seconds": "125–155",
+            "direction": "Model/UPC and instruction checklist. Explain that exact set, care and lid compatibility need confirmation; no leakproof or heating demonstration."
+          },
+          {
+            "seconds": "155–177",
+            "direction": "Evaluate whether replacing a whole set serves the household or existing containers already fit its needs. No freshness, savings or longevity promise."
+          },
+          {
+            "seconds": "177–180",
+            "direction": "KFF end card; link only after matching reviewed destination exists."
+          }
+        ],
+        "status": "production_plan_only; no KFF hands-on testing, footage or commercial media rights verified"
+      },
+      "publication_holds": [
+        "Exact current Amazon model/variant/pack, condition, seller and offer unresolved",
+        "Exact unit/set specifications and instructions require confirmation",
+        "Actual media and commercial reuse rights pending",
+        "Matching public destination pending"
+      ]
+    },
+    {
+      "name": "Farberware Classic Series Stainless Steel Roasting Pan with Rack, 17 x 12.25 inch",
+      "asin": "B09Y69295C",
+      "category": "Cookware / roasting pans",
+      "status": "needs_amazon_verification",
+      "variant": {
+        "manufacturer_comparison_model": "48563",
+        "publicly_associated_configuration": "Stainless roaster with rack, nominal 17 x 12.25 inch; current Amazon set unverified",
+        "secondary_upc": "631899485632",
+        "current_amazon_model": null,
+        "current_variant": null,
+        "current_pack_count": null,
+        "seller": null,
+        "current_offer": null,
+        "notes": "Manufacturer identifies stainless roaster SKU 48563; secondary ASIN records associate the same form factor/model. Classic Series and Classic Traditions naming varies across sources. Keep separate from Farberware's smaller nonstick steel roaster. Nominal pan size is not overall handle footprint or turkey capacity."
+      },
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-25",
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "US Bakeware records B09Y69295C at 44 versus 22 on November 24, a daily decline of 22 positions. Dated category rank, not units or current offer. Publisher collection compliance/accuracy not independently established."
+        },
+        {
+          "publisher": "Farberware",
+          "url": "https://farberwarecookware.com/products/stainless-steel-roaster-with-rack",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Manufacturer identifies SKU 48563, stainless roaster with removable rack and nominal 17 x 12.25-inch size. These model facts do not verify present Amazon variant, pack, seller or offer. No browning, durability, care, heat, stovetop or capacity claim adopted."
+        },
+        {
+          "publisher": "Home Depot",
+          "url": "https://www.homedepot.com/p/321039689",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Independent retailer identifies Classic Traditions stainless roaster with rack model 48563. Exact current Amazon ASIN/variant link not verified. Retailer capacity and all-cooktops wording excluded."
+        },
+        {
+          "publisher": "Manuals.plus",
+          "url": "https://manuals.plus/asin/B09Y69295C",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Secondary ASIN-indexed page explicitly associates 48563 with B09Y69295C. It is not treated as manufacturer-issued instructions: dimensional conversion and generated content are not authoritative. No care, safety, capacity, heat or performance assertions copied."
+        },
+        {
+          "publisher": "Food & Wine",
+          "url": "https://www.foodandwine.com/best-roasting-pans-6826151",
+          "updated": null,
+          "accessed": "2026-11-25",
+          "access_method": "public search-indexed information only; direct page reading not attempted because access rules were not established",
+          "evidence": "Comparison tests a smaller Farberware nonstick steel roaster, not this stainless 48563. Excluded from exact-product demand/testing evidence. No findings or endorsements transferred."
+        }
+      ],
+      "purpose": "Roasting-pan-and-rack format for oven meals and larger gatherings; actual fit and intended use need exact model instructions.",
+      "audience_fit": "Hosts comparing a larger stainless roaster with existing KFF roasting options. Better suited to households with adequate oven and cupboard space; weaker fit for compact kitchens.",
+      "buying_objections": [
+        "Measure overall handles and oven clearance; the nominal 17-inch label is not a verified total footprint.",
+        "Check loaded handling, actual weight, rack shape and removal space with the exact unit.",
+        "Do not adopt retailer all-cooktops, turkey-weight, heat-limit or capacity wording as manufacturer-confirmed ASIN facts.",
+        "Current naming, model, rack inclusion, pack and condition require authorized Amazon confirmation.",
+        "No independent exact-stainless-model testing was established; smaller nonstick Farberware results are not comparable."
+      ],
+      "research_evidence": {
+        "rank": {
+          "publisher": "ParseShelf",
+          "category": "Bakeware",
+          "marketplace": "US",
+          "date": "2026-11-25",
+          "rank": 44,
+          "previous_date": "2026-11-24",
+          "previous_rank": 22
+        },
+        "demand_interpretation": "Category presence with daily deterioration; not an upward-trend story.",
+        "manufacturer_supported_model_facts": {
+          "source": "Farberware indexed model page",
+          "sku": "48563",
+          "material": "stainless steel",
+          "nominal_size": "17 x 12.25 inch",
+          "format": "roaster with removable rack"
+        },
+        "independent_exact_model_testing": "unknown",
+        "estimated_sales": null,
+        "verified_sales": null,
+        "search_volume": null,
+        "conversion": null,
+        "ratings": null,
+        "review_counts": null,
+        "confidence": "Medium",
+        "current_listing_confidence": "Low"
+      },
+      "score": {
+        "scale": "0–5 editorial heuristic, not a sales forecast",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3,
+          "audience_fit": 3.8,
+          "purchase_intent": 4,
+          "content_gap": 2.8,
+          "affiliate_editorial_suitability": 3.6
+        },
+        "weighted_total": 3.46,
+        "rationale": "Recent exact-ASIN rank and manufacturer exact-model page support a cautious comparison draft. Declining position, existing roaster coverage, larger footprint and missing exact-model independent testing reduce score. Sales/search/conversion unknown."
+      },
+      "confidence": "Medium",
+      "keyword": "Farberware 48563 stainless roasting pan fit guide",
+      "amazon_url": "https://www.amazon.com/dp/B09Y69295C",
+      "microsite_match": {
+        "name": "Cookware Sets Busy Families",
+        "url": "https://cookware-sets-busy-families.kitchenfindsfavorites.com/",
+        "status": "Existing Workflow Desk inventory; thematic cookware match only, public health not checked"
+      },
+      "pinterest": {
+        "title": "Stainless Roasting Pan Buying Guide: Check Farberware Model and Oven Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing the Farberware stainless roaster with rack? Check the exact model, overall handle footprint, oven clearance and storage space. Keep stainless and nonstick versions separate, and confirm the supplied rack and care instructions before choosing.",
+        "board": "Cookware Comparisons & Holiday Kitchen Planning",
+        "destination": "https://kitchenfindsfavorites.com/picks/farberware-stainless-roaster-with-rack/",
+        "destination_status": "pending; matching public page not confirmed",
+        "image_brief": "Original 1000 x 1500 generic stainless roaster-and-rack silhouette beside an oven-clearance diagram and model checklist. Label generic cookware 'Similar item shown'. Use original/commissioned photography or art with documented commercial site, Pin and video rights; no Amazon, competitor or unlicensed manufacturer media.",
+        "asset_status": "brief_only; actual media and commercial reuse rights pending"
+      },
+      "publication_holds": [
+        "Exact current Amazon model/variant/pack, condition, seller and offer unresolved",
+        "Exact unit/set specifications and instructions require confirmation",
+        "Actual media and commercial reuse rights pending",
+        "Matching public destination pending"
+      ]
+    }
+  ]
+}
