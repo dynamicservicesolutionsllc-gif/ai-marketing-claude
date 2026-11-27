@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "batch_name": "KFF US kitchen product research — 2026-11-27 morning",
+  "created": "2026-11-27",
+  "marketplace": "US",
+  "candidate_count": 2,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Public search-indexed information only. Direct-page access rules not established, so no individual-page fetches or bulk crawling. No Amazon scrape, enrichment request, automated Special Link click, purchase or paid credits.",
+    "amazon_status": "No already-authorized free Creators API exposed. Exact current listing identity, variant, pack, seller and offer remain needs_amazon_verification. No tagged link generated.",
+    "scoring": "Existing50-item framework: demand25%, audience fit25%, purchase intent20%, content gap15%, affiliate/editorial suitability15%. Factors are editorial estimates on0–5, not sales forecasts. Missing metrics remain unknown.",
+    "deduplication": "Fresh main products.json and approved SiteStripe ledger; full competitor and50-item ledgers from PR62/63 heads because both paths404 on main; all46 open PR snapshots/diffs;83 authenticated Desk prior ASINs. Both exact ASINs/models absent; similar baking-pan/bowl coverage considered in gap scores.",
+    "rank_limits": "Observed third-party historical list positions, manufacturer family information and editorial inclusion are separate signals. Publisher accuracy/collection compliance not independently established. No measured or estimated sales retained. No competitor prices, ratings, reviews, descriptions, images or performance claims copied.",
+    "microsites": "URLs matched authenticated Desk inventory by theme only; public health/indexing not rechecked.",
+    "publication_gates": [
+      "Current exact ASIN/model/variant/pack/seller/offer through an authorized Amazon method",
+      "Authoritative matching specifications/instructions, with separate pan/lid and generation checks",
+      "Original/licensed commercially cleared assets and suitability review",
+      "Matching public destination exists"
+    ],
+    "excluded": "Geedel grater, Astercook boards, Rubbermaid glass set, Cuisinart77-11G cookware and other incumbents already covered; no additional copies created."
+  },
+  "candidates": [
+    {
+      "name": "Farberware Nonstick Bakeware Rectangular Cake Pan with Lid for Baking, Gray, 9 x 13 inches",
+      "asin": "B000VPCF9S",
+      "category": "Bakeware / covered rectangular cake pans",
+      "keyword": "Farberware 52181 cake pan with lid buying guide",
+      "variant": {
+        "researched_configuration": "Gray, nominal 9 x 13 inch cake pan with lid",
+        "model": "52181",
+        "model_alignment": "Brand SKU52181 and secondary exact-ASIN/UPC631899521811 identity align provisionally. Distinct from lidless52102 and insulated GoldenBake pans.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification",
+        "seller": null,
+        "current_offer": null
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-27",
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Third-party US Bakeware snapshot records B000VPCF9S at54 on November27 versus46 on November26: a daily decline, not demand growth. Rank is a position, not measured/estimated sales or a current offer. Publisher accuracy and collection compliance not independently established."
+        },
+        {
+          "url": "https://farberwarecookware.com/products/nonstick-bakeware-covered-rectangular-cake-pan",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Manufacturer identifies covered9x13 pan as SKU52181. Pan care/heat information does not establish lid instructions or current Amazon generation. Coating, chemical, numerical heat and care claims are held from public copy."
+        },
+        {
+          "url": "https://pricehistory.app/p/farberware-nonstick-bakeware-baking-pan-lid-nonstick-NNhlArmb",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Secondary identity reference links B000VPCF9S to52181, Gray and9x13 with lid. Not authorized current listing verification."
+        },
+        {
+          "url": "https://slickdeals.net/f/19933803-new-15-39-farberware-nonstick-bakeware-rectangular-cake-pan-with-lid-for-baking-gray-at-amazon",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Historical public community post exposes amazon.com/dp/B000VPCF9S. Identity link only; no old offer terms adopted.",
+          "published": "2026-08-27"
+        },
+        {
+          "url": "https://www.allrecipes.com/longform/best-baking-pans/",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Older editorial roundup includes the Farberware rectangular-pan family and a lid option. Exact updated date, current generation and candidate-ASIN testing unknown. Historical editorial attention only; no review claims adopted.",
+          "published": "2020-10-04"
+        }
+      ],
+      "purpose": "Rectangular baking pan with a separate cover for storing or transporting cooled baked goods, subject to matching instructions.",
+      "audience_fit": "Home bakers planning cakes or bars for gatherings, and small-kitchen readers deciding whether a covered pan adds value over a pan they already own.",
+      "buying_objections": [
+        "Measure total external footprint and lid clearance; nominal baking size is not oven or cabinet clearance.",
+        "Confirm lid opening/closing method and separate pan/lid instructions before transport; no leakproof or freshness-duration promise.",
+        "Check current coating/generation and applicable care instructions. Do not transfer new coating claims to old inventory.",
+        "A shallow cake pan may not suit deep-casserole recipes; verify actual usable depth rather than assume."
+      ],
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": 3.6,
+          "audience_fit": 4.4,
+          "purchase_intent": 4.2,
+          "content_gap": 3.5,
+          "affiliate_editorial_suitability": 3.4
+        },
+        "weighted_total": 3.88,
+        "rationale": "Recent rank observation, primary family identity and a practical lid/clearance angle support research. Daily rank fell; older editorial inclusion is not fresh testing. Existing rectangular bakeware coverage and generation uncertainty limit the gap.",
+        "unknown": [
+          "unit sales",
+          "estimated sales",
+          "search volume",
+          "conversions",
+          "exact-generation independent tests",
+          "current Amazon seller/offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "Farberware Cake Pan with Lid: Check Size, Cover and Care",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a covered cake pan for cakes and bars? Check the Farberware 52181 model, total footprint and separate pan-and-lid instructions. Our planned guide helps you compare storage and carrying needs before choosing.",
+        "destination": "https://kitchenfindsfavorites.com/picks/farberware-52181-cake-pan-with-lid/",
+        "destination_status": "pending",
+        "board": "Baking Pans & Potluck Prep Ideas",
+        "image_brief": "Create an original1000×1500 generic covered rectangular-pan diagram with separate pan/cover labels and clearance arrows. Label Similar item shown. No exact-brand imitation, competitor or Amazon imagery, coating claims or food-storage performance demonstration. Document final commercial rights and suitability before publication."
+      },
+      "angle": "Three-minute Pan, Cover and Clearance buying checklist: distinguish52181 from lidless/insulated versions, measure full footprint, separate pan and lid instructions, and compare storage with equipment already owned. Original diagrams; no baking or transport test implied.",
+      "micrositeUrl": "https://baking-pans-busy-families.kitchenfindsfavorites.com/"
+    },
+    {
+      "name": "KitchenAid Classic Mixing Bowls, Set of 5, Pistachio",
+      "asin": "B07TMR84BV",
+      "category": "Kitchen tools / mixing bowl sets",
+      "keyword": "KitchenAid five piece Pistachio mixing bowls comparison",
+      "variant": {
+        "researched_configuration": "Five-bowl Pistachio set",
+        "model": "KE178OSPIA — secondary identity reference",
+        "model_alignment": "Secondary ASIN record and US retailer agree on KE178OSPIA/five-bowl/Pistachio configuration. KitchenAid official FAQ identifies Lifetime Brands as support for tools; exact manufacturer spec sheet unavailable.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification",
+        "seller": null,
+        "current_offer": null
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "updated": "2026-11-27",
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Third-party US Bakeware snapshot records B07TMR84BV at60 versus79 on November26. Observed daily rank climb, not measured/estimated sales or conversion."
+        },
+        {
+          "url": "https://pickoryx.com/deals/kitchenaid-classic-mixing-bowls-set-of-5-pistachio-B07TMR84BV",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Secondary identity reference associates B07TMR84BV with KE178OSPIA, Pistachio and five-piece configuration. Listed historical offer timestamp November19 is not used as current offer evidence."
+        },
+        {
+          "url": "https://www.walmart.com/ip/391080120",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "US retailer product family corroborates KE178OSPIA/five Pistachio bowls. Contents/specification text is provisional retailer evidence, not current exact Amazon-pack verification."
+        },
+        {
+          "url": "https://www.kitchenaid.com/countertop-appliances/licensee/meyer-corporation/faq",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Official KitchenAid support page identifies Lifetime Brands for tools, gadgets, cutlery and bakeware. Establishes support route only, not exact bowl specs or Amazon seller."
+        },
+        {
+          "url": "https://cookcraftandcreate.com/best-mixing-bowls-sets-for-kitchen/",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Affiliate/editorial roundup includes the five-bowl Classic family. November2026 appears in its title, but precise publication/revision and independent exact-ASIN testing are unconfirmed. Inclusion only; no product test or spill/stability claim adopted."
+        }
+      ],
+      "purpose": "A set of hand-mixing and ingredient-preparation bowls; not stand-mixer attachment bowls.",
+      "audience_fit": "Home bakers organizing several ingredients and comparing nesting bowl sets for a small cabinet; fits Gadget theme.",
+      "buying_objections": [
+        "Five bowls may duplicate sizes already owned; compare actual routine and storage space before choosing a full set.",
+        "Confirm capacities, rim/pour-spout design, external dimensions and exact pack from matching authoritative instructions.",
+        "Do not infer heat, microwave, oven, dishwasher, food-contact or scratch resistance from other KitchenAid bowl lines.",
+        "Grip comfort and real stability are unknown; no mess-free pouring or non-slip performance guarantee."
+      ],
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": 3.5,
+          "audience_fit": 4.2,
+          "purchase_intent": 4,
+          "content_gap": 3.1,
+          "affiliate_editorial_suitability": 3.2
+        },
+        "weighted_total": 3.67,
+        "rationale": "Dated daily rank climb and corroborated family identity support a draft. Existing bowl coverage, limited independent testing and missing exact manufacturer specs reduce priority.",
+        "unknown": [
+          "unit sales",
+          "estimated sales",
+          "search volume",
+          "conversions",
+          "exact-variant independent tests",
+          "authoritative exact capacities/care",
+          "current seller/offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "KitchenAid Mixing Bowls: Do You Need the Five-Piece Pistachio Set?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning your baking setup? Compare the KitchenAid five-bowl Pistachio set with the sizes you already own. Check model KE178OSPIA, package contents, cabinet space and matching care instructions in our planned guide.",
+        "destination": "https://kitchenfindsfavorites.com/picks/kitchenaid-five-piece-pistachio-mixing-bowls/",
+        "destination_status": "pending",
+        "board": "Kitchen Tools & Baking Organization",
+        "image_brief": "Create an original1000×1500 diagram of generic nested bowls beside a cabinet-measuring checklist. Label Similar item shown. Use no exact-product image, competitor/Amazon media or unsupported capacity, grip or durability claim. Final asset ownership/license and suitability remain pending."
+      },
+      "angle": "Five bowls or fewer? Compare prep tasks, existing bowl sizes, nesting space and matching care instructions. Buyer checklist with original generic diagrams; no stability, pouring or durability test claimed.",
+      "micrositeUrl": "https://gadget.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B000VPCF9S",
+    "title": "Pan, Cover and Clearance: A Covered Cake-Pan Buying Checklist",
+    "duration_seconds": 180,
+    "status": "production_plan_only",
+    "disclosure": "Spoken and visible opening: #ad As an Amazon Associate I earn from qualifying purchases.",
+    "segments": [
+      {
+        "seconds": "0–20",
+        "visual": "Original generic cake-pan and cover diagram, Similar item shown.",
+        "spoken": "A cake pan with a lid adds another piece to check before you buy. Start with the pan, the cover and the space around them. This is a buying checklist for the Farberware52181 research candidate; current listing details remain pending."
+      },
+      {
+        "seconds": "20–55",
+        "visual": "Original52181 /52102 / insulated-family identification card.",
+        "spoken": "Similar names can describe different pans. Our candidate is the covered52181 family. A lidless model or an insulated version is a different comparison. Match the model, dimensions and actual package contents before treating a product photo or title as confirmation."
+      },
+      {
+        "seconds": "55–90",
+        "visual": "Generic external-footprint and cabinet-clearance measurement illustration.",
+        "spoken": "The nominal baking size does not tell you the total space needed. Measure the external footprint, including handles and cover. Compare those measurements with your oven and storage space. We have not verified exact current external dimensions for this listing."
+      },
+      {
+        "seconds": "90–125",
+        "visual": "Separate pan and lid instruction checklists; no oven/heat footage.",
+        "spoken": "Read the pan and lid instructions separately. A rating printed for the pan does not establish what the lid can do. Confirm the current care instructions and coating generation, rather than transferring claims from a different model or an older listing."
+      },
+      {
+        "seconds": "125–155",
+        "visual": "Original checklist for cooled-food coverage, opening method and fit; no transport test.",
+        "spoken": "Think about why you want a cover: cabinet storage, carrying a cooled cake or keeping serving utensils organized. Check how the actual lid closes and opens. We have not performed a transport or freshness test and make no leakproof claim."
+      },
+      {
+        "seconds": "155–177",
+        "visual": "Original decision card: existing pan / covered pan / evidence pending.",
+        "spoken": "Compare the covered pan with equipment you already own. Before the guide is ready, we still need the exact current variant and offer, matching instructions, and cleared original media. Those checks will determine which facts belong on the final page."
+      },
+      {
+        "seconds": "177–180",
+        "visual": "KFF end card; only link an existing reviewed destination at production.",
+        "spoken": "Kitchen Finds & Favorites."
+      }
+    ],
+    "asset_rules": "Original generic diagrams labeled Similar item shown. No copied Amazon/competitor media, product performance simulation, unsafe lid use or implied KFF testing. Exact-unit footage requires verified identity/instructions and documented commercial rights."
+  }
+}
