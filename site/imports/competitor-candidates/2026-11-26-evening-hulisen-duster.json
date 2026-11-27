@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "batch_name": "KFF US kitchen product research — 2026-11-26 evening",
+  "created": "2026-11-26",
+  "marketplace": "US",
+  "candidate_count": 1,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Public search-indexed information only. Direct-page access rules not established, so no direct fetches or bulk crawling. No Amazon scrape, listing enrichment, Special Link clicks, purchase or paid credits.",
+    "authorized_amazon_connection": "No already-authorized free Creators API available in exposed tools; exact listing identity/variant/current offer needs_amazon_verification. No tagged link generated.",
+    "deduplication": "Fresh main products.json and SiteStripe ledger; competitor-candidates and 50-item ledger full content from PR62/63 heads because main paths404; all45 open PR snapshots/diffs;82 authenticated Desk prior ASINs. Candidate ASIN and W0826 absent; existing HULISEN biscuit cutters are a distinct product.",
+    "scoring": "Existing 50-item weights: demand25%, audience fit25%, purchase intent20%, content gap15%, affiliate/editorial suitability15%. Factor ratings are editorial judgments; missing factual metrics remain unknown.",
+    "evidence_limits": "Ranks, secondary identity references and editorial inclusion kept separate. No sales estimates, copied prices/ratings/reviews, competitor descriptions, performance claims or images retained. Two-piece ASIN referenced only to prevent pack confusion.",
+    "microsite": "Gadget thematic match appears in authenticated Desk inventory. No public health or indexing assertion.",
+    "publication_gates": [
+      "Authorized current exact ASIN/model/color/pack/seller/offer confirmation",
+      "Authoritative matching manufacturer instructions/specifications",
+      "Original or licensed media with commercial rights and suitability review",
+      "Matching public /picks/ destination exists"
+    ],
+    "excluded": [
+      "OXO salad spinner, GoodCook sheet pan/rack and MCIRCO glass bakeware already covered.",
+      "Glad Soup & Salad B0DN261L6W not selected: latest available rank observation November17 and unresolved historical roundup-to-current-ASIN mapping. No new Glad intake created."
+    ]
+  },
+  "candidates": [
+    {
+      "name": "HULISEN Flour Duster, 304 Stainless Steel Flour Sifter for Baking",
+      "asin": "B08GPLXCKZ",
+      "category": "Kitchen tools / baking dusting wands",
+      "keyword": "HULISEN flour duster versus flour sifter",
+      "variant": {
+        "model": "W0826 — secondary identity reference only",
+        "color": null,
+        "pack_count": null,
+        "status": "needs_amazon_verification",
+        "notes": "Public secondary exact-ASIN references associate W0826. Color text varies across indexed sources. The W0826 model label is also used for a separate two-piece ASIN B08PF14ZNG; do not substitute it. hulisen-kitchen.com uses SKU B01N2LTNXV on a similar duster page and its manufacturer authority is unconfirmed. No exact Amazon color, quantity, seller, offer or material/care specification verified."
+      },
+      "sources": [
+        {
+          "url": "https://parseshelf.com/best-sellers/kitchen/289668-bakeware/weekly/",
+          "updated": "2026-11-26",
+          "accessed": "2026-11-26",
+          "evidence": "Third-party US Bakeware snapshots place B08GPLXCKZ at 78 on November 19 and 30 on November 26. Observed rank improvement, not measured sales, estimated units or conversion. Publisher accuracy/collection compliance not independently established."
+        },
+        {
+          "url": "https://theeverydaykitchen.com/best-flour-sifters/",
+          "updated": "2026-11-06",
+          "accessed": "2026-11-26",
+          "evidence": "Public affiliate/editorial roundup includes the HULISEN flour duster. Supports current editorial interest only. Independent exact-ASIN hands-on testing is unknown; no performance/care/material claims adopted."
+        },
+        {
+          "url": "https://www.galleon.ph/product/hulisen-flour-duster-for-baking-one-handed-operation-304-stainless-steel-powdered-sugar-shaker-duster-pick-up-and-dust-flour-sifter-gift-package-B08GPLXCKZ",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "evidence": "Secondary non-US product record exposes B08GPLXCKZ and model W0826. Identity reference only, not a current US offer or seller confirmation."
+        },
+        {
+          "url": "https://hulisen-kitchen.com/product/flour-duster/",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "evidence": "Similar brand-styled product page lists SKU B01N2LTNXV rather than candidate ASIN. Manufacturer/domain authority and exact match remain unconfirmed. Excluded from verified specifications."
+        },
+        {
+          "url": "https://pricehistory.app/p/hulisen-set-2-flour-duster-baking-powdered-qKeDyCSj",
+          "updated": null,
+          "accessed": "2026-11-26",
+          "evidence": "Secondary reference associates W0826 with a separate two-piece B08PF14ZNG. This is a pack-identity caution, not a second selected candidate or current offer."
+        }
+      ],
+      "purpose": "A small dusting wand intended for applying flour or powdered ingredients to a limited area.",
+      "audience_fit": "Home bakers considering a finishing tool alongside existing biscuit-cutter and pastry-tool coverage; small-kitchen readers deciding whether a wand adds value over a sieve they own.",
+      "buying_objections": [
+        "A dusting wand and a bulk flour sifter serve different preparation tasks; explain that distinction without promising better baking results.",
+        "Check required hand motion, fill opening, cleaning access and usable capacity on the actual unit; dimensions and effort are unknown.",
+        "Model W0826 alone does not establish pack count. Confirm single versus two-piece listing and exact color.",
+        "Brand-page SKU mismatch prevents manufacturer-spec verification. No food-contact, stainless grade, dishwasher, portion-control or no-mess performance claim adopted."
+      ],
+      "score": {
+        "scale": "0–5",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.8,
+          "audience_fit": 4.2,
+          "purchase_intent": 4,
+          "content_gap": 3.7,
+          "affiliate_editorial_suitability": 3.2
+        },
+        "weighted_total": 3.84,
+        "rationale": "Recent dated category-rank movement, November roundup inclusion and a distinct dusting-versus-sifting angle support research priority. Variant and manufacturer authority uncertainty lower suitability. Heuristic, not a sales forecast.",
+        "unknown": [
+          "unit sales",
+          "estimated sales",
+          "search volume",
+          "conversion rate",
+          "exact-variant independent testing",
+          "current offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "HULISEN Flour Duster Buying Guide: Dusting Wand or Flour Sifter?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Choosing a baking tool? Compare a dusting wand with a full-size sifter, then check the HULISEN model, pack count, grip and care instructions. Our planned guide focuses on matching the tool to your baking routine.",
+        "destination": "https://kitchenfindsfavorites.com/picks/hulisen-flour-duster-buying-guide/",
+        "destination_status": "pending",
+        "board": "Baking Tools & Small Kitchen Ideas",
+        "image_brief": "Create an original 1000 × 1500 editorial diagram showing a generic dusting wand beside a generic sieve and a cookie outline. Label Similar item shown. Avoid exact-product lookalikes, material/performance claims and copied product images. Final asset and commercial rights record remain pending."
+      },
+      "angle": "Three-minute Dusting or Sifting? buying checklist: identify the job, check exact model/pack, compare storage and care requirements with equipment already owned. Original generic diagrams; no test or output demonstration before exact-unit and instruction verification.",
+      "micrositeUrl": "https://gadget.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B08GPLXCKZ",
+    "title": "Dusting or Sifting? Choose the Baking Job First",
+    "duration_seconds": 180,
+    "status": "production_plan_only",
+    "disclosure": "Opening spoken and visible: #ad As an Amazon Associate I earn from qualifying purchases.",
+    "segments": [
+      {
+        "seconds": "0–20",
+        "visual": "Original cookie, wand and sieve icons; Similar item shown.",
+        "spoken": "A small dusting wand and a full-size sifter can appear in the same buying guide. Start with the job you need done. This is a buying checklist for a HULISEN research candidate, with exact listing details still pending."
+      },
+      {
+        "seconds": "20–55",
+        "visual": "Original task chart: finishing a small area / preparing a batch.",
+        "spoken": "Are you finishing a dessert or preparing a larger batch of ingredients? Write down the tasks you do most often. Compare the tool design with those tasks and with the equipment already in your kitchen. We have not measured this model's output or capacity."
+      },
+      {
+        "seconds": "55–90",
+        "visual": "Model and pack checklist, no exact-product rendering.",
+        "spoken": "Our secondary references use model W0826, but that model text also appears beside a different pack. Check the exact ASIN, color and quantity together. A matching model name alone does not confirm the contents of the box."
+      },
+      {
+        "seconds": "90–125",
+        "visual": "Generic hand-motion, fill-access and storage diagrams.",
+        "spoken": "Look at how the actual tool opens, how you would fill it and where it would go in your drawer. Consider the hand motion involved. We have not assessed grip comfort or the effort required, so those details belong on the verification list."
+      },
+      {
+        "seconds": "125–155",
+        "visual": "Instruction/specification fields marked pending.",
+        "spoken": "Use instructions that match the exact unit. Our brand-page search produced a different SKU, so we have not carried material or cleaning claims into this guide. Confirm the source before treating any specification as settled."
+      },
+      {
+        "seconds": "155–177",
+        "visual": "Original decision card: task, pack, grip, care.",
+        "spoken": "Choose the job first, then confirm the model, pack, grip and care requirements. The next step is exact listing verification and cleared original media. A completed product guide will need that evidence before publication."
+      },
+      {
+        "seconds": "177–180",
+        "visual": "KFF end card; publish only with an existing reviewed destination.",
+        "spoken": "Kitchen Finds & Favorites."
+      }
+    ],
+    "asset_rules": "Original generic diagrams labeled Similar item shown; no competitor/Amazon media or implied product testing. Exact unit footage only after verified identity, matching instructions and documented rights."
+  }
+}
