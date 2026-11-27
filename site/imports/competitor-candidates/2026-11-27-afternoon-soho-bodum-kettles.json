@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "batch_name": "KFF US kitchen research — 2026-11-27 afternoon",
+  "created": "2026-11-27",
+  "marketplace": "US",
+  "candidate_count": 2,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Selected public search-indexed information only; direct-page access rules not established. No direct fetch, bulk crawl, Amazon scrape, listing enrichment, automated Special Link click, purchase or paid credits.",
+    "amazon": "No already-authorized free Creators API tool exposed. Current exact listing/variant/pack/seller/offer remain needs_amazon_verification; no tagged link generated.",
+    "deduplication": "Fresh main products.json/SiteStripe ledger; full competitor and50-item ledgers at PR62/63 heads because main paths404; all47 open PR snapshots/diffs;85 authenticated Desk prior ASINs. Both exact ASINs/model families absent. Existing kettles considered in gap scores. Farberware8-cup and several other kettles already covered.",
+    "scoring": "Existing50-item weights: demand25%, audience fit25%, purchase intent20%, content gap15%, affiliate/editorial suitability15%. Factor values are editorial judgments on0–5, not forecasts. Missing factual metrics are unknown.",
+    "evidence_limits": "Ranks, manufacturer family identity, historical links and editorial inclusion kept separate. Publisher rank accuracy/collection compliance not independently established. No copied competitor descriptions, reviews, ratings, prices, images or performance claims. No sales estimate or verified current offer asserted.",
+    "microsites": "Existing Electric Kettles Small Apartments/First Apartments matched authenticated Desk inventory by theme; public health/indexing not rechecked.",
+    "publication_gates": [
+      "Authorized exact current ASIN/model/variant/pack/seller/offer",
+      "Matching authoritative instructions, including unresolved control/identity facts",
+      "Original/licensed commercially cleared suitable media",
+      "Matching existing public destination"
+    ]
+  },
+  "candidates": [
+    {
+      "name": "Cuisinart Soho 1-Liter Double-Wall Electric Kettle, CK-10TR, Truffle",
+      "asin": "B0DD5FH26S",
+      "category": "Small appliances / electric kettles",
+      "keyword": "Cuisinart Soho CK-10TR one liter kettle buying guide",
+      "variant": {
+        "model": "CK-10TR",
+        "researched_configuration": "Truffle, nominal1-liter kettle with base",
+        "manufacturer_alignment": "Cuisinart model/color and secondary exact-ASIN record align provisionally. CK-10BK is a different color configuration.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification",
+        "seller": null,
+        "current_offer": null
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "published": null,
+          "updated": "2026-11-27",
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Third-party US Coffee, Tea & Espresso Appliances snapshot places B0DD5FH26S at11 on November27, unchanged from the previous daily snapshot. Observed rank, not units, sales estimates, conversion or current offer."
+        },
+        {
+          "url": "https://www.cuisinart.com/soho-1-liter-double-wall-electric-kettle/CK-10TR.html",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Manufacturer identifies CK-10TR, Truffle and nominal1-liter configuration. Manufacturer automatic-shutoff description conflicts with editorial text; functionality remains a verification hold. No plastic-contact, health, surface-temperature, speed or safety claim adopted."
+        },
+        {
+          "url": "https://manuals.plus/asin/B0DD5FH26S.pdf",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Secondary exact-ASIN document associates B0DD5FH26S with CK-10TR. Used for identity only, not as authoritative current instructions."
+        },
+        {
+          "url": "https://www.foodandwine.com/best-tea-kettles-8716711",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Editorial testing roundup includes the Soho family. Exact revision date/tested color-ASIN unknown. Its shutoff statement conflicts with manufacturer text; neither behavior is asserted in copy. Editorial interest only; no review claims copied."
+        },
+        {
+          "url": "https://slickdeals.net/f/19352337-34-99-1-liter-cuisinart-soho-double-wall-electric-kettle-truffle-at-amazon",
+          "published": "2026-03-27",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Historical community post exposes amazon.com/dp/B0DD5FH26S for Truffle. No expired offer, purchase count or deal terms adopted."
+        }
+      ],
+      "purpose": "Electric water-boiling kettle for a small tea, coffee or instant-food routine.",
+      "audience_fit": "Small-apartment readers comparing a compact nominal1-liter kettle with larger or temperature-controlled equipment.",
+      "buying_objections": [
+        "Check usable fill range, external footprint and lid clearance against the actual unit; retailer dimensions vary and remain unverified.",
+        "Confirm whether the current unit meets your desired temperature/hold functions; do not substitute a different Cuisinart kettle's features.",
+        "Resolve shutoff-description conflict through matching authoritative instructions and exact model before production.",
+        "US electrical requirements, care instructions, pack contents and current seller/offer need confirmation. No water-purification or microplastic-removal claim."
+      ],
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": 3.8,
+          "audience_fit": 4.4,
+          "purchase_intent": 4.2,
+          "content_gap": 3.2,
+          "affiliate_editorial_suitability": 3.5
+        },
+        "weighted_total": 3.9,
+        "rationale": "Current category-rank presence, primary family identity and editorial testing inclusion support priority. Existing kettle coverage and a factual conflict lower gap/suitability. Heuristic, not sales forecast.",
+        "unknown": [
+          "unit sales",
+          "sales estimates",
+          "search volume",
+          "conversions",
+          "exact-variant independent test",
+          "current offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "Cuisinart Soho Kettle: Is the One-Liter Size Right for Your Kitchen?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a small electric kettle? Check the Cuisinart Soho CK-10TR model, Truffle color, fill range and counter clearance. Our planned guide separates capacity, controls and care questions before you choose.",
+        "destination": "https://kitchenfindsfavorites.com/picks/cuisinart-soho-ck-10tr-truffle-kettle/",
+        "destination_status": "pending",
+        "board": "Small Kitchen Appliances & Tea Stations",
+        "image_brief": "Create an original1000×1500 generic kettle-and-cup diagram with fill-range and counter-clearance checklists. Label Similar item shown. No exact-product lookalike, Amazon/competitor media, health or heat/safety claim. Retain final ownership/license and suitability review before publication."
+      },
+      "angle": "Three-minute Capacity, Controls and Clearance guide: compare a compact boil-focused routine with temperature/hold requirements, explain the CK-10TR identity checks and unresolved shutoff text, and plan counter space using original diagrams. No boiling test or health claim.",
+      "micrositeUrl": "https://electric-kettles-small-apartments.kitchenfindsfavorites.com/"
+    },
+    {
+      "name": "Bodum 27oz Bistro Gooseneck Electric Water Kettle, Matte Black",
+      "asin": "B07G2MBM6L",
+      "category": "Small appliances / gooseneck electric kettles",
+      "keyword": "Bodum 11883-259US gooseneck kettle model comparison",
+      "variant": {
+        "model": "11883-259US — secondary ASIN mapping",
+        "researched_configuration": "Matte Black, nominal0.8-liter/27oz gooseneck kettle",
+        "manufacturer_alignment": "Bodum US page labels11883-259US MELIOR; secondary exact-ASIN record gives same model/UPC699965399290 while public title says Bistro. Naming mismatch remains explicit. Do not substitute11659-01US or34oz temperature-control versions.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification",
+        "seller": null,
+        "current_offer": null
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "published": null,
+          "updated": "2026-11-27",
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Third-party US Coffee, Tea & Espresso Appliances snapshot places B07G2MBM6L at58 versus55 on November26: a daily decline. Observed list position only; not measured/estimated sales."
+        },
+        {
+          "url": "https://www.bodum.com/us/en/11883-259us-melior",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Manufacturer US page identifies11883-259US, Black Matte,27oz/0.8-liter and EAN699965399290 under MELIOR. Provides family identity evidence, not confirmation of current Amazon variant, electrical labeling or seller."
+        },
+        {
+          "url": "https://www.desertcart.in/products/98118710-bodum-27oz-bistro-gooseneck-electric-water-kettle-pour-over-coffee",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Secondary non-US exact-ASIN reference connects B07G2MBM6L to11883-259US and UPC699965399290. Naming and dimensions require reconciliation; no offer/seller/fulfillment inference."
+        },
+        {
+          "url": "https://www.foodandwine.com/best-gooseneck-kettles-6822921",
+          "published": "2022-11-01",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Older testing roundup mentions the Bodum Bistro gooseneck family. Exact current revision and tested model/ASIN unknown. Historical editorial attention only."
+        },
+        {
+          "url": "https://www.waivio.com/object/ciq-bodum-11883-259us-melior-gooseneck-electric-water-kettle",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "access_method": "public search-indexed information only; direct-page access rules not established",
+          "evidence": "Public affiliate reference exposes B07G2MBM6L beside11883-259US. Identity corroboration only; specifications and performance text not adopted."
+        }
+      ],
+      "purpose": "A gooseneck-spout electric water kettle for pour-over preparation.",
+      "audience_fit": "Readers organizing a compact manual-coffee station and deciding whether a gooseneck tool fits their workflow.",
+      "buying_objections": [
+        "A narrow spout does not by itself establish temperature control, hold behavior or improved extraction; verify actual controls.",
+        "Reconcile Bistro listing name with MELIOR11883-259US identity and avoid newer/larger lookalikes.",
+        "Check usable fill range, US power labeling, lid/handle clearance and matching care instructions; capacity is not a number of standard mugs.",
+        "No plastic-free, material-contact, heating-speed, grip or flavor guarantee; older editorial tests do not establish this exact current unit."
+      ],
+      "score": {
+        "scale": "0–5",
+        "factors": {
+          "demand": 3.4,
+          "audience_fit": 4.1,
+          "purchase_intent": 4,
+          "content_gap": 3,
+          "affiliate_editorial_suitability": 3.2
+        },
+        "weighted_total": 3.61,
+        "rationale": "Recent dated rank presence and manufacturer/model corroboration support a research draft. Daily decline, naming mismatch, old editorial evidence and existing kettle coverage limit confidence.",
+        "unknown": [
+          "unit sales",
+          "sales estimates",
+          "search volume",
+          "conversions",
+          "exact-variant independent testing",
+          "current offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "Bodum Gooseneck Kettle Buying Guide: Check the Exact Model First",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Planning a pour-over station? Check the Bodum model, capacity, controls and counter fit before choosing. Our planned guide explains the Bistro and MELIOR naming question for the matte-black research candidate.",
+        "destination": "https://kitchenfindsfavorites.com/picks/bodum-11883-259us-gooseneck-kettle/",
+        "destination_status": "pending",
+        "board": "Coffee Stations & Small Kitchen Appliances",
+        "image_brief": "Create an original1000×1500 generic gooseneck-kettle silhouette beside a manual coffee station checklist. Label Similar item shown. No brand-specific recreation, copied product media, hot-pouring demo or extraction/precision claim. Final commercial rights and suitability documentation pending."
+      },
+      "angle": "Model first, coffee station second: explain Bistro/MELIOR naming and distinguish capacity, power-switch operation and temperature-controlled lookalikes; compare space and workflow without performance claims.",
+      "micrositeUrl": "https://electric-kettles-first-apartments.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B0DD5FH26S",
+    "title": "Capacity, Controls and Clearance: A Small-Kettle Buying Checklist",
+    "duration_seconds": 180,
+    "status": "production_plan_only",
+    "disclosure": "Spoken and visible opening: #ad As an Amazon Associate I earn from qualifying purchases.",
+    "segments": [
+      {
+        "seconds": "0–20",
+        "visual": "Original generic kettle/cup diagram labeled Similar item shown.",
+        "spoken": "Choosing a small electric kettle starts with three questions: how much water, which controls, and how much counter space? This is a buying checklist for our Cuisinart Soho research candidate. Exact current listing details remain pending."
+      },
+      {
+        "seconds": "20–55",
+        "visual": "Original fill-range and daily-routine checklist; no asserted mug count.",
+        "spoken": "The manufacturer describes a one-liter model, but that does not tell you how many of your cups it serves. Compare the usable fill range with your routine, and check the instructions for minimum and maximum fill before deciding."
+      },
+      {
+        "seconds": "55–90",
+        "visual": "CK-10TR / Truffle identity card; separate desired-controls checklist.",
+        "spoken": "Match the model and color together. Then list the functions you need, such as a chosen temperature or a holding mode. A similar-looking kettle may have different controls, so do not transfer features between models."
+      },
+      {
+        "seconds": "90–125",
+        "visual": "Conflicting source-text status cards; no heat or shutoff demonstration.",
+        "spoken": "Our research found a disagreement between manufacturer and editorial shutoff descriptions. That is a reason to verify matching authoritative instructions before production. We have not checked the actual unit or measured its heating behavior."
+      },
+      {
+        "seconds": "125–155",
+        "visual": "Generic countertop/base/lid-clearance measuring illustration.",
+        "spoken": "Measure the space for the whole setup, including the base, lid clearance and cord arrangement. Retailer dimensions differ, so confirm the exact unit's measurements. The goal is to compare fit with the space you actually have."
+      },
+      {
+        "seconds": "155–177",
+        "visual": "Original decision card: routine, controls, fit, verification.",
+        "spoken": "Choose by your routine, controls and fit. Our draft still needs current Amazon identity and offer checks, matching instructions and cleared original media. A finished guide should make those facts clear without health or performance promises."
+      },
+      {
+        "seconds": "177–180",
+        "visual": "KFF end card; link only an existing reviewed page at production.",
+        "spoken": "Kitchen Finds & Favorites."
+      }
+    ],
+    "asset_rules": "Original generic diagrams labeled Similar item shown; no Amazon/competitor media, simulated testing or hot-liquid demonstration. Exact-unit footage only after model/instruction verification and documented commercial rights."
+  }
+}
