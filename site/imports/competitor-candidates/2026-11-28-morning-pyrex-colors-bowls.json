@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "batch_name": "KFF US kitchen research — 2026-11-28 morning",
+  "created": "2026-11-28",
+  "marketplace": "US",
+  "candidate_count": 1,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Selected public search-indexed information only; direct-page access rules not established. No individual-page fetches, bulk crawl, Amazon scraping/enrichment, automated Special Link click, purchase or paid credits.",
+    "amazon": "No already-authorized free Creators API exposed. Exact current listing/variant/pack/seller/offer remain needs_amazon_verification; no tagged link generated.",
+    "deduplication": "Fresh main products.json and approved SiteStripe ledger; full competitor/50-item ledgers at PR62/63 heads because main paths404; all49 open PR snapshots/diffs;88 authenticated Desk prior ASINs. Candidate ASIN,1149549 and sculpted family absent. Other existing mixing bowls considered in gap score.",
+    "scoring": "Existing50-item weights: demand25%, audience fit25%, purchase intent20%, content gap15%, affiliate/editorial suitability15%. Factor ratings are editorial judgments on0–5, not forecasts. Missing factual metrics remain unknown.",
+    "evidence_limits": "Rank, manufacturer-family configuration, secondary identity and older editor-use report are separate signals. Exact current-variant independent testing unknown. Publisher rank accuracy/collection compliance not independently established. No competitor descriptions, ratings, reviews, prices, images, health or performance claims copied.",
+    "microsite": "Gadget thematic match exists in authenticated Desk inventory. Public health/indexing not rechecked.",
+    "excluded": "LE TAUCI4oz ramekins already covered. COOK WITH COLOR Sage set held outside intake pending authoritative model/contents evidence; selected Pyrex has stronger manufacturer alignment.",
+    "publication_gates": [
+      "Authorized current exact ASIN/model/variant/pack/seller/offer",
+      "Matching authoritative bowl/lid instructions; do not transfer heating permissions",
+      "Original/licensed commercially cleared suitable assets",
+      "Matching public destination exists"
+    ]
+  },
+  "candidates": [
+    {
+      "name": "Pyrex Colors Sculpted Tinted Glass Mixing Bowls with Lids, 3-Pack",
+      "asin": "B0BWL3VH3Y",
+      "category": "Kitchen tools / glass mixing bowls with lids",
+      "keyword": "Pyrex Colors sculpted mixing bowls three bowls six pieces",
+      "variant": {
+        "model": "1149549",
+        "upc": "071160155794",
+        "researched_configuration": "Mixed soft amber/yellow, green and blue; three nominal1.3,2.3,4.5-quart bowls with three lids; six pieces total in manufacturer1149549 family",
+        "manufacturer_alignment": "Pyrex1149549/UPC071160155794 aligns with secondary exact-ASIN record. Similar1151467 and lidless3-piece versions are not assumed equivalent.",
+        "exact_amazon_variant_confirmed": false,
+        "pack_count_confirmed": false,
+        "status": "needs_amazon_verification",
+        "seller": null,
+        "current_offer": null
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289668-bakeware/",
+          "published": null,
+          "updated": "2026-11-28",
+          "accessed": "2026-11-28",
+          "evidence": "Third-party US Bakeware snapshot records B0BWL3VH3Y moving from80 on November27 to62 on November28. Observed rank is not measured/estimated sales, conversion or a current offer. Publisher accuracy/collection compliance not independently established."
+        },
+        {
+          "url": "https://pyrexhome.com/collections/sets-pyrex/products/pyrex-colors-sculpted-tinted-dreams-6-piece-mixing-bowl-set",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-28",
+          "evidence": "Manufacturer identifies SKU1149549 and UPC071160155794, a tinted3-bowl family with lids in three nominal sizes. Family identity/contents evidence only, not current Amazon-pack verification. No heating, thermal-shock, leakproof, freshness-duration or health claims adopted."
+        },
+        {
+          "url": "https://www.desertcart.com.eg/products/711435057-pyrex-colors-tinted-3-pack-full-set-sculpted-tinted-glass",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-28",
+          "evidence": "Secondary non-US exact-ASIN record gives B0BWL3VH3Y and UPC071160155794. Identity corroboration only; no seller/fulfillment/offer inference. Care statements across secondary sources conflict and are not adopted."
+        },
+        {
+          "url": "https://fado.vn/us/amazon/pyrex-year-of-color-sculpted-3-pack-13-qt-23-qt-45-qt-tinted-glass-mixing-bowls-set-with-lids-for-prepping-baking-and-cooking-preheated-oven-dishwasher-freezer-and-microwave-safe-B0BWL3VH3Y.html",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-28",
+          "evidence": "Public cross-border product link exposes B0BWL3VH3Y and secondary model1149549. Exact current US listing not directly confirmed. Conflicting heating/care metadata excluded."
+        },
+        {
+          "url": "https://www.foodandwine.com/editor-loved-non-toxic-kitchen-gadgets-amazon-2025-11834717",
+          "published": "2025-11-28",
+          "updated": null,
+          "accessed": "2026-11-28",
+          "evidence": "Dated editor-shopping article includes the Pyrex Colors sculpted bowl family and reports personal use. Older editorial attention, not current exact-ASIN testing or demand velocity. No reviewer prose, health/toxicity, durability or convenience claims adopted."
+        }
+      ],
+      "purpose": "A bowl-and-lid set intended for mixing, serving and covered storage, subject to matching instructions.",
+      "audience_fit": "Home bakers and meal-prep readers comparing a covered nesting glass set with existing bowls; useful for explaining bowl count versus total piece count.",
+      "buying_objections": [
+        "Three bowls plus three lids does not mean six bowls; verify exact pack and color version before choosing.",
+        "Compare glass handling weight and cabinet space with existing equipment; usable fill capacity and external dimensions need exact-unit confirmation.",
+        "Lid fit, replacement availability and matching bowl/lid instructions matter; no transport or leakproof guarantee.",
+        "Do not transfer oven or other heating permissions from different Pyrex product lines. SimilarSKU1151467 and lidless sets need separate identity checks."
+      ],
+      "score": {
+        "scale": "0–5",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.8,
+          "audience_fit": 4.4,
+          "purchase_intent": 4.1,
+          "content_gap": 3.3,
+          "affiliate_editorial_suitability": 3.7
+        },
+        "weighted_total": 3.92,
+        "rationale": "Recent exact-ASIN rank movement and manufacturer/secondary SKU-UPC alignment support priority. Older editor-use coverage adds context; existing bowl coverage and unresolved current pack/care reduce the content gap. Heuristic, not forecast.",
+        "unknown": [
+          "unit sales",
+          "sales estimates",
+          "search volume",
+          "conversions",
+          "exact-current-variant independent testing",
+          "current offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "Pyrex Colors Mixing Bowls: Three Bowls or Six Pieces?",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a covered mixing-bowl set? Check the Pyrex Colors model, three-bowl package, matching lids and cabinet fit. Our planned guide explains total piece counts and separates bowl-and-lid care questions before you choose.",
+        "destination": "https://kitchenfindsfavorites.com/picks/pyrex-colors-sculpted-mixing-bowls-with-lids/",
+        "destination_status": "pending",
+        "board": "Kitchen Prep & Baking Organization",
+        "image_brief": "Create an original1000×1500 editorial diagram of three generic bowls and three separate lids, with a six-total-pieces counting cue. Label Similar item shown. No exact-brand recreation, Amazon/competitor images, heating demonstration or storage-performance claim. Final asset ownership/license and suitability review pending."
+      },
+      "angle": "Three-minute Three Bowls, Six Pieces buying checklist: unpack the counting terminology, compare actual prep needs/cabinet fit and lid care, distinguish1149549 from similar/lidless sets. Original generic diagrams; no hands-on or heating/storage test implied.",
+      "micrositeUrl": "https://gadget.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B0BWL3VH3Y",
+    "title": "Three Bowls, Six Pieces: Read a Mixing-Bowl Set Before You Buy",
+    "duration_seconds": 180,
+    "status": "production_plan_only",
+    "disclosure": "Spoken and visible opening: #ad As an Amazon Associate I earn from qualifying purchases.",
+    "segments": [
+      {
+        "seconds": "0–20",
+        "visual": "Original three-bowl/three-lid counting diagram, Similar item shown.",
+        "spoken": "Three bowls or six pieces? Both descriptions can refer to the same kind of package when lids count as pieces. This is a buying checklist for our Pyrex Colors sculpted-bowl research candidate, with exact current Amazon verification still pending."
+      },
+      {
+        "seconds": "20–55",
+        "visual": "Generic bowl/lid pairs counted separately; no exact product rendering.",
+        "spoken": "Count the bowls and lids separately before comparing sets. The manufacturer family we researched describes three bowl sizes with coordinating lids. That is different from a lidless three-piece set or six bowls, and a similar product name may refer to a different version."
+      },
+      {
+        "seconds": "55–90",
+        "visual": "Original prep-task and nominal-size checklist.",
+        "spoken": "Compare the sizes with what you prepare most often and with bowls already in your kitchen. A stated capacity is not necessarily the amount you would comfortably mix. We have not measured this set's usable fill range or performance."
+      },
+      {
+        "seconds": "90–125",
+        "visual": "Cabinet-clearance and generic nested-bowl diagram.",
+        "spoken": "Check the space needed for the largest bowl, the complete nested stack and any separately stored lids. Glass handling weight and storage needs matter for your routine. Verify the exact unit's dimensions instead of treating listing photos as measurements."
+      },
+      {
+        "seconds": "125–155",
+        "visual": "Separate bowl/lid instruction cards with heating fields pending.",
+        "spoken": "Read bowl and lid instructions separately. Do not transfer heating permissions from another Pyrex line or from a different lid. Our draft does not make oven, leakproof or freshness-duration claims; matching instructions are still part of the publication check."
+      },
+      {
+        "seconds": "155–177",
+        "visual": "Decision card: count, sizes, cabinet, instructions, verification.",
+        "spoken": "Start with count, sizes, cabinet fit and instructions. The next step is to confirm the current Amazon model, color, package and offer, then create cleared original media. The rank snapshot and older editorial coverage make this a research candidate, not a tested recommendation."
+      },
+      {
+        "seconds": "177–180",
+        "visual": "KFF end card; only link an existing reviewed destination at production.",
+        "spoken": "Kitchen Finds & Favorites."
+      }
+    ],
+    "asset_rules": "Original generic diagrams labeled Similar item shown. No Amazon/competitor media, simulated product test, heating demo or storage-performance claim. Exact-unit footage only after verification and documented commercial rights."
+  }
+}
