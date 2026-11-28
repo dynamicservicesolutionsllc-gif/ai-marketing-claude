@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "created": "2026-11-28",
+  "batch": "2026-11-28 afternoon",
+  "marketplace": "US",
+  "candidate_count": 2,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Public search-indexed evidence only. No direct source pages read where access rules were unestablished. No Amazon pages scraped, affiliate links clicked, paid API/credits or purchases.",
+    "dedup": {
+      "main_files": [
+        "site/products.json",
+        "site/imports/sitestripe.json"
+      ],
+      "draft_files": [
+        {
+          "path": "site/imports/competitor-candidates.json",
+          "ref": "codex/competitor-product-candidates-2026-11-08"
+        },
+        {
+          "path": "site/imports/pinterest-research-batch-50.json",
+          "ref": "codex/pinterest-product-research-50-2026-11-08"
+        }
+      ],
+      "note": "Research ledgers are absent on main and were read from their actual open draft PR heads.",
+      "open_prs": [
+        126,
+        125,
+        124,
+        123,
+        122,
+        121,
+        120,
+        119,
+        118,
+        117,
+        116,
+        115,
+        114,
+        113,
+        112,
+        111,
+        110,
+        109,
+        108,
+        107,
+        106,
+        105,
+        104,
+        103,
+        102,
+        101,
+        100,
+        99,
+        98,
+        95,
+        94,
+        93,
+        90,
+        89,
+        88,
+        86,
+        85,
+        84,
+        80,
+        74,
+        73,
+        72,
+        70,
+        67,
+        64,
+        63,
+        62,
+        61,
+        59,
+        57
+      ],
+      "prior_desk_asins": 89,
+      "checks": "Both ASINs, model families and names checked against full catalog/import contents and all 50 open PR snapshots/diffs; no match."
+    },
+    "scoring_weights": {
+      "demand": 0.25,
+      "audience_fit": 0.25,
+      "purchase_intent": 0.2,
+      "content_gap": 0.15,
+      "affiliate_editorial_suitability": 0.15
+    },
+    "confidence": "Medium for research; Low for current listing identity/offer. Unknown sales, ratings, exact-ASIN independent testing and unavailable dates remain null.",
+    "demand_limits": "Only dated third-party published category ranks retained. Publisher collection/authorization not independently audited; indexed observations are not Amazon-authorized offer verification. No unit sales, conversion forecasts, competitor descriptions, reviews, prices, ratings or images retained.",
+    "editorial_limits": "Homecraft editorial inclusion is family-level only; exact ASIN tested unknown. Chefman exact-ASIN independent editorial testing unknown. No unsupported health, boiling-time, safety or superiority claims.",
+    "publication": "Research draft intake only. No changes to main, products.json, SiteStripe, deployment or social channels. No tagged links generated. Proposed destinations and media remain pending."
+  },
+  "candidates": [
+    {
+      "marketplace": "US",
+      "listing_identity_status": "needs_amazon_verification",
+      "current_offer": {
+        "seller": null,
+        "availability": null,
+        "verified": false
+      },
+      "estimated_unit_sales": null,
+      "rating_review_counts": null,
+      "independent_testing_for_exact_asin": null,
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "name": "Chefman Fast-Boil™ 1L Tea Infuser Kettle",
+      "asin": "B0CCG1Z86C",
+      "model": "RJ11-10-GMRL-TI",
+      "variant": {
+        "capacity": "1 liter nominal",
+        "color": "Black, supported by secondary device record",
+        "pack_count": "One kettle appliance; current Amazon package contents unverified",
+        "manufacturer_match": "Chefman model and capacity match secondary ASIN/model record; no authorized Amazon confirmation"
+      },
+      "category": "Electric kettles",
+      "keyword": "1 liter electric kettle with tea infuser",
+      "purpose": "Heat water and steep loose-leaf tea using a removable infuser.",
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-28",
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Published third-party US category snapshot: #14 on November 28, 2026; down two positions from #12 in the previous daily snapshot. Seven consecutive snapshots indicated by the table. A dated rank observation, not sales or a current Amazon offer."
+        },
+        {
+          "publisher": "Chefman",
+          "url": "https://chefman.com/products/rj11-10-gmrl-ti",
+          "updated": null,
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Manufacturer identifies RJ11-10-GMRL-TI, nominal 1L, 1500W/120V and a removable tea infuser. Product-page update date unknown. Manufacturer statements were not independently performance-tested."
+        },
+        {
+          "publisher": "Slickdeals",
+          "url": "https://slickdeals.net/f/17345682-chefman-electric-kettle-with-tea-infuser-1l-1500w-removable-lid-16-99-fs-w-prime-amazon",
+          "updated": null,
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Historical public community post exposes https://www.amazon.com/dp/B0CCG1Z86C. Used only for the bare ASIN; exact publication/update date unknown. Historical deal and offer not adopted."
+        },
+        {
+          "publisher": "Device.report",
+          "url": "https://device.report/chefman/rj11-10-gmrl-ti",
+          "updated": null,
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Secondary device record associates ASIN B0CCG1Z86C with RJ11-10-GMRL-TI, black and UPC 810087844844. Update date unknown; secondary ASIN bridge is not current Amazon identity verification."
+        }
+      ],
+      "audience_fit": "One- or two-person households comparing a small tea kettle with larger countertop kettles; a narrow purpose suits a focused electric-kettle guide.",
+      "buying_objections": [
+        "A nominal liter may require multiple batches for guests; usable water limits with the infuser need the exact US manual.",
+        "Buyers wanting adjustable brewing temperatures should confirm controls rather than assume presets.",
+        "Glass, infuser cleaning and mineral buildup add handling and maintenance.",
+        "Manufacturer and secondary record weights differ; omit weight until reconciled."
+      ],
+      "score": {
+        "demand": 3.8,
+        "audience_fit": 4.3,
+        "purchase_intent": 4,
+        "content_gap": 3.5,
+        "affiliate_editorial_suitability": 3.6,
+        "weighted_total": 3.89,
+        "scale": "0–5",
+        "rationale": "Recent category presence supports demand, but no reliable dated independent test for this exact ASIN was established. Audience and intent are editorial judgments; content gap is assessed against the repository, not measured search competition."
+      },
+      "publication_holds": [
+        "Authorized Amazon title/model, black 1L infuser variant, package contents, seller and current offer confirmation.",
+        "Reconcile manufacturer/manual fill limits and conflicting weight before publishing those details.",
+        "Original or commercially licensed assets and matching site destination review."
+      ],
+      "pinterest": {
+        "title": "1 Liter Electric Kettle With Tea Infuser: Plan Your Tea Corner",
+        "description": "Planning a tea corner in a small kitchen? Compare a compact infuser kettle with your mug size, available counter space and cleanup routine. Save this guide for your next kitchen update. #ad As an Amazon Associate I earn from qualifying purchases.",
+        "destination": "https://kitchenfindsfavorites.com/picks/chefman-fast-boil-1l-tea-infuser-kettle/",
+        "destination_status": "pending_matching_site_page",
+        "board": "Small Kitchen Appliances",
+        "image_brief": "Create an original 1000×1500 illustration of a small tea corner with a generic glass kettle, separate mesh infuser and two mugs. Add clearly visible 'Similar item shown'. No competitor or Amazon imagery, copied trade dress, speed claims or prices. Final asset and commercial rights review pending.",
+        "status": "draft"
+      },
+      "angle": "Small tea corner comparison: match nominal kettle capacity to household mug sizes, compare removable infuser cleanup with a separate strainer, and discuss whether temperature controls matter.",
+      "micrositeUrl": "https://electric-kettles-small-apartments.kitchenfindsfavorites.com/"
+    },
+    {
+      "marketplace": "US",
+      "listing_identity_status": "needs_amazon_verification",
+      "current_offer": {
+        "seller": null,
+        "availability": null,
+        "verified": false
+      },
+      "estimated_unit_sales": null,
+      "rating_review_counts": null,
+      "independent_testing_for_exact_asin": null,
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "name": "HomeCraft 2-Quart Iced Tea Maker",
+      "asin": "B0BVGFB7WW",
+      "model": "HCIT2PLSBK6A",
+      "variant": {
+        "capacity": "2-quart pitcher, supported by manufacturer headline and specifications",
+        "color": "Black, secondary ASIN record",
+        "pack_count": "One appliance and pitcher; exact current Amazon included components unverified",
+        "manufacturer_match": "Manufacturer model HCIT2PLSBK6A and UPC 810061707974 match the secondary ASIN record. A stray 20 oz sentence on the manufacturer page conflicts with its 2-quart headline; resolve before final specs publication."
+      },
+      "category": "Iced tea makers",
+      "keyword": "2 quart electric iced tea maker",
+      "purpose": "Brew tea into an ice-filled serving pitcher; distinguish hot brewing over ice from a long cold steep.",
+      "sources": [
+        {
+          "publisher": "ParseShelf",
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289742-coffee-tea-and-espresso-appliances/",
+          "updated": "2026-11-28",
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Published third-party US category snapshot: #55 on November 28, 2026; up six positions from #61 in the previous daily snapshot. Seven consecutive snapshots indicated by the table. Rank is an imperfect dated demand signal, not units sold or conversion."
+        },
+        {
+          "publisher": "Nostalgia Products",
+          "url": "https://nostalgiaproducts.com/collections/entertaining/products/homecraft-2-quart-iced-tea-maker",
+          "updated": null,
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Manufacturer identifies model HCIT2PLSBK6A and UPC 810061707974; describes a 2-quart pitcher and basket using paper filters. Stray 20 oz description and inconsistent dimensions across retailer records remain unresolved. Manufacturer update date unknown."
+        },
+        {
+          "publisher": "Fado",
+          "url": "https://fado.vn/us/amazon/homecraft-electric-iced-tea-maker-for-sweet-tea-and-cold-brew-coffee-double-insulated-pitcher-black-small-B0BVGFB7WW.html",
+          "updated": null,
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Public secondary product URL exposes B0BVGFB7WW; record associates it with HCIT2PLSBK6A. Used only for identity research, not current offer, ranks, reviews or seller."
+        },
+        {
+          "publisher": "Food Network",
+          "url": "https://www.foodnetwork.com/how-to/packages/shopping/product-reviews/best-iced-tea-makers",
+          "updated": "2026-06-16",
+          "accessed": "2026-11-28",
+          "access_method": "search-indexed public information only; individual-page access rules not established",
+          "evidence": "Homecraft appears in Food Network's June 16, 2026 tested roundup; exact ASIN match unconfirmed."
+        }
+      ],
+      "audience_fit": "Households that regularly make a pitcher of iced tea and want to compare a dedicated brewer with a simple steeping pitcher; a practical beverage-prep topic for kitchen appliance readers.",
+      "buying_objections": [
+        "A dedicated appliance needs counter and pitcher storage space even if tea is made infrequently.",
+        "Paper filters create a recurring consumable and another cleanup step.",
+        "Care instructions and dimensions conflict between editorial, manufacturer and retailer records; do not publish a dishwasher-safe claim or final footprint.",
+        "Confirm controls and exact US manual; do not imply a customizable brew-temperature setting or true cold-steep cycle."
+      ],
+      "score": {
+        "demand": 3.9,
+        "audience_fit": 4.2,
+        "purchase_intent": 4,
+        "content_gap": 4.1,
+        "affiliate_editorial_suitability": 3.8,
+        "weighted_total": 4.01,
+        "scale": "0–5",
+        "rationale": "Recent rank improvement and a dated family-level editorial inclusion support research. Exact-ASIN test identity is unknown. Fit, intent and catalog content gap are comparative editorial judgments; no sales forecast or measured keyword volume."
+      },
+      "publication_holds": [
+        "Authorized Amazon title/model, black 2-quart variant, included components, seller and current offer confirmation.",
+        "Reconcile the manufacturer's stray capacity sentence, dimensions, care and exact manual before final product specifications or a demonstration.",
+        "Original or commercially licensed assets and matching site destination review."
+      ],
+      "pinterest": {
+        "title": "Electric Iced Tea Maker: Plan a Pitcher-Friendly Kitchen Setup",
+        "description": "Making iced tea for the household? Plan where the brewer will sit, how the pitcher will fit in the fridge and which filters you will keep on hand. Save these kitchen setup questions before choosing your next tea maker. #ad As an Amazon Associate I earn from qualifying purchases.",
+        "destination": "https://kitchenfindsfavorites.com/picks/homecraft-2-quart-iced-tea-maker/",
+        "destination_status": "pending_matching_site_page",
+        "board": "Kitchen Beverage Stations",
+        "image_brief": "Create an original 1000×1500 illustration of iced tea in a generic pitcher beside paper filters, a tea tin and a simple fridge-space diagram. Clearly label 'Similar item shown'. No competitor or Amazon imagery, product likeness, prices or implied test results. Final commercial rights and asset review pending.",
+        "status": "draft"
+      },
+      "angle": "A pitcher of iced tea: compare a dedicated brewer with a plain steeping pitcher around batch size, filter supplies, countertop space and refrigerator storage. Explain hot brew over ice versus cold steeping without claiming measured performance.",
+      "micrositeUrl": "https://coffee-makers-small-apartments.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B0BVGFB7WW",
+    "duration_seconds": 180,
+    "title": "A Pitcher of Iced Tea: Make Room Before You Choose",
+    "status": "production_plan_only",
+    "opening_disclosure": "#ad As an Amazon Associate I earn from qualifying purchases.",
+    "timeline": [
+      {
+        "seconds": "0–20",
+        "brief": "Open with the household question: is iced tea an occasional glass or a regular pitcher? Use original footage of a generic serving pitcher; disclosure on screen."
+      },
+      {
+        "seconds": "20–55",
+        "brief": "Show a batch-planning diagram: compare household glass sizes with the nominal 2-quart format, clearly attributed to manufacturer specifications, with final capacity reconciliation required."
+      },
+      {
+        "seconds": "55–90",
+        "brief": "Explain hot brewing over ice and long cold steeping using original diagrams. Avoid calling this a cold-steep appliance or inventing brew times."
+      },
+      {
+        "seconds": "90–125",
+        "brief": "Compare a dedicated brewer with a simple pitcher: countertop space, pitcher storage and paper-filter supplies. Present decision questions, not fabricated test results."
+      },
+      {
+        "seconds": "125–155",
+        "brief": "Show a fridge-space planning illustration and cleaning-supply checklist. Withhold exact dimensions and care directions until conflicts are resolved."
+      },
+      {
+        "seconds": "155–177",
+        "brief": "Give a balanced fit recommendation: frequent pitcher households may value the format; occasional drinkers should weigh the extra appliance and cleanup. Use a pending site-guide CTA only after the page is confirmed."
+      },
+      {
+        "seconds": "177–180",
+        "brief": "Three-second KFF end card. Final website and social-profile links must be verified during production."
+      }
+    ],
+    "asset_plan": "Use original generic footage or commercially licensed stock with retained permission and attribution. Label generic equipment 'Similar item shown'. No product demonstration until exact unit/manual are verified; no Amazon or competitor media."
+  }
+}
