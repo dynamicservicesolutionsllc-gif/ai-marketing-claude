@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "batch_name": "KFF US kitchen research — 2026-11-27 evening",
+  "created": "2026-11-27",
+  "marketplace": "US",
+  "candidate_count": 1,
+  "status": "research_draft",
+  "methodology": {
+    "access": "Selected public search-indexed information only because direct-page access rules were not established. No individual-page fetches, bulk crawl, Amazon scraping/enrichment, Special Link clicks, purchase or paid credits.",
+    "amazon": "No already-authorized free Creators API exposed. Exact current Amazon model/variant/pack/seller/offer remain needs_amazon_verification; no tagged link generated.",
+    "deduplication": "Fresh main products.json and approved SiteStripe ledger; full competitor/50-item ledgers at PR62/63 heads because main paths404; all48 open PR snapshots/diffs;87 authenticated Desk prior ASINs. Candidate ASIN, brand and secondary model absent. Existing knife-set coverage reflected in gap score.",
+    "scoring": "Existing50-item weights: demand25%, audience fit25%, purchase intent20%, content gap15%, affiliate/editorial suitability15%.0–5 factor ratings are editorial judgments, not sales forecasts. Missing metrics unknown.",
+    "evidence_limits": "Third-party rank, same-day editorial inclusion, secondary identity and manufacturer family are distinct evidence types. Exact independent testing unknown. Publisher rank accuracy/collection compliance not independently established. No competitor descriptions/reviews/ratings/prices/images or performance claims copied.",
+    "microsite": "Knife Sets First Apartments matched authenticated Desk inventory for a single-knife-versus-set discussion. Public health/indexing not rechecked.",
+    "excluded": "Spring Chef peeler and multiple high-ranked gadgets already covered. GORILLA GRIP updated-ASIN can opener not added because family overlap needs resolution.",
+    "publication_gates": [
+      "Authorized current exact ASIN/model/variant/pack/seller/offer",
+      "Matching authoritative manufacturer mapping and instructions",
+      "Commercially cleared suitable original/licensed assets",
+      "Matching public destination exists"
+    ]
+  },
+  "candidates": [
+    {
+      "name": "imarku Santoku Knife 7 Inch",
+      "asin": "B0865TNBKC",
+      "category": "Kitchen tools / santoku knives",
+      "keyword": "imarku seven inch santoku knife model comparison",
+      "variant": {
+        "researched_configuration": "Nominal7-inch santoku; secondary records suggest Brown and Silver",
+        "model": "I-KSK0064DB — secondary reference only",
+        "pack_count": null,
+        "color_confirmed": false,
+        "manufacturer_alignment": "imarku.net has a Brown7-inch forged santoku family and several other7-inch knives. Exact manufacturer SKU-to-ASIN match not established; P9/P13/Damascus and alternate colors must not be substituted.",
+        "exact_amazon_variant_confirmed": false,
+        "status": "needs_amazon_verification",
+        "seller": null,
+        "current_offer": null
+      },
+      "sources": [
+        {
+          "url": "https://app.parseshelf.com/best-sellers/kitchen/289754-kitchen-utensils-and-gadgets/",
+          "updated": "2026-11-27",
+          "published": null,
+          "accessed": "2026-11-27",
+          "evidence": "Third-party US Kitchen Utensils & Gadgets snapshot records B0865TNBKC moving from77 on November26 to61 on November27. Rank movement is not measured/estimated sales, conversion or a current offer. Publisher accuracy/collection compliance not independently established."
+        },
+        {
+          "url": "https://www.foodandwine.com/chef-pet-peeves-how-to-solve-amazon-12275829",
+          "published": "2026-11-27",
+          "updated": null,
+          "accessed": "2026-11-27",
+          "evidence": "Same-day editorial shopping article includes an imarku7-inch santoku. Supports editorial attention, not exact-ASIN independent testing, current demand velocity or KFF use. No reviewer performance/safety claims, ratings or prices adopted."
+        },
+        {
+          "url": "https://imarku.net/products/7-inch-santoku-knife-series",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "evidence": "Manufacturer family page shows a7-inch forged santoku with Brown and other color options. Exact ASIN/model match unconfirmed; no steel-grade, hardness, edge-angle, durability, rust-resistance or sharpness claims transferred."
+        },
+        {
+          "url": "https://www.clearbranddistribution.com/product?asin=B0865TNBKC",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "evidence": "Public secondary wholesale identity record associates B0865TNBKC with I-KSK0064DB,7-inch,Brown and Silver. Used only for provisional identity; no account application or purchase initiated. ASIN query parameter is required page identity, not affiliate tracking."
+        },
+        {
+          "url": "https://forums.woot.com/t/imarku-7inch-santoku-knife/2111377",
+          "published": null,
+          "updated": null,
+          "accessed": "2026-11-27",
+          "evidence": "Public historical community page exposes https://www.amazon.com/dp/B0865TNBKC. Bare ASIN copied from exposed product link; no old offer or seller information treated as current."
+        }
+      ],
+      "purpose": "A kitchen prep knife intended for chopping, slicing and mincing ingredients.",
+      "audience_fit": "Home cooks comparing one nominal7-inch prep knife with the chef's knife or knife set they already own; relevant to Knife Sets First Apartments as a single-knife comparison topic.",
+      "buying_objections": [
+        "Check actual handle fit, weight and blade profile; comfort and cutting performance remain unknown.",
+        "Confirm exact model/color, pack contents, storage protection and matching care instructions; similar7-inch brand titles can describe different knives.",
+        "Do not infer Japanese manufacture from marketing wording or transfer steel grade, hardness, edge angle or corrosion claims between series.",
+        "Compare the need for another prep knife with existing equipment and maintenance/storage requirements; no safety or superior-cutting guarantee."
+      ],
+      "score": {
+        "scale": "0–5",
+        "weights": {
+          "demand": 0.25,
+          "audience_fit": 0.25,
+          "purchase_intent": 0.2,
+          "content_gap": 0.15,
+          "affiliate_editorial_suitability": 0.15
+        },
+        "factors": {
+          "demand": 3.9,
+          "audience_fit": 4.2,
+          "purchase_intent": 4,
+          "content_gap": 3.5,
+          "affiliate_editorial_suitability": 3.1
+        },
+        "weighted_total": 3.82,
+        "rationale": "Recent exact-ASIN category rank and same-day editorial inclusion support research priority. Single-knife buying angle adds context to existing knife-set coverage; unresolved manufacturer mapping limits suitability. Heuristic, not forecast.",
+        "unknown": [
+          "unit sales",
+          "sales estimates",
+          "search volume",
+          "conversions",
+          "exact-variant independent testing",
+          "current offer"
+        ]
+      },
+      "confidence": "Medium",
+      "listing_confidence": "Low",
+      "pinterest": {
+        "title": "imarku 7-Inch Santoku Buying Guide: Check the Model and Handle Fit",
+        "description": "#ad As an Amazon Associate I earn from qualifying purchases. Comparing a santoku with the prep knife you already own? Check the exact imarku model, handle fit, storage needs and care instructions. Our planned guide separates similar seven-inch versions before you choose.",
+        "destination": "https://kitchenfindsfavorites.com/picks/imarku-seven-inch-santoku-knife-buying-guide/",
+        "destination_status": "pending",
+        "board": "Kitchen Tools & Everyday Meal Prep",
+        "image_brief": "Create an original1000×1500 generic santoku outline beside a cutting-board and handle-fit checklist. Label Similar item shown. No exact-brand imitation, Amazon/competitor photos, cutting demonstration or sharpness/material/safety claim. Document final commercial rights and suitability before publication."
+      },
+      "angle": "Three-minute One Prep Knife or Another? checklist: compare the job with existing equipment, identify exact imarku model/variant, consider handle fit, care and protected storage. Use original generic diagrams; no cutting or durability test implied.",
+      "micrositeUrl": "https://knife-sets-first-apartments.kitchenfindsfavorites.com/"
+    }
+  ],
+  "strongest_video": {
+    "asin": "B0865TNBKC",
+    "title": "One Prep Knife or Another? A Santoku Buying Checklist",
+    "duration_seconds": 180,
+    "status": "production_plan_only",
+    "disclosure": "Spoken and visible opening: #ad As an Amazon Associate I earn from qualifying purchases.",
+    "segments": [
+      {
+        "seconds": "0–20",
+        "visual": "Original generic santoku and chef-knife outlines, Similar item shown.",
+        "spoken": "Before adding another prep knife, compare the jobs you do with the knife already in your kitchen. This is a buying checklist for our imarku seven-inch research candidate. Exact model and current listing checks remain pending."
+      },
+      {
+        "seconds": "20–55",
+        "visual": "Original task checklist: chopping, slicing, storage and upkeep; no cutting footage.",
+        "spoken": "List the preparation tasks you do most often, and consider whether another blade shape would fill a real gap. We have not used this knife or measured its cutting performance, so this guide starts with fit and identity questions."
+      },
+      {
+        "seconds": "55–90",
+        "visual": "Model/variant checklist; generic product-family cards without reproducing product designs.",
+        "spoken": "The brand sells several similarly named seven-inch knives. A shared size does not establish the same steel, handle or edge. Match the exact ASIN, model and color before transferring specifications from another version."
+      },
+      {
+        "seconds": "90–125",
+        "visual": "Generic handle outline, balance-point question and storage-clearance diagram.",
+        "spoken": "Check the actual handle shape, weight and storage requirements. Grip comfort varies, and we have not assessed this model's fit. Compare it with equipment you already handle comfortably rather than relying on an ergonomic label."
+      },
+      {
+        "seconds": "125–155",
+        "visual": "Original care and protected-storage checklist; no sharpening or cutting demonstration.",
+        "spoken": "Read instructions that match the exact knife. Confirm care, storage protection and maintenance requirements before choosing accessories. Our research does not establish steel grade, edge geometry or corrosion resistance for the current Amazon variant."
+      },
+      {
+        "seconds": "155–177",
+        "visual": "Original evidence-status card: identity, offer, instructions, media pending.",
+        "spoken": "The recent rank snapshot and editorial mention make this a research candidate, not a tested recommendation. Current identity and offer verification, matching manufacturer information and cleared original media are the next steps before a product page or demonstration."
+      },
+      {
+        "seconds": "177–180",
+        "visual": "KFF end card; only link an existing reviewed destination at production.",
+        "spoken": "Kitchen Finds & Favorites."
+      }
+    ],
+    "asset_rules": "Use original generic diagrams labeled Similar item shown. No Amazon/competitor imagery, simulated product test, sharpness claims or unverified cutting demonstrations. Exact-unit footage only after matching model/instruction verification and documented commercial rights."
+  }
+}
